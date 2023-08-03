@@ -1,6 +1,11 @@
 ## Standard Patient Health Record
 
-[Current Build (Public)](https://open-health-manager.github.io/standard-patient-health-record-ig/)  
+[Current Build (Public)](https://build.fhir.org/ig/HL7/standard-patient-health-record-ig/branches/master/)  
+
+[Preview Branches](https://build.fhir.org/ig/HL7/standard-patient-health-record-ig/branches/)  
+
+
+
 
 
 ### Prerequisites 
