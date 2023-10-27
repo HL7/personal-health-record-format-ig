@@ -88,8 +88,8 @@ menu:
     Physiology Simulations: physiology.html
   # Patient Personas: personas.html
   Patient Personas:
-    Index: personas-index.html
-    Schooling Environment: personas-schooling.html
+    Index: persona-index.html
+    Schooling Environment: persona-schooling.html
     Pediatric Cancer: persona-william.html
   Artifacts: artifacts.html
 
@@ -116,7 +116,7 @@ pages:
     title: Patient Personas
   persona-william.md:
     title: William Sim
-  personas-index.md:
+  persona-index.md:
     title: Patient Personas
   persona-schooling.md:
     title: Schooling Environments
