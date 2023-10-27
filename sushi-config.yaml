@@ -84,6 +84,7 @@ menu:
     Record Lifecycle: recordlifecycle.html
     Security: security.html
   Supplemental:
+    Annotations: ips-wrapper.html
     History: history.html
     Physiology Simulations: physiology.html
   # Patient Personas: personas.html
@@ -105,6 +106,8 @@ pages:
     title: Functional Model
   recordlifecycle.md:
     title: Record Lifecycle    
+  ips-wrapper.md:
+    title: Annotations
   security.md:
     title: Security
   history.md:
