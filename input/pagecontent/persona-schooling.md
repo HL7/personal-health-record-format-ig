@@ -8,7 +8,7 @@
 
 ### Narrative History
 
-See: HL7 Mobile Health Work Group's SHIFT Project for possible narrative examples
+[HL7 Mobile Health Work Group's SHIFT Project](https://confluence.hl7.org/pages/viewpage.action?pageId=42993895) for possible narrative examples
 
 
 

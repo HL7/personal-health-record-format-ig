@@ -89,6 +89,7 @@ menu:
   # Patient Personas: personas.html
   Patient Personas:
     Index: personas-index.html
+    Schooling Environment: personas-schooling.html
     Pediatric Cancer: persona-william.html
   Artifacts: artifacts.html
 
@@ -117,6 +118,8 @@ pages:
     title: William Sim
   personas-index.md:
     title: Patient Personas
+  persona-schooling.md:
+    title: Schooling Environments
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
