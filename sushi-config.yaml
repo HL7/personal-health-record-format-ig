@@ -90,6 +90,7 @@ menu:
   Patient Personas:
     Index: personas-index.html
     Pediatric Cancer: persona-william.html
+    Thompson Familiy: persona-thompson-family.html
   Artifacts: artifacts.html
 
 pages:
@@ -115,6 +116,8 @@ pages:
     title: Patient Personas
   persona-william.md:
     title: William Sim
+  persona-thompson-family.md:
+    title: Thompson Family
   personas-index.md:
     title: Patient Personas
 
