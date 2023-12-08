@@ -4,7 +4,7 @@ In this specification, the key words “MUST”, “MUST NOT”, “REQUIRED”,
 
 | Implementation Guide  | Specialty | Resources | APIs |
 | --------------------- | --------  | :-------- | :-------- | 
-| [Bulk Data Export](https://build.fhir.org/ig/HL7/bulk-data/export.html) | Medical Records | NOT APPLICABLE | MUST |
+| [Electronic Health Information Export API](https://build.fhir.org/ig/argonautproject/ehi-api/) |   | SHOULD | MUST |
 | [Record Lifecycle](https://build.fhir.org/ig/HL7/ehrs-rle-ig/) | Medical Records | NOT APPLICABLE | MUST |
 | [Patient Data Receipt](https://open-health-manager.github.io/patient-data-receipt-ig/) | Medical Records | NOT APPLICABLE | SHOULD |
 | [PHR-S Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88)  |  | SHOULD | MAY |
