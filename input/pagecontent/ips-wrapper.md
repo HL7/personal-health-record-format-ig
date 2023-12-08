@@ -1,6 +1,6 @@
-# IPS Wrapper Specification
+## IPS Wrapper Specification
 
-The IPS is a FHIR document represented as a bundle, specified by an joint process of a number of SDOs. 
+The International Patient Summary is a FHIR document represented as a bundle, specified by an joint process of a number of SDOs. 
 
 There's a number of practical problems associated with the handling of documents from the consumer side
 that this wrapper specification attempts to provide support for.
