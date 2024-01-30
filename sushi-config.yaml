@@ -97,8 +97,6 @@ menu:
     Long COVID: persona-journey-d.html
     Patient Relocation: persona-journey-a.html
     Sports Outpatient / Cardiac: persona-journey-c.html
-
->>>>>>> master
   Artifacts: artifacts.html
 
 pages:
@@ -126,10 +124,8 @@ pages:
     title: Patient Personas
   persona-william.md:
     title: William Sim
-<<<<<<< HEAD
   persona-thompson-family.md:
     title: Thompson Family
-=======
   persona-journey-a.md:
     title: Anne
   persona-journey-b.md:
@@ -140,7 +136,6 @@ pages:
     title: Wilma
   persona-journey-e.md:
     title: Marcella
->>>>>>> master
   personas-index.md:
     title: Patient Personas
 
