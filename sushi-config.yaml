@@ -90,6 +90,7 @@ menu:
   # Patient Personas: personas.html
   Patient Personas:
     Index: personas-index.html
+    Thompson Familiy: persona-thompson-family.html
     Cancer - Adult: persona-journey-b.html
     Cancer - Pediatric: persona-william.html
     Chronic Illness (Lupus): persona-journey-e.html
@@ -97,6 +98,7 @@ menu:
     Patient Relocation: persona-journey-a.html
     Sports Outpatient / Cardiac: persona-journey-c.html
 
+>>>>>>> master
   Artifacts: artifacts.html
 
 pages:
@@ -124,6 +126,10 @@ pages:
     title: Patient Personas
   persona-william.md:
     title: William Sim
+<<<<<<< HEAD
+  persona-thompson-family.md:
+    title: Thompson Family
+=======
   persona-journey-a.md:
     title: Anne
   persona-journey-b.md:
@@ -134,6 +140,7 @@ pages:
     title: Wilma
   persona-journey-e.md:
     title: Marcella
+>>>>>>> master
   personas-index.md:
     title: Patient Personas
 
