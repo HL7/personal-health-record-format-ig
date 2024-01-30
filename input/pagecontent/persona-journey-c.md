@@ -4,8 +4,9 @@ Sports out-patient and home-based Cardiac Rehabilitation (CR) with rich data cap
 
 | Patient ID | PatientName   | Primary Diagnosis  | .phr | .sphr |
 | ------------- | :-------- | :-------- | :-------- | :-------- | 
+| 69437c6f-772f-6aaf-34b9-b4d3f12d9eaf | Michael441 Ward668	| congestive heart failure | [json](file:///Users/awatson/Code/implementation-guides/standard-patient-health-record-ig/output/Michael441_Ward668_69437c6f-772f-6aaf-34b9-b4d3f12d9eaf.json) |	[phr](file:///Users/awatson/Code/implementation-guides/standard-patient-health-record-ig/output/Mr.Michael441Ward668-69437c6f-772f-6aaf-34b9-b4d3f12d9eaf.phr)
 
-
+> **&#9432;** Contribute to this guide by helping translate the following patient journey into FHIR resources and refining the patient example!  This narrative is a work in progress, and we have added Michael Ward as a temporary place holder to a patient with congestive heart failure.  The .phr file needs updating to correspond to the following narrative.  Pull requests encouraged.
 
 ### Narrative History
 

@@ -4,7 +4,9 @@ Diagnosis and pathway to care for a complex, poorly understood chronic illness
 
 | Patient ID | PatientName   | Primary Diagnosis  | .phr | .sphr |
 | ------------- | :-------- | :-------- | :-------- | :-------- | 
+| a6e749b3-eff6-94d5-5ee2-fb4a6566deef |Gail741 Elaine830 Schumm995	| normal pregnancy|	[json](file:///Users/awatson/Code/implementation-guides/standard-patient-health-record-ig/output/Gail741_Elaine830_Schumm995_a6e749b3-eff6-94d5-5ee2-fb4a6566deef.json) |	[phr](file:///Users/awatson/Code/implementation-guides/standard-patient-health-record-ig/output/Gail741_Elaine830_Schumm995_a6e749b3-eff6-94d5-5ee2-fb4a6566deef.json) |
 
+> **&#9432;**  This narrative is a work in progress, and we have added Gail Shchumm as a temporary place holder until we generate an endometriosis patient.  
 
 
 ### Narrative History

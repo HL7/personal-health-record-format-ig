@@ -4,7 +4,9 @@ Self-tracking for Long COVID diagnosis
 
 | Patient ID | PatientName   | Primary Diagnosis  | .phr | .sphr |
 | ------------- | :-------- | :-------- | :-------- | :-------- | 
+| 24f4d2f1-b4ef-0654-25a3-bdce21e7ceef |Eryn994 Nader710 | COVID-19	| [json](file:///Users/awatson/Code/implementation-guides/standard-patient-health-record-ig/output/Eryn994_Nader710_24f4d2f1-b4ef-0654-25a3-bdce21e7ceef.json) |	[phr](file:///Users/awatson/Code/implementation-guides/standard-patient-health-record-ig/output/Eryn994Nader710-24f4d2f1-b4ef-0654-25a3-bdce21e7ceef.phr)  
 
+> **&#9432;** Contribute to this guide by helping translate the following patient journey into FHIR resources and refining the patient example!  This narrative is a work in progress, and we have added Eryn Nader as a temporary place holder to a patient with COVID19.  The .phr file needs updating to correspond to the following narrative.  Pull requests encouraged.
 
 
 ### Narrative History
