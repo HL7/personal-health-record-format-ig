@@ -35,5 +35,6 @@ The core of the Patient Health Record should be medical grade, and the sort of r
 - [How to Export Facebook Data](https://blog.coupler.io/how-to-export-facebook-data/)
 - [Human API - Getting Started](https://reference.humanapi.co/reference/getting-started)
 - [Summary of Responses to an Industry RFI Regarding a Role for CMS with Personal Health Records](https://www.cms.gov/Medicare/E-Health/PerHealthRecords/Downloads/SummaryofPersonalHealthRecord.pdf)     
+- [HealthKit on FHIR](https://github.com/StanfordBDHG/HealthKitOnFHIR)
 
 
