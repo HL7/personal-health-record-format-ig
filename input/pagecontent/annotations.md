@@ -1,7 +1,4 @@
-Both the Personal Health Record and the International Patient Summary are FHIR documents represented as a bundle, specified by an joint process of a number of SDOs. 
-
-There's a number of practical problems associated with the handling of documents from the consumer side
-that this wrapper specification attempts to provide support for.
+Once an encrypted Personal Health Record is generated, that has been cryptographically signed, patients, clinicians, and others may have an interest in correcting, amending, or annotating the record, without breaking the cryptographic signature.  The SPHR standard offers the Annotation functionality for such cases.
 
 ## Patient Use cases
 
@@ -11,17 +8,19 @@ Some patient summary distribution systems are focusing on retaining the document
 the patient doesn't keep their own copy, while other systems are focused on getting the 
 IPS to the patient directly, either by push or pull. 
 
-If a patient doesn't actually get their IPS, just a token to it, what exactly do they get?
+If a patient doesn't actually get their health record or patient summary, and instead receive only a token to it such as a QR code or URL, what exactly do they get?
+
 If would be good to have a consistent workflow around IPS handling whether the document 
 is held directly by the patient or not.
 
 ### Managing the health record
 
 Patients will need software support for managing their patient summaries. The 
-software will have concerns around 
-* recognising which incoming attachments/documents are IPS documents
+software will have concerns around:
+
+* recognising which incoming attachments/documents are PHR files (inclusive of IPS documents)
 * showing them to the user correctly (how to describe them in a list)
-*  Patients might wish to password protect their summary 
+* Patients might wish to password protect their summary 
 
 ### Correcting the health record
 
