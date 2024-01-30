@@ -16,6 +16,13 @@ Readers are encouraged to think of this implementation guide as a marathon, not 
 
 The core of the Patient Health Record should be medical grade, and the sort of record that you receive after a visit to the hospital; and which the Patient can carry to from one healthcare provider to the next.  As such, a modern Patient Health Record needs to essentially be able to receive captured data from throughout the hospital.  Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychaitry.  All of it is relavent.  
 
+### Acknowledgements  
+
+- Jan Oldenburg, Patient Empowerment Workgroup
+- Dr. Neelima Karipineni, MITRE
+- Salim K Semy, MITRE  
+- Dave Carlson, Clinical Cloud Solutions
+- Savannah Mueller, EMI Advisors
 
 ### References  
 
