@@ -1,15 +1,17 @@
-### William Sim - wsim001 - Pediatric Cancer
+### Thompson Family
 
 | Patient ID | PatientName   | Primary Diagnosis  | .phr | .sphr |
 | ------------- | :-------- | :-------- | :-------- | :-------- | 
+| ae26bfd6-d45b-c819-0de6-a2299511e6f4| Spencer878 Stehr398	| acute myeloid leukemia | [json](file:///Users/awatson/Code/implementation-guides/standard-patient-health-record-ig/output/Spencer878_Stehr398_ae26bfd6-d45b-c819-0de6-a2299511e6f4.json) | [phr](phr)
 
+> **&#9432;** Note:  The Thompson Family usecase is a work-in-progress, and has not been completed yet.  For the meantime, we are providing a link to a myeloid leukemia patient; and will be crafting that patient towards the Thompson Family journey in future updates.
 
 ### Narrative History
 
 
 Patient Journey Summary for Case Study #8675309T - The Thompson Family
 
-****Patient Information:****
+__Patient Information__
 
 Patient: Three-year-old child  
 Diagnosis: Leukemia  
@@ -17,7 +19,7 @@ Diagnosis: Leukemia
 On the bone marrow transplant list
 Parents are considering having another child in hopes of finding a suitable bone marrow match
 
-****Recommendation:***
+__Recommendation__  
 
 Start chemotherapy to treat the leukemia.
 Chemotherapy:
@@ -37,12 +39,12 @@ Approximately 91% to 99% of patients on the bone marrow transplant list have a s
 Only 30% of patients have a relative who is a donor.
 
 
-****Risks of a Bone Marrow Transplant:****
+__Risks of a Bone Marrow Transplant__
 
 The risks vary depending on age, the type of disease, and overall health.
 
 
-****Post-Transplant Care:****
+__Post-Transplant Care__
 
 Patients may experience complications, which can range from mild to severe.
 
@@ -56,6 +58,7 @@ In this case, it's recommended to start with chemotherapy for the child's leukem
 
 
 
-###References  
+
+### References   
 
 [Case Study: Thompson Family](https://prezi.com/depnzrzco81x/case-study-thompson/)
