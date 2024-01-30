@@ -9,7 +9,7 @@ name: StandardPatientHealthRecordIG
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
-version: 0.4.4
+version: 0.4.5
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -84,12 +84,21 @@ menu:
     Record Lifecycle: recordlifecycle.html
     Security: security.html
   Supplemental:
+    Annotations: annotations.html
     History: history.html
     Physiology Simulations: physiology.html
   # Patient Personas: personas.html
   Patient Personas:
     Index: personas-index.html
-    Pediatric Cancer: persona-william.html
+    Thompson Familiy: persona-thompson-family.html
+    Cancer - Adult: persona-journey-b.html
+    Cancer - Pediatric: persona-william.html
+    Chronic Illness (Lupus): persona-journey-e.html
+    Long COVID: persona-journey-d.html
+    Patient Relocation: persona-journey-a.html
+    Sports Outpatient / Cardiac: persona-journey-c.html
+
+>>>>>>> master
   Artifacts: artifacts.html
 
 pages:
@@ -105,6 +114,8 @@ pages:
     title: Functional Model
   recordlifecycle.md:
     title: Record Lifecycle    
+  annotations.md:
+    title: Annotations
   security.md:
     title: Security
   history.md:
@@ -115,6 +126,21 @@ pages:
     title: Patient Personas
   persona-william.md:
     title: William Sim
+<<<<<<< HEAD
+  persona-thompson-family.md:
+    title: Thompson Family
+=======
+  persona-journey-a.md:
+    title: Anne
+  persona-journey-b.md:
+    title: Earl
+  persona-journey-c.md:
+    title: Markus
+  persona-journey-d.md:
+    title: Wilma
+  persona-journey-e.md:
+    title: Marcella
+>>>>>>> master
   personas-index.md:
     title: Patient Personas
 
