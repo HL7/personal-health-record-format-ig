@@ -1,13 +1,11 @@
-## IPS Wrapper Specification
-
-The International Patient Summary is a FHIR document represented as a bundle, specified by an joint process of a number of SDOs. 
+Both the Personal Health Record and the International Patient Summary are FHIR documents represented as a bundle, specified by an joint process of a number of SDOs. 
 
 There's a number of practical problems associated with the handling of documents from the consumer side
 that this wrapper specification attempts to provide support for.
 
 ## Patient Use cases
 
-### Who holds the IPS?
+### Who holds the health record?
 
 Some patient summary distribution systems are focusing on retaining the document so that 
 the patient doesn't keep their own copy, while other systems are focused on getting the 
@@ -17,7 +15,7 @@ If a patient doesn't actually get their IPS, just a token to it, what exactly do
 If would be good to have a consistent workflow around IPS handling whether the document 
 is held directly by the patient or not.
 
-### Managing the IPS
+### Managing the health record
 
 Patients will need software support for managing their patient summaries. The 
 software will have concerns around 
@@ -25,7 +23,7 @@ software will have concerns around
 * showing them to the user correctly (how to describe them in a list)
 *  Patients might wish to password protect their summary 
 
-### Correcting the patient summary 
+### Correcting the health record
 
 Furthermore, consultation with patients brings forward a very clear requirement indeed: 
 if we're going to pass the summary on, we need to be able to comment on it, or correct it. 
@@ -61,7 +59,7 @@ from beginning to end.
 
 ## Specification 
 
-An IPS wrapper is a .zip file that contains the IPS, along with a file manifest.json 
+An PHR annotation is a .zip file that contains the SPHR file, along with a file manifest.json 
 that describes the contents of the package. The package may contain more than one 
 version of the IPS, along with associated supporting collateral - attachments, 
 stylesheets and branding information. In addition the document may be signed or encrypted.
@@ -73,14 +71,14 @@ The file manifest.json always contains two properties:
 
 The manifest file may contain a combination of three additional properties:
 
-* ```encrypted```: a JSON Web encrypted string that contains the actual IPS, keyed to a user provided pass-phrase. When successfully decrypted, it contains another IPS wrapper.
+* ```encrypted```: a JSON Web encrypted string that contains the actual IPS, keyed to a user provided pass-phrase. When successfully decrypted, it contains another PHR Annotation.
 * ```versions```: A list of JSON objects describing the versions of the IPS contained in the wrapper. Note that all the IPS documents are different versions of the same IPS
 * ```attachments```: A list JSON objects describing attachments to the IPS
 
 The mainfest will contain either ```encrypted``` or ```versions```, but not both. The encrypted wrapper may 
 contain unencrypted attachments; these are combined with the encrypted attachments.
 
-The IPS wrapper SHALL not contain any files not described in the manifest
+The PHR annotation SHALL not contain any files not described in the manifest.
 
 ### Encrypted String
 
@@ -94,7 +92,7 @@ The key for decryption is generated from a patient provided passphrase using the
 
 Each version of the IPS represented in the manifest is a JSON object with the following properties:
 
-* ```source``` (required): a url that references the source of this version of the IPS. The reference may be relative, in which case it is a reference to a file contained in the IPS wrapper, or it might an absolute URL that references the location of the IPS in some storage service. The following URL protocols are allowed: https or shlink:. Authentication may be required; if so, it should be conformant with the IPA specification (https) or conform to the Smart Health Links Specification
+* ```source``` (required): a url that references the source of this version of the IPS. The reference may be relative, in which case it is a reference to a file contained in the PHR annotation, or it might an absolute URL that references the location of the IPS in some storage service. The following URL protocols are allowed: https or shlink:. Authentication may be required; if so, it should be conformant with the IPA specification (https) or conform to the Smart Health Links Specification
 * ```date``` (required): Epoch seconds at the time at which this version was created
 * ```kind``` (required): what kind of version of the IPS this is. Allowed values:
   * ```original```: The originally produced IPS from the source clinical system
@@ -125,7 +123,7 @@ with the document, and may let users choose other versions.
 
 Each attachment represented in the manifest is a JSON object with the following properties:
 
-* ```source``` (required): A url that references the attachment. The reference may be relative, in which case it is a reference to a file contained in the IPS wrapper, or it might an absolute URL that references the location of the attachment in some storage service. The following protocols are allowed: https, http. Authentication SHALL not be required to access the attachment
+* ```source``` (required): A url that references the attachment. The reference may be relative, in which case it is a reference to a file contained in the PHR annotation, or it might an absolute URL that references the location of the attachment in some storage service. The following protocols are allowed: https, http. Authentication SHALL not be required to access the attachment
 * ```contentType``` (required): the mime type of the attachment
 * ```kind``` (required): the purpose of the attachment. One of the following values:
   * ```icon```: an image of size 32x32 or 64x64 that is recommended to use when displaying this IPS in a list of known IPS documents
