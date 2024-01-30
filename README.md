@@ -1,6 +1,11 @@
 ## Standard Patient Health Record
 
-[Current Build (Public)](https://open-health-manager.github.io/standard-patient-health-record-ig/)  
+[Current Build (Public)](https://build.fhir.org/ig/HL7/standard-patient-health-record-ig/branches/master/)  
+
+[Preview Branches](https://build.fhir.org/ig/HL7/standard-patient-health-record-ig/branches/)  
+
+
+
 
 
 ### Prerequisites 
@@ -17,7 +22,7 @@ sushi --help
 
 ```shell
 # get a copy of the source code
-git clone https://github.com/Open-Health-Manager/standard-patient-health-record-ig
+git clone https://github.com/HL7/personal-health-record-format-ig
 cd fhir-directory-attestation
 ```
 
@@ -51,3 +56,6 @@ git checkout -b new-branch
 git commit -a -m 'descriptive message'
 git push origin new-branch
 ```
+
+#### References 
+[Soft White Underbelly Videos](https://www.youtube.com/@SoftWhiteUnderbelly/videos)  
