@@ -25,7 +25,7 @@ One of the most challenging aspects of programming a Personal Health Record is d
 
 ### Synthetic Patients (Synthea)  
 
-| Patient ID | PatientName   | Primary Diagnosis  | SNOMED |  .json | .phr | 
+| Patient ID | PatientName   | Primary Health Concern  | SNOMED |  .json | .phr | 
 | ------------- | :-------- | :-------- | :-------- | :-------- | :-------- | 
 | b031fa19-1e03-42e0-19de-f60c9dc2a579 | Adelina682 Walker122 | allergies | 170837001 | [json](Adelina682_Walker122_b031fa19-1e03-42e0-19de-f60c9dc2a579.json) | [phr](Ms.Adelina682Walker122-b031fa19-1e03-42e0-19de-f60c9dc2a579.phr) |   
 | ae26bfd6-d45b-c819-0de6-a2299511e6f4 | Spencer878 Stehr398 | acute myeloid leukemia | 91861009 | [json](Spencer878_Stehr398_ae26bfd6-d45b-c819-0de6-a2299511e6f4.json) | [phr](Spencer878Stehr398-ae26bfd6-d45b-c819-0de6-a2299511e6f4.phr) |  

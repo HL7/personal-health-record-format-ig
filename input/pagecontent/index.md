@@ -6,6 +6,9 @@ The following document will offer design guidance and standardized APIs for help
 
 Readers are encouraged to think of this implementation guide as a marathon, not a sprint.  To further the analogy, the authors of this guide hope to help software implementor plan on whether they are competing in a 26 mile standard marathon, a 50 mile ultramarathon, or an Iron Man triathalon.  Similarly, implementing a complete PHR is no simple task, and in many situations may take upwards of a year of time or more to complete.  We hope to provide guidance that will help implementors strategically plan their implementations and avoid common stumbling blocks.
 
+### What is a Personal Health Record?   
+![VennDiagram.png](VennDiagram.png){:width="100%"}    
+
 ### Relevant Law
 
 - 21st Century Cures
