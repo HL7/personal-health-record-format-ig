@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>STANDARDPATIENTHEALTHRECORDIG\HKCategorySamplePregnancyToObservation - FHIR v4.0.1</title>
+    <title>STANDARDPATIENTHEALTHRECORDIG\Search by identifier in patient with multipleOr - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -29,18 +29,18 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"18.38"}
-    h3,h4,h5,h6{--heading-prefix:"18.38"}</style>
+    <style type="text/css">h2{--heading-prefix:"23.1"}
+    h3,h4,h5,h6{--heading-prefix:"23.1"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -49,7 +49,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold"></span>
             <br/>
-            <span style="display:inline-block;">0.4.4 - ci-build
+            <span style="display:inline-block;">0.4.5 - ci-build
 
 
             </span>
@@ -88,6 +88,9 @@
   <li>
     <a href="datamodel.html">Data Model</a>
   </li>
+  <li>
+    <a href="api.html">APIs</a>
+  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Model
       <b class="caret"></b>
@@ -110,10 +113,19 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="annotations.html">Annotations</a>
+      </li>
+      <li>
         <a href="history.html">History</a>
       </li>
       <li>
         <a href="physiology.html">Physiology Simulations</a>
+      </li>
+      <li>
+        <a href="algorithms.html">Algorithms</a>
+      </li>
+      <li>
+        <a href="operating-systems.html">Operating Systems</a>
       </li>
     </ul>
   </li>
@@ -124,6 +136,9 @@
     <ul class="dropdown-menu">
       <li>
         <a href="personas-index.html">Index</a>
+      </li>
+      <li>
+        <a href="persona-thompson-family.html">Thompson Familiy</a>
       </li>
       <li>
         <a href="persona-journey-b.html">Cancer - Adult</a>
@@ -160,7 +175,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>HKCategorySamplePregnancyToObservation</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Search by identifier in patient with multipleOr</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -173,7 +188,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">StandardPatientHealthRecordIG - Local Development build (v0.4.4). See the <a href="https://open-health-manager.github.io/standard-patient-health-record-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">StandardPatientHealthRecordIG - Local Development build (v0.4.5). See the <a href="https://open-health-manager.github.io/standard-patient-health-record-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -193,21 +208,21 @@
 
   
     <li>
-      <a href="StructureMap-HKCategorySamplePregnancyToObservation.xml.html">XML</a>
+      <a href="SearchParameter-patient-identifier.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="StructureMap-HKCategorySamplePregnancyToObservation.json.html">JSON</a>
+      <a href="SearchParameter-patient-identifier.json.html">JSON</a>
     </li>
   
 
 
   
     <li>
-      <a href="StructureMap-HKCategorySamplePregnancyToObservation.ttl.html">TTL</a>
+      <a href="SearchParameter-patient-identifier.ttl.html">TTL</a>
     </li>
   
 
@@ -217,17 +232,17 @@
 
   <a name="root"> </a>
 
-  <h2 id="root">StructureMap: HKCategorySamplePregnancyToObservation
+  <h2 id="root">SearchParameter: Search by identifier in patient with multipleOr
 
   </h2>
 
-  <table class="colsd">
+  <table class="colsi">
 
     <tr>
-      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://open-health-manager.github.io/standard-patient-health-record-ig/StructureMap/HKCategorySamplePregnancyToObservation<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://open-health-manager.github.io/standard-patient-health-record-ig/StructureMap/HKCategorySamplePregnancyToObservation"/></span>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://open-health-manager.github.io/standard-patient-health-record-ig/SearchParameter/patient-identifier<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://open-health-manager.github.io/standard-patient-health-record-ig/SearchParameter/patient-identifier"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.4.4<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://open-health-manager.github.io/standard-patient-health-record-ig/StructureMap/HKCategorySamplePregnancyToObservation|0.4.4"/></span>
+      <span class="copy-text">0.4.5<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://open-health-manager.github.io/standard-patient-health-record-ig/SearchParameter/patient-identifier|0.4.5"/></span>
       </td>
     </tr>
 
@@ -241,16 +256,16 @@
 
       <td colspan="4">
         
-          Draft
+          Active
           
-            as of 2023-06-16
+            as of 2024-02-13
           
         
       </td>
 
 
 
-      <td><i>Computable Name</i>: <span style="font-family: monospace;">HKCategorySamplePregnancyToObservation</span></td>
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">PatientIdentifierSearchParameter</span></td>
     </tr>
 
 
@@ -259,6 +274,11 @@
   </table>
 
 
+<p>
+<p>This SearchParameter enables query of patient by <code class="language-plaintext highlighter-rouge">identifier</code> with <code class="language-plaintext highlighter-rouge">mutlipleOr</code> enabled.</p>
+
+</p>
+
 
   <!-- insert intro if present -->
   
@@ -266,37 +286,14 @@
 
 
 <!--  <p>
-  Formats: <a href="StructureMap-HKCategorySamplePregnancyToObservation.xml.html">XML</a>, <a href="StructureMap-HKCategorySamplePregnancyToObservation.json.html">JSON</a>, <a href="StructureMap-HKCategorySamplePregnancyToObservation.ttl.html">Turtle</a>
+  Formats: <a href="SearchParameter-patient-identifier.xml.html">XML</a>, <a href="SearchParameter-patient-identifier.json.html">JSON</a>, <a href="SearchParameter-patient-identifier.ttl.html">Turtle</a>
   </p>-->
 
   
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><pre>map &quot;https://open-health-manager.github.io/standard-patient-health-record-ig/StructureMap/HKCategorySamplePregnancyToObservation&quot; = &quot;HKCategorySamplePregnancyToObservation&quot;
-
-uses &quot;https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/apple-healthkit-sample&quot; alias HKCategorySamplePregnancy as source
-
-uses &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus&quot; alias UsCoreObservationPregnancyStatus as target
-
-group HKCategorySamplePregnancyToObservation ( 
-  source sample : HKCategorySamplePregnancy
-  target observation : UsCoreObservationPregnancyStatus
-) {
-  sample -&gt; observation.status = &quot;final&quot; &quot;set status&quot;;
-  sample -&gt; observation.category as category, category.coding as coding then {
-    sample -&gt; coding.system =  &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot; &quot;set category code system&quot;;
-    sample -&gt; coding.code = &quot;social-history&quot; &quot;set category code&quot;;
-  } &quot;set category&quot;;
-  sample -&gt; observation.code as code, code.coding as coding then {
-    sample -&gt; coding.system =  &quot;http://loinc.org&quot; &quot;set code system&quot;;
-    sample -&gt; coding.code = &quot;82810-3&quot; &quot;set code&quot;;
-  } &quot;set code&quot;;
-  sample.startDate as startDate -&gt; observation.effectiveDateTime = startDate &quot;startDate to effectiveDateTime&quot;;
-  sample -&gt; observation.valueCodeableConcept as value, value.coding as coding then {
-    sample -&gt; coding.system =  &quot;http://snomed.info/sct&quot; &quot;set value system&quot;;
-    sample -&gt; coding.code = &quot;77386006&quot; &quot;set value&quot;;
-  } &quot;set valueCodeableConcept&quot;;
-}</pre></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2>PatientIdentifierSearchParameter</h2><p>Parameter <code>identifier</code>:<code>token</code></p><div><p>This SearchParameter enables query of patient by <code>identifier</code> with <code>mutlipleOr</code> enabled.</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td></tr><tr><td>Expression</td><td>(none)</td></tr><tr><td>Multiples</td><td>The parameter can repeat (and) but each repeat can only have one value</td></tr></table></div>
 
   <!-- insert notes if present -->
   
@@ -327,7 +324,7 @@ group HKCategorySamplePregnancyToObservation (
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://open-health-manager.github.io/standard-patient-health-record-ig">MITRE</a>.  Package StandardPatientHealthRecordIG#0.4.4 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 16, 2023 13:48-0500">2023-06-16</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://open-health-manager.github.io/standard-patient-health-record-ig">MITRE</a>.  Package StandardPatientHealthRecordIG#0.4.5 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 13, 2024 22:51-0600">2024-02-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

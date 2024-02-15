@@ -79,6 +79,7 @@ menu:
   Record Keeping: recordkeeping.html
   Conformance: conformance.html
   Data Model: datamodel.html
+  APIs: api.html
   Functional Model:
     Functional Model: functionality.html
     Record Lifecycle: recordlifecycle.html
@@ -143,6 +144,8 @@ pages:
     title: Operating Systems
   algorithms.md:
     title: Algorithms
+  api.md:
+    title: API Endpoints
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

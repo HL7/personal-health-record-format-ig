@@ -3,14 +3,14 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="apple-health-kit-correlation-type-code-system"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-correlation-type-code-system</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td></tr><tr><td style="white-space:nowrap">bloodPressure<a name="apple-health-kit-correlation-type-code-system-bloodPressure"> </a></td></tr><tr><td style="white-space:nowrap">food<a name="apple-health-kit-correlation-type-code-system-food"> </a></td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This  code system <code>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-correlation-type-code-system</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td></tr><tr><td style="white-space:nowrap">bloodPressure<a name="apple-health-kit-correlation-type-code-system-bloodPressure"> </a></td></tr><tr><td style="white-space:nowrap">food<a name="apple-health-kit-correlation-type-code-system-food"> </a></td></tr></table></div>
   </text>
   <url value="https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-correlation-type-code-system"/>
-  <version value="0.4.4"/>
+  <version value="0.4.5"/>
   <name value="AppleHealthKitCorrelationTypeCodeSystem"/>
   <title value="Apple HealthKit Correlation Type Code System"/>
-  <status value="active"/>
-  <date value="2023-06-16T13:48:16-05:00"/>
+  <status value="draft"/>
+  <date value="2024-02-13T22:51:57-06:00"/>
   <publisher value="MITRE"/>
   <contact>
     <name value="MITRE"/>

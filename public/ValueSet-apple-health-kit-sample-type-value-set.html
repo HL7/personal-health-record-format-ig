@@ -29,18 +29,18 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"18.25"}
-    h3,h4,h5,h6{--heading-prefix:"18.25"}</style>
+    <style type="text/css">h2{--heading-prefix:"23.27"}
+    h3,h4,h5,h6{--heading-prefix:"23.27"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -49,7 +49,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold"></span>
             <br/>
-            <span style="display:inline-block;">0.4.4 - ci-build
+            <span style="display:inline-block;">0.4.5 - ci-build
 
 
             </span>
@@ -88,6 +88,9 @@
   <li>
     <a href="datamodel.html">Data Model</a>
   </li>
+  <li>
+    <a href="api.html">APIs</a>
+  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Model
       <b class="caret"></b>
@@ -110,10 +113,19 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="annotations.html">Annotations</a>
+      </li>
+      <li>
         <a href="history.html">History</a>
       </li>
       <li>
         <a href="physiology.html">Physiology Simulations</a>
+      </li>
+      <li>
+        <a href="algorithms.html">Algorithms</a>
+      </li>
+      <li>
+        <a href="operating-systems.html">Operating Systems</a>
       </li>
     </ul>
   </li>
@@ -124,6 +136,9 @@
     <ul class="dropdown-menu">
       <li>
         <a href="personas-index.html">Index</a>
+      </li>
+      <li>
+        <a href="persona-thompson-family.html">Thompson Familiy</a>
       </li>
       <li>
         <a href="persona-journey-b.html">Cancer - Adult</a>
@@ -173,7 +188,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">StandardPatientHealthRecordIG - Local Development build (v0.4.4). See the <a href="https://open-health-manager.github.io/standard-patient-health-record-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">StandardPatientHealthRecordIG - Local Development build (v0.4.5). See the <a href="https://open-health-manager.github.io/standard-patient-health-record-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -219,13 +234,13 @@
   <h2 id="root">ValueSet: Apple HealthKit Sample Type Value Set
 
   </h2>
-  <table class="colsi">
+  <table class="colsd">
 
     <tr>
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-sample-type-value-set<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-sample-type-value-set"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.4.4<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-sample-type-value-set|0.4.4"/></span>
+      <span class="copy-text">0.4.5<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-sample-type-value-set|0.4.5"/></span>
       </td>
     </tr>
 
@@ -239,9 +254,9 @@
 
       <td colspan="4">
         
-          Active
+          Draft
           
-            as of 2023-06-16
+            as of 2024-02-13
           
         
       </td>
@@ -267,11 +282,7 @@
   </p>
   
 <ul>
- <li><a href="StructureDefinition-apple-health-kit-category-sample.html">Apple HealthKit Category Sample Logical Model</a></li>
- <li><a href="StructureDefinition-apple-health-kit-correlation-sample.html">Apple HealthKit Correlation Sample Logical Model</a></li>
- <li><a href="StructureDefinition-apple-health-kit-quantity-sample.html">Apple HealthKit Quantity Sample Logical Model</a></li>
  <li><a href="StructureDefinition-apple-health-kit-sample.html">Apple HealthKit Sample Logical Model</a></li>
- <li><a href="StructureDefinition-apple-health-kit-workout-sample.html">Apple HealthKit Workout Sample Logical Model</a></li>
 </ul>
 
 
@@ -290,7 +301,7 @@
   <a name="expansion"> </a>
   <h3 id="expansion">Expansion</h3>
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 6 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="CodeSystem-apple-health-kit-sample-type-code-system.html">Apple HealthKit Sample Type Code System v0.4.4 (CodeSystem)</a></p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap"><a name="https---open-health-manager.github.io-standard-patient-health-record-ig-CodeSystem-apple-health-kit-sample-type-code-system-category"> </a>  <a href="CodeSystem-apple-health-kit-sample-type-code-system.html#apple-health-kit-sample-type-code-system-category">category</a></td><td>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system</td><td>Apple HK CategorySample</td></tr><tr><td style="white-space:nowrap"><a name="https---open-health-manager.github.io-standard-patient-health-record-ig-CodeSystem-apple-health-kit-sample-type-code-system-quantity"> </a>  <a href="CodeSystem-apple-health-kit-sample-type-code-system.html#apple-health-kit-sample-type-code-system-quantity">quantity</a></td><td>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system</td><td>Apple HK QuantitySample</td></tr><tr><td style="white-space:nowrap"><a name="https---open-health-manager.github.io-standard-patient-health-record-ig-CodeSystem-apple-health-kit-sample-type-code-system-correlation"> </a>  <a href="CodeSystem-apple-health-kit-sample-type-code-system.html#apple-health-kit-sample-type-code-system-correlation">correlation</a></td><td>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system</td><td>Apple HK CorrelationSample</td></tr><tr><td style="white-space:nowrap"><a name="https---open-health-manager.github.io-standard-patient-health-record-ig-CodeSystem-apple-health-kit-sample-type-code-system-workout"> </a>  <a href="CodeSystem-apple-health-kit-sample-type-code-system.html#apple-health-kit-sample-type-code-system-workout">workout</a></td><td>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system</td><td>Apple HK Workout</td></tr><tr><td style="white-space:nowrap"><a name="https---open-health-manager.github.io-standard-patient-health-record-ig-CodeSystem-apple-health-kit-sample-type-code-system-workoutActivity"> </a>  <a href="CodeSystem-apple-health-kit-sample-type-code-system.html#apple-health-kit-sample-type-code-system-workoutActivity">workoutActivity</a></td><td>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system</td><td>Apple HK WorkoutActivity</td></tr><tr><td style="white-space:nowrap"><a name="https---open-health-manager.github.io-standard-patient-health-record-ig-CodeSystem-apple-health-kit-sample-type-code-system-other"> </a>  <a href="CodeSystem-apple-health-kit-sample-type-code-system.html#apple-health-kit-sample-type-code-system-other">other</a></td><td>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system</td><td/></tr></table></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 6 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="CodeSystem-apple-health-kit-sample-type-code-system.html">codesystem Apple HealthKit Sample Type Code System v0.4.5 (CodeSystem)</a></p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap"><a name="https---open-health-manager.github.io-standard-patient-health-record-ig-CodeSystem-apple-health-kit-sample-type-code-system-category"> </a>  <a href="CodeSystem-apple-health-kit-sample-type-code-system.html#apple-health-kit-sample-type-code-system-category">category</a></td><td>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system</td><td>Apple HK CategorySample</td></tr><tr><td style="white-space:nowrap"><a name="https---open-health-manager.github.io-standard-patient-health-record-ig-CodeSystem-apple-health-kit-sample-type-code-system-quantity"> </a>  <a href="CodeSystem-apple-health-kit-sample-type-code-system.html#apple-health-kit-sample-type-code-system-quantity">quantity</a></td><td>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system</td><td>Apple HK QuantitySample</td></tr><tr><td style="white-space:nowrap"><a name="https---open-health-manager.github.io-standard-patient-health-record-ig-CodeSystem-apple-health-kit-sample-type-code-system-correlation"> </a>  <a href="CodeSystem-apple-health-kit-sample-type-code-system.html#apple-health-kit-sample-type-code-system-correlation">correlation</a></td><td>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system</td><td>Apple HK CorrelationSample</td></tr><tr><td style="white-space:nowrap"><a name="https---open-health-manager.github.io-standard-patient-health-record-ig-CodeSystem-apple-health-kit-sample-type-code-system-workout"> </a>  <a href="CodeSystem-apple-health-kit-sample-type-code-system.html#apple-health-kit-sample-type-code-system-workout">workout</a></td><td>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system</td><td>Apple HK Workout</td></tr><tr><td style="white-space:nowrap"><a name="https---open-health-manager.github.io-standard-patient-health-record-ig-CodeSystem-apple-health-kit-sample-type-code-system-workoutActivity"> </a>  <a href="CodeSystem-apple-health-kit-sample-type-code-system.html#apple-health-kit-sample-type-code-system-workoutActivity">workoutActivity</a></td><td>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system</td><td>Apple HK WorkoutActivity</td></tr><tr><td style="white-space:nowrap"><a name="https---open-health-manager.github.io-standard-patient-health-record-ig-CodeSystem-apple-health-kit-sample-type-code-system-other"> </a>  <a href="CodeSystem-apple-health-kit-sample-type-code-system.html#apple-health-kit-sample-type-code-system-other">other</a></td><td>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system</td><td/></tr></table></div>
 
   <hr/>
   <p>
@@ -355,7 +366,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://open-health-manager.github.io/standard-patient-health-record-ig">MITRE</a>.  Package StandardPatientHealthRecordIG#0.4.4 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 16, 2023 13:48-0500">2023-06-16</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://open-health-manager.github.io/standard-patient-health-record-ig">MITRE</a>.  Package StandardPatientHealthRecordIG#0.4.5 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 13, 2024 22:51-0600">2024-02-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
