@@ -6,6 +6,9 @@ The following document will offer design guidance and standardized APIs for help
 
 Readers are encouraged to think of this implementation guide as a marathon, not a sprint.  To further the analogy, the authors of this guide hope to help software implementor plan on whether they are competing in a 26 mile standard marathon, a 50 mile ultramarathon, or an Iron Man triathalon.  Similarly, implementing a complete PHR is no simple task, and in many situations may take upwards of a year of time or more to complete.  We hope to provide guidance that will help implementors strategically plan their implementations and avoid common stumbling blocks.
 
+### What is a Personal Health Record?   
+![VennDiagram.png](VennDiagram.png){:width="100%"}    
+
 ### Relevant Law
 
 - 21st Century Cures
@@ -16,6 +19,13 @@ Readers are encouraged to think of this implementation guide as a marathon, not 
 
 The core of the Patient Health Record should be medical grade, and the sort of record that you receive after a visit to the hospital; and which the Patient can carry to from one healthcare provider to the next.  As such, a modern Patient Health Record needs to essentially be able to receive captured data from throughout the hospital.  Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychaitry.  All of it is relavent.  
 
+### Acknowledgements  
+
+- Jan Oldenburg, Patient Empowerment Workgroup
+- Dr. Neelima Karipineni, MITRE
+- Salim K Semy, MITRE  
+- Dave Carlson, Clinical Cloud Solutions
+- Savannah Mueller, EMI Advisors
 
 ### References  
 
@@ -28,5 +38,6 @@ The core of the Patient Health Record should be medical grade, and the sort of r
 - [How to Export Facebook Data](https://blog.coupler.io/how-to-export-facebook-data/)
 - [Human API - Getting Started](https://reference.humanapi.co/reference/getting-started)
 - [Summary of Responses to an Industry RFI Regarding a Role for CMS with Personal Health Records](https://www.cms.gov/Medicare/E-Health/PerHealthRecords/Downloads/SummaryofPersonalHealthRecord.pdf)     
+- [HealthKit on FHIR](https://github.com/StanfordBDHG/HealthKitOnFHIR)
 
 

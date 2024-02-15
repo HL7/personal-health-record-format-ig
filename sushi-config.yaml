@@ -79,6 +79,7 @@ menu:
   Record Keeping: recordkeeping.html
   Conformance: conformance.html
   Data Model: datamodel.html
+  APIs: api.html
   Functional Model:
     Functional Model: functionality.html
     Record Lifecycle: recordlifecycle.html
@@ -87,7 +88,8 @@ menu:
     Annotations: annotations.html
     History: history.html
     Physiology Simulations: physiology.html
-  # Patient Personas: personas.html
+    Algorithms: algorithms.html
+    Operating Systems: operating-systems.html
   Patient Personas:
     Index: personas-index.html
     Thompson Familiy: persona-thompson-family.html
@@ -138,6 +140,12 @@ pages:
     title: Marcella
   personas-index.md:
     title: Patient Personas
+  operating-systems.md:
+    title: Operating Systems
+  algorithms.md:
+    title: Algorithms
+  api.md:
+    title: API Endpoints
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

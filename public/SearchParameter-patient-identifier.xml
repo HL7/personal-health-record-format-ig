@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="patient-identifier"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>PatientIdentifierSearchParameter</h2><p>Parameter <code>identifier</code>:<code>token</code></p><div><p>This SearchParameter enables query of patient by <code>identifier</code> with <code>mutlipleOr</code> enabled.</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td></tr><tr><td>Expression</td><td>(none)</td></tr><tr><td>Multiples</td><td>The parameter can repeat (and) but each repeat can only have one value</td></tr></table></div>
+  </text>
+  <url value="https://open-health-manager.github.io/standard-patient-health-record-ig/SearchParameter/patient-identifier"/>
+  <version value="0.4.5"/>
+  <name value="PatientIdentifierSearchParameter"/>
+  <derivedFrom value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+  <status value="active"/>
+  <date value="2024-02-13T22:51:57-06:00"/>
+  <publisher value="MITRE"/>
+  <contact>
+    <name value="MITRE"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://open-health-manager.github.io/standard-patient-health-record-ig"/>
+    </telecom>
+  </contact>
+  <description value="This SearchParameter enables query of patient by `identifier` with `mutlipleOr` enabled."/>
+  <code value="identifier"/>
+  <base value="Patient"/>
+  <type value="token"/>
+  <multipleOr value="true"/>
+</SearchParameter>

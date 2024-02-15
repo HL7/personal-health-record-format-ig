@@ -29,18 +29,18 @@
     <![endif] -->
 
       <!-- Favicons -->
-    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
-    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
-    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"17"}
-    h3,h4,h5,h6{--heading-prefix:"17"}</style>
+    <style type="text/css">h2{--heading-prefix:"19"}
+    h3,h4,h5,h6{--heading-prefix:"19"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
           <!-- Placeholder for child template header declarations -->
@@ -49,7 +49,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold"></span>
             <br/>
-            <span style="display:inline-block;">0.4.4 - ci-build
+            <span style="display:inline-block;">0.4.5 - ci-build
 
 
             </span>
@@ -88,6 +88,9 @@
   <li>
     <a href="datamodel.html">Data Model</a>
   </li>
+  <li>
+    <a href="api.html">APIs</a>
+  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Model
       <b class="caret"></b>
@@ -110,10 +113,19 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="annotations.html">Annotations</a>
+      </li>
+      <li>
         <a href="history.html">History</a>
       </li>
       <li>
         <a href="physiology.html">Physiology Simulations</a>
+      </li>
+      <li>
+        <a href="algorithms.html">Algorithms</a>
+      </li>
+      <li>
+        <a href="operating-systems.html">Operating Systems</a>
       </li>
     </ul>
   </li>
@@ -124,6 +136,9 @@
     <ul class="dropdown-menu">
       <li>
         <a href="personas-index.html">Index</a>
+      </li>
+      <li>
+        <a href="persona-thompson-family.html">Thompson Familiy</a>
       </li>
       <li>
         <a href="persona-journey-b.html">Cancer - Adult</a>
@@ -180,7 +195,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">StandardPatientHealthRecordIG - Local Development build (v0.4.4). See the <a href="https://open-health-manager.github.io/standard-patient-health-record-ig/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">StandardPatientHealthRecordIG - Local Development build (v0.4.5). See the <a href="https://open-health-manager.github.io/standard-patient-health-record-ig/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   <h2>Patient Personas</h2>
   
 
@@ -239,6 +254,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: left">wsim001</td>
       <td style="text-align: left"><a href="WilliamSim.phr">WilliamSim.phr</a></td>
       <td style="text-align: left"><a href="WilliamSim.sphr">WilliamSim.sphr</a></td>
+    </tr>
+    <tr>
+      <td>jenny-m</td>
+      <td style="text-align: left">Jenny M</td>
+      <td style="text-align: left">Cancer</td>
+      <td style="text-align: left"><a href="JennyM-cancer-patient.phr">JennyM-cancer-patient.phr</a></td>
+      <td style="text-align: left">&nbsp;</td>
     </tr>
     <tr>
       <td>1</td>
@@ -341,7 +363,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <th>Patient ID</th>
       <th style="text-align: left">PatientName</th>
-      <th style="text-align: left">Primary Diagnosis</th>
+      <th style="text-align: left">Primary Health Concern</th>
       <th style="text-align: left">SNOMED</th>
       <th style="text-align: left">.json</th>
       <th style="text-align: left">.phr</th>
@@ -417,7 +439,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: left">Jarvis643 Kunde533</td>
       <td style="text-align: left">bronchitis</td>
       <td style="text-align: left">10509002</td>
-      <td style="text-align: left"><a name="l918">​</a><a href="Jarvis643_Kunde533_beee2c9a-931e-a2b2-4ae0-ff658b57f439.json">json</a></td>
+      <td style="text-align: left"><a name="l967">​</a><a href="Jarvis643_Kunde533_beee2c9a-931e-a2b2-4ae0-ff658b57f439.json">json</a></td>
       <td style="text-align: left"><a href="Mr.Jarvis643O'Hara248-91f9ab65-1933-2a48-94b1-b6fef00f7335.phr">phr</a></td>
     </tr>
     <tr>
@@ -625,7 +647,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: left">Stanley702 Ritchie586</td>
       <td style="text-align: left">neoplasm of prostate</td>
       <td style="text-align: left">126906006</td>
-      <td style="text-align: left"><a name="l1514">​</a><a href="Stanley702_Ritchie586_f966ba2e-50d2-df7f-a5b1-bbb59685eda5.json">json</a></td>
+      <td style="text-align: left"><a name="l1563">​</a><a href="Stanley702_Ritchie586_f966ba2e-50d2-df7f-a5b1-bbb59685eda5.json">json</a></td>
       <td style="text-align: left"><a href="Mr.Stanley702Ritchie586-f92c770e-04aa-ff7c-fcf1-2a02166d032a.phr">phr</a></td>
     </tr>
     <tr>
@@ -672,7 +694,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://open-health-manager.github.io/standard-patient-health-record-ig">MITRE</a>.  Package StandardPatientHealthRecordIG#0.4.4 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 16, 2023 13:48-0500">2023-06-16</span>
+          IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://open-health-manager.github.io/standard-patient-health-record-ig">MITRE</a>.  Package StandardPatientHealthRecordIG#0.4.5 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 13, 2024 22:51-0600">2024-02-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

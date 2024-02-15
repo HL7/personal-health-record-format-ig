@@ -29,10 +29,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -49,7 +49,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold"></span>
             <br/>
-            <span style="display:inline-block;">0.4.4 - ci-build
+            <span style="display:inline-block;">0.4.5 - ci-build
 
 
             </span>
@@ -88,6 +88,9 @@
   <li>
     <a href="datamodel.html">Data Model</a>
   </li>
+  <li>
+    <a href="api.html">APIs</a>
+  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Model
       <b class="caret"></b>
@@ -110,10 +113,19 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="annotations.html">Annotations</a>
+      </li>
+      <li>
         <a href="history.html">History</a>
       </li>
       <li>
         <a href="physiology.html">Physiology Simulations</a>
+      </li>
+      <li>
+        <a href="algorithms.html">Algorithms</a>
+      </li>
+      <li>
+        <a href="operating-systems.html">Operating Systems</a>
       </li>
     </ul>
   </li>
@@ -124,6 +136,9 @@
     <ul class="dropdown-menu">
       <li>
         <a href="personas-index.html">Index</a>
+      </li>
+      <li>
+        <a href="persona-thompson-family.html">Thompson Familiy</a>
       </li>
       <li>
         <a href="persona-journey-b.html">Cancer - Adult</a>
@@ -180,7 +195,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">StandardPatientHealthRecordIG - Local Development build (v0.4.4). See the <a href="https://open-health-manager.github.io/standard-patient-health-record-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">StandardPatientHealthRecordIG - Local Development build (v0.4.5). See the <a href="https://open-health-manager.github.io/standard-patient-health-record-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Functional Model</h2>
   
 
@@ -286,7 +301,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.1.6</td>
       <td style="text-align: left">Manage PHR Account Status</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/auditevent.html">AuditEvent</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -294,7 +309,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.2</td>
       <td style="text-align: left">Manage Historical Clinical Data and Current State Data</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.fhir.org/guides/argonaut/r2/">Argonaut Data Query</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -310,7 +325,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.2.2</td>
       <td style="text-align: left">Manage Data from External Administrative Sources</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/endpoint.html">Endpoint</a> <br /> <a href="https://www.hl7.org/fhir/capabilitystatement.html">CapabilityStatement</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -318,7 +333,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.2.3</td>
       <td style="text-align: left">Manage Data and Documentation from External Clinical Sources</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/endpoint.html">Endpoint</a> <br /> <a href="https://www.hl7.org/fhir/capabilitystatement.html">CapabilityStatement</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -326,7 +341,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.2.4</td>
       <td style="text-align: left">Produce and Present Ad Hoc Views of the Personal Health Record</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/plandefinition.html">PlanDefinition</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -334,7 +349,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.2.5</td>
       <td style="text-align: left">Manage Historical and Current State Data</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/endpoint.html">Endpoint</a> <br /> <a href="https://www.hl7.org/fhir/subscription.html">Subscription</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -582,7 +597,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.5.1</td>
       <td style="text-align: left">Manage Guidelines and Protocols</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/library.html">Library</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -590,7 +605,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.5.2</td>
       <td style="text-align: left">Drug Interaction Checking</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/library.html">Library</a> <br /> <a href="https://www.hl7.org/fhir/medication.html">Medication</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -598,7 +613,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.5.3</td>
       <td style="text-align: left">Care-Related Decision Support</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/careplan.html">CarePlan</a> <br /> <a href="https://www.hl7.org/fhir/relatedperson.html">RelatedPerson</a> <br /> <a href="https://www.hl7.org/fhir/careteam.html">CareTeam</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -606,7 +621,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.5.4</td>
       <td style="text-align: left">Integration with Third Party Clinical Decision Support Services</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://cds-hooks.hl7.org/">CDS Hooks</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -614,7 +629,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.5.5</td>
       <td style="text-align: left">PHR Account Holder Configured Alerts, Reminders, and/or Notifications</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/communication.html">Communication</a> <br /> <a href="https://www.hl7.org/fhir/compisition.html">Composition</a> <br /> <a href="https://www.hl7.org/fhir/schedule.html">Schedule</a> <br /> <a href="https://www.hl7.org/fhir/flag.html">Flag</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -622,7 +637,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.5.6</td>
       <td style="text-align: left">Manage Updated Orders, Recommendations, or Alternative Care Plans</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/careplan.html">CarePlan</a> <br /> <a href="https://www.hl7.org/fhir/servicerequest.html">ServiceRequest</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -630,7 +645,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.6</td>
       <td style="text-align: left">Manage Encounters with Providers</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/encounter.html">Encounter</a> <br /> <a href="https://www.hl7.org/fhir/practitioner.html">Practitioner</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -638,7 +653,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.6.1</td>
       <td style="text-align: left">PHR Account Holder Health Data Derived from Administrative and Financial Sources</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/claim.html">Claim</a> <br /> <a href="https://www.hl7.org/fhir/coverage.html">Coverage</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -646,7 +661,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.6.2</td>
       <td style="text-align: left">Manage Self-Assessments (i.e., Symptoms)</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/condition.html">Condition</a> <br /> <a href="https://www.hl7.org/fhir/list.html">List</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -654,7 +669,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.6.3</td>
       <td style="text-align: left">Communications Between Provider and PHR Account Holder and/or PHR Account Holder Proxy</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/communication.html">Communication</a> <br /> <a href="https://www.hl7.org/fhir/communicationrequest.html">CommunicationRequest</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -662,7 +677,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.6.4</td>
       <td style="text-align: left">Data and Documentation from External Clinical Sources</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/documentreference.html">DocumentReference</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -670,7 +685,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.6.5</td>
       <td style="text-align: left">Provider Assessments</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/documentreference.html">DocumentReference</a> <br /> <a href="https://www.hl7.org/fhir/diagnosticreport.html">DiagnosticReport</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -678,7 +693,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.6.6</td>
       <td style="text-align: left">Referrals and Referral Process</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/communication.html">Communication</a> <br /> <a href="https://www.hl7.org/fhir/documentreference.html">DocumentReference</a> <br /> <a href="https://www.hl7.org/fhir/task.html">Task</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -686,7 +701,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.6.7</td>
       <td style="text-align: left">Patient-Specific Care, Instructions, Care Plans, Treatment Plans, Guidelines and Protocols</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/careplan.html">CarePlan</a> <br /> <a href="https://www.hl7.org/fhir/activitydefinition.html">ActivityDefinition</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -694,7 +709,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.6.8</td>
       <td style="text-align: left">Manage Patient-Specific Care and Treatment Plans</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/careplan.html">CarePlan</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -723,43 +738,43 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>S.1.1</td>
       <td style="text-align: left">Manage Selection of Providers</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/practitioner.html">Practitioner</a> <br /> <a href="https://www.hl7.org/fhir/organization.html">Organization</a> <br /> <a href="https://www.hl7.org/fhir/practitionerrole.html">PractitionerRole</a> <br /> <a href="https://www.hl7.org/fhir/careteam.html">CareTeam</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td>S.1.2</td>
       <td style="text-align: left">Manage PHR Account Holder Provider’s Information</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/practitioner.html">Practitioner</a> <br /> <a href="https://www.hl7.org/fhir/organization.html">Organization</a> <br /> <a href="https://www.hl7.org/fhir/practitionerrole.html">PractitionerRole</a> <br /> <a href="https://www.hl7.org/fhir/careteam.html">CareTeam</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td>S.1.3</td>
       <td style="text-align: left">Manage Health Care Provider Information</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/practitioner.html">Practitioner</a> <br /> <a href="https://www.hl7.org/fhir/organization.html">Organization</a> <br /> <a href="https://www.hl7.org/fhir/practitionerrole.html">PractitionerRole</a> <br /> <a href="https://www.hl7.org/fhir/careteam.html">CareTeam</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td>S.1.4</td>
       <td style="text-align: left">Manage Provider Transparency Information</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/practitioner.html">Practitioner</a> <br /> <a href="https://www.hl7.org/fhir/organization.html">Organization</a> <br /> <a href="https://www.hl7.org/fhir/practitionerrole.html">PractitionerRole</a> <br /> <a href="https://www.hl7.org/fhir/careteam.html">CareTeam</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td>S.1.5</td>
       <td style="text-align: left">Manage Healthcare Facility Information</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/organization.html">Organization</a> <br /> <a href="https://www.hl7.org/fhir/location.html">Location</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td>S.1.6</td>
       <td style="text-align: left">Manage Healthcare Facility Transparency Information</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/organization.html">Organization</a> <br /> <a href="https://www.hl7.org/fhir/location.html">Location</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td>S.1.7</td>
       <td style="text-align: left">Manage Surveys on the Healthcare Experience</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a> <br /> <a href="https://www.hl7.org/fhir/questionnaireresponse.html">QuestionnaireResponse</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
@@ -855,7 +870,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>S.3.7</td>
       <td style="text-align: left">Manage New, Additional, or Other Use Request</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/consent.html">Consent</a> <br /> <a href="https://www.hl7.org/fhir/permission.html">Permission</a> <br /> <a href="https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
@@ -909,37 +924,37 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>S.4.2</td>
       <td style="text-align: left">Registry Notification and Management</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/endpoint.html">Endpoint</a> <br /> <a href="https://www.hl7.org/fhir/subscription.html">Subscription</a> <br /> <a href="https://www.hl7.org/fhir/communication.html">Communication</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td>S.4.3</td>
       <td style="text-align: left">Manage Donor Information</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/relatedperson.html">RelatedPerson</a> <br /> <a href="https://www.hl7.org/fhir/biologicallyderivedproduct.html">BiologicallyDerivedProduct</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td>S.4.4</td>
       <td style="text-align: left">Manage PHR Account Holder Education Material Updates</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/library.html">Library</a> <br /> <a href="https://www.hl7.org/fhir/documentreferences.html">DocumentReferences</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td>S.4.5</td>
       <td style="text-align: left">Manage PHR Account Holder Reminder Information Updates</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/schedule.html">Schedule</a> <br /> <a href="https://www.hl7.org/fhir/slot.html">Slot</a> <br /> <a href="https://www.hl7.org/fhir/flag.html">Flag</a> <br /> <a href="https://www.hl7.org/fhir/appointment.html">Appointment</a> <br /> <a href="https://www.hl7.org/fhir/task.html">Task</a> <br /> <a href="https://www.hl7.org/fhir/communication.html">Communication</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td>S.4.6</td>
       <td style="text-align: left">Manage Public Health Information</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/library.html">Library</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td>S.4.6.1</td>
       <td style="text-align: left">Manage Public Health Related Updates</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/library.html">Library</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
@@ -957,19 +972,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>S.4.6.4</td>
       <td style="text-align: left">Manage Enrollment in Public Health Programs</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/coverage.html">Coverage</a> <br /> <a href="https://www.hl7.org/fhir/activitydefinition.html">ActivityDefinition</a> <br /> <a href="https://www.hl7.org/fhir/organization.html">Organization</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td>S.4.6.5</td>
       <td style="text-align: left">Manage Enrollment in Public Health Notifications and Alerts</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/communication.html">Communication</a> <br /> <a href="https://www.hl7.org/fhir/subscription.html">Subscription</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td>S.4.6.6</td>
       <td style="text-align: left">Enrollment in Public Health Surveys</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a> <br /> <a href="https://www.hl7.org/fhir/questionnaireresponse.html">QuestionnaireResponse</a></td>
       <td style="text-align: left"> </td>
     </tr>
   </tbody>
@@ -1008,7 +1023,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://open-health-manager.github.io/standard-patient-health-record-ig">MITRE</a>.  Package StandardPatientHealthRecordIG#0.4.4 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 16, 2023 13:48-0500">2023-06-16</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://open-health-manager.github.io/standard-patient-health-record-ig">MITRE</a>.  Package StandardPatientHealthRecordIG#0.4.5 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 13, 2024 22:51-0600">2024-02-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

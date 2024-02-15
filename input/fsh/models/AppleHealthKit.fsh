@@ -88,7 +88,6 @@ Id:             apple-health-kit-workout-sample
 Title:          "Apple HealthKit Workout Sample Logical Model"
 Description:    "Data elements for the Apple HealthKit HKWorkout."
 Parent:         AppleHealthKitSample
-Characteristics: #can-be-target
 * ^status = #draft
 * duration 0..1 decimal "The workout duration in number of seconds."
 * workoutActivityType 0..1 code "The sample's workout activity type." "When HKSample is an HKWorkoutActivity, the corresponding workoutActivityType."
@@ -102,7 +101,6 @@ Id:             apple-health-kit-workout-activity
 Title:          "Apple HealthKit Workout Activity Logical Model"
 Description:    "Data elements for the Apple HealthKit HKWorkoutActivity."
 Parent:         AppleHealthKitObject
-Characteristics: #can-be-target
 * ^status = #draft
 * startDate 0..1 dateTime "The Workout Activity start datetime." "The Workout Activity start datetime."
 * endDate 0..1 dateTime "Workout Activity end datetime." "The Workout Activity end datetime."

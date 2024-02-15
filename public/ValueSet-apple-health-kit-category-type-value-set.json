@@ -6,11 +6,11 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-apple-health-kit-category-type-code-system.html\"><code>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-category-type-code-system</code></a></li></ul></div>"
   },
   "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-category-type-value-set",
-  "version" : "0.4.4",
+  "version" : "0.4.5",
   "name" : "AppleHealthKitCategoryTypeValueSet",
   "title" : "Apple HealthKit Category Type Value Set",
-  "status" : "active",
-  "date" : "2023-06-16T13:48:16-05:00",
+  "status" : "draft",
+  "date" : "2024-02-13T22:51:57-06:00",
   "publisher" : "MITRE",
   "contact" : [{
     "name" : "MITRE",

@@ -6,10 +6,10 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>StandardPatientHealthRecordIG</h2><p>The official URL for this implementation guide is: </p><pre>https://open-health-manager.github.io/standard-patient-health-record-ig/ImplementationGuide/StandardPatientHealthRecordIG</pre></div>"
   },
   "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ImplementationGuide/StandardPatientHealthRecordIG",
-  "version" : "0.4.4",
+  "version" : "0.4.5",
   "name" : "StandardPatientHealthRecordIG",
   "status" : "draft",
-  "date" : "2023-06-16T13:48:16-05:00",
+  "date" : "2024-02-13T22:51:57-06:00",
   "publisher" : "MITRE",
   "contact" : [{
     "name" : "MITRE",
@@ -29,7 +29,17 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "5.0.0"
+    "version" : "5.3.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r4",
+    "version" : "1.0.0"
   }],
   "definition" : {
     "extension" : [{
@@ -297,9 +307,13 @@
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
     {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools#current"
+    },
+    {
       "extension" : [{
         "url" : "code",
-        "valueString" : "copyrightyear"
+        "valueCode" : "copyrightyear"
       },
       {
         "url" : "value",
@@ -310,7 +324,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "releaselabel"
+        "valueCode" : "releaselabel"
       },
       {
         "url" : "value",
@@ -321,7 +335,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "autoload-resources"
+        "valueCode" : "autoload-resources"
       },
       {
         "url" : "value",
@@ -332,7 +346,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueCode" : "path-liquid"
       },
       {
         "url" : "value",
@@ -343,7 +357,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueCode" : "path-liquid"
       },
       {
         "url" : "value",
@@ -354,7 +368,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-qa"
+        "valueCode" : "path-qa"
       },
       {
         "url" : "value",
@@ -365,7 +379,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-temp"
+        "valueCode" : "path-temp"
       },
       {
         "url" : "value",
@@ -376,7 +390,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-output"
+        "valueCode" : "path-output"
       },
       {
         "url" : "value",
@@ -387,7 +401,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-suppressed-warnings"
+        "valueCode" : "path-suppressed-warnings"
       },
       {
         "url" : "value",
@@ -398,7 +412,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-history"
+        "valueCode" : "path-history"
       },
       {
         "url" : "value",
@@ -409,7 +423,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "template-html"
+        "valueCode" : "template-html"
       },
       {
         "url" : "value",
@@ -420,7 +434,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "template-md"
+        "valueCode" : "template-md"
       },
       {
         "url" : "value",
@@ -431,7 +445,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-contact"
+        "valueCode" : "apply-contact"
       },
       {
         "url" : "value",
@@ -442,7 +456,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-context"
+        "valueCode" : "apply-context"
       },
       {
         "url" : "value",
@@ -453,7 +467,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-copyright"
+        "valueCode" : "apply-copyright"
       },
       {
         "url" : "value",
@@ -464,7 +478,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-jurisdiction"
+        "valueCode" : "apply-jurisdiction"
       },
       {
         "url" : "value",
@@ -475,7 +489,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-license"
+        "valueCode" : "apply-license"
       },
       {
         "url" : "value",
@@ -486,7 +500,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-publisher"
+        "valueCode" : "apply-publisher"
       },
       {
         "url" : "value",
@@ -497,7 +511,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-version"
+        "valueCode" : "apply-version"
       },
       {
         "url" : "value",
@@ -508,7 +522,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "active-tables"
+        "valueCode" : "active-tables"
       },
       {
         "url" : "value",
@@ -519,7 +533,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "fmm-definition"
+        "valueCode" : "fmm-definition"
       },
       {
         "url" : "value",
@@ -530,7 +544,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "propagate-status"
+        "valueCode" : "propagate-status"
       },
       {
         "url" : "value",
@@ -541,7 +555,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "excludelogbinaryformat"
+        "valueCode" : "excludelogbinaryformat"
       },
       {
         "url" : "value",
@@ -552,7 +566,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "tabbed-snapshots"
+        "valueCode" : "tabbed-snapshots"
       },
       {
         "url" : "value",
@@ -563,6 +577,330 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/apple-health-kit-biological-sex-code-system"
+      },
+      "name" : "Apple HealthKit Biological Sex Code System",
+      "description" : "Constants indicating the user’s sex.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/apple-health-kit-biological-sex-value-set"
+      },
+      "name" : "Apple HealthKit Biological Sex Value Set",
+      "description" : "Apple HealthKit Biological Sex Value Set",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/apple-health-kit-category-sample"
+      },
+      "name" : "Apple HealthKit Category Sample Logical Model",
+      "description" : "Data elements for the Apple HealthKit HKCategorySample.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/apple-health-kit-category-type-code-system"
+      },
+      "name" : "Apple HealthKit Category Type Code System",
+      "description" : "HKCategoryTypeIdentifier - Identifiers for creating category types.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/apple-health-kit-category-type-value-set"
+      },
+      "name" : "Apple HealthKit Category Type Value Set",
+      "description" : "A type that identifies samples that contain a value from a small set of possible values.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/apple-health-kit-characteristic-type-code-system"
+      },
+      "name" : "Apple HealthKit Characteristic Type Code System",
+      "description" : "The identifiers that create characteristic type objects.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/apple-health-kit-characteristic-type-value-set"
+      },
+      "name" : "Apple HealthKit Charactersitic Type Value Set",
+      "description" : "Apple HealthKit Charactersitic Type Value Set",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/apple-health-kit-correlation-sample"
+      },
+      "name" : "Apple HealthKit Correlation Sample Logical Model",
+      "description" : "Data elements for the Apple HealthKit HKCorrelation.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/apple-health-kit-correlation-type-code-system"
+      },
+      "name" : "Apple HealthKit Correlation Type Code System",
+      "description" : "Code System required for defining correlationType ValueSet",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/apple-health-kit-correlation-type-value-set"
+      },
+      "name" : "Apple HealthKit Correlation Type Value Set",
+      "description" : "Possible values for AppleHealthKitSample.correlationType",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/apple-health-kit-healthstore-characteristic"
+      },
+      "name" : "Apple HealthKit HealthStore Characteristic Logical Model",
+      "description" : "Relevant Data elements that correspond to the CharacteristicType stored in Apple HealthStore.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical:abstract"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/apple-health-kit-object"
+      },
+      "name" : "Apple HealthKit Object Logical Model",
+      "description" : "Data elements for the Apple HealthKit HKObject.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/apple-health-kit-quantity-sample"
+      },
+      "name" : "Apple HealthKit Quantity Sample Logical Model",
+      "description" : "Data elements for the Apple HealthKit HKQuantitySample.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/apple-health-kit-quantity-type-code-system"
+      },
+      "name" : "Apple HealthKit Quantity Type Code System",
+      "description" : "Code System required for defining quantityType ValueSet",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/apple-health-kit-quantity-type-value-set"
+      },
+      "name" : "Apple HealthKit Quantity Type Value Set",
+      "description" : "Possible values for AppleHealthKitSample.quantityType",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical:abstract"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/apple-health-kit-sample"
+      },
+      "name" : "Apple HealthKit Sample Logical Model",
+      "description" : "Data elements for the Apple HealthKit HKSample.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/apple-health-kit-sample-type-code-system"
+      },
+      "name" : "Apple HealthKit Sample Type Code System",
+      "description" : "Code System required for defining sampleType ValueSet",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/apple-health-kit-sample-type-value-set"
+      },
+      "name" : "Apple HealthKit Sample Type Value Set",
+      "description" : "Possible values for AppleHealthKitSample.sampleType",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/apple-health-kit-workout-activity"
+      },
+      "name" : "Apple HealthKit Workout Activity Logical Model",
+      "description" : "Data elements for the Apple HealthKit HKWorkoutActivity.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/apple-health-kit-workout-activity-type-code-system"
+      },
+      "name" : "Apple HealthKit Workout Activity Type Code System",
+      "description" : "Code System required for defining workoutActivityType ValueSet",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/apple-health-kit-workout-activity-type-value-set"
+      },
+      "name" : "Apple HealthKit Workout Activity Type Value Set",
+      "description" : "Possible values for AppleHealthLitSample.workoutActivityType",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/apple-health-kit-workout-event"
+      },
+      "name" : "Apple HealthKit Workout Event Logical Model",
+      "description" : "Data elements for the Apple HealthKit HKWorkoutEvent.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/apple-health-kit-workout-event-type-code-system"
+      },
+      "name" : "Apple HealthKit Workout Event Type Code System",
+      "description" : "Code System required for defining workout event type ValueSet",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/apple-health-kit-workout-event-type-value-set"
+      },
+      "name" : "Apple HealthKit Workout Event Type Value Set",
+      "description" : "Possible values for AppleHealthKitWorkoutEvent.type",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/apple-health-kit-workout-sample"
+      },
+      "name" : "Apple HealthKit Workout Sample Logical Model",
+      "description" : "Data elements for the Apple HealthKit HKWorkout.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Environmental"
+      },
+      "name" : "Environmental",
+      "description" : "Standard PHR profile of the Environmental resource.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/NutrientOuttake"
+      },
+      "name" : "NutrientOuttake",
+      "description" : "Standard PHR profile of the NutrientOuttake resource.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -571,6 +909,54 @@
       "name" : "Patient contributed data: sleep observation",
       "description" : "patient sleep logs recorded by device or app.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pcd-sleep-observation-code"
+      },
+      "name" : "Patient contributed data: sleep observation code",
+      "description" : "This value set includes codes to track patient sleep recorded by device or app",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pcd-sleep-observation-value"
+      },
+      "name" : "Patient contributed data: sleep stage value",
+      "description" : "This value set includes codes to track patient sleep values recorded by device or app",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/PCDSleepObservation-duration-example"
+      },
+      "name" : "PCDSleepObservation-duration-example",
+      "description" : "Example - pcd-sleep-observation duration",
+      "exampleCanonical" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/pcd-sleep-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/PCDSleepObservation-stage-example"
+      },
+      "name" : "PCDSleepObservation-stage-example",
+      "description" : "Example - pcd-sleep-observation stage",
+      "exampleCanonical" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/pcd-sleep-observation"
     },
     {
       "extension" : [{
@@ -647,133 +1033,25 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
+        "valueString" : "SearchParameter"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/apple-health-kit-category-sample"
+        "reference" : "SearchParameter/patient-identifier"
       },
-      "name" : "Apple HealthKit Category Sample Logical Model",
-      "description" : "Data elements for the Apple HealthKit HKCategorySample.",
+      "name" : "Search by identifier in patient with multipleOr",
+      "description" : "This SearchParameter enables query of patient by `identifier` with `mutlipleOr` enabled.",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
+        "valueString" : "SearchParameter"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/apple-health-kit-correlation-sample"
+        "reference" : "SearchParameter/search-from-date"
       },
-      "name" : "Apple HealthKit Correlation Sample Logical Model",
-      "description" : "Data elements for the Apple HealthKit HKCorrelation.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/apple-health-kit-healthstore-characteristic"
-      },
-      "name" : "Apple HealthKit HealthStore Characteristic Logical Model",
-      "description" : "Relevant Data elements that correspond to the CharacteristicType stored in Apple HealthStore.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical:abstract"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/apple-health-kit-object"
-      },
-      "name" : "Apple HealthKit Object Logical Model",
-      "description" : "Data elements for the Apple HealthKit HKObject.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/apple-health-kit-quantity-sample"
-      },
-      "name" : "Apple HealthKit Quantity Sample Logical Model",
-      "description" : "Data elements for the Apple HealthKit HKQuantitySample.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical:abstract"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/apple-health-kit-sample"
-      },
-      "name" : "Apple HealthKit Sample Logical Model",
-      "description" : "Data elements for the Apple HealthKit HKSample.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/apple-health-kit-workout-activity"
-      },
-      "name" : "Apple HealthKit Workout Activity Logical Model",
-      "description" : "Data elements for the Apple HealthKit HKWorkoutActivity.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/apple-health-kit-workout-event"
-      },
-      "name" : "Apple HealthKit Workout Event Logical Model",
-      "description" : "Data elements for the Apple HealthKit HKWorkoutEvent.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/apple-health-kit-workout-sample"
-      },
-      "name" : "Apple HealthKit Workout Sample Logical Model",
-      "description" : "Data elements for the Apple HealthKit HKWorkout.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/Environmental"
-      },
-      "name" : "Environmental",
-      "description" : "Standard PHR profile of the Environmental resource.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/NutrientOuttake"
-      },
-      "name" : "NutrientOuttake",
-      "description" : "Standard PHR profile of the NutrientOuttake resource.",
+      "name" : "Search From Date",
+      "description" : "Return records from this date",
       "exampleBoolean" : false
     },
     {
@@ -786,257 +1064,6 @@
       },
       "name" : "SocialMedia",
       "description" : "Standard PHR profile of the SocialMedia resource.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/apple-health-kit-biological-sex-value-set"
-      },
-      "name" : "Apple HealthKit Biological Sex Value Set",
-      "description" : "Apple HealthKit Biological Sex Value Set",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/apple-health-kit-category-type-value-set"
-      },
-      "name" : "Apple HealthKit Category Type Value Set",
-      "description" : "A type that identifies samples that contain a value from a small set of possible values.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/apple-health-kit-characteristic-type-value-set"
-      },
-      "name" : "Apple HealthKit Charactersitic Type Value Set",
-      "description" : "Apple HealthKit Charactersitic Type Value Set",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/apple-health-kit-correlation-type-value-set"
-      },
-      "name" : "Apple HealthKit Correlation Type Value Set",
-      "description" : "Possible values for AppleHealthKitSample.correlationType",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/apple-health-kit-quantity-type-value-set"
-      },
-      "name" : "Apple HealthKit Quantity Type Value Set",
-      "description" : "Possible values for AppleHealthKitSample.quantityType",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/apple-health-kit-sample-type-value-set"
-      },
-      "name" : "Apple HealthKit Sample Type Value Set",
-      "description" : "Possible values for AppleHealthKitSample.sampleType",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/apple-health-kit-workout-activity-type-value-set"
-      },
-      "name" : "Apple HealthKit Workout Activity Type Value Set",
-      "description" : "Possible values for AppleHealthLitSample.workoutActivityType",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/apple-health-kit-workout-event-type-value-set"
-      },
-      "name" : "Apple HealthKit Workout Event Type Value Set",
-      "description" : "Possible values for AppleHealthKitWorkoutEvent.type",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/pcd-sleep-observation-code"
-      },
-      "name" : "Patient contributed data: sleep observation code",
-      "description" : "This value set includes codes to track patient sleep recorded by device or app",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/pcd-sleep-observation-value"
-      },
-      "name" : "Patient contributed data: sleep stage value",
-      "description" : "This value set includes codes to track patient sleep values recorded by device or app",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/apple-health-kit-workout-activity-type-code-system"
-      },
-      "name" : "Apple HealthKit Workout Activity Type Code System",
-      "description" : "Code System required for defining workoutActivityType ValueSet",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/apple-health-kit-biological-sex-code-system"
-      },
-      "name" : "Apple HealthKit Biological Sex Code System",
-      "description" : "Constants indicating the user’s sex.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/apple-health-kit-category-type-code-system"
-      },
-      "name" : "Apple HealthKit Category Type Code System",
-      "description" : "HKCategoryTypeIdentifier - Identifiers for creating category types.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/apple-health-kit-characteristic-type-code-system"
-      },
-      "name" : "Apple HealthKit Characteristic Type Code System",
-      "description" : "The identifiers that create characteristic type objects.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/apple-health-kit-correlation-type-code-system"
-      },
-      "name" : "Apple HealthKit Correlation Type Code System",
-      "description" : "Code System required for defining correlationType ValueSet",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/apple-health-kit-quantity-type-code-system"
-      },
-      "name" : "Apple HealthKit Quantity Type Code System",
-      "description" : "Code System required for defining quantityType ValueSet",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/apple-health-kit-sample-type-code-system"
-      },
-      "name" : "Apple HealthKit Sample Type Code System",
-      "description" : "Code System required for defining sampleType ValueSet",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/apple-health-kit-workout-event-type-code-system"
-      },
-      "name" : "Apple HealthKit Workout Event Type Code System",
-      "description" : "Code System required for defining workout event type ValueSet",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/PCDSleepObservation-duration-example"
-      },
-      "name" : "PCDSleepObservation-duration-example",
-      "description" : "Example - pcd-sleep-observation duration",
-      "exampleCanonical" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/pcd-sleep-observation"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/PCDSleepObservation-stage-example"
-      },
-      "name" : "PCDSleepObservation-stage-example",
-      "description" : "Example - pcd-sleep-observation stage",
-      "exampleCanonical" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/pcd-sleep-observation"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureMap"
-      }],
-      "reference" : {
-        "reference" : "StructureMap/HKCategorySamplePregnancyToObservation"
-      },
-      "name" : "HKCategorySamplePregnancyToObservation",
       "exampleBoolean" : false
     }],
     "page" : {
@@ -1104,6 +1131,15 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "annotations.html"
+        }],
+        "nameUrl" : "annotations.html",
+        "title" : "Annotations",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "security.html"
         }],
         "nameUrl" : "security.html",
@@ -1144,6 +1180,15 @@
         }],
         "nameUrl" : "persona-william.html",
         "title" : "William Sim",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "persona-thompson-family.html"
+        }],
+        "nameUrl" : "persona-thompson-family.html",
+        "title" : "Thompson Family",
         "generation" : "markdown"
       },
       {
@@ -1198,6 +1243,33 @@
         }],
         "nameUrl" : "personas-index.html",
         "title" : "Patient Personas",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "operating-systems.html"
+        }],
+        "nameUrl" : "operating-systems.html",
+        "title" : "Operating Systems",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "algorithms.html"
+        }],
+        "nameUrl" : "algorithms.html",
+        "title" : "Algorithms",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "api.html"
+        }],
+        "nameUrl" : "api.html",
+        "title" : "API Endpoints",
         "generation" : "markdown"
       }]
     },
