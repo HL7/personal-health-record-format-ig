@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "AppleHealthKitQuantitySample"] ; # 
   fhir:title [ fhir:v "Apple HealthKit Quantity Sample Logical Model"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-02-13T22:51:57-06:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-24T11:28:13-05:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "MITRE"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "MITRE" ] ;
