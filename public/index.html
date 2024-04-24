@@ -226,7 +226,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2024-02-13
+            as of 2024-04-24
           
         
       </td>
@@ -256,6 +256,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#what-is-a-personal-health-record" id="markdown-toc-what-is-a-personal-health-record">What is a Personal Health Record?</a></li>
   <li><a href="#relevant-law" id="markdown-toc-relevant-law">Relevant Law</a></li>
   <li><a href="#purpose--design-philosophy" id="markdown-toc-purpose--design-philosophy">Purpose / Design Philosophy</a></li>
+  <li><a href="#use-cases" id="markdown-toc-use-cases">Use Cases</a></li>
   <li><a href="#acknowledgements" id="markdown-toc-acknowledgements">Acknowledgements</a></li>
   <li><a href="#references" id="markdown-toc-references">References</a></li>
 </ul>
@@ -282,7 +283,50 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="purpose--design-philosophy">Purpose / Design Philosophy</h3>
 
-<p>The core of the Patient Health Record should be medical grade, and the sort of record that you receive after a visit to the hospital; and which the Patient can carry to from one healthcare provider to the next.  As such, a modern Patient Health Record needs to essentially be able to receive captured data from throughout the hospital.  Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychaitry.  All of it is relavent.</p>
+<p>The core of the Patient Health Record should be medical grade, and able to incorporate any medical record that you receive after a visit to the hospital; and which the Patient can then carry from one healthcare provider to the next.  As such, a modern Patient Health Record needs to essentially be able to receive captured data from throughout the hospital.  Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychaitry.  All of it is relavent.</p>
+
+<h3 id="use-cases">Use Cases</h3>
+
+<p>This guide is particularly interested in the problem of collecting and aggregating patient health records from multiple health records into a coherent whole.  In the healthcare industry, these types of records are known as <code class="language-plaintext highlighter-rouge">longitudinal</code> records.</p>
+
+<ul>
+  <li>
+    <p><em>Longitudinal Health Records</em> - Assembly of records over a long time span; generally multiple decades (20 years or more), and possibly from different healthcare systems with different practices or standards of care.</p>
+  </li>
+  <li>
+    <p><em>Longitudinal Studies</em> - Clinical studies that follow up on patient results after 20 or more years.  Very important for pediatric studies.</p>
+  </li>
+  <li>
+    <p><em>Snowbirds</em> - Many patients have more than one home location, and may spend time in different parts of the country on a seasonal basis.  This leads to medical records that are fragmented.</p>
+  </li>
+  <li>
+    <p><em>Symptom Tracking</em> - Symptoms of an illness can evolve as the condition improves or worsens, impacted by such things as climate or diet or circumstances of life.</p>
+  </li>
+  <li>
+    <p><em>Long COVID</em> - An example of an ongoing longitudinal study that has captured national and worldwide attention, as we continued to determine the long-term effects of COVID-19.</p>
+  </li>
+  <li>
+    <p><em>Multiple Chronic Conditions</em> - Not all medical conditions are reported to all healthcare providers.  Conversely, specialists will report results for one area of medicine, which needs to be incorporate and reconciled with the patient’s master record.</p>
+  </li>
+  <li>
+    <p><em>Differential Diagnosises</em> - Case presentation for rare diseases can require differential diagnosis, as clinicians generate hypotheses and tests for one condition after another to explain a set of symptoms.</p>
+  </li>
+  <li>
+    <p><em>Alternative Care - Massage, Accupuncture, etc.</em> - Patients may wish to track alternative modalities of healthcare that are not recognized or tracked by a healthcare provider or network.</p>
+  </li>
+  <li>
+    <p><em>Bring Your Own Device</em> - Patients may wish to utilize consumer medical devices for tracking their own health.</p>
+  </li>
+  <li>
+    <p><em>Foster Care System</em> - Custody and care of foster children, especially when it crosses state lines, can be complicated; requiring detailed record keeping to align both medical and court proceedings.</p>
+  </li>
+  <li>
+    <p><em>Migrants/Immigrants</em> - Patients that have immigrated will necessarily have fragmented records that exist in multiple locations or countries.</p>
+  </li>
+  <li>
+    <p><em>Climate Refugees</em> - Patients that have been forced to relocate, due to fires, floods, and similar events, will likely have medical records in multiple clinics or hospitals.</p>
+  </li>
+</ul>
 
 <h3 id="acknowledgements">Acknowledgements</h3>
 
@@ -334,7 +378,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://open-health-manager.github.io/standard-patient-health-record-ig">MITRE</a>.  Package StandardPatientHealthRecordIG#0.4.5 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 13, 2024 22:51-0600">2024-02-13</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://open-health-manager.github.io/standard-patient-health-record-ig">MITRE</a>.  Package StandardPatientHealthRecordIG#0.4.5 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 24, 2024 11:28-0500">2024-04-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

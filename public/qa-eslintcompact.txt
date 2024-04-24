@@ -443,5 +443,5 @@ StandardPatientHealthRecordIG : Validation Results
 =========================================
 
 err = 8, warn = 427, info = 9
-IG Publisher Version: 1.5.0 Out of date - current version is 1.5.16
-Generated Tue Feb 13 22:53:02 CST 2024. FHIR version 4.0.1 for StandardPatientHealthRecordIG#0.4.5 (canonical = https://open-health-manager.github.io/standard-patient-health-record-ig)
+IG Publisher Version: 1.5.0 Out of date - current version is 1.6.6
+Generated Wed Apr 24 11:29:19 CDT 2024. FHIR version 4.0.1 for StandardPatientHealthRecordIG#0.4.5 (canonical = https://open-health-manager.github.io/standard-patient-health-record-ig)
