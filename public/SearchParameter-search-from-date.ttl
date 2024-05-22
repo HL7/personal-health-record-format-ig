@@ -13,10 +13,10 @@
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>SearchFromDateSearchParameter</h2><p>Parameter <code>search-from-date</code>:<code>date</code></p><div><p>Return records from this date</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td></tr><tr><td>Expression</td><td>(none)</td></tr><tr><td>Multiples</td><td>The parameter cannot repeat or have multiple values</td></tr></table></div>"
   ] ; # 
   fhir:url [ fhir:v "https://open-health-manager.github.io/standard-patient-health-record-ig/SearchParameter/search-from-date"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.4.5"] ; # 
+  fhir:version [ fhir:v "0.4.6"] ; # 
   fhir:name [ fhir:v "SearchFromDateSearchParameter"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-04-24T11:28:13-05:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-05-22T11:48:28-05:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "MITRE"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "MITRE" ] ;

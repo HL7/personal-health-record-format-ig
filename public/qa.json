@@ -2,12 +2,12 @@
   "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ImplementationGuide/StandardPatientHealthRecordIG",
   "name" : "StandardPatientHealthRecordIG",
   "package-id" : "StandardPatientHealthRecordIG",
-  "ig-ver" : "0.4.5",
-  "date" : "Wed, 24 Apr, 2024 11:28:13 -0500",
+  "ig-ver" : "0.4.6",
+  "date" : "Wed, 22 May, 2024 11:48:28 -0500",
   "errs" : 8,
   "warnings" : 427,
   "hints" : 9,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 1983987648
+  "maxMemory" : 2236872288
 }

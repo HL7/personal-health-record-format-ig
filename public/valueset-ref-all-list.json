@@ -26,8 +26,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.141"],
       "uses" : {
       },
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation",
-      "StructureDefinition-PhrMedia.html" : "PhrMedia"
+      "StructureDefinition-PhrMedia.html" : "PhrMedia",
+      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
@@ -255,15 +255,15 @@
       "uses" : {
       },
       "StructureDefinition-NutrientOuttake.html" : "NutrientOuttake",
-      "StructureDefinition-Environmental.html" : "Environmental",
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation",
+      "StructureDefinition-PhrBundle.html" : "PhrBundle",
+      "StructureDefinition-PhrMedia.html" : "PhrMedia",
+      "StructureDefinition-PhrPatient.html" : "PhrPatient",
       "StructureDefinition-PhrProvenance.html" : "PhrProvenance",
+      "StructureDefinition-SocialMedia.html" : "SocialMedia",
       "StructureDefinition-PhrComposition.html" : "PhrComposition",
       "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
-      "StructureDefinition-PhrMedia.html" : "PhrMedia",
-      "StructureDefinition-SocialMedia.html" : "SocialMedia",
-      "StructureDefinition-PhrBundle.html" : "PhrBundle",
-      "StructureDefinition-PhrPatient.html" : "PhrPatient"
+      "StructureDefinition-Environmental.html" : "Environmental",
+      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -661,7 +661,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-biological-sex-value-set",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitBiologicalSexValueSet",
       "title" : "Apple HealthKit Biological Sex Value Set",
@@ -675,7 +675,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-category-type-value-set",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitCategoryTypeValueSet",
       "title" : "Apple HealthKit Category Type Value Set",
@@ -689,7 +689,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-characteristic-type-value-set",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitCharacteristicTypeValueSet",
       "title" : "Apple HealthKit Charactersitic Type Value Set",
@@ -703,7 +703,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-correlation-type-value-set",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitCorrelationTypeValueSet",
       "title" : "Apple HealthKit Correlation Type Value Set",
@@ -717,7 +717,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-quantity-type-value-set",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitQuantityTypeValueSet",
       "title" : "Apple HealthKit Quantity Type Value Set",
@@ -731,7 +731,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-sample-type-value-set",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitSampleTypeValueSet",
       "title" : "Apple HealthKit Sample Type Value Set",
@@ -741,15 +741,15 @@
       ],
       "uses" : {
       },
+      "StructureDefinition-apple-health-kit-correlation-sample.html" : "Apple HealthKit Correlation Sample Logical Model",
       "StructureDefinition-apple-health-kit-sample.html" : "Apple HealthKit Sample Logical Model",
-      "StructureDefinition-apple-health-kit-category-sample.html" : "Apple HealthKit Category Sample Logical Model",
-      "StructureDefinition-apple-health-kit-quantity-sample.html" : "Apple HealthKit Quantity Sample Logical Model",
       "StructureDefinition-apple-health-kit-workout-sample.html" : "Apple HealthKit Workout Sample Logical Model",
-      "StructureDefinition-apple-health-kit-correlation-sample.html" : "Apple HealthKit Correlation Sample Logical Model"
+      "StructureDefinition-apple-health-kit-category-sample.html" : "Apple HealthKit Category Sample Logical Model",
+      "StructureDefinition-apple-health-kit-quantity-sample.html" : "Apple HealthKit Quantity Sample Logical Model"
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-workout-activity-type-value-set",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitWorkoutActivityTypeValueSet",
       "title" : "Apple HealthKit Workout Activity Type Value Set",
@@ -763,7 +763,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-workout-event-type-value-set",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitWorkoutEventTypeValueSet",
       "title" : "Apple HealthKit Workout Event Type Value Set",
@@ -777,7 +777,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/pcd-sleep-observation-code",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "PCDSleepObservationCode",
       "title" : "Patient contributed data: sleep observation code",
@@ -789,7 +789,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/pcd-sleep-observation-value",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "PCDSleepStageValueCode",
       "title" : "Patient contributed data: sleep stage value",

@@ -2,7 +2,7 @@
   "codeSystems" : [
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-biological-sex-code-system",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitBiologicalSexCodeSystem",
       "title" : "Apple HealthKit Biological Sex Code System",
@@ -10,7 +10,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-category-type-code-system",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitCategoryTypeCodeSystem",
       "title" : "Apple HealthKit Category Type Code System",
@@ -18,7 +18,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-characteristic-type-code-system",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitCharacteristicTypeCodeSystem",
       "title" : "Apple HealthKit Characteristic Type Code System",
@@ -26,7 +26,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-correlation-type-code-system",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitCorrelationTypeCodeSystem",
       "title" : "Apple HealthKit Correlation Type Code System",
@@ -34,7 +34,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-quantity-type-code-system",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitQuantityTypeCodeSystem",
       "title" : "Apple HealthKit Quantity Type Code System",
@@ -42,7 +42,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitSampleTypeCodeSystem",
       "title" : "Apple HealthKit Sample Type Code System",
@@ -50,7 +50,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-workout-activity-type-code-system",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHEalthKitWorkoutActivityTypeCodeSystem",
       "title" : "Apple HealthKit Workout Activity Type Code System",
@@ -58,7 +58,7 @@
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-workout-event-type-code-system",
-      "version" : "0.4.5",
+      "version" : "0.4.6",
       "status" : "draft",
       "name" : "AppleHealthKitWorkoutEventTypeCodeSystem",
       "title" : "Apple HealthKit Workout Event Type Code System",

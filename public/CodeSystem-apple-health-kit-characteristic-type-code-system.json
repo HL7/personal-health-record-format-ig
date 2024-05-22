@@ -6,11 +6,11 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-characteristic-type-code-system</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">biologicalSex<a name=\"apple-health-kit-characteristic-type-code-system-biologicalSex\"> </a></td></tr><tr><td style=\"white-space:nowrap\">dateOfBirth<a name=\"apple-health-kit-characteristic-type-code-system-dateOfBirth\"> </a></td></tr></table></div>"
   },
   "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-characteristic-type-code-system",
-  "version" : "0.4.5",
+  "version" : "0.4.6",
   "name" : "AppleHealthKitCharacteristicTypeCodeSystem",
   "title" : "Apple HealthKit Characteristic Type Code System",
   "status" : "draft",
-  "date" : "2024-04-24T11:28:13-05:00",
+  "date" : "2024-05-22T11:48:28-05:00",
   "publisher" : "MITRE",
   "contact" : [{
     "name" : "MITRE",

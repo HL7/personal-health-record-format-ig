@@ -6,10 +6,10 @@
     <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>StandardPatientHealthRecordIG</h2><p>The official URL for this implementation guide is: </p><pre>https://open-health-manager.github.io/standard-patient-health-record-ig/ImplementationGuide/StandardPatientHealthRecordIG</pre></div>
   </text>
   <url value="https://open-health-manager.github.io/standard-patient-health-record-ig/ImplementationGuide/StandardPatientHealthRecordIG"/>
-  <version value="0.4.5"/>
+  <version value="0.4.6"/>
   <name value="StandardPatientHealthRecordIG"/>
   <status value="draft"/>
-  <date value="2024-04-24T11:28:13-05:00"/>
+  <date value="2024-05-22T11:48:28-05:00"/>
   <publisher value="MITRE"/>
   <contact>
     <name value="MITRE"/>
@@ -35,7 +35,7 @@
     </extension>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
-    <version value="1.0.0"/>
+    <version value="5.1.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">

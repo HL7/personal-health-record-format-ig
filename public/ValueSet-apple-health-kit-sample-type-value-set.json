@@ -6,11 +6,11 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-apple-health-kit-sample-type-code-system.html\"><code>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system</code></a></li></ul></div>"
   },
   "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-sample-type-value-set",
-  "version" : "0.4.5",
+  "version" : "0.4.6",
   "name" : "AppleHealthKitSampleTypeValueSet",
   "title" : "Apple HealthKit Sample Type Value Set",
   "status" : "draft",
-  "date" : "2024-04-24T11:28:13-05:00",
+  "date" : "2024-05-22T11:48:28-05:00",
   "publisher" : "MITRE",
   "contact" : [{
     "name" : "MITRE",

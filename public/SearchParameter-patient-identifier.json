@@ -6,11 +6,11 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PatientIdentifierSearchParameter</h2><p>Parameter <code>identifier</code>:<code>token</code></p><div><p>This SearchParameter enables query of patient by <code>identifier</code> with <code>mutlipleOr</code> enabled.</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td></tr><tr><td>Expression</td><td>(none)</td></tr><tr><td>Multiples</td><td>The parameter can repeat (and) but each repeat can only have one value</td></tr></table></div>"
   },
   "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/SearchParameter/patient-identifier",
-  "version" : "0.4.5",
+  "version" : "0.4.6",
   "name" : "PatientIdentifierSearchParameter",
   "derivedFrom" : "http://hl7.org/fhir/SearchParameter/Resource-id",
   "status" : "active",
-  "date" : "2024-04-24T11:28:13-05:00",
+  "date" : "2024-05-22T11:48:28-05:00",
   "publisher" : "MITRE",
   "contact" : [{
     "name" : "MITRE",
