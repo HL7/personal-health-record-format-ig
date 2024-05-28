@@ -1,8 +1,8 @@
 ## Standard Patient Health Record
 
-[Current Build (Public)](https://build.fhir.org/ig/HL7/standard-patient-health-record-ig/branches/master/)  
+[Current Build (Public)](https://build.fhir.org/ig/HL7/personal-health-record-format-ig/)  
 
-[Preview Branches](https://build.fhir.org/ig/HL7/standard-patient-health-record-ig/branches/)  
+[Preview Branches](https://build.fhir.org/ig/HL7/personal-health-record-format-ig/branches/)  
 
 
 
