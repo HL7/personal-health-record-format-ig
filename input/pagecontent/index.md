@@ -69,4 +69,8 @@ This guide is particularly interested in the problem of collecting and aggregati
 - [Summary of Responses to an Industry RFI Regarding a Role for CMS with Personal Health Records](https://www.cms.gov/Medicare/E-Health/PerHealthRecords/Downloads/SummaryofPersonalHealthRecord.pdf)     
 - [HealthKit on FHIR](https://github.com/StanfordBDHG/HealthKitOnFHIR)
 
+### License 
+Copyright (c) 2021+ Health Level Seven International and MITRE.org.   
+Published under the Creative Commons "Attribution 4.0 International" (CC BY 4.0) License
+
 

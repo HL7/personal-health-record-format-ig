@@ -3,13 +3,13 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="StandardPatientHealthRecordIG"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>StandardPatientHealthRecordIG</h2><p>The official URL for this implementation guide is: </p><pre>https://open-health-manager.github.io/standard-patient-health-record-ig/ImplementationGuide/StandardPatientHealthRecordIG</pre></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide StandardPatientHealthRecordIG</b></p><a name="StandardPatientHealthRecordIG"> </a><a name="hcStandardPatientHealthRecordIG"> </a><a name="hcStandardPatientHealthRecordIG-en-US"> </a><h2>StandardPatientHealthRecordIG</h2><p>The official URL for this implementation guide is: </p><pre>https://open-health-manager.github.io/standard-patient-health-record-ig/ImplementationGuide/StandardPatientHealthRecordIG</pre></div>
   </text>
   <url value="https://open-health-manager.github.io/standard-patient-health-record-ig/ImplementationGuide/StandardPatientHealthRecordIG"/>
   <version value="0.4.6"/>
   <name value="StandardPatientHealthRecordIG"/>
   <status value="draft"/>
-  <date value="2024-05-27T20:42:33-05:00"/>
+  <date value="2024-07-11T23:09:29-05:00"/>
   <publisher value="MITRE"/>
   <contact>
     <name value="MITRE"/>

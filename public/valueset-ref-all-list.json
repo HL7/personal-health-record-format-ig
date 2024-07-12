@@ -26,8 +26,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.141"],
       "uses" : {
       },
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation",
-      "StructureDefinition-PhrMedia.html" : "PhrMedia"
+      "StructureDefinition-PhrMedia.html" : "PhrMedia",
+      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
@@ -254,16 +254,16 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-Environmental.html" : "Environmental",
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
-      "StructureDefinition-PhrBundle.html" : "PhrBundle",
-      "StructureDefinition-NutrientOuttake.html" : "NutrientOuttake",
-      "StructureDefinition-PhrComposition.html" : "PhrComposition",
-      "StructureDefinition-SocialMedia.html" : "SocialMedia",
-      "StructureDefinition-PhrPatient.html" : "PhrPatient",
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation",
       "StructureDefinition-PhrMedia.html" : "PhrMedia",
-      "StructureDefinition-PhrProvenance.html" : "PhrProvenance"
+      "StructureDefinition-PhrPatient.html" : "PhrPatient",
+      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
+      "StructureDefinition-NutrientOuttake.html" : "NutrientOuttake",
+      "StructureDefinition-PhrBundle.html" : "PhrBundle",
+      "StructureDefinition-SocialMedia.html" : "SocialMedia",
+      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation",
+      "StructureDefinition-Environmental.html" : "Environmental",
+      "StructureDefinition-PhrProvenance.html" : "PhrProvenance",
+      "StructureDefinition-PhrComposition.html" : "PhrComposition"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -741,11 +741,11 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-apple-health-kit-sample.html" : "Apple HealthKit Sample Logical Model",
       "StructureDefinition-apple-health-kit-quantity-sample.html" : "Apple HealthKit Quantity Sample Logical Model",
-      "StructureDefinition-apple-health-kit-correlation-sample.html" : "Apple HealthKit Correlation Sample Logical Model",
       "StructureDefinition-apple-health-kit-workout-sample.html" : "Apple HealthKit Workout Sample Logical Model",
-      "StructureDefinition-apple-health-kit-category-sample.html" : "Apple HealthKit Category Sample Logical Model"
+      "StructureDefinition-apple-health-kit-category-sample.html" : "Apple HealthKit Category Sample Logical Model",
+      "StructureDefinition-apple-health-kit-sample.html" : "Apple HealthKit Sample Logical Model",
+      "StructureDefinition-apple-health-kit-correlation-sample.html" : "Apple HealthKit Correlation Sample Logical Model"
     },
     {
       "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-workout-activity-type-value-set",

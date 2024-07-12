@@ -9,14 +9,14 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "StandardPatientHealthRecordIG"] ; # 
   fhir:text [
-     fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>StandardPatientHealthRecordIG</h2><p>The official URL for this implementation guide is: </p><pre>https://open-health-manager.github.io/standard-patient-health-record-ig/ImplementationGuide/StandardPatientHealthRecordIG</pre></div>"
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide StandardPatientHealthRecordIG</b></p><a name=\"StandardPatientHealthRecordIG\"> </a><a name=\"hcStandardPatientHealthRecordIG\"> </a><a name=\"hcStandardPatientHealthRecordIG-en-US\"> </a><h2>StandardPatientHealthRecordIG</h2><p>The official URL for this implementation guide is: </p><pre>https://open-health-manager.github.io/standard-patient-health-record-ig/ImplementationGuide/StandardPatientHealthRecordIG</pre></div>"
   ] ; # 
   fhir:url [ fhir:v "https://open-health-manager.github.io/standard-patient-health-record-ig/ImplementationGuide/StandardPatientHealthRecordIG"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.4.6"] ; # 
   fhir:name [ fhir:v "StandardPatientHealthRecordIG"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-05-27T20:42:33-05:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-07-11T23:09:29-05:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "MITRE"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "MITRE" ] ;
