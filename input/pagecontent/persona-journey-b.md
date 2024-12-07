@@ -4,7 +4,7 @@ Cancer diagnosis and treatment pathway with family care partners
 
 | Patient ID | PatientName   | Primary Diagnosis  | .phr | .sphr |
 | ------------- | :-------- | :-------- | :-------- | :-------- | 
-| 13803def-e365-e248-e7ec-632533574c3c | Diego848 Carrillo204 | non-small cell lung cancer | [json](file:///Users/awatson/Code/implementation-guides/standard-patient-health-record-ig/output/Diego848_Carrillo204_13803def-e365-e248-e7ec-632533574c3c.json) | [phr](13803def-e365-e248-e7ec-632533574c3c	Diego848 Carrillo204	non-small cell lung cancer	254637007	json	phr)
+| 13803def-e365-e248-e7ec-632533574c3c | Diego848 Carrillo204 | non-small cell lung cancer | [json](PatientJourneys/Earl_Carrillo_13803def-e365-e248-e7ec-632533574c3c.json) | [phr](PatientJourneys/Earl_Carrillo_13803def-e365-e248-e7ec-632533574c3c.phr)
 
 > **&#9432;** Contribute to this guide by helping translate the following patient journey into FHIR resources and refining the patient example!  This narrative is a work in progress, and we have added Diego Carrillo as a temporary place holder to a cancer patient.  The .phr file needs updating to correspond to the following narrative.  Pull requests encouraged.
 

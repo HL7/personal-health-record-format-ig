@@ -4,12 +4,12 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: StandardPatientHealthRecordIG
-canonical: https://open-health-manager.github.io/standard-patient-health-record-ig
+canonical: https://open-health-manager.github.io/standard-patient-health-record-ig/1.0.0-ballot
 name: StandardPatientHealthRecordIG
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
-version: 0.4.6
+version: 1.0.0-ballot
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -24,6 +24,9 @@ publisher:
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
 #
+# dependencies:
+#   hl7.fhir.us.core: 7.0.0
+
 # dependencies:
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:

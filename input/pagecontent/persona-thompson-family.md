@@ -2,7 +2,7 @@
 
 | Patient ID | PatientName   | Primary Diagnosis  | .phr | .sphr |
 | ------------- | :-------- | :-------- | :-------- | :-------- | 
-| ae26bfd6-d45b-c819-0de6-a2299511e6f4| Spencer878 Stehr398	| acute myeloid leukemia | [json](file:///Users/awatson/Code/implementation-guides/standard-patient-health-record-ig/output/Spencer878_Stehr398_ae26bfd6-d45b-c819-0de6-a2299511e6f4.json) | [phr](phr)
+| ae26bfd6-d45b-c819-0de6-a2299511e6f4| Spencer878 Stehr398	| acute myeloid leukemia | [json](PatientJourneys/Spencer_Thompson_ae26bfd6-d45b-c819-0de6-a2299511e6f4.json) | [phr](PatientJourneys/Spencer_Thompson_ae26bfd6-d45b-c819-0de6-a2299511e6f4.phr)
 
 > **&#9432;** Note:  The Thompson Family usecase is a work-in-progress, and has not been completed yet.  For the meantime, we are providing a link to a myeloid leukemia patient; and will be crafting that patient towards the Thompson Family journey in future updates.
 

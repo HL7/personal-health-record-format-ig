@@ -8,7 +8,7 @@ Description: "Standard PHR profile of the Bundle resource."
 * type = #document
 
 * entry ^slicing.discriminator.type = #type
-* entry ^slicing.discriminator.path = "resource.resolve()"
+* entry ^slicing.discriminator.path = "$this.resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.ordered = false   // can be omitted, since false is the default
 * entry ^slicing.description = "Slice based on the entry.resource pattern"

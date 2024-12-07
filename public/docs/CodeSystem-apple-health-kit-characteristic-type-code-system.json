@@ -1,0 +1,33 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "apple-health-kit-characteristic-type-code-system",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem apple-health-kit-characteristic-type-code-system</b></p><a name=\"apple-health-kit-characteristic-type-code-system\"> </a><a name=\"hcapple-health-kit-characteristic-type-code-system\"> </a><a name=\"apple-health-kit-characteristic-type-code-system-en-US\"> </a><p>This case-insensitive code system <code>https://open-health-manager.github.io/standard-patient-health-record-ig/1.0.0-ballot/CodeSystem/apple-health-kit-characteristic-type-code-system</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">biologicalSex<a name=\"apple-health-kit-characteristic-type-code-system-biologicalSex\"> </a></td></tr><tr><td style=\"white-space:nowrap\">dateOfBirth<a name=\"apple-health-kit-characteristic-type-code-system-dateOfBirth\"> </a></td></tr></table></div>"
+  },
+  "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/1.0.0-ballot/CodeSystem/apple-health-kit-characteristic-type-code-system",
+  "version" : "1.0.0-ballot",
+  "name" : "AppleHealthKitCharacteristicTypeCodeSystem",
+  "title" : "Apple HealthKit Characteristic Type Code System",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2024-12-07T10:44:13-06:00",
+  "publisher" : "MITRE",
+  "contact" : [{
+    "name" : "MITRE",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://open-health-manager.github.io/standard-patient-health-record-ig"
+    }]
+  }],
+  "description" : "The identifiers that create characteristic type objects.",
+  "caseSensitive" : false,
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "biologicalSex"
+  },
+  {
+    "code" : "dateOfBirth"
+  }]
+}
