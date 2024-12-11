@@ -5,28 +5,41 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-correlation-type-code-system> a fhir:CodeSystem ;
+<http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-correlation-type-code-system> a fhir:CodeSystem ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "apple-health-kit-correlation-type-code-system"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem apple-health-kit-correlation-type-code-system</b></p><a name=\"apple-health-kit-correlation-type-code-system\"> </a><a name=\"hcapple-health-kit-correlation-type-code-system\"> </a><a name=\"hcapple-health-kit-correlation-type-code-system-en-US\"> </a><p>This  code system <code>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-correlation-type-code-system</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">bloodPressure<a name=\"apple-health-kit-correlation-type-code-system-bloodPressure\"> </a></td></tr><tr><td style=\"white-space:nowrap\">food<a name=\"apple-health-kit-correlation-type-code-system-food\"> </a></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem apple-health-kit-correlation-type-code-system</b></p><a name=\"apple-health-kit-correlation-type-code-system\"> </a><a name=\"hcapple-health-kit-correlation-type-code-system\"> </a><a name=\"apple-health-kit-correlation-type-code-system-en-US\"> </a><p>This case-insensitive code system <code>http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-correlation-type-code-system</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">bloodPressure<a name=\"apple-health-kit-correlation-type-code-system-bloodPressure\"> </a></td></tr><tr><td style=\"white-space:nowrap\">food<a name=\"apple-health-kit-correlation-type-code-system-food\"> </a></td></tr></table></div>"
   ] ; # 
-  fhir:url [ fhir:v "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-correlation-type-code-system"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.4.6"] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pe" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-correlation-type-code-system"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0-ballot"] ; # 
   fhir:name [ fhir:v "AppleHealthKitCorrelationTypeCodeSystem"] ; # 
   fhir:title [ fhir:v "Apple HealthKit Correlation Type Code System"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-07-11T23:09:29-05:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "MITRE"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-12-11T01:07:49-06:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
-     fhir:name [ fhir:v "MITRE" ] ;
+     fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
      fhir:telecom ( [
        fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "https://open-health-manager.github.io/standard-patient-health-record-ig" ]
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientempowerment" ]
      ] )
   ] ) ; # 
   fhir:description [ fhir:v "Code System required for defining correlationType ValueSet"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "false"^^xsd:boolean] ; # 
   fhir:content [ fhir:v "complete"] ; # 
   fhir:count [ fhir:v "2"^^xsd:nonNegativeInteger] ; # 
   fhir:concept ( [

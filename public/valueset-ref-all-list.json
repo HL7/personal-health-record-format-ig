@@ -111,8 +111,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.241"],
       "uses" : {
       },
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
-      "StructureDefinition-PhrComposition.html" : "PhrComposition"
+      "StructureDefinition-PhrComposition.html" : "PhrComposition",
+      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
@@ -168,8 +168,8 @@
       "sources" : ["2.16.840.1.113883.3.88.12.80.46"],
       "uses" : {
       },
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
-      "StructureDefinition-PhrComposition.html" : "PhrComposition"
+      "StructureDefinition-PhrComposition.html" : "PhrComposition",
+      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/document-reference-status",
@@ -197,8 +197,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.244"],
       "uses" : {
       },
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
-      "StructureDefinition-PhrComposition.html" : "PhrComposition"
+      "StructureDefinition-PhrComposition.html" : "PhrComposition",
+      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/event-status",
@@ -255,15 +255,14 @@
       "uses" : {
       },
       "StructureDefinition-PhrMedia.html" : "PhrMedia",
-      "StructureDefinition-PhrPatient.html" : "PhrPatient",
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
-      "StructureDefinition-NutrientOuttake.html" : "NutrientOuttake",
-      "StructureDefinition-PhrBundle.html" : "PhrBundle",
+      "StructureDefinition-PhrComposition.html" : "PhrComposition",
       "StructureDefinition-SocialMedia.html" : "SocialMedia",
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation",
-      "StructureDefinition-Environmental.html" : "Environmental",
+      "StructureDefinition-PhrBundle.html" : "PhrBundle",
+      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
+      "StructureDefinition-NutrientOuttake.html" : "Nutrient Outtake",
       "StructureDefinition-PhrProvenance.html" : "PhrProvenance",
-      "StructureDefinition-PhrComposition.html" : "PhrComposition"
+      "StructureDefinition-PhrPatient.html" : "PhrPatient",
+      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -619,6 +618,143 @@
       "StructureDefinition-PhrProvenance.html" : "PhrProvenance"
     },
     {
+      "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-biological-sex-value-set",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitBiologicalSexValueSet",
+      "title" : "Apple HealthKit Biological Sex Value Set",
+      "description" : "Apple HealthKit Biological Sex Value Set",
+      "systems" : [
+        "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-biological-sex-code-system"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-AppleHealthKitHealthStoreCharacteristic.html" : "Apple HealthKit HealthStore Characteristic Logical Model"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-category-type-value-set",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitCategoryTypeValueSet",
+      "title" : "Apple HealthKit Category Type Value Set",
+      "description" : "A type that identifies samples that contain a value from a small set of possible values.",
+      "systems" : [
+        "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-category-type-code-system"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-AppleHealthKitCategorySample.html" : "Apple HealthKit Category Sample Logical Model"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-characteristic-type-value-set",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitCharacteristicTypeValueSet",
+      "title" : "Apple HealthKit Charactersitic Type Value Set",
+      "description" : "Apple HealthKit Charactersitic Type Value Set",
+      "systems" : [
+        "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-characteristic-type-code-system"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-AppleHealthKitHealthStoreCharacteristic.html" : "Apple HealthKit HealthStore Characteristic Logical Model"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-correlation-type-value-set",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitCorrelationTypeValueSet",
+      "title" : "Apple HealthKit Correlation Type Value Set",
+      "description" : "Possible values for AppleHealthKitSample.correlationType",
+      "systems" : [
+        "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-correlation-type-code-system"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-AppleHealthKitCorrelationSample.html" : "Apple HealthKit Correlation Sample Logical Model"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-quantity-type-value-set",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitQuantityTypeValueSet",
+      "title" : "Apple HealthKit Quantity Type Value Set",
+      "description" : "Possible values for AppleHealthKitSample.quantityType",
+      "systems" : [
+        "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-quantity-type-code-system"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-AppleHealthKitQuantitySample.html" : "Apple HealthKit Quantity Sample Logical Model"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-sample-type-value-set",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitSampleTypeValueSet",
+      "title" : "Apple HealthKit Sample Type Value Set",
+      "description" : "Possible values for AppleHealthKitSample.sampleType",
+      "systems" : [
+        "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-sample-type-code-system"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-AppleHealthKitCategorySample.html" : "Apple HealthKit Category Sample Logical Model",
+      "StructureDefinition-AppleHealthKitSample.html" : "Apple HealthKit Sample Logical Model",
+      "StructureDefinition-AppleHealthKitQuantitySample.html" : "Apple HealthKit Quantity Sample Logical Model",
+      "StructureDefinition-AppleHealthKitCorrelationSample.html" : "Apple HealthKit Correlation Sample Logical Model",
+      "StructureDefinition-AppleHealthKitWorkoutSample.html" : "Apple HealthKit Workout Sample Logical Model"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-workout-activity-type-value-set",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitWorkoutActivityTypeValueSet",
+      "title" : "Apple HealthKit Workout Activity Type Value Set",
+      "description" : "Possible values for AppleHealthLitSample.workoutActivityType",
+      "systems" : [
+        "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-workout-activity-type-code-system"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-AppleHealthKitWorkoutSample.html" : "Apple HealthKit Workout Sample Logical Model"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-workout-event-type-value-set",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitWorkoutEventTypeValueSet",
+      "title" : "Apple HealthKit Workout Event Type Value Set",
+      "description" : "Possible values for AppleHealthKitWorkoutEvent.type",
+      "systems" : [
+        "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-workout-event-type-code-system"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-AppleHealthKitWorkoutEvent.html" : "Apple HealthKit Workout Event Logical Model"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/pcd-sleep-observation-code",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "PCDSleepObservationCode",
+      "title" : "Patient contributed data: sleep observation code",
+      "description" : "This value set includes codes to track patient sleep recorded by device or app",
+      "systems" : ["http://loinc.org", "http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/pcd-sleep-observation-value",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "PCDSleepStageValueCode",
+      "title" : "Patient contributed data: sleep stage value",
+      "description" : "This value set includes codes to track patient sleep values recorded by device or app",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
       "url" : "http://terminology.hl7.org/ValueSet/v3-ActCode",
       "version" : "3.0.0",
       "status" : "active",
@@ -628,8 +764,8 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
       "uses" : {
       },
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
-      "StructureDefinition-PhrComposition.html" : "PhrComposition"
+      "StructureDefinition-PhrComposition.html" : "PhrComposition",
+      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification",
@@ -647,7 +783,7 @@
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-PurposeOfUse",
-      "version" : "3.0.0",
+      "version" : "3.1.0",
       "status" : "active",
       "name" : "PurposeOfUse",
       "title" : "PurposeOfUse",
@@ -658,146 +794,6 @@
       "uses" : {
       },
       "StructureDefinition-PhrProvenance.html" : "PhrProvenance"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-biological-sex-value-set",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitBiologicalSexValueSet",
-      "title" : "Apple HealthKit Biological Sex Value Set",
-      "description" : "Apple HealthKit Biological Sex Value Set",
-      "systems" : [
-        "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-biological-sex-code-system"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-apple-health-kit-healthstore-characteristic.html" : "Apple HealthKit HealthStore Characteristic Logical Model"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-category-type-value-set",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitCategoryTypeValueSet",
-      "title" : "Apple HealthKit Category Type Value Set",
-      "description" : "A type that identifies samples that contain a value from a small set of possible values.",
-      "systems" : [
-        "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-category-type-code-system"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-apple-health-kit-category-sample.html" : "Apple HealthKit Category Sample Logical Model"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-characteristic-type-value-set",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitCharacteristicTypeValueSet",
-      "title" : "Apple HealthKit Charactersitic Type Value Set",
-      "description" : "Apple HealthKit Charactersitic Type Value Set",
-      "systems" : [
-        "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-characteristic-type-code-system"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-apple-health-kit-healthstore-characteristic.html" : "Apple HealthKit HealthStore Characteristic Logical Model"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-correlation-type-value-set",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitCorrelationTypeValueSet",
-      "title" : "Apple HealthKit Correlation Type Value Set",
-      "description" : "Possible values for AppleHealthKitSample.correlationType",
-      "systems" : [
-        "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-correlation-type-code-system"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-apple-health-kit-correlation-sample.html" : "Apple HealthKit Correlation Sample Logical Model"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-quantity-type-value-set",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitQuantityTypeValueSet",
-      "title" : "Apple HealthKit Quantity Type Value Set",
-      "description" : "Possible values for AppleHealthKitSample.quantityType",
-      "systems" : [
-        "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-quantity-type-code-system"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-apple-health-kit-quantity-sample.html" : "Apple HealthKit Quantity Sample Logical Model"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-sample-type-value-set",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitSampleTypeValueSet",
-      "title" : "Apple HealthKit Sample Type Value Set",
-      "description" : "Possible values for AppleHealthKitSample.sampleType",
-      "systems" : [
-        "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-apple-health-kit-quantity-sample.html" : "Apple HealthKit Quantity Sample Logical Model",
-      "StructureDefinition-apple-health-kit-workout-sample.html" : "Apple HealthKit Workout Sample Logical Model",
-      "StructureDefinition-apple-health-kit-category-sample.html" : "Apple HealthKit Category Sample Logical Model",
-      "StructureDefinition-apple-health-kit-sample.html" : "Apple HealthKit Sample Logical Model",
-      "StructureDefinition-apple-health-kit-correlation-sample.html" : "Apple HealthKit Correlation Sample Logical Model"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-workout-activity-type-value-set",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitWorkoutActivityTypeValueSet",
-      "title" : "Apple HealthKit Workout Activity Type Value Set",
-      "description" : "Possible values for AppleHealthLitSample.workoutActivityType",
-      "systems" : [
-        "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-workout-activity-type-code-system"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-apple-health-kit-workout-sample.html" : "Apple HealthKit Workout Sample Logical Model"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-workout-event-type-value-set",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitWorkoutEventTypeValueSet",
-      "title" : "Apple HealthKit Workout Event Type Value Set",
-      "description" : "Possible values for AppleHealthKitWorkoutEvent.type",
-      "systems" : [
-        "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-workout-event-type-code-system"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-apple-health-kit-workout-event.html" : "Apple HealthKit Workout Event Logical Model"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/pcd-sleep-observation-code",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "PCDSleepObservationCode",
-      "title" : "Patient contributed data: sleep observation code",
-      "description" : "This value set includes codes to track patient sleep recorded by device or app",
-      "systems" : ["http://loinc.org", "http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/pcd-sleep-observation-value",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "PCDSleepStageValueCode",
-      "title" : "Patient contributed data: sleep stage value",
-      "description" : "This value set includes codes to track patient sleep values recorded by device or app",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
     }
   ]
 }

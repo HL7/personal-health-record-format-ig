@@ -1,81 +1,101 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Artifacts Summary -  v0.4.6</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary -  v1.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link rel="stylesheet" href="fhir.css"/>
+    <link href="fhir.css" rel="stylesheet"/>
 
-      <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
 
-      <!-- Project extras -->
-    <link rel="stylesheet" href="assets/css/project.css"/>
-    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
-    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
-  	<link rel="stylesheet" href="assets/css/prism.css"/>
-      <!-- Placeholder for child template CSS declarations -->
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
 
-    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
-      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!-- [if lt IE 9]>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif] -->
+    <![endif]-->
 
-      <!-- Favicons -->
-    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
-    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
-    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
     <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"23"}
     h3,h4,h5,h6{--heading-prefix:"23.0"}</style>
-    <div id="segment-header" class="segment">    <!-- segment-header -->
-      <div class="container">    <!-- container -->
-          <!-- Placeholder for child template header declarations -->
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
 
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold"></span>
             <br/>
-            <span style="display:inline-block;">0.4.6 - ci-build
+            <span style="display:inline-block;">1.0.0-ballot - ci-build
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
 
 
             </span>
           </p>
         </div>
-      </div>   <!-- /container -->
-    </div>    <!-- /segment-header -->
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">    <!-- container -->
-          <!-- HEADER CONTENT -->
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-            <!-- status-bar -->
+          <!--status-bar-->
           <div class="container">
-            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-                <!-- menu.xml -->
+              <!-- menu.xml  -->
 
-<ul class="nav navbar-nav">
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Home</a>
   </li>
@@ -164,26 +184,26 @@
     <a href="artifacts.html">Artifacts</a>
   </li>
 </ul>
-            </div>    <!-- /.nav-collapse -->
-          </div>    <!-- /.container -->
-        </nav>    <!-- /.navbar -->
-        <!-- /HEADER CONTENT -->
-      </div>    <!-- /container -->
-    </div>    <!-- /segment-navbar -->
-      <!-- status-bar -->
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
 
-    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
-      <div class="container">    <!-- container -->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
 
         </ul>
-      </div>    <!-- /container -->
-    </div>    <!-- /segment-breadcrumb -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">    <!-- segment-content -->
-      <div class="container">    <!-- container -->
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
@@ -195,12 +215,15 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">StandardPatientHealthRecordIG - Local Development build (v0.4.6) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://open-health-manager.github.io/standard-patient-health-record-ig/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <!--ReleaseHeader--><p id="publish-box">StandardPatientHealthRecordIG - Local Development build (v1.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.org/fhir/uv/sphr/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Artifacts Summary</h2>
   
   
   
-    <!-- DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten --><div xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="http://hl7.org/fhir" class="markdown-toc">
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
    <p>Contents:</p>
    <ul>
       <li>
@@ -223,7 +246,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </li>
    </ul>
 </div>
-<div xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="http://hl7.org/fhir">
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
    <h3>Behavior: Search Parameters </h3>
@@ -233,7 +258,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="SearchParameter-search-from-date.html" title="SearchParameter/search-from-date">Search From Date</a>
+               <a href="SearchParameter-search-from-date.html"
+                  title="SearchParameter/search-from-date">Search From Date</a>
             </td>
             <td>
 <p>Return records from this date</p>
@@ -241,7 +267,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="SearchParameter-patient-identifier.html" title="SearchParameter/patient-identifier">Search by identifier in patient with multipleOr</a>
+               <a href="SearchParameter-patient-identifier.html"
+                  title="SearchParameter/patient-identifier">Search by identifier in patient with multipleOr</a>
             </td>
             <td>
 <p>This SearchParameter enables query of patient by <code class="language-plaintext highlighter-rouge">identifier</code> with <code class="language-plaintext highlighter-rouge">mutlipleOr</code> enabled.</p>
@@ -257,7 +284,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-apple-health-kit-category-sample.html" title="StructureDefinition/apple-health-kit-category-sample">Apple HealthKit Category Sample Logical Model</a>
+               <a href="StructureDefinition-AppleHealthKitCategorySample.html"
+                  title="StructureDefinition/AppleHealthKitCategorySample">Apple HealthKit Category Sample Logical Model</a>
             </td>
             <td>
 <p>Data elements for the Apple HealthKit HKCategorySample.</p>
@@ -265,7 +293,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-apple-health-kit-correlation-sample.html" title="StructureDefinition/apple-health-kit-correlation-sample">Apple HealthKit Correlation Sample Logical Model</a>
+               <a href="StructureDefinition-AppleHealthKitCorrelationSample.html"
+                  title="StructureDefinition/AppleHealthKitCorrelationSample">Apple HealthKit Correlation Sample Logical Model</a>
             </td>
             <td>
 <p>Data elements for the Apple HealthKit HKCorrelation.</p>
@@ -273,7 +302,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-apple-health-kit-healthstore-characteristic.html" title="StructureDefinition/apple-health-kit-healthstore-characteristic">Apple HealthKit HealthStore Characteristic Logical Model</a>
+               <a href="StructureDefinition-AppleHealthKitHealthStoreCharacteristic.html"
+                  title="StructureDefinition/AppleHealthKitHealthStoreCharacteristic">Apple HealthKit HealthStore Characteristic Logical Model</a>
             </td>
             <td>
 <p>Relevant Data elements that correspond to the CharacteristicType stored in Apple HealthStore.</p>
@@ -281,7 +311,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-apple-health-kit-object.html" title="StructureDefinition/apple-health-kit-object">Apple HealthKit Object Logical Model</a>
+               <a href="StructureDefinition-AppleHealthKitObject.html"
+                  title="StructureDefinition/AppleHealthKitObject">Apple HealthKit Object Logical Model</a>
             </td>
             <td>
 <p>Data elements for the Apple HealthKit HKObject.</p>
@@ -289,7 +320,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-apple-health-kit-quantity-sample.html" title="StructureDefinition/apple-health-kit-quantity-sample">Apple HealthKit Quantity Sample Logical Model</a>
+               <a href="StructureDefinition-AppleHealthKitQuantitySample.html"
+                  title="StructureDefinition/AppleHealthKitQuantitySample">Apple HealthKit Quantity Sample Logical Model</a>
             </td>
             <td>
 <p>Data elements for the Apple HealthKit HKQuantitySample.</p>
@@ -297,7 +329,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-apple-health-kit-sample.html" title="StructureDefinition/apple-health-kit-sample">Apple HealthKit Sample Logical Model</a>
+               <a href="StructureDefinition-AppleHealthKitSample.html"
+                  title="StructureDefinition/AppleHealthKitSample">Apple HealthKit Sample Logical Model</a>
             </td>
             <td>
 <p>Data elements for the Apple HealthKit HKSample.</p>
@@ -305,7 +338,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-apple-health-kit-workout-activity.html" title="StructureDefinition/apple-health-kit-workout-activity">Apple HealthKit Workout Activity Logical Model</a>
+               <a href="StructureDefinition-AppleHealthKitWorkoutActivity.html"
+                  title="StructureDefinition/AppleHealthKitWorkoutActivity">Apple HealthKit Workout Activity Logical Model</a>
             </td>
             <td>
 <p>Data elements for the Apple HealthKit HKWorkoutActivity.</p>
@@ -313,7 +347,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-apple-health-kit-workout-event.html" title="StructureDefinition/apple-health-kit-workout-event">Apple HealthKit Workout Event Logical Model</a>
+               <a href="StructureDefinition-AppleHealthKitWorkoutEvent.html"
+                  title="StructureDefinition/AppleHealthKitWorkoutEvent">Apple HealthKit Workout Event Logical Model</a>
             </td>
             <td>
 <p>Data elements for the Apple HealthKit HKWorkoutEvent.</p>
@@ -321,7 +356,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-apple-health-kit-workout-sample.html" title="StructureDefinition/apple-health-kit-workout-sample">Apple HealthKit Workout Sample Logical Model</a>
+               <a href="StructureDefinition-AppleHealthKitWorkoutSample.html"
+                  title="StructureDefinition/AppleHealthKitWorkoutSample">Apple HealthKit Workout Sample Logical Model</a>
             </td>
             <td>
 <p>Data elements for the Apple HealthKit HKWorkout.</p>
@@ -329,7 +365,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-Environmental.html" title="StructureDefinition/Environmental">Environmental</a>
+               <a href="StructureDefinition-Environmental.html"
+                  title="StructureDefinition/Environmental">Environmental</a>
             </td>
             <td>
 <p>Standard PHR profile of the Environmental resource.</p>
@@ -337,7 +374,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-NutrientOuttake.html" title="StructureDefinition/NutrientOuttake">NutrientOuttake</a>
+               <a href="StructureDefinition-NutrientOuttake.html"
+                  title="StructureDefinition/NutrientOuttake">Nutrient Outtake</a>
             </td>
             <td>
 <p>Standard PHR profile of the NutrientOuttake resource.</p>
@@ -345,7 +383,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-SocialMedia.html" title="StructureDefinition/SocialMedia">SocialMedia</a>
+               <a href="StructureDefinition-SocialMedia.html"
+                  title="StructureDefinition/SocialMedia">SocialMedia</a>
             </td>
             <td>
 <p>Standard PHR profile of the SocialMedia resource.</p>
@@ -361,7 +400,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-pcd-sleep-observation.html" title="StructureDefinition/pcd-sleep-observation">Patient contributed data: sleep observation</a>
+               <a href="StructureDefinition-pcd-sleep-observation.html"
+                  title="StructureDefinition/pcd-sleep-observation">Patient contributed data: sleep observation</a>
             </td>
             <td>
 <p>patient sleep logs recorded by device or app.</p>
@@ -369,7 +409,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-PhrBundle.html" title="StructureDefinition/PhrBundle">PhrBundle</a>
+               <a href="StructureDefinition-PhrBundle.html"
+                  title="StructureDefinition/PhrBundle">PhrBundle</a>
             </td>
             <td>
 <p>Standard PHR profile of the Bundle resource.</p>
@@ -377,7 +418,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-PhrComposition.html" title="StructureDefinition/PhrComposition">PhrComposition</a>
+               <a href="StructureDefinition-PhrComposition.html"
+                  title="StructureDefinition/PhrComposition">PhrComposition</a>
             </td>
             <td>
 <p>Standard PHR profile of the Composition resource.</p>
@@ -385,7 +427,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-PhrDocumentReference.html" title="StructureDefinition/PhrDocumentReference">PhrDocumentReference</a>
+               <a href="StructureDefinition-PhrDocumentReference.html"
+                  title="StructureDefinition/PhrDocumentReference">PhrDocumentReference</a>
             </td>
             <td>
 <p>Standard PHR profile of the DocumentReference resource.</p>
@@ -393,7 +436,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-PhrMedia.html" title="StructureDefinition/PhrMedia">PhrMedia</a>
+               <a href="StructureDefinition-PhrMedia.html"
+                  title="StructureDefinition/PhrMedia">PhrMedia</a>
             </td>
             <td>
 <p>Standard PHR profile of the Media resource.</p>
@@ -401,7 +445,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-PhrPatient.html" title="StructureDefinition/PhrPatient">PhrPatient</a>
+               <a href="StructureDefinition-PhrPatient.html"
+                  title="StructureDefinition/PhrPatient">PhrPatient</a>
             </td>
             <td>
 <p>Standard PHR profile of the Patient resource.</p>
@@ -409,7 +454,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-PhrProvenance.html" title="StructureDefinition/PhrProvenance">PhrProvenance</a>
+               <a href="StructureDefinition-PhrProvenance.html"
+                  title="StructureDefinition/PhrProvenance">PhrProvenance</a>
             </td>
             <td>
 <p>Standard PHR profile of the Provenance resource.</p>
@@ -425,7 +471,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-apple-health-kit-biological-sex-value-set.html" title="ValueSet/apple-health-kit-biological-sex-value-set">Apple HealthKit Biological Sex Value Set</a>
+               <a href="ValueSet-apple-health-kit-biological-sex-value-set.html"
+                  title="ValueSet/apple-health-kit-biological-sex-value-set">Apple HealthKit Biological Sex Value Set</a>
             </td>
             <td>
 <p>Apple HealthKit Biological Sex Value Set</p>
@@ -433,7 +480,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-apple-health-kit-category-type-value-set.html" title="ValueSet/apple-health-kit-category-type-value-set">Apple HealthKit Category Type Value Set</a>
+               <a href="ValueSet-apple-health-kit-category-type-value-set.html"
+                  title="ValueSet/apple-health-kit-category-type-value-set">Apple HealthKit Category Type Value Set</a>
             </td>
             <td>
 <p>A type that identifies samples that contain a value from a small set of possible values.</p>
@@ -441,7 +489,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-apple-health-kit-characteristic-type-value-set.html" title="ValueSet/apple-health-kit-characteristic-type-value-set">Apple HealthKit Charactersitic Type Value Set</a>
+               <a href="ValueSet-apple-health-kit-characteristic-type-value-set.html"
+                  title="ValueSet/apple-health-kit-characteristic-type-value-set">Apple HealthKit Charactersitic Type Value Set</a>
             </td>
             <td>
 <p>Apple HealthKit Charactersitic Type Value Set</p>
@@ -449,7 +498,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-apple-health-kit-correlation-type-value-set.html" title="ValueSet/apple-health-kit-correlation-type-value-set">Apple HealthKit Correlation Type Value Set</a>
+               <a href="ValueSet-apple-health-kit-correlation-type-value-set.html"
+                  title="ValueSet/apple-health-kit-correlation-type-value-set">Apple HealthKit Correlation Type Value Set</a>
             </td>
             <td>
 <p>Possible values for AppleHealthKitSample.correlationType</p>
@@ -457,7 +507,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-apple-health-kit-quantity-type-value-set.html" title="ValueSet/apple-health-kit-quantity-type-value-set">Apple HealthKit Quantity Type Value Set</a>
+               <a href="ValueSet-apple-health-kit-quantity-type-value-set.html"
+                  title="ValueSet/apple-health-kit-quantity-type-value-set">Apple HealthKit Quantity Type Value Set</a>
             </td>
             <td>
 <p>Possible values for AppleHealthKitSample.quantityType</p>
@@ -465,7 +516,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-apple-health-kit-sample-type-value-set.html" title="ValueSet/apple-health-kit-sample-type-value-set">Apple HealthKit Sample Type Value Set</a>
+               <a href="ValueSet-apple-health-kit-sample-type-value-set.html"
+                  title="ValueSet/apple-health-kit-sample-type-value-set">Apple HealthKit Sample Type Value Set</a>
             </td>
             <td>
 <p>Possible values for AppleHealthKitSample.sampleType</p>
@@ -473,7 +525,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-apple-health-kit-workout-activity-type-value-set.html" title="ValueSet/apple-health-kit-workout-activity-type-value-set">Apple HealthKit Workout Activity Type Value Set</a>
+               <a href="ValueSet-apple-health-kit-workout-activity-type-value-set.html"
+                  title="ValueSet/apple-health-kit-workout-activity-type-value-set">Apple HealthKit Workout Activity Type Value Set</a>
             </td>
             <td>
 <p>Possible values for AppleHealthLitSample.workoutActivityType</p>
@@ -481,7 +534,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-apple-health-kit-workout-event-type-value-set.html" title="ValueSet/apple-health-kit-workout-event-type-value-set">Apple HealthKit Workout Event Type Value Set</a>
+               <a href="ValueSet-apple-health-kit-workout-event-type-value-set.html"
+                  title="ValueSet/apple-health-kit-workout-event-type-value-set">Apple HealthKit Workout Event Type Value Set</a>
             </td>
             <td>
 <p>Possible values for AppleHealthKitWorkoutEvent.type</p>
@@ -489,7 +543,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-pcd-sleep-observation-code.html" title="ValueSet/pcd-sleep-observation-code">Patient contributed data: sleep observation code</a>
+               <a href="ValueSet-pcd-sleep-observation-code.html"
+                  title="ValueSet/pcd-sleep-observation-code">Patient contributed data: sleep observation code</a>
             </td>
             <td>
 <p>This value set includes codes to track patient sleep recorded by device or app</p>
@@ -497,7 +552,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-pcd-sleep-observation-value.html" title="ValueSet/pcd-sleep-observation-value">Patient contributed data: sleep stage value</a>
+               <a href="ValueSet-pcd-sleep-observation-value.html"
+                  title="ValueSet/pcd-sleep-observation-value">Patient contributed data: sleep stage value</a>
             </td>
             <td>
 <p>This value set includes codes to track patient sleep values recorded by device or app</p>
@@ -513,7 +569,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-apple-health-kit-biological-sex-code-system.html" title="CodeSystem/apple-health-kit-biological-sex-code-system">Apple HealthKit Biological Sex Code System</a>
+               <a href="CodeSystem-apple-health-kit-biological-sex-code-system.html"
+                  title="CodeSystem/apple-health-kit-biological-sex-code-system">Apple HealthKit Biological Sex Code System</a>
             </td>
             <td>
 <p>Constants indicating the user’s sex.</p>
@@ -521,7 +578,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-apple-health-kit-category-type-code-system.html" title="CodeSystem/apple-health-kit-category-type-code-system">Apple HealthKit Category Type Code System</a>
+               <a href="CodeSystem-apple-health-kit-category-type-code-system.html"
+                  title="CodeSystem/apple-health-kit-category-type-code-system">Apple HealthKit Category Type Code System</a>
             </td>
             <td>
 <p>HKCategoryTypeIdentifier - Identifiers for creating category types.</p>
@@ -529,7 +587,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-apple-health-kit-characteristic-type-code-system.html" title="CodeSystem/apple-health-kit-characteristic-type-code-system">Apple HealthKit Characteristic Type Code System</a>
+               <a href="CodeSystem-apple-health-kit-characteristic-type-code-system.html"
+                  title="CodeSystem/apple-health-kit-characteristic-type-code-system">Apple HealthKit Characteristic Type Code System</a>
             </td>
             <td>
 <p>The identifiers that create characteristic type objects.</p>
@@ -537,7 +596,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-apple-health-kit-correlation-type-code-system.html" title="CodeSystem/apple-health-kit-correlation-type-code-system">Apple HealthKit Correlation Type Code System</a>
+               <a href="CodeSystem-apple-health-kit-correlation-type-code-system.html"
+                  title="CodeSystem/apple-health-kit-correlation-type-code-system">Apple HealthKit Correlation Type Code System</a>
             </td>
             <td>
 <p>Code System required for defining correlationType ValueSet</p>
@@ -545,7 +605,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-apple-health-kit-quantity-type-code-system.html" title="CodeSystem/apple-health-kit-quantity-type-code-system">Apple HealthKit Quantity Type Code System</a>
+               <a href="CodeSystem-apple-health-kit-quantity-type-code-system.html"
+                  title="CodeSystem/apple-health-kit-quantity-type-code-system">Apple HealthKit Quantity Type Code System</a>
             </td>
             <td>
 <p>Code System required for defining quantityType ValueSet</p>
@@ -553,7 +614,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-apple-health-kit-sample-type-code-system.html" title="CodeSystem/apple-health-kit-sample-type-code-system">Apple HealthKit Sample Type Code System</a>
+               <a href="CodeSystem-apple-health-kit-sample-type-code-system.html"
+                  title="CodeSystem/apple-health-kit-sample-type-code-system">Apple HealthKit Sample Type Code System</a>
             </td>
             <td>
 <p>Code System required for defining sampleType ValueSet</p>
@@ -561,7 +623,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-apple-health-kit-workout-activity-type-code-system.html" title="CodeSystem/apple-health-kit-workout-activity-type-code-system">Apple HealthKit Workout Activity Type Code System</a>
+               <a href="CodeSystem-apple-health-kit-workout-activity-type-code-system.html"
+                  title="CodeSystem/apple-health-kit-workout-activity-type-code-system">Apple HealthKit Workout Activity Type Code System</a>
             </td>
             <td>
 <p>Code System required for defining workoutActivityType ValueSet</p>
@@ -569,7 +632,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-apple-health-kit-workout-event-type-code-system.html" title="CodeSystem/apple-health-kit-workout-event-type-code-system">Apple HealthKit Workout Event Type Code System</a>
+               <a href="CodeSystem-apple-health-kit-workout-event-type-code-system.html"
+                  title="CodeSystem/apple-health-kit-workout-event-type-code-system">Apple HealthKit Workout Event Type Code System</a>
             </td>
             <td>
 <p>Code System required for defining workout event type ValueSet</p>
@@ -585,7 +649,42 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="Observation-PCDSleepObservation-duration-example.html" title="Observation/PCDSleepObservation-duration-example">PCDSleepObservation-duration-example</a>
+               <a href="Patient-jane-doe.html" title="Patient/jane-doe">Example Patient: Jane Doe</a>
+            </td>
+            <td>
+<p>A sample patient resource for Jane Doe.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-jane-doe-composition.html"
+                  title="Composition/jane-doe-composition">Jane Doe Composition</a>
+            </td>
+            <td>
+<p>A minimal narrative composition for Jane Doe's patient data.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DocumentReference-jane-doe-genomics-document.html"
+                  title="DocumentReference/jane-doe-genomics-document">Jane Doe PDF Report</a>
+            </td>
+            <td>
+<p>A PDF genomics report for Jane Doe regarding celiac disease.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Media-jane-doe-media.html" title="Media/jane-doe-media">Jane Doe Smartphone Photo</a>
+            </td>
+            <td>
+<p>A JPEG photo taken from Jane Doe's smartphone.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-PCDSleepObservation-duration-example.html"
+                  title="Observation/PCDSleepObservation-duration-example">PCDSleepObservation-duration-example</a>
             </td>
             <td>
 <p>Example - pcd-sleep-observation duration</p>
@@ -593,10 +692,28 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Observation-PCDSleepObservation-stage-example.html" title="Observation/PCDSleepObservation-stage-example">PCDSleepObservation-stage-example</a>
+               <a href="Observation-PCDSleepObservation-stage-example.html"
+                  title="Observation/PCDSleepObservation-stage-example">PCDSleepObservation-stage-example</a>
             </td>
             <td>
 <p>Example - pcd-sleep-observation stage</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-PhrBundle-example.html" title="Bundle/PhrBundle-example">PhrBundle-example</a>
+            </td>
+            <td>
+<p>PhrBundle Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Provenance-jane-doe-media-provenance.html"
+                  title="Provenance/jane-doe-media-provenance">Provenance for Jane Doe's Smartphone Photo</a>
+            </td>
+            <td>
+<p>Self-attested provenance record for Jane Doe's smartphone photo.</p>
 </td>
          </tr>
       </tbody>
@@ -604,51 +721,55 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 
 </div>
-        </div>    <!-- /inner-wrapper -->
-      </div>    <!-- /row -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-content -->
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
 
-  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
-  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
-    <div class="container">    <!-- container -->
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
-        <p><a name="l1182">​</a>
-          IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://open-health-manager.github.io/standard-patient-health-record-ig">MITRE</a>.  Package StandardPatientHealthRecordIG#0.4.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 11, 2024 23:09-0500">2024-07-11</span>
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  Package hl7.fhir.uv.sphr#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 11, 2024 01:07-0600">2024-12-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
                  
                 
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/uv/sphr/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
           </span>
         </p>
-      </div>    <!-- /inner-wrapper -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-footer -->
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
-    <div class="container">    <!-- container -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-post-footer -->
-  
-    <!-- JS and analytics only. -->
-    <!-- Bootstrap core JavaScript
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
   ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
-  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
-  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
-  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
-  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
-  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
-  
-    <!-- Analytics Below
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
   ================================================== -->
   </body>
 </html>
+

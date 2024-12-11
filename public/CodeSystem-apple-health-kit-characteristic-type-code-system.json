@@ -3,23 +3,36 @@
   "id" : "apple-health-kit-characteristic-type-code-system",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem apple-health-kit-characteristic-type-code-system</b></p><a name=\"apple-health-kit-characteristic-type-code-system\"> </a><a name=\"hcapple-health-kit-characteristic-type-code-system\"> </a><a name=\"hcapple-health-kit-characteristic-type-code-system-en-US\"> </a><p>This  code system <code>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-characteristic-type-code-system</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">biologicalSex<a name=\"apple-health-kit-characteristic-type-code-system-biologicalSex\"> </a></td></tr><tr><td style=\"white-space:nowrap\">dateOfBirth<a name=\"apple-health-kit-characteristic-type-code-system-dateOfBirth\"> </a></td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem apple-health-kit-characteristic-type-code-system</b></p><a name=\"apple-health-kit-characteristic-type-code-system\"> </a><a name=\"hcapple-health-kit-characteristic-type-code-system\"> </a><a name=\"apple-health-kit-characteristic-type-code-system-en-US\"> </a><p>This case-insensitive code system <code>http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-characteristic-type-code-system</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">biologicalSex<a name=\"apple-health-kit-characteristic-type-code-system-biologicalSex\"> </a></td></tr><tr><td style=\"white-space:nowrap\">dateOfBirth<a name=\"apple-health-kit-characteristic-type-code-system-dateOfBirth\"> </a></td></tr></table></div>"
   },
-  "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-characteristic-type-code-system",
-  "version" : "0.4.6",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pe"
+  }],
+  "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-characteristic-type-code-system",
+  "version" : "1.0.0-ballot",
   "name" : "AppleHealthKitCharacteristicTypeCodeSystem",
   "title" : "Apple HealthKit Characteristic Type Code System",
   "status" : "draft",
-  "date" : "2024-07-11T23:09:29-05:00",
-  "publisher" : "MITRE",
+  "experimental" : true,
+  "date" : "2024-12-11T01:07:49-06:00",
+  "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [{
-    "name" : "MITRE",
+    "name" : "HL7 International / Patient Empowerment",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://open-health-manager.github.io/standard-patient-health-record-ig"
+      "value" : "http://www.hl7.org/Special/committees/patientempowerment"
     }]
   }],
   "description" : "The identifiers that create characteristic type objects.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : false,
   "content" : "complete",
   "count" : 2,
   "concept" : [{

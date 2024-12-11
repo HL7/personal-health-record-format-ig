@@ -57,5 +57,3 @@ git commit -a -m 'descriptive message'
 git push origin new-branch
 ```
 
-#### References 
-[Soft White Underbelly Videos](https://www.youtube.com/@SoftWhiteUnderbelly/videos)  

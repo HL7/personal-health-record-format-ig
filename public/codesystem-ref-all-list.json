@@ -169,6 +169,94 @@
       "http://hl7.org/fhir/R4/valueset-search-entry-mode.html" : "SearchEntryMode"
     },
     {
+      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-biological-sex-code-system",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitBiologicalSexCodeSystem",
+      "title" : "Apple HealthKit Biological Sex Code System",
+      "description" : "Constants indicating the user’s sex.",
+      "uses" : {
+      },
+      "ValueSet-apple-health-kit-biological-sex-value-set.html" : "Apple HealthKit Biological Sex Value Set"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-category-type-code-system",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitCategoryTypeCodeSystem",
+      "title" : "Apple HealthKit Category Type Code System",
+      "description" : "HKCategoryTypeIdentifier - Identifiers for creating category types.",
+      "uses" : {
+      },
+      "ValueSet-apple-health-kit-category-type-value-set.html" : "Apple HealthKit Category Type Value Set"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-characteristic-type-code-system",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitCharacteristicTypeCodeSystem",
+      "title" : "Apple HealthKit Characteristic Type Code System",
+      "description" : "The identifiers that create characteristic type objects.",
+      "uses" : {
+      },
+      "ValueSet-apple-health-kit-characteristic-type-value-set.html" : "Apple HealthKit Charactersitic Type Value Set"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-correlation-type-code-system",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitCorrelationTypeCodeSystem",
+      "title" : "Apple HealthKit Correlation Type Code System",
+      "description" : "Code System required for defining correlationType ValueSet",
+      "uses" : {
+      },
+      "ValueSet-apple-health-kit-correlation-type-value-set.html" : "Apple HealthKit Correlation Type Value Set"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-quantity-type-code-system",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitQuantityTypeCodeSystem",
+      "title" : "Apple HealthKit Quantity Type Code System",
+      "description" : "Code System required for defining quantityType ValueSet",
+      "uses" : {
+      },
+      "ValueSet-apple-health-kit-quantity-type-value-set.html" : "Apple HealthKit Quantity Type Value Set"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-sample-type-code-system",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitSampleTypeCodeSystem",
+      "title" : "Apple HealthKit Sample Type Code System",
+      "description" : "Code System required for defining sampleType ValueSet",
+      "uses" : {
+      },
+      "ValueSet-apple-health-kit-sample-type-value-set.html" : "Apple HealthKit Sample Type Value Set"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-workout-activity-type-code-system",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHEalthKitWorkoutActivityTypeCodeSystem",
+      "title" : "Apple HealthKit Workout Activity Type Code System",
+      "description" : "Code System required for defining workoutActivityType ValueSet",
+      "uses" : {
+      },
+      "ValueSet-apple-health-kit-workout-activity-type-value-set.html" : "Apple HealthKit Workout Activity Type Value Set"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-workout-event-type-code-system",
+      "version" : "1.0.0-ballot",
+      "status" : "draft",
+      "name" : "AppleHealthKitWorkoutEventTypeCodeSystem",
+      "title" : "Apple HealthKit Workout Event Type Code System",
+      "description" : "Code System required for defining workout event type ValueSet",
+      "uses" : {
+      },
+      "ValueSet-apple-health-kit-workout-event-type-value-set.html" : "Apple HealthKit Workout Event Type Value Set"
+    },
+    {
       "url" : "http://loinc.org",
       "version" : "3.1.0",
       "status" : "active",
@@ -178,12 +266,12 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set",
-      "http://hl7.org/fhir/R4/valueset-doc-typecodes.html" : "FHIR Document Type Codes",
       "http://hl7.org/fhir/R4/valueset-doc-section-codes.html" : "Document Section Codes",
-      "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
       "http://hl7.org/fhir/R4/valueset-c80-doc-typecodes.html" : "Document Type Value Set",
-      "ValueSet-pcd-sleep-observation-code.html" : "Patient contributed data: sleep observation code"
+      "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
+      "ValueSet-pcd-sleep-observation-code.html" : "Patient contributed data: sleep observation code",
+      "http://hl7.org/fhir/R4/valueset-doc-typecodes.html" : "FHIR Document Type Codes",
+      "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set"
     },
     {
       "url" : "http://snomed.info/sct",
@@ -195,20 +283,20 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
-      "ValueSet-pcd-sleep-observation-value.html" : "Patient contributed data: sleep stage value",
       "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
-      "ValueSet-pcd-sleep-observation-code.html" : "Patient contributed data: sleep observation code",
-      "http://hl7.org/fhir/R4/valueset-media-view.html" : "Media Collection View/Projection",
-      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
-      "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set",
       "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
-      "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods"
+      "ValueSet-pcd-sleep-observation-value.html" : "Patient contributed data: sleep stage value",
+      "ValueSet-pcd-sleep-observation-code.html" : "Patient contributed data: sleep observation code",
+      "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set",
+      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+      "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+      "http://hl7.org/fhir/R4/valueset-media-view.html" : "Media Collection View/Projection",
+      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/contractsignertypecodes",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "ContractSignerTypeCodes",
       "title" : "Contract Signer Type Codes",
       "description" : "This value set includes sample Contract Signer Type codes.",
@@ -231,8 +319,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/extra-security-role-type",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "SecurityRoleType",
       "title" : "Security Role Type",
       "description" : "This CodeSystem contains Additional FHIR-defined Security Role types not defined elsewhere",
@@ -242,8 +330,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "ListEmptyReasons",
       "title" : "List Empty Reasons",
       "description" : "General reasons for a list to be empty. Reasons are either related to a summary list (i.e. problem or medication list) or to a workflow related list (i.e. consultation list).",
@@ -254,8 +342,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/list-order",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "ListOrderCodes",
       "title" : "List Order Codes",
       "description" : "Base values for the order of the items in a list resource.",
@@ -290,8 +378,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/observation-category",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "ObservationCategoryCodes",
       "title" : "Observation Category Codes",
       "description" : "Observation Category codes.",
@@ -302,11 +390,11 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.1.0",
+      "status" : "active",
       "name" : "ProvenanceParticipantType",
       "title" : "Provenance participant type",
-      "description" : "The type of participation a provenance participant.",
+      "description" : "These codes define the type of participation by an agent in a provenance activity. An agent is something that bears the responsibility identified by the type of participation in the activity taking place, for the existence of an entity, or for another agent's activity. An Agent may be An agent, device, system, organization, group, care-team, or other identifiable thing.",
       "oids" : ["2.16.840.1.113883.4.642.1.1131"],
       "uses" : {
       },
@@ -314,8 +402,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "ObservationReferenceRangeMeaningCodes",
       "title" : "Observation Reference Range Meaning Codes",
       "description" : "This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.",
@@ -346,12 +434,12 @@
       "oids" : ["2.16.840.1.113883.5.4"],
       "uses" : {
       },
-      "http://terminology.hl7.org/5.5.0/ValueSet-v3-ActCode.html" : "v3 Code System ActCode",
-      "http://hl7.org/fhir/R4/valueset-provenance-activity-type.html" : "Provenance activity type"
+      "http://hl7.org/fhir/R4/valueset-provenance-activity-type.html" : "Provenance activity type",
+      "http://terminology.hl7.org/6.1.0/ValueSet-v3-ActCode.html" : "v3 Code System ActCode"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-      "version" : "3.0.0",
+      "version" : "3.1.0",
       "status" : "active",
       "name" : "ActReason",
       "title" : "ActReason",
@@ -359,7 +447,7 @@
       "oids" : ["2.16.840.1.113883.5.8"],
       "uses" : {
       },
-      "http://terminology.hl7.org/5.5.0/ValueSet-v3-PurposeOfUse.html" : "PurposeOfUse"
+      "http://terminology.hl7.org/6.1.0/ValueSet-v3-PurposeOfUse.html" : "PurposeOfUse"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
@@ -455,8 +543,8 @@
       "oids" : ["2.16.840.1.113883.5.90"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType",
-      "http://hl7.org/fhir/R4/valueset-provenance-activity-type.html" : "Provenance activity type"
+      "http://hl7.org/fhir/R4/valueset-provenance-activity-type.html" : "Provenance activity type",
+      "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-RoleClass",
@@ -481,94 +569,6 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-biological-sex-code-system",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitBiologicalSexCodeSystem",
-      "title" : "Apple HealthKit Biological Sex Code System",
-      "description" : "Constants indicating the user’s sex.",
-      "uses" : {
-      },
-      "ValueSet-apple-health-kit-biological-sex-value-set.html" : "Apple HealthKit Biological Sex Value Set"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-category-type-code-system",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitCategoryTypeCodeSystem",
-      "title" : "Apple HealthKit Category Type Code System",
-      "description" : "HKCategoryTypeIdentifier - Identifiers for creating category types.",
-      "uses" : {
-      },
-      "ValueSet-apple-health-kit-category-type-value-set.html" : "Apple HealthKit Category Type Value Set"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-characteristic-type-code-system",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitCharacteristicTypeCodeSystem",
-      "title" : "Apple HealthKit Characteristic Type Code System",
-      "description" : "The identifiers that create characteristic type objects.",
-      "uses" : {
-      },
-      "ValueSet-apple-health-kit-characteristic-type-value-set.html" : "Apple HealthKit Charactersitic Type Value Set"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-correlation-type-code-system",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitCorrelationTypeCodeSystem",
-      "title" : "Apple HealthKit Correlation Type Code System",
-      "description" : "Code System required for defining correlationType ValueSet",
-      "uses" : {
-      },
-      "ValueSet-apple-health-kit-correlation-type-value-set.html" : "Apple HealthKit Correlation Type Value Set"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-quantity-type-code-system",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitQuantityTypeCodeSystem",
-      "title" : "Apple HealthKit Quantity Type Code System",
-      "description" : "Code System required for defining quantityType ValueSet",
-      "uses" : {
-      },
-      "ValueSet-apple-health-kit-quantity-type-value-set.html" : "Apple HealthKit Quantity Type Value Set"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitSampleTypeCodeSystem",
-      "title" : "Apple HealthKit Sample Type Code System",
-      "description" : "Code System required for defining sampleType ValueSet",
-      "uses" : {
-      },
-      "ValueSet-apple-health-kit-sample-type-value-set.html" : "Apple HealthKit Sample Type Value Set"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-workout-activity-type-code-system",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHEalthKitWorkoutActivityTypeCodeSystem",
-      "title" : "Apple HealthKit Workout Activity Type Code System",
-      "description" : "Code System required for defining workoutActivityType ValueSet",
-      "uses" : {
-      },
-      "ValueSet-apple-health-kit-workout-activity-type-value-set.html" : "Apple HealthKit Workout Activity Type Value Set"
-    },
-    {
-      "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-workout-event-type-code-system",
-      "version" : "0.4.6",
-      "status" : "draft",
-      "name" : "AppleHealthKitWorkoutEventTypeCodeSystem",
-      "title" : "Apple HealthKit Workout Event Type Code System",
-      "description" : "Code System required for defining workout event type ValueSet",
-      "uses" : {
-      },
-      "ValueSet-apple-health-kit-workout-event-type-value-set.html" : "Apple HealthKit Workout Event Type Value Set"
     },
     {
       "url" : "urn:ietf:bcp:47",

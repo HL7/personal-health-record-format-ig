@@ -2,281 +2,281 @@
   {
     "id" : "apple-health-kit-biological-sex-code-system",
     "type" : "CodeSystem",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-biological-sex-code-system",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-biological-sex-code-system",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitBiologicalSexCodeSystem"
   },
   {
     "id" : "apple-health-kit-category-type-code-system",
     "type" : "CodeSystem",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-category-type-code-system",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-category-type-code-system",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitCategoryTypeCodeSystem"
   },
   {
     "id" : "apple-health-kit-characteristic-type-code-system",
     "type" : "CodeSystem",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-characteristic-type-code-system",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-characteristic-type-code-system",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitCharacteristicTypeCodeSystem"
   },
   {
     "id" : "apple-health-kit-correlation-type-code-system",
     "type" : "CodeSystem",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-correlation-type-code-system",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-correlation-type-code-system",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitCorrelationTypeCodeSystem"
   },
   {
     "id" : "apple-health-kit-quantity-type-code-system",
     "type" : "CodeSystem",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-quantity-type-code-system",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-quantity-type-code-system",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitQuantityTypeCodeSystem"
   },
   {
     "id" : "apple-health-kit-sample-type-code-system",
     "type" : "CodeSystem",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-sample-type-code-system",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-sample-type-code-system",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitSampleTypeCodeSystem"
   },
   {
     "id" : "apple-health-kit-workout-activity-type-code-system",
     "type" : "CodeSystem",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-workout-activity-type-code-system",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-workout-activity-type-code-system",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHEalthKitWorkoutActivityTypeCodeSystem"
   },
   {
     "id" : "apple-health-kit-workout-event-type-code-system",
     "type" : "CodeSystem",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-workout-event-type-code-system",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-workout-event-type-code-system",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitWorkoutEventTypeCodeSystem"
   },
   {
-    "id" : "StandardPatientHealthRecordIG",
+    "id" : "hl7.fhir.uv.sphr",
     "type" : "ImplementationGuide",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ImplementationGuide/StandardPatientHealthRecordIG",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/ImplementationGuide/hl7.fhir.uv.sphr",
+    "version" : "1.0.0-ballot",
     "name" : "StandardPatientHealthRecordIG"
   },
   {
     "id" : "patient-identifier",
     "type" : "SearchParameter",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/SearchParameter/patient-identifier",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/SearchParameter/patient-identifier",
+    "version" : "1.0.0-ballot",
     "name" : "PatientIdentifierSearchParameter"
   },
   {
     "id" : "search-from-date",
     "type" : "SearchParameter",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/SearchParameter/search-from-date",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/SearchParameter/search-from-date",
+    "version" : "1.0.0-ballot",
     "name" : "SearchFromDateSearchParameter"
+  },
+  {
+    "id" : "AppleHealthKitCategorySample",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitCategorySample",
+    "version" : "1.0.0-ballot",
+    "name" : "AppleHealthKitCategorySample"
+  },
+  {
+    "id" : "AppleHealthKitCorrelationSample",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitCorrelationSample",
+    "version" : "1.0.0-ballot",
+    "name" : "AppleHealthKitCorrelationSample"
+  },
+  {
+    "id" : "AppleHealthKitHealthStoreCharacteristic",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitHealthStoreCharacteristic",
+    "version" : "1.0.0-ballot",
+    "name" : "AppleHealthKitHealthStoreCharacteristic"
+  },
+  {
+    "id" : "AppleHealthKitObject",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitObject",
+    "version" : "1.0.0-ballot",
+    "name" : "AppleHealthKitObject"
+  },
+  {
+    "id" : "AppleHealthKitQuantitySample",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitQuantitySample",
+    "version" : "1.0.0-ballot",
+    "name" : "AppleHealthKitQuantitySample"
+  },
+  {
+    "id" : "AppleHealthKitSample",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitSample",
+    "version" : "1.0.0-ballot",
+    "name" : "AppleHealthKitSample"
+  },
+  {
+    "id" : "AppleHealthKitWorkoutActivity",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutActivity",
+    "version" : "1.0.0-ballot",
+    "name" : "AppleHealthKitWorkoutActivity"
+  },
+  {
+    "id" : "AppleHealthKitWorkoutEvent",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutEvent",
+    "version" : "1.0.0-ballot",
+    "name" : "AppleHealthKitWorkoutEvent"
+  },
+  {
+    "id" : "AppleHealthKitWorkoutSample",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutSample",
+    "version" : "1.0.0-ballot",
+    "name" : "AppleHealthKitWorkoutSample"
   },
   {
     "id" : "Environmental",
     "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/Environmental",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/Environmental",
+    "version" : "1.0.0-ballot",
     "name" : "Environmental"
   },
   {
     "id" : "NutrientOuttake",
     "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/NutrientOuttake",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/NutrientOuttake",
+    "version" : "1.0.0-ballot",
     "name" : "NutrientOuttake"
   },
   {
     "id" : "PhrBundle",
     "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/PhrBundle",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrBundle",
+    "version" : "1.0.0-ballot",
     "name" : "PhrBundle"
   },
   {
     "id" : "PhrComposition",
     "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/PhrComposition",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrComposition",
+    "version" : "1.0.0-ballot",
     "name" : "PhrComposition"
   },
   {
     "id" : "PhrDocumentReference",
     "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/PhrDocumentReference",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrDocumentReference",
+    "version" : "1.0.0-ballot",
     "name" : "PhrDocumentReference"
   },
   {
     "id" : "PhrMedia",
     "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/PhrMedia",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrMedia",
+    "version" : "1.0.0-ballot",
     "name" : "PhrMedia"
   },
   {
     "id" : "PhrPatient",
     "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/PhrPatient",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrPatient",
+    "version" : "1.0.0-ballot",
     "name" : "PhrPatient"
   },
   {
     "id" : "PhrProvenance",
     "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/PhrProvenance",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrProvenance",
+    "version" : "1.0.0-ballot",
     "name" : "PhrProvenance"
   },
   {
     "id" : "SocialMedia",
     "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/SocialMedia",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/SocialMedia",
+    "version" : "1.0.0-ballot",
     "name" : "SocialMedia"
-  },
-  {
-    "id" : "apple-health-kit-category-sample",
-    "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/apple-health-kit-category-sample",
-    "version" : "0.4.6",
-    "name" : "AppleHealthKitCategorySample"
-  },
-  {
-    "id" : "apple-health-kit-correlation-sample",
-    "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/apple-health-kit-correlation-sample",
-    "version" : "0.4.6",
-    "name" : "AppleHealthKitCorrelationSample"
-  },
-  {
-    "id" : "apple-health-kit-healthstore-characteristic",
-    "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/apple-health-kit-healthstore-characteristic",
-    "version" : "0.4.6",
-    "name" : "AppleHealthKitHealthStoreCharacteristic"
-  },
-  {
-    "id" : "apple-health-kit-object",
-    "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/apple-health-kit-object",
-    "version" : "0.4.6",
-    "name" : "AppleHealthKitObject"
-  },
-  {
-    "id" : "apple-health-kit-quantity-sample",
-    "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/apple-health-kit-quantity-sample",
-    "version" : "0.4.6",
-    "name" : "AppleHealthKitQuantitySample"
-  },
-  {
-    "id" : "apple-health-kit-sample",
-    "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/apple-health-kit-sample",
-    "version" : "0.4.6",
-    "name" : "AppleHealthKitSample"
-  },
-  {
-    "id" : "apple-health-kit-workout-activity",
-    "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/apple-health-kit-workout-activity",
-    "version" : "0.4.6",
-    "name" : "AppleHealthKitWorkoutActivity"
-  },
-  {
-    "id" : "apple-health-kit-workout-event",
-    "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/apple-health-kit-workout-event",
-    "version" : "0.4.6",
-    "name" : "AppleHealthKitWorkoutEvent"
-  },
-  {
-    "id" : "apple-health-kit-workout-sample",
-    "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/apple-health-kit-workout-sample",
-    "version" : "0.4.6",
-    "name" : "AppleHealthKitWorkoutSample"
   },
   {
     "id" : "pcd-sleep-observation",
     "type" : "StructureDefinition",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/StructureDefinition/pcd-sleep-observation",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/pcd-sleep-observation",
+    "version" : "1.0.0-ballot",
     "name" : "PCDSleepObservation"
   },
   {
     "id" : "apple-health-kit-biological-sex-value-set",
     "type" : "ValueSet",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-biological-sex-value-set",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-biological-sex-value-set",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitBiologicalSexValueSet"
   },
   {
     "id" : "apple-health-kit-category-type-value-set",
     "type" : "ValueSet",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-category-type-value-set",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-category-type-value-set",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitCategoryTypeValueSet"
   },
   {
     "id" : "apple-health-kit-characteristic-type-value-set",
     "type" : "ValueSet",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-characteristic-type-value-set",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-characteristic-type-value-set",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitCharacteristicTypeValueSet"
   },
   {
     "id" : "apple-health-kit-correlation-type-value-set",
     "type" : "ValueSet",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-correlation-type-value-set",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-correlation-type-value-set",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitCorrelationTypeValueSet"
   },
   {
     "id" : "apple-health-kit-quantity-type-value-set",
     "type" : "ValueSet",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-quantity-type-value-set",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-quantity-type-value-set",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitQuantityTypeValueSet"
   },
   {
     "id" : "apple-health-kit-sample-type-value-set",
     "type" : "ValueSet",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-sample-type-value-set",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-sample-type-value-set",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitSampleTypeValueSet"
   },
   {
     "id" : "apple-health-kit-workout-activity-type-value-set",
     "type" : "ValueSet",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-workout-activity-type-value-set",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-workout-activity-type-value-set",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitWorkoutActivityTypeValueSet"
   },
   {
     "id" : "apple-health-kit-workout-event-type-value-set",
     "type" : "ValueSet",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-workout-event-type-value-set",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-workout-event-type-value-set",
+    "version" : "1.0.0-ballot",
     "name" : "AppleHealthKitWorkoutEventTypeValueSet"
   },
   {
     "id" : "pcd-sleep-observation-code",
     "type" : "ValueSet",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/pcd-sleep-observation-code",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/pcd-sleep-observation-code",
+    "version" : "1.0.0-ballot",
     "name" : "PCDSleepObservationCode"
   },
   {
     "id" : "pcd-sleep-observation-value",
     "type" : "ValueSet",
-    "url" : "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/pcd-sleep-observation-value",
-    "version" : "0.4.6",
+    "url" : "http://hl7.org/fhir/uv/sphr/ValueSet/pcd-sleep-observation-value",
+    "version" : "1.0.0-ballot",
     "name" : "PCDSleepStageValueCode"
   }
 ]

@@ -1,5 +1,7 @@
 One of the most challenging aspects of programming a Personal Health Record is developing a longitudinal record to use as a baseline.  Rather than specify what functionality should be included the PHR, this implementation guide endeavors to define _patient persona benchmarks_ that PHRs should be able to either consume or generate.  
 
+It is our hope that your applications should be able to load any of the following PHR files and not error out or fail.  That is not to say that your application ought to use all of the data in the following records; rather, it simply needs to be able to parse the record-keeping of a file format that can contain large DICOM files, crypotographically signed provenance records, patient data receipts, and other recordkeeping structures that we see in the PHR ecosystem. 
+
 
 ### Interesting Case File
 
@@ -7,15 +9,16 @@ One of the most challenging aspects of programming a Personal Health Record is d
 | ------------- | :-------- | :-------- | :-------- | :-------- | 
 | john-doe | John Doe | Diabetic  |  | [ JohnDoe.phr ](JohnDoe.phr) |  |
 | 12724069 | Timmy Smart | Foster Child  | Cerner | [ TimmySmart.phr ](TimmySmart-FosterCareTimeline.phr) |  |
-| wsim001 | William Sim | wsim001 |  | [WilliamSim.phr](WilliamSim.phr) |  [WilliamSim.sphr](WilliamSim.sphr) | 
 | jenny-m | Jenny M |  Cancer | MCODE | [JennyM-cancer-patient.phr](JennyM-cancer-patient.phr) |  |  
+| betsy | Betsy Johnson |  | PACIO | [BetsySmithJohnson.phr](PACIO/BetsySmithJohnson.phr) |  |  
+| wsim001 | William Sim | Pediatric Cancer | DICOM | [WilliamSim.phr](WilliamSim.phr) |  [WilliamSim.sphr](WilliamSim.sphr) | 
 | 1 | Candace Salinas |  Asthma | Apple | CandaceSalinas.phr |  |  
-| A | Anne | Patient relocation  | Patient Journeys | [AnnGoodwin.phr](PatientJourneys/Anne_Goodwin_6a9e8e6f-d4d8-f062-79cf-cbeda88dc2bf.phr) | Patient Journeys |  
-| B | Earl | Cancer diagnosis |  | [EarlCarillo.phr](PatientJourneys/Earl_Carrillo_13803def-e365-e248-e7ec-632533574c3c.phr) | Patient Journeys |  
-| C | Markus | Cardiac Rehabilitation  |  | [MarkusWard.phr](PatientJourneys/Markus_Ward_69437c6f-772f-6aaf-34b9-b4d3f12d9eaf.phr) |  |  
+| A | Anne | Patient relocation  | Patient Journeys | [AnnGoodwin.phr](PatientJourneys/Anne_Goodwin_6a9e8e6f-d4d8-f062-79cf-cbeda88dc2bf.phr) |  |  
+| B | Earl | Cancer diagnosis | Patient Journeys  | [EarlCarillo.phr](PatientJourneys/Earl_Carrillo_13803def-e365-e248-e7ec-632533574c3c.phr) |  |  
+| C | Markus | Cardiac Rehabilitation  | Patient Journeys  | [MarkusWard.phr](PatientJourneys/Markus_Ward_69437c6f-772f-6aaf-34b9-b4d3f12d9eaf.phr) |  |  
 | D | Wilma | Long COVID  | Patient Journeys | [WilmaNader.phr](PatientJourneys/Wilma_Nader_24f4d2f1-b4ef-0654-25a3-bdce21e7ceef.phr) |  |  
 | E | Marcella | Complex chronic illness  | Patient Journeys | [MarcellaSchumm.phr](PatientJourneys/Marcella_Schumm_a6e749b3-eff6-94d5-5ee2-fb4a6566deef.phr) |  |  
-| E | Spencer | Childhood Leukemia  | Patient Journeys | [SpencerThompson.phr](PatientJourneys/Spencer_Thompson_ae26bfd6-d45b-c819-0de6-a2299511e6f4.phr) |  |  
+| E | Spencer | Childhood Leukemia  | Thompson Family Usecase | [SpencerThompson.phr](PatientJourneys/Spencer_Thompson_ae26bfd6-d45b-c819-0de6-a2299511e6f4.phr) |  |  
 | X12 | Jamie | Diabetes | GoInvo |  |  |  
 | Y48 | Alyssa | Pregnancy | GoInvo |  |  |  
 | H32 | Choko | Asthma and back pain  | GoInvo |  |  |  
@@ -65,6 +68,11 @@ One of the most challenging aspects of programming a Personal Health Record is d
 | 8dc4ac2f-691f-d83b-1bf0-ca4080ab0b4a | Wes853 DuBuque211 | posttraumatic stress disorder | 47505003 | [json](Wes853_DuBuque211_8dc4ac2f-691f-d83b-1bf0-ca4080ab0b4a.json) | [phr](Mr.Wes853DuBuque211-8dc4ac2f-691f-d83b-1bf0-ca4080ab0b4a.phr) |  
 
 
+### Patient Narratives
+
+For additional research on patient narratives and the circumstances that shape many of the most challenging clinical cases, particularly with regard to social determinates of health, the Soft White Underbelly videos may be of interest.  It often helps to hear accounts from a first-person perspective of the varied circumstances that lead to homelessness, incarceration, chronic illness, mental health episodes, disability, etc.  
+
+[Soft White Underbelly Videos](https://www.youtube.com/@SoftWhiteUnderbelly/videos)  
 
 
 ### General References  

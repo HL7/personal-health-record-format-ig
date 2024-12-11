@@ -5,31 +5,43 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-workout-event-type-value-set> a fhir:ValueSet ;
+<http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-workout-event-type-value-set> a fhir:ValueSet ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "apple-health-kit-workout-event-type-value-set"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet apple-health-kit-workout-event-type-value-set</b></p><a name=\"apple-health-kit-workout-event-type-value-set\"> </a><a name=\"hcapple-health-kit-workout-event-type-value-set\"> </a><a name=\"hcapple-health-kit-workout-event-type-value-set-en-US\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-apple-health-kit-workout-event-type-code-system.html\"><code>https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-workout-event-type-code-system</code></a></li></ul></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet apple-health-kit-workout-event-type-value-set</b></p><a name=\"apple-health-kit-workout-event-type-value-set\"> </a><a name=\"hcapple-health-kit-workout-event-type-value-set\"> </a><a name=\"apple-health-kit-workout-event-type-value-set-en-US\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-apple-health-kit-workout-event-type-code-system.html\"><code>http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-workout-event-type-code-system</code></a></li></ul></div>"
   ] ; # 
-  fhir:url [ fhir:v "https://open-health-manager.github.io/standard-patient-health-record-ig/ValueSet/apple-health-kit-workout-event-type-value-set"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.4.6"] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pe" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-workout-event-type-value-set"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0-ballot"] ; # 
   fhir:name [ fhir:v "AppleHealthKitWorkoutEventTypeValueSet"] ; # 
   fhir:title [ fhir:v "Apple HealthKit Workout Event Type Value Set"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-07-11T23:09:29-05:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "MITRE"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-12-11T01:07:49-06:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
-     fhir:name [ fhir:v "MITRE" ] ;
+     fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
      fhir:telecom ( [
        fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "https://open-health-manager.github.io/standard-patient-health-record-ig" ]
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientempowerment" ]
      ] )
   ] ) ; # 
   fhir:description [ fhir:v "Possible values for AppleHealthKitWorkoutEvent.type"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
   fhir:compose [
      fhir:include ( [
-       fhir:system [ fhir:v "https://open-health-manager.github.io/standard-patient-health-record-ig/CodeSystem/apple-health-kit-workout-event-type-code-system"^^xsd:anyURI ]
+       fhir:system [ fhir:v "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-workout-event-type-code-system"^^xsd:anyURI ]
      ] )
   ] . # 
 

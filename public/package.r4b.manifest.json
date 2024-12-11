@@ -1,6 +1,6 @@
 {
-  "version" : "0.4.6",
-  "date" : "20240711230909",
+  "version" : "1.0.0-ballot",
+  "date" : "20241211010726",
   "notForPublication" : true,
-  "name" : "StandardPatientHealthRecordIG.r4b"
+  "name" : "hl7.fhir.uv.sphr.r4b"
 }

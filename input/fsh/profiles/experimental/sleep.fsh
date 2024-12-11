@@ -3,6 +3,7 @@ Id:          pcd-sleep-observation
 Parent:      Observation
 Title:       "Patient contributed data: sleep observation"
 Description: "patient sleep logs recorded by device or app."
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-wg].valueCode = #pe
 * ^experimental = true
 * code from pcd-sleep-observation-code (required)
 * effective[x] 1..1
