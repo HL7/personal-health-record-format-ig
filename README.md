@@ -1,12 +1,16 @@
-## Standard Patient Health Record
+## Patient Health Records
 
 [Current Build (Public)](https://build.fhir.org/ig/HL7/personal-health-record-format-ig/)  
 
 [Preview Branches](https://build.fhir.org/ig/HL7/personal-health-record-format-ig/branches/)  
 
+[IG Proposal](https://confluence.hl7.org/display/FHIR/Personal+Health+Records)  
 
+[Project Confluence Page](https://confluence.hl7.org/display/PE/Standard+Personal+Health+Record+FHIR+IG)  
 
+[Project Scope Statement](https://jira.hl7.org/browse/PSS-2125) 
 
+Project Insight Number:  1804
 
 ### Prerequisites 
 

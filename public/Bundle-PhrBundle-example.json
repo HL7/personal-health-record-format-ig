@@ -2,7 +2,7 @@
   "resourceType" : "Bundle",
   "id" : "PhrBundle-example",
   "meta" : {
-    "profile" : ["http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrBundle"]
+    "profile" : ["http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle"]
   },
   "identifier" : {
     "system" : "urn:uuid",
@@ -16,7 +16,7 @@
       "resourceType" : "Composition",
       "id" : "jane-doe-composition",
       "meta" : {
-        "profile" : ["http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrComposition"]
+        "profile" : ["http://hl7.org/fhir/uv/phr/StructureDefinition/PhrComposition"]
       },
       "text" : {
         "status" : "generated",
@@ -55,7 +55,7 @@
       "resourceType" : "Patient",
       "id" : "jane-doe",
       "meta" : {
-        "profile" : ["http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrPatient"]
+        "profile" : ["http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient"]
       },
       "text" : {
         "status" : "generated",
@@ -93,7 +93,7 @@
       "resourceType" : "DocumentReference",
       "id" : "jane-doe-genomics-document",
       "meta" : {
-        "profile" : ["http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrDocumentReference"]
+        "profile" : ["http://hl7.org/fhir/uv/phr/StructureDefinition/PhrDocumentReference"]
       },
       "text" : {
         "status" : "generated",
@@ -124,7 +124,7 @@
       "resourceType" : "Media",
       "id" : "jane-doe-media",
       "meta" : {
-        "profile" : ["http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrMedia"]
+        "profile" : ["http://hl7.org/fhir/uv/phr/StructureDefinition/PhrMedia"]
       },
       "text" : {
         "status" : "generated",
@@ -155,7 +155,7 @@
       "resourceType" : "Provenance",
       "id" : "jane-doe-media-provenance",
       "meta" : {
-        "profile" : ["http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrProvenance"]
+        "profile" : ["http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance"]
       },
       "text" : {
         "status" : "generated",

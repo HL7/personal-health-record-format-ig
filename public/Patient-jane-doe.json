@@ -2,7 +2,7 @@
   "resourceType" : "Patient",
   "id" : "jane-doe",
   "meta" : {
-    "profile" : ["http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrPatient"]
+    "profile" : ["http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient"]
   },
   "text" : {
     "status" : "generated",

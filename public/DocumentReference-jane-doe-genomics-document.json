@@ -2,7 +2,7 @@
   "resourceType" : "DocumentReference",
   "id" : "jane-doe-genomics-document",
   "meta" : {
-    "profile" : ["http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrDocumentReference"]
+    "profile" : ["http://hl7.org/fhir/uv/phr/StructureDefinition/PhrDocumentReference"]
   },
   "text" : {
     "status" : "generated",

@@ -5,13 +5,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/uv/sphr/DocumentReference/jane-doe-genomics-document> a fhir:DocumentReference ;
+<http://hl7.org/fhir/uv/phr/DocumentReference/jane-doe-genomics-document> a fhir:DocumentReference ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "jane-doe-genomics-document"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrDocumentReference"^^xsd:anyURI ;
-       fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrDocumentReference>
+       fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrDocumentReference"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrDocumentReference>
      ] )
   ] ; # 
   fhir:text [
@@ -20,7 +20,7 @@
   ] ; # 
   fhir:status [ fhir:v "current"] ; # 
   fhir:subject [
-     fhir:link <http://hl7.org/fhir/uv/sphr/Patient/jane-doe> ;
+     fhir:link <http://hl7.org/fhir/uv/phr/Patient/jane-doe> ;
      fhir:reference [ fhir:v "Patient/jane-doe" ]
   ] ; # 
   fhir:date [ fhir:v "2024-12-11T05:22:27.249Z"^^xsd:dateTime] ; # 
@@ -38,7 +38,7 @@
      ]
   ] ) . # 
 
-<http://hl7.org/fhir/uv/sphr/Patient/jane-doe> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/Patient/jane-doe> a fhir:uv .
 
 # -------------------------------------------------------------------------------------
 

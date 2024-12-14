@@ -13,13 +13,13 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pe"/>
   </extension>
-  <url value="http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutActivity"/>
+  <url value="http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitWorkoutActivity"/>
   <version value="1.0.0-ballot"/>
   <name value="AppleHealthKitWorkoutActivity"/>
   <title value="Apple HealthKit Workout Activity Logical Model"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2024-12-11T01:07:49-06:00"/>
+  <date value="2024-12-13T21:36:12-06:00"/>
   <publisher value="HL7 International / Patient Empowerment"/>
   <contact>
     <name value="HL7 International / Patient Empowerment"/>
@@ -39,8 +39,8 @@
   <fhirVersion value="4.0.1"/>
   <kind value="logical"/>
   <abstract value="false"/>
-  <type value="http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutActivity"/>
-  <baseDefinition value="http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitObject"/>
+  <type value="http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitWorkoutActivity"/>
+  <baseDefinition value="http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitObject"/>
   <derivation value="specialization"/>
   <snapshot>
     <element id="AppleHealthKitWorkoutActivity">
@@ -1097,7 +1097,7 @@
         <max value="*"/>
       </base>
       <type>
-        <code value="http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutEvent"/>
+        <code value="http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitWorkoutEvent"/>
       </type>
     </element>
   </snapshot>
@@ -1145,7 +1145,7 @@
       <min value="0"/>
       <max value="*"/>
       <type>
-        <code value="http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutEvent"/>
+        <code value="http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitWorkoutEvent"/>
       </type>
     </element>
   </differential>

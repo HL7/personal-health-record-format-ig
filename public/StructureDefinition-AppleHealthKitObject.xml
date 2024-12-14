@@ -39,13 +39,13 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pe"/>
   </extension>
-  <url value="http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitObject"/>
+  <url value="http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitObject"/>
   <version value="1.0.0-ballot"/>
   <name value="AppleHealthKitObject"/>
   <title value="Apple HealthKit Object Logical Model"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2024-12-11T01:07:49-06:00"/>
+  <date value="2024-12-13T21:36:12-06:00"/>
   <publisher value="HL7 International / Patient Empowerment"/>
   <contact>
     <name value="HL7 International / Patient Empowerment"/>
@@ -65,7 +65,7 @@
   <fhirVersion value="4.0.1"/>
   <kind value="logical"/>
   <abstract value="true"/>
-  <type value="http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitObject"/>
+  <type value="http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitObject"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Base"/>
   <derivation value="specialization"/>
   <snapshot>

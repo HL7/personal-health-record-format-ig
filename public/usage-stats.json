@@ -1,5 +1,5 @@
 {
-  "package": "hl7.fhir.uv.sphr",
+  "package": "hl7.fhir.uv.phr",
   "version": "1.0.0-ballot",
   "fhirVersion": "4.0.1",
   "jurisdiction": "001",
@@ -7,43 +7,43 @@
   "profiles": {
     "Bundle": [
       {
-        "url": "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrBundle",
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle",
         "title": "PhrBundle"
       }
     ],
     "Composition": [
       {
-        "url": "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrComposition",
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrComposition",
         "title": "PhrComposition"
       }
     ],
     "DocumentReference": [
       {
-        "url": "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrDocumentReference",
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrDocumentReference",
         "title": "PhrDocumentReference"
       }
     ],
     "Media": [
       {
-        "url": "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrMedia",
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrMedia",
         "title": "PhrMedia"
       }
     ],
     "Patient": [
       {
-        "url": "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrPatient",
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient",
         "title": "PhrPatient"
       }
     ],
     "Provenance": [
       {
-        "url": "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrProvenance",
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance",
         "title": "PhrProvenance"
       }
     ],
     "Observation": [
       {
-        "url": "http://hl7.org/fhir/uv/sphr/StructureDefinition/pcd-sleep-observation",
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation",
         "title": "Patient contributed data: sleep observation"
       }
     ]

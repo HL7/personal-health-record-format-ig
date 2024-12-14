@@ -169,7 +169,7 @@
       "http://hl7.org/fhir/R4/valueset-search-entry-mode.html" : "SearchEntryMode"
     },
     {
-      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-biological-sex-code-system",
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-biological-sex-code-system",
       "version" : "1.0.0-ballot",
       "status" : "draft",
       "name" : "AppleHealthKitBiologicalSexCodeSystem",
@@ -180,7 +180,7 @@
       "ValueSet-apple-health-kit-biological-sex-value-set.html" : "Apple HealthKit Biological Sex Value Set"
     },
     {
-      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-category-type-code-system",
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-category-type-code-system",
       "version" : "1.0.0-ballot",
       "status" : "draft",
       "name" : "AppleHealthKitCategoryTypeCodeSystem",
@@ -191,7 +191,7 @@
       "ValueSet-apple-health-kit-category-type-value-set.html" : "Apple HealthKit Category Type Value Set"
     },
     {
-      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-characteristic-type-code-system",
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-characteristic-type-code-system",
       "version" : "1.0.0-ballot",
       "status" : "draft",
       "name" : "AppleHealthKitCharacteristicTypeCodeSystem",
@@ -202,7 +202,7 @@
       "ValueSet-apple-health-kit-characteristic-type-value-set.html" : "Apple HealthKit Charactersitic Type Value Set"
     },
     {
-      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-correlation-type-code-system",
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-correlation-type-code-system",
       "version" : "1.0.0-ballot",
       "status" : "draft",
       "name" : "AppleHealthKitCorrelationTypeCodeSystem",
@@ -213,7 +213,7 @@
       "ValueSet-apple-health-kit-correlation-type-value-set.html" : "Apple HealthKit Correlation Type Value Set"
     },
     {
-      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-quantity-type-code-system",
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-quantity-type-code-system",
       "version" : "1.0.0-ballot",
       "status" : "draft",
       "name" : "AppleHealthKitQuantityTypeCodeSystem",
@@ -224,7 +224,7 @@
       "ValueSet-apple-health-kit-quantity-type-value-set.html" : "Apple HealthKit Quantity Type Value Set"
     },
     {
-      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-sample-type-code-system",
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-sample-type-code-system",
       "version" : "1.0.0-ballot",
       "status" : "draft",
       "name" : "AppleHealthKitSampleTypeCodeSystem",
@@ -235,7 +235,7 @@
       "ValueSet-apple-health-kit-sample-type-value-set.html" : "Apple HealthKit Sample Type Value Set"
     },
     {
-      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-workout-activity-type-code-system",
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-workout-activity-type-code-system",
       "version" : "1.0.0-ballot",
       "status" : "draft",
       "name" : "AppleHEalthKitWorkoutActivityTypeCodeSystem",
@@ -246,7 +246,7 @@
       "ValueSet-apple-health-kit-workout-activity-type-value-set.html" : "Apple HealthKit Workout Activity Type Value Set"
     },
     {
-      "url" : "http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-workout-event-type-code-system",
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-workout-event-type-code-system",
       "version" : "1.0.0-ballot",
       "status" : "draft",
       "name" : "AppleHealthKitWorkoutEventTypeCodeSystem",
@@ -268,10 +268,10 @@
       },
       "http://hl7.org/fhir/R4/valueset-doc-section-codes.html" : "Document Section Codes",
       "http://hl7.org/fhir/R4/valueset-c80-doc-typecodes.html" : "Document Type Value Set",
-      "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
       "ValueSet-pcd-sleep-observation-code.html" : "Patient contributed data: sleep observation code",
+      "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set",
       "http://hl7.org/fhir/R4/valueset-doc-typecodes.html" : "FHIR Document Type Codes",
-      "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set"
+      "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes"
     },
     {
       "url" : "http://snomed.info/sct",
@@ -283,15 +283,15 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
-      "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
-      "ValueSet-pcd-sleep-observation-value.html" : "Patient contributed data: sleep stage value",
-      "ValueSet-pcd-sleep-observation-code.html" : "Patient contributed data: sleep observation code",
-      "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set",
-      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
-      "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
       "http://hl7.org/fhir/R4/valueset-media-view.html" : "Media Collection View/Projection",
-      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes"
+      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+      "ValueSet-pcd-sleep-observation-code.html" : "Patient contributed data: sleep observation code",
+      "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+      "ValueSet-pcd-sleep-observation-value.html" : "Patient contributed data: sleep stage value",
+      "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
+      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
+      "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set",
+      "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/contractsignertypecodes",

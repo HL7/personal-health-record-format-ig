@@ -26,4 +26,4 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "AppleHealthKitWorkoutEvent.dateInterval.duration","AppleHealthKitWorkoutEvent.dateInterval.duration","","","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/organization-period]]} {[]}
 ","The dateInterval's duration.","The dateInterval's duration.","","","","","","","","","",,,,,"",,,,"AppleHealthKitWorkoutEvent.dateInterval.duration",0,1,"",""
 "AppleHealthKitWorkoutEvent.type","AppleHealthKitWorkoutEvent.type","","","",1,1,"","","","code {[]} {[]}
-","The workout event type.","The workout event type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-workout-event-type-value-set","",,,,"AppleHealthKitWorkoutEvent.type",1,1,"",""
+","The workout event type.","The workout event type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-workout-event-type-value-set","",,,,"AppleHealthKitWorkoutEvent.type",1,1,"",""

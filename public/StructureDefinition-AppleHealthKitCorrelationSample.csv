@@ -124,8 +124,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "AppleHealthKitCorrelationSample.hasUndeterminedDuration","AppleHealthKitCorrelationSample.hasUndeterminedDuration","","","",0,1,"","","","boolean {[]} {[]}
 ","Indicates whether the sample has an unknown duration.","Indicates whether the sample has an unknown duration.","","","","","","","","","",,,,,"",,,,"AppleHealthKitSample.hasUndeterminedDuration",0,1,"",""
 "AppleHealthKitCorrelationSample.sampleType","AppleHealthKitCorrelationSample.sampleType","","","",1,1,"","","","code {[]} {[]}
-","The sample type.","The sample type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-sample-type-value-set","",,,,"AppleHealthKitSample.sampleType",1,1,"",""
+","The sample type.","The sample type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-sample-type-value-set","",,,,"AppleHealthKitSample.sampleType",1,1,"",""
 "AppleHealthKitCorrelationSample.correlationType","AppleHealthKitCorrelationSample.correlationType","","","",1,1,"","","","code {[]} {[]}
-","The type for this correlation.","The type for this correlation.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-correlation-type-value-set","",,,,"AppleHealthKitCorrelationSample.correlationType",1,1,"",""
+","The type for this correlation.","The type for this correlation.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-correlation-type-value-set","",,,,"AppleHealthKitCorrelationSample.correlationType",1,1,"",""
 "AppleHealthKitCorrelationSample.objects","AppleHealthKitCorrelationSample.objects","","","",1,*,"","","","Resource {[]} {[]}
 ","The set of sample objects that make up the correlation.","The set of sample objects that make up the correlation.","","","","","","","","","",,,,,"",,,,"AppleHealthKitCorrelationSample.objects",1,*,"",""

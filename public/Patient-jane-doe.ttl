@@ -5,13 +5,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/uv/sphr/Patient/jane-doe> a fhir:Patient ;
+<http://hl7.org/fhir/uv/phr/Patient/jane-doe> a fhir:Patient ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "jane-doe"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrPatient"^^xsd:anyURI ;
-       fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrPatient>
+       fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient>
      ] )
   ] ; # 
   fhir:text [

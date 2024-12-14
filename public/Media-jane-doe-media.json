@@ -2,7 +2,7 @@
   "resourceType" : "Media",
   "id" : "jane-doe-media",
   "meta" : {
-    "profile" : ["http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrMedia"]
+    "profile" : ["http://hl7.org/fhir/uv/phr/StructureDefinition/PhrMedia"]
   },
   "text" : {
     "status" : "generated",

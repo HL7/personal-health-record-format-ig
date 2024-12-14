@@ -123,5 +123,5 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Workout Activity end datetime.","The Workout Activity end datetime.","","","","","","","","","",,,,,"",,,,"AppleHealthKitWorkoutActivity.endDate",0,1,"",""
 "AppleHealthKitWorkoutActivity.duration","AppleHealthKitWorkoutActivity.duration","","","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/organization-period]]} {[]}
 ","Workout Activity duration","Workout Activity duration may be derived from endDate - startDate.","","","","","","","","","",,,,,"",,,,"AppleHealthKitWorkoutActivity.duration",0,1,"",""
-"AppleHealthKitWorkoutActivity.workoutEvents","AppleHealthKitWorkoutActivity.workoutEvents","","","",0,*,"","","","http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutEvent {[]} {[]}
+"AppleHealthKitWorkoutActivity.workoutEvents","AppleHealthKitWorkoutActivity.workoutEvents","","","",0,*,"","","","http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitWorkoutEvent {[]} {[]}
 ","Associated Workout Events.","Associated Workout Events.","","","","","","","","","",,,,,"",,,,"AppleHealthKitWorkoutActivity.workoutEvents",0,*,"",""

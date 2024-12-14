@@ -11,13 +11,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pe"/>
   </extension>
-  <url value="http://hl7.org/fhir/uv/sphr/StructureDefinition/NutrientOuttake"/>
+  <url value="http://hl7.org/fhir/uv/phr/StructureDefinition/NutrientOuttake"/>
   <version value="1.0.0-ballot"/>
   <name value="NutrientOuttake"/>
   <title value="Nutrient Outtake"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2024-12-11T01:07:49-06:00"/>
+  <date value="2024-12-13T21:36:12-06:00"/>
   <publisher value="HL7 International / Patient Empowerment"/>
   <contact>
     <name value="HL7 International / Patient Empowerment"/>
@@ -42,7 +42,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   </mapping>
   <kind value="logical"/>
   <abstract value="false"/>
-  <type value="http://hl7.org/fhir/uv/sphr/StructureDefinition/NutrientOuttake"/>
+  <type value="http://hl7.org/fhir/uv/phr/StructureDefinition/NutrientOuttake"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
   <derivation value="specialization"/>
   <snapshot>

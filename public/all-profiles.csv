@@ -124,9 +124,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "AppleHealthKitCategorySample","AppleHealthKitCategorySample.hasUndeterminedDuration","AppleHealthKitCategorySample.hasUndeterminedDuration","","","",0,1,"","","","boolean {[]} {[]}
 ","Indicates whether the sample has an unknown duration.","Indicates whether the sample has an unknown duration.","","","","","","","","","",,,,,"",,,,"AppleHealthKitSample.hasUndeterminedDuration",0,1,"",""
 "AppleHealthKitCategorySample","AppleHealthKitCategorySample.sampleType","AppleHealthKitCategorySample.sampleType","","","",1,1,"","","","code {[]} {[]}
-","The sample type.","The sample type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-sample-type-value-set","",,,,"AppleHealthKitSample.sampleType",1,1,"",""
+","The sample type.","The sample type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-sample-type-value-set","",,,,"AppleHealthKitSample.sampleType",1,1,"",""
 "AppleHealthKitCategorySample","AppleHealthKitCategorySample.categoryType","AppleHealthKitCategorySample.categoryType","","","",1,1,"","","","code {[]} {[]}
-","The category type for this sample.","The category type for this sample.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-category-type-value-set","",,,,"AppleHealthKitCategorySample.categoryType",1,1,"",""
+","The category type for this sample.","The category type for this sample.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-category-type-value-set","",,,,"AppleHealthKitCategorySample.categoryType",1,1,"",""
 "AppleHealthKitCategorySample","AppleHealthKitCategorySample.value","AppleHealthKitCategorySample.value","","","",1,1,"","","","integer {[]} {[]}
 ","The category value for this sample.","The category value for this sample.","","","","","","","","","",,,,,"",,,,"AppleHealthKitCategorySample.value",1,1,"",""
 "AppleHealthKitCorrelationSample","AppleHealthKitCorrelationSample","AppleHealthKitCorrelationSample","","","",0,*,"","","","null {[]} {[]}
@@ -254,17 +254,17 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "AppleHealthKitCorrelationSample","AppleHealthKitCorrelationSample.hasUndeterminedDuration","AppleHealthKitCorrelationSample.hasUndeterminedDuration","","","",0,1,"","","","boolean {[]} {[]}
 ","Indicates whether the sample has an unknown duration.","Indicates whether the sample has an unknown duration.","","","","","","","","","",,,,,"",,,,"AppleHealthKitSample.hasUndeterminedDuration",0,1,"",""
 "AppleHealthKitCorrelationSample","AppleHealthKitCorrelationSample.sampleType","AppleHealthKitCorrelationSample.sampleType","","","",1,1,"","","","code {[]} {[]}
-","The sample type.","The sample type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-sample-type-value-set","",,,,"AppleHealthKitSample.sampleType",1,1,"",""
+","The sample type.","The sample type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-sample-type-value-set","",,,,"AppleHealthKitSample.sampleType",1,1,"",""
 "AppleHealthKitCorrelationSample","AppleHealthKitCorrelationSample.correlationType","AppleHealthKitCorrelationSample.correlationType","","","",1,1,"","","","code {[]} {[]}
-","The type for this correlation.","The type for this correlation.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-correlation-type-value-set","",,,,"AppleHealthKitCorrelationSample.correlationType",1,1,"",""
+","The type for this correlation.","The type for this correlation.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-correlation-type-value-set","",,,,"AppleHealthKitCorrelationSample.correlationType",1,1,"",""
 "AppleHealthKitCorrelationSample","AppleHealthKitCorrelationSample.objects","AppleHealthKitCorrelationSample.objects","","","",1,*,"","","","Resource {[]} {[]}
 ","The set of sample objects that make up the correlation.","The set of sample objects that make up the correlation.","","","","","","","","","",,,,,"",,,,"AppleHealthKitCorrelationSample.objects",1,*,"",""
 "AppleHealthKitHealthStoreCharacteristic","AppleHealthKitHealthStoreCharacteristic","AppleHealthKitHealthStoreCharacteristic","","","",0,*,"","","","null {[]} {[]}
 ","Apple HealthKit HealthStore Characteristic Logical Model","Relevant Data elements that correspond to the CharacteristicType stored in Apple HealthStore.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "AppleHealthKitHealthStoreCharacteristic","AppleHealthKitHealthStoreCharacteristic.characteristicType","AppleHealthKitHealthStoreCharacteristic.characteristicType","","","",1,1,"","","","code {[]} {[]}
-","The characteristic type.","The characteristic type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-characteristic-type-value-set","",,,,"AppleHealthKitHealthStoreCharacteristic.characteristicType",1,1,"",""
+","The characteristic type.","The characteristic type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-characteristic-type-value-set","",,,,"AppleHealthKitHealthStoreCharacteristic.characteristicType",1,1,"",""
 "AppleHealthKitHealthStoreCharacteristic","AppleHealthKitHealthStoreCharacteristic.biologicalSex","AppleHealthKitHealthStoreCharacteristic.biologicalSex","","","",0,1,"","","","code {[]} {[]}
-","The biological sex.","The biological sex.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-biological-sex-value-set","",,,,"AppleHealthKitHealthStoreCharacteristic.biologicalSex",0,1,"",""
+","The biological sex.","The biological sex.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-biological-sex-value-set","",,,,"AppleHealthKitHealthStoreCharacteristic.biologicalSex",0,1,"",""
 "AppleHealthKitHealthStoreCharacteristic","AppleHealthKitHealthStoreCharacteristic.dateOfBirth","AppleHealthKitHealthStoreCharacteristic.dateOfBirth","","","",0,1,"","","","date {[]} {[]}
 ","The date of birth.","The date of birth.","","","","","","","","","",,,,,"",,,,"AppleHealthKitHealthStoreCharacteristic.dateOfBirth",0,1,"",""
 "AppleHealthKitObject","AppleHealthKitObject","AppleHealthKitObject","","","",0,*,"","","","null {[]} {[]}
@@ -510,7 +510,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "AppleHealthKitQuantitySample","AppleHealthKitQuantitySample.hasUndeterminedDuration","AppleHealthKitQuantitySample.hasUndeterminedDuration","","","",0,1,"","","","boolean {[]} {[]}
 ","Indicates whether the sample has an unknown duration.","Indicates whether the sample has an unknown duration.","","","","","","","","","",,,,,"",,,,"AppleHealthKitSample.hasUndeterminedDuration",0,1,"",""
 "AppleHealthKitQuantitySample","AppleHealthKitQuantitySample.sampleType","AppleHealthKitQuantitySample.sampleType","","","",1,1,"","","","code {[]} {[]}
-","The sample type.","The sample type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-sample-type-value-set","",,,,"AppleHealthKitSample.sampleType",1,1,"",""
+","The sample type.","The sample type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-sample-type-value-set","",,,,"AppleHealthKitSample.sampleType",1,1,"",""
 "AppleHealthKitQuantitySample","AppleHealthKitQuantitySample.quantity","AppleHealthKitQuantitySample.quantity","","","",1,1,"","","","BackboneElement {[]} {[]}
 ","The quantity for this sample.","The quantity for this sample.","","","","","","","","","",,,,,"",,,,"AppleHealthKitQuantitySample.quantity",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -534,7 +534,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "AppleHealthKitQuantitySample","AppleHealthKitQuantitySample.count","AppleHealthKitQuantitySample.count","","","",0,1,"","","","integer {[]} {[]}
 ","The number of quantities contained in this sample.","The number of quantities contained in this sample.","","","","","","","","","",,,,,"",,,,"AppleHealthKitQuantitySample.count",0,1,"",""
 "AppleHealthKitQuantitySample","AppleHealthKitQuantitySample.quantityType","AppleHealthKitQuantitySample.quantityType","","","",1,1,"","","","code {[]} {[]}
-","The quantity type for this sample.","The quantity type for this sample.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-quantity-type-value-set","",,,,"AppleHealthKitQuantitySample.quantityType",1,1,"",""
+","The quantity type for this sample.","The quantity type for this sample.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-quantity-type-value-set","",,,,"AppleHealthKitQuantitySample.quantityType",1,1,"",""
 "AppleHealthKitSample","AppleHealthKitSample","AppleHealthKitSample","","","",0,*,"","","","null {[]} {[]}
 ","Apple HealthKit Sample Logical Model","Data elements for the Apple HealthKit HKSample.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "AppleHealthKitSample","AppleHealthKitSample.uuid","AppleHealthKitSample.uuid","","","",1,1,"","","","string {[]} {[]}
@@ -660,7 +660,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "AppleHealthKitSample","AppleHealthKitSample.hasUndeterminedDuration","AppleHealthKitSample.hasUndeterminedDuration","","","",0,1,"","","","boolean {[]} {[]}
 ","Indicates whether the sample has an unknown duration.","Indicates whether the sample has an unknown duration.","","","","","","","","","",,,,,"",,,,"AppleHealthKitSample.hasUndeterminedDuration",0,1,"",""
 "AppleHealthKitSample","AppleHealthKitSample.sampleType","AppleHealthKitSample.sampleType","","","",1,1,"","","","code {[]} {[]}
-","The sample type.","The sample type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-sample-type-value-set","",,,,"AppleHealthKitSample.sampleType",1,1,"",""
+","The sample type.","The sample type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-sample-type-value-set","",,,,"AppleHealthKitSample.sampleType",1,1,"",""
 "AppleHealthKitWorkoutActivity","AppleHealthKitWorkoutActivity","AppleHealthKitWorkoutActivity","","","",0,*,"","","","null {[]} {[]}
 ","Apple HealthKit Workout Activity Logical Model","Data elements for the Apple HealthKit HKWorkoutActivity.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "AppleHealthKitWorkoutActivity","AppleHealthKitWorkoutActivity.uuid","AppleHealthKitWorkoutActivity.uuid","","","",1,1,"","","","string {[]} {[]}
@@ -785,7 +785,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Workout Activity end datetime.","The Workout Activity end datetime.","","","","","","","","","",,,,,"",,,,"AppleHealthKitWorkoutActivity.endDate",0,1,"",""
 "AppleHealthKitWorkoutActivity","AppleHealthKitWorkoutActivity.duration","AppleHealthKitWorkoutActivity.duration","","","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/organization-period]]} {[]}
 ","Workout Activity duration","Workout Activity duration may be derived from endDate - startDate.","","","","","","","","","",,,,,"",,,,"AppleHealthKitWorkoutActivity.duration",0,1,"",""
-"AppleHealthKitWorkoutActivity","AppleHealthKitWorkoutActivity.workoutEvents","AppleHealthKitWorkoutActivity.workoutEvents","","","",0,*,"","","","http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutEvent {[]} {[]}
+"AppleHealthKitWorkoutActivity","AppleHealthKitWorkoutActivity.workoutEvents","AppleHealthKitWorkoutActivity.workoutEvents","","","",0,*,"","","","http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitWorkoutEvent {[]} {[]}
 ","Associated Workout Events.","Associated Workout Events.","","","","","","","","","",,,,,"",,,,"AppleHealthKitWorkoutActivity.workoutEvents",0,*,"",""
 "AppleHealthKitWorkoutEvent","AppleHealthKitWorkoutEvent","AppleHealthKitWorkoutEvent","","","",0,*,"","","","null {[]} {[]}
 ","Apple HealthKit Workout Event Logical Model","Data elements for the Apple HealthKit HKWorkoutEvent.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
@@ -814,7 +814,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "AppleHealthKitWorkoutEvent","AppleHealthKitWorkoutEvent.dateInterval.duration","AppleHealthKitWorkoutEvent.dateInterval.duration","","","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/organization-period]]} {[]}
 ","The dateInterval's duration.","The dateInterval's duration.","","","","","","","","","",,,,,"",,,,"AppleHealthKitWorkoutEvent.dateInterval.duration",0,1,"",""
 "AppleHealthKitWorkoutEvent","AppleHealthKitWorkoutEvent.type","AppleHealthKitWorkoutEvent.type","","","",1,1,"","","","code {[]} {[]}
-","The workout event type.","The workout event type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-workout-event-type-value-set","",,,,"AppleHealthKitWorkoutEvent.type",1,1,"",""
+","The workout event type.","The workout event type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-workout-event-type-value-set","",,,,"AppleHealthKitWorkoutEvent.type",1,1,"",""
 "AppleHealthKitWorkoutSample","AppleHealthKitWorkoutSample","AppleHealthKitWorkoutSample","","","",0,*,"","","","null {[]} {[]}
 ","Apple HealthKit Workout Sample Logical Model","Data elements for the Apple HealthKit HKWorkout.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "AppleHealthKitWorkoutSample","AppleHealthKitWorkoutSample.uuid","AppleHealthKitWorkoutSample.uuid","","","",1,1,"","","","string {[]} {[]}
@@ -940,14 +940,14 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "AppleHealthKitWorkoutSample","AppleHealthKitWorkoutSample.hasUndeterminedDuration","AppleHealthKitWorkoutSample.hasUndeterminedDuration","","","",0,1,"","","","boolean {[]} {[]}
 ","Indicates whether the sample has an unknown duration.","Indicates whether the sample has an unknown duration.","","","","","","","","","",,,,,"",,,,"AppleHealthKitSample.hasUndeterminedDuration",0,1,"",""
 "AppleHealthKitWorkoutSample","AppleHealthKitWorkoutSample.sampleType","AppleHealthKitWorkoutSample.sampleType","","","",1,1,"","","","code {[]} {[]}
-","The sample type.","The sample type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-sample-type-value-set","",,,,"AppleHealthKitSample.sampleType",1,1,"",""
+","The sample type.","The sample type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-sample-type-value-set","",,,,"AppleHealthKitSample.sampleType",1,1,"",""
 "AppleHealthKitWorkoutSample","AppleHealthKitWorkoutSample.duration","AppleHealthKitWorkoutSample.duration","","","",0,1,"","","","decimal {[]} {[]}
 ","The workout duration in number of seconds.","The workout duration in number of seconds.","","","","","","","","","",,,,,"",,,,"AppleHealthKitWorkoutSample.duration",0,1,"",""
 "AppleHealthKitWorkoutSample","AppleHealthKitWorkoutSample.workoutActivityType","AppleHealthKitWorkoutSample.workoutActivityType","","","",0,1,"","","","code {[]} {[]}
-","The sample's workout activity type.","When HKSample is an HKWorkoutActivity, the corresponding workoutActivityType.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-workout-activity-type-value-set","",,,,"AppleHealthKitWorkoutSample.workoutActivityType",0,1,"",""
-"AppleHealthKitWorkoutSample","AppleHealthKitWorkoutSample.workoutActivities","AppleHealthKitWorkoutSample.workoutActivities","","","",0,*,"","","","http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutActivity {[]} {[]}
+","The sample's workout activity type.","When HKSample is an HKWorkoutActivity, the corresponding workoutActivityType.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-workout-activity-type-value-set","",,,,"AppleHealthKitWorkoutSample.workoutActivityType",0,1,"",""
+"AppleHealthKitWorkoutSample","AppleHealthKitWorkoutSample.workoutActivities","AppleHealthKitWorkoutSample.workoutActivities","","","",0,*,"","","","http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitWorkoutActivity {[]} {[]}
 ","The sample's workout activities.","The sample's workout activities.","","","","","","","","","",,,,,"",,,,"AppleHealthKitWorkoutSample.workoutActivities",0,*,"",""
-"AppleHealthKitWorkoutSample","AppleHealthKitWorkoutSample.workoutEvents","AppleHealthKitWorkoutSample.workoutEvents","","","",0,*,"","","","http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutEvent {[]} {[]}
+"AppleHealthKitWorkoutSample","AppleHealthKitWorkoutSample.workoutEvents","AppleHealthKitWorkoutSample.workoutEvents","","","",0,*,"","","","http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitWorkoutEvent {[]} {[]}
 ","The sample's workout events.","The sample's workout events, in agreement with workoutActivities.","","","","","","","","","",,,,,"",,,,"AppleHealthKitWorkoutSample.workoutEvents",0,*,"",""
 "Environmental","Environmental","Environmental","","","",0,*,"","","","null {[]} {[]}
 ","Environmental","Standard PHR profile of the Environmental resource.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
@@ -2679,7 +2679,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "
 "pcd-sleep-observation","Observation.code","Observation.code","","Name
 ","",1,1,"","","Y","CodeableConcept {[]} {[]}
-","Type of observation (code / type)","Describes what was observed. Sometimes this is called the observation ""name"".","*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.","Knowing what kind of observation is being made is essential to understanding the observation.","","","","","","","",,"required","","http://hl7.org/fhir/uv/sphr/ValueSet/pcd-sleep-observation-code","",,,,"Observation.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Type of observation (code / type)","Describes what was observed. Sometimes this is called the observation ""name"".","*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.","Knowing what kind of observation is being made is essential to understanding the observation.","","","","","","","",,"required","","http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code","",,,,"Observation.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "pcd-sleep-observation","Observation.subject","Observation.subject","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Group], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device], CanonicalType[http://hl7.org/fhir/StructureDefinition/Location]]}
 ","Who and/or what the observation is about","The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation.","One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.","Observations have no value if you don't know who or what they're about.","","","","","","","",,,,,"",,,,"Observation.subject",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

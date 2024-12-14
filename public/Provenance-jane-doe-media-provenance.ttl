@@ -5,13 +5,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/uv/sphr/Provenance/jane-doe-media-provenance> a fhir:Provenance ;
+<http://hl7.org/fhir/uv/phr/Provenance/jane-doe-media-provenance> a fhir:Provenance ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "jane-doe-media-provenance"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrProvenance"^^xsd:anyURI ;
-       fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrProvenance>
+       fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance>
      ] )
   ] ; # 
   fhir:text [
@@ -19,7 +19,7 @@
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance jane-doe-media-provenance</b></p><a name=\"jane-doe-media-provenance\"> </a><a name=\"hcjane-doe-media-provenance\"> </a><a name=\"jane-doe-media-provenance-en-US\"> </a><p>Provenance for <a href=\"Media-jane-doe-media.html\">Media: status = completed; type = Photograph; created[x] = 2024-12-11 05:22:27+0000</a></p><p>Summary</p><table class=\"grid\"><tr><td>Recorded</td><td>2024-12-11 06:00:00+0000</td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>who</b></td><td><b>On Behalf Of</b></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type author}\">Author</span></td><td><a href=\"Patient-jane-doe.html\">Jane Doe (official) Female, DoB: 1985-05-15 ( http://hospital.example.org/patient#12345)</a></td><td><a href=\"Patient-jane-doe.html\">Jane Doe (official) Female, DoB: 1985-05-15 ( http://hospital.example.org/patient#12345)</a></td></tr></table></div>"
   ] ; # 
   fhir:target ( [
-     fhir:link <http://hl7.org/fhir/uv/sphr/Media/jane-doe-media> ;
+     fhir:link <http://hl7.org/fhir/uv/phr/Media/jane-doe-media> ;
      fhir:reference [ fhir:v "Media/jane-doe-media" ]
   ] ) ; # 
   fhir:recorded [ fhir:v "2024-12-11T06:00:00Z"^^xsd:dateTime] ; # 
@@ -32,11 +32,11 @@
        ] )
      ] ;
      fhir:who [
-       fhir:link <http://hl7.org/fhir/uv/sphr/Patient/jane-doe> ;
+       fhir:link <http://hl7.org/fhir/uv/phr/Patient/jane-doe> ;
        fhir:reference [ fhir:v "Patient/jane-doe" ]
      ] ;
      fhir:onBehalfOf [
-       fhir:link <http://hl7.org/fhir/uv/sphr/Patient/jane-doe> ;
+       fhir:link <http://hl7.org/fhir/uv/phr/Patient/jane-doe> ;
        fhir:reference [ fhir:v "Patient/jane-doe" ]
      ]
   ] ) ; # 
@@ -48,15 +48,15 @@
      ] ) ;
      fhir:when [ fhir:v "2024-12-11T06:00:00Z"^^xsd:dateTime ] ;
      fhir:who [
-       fhir:link <http://hl7.org/fhir/uv/sphr/Patient/jane-doe> ;
+       fhir:link <http://hl7.org/fhir/uv/phr/Patient/jane-doe> ;
        fhir:reference [ fhir:v "Patient/jane-doe" ]
      ] ;
      fhir:data [ fhir:v "c2lnbmF0dXJlCg=="^^xsd:base64Binary ]
   ] ) . # 
 
-<http://hl7.org/fhir/uv/sphr/Media/jane-doe-media> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/Media/jane-doe-media> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/Patient/jane-doe> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/Patient/jane-doe> a fhir:uv .
 
 # -------------------------------------------------------------------------------------
 

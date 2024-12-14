@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="hl7.fhir.uv.sphr"/>
+  <id value="hl7.fhir.uv.phr"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide hl7.fhir.uv.sphr</b></p><a name="hl7.fhir.uv.sphr"> </a><a name="hchl7.fhir.uv.sphr"> </a><a name="hl7.fhir.uv.sphr-en-US"> </a><h2>StandardPatientHealthRecordIG</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/uv/sphr/ImplementationGuide/hl7.fhir.uv.sphr</pre></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide hl7.fhir.uv.phr</b></p><a name="hl7.fhir.uv.phr"> </a><a name="hchl7.fhir.uv.phr"> </a><a name="hl7.fhir.uv.phr-en-US"> </a><h2>PatientHealthRecordsIG</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr</pre><div><p>Guidance on how to create longitudinal personal health records using FHIR.  Exporting, file formats, patient examples, and more.</p>
+</div></div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pe"/>
   </extension>
-  <url value="http://hl7.org/fhir/uv/sphr/ImplementationGuide/hl7.fhir.uv.sphr"/>
+  <url value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
   <version value="1.0.0-ballot"/>
-  <name value="StandardPatientHealthRecordIG"/>
+  <name value="PatientHealthRecordsIG"/>
+  <title value="Personal Health Records"/>
   <status value="draft"/>
-  <date value="2024-12-11T01:07:49-06:00"/>
+  <date value="2024-12-13T21:36:12-06:00"/>
   <publisher value="HL7 International / Patient Empowerment"/>
   <contact>
     <name value="HL7 International / Patient Empowerment"/>
@@ -21,6 +23,7 @@
       <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
     </telecom>
   </contact>
+  <description value="Guidance on how to create longitudinal personal health records using FHIR.  Exporting, file formats, patient examples, and more."/>
   <jurisdiction>
     <coding>
       <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -28,7 +31,7 @@
       <display value="World"/>
     </coding>
   </jurisdiction>
-  <packageId value="hl7.fhir.uv.sphr"/>
+  <packageId value="hl7.fhir.uv.phr"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
   <dependsOn id="hl7tx">
@@ -69,7 +72,7 @@
         <valueString value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="http://hl7.org/fhir/uv/sphr/history.html"/>
+        <valueString value="http://hl7.org/fhir/uv/phr/history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -272,7 +275,7 @@
         <valueCode value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="http://hl7.org/fhir/uv/sphr/history.html"/>
+        <valueString value="http://hl7.org/fhir/uv/phr/history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -746,7 +749,7 @@
       </reference>
       <name value="Example Patient: Jane Doe"/>
       <description value="A sample patient resource for Jane Doe."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrPatient"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -757,7 +760,7 @@
       </reference>
       <name value="Jane Doe Composition"/>
       <description value="A minimal narrative composition for Jane Doe's patient data."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrComposition"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/PhrComposition"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -768,7 +771,7 @@
       </reference>
       <name value="Jane Doe PDF Report"/>
       <description value="A PDF genomics report for Jane Doe regarding celiac disease."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrDocumentReference"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/PhrDocumentReference"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -779,7 +782,7 @@
       </reference>
       <name value="Jane Doe Smartphone Photo"/>
       <description value="A JPEG photo taken from Jane Doe's smartphone."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrMedia"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/PhrMedia"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -834,7 +837,7 @@
       </reference>
       <name value="PCDSleepObservation-duration-example"/>
       <description value="Example - pcd-sleep-observation duration"/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/sphr/StructureDefinition/pcd-sleep-observation"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -845,7 +848,7 @@
       </reference>
       <name value="PCDSleepObservation-stage-example"/>
       <description value="Example - pcd-sleep-observation stage"/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/sphr/StructureDefinition/pcd-sleep-observation"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -867,7 +870,7 @@
       </reference>
       <name value="PhrBundle-example"/>
       <description value="PhrBundle Example"/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrBundle"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -933,7 +936,7 @@
       </reference>
       <name value="Provenance for Jane Doe's Smartphone Photo"/>
       <description value="Self-attested provenance record for Jane Doe's smartphone photo."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrProvenance"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

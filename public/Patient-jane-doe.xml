@@ -3,7 +3,7 @@
 <Patient xmlns="http://hl7.org/fhir">
   <id value="jane-doe"/>
   <meta>
-    <profile value="http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrPatient"/>
+    <profile value="http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Jane Doe Example</p></div>

@@ -9,13 +9,13 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
     "valueCode" : "pe"
   }],
-  "url" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/NutrientOuttake",
+  "url" : "http://hl7.org/fhir/uv/phr/StructureDefinition/NutrientOuttake",
   "version" : "1.0.0-ballot",
   "name" : "NutrientOuttake",
   "title" : "Nutrient Outtake",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2024-12-11T01:07:49-06:00",
+  "date" : "2024-12-13T21:36:12-06:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [{
     "name" : "HL7 International / Patient Empowerment",
@@ -40,7 +40,7 @@
   }],
   "kind" : "logical",
   "abstract" : false,
-  "type" : "http://hl7.org/fhir/uv/sphr/StructureDefinition/NutrientOuttake",
+  "type" : "http://hl7.org/fhir/uv/phr/StructureDefinition/NutrientOuttake",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/DomainResource",
   "derivation" : "specialization",
   "snapshot" : {

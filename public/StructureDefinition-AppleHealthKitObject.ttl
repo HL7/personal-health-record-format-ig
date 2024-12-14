@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitObject> a fhir:StructureDefinition ;
+<http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitObject> a fhir:StructureDefinition ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "AppleHealthKitObject"] ; # 
   fhir:text [
@@ -16,13 +16,13 @@
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "pe" ]
   ] ) ; # 
-  fhir:url [ fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitObject"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitObject"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "1.0.0-ballot"] ; # 
   fhir:name [ fhir:v "AppleHealthKitObject"] ; # 
   fhir:title [ fhir:v "Apple HealthKit Object Logical Model"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2024-12-11T01:07:49-06:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-13T21:36:12-06:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
@@ -42,7 +42,7 @@
   fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
   fhir:kind [ fhir:v "logical"] ; # 
   fhir:abstract [ fhir:v "true"^^xsd:boolean] ; # 
-  fhir:type [ fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitObject"^^xsd:anyURI] ; # 
+  fhir:type [ fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitObject"^^xsd:anyURI] ; # 
   fhir:baseDefinition [
      fhir:v "http://hl7.org/fhir/StructureDefinition/Base"^^xsd:anyURI ;
      fhir:link <http://hl7.org/fhir/StructureDefinition/Base>

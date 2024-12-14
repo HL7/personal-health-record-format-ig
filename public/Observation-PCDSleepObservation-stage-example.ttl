@@ -6,13 +6,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/uv/sphr/Observation/PCDSleepObservation-stage-example> a fhir:Observation ;
+<http://hl7.org/fhir/uv/phr/Observation/PCDSleepObservation-stage-example> a fhir:Observation ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "PCDSleepObservation-stage-example"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/pcd-sleep-observation"^^xsd:anyURI ;
-       fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/pcd-sleep-observation>
+       fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation>
      ] )
   ] ; # 
   fhir:text [

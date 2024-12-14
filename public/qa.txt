@@ -1,9 +1,9 @@
-StandardPatientHealthRecordIG : Validation Results
+PatientHealthRecordsIG : Validation Results
 =========================================
 
-err = 0, warn = 1, info = 11
+err = 0, warn = 1, info = 0
 IG Publisher Version: 1.8.1
-Generated Wed Dec 11 01:08:46 CST 2024. FHIR version 4.0.1 for hl7.fhir.uv.sphr#1.0.0-ballot (canonical = http://hl7.org/fhir/uv/sphr)
+Generated Fri Dec 13 21:37:16 CST 2024. FHIR version 4.0.1 for hl7.fhir.uv.phr#1.0.0-ballot (canonical = http://hl7.org/fhir/uv/phr)
  Build Errors : 0 / 1 / 0
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Bundle-PhrBundle-example : 0 / 0 / 14
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-apple-health-kit-biological-sex-code-system : 0 / 0 / 2
@@ -16,7 +16,7 @@ Generated Wed Dec 11 01:08:46 CST 2024. FHIR version 4.0.1 for hl7.fhir.uv.sphr#
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-apple-health-kit-workout-event-type-code-system : 0 / 0 / 2
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Composition-jane-doe-composition : 0 / 0 / 1
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/DocumentReference-jane-doe-genomics-document : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/ImplementationGuide-hl7.fhir.uv.sphr : 0 / 0 / 1
+ /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/ImplementationGuide-hl7.fhir.uv.phr : 0 / 0 / 1
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Media-jane-doe-media : 0 / 0 / 1
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Observation-PCDSleepObservation-duration-example : 0 / 0 / 1
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Observation-PCDSleepObservation-stage-example : 0 / 0 / 1
@@ -57,28 +57,17 @@ Generated Wed Dec 11 01:08:46 CST 2024. FHIR version 4.0.1 for hl7.fhir.uv.sphr#
 == n/a ==
 WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content)
 == fsh-generated/resources/Bundle-PhrBundle-example.json ==
-INFORMATION: Bundle/PhrBundle-example: Bundle: Can't find 'http://hospital.example.org/Practitioner/123' in the bundle (Bundle.entry[2].resource.author[0])
-INFORMATION: Bundle/PhrBundle-example: Bundle: Can't find 'http://hospital.example.org/reports/jane-doe-genomics.pdf' in the bundle (Bundle.entry[2].resource.content[0].attachment.url)
-INFORMATION: Bundle/PhrBundle-example: Bundle: Can't find 'http://hospital.example.org/media/jane-doe-smartphone-photo.jpg' in the bundle (Bundle.entry[3].resource.content.url)
 == fsh-generated/resources/CodeSystem-apple-health-kit-biological-sex-code-system.json ==
-INFORMATION: CodeSystem/apple-health-kit-biological-sex-code-system: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 == fsh-generated/resources/CodeSystem-apple-health-kit-category-type-code-system.json ==
-INFORMATION: CodeSystem/apple-health-kit-category-type-code-system: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 == fsh-generated/resources/CodeSystem-apple-health-kit-characteristic-type-code-system.json ==
-INFORMATION: CodeSystem/apple-health-kit-characteristic-type-code-system: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 == fsh-generated/resources/CodeSystem-apple-health-kit-correlation-type-code-system.json ==
-INFORMATION: CodeSystem/apple-health-kit-correlation-type-code-system: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 == fsh-generated/resources/CodeSystem-apple-health-kit-quantity-type-code-system.json ==
-INFORMATION: CodeSystem/apple-health-kit-quantity-type-code-system: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 == fsh-generated/resources/CodeSystem-apple-health-kit-sample-type-code-system.json ==
-INFORMATION: CodeSystem/apple-health-kit-sample-type-code-system: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 == fsh-generated/resources/CodeSystem-apple-health-kit-workout-activity-type-code-system.json ==
-INFORMATION: CodeSystem/apple-health-kit-workout-activity-type-code-system: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 == fsh-generated/resources/CodeSystem-apple-health-kit-workout-event-type-code-system.json ==
-INFORMATION: CodeSystem/apple-health-kit-workout-event-type-code-system: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 == fsh-generated/resources/Composition-jane-doe-composition.json ==
 == fsh-generated/resources/DocumentReference-jane-doe-genomics-document.json ==
-== fsh-generated/resources/ImplementationGuide-hl7.fhir.uv.sphr.json ==
+== fsh-generated/resources/ImplementationGuide-hl7.fhir.uv.phr.json ==
 == fsh-generated/resources/Media-jane-doe-media.json ==
 == fsh-generated/resources/Observation-PCDSleepObservation-duration-example.json ==
 == fsh-generated/resources/Observation-PCDSleepObservation-stage-example.json ==

@@ -3,11 +3,11 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.uv.sphr
-canonical: http://hl7.org/fhir/uv/sphr
-name: StandardPatientHealthRecordIG
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
+id: hl7.fhir.uv.phr
+canonical: http://hl7.org/fhir/uv/phr
+name: PatientHealthRecordsIG
+title: Personal Health Records
+description: Guidance on how to create longitudinal personal health records using FHIR.  Exporting, file formats, patient examples, and more.
 status: draft # draft | active | retired | unknown
 version: 1.0.0-ballot
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html

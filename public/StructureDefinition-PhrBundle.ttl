@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrBundle> a fhir:StructureDefinition ;
+<http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle> a fhir:StructureDefinition ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "PhrBundle"] ; # 
   fhir:text [
@@ -16,11 +16,11 @@
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "pe" ]
   ] ) ; # 
-  fhir:url [ fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrBundle"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "1.0.0-ballot"] ; # 
   fhir:name [ fhir:v "PhrBundle"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-11T01:07:49-06:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-13T21:36:12-06:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;

@@ -2,8 +2,8 @@
 "AppleHealthKitHealthStoreCharacteristic","AppleHealthKitHealthStoreCharacteristic","","","",0,*,"","","","null {[]} {[]}
 ","Apple HealthKit HealthStore Characteristic Logical Model","Relevant Data elements that correspond to the CharacteristicType stored in Apple HealthStore.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "AppleHealthKitHealthStoreCharacteristic.characteristicType","AppleHealthKitHealthStoreCharacteristic.characteristicType","","","",1,1,"","","","code {[]} {[]}
-","The characteristic type.","The characteristic type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-characteristic-type-value-set","",,,,"AppleHealthKitHealthStoreCharacteristic.characteristicType",1,1,"",""
+","The characteristic type.","The characteristic type.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-characteristic-type-value-set","",,,,"AppleHealthKitHealthStoreCharacteristic.characteristicType",1,1,"",""
 "AppleHealthKitHealthStoreCharacteristic.biologicalSex","AppleHealthKitHealthStoreCharacteristic.biologicalSex","","","",0,1,"","","","code {[]} {[]}
-","The biological sex.","The biological sex.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-biological-sex-value-set","",,,,"AppleHealthKitHealthStoreCharacteristic.biologicalSex",0,1,"",""
+","The biological sex.","The biological sex.","","","","","","","","","",,"extensible","","http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-biological-sex-value-set","",,,,"AppleHealthKitHealthStoreCharacteristic.biologicalSex",0,1,"",""
 "AppleHealthKitHealthStoreCharacteristic.dateOfBirth","AppleHealthKitHealthStoreCharacteristic.dateOfBirth","","","",0,1,"","","","date {[]} {[]}
 ","The date of birth.","The date of birth.","","","","","","","","","",,,,,"",,,,"AppleHealthKitHealthStoreCharacteristic.dateOfBirth",0,1,"",""

@@ -5,22 +5,23 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/uv/sphr/ImplementationGuide/hl7.fhir.uv.sphr> a fhir:ImplementationGuide ;
+<http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr> a fhir:ImplementationGuide ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "hl7.fhir.uv.sphr"] ; # 
+  fhir:id [ fhir:v "hl7.fhir.uv.phr"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.uv.sphr</b></p><a name=\"hl7.fhir.uv.sphr\"> </a><a name=\"hchl7.fhir.uv.sphr\"> </a><a name=\"hl7.fhir.uv.sphr-en-US\"> </a><h2>StandardPatientHealthRecordIG</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/uv/sphr/ImplementationGuide/hl7.fhir.uv.sphr</pre></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.uv.phr</b></p><a name=\"hl7.fhir.uv.phr\"> </a><a name=\"hchl7.fhir.uv.phr\"> </a><a name=\"hl7.fhir.uv.phr-en-US\"> </a><h2>PatientHealthRecordsIG</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr</pre><div><p>Guidance on how to create longitudinal personal health records using FHIR.  Exporting, file formats, patient examples, and more.</p>\n</div></div>"
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "pe" ]
   ] ) ; # 
-  fhir:url [ fhir:v "http://hl7.org/fhir/uv/sphr/ImplementationGuide/hl7.fhir.uv.sphr"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "1.0.0-ballot"] ; # 
-  fhir:name [ fhir:v "StandardPatientHealthRecordIG"] ; # 
+  fhir:name [ fhir:v "PatientHealthRecordsIG"] ; # 
+  fhir:title [ fhir:v "Personal Health Records"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-11T01:07:49-06:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-13T21:36:12-06:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
@@ -29,6 +30,7 @@
        fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientempowerment" ]
      ] )
   ] ) ; # 
+  fhir:description [ fhir:v "Guidance on how to create longitudinal personal health records using FHIR.  Exporting, file formats, patient examples, and more."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
@@ -36,7 +38,7 @@
        fhir:display [ fhir:v "World" ]
      ] )
   ] ) ; # 
-  fhir:packageId [ fhir:v "hl7.fhir.uv.sphr"] ; # 
+  fhir:packageId [ fhir:v "hl7.fhir.uv.phr"] ; # 
   fhir:license [ fhir:v "CC0-1.0"] ; # 
   fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
   fhir:dependsOn ( [
@@ -89,7 +91,7 @@
          fhir:value [ fhir:v "path-history" ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "http://hl7.org/fhir/uv/sphr/history.html" ]
+         fhir:value [ fhir:v "http://hl7.org/fhir/uv/phr/history.html" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
@@ -317,7 +319,7 @@
          fhir:value [ fhir:v "path-history" ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "http://hl7.org/fhir/uv/sphr/history.html" ]
+         fhir:value [ fhir:v "http://hl7.org/fhir/uv/phr/history.html" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
@@ -525,7 +527,7 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-biological-sex-code-system> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-biological-sex-code-system> ;
          fhir:reference [ fhir:v "CodeSystem/apple-health-kit-biological-sex-code-system" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Biological Sex Code System" ] ;
@@ -537,7 +539,7 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-biological-sex-value-set> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-biological-sex-value-set> ;
          fhir:reference [ fhir:v "ValueSet/apple-health-kit-biological-sex-value-set" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Biological Sex Value Set" ] ;
@@ -549,7 +551,7 @@
          fhir:value [ fhir:v "StructureDefinition:logical" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitCategorySample> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitCategorySample> ;
          fhir:reference [ fhir:v "StructureDefinition/AppleHealthKitCategorySample" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Category Sample Logical Model" ] ;
@@ -561,7 +563,7 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-category-type-code-system> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-category-type-code-system> ;
          fhir:reference [ fhir:v "CodeSystem/apple-health-kit-category-type-code-system" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Category Type Code System" ] ;
@@ -573,7 +575,7 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-category-type-value-set> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-category-type-value-set> ;
          fhir:reference [ fhir:v "ValueSet/apple-health-kit-category-type-value-set" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Category Type Value Set" ] ;
@@ -585,7 +587,7 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-characteristic-type-code-system> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-characteristic-type-code-system> ;
          fhir:reference [ fhir:v "CodeSystem/apple-health-kit-characteristic-type-code-system" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Characteristic Type Code System" ] ;
@@ -597,7 +599,7 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-characteristic-type-value-set> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-characteristic-type-value-set> ;
          fhir:reference [ fhir:v "ValueSet/apple-health-kit-characteristic-type-value-set" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Charactersitic Type Value Set" ] ;
@@ -609,7 +611,7 @@
          fhir:value [ fhir:v "StructureDefinition:logical" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitCorrelationSample> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitCorrelationSample> ;
          fhir:reference [ fhir:v "StructureDefinition/AppleHealthKitCorrelationSample" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Correlation Sample Logical Model" ] ;
@@ -621,7 +623,7 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-correlation-type-code-system> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-correlation-type-code-system> ;
          fhir:reference [ fhir:v "CodeSystem/apple-health-kit-correlation-type-code-system" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Correlation Type Code System" ] ;
@@ -633,7 +635,7 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-correlation-type-value-set> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-correlation-type-value-set> ;
          fhir:reference [ fhir:v "ValueSet/apple-health-kit-correlation-type-value-set" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Correlation Type Value Set" ] ;
@@ -645,7 +647,7 @@
          fhir:value [ fhir:v "StructureDefinition:logical" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitHealthStoreCharacteristic> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitHealthStoreCharacteristic> ;
          fhir:reference [ fhir:v "StructureDefinition/AppleHealthKitHealthStoreCharacteristic" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit HealthStore Characteristic Logical Model" ] ;
@@ -657,7 +659,7 @@
          fhir:value [ fhir:v "StructureDefinition:logical:abstract" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitObject> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitObject> ;
          fhir:reference [ fhir:v "StructureDefinition/AppleHealthKitObject" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Object Logical Model" ] ;
@@ -669,7 +671,7 @@
          fhir:value [ fhir:v "StructureDefinition:logical" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitQuantitySample> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitQuantitySample> ;
          fhir:reference [ fhir:v "StructureDefinition/AppleHealthKitQuantitySample" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Quantity Sample Logical Model" ] ;
@@ -681,7 +683,7 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-quantity-type-code-system> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-quantity-type-code-system> ;
          fhir:reference [ fhir:v "CodeSystem/apple-health-kit-quantity-type-code-system" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Quantity Type Code System" ] ;
@@ -693,7 +695,7 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-quantity-type-value-set> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-quantity-type-value-set> ;
          fhir:reference [ fhir:v "ValueSet/apple-health-kit-quantity-type-value-set" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Quantity Type Value Set" ] ;
@@ -705,7 +707,7 @@
          fhir:value [ fhir:v "StructureDefinition:logical:abstract" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitSample> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitSample> ;
          fhir:reference [ fhir:v "StructureDefinition/AppleHealthKitSample" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Sample Logical Model" ] ;
@@ -717,7 +719,7 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-sample-type-code-system> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-sample-type-code-system> ;
          fhir:reference [ fhir:v "CodeSystem/apple-health-kit-sample-type-code-system" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Sample Type Code System" ] ;
@@ -729,7 +731,7 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-sample-type-value-set> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-sample-type-value-set> ;
          fhir:reference [ fhir:v "ValueSet/apple-health-kit-sample-type-value-set" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Sample Type Value Set" ] ;
@@ -741,7 +743,7 @@
          fhir:value [ fhir:v "StructureDefinition:logical" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutActivity> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitWorkoutActivity> ;
          fhir:reference [ fhir:v "StructureDefinition/AppleHealthKitWorkoutActivity" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Workout Activity Logical Model" ] ;
@@ -753,7 +755,7 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-workout-activity-type-code-system> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-workout-activity-type-code-system> ;
          fhir:reference [ fhir:v "CodeSystem/apple-health-kit-workout-activity-type-code-system" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Workout Activity Type Code System" ] ;
@@ -765,7 +767,7 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-workout-activity-type-value-set> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-workout-activity-type-value-set> ;
          fhir:reference [ fhir:v "ValueSet/apple-health-kit-workout-activity-type-value-set" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Workout Activity Type Value Set" ] ;
@@ -777,7 +779,7 @@
          fhir:value [ fhir:v "StructureDefinition:logical" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutEvent> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitWorkoutEvent> ;
          fhir:reference [ fhir:v "StructureDefinition/AppleHealthKitWorkoutEvent" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Workout Event Logical Model" ] ;
@@ -789,7 +791,7 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-workout-event-type-code-system> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-workout-event-type-code-system> ;
          fhir:reference [ fhir:v "CodeSystem/apple-health-kit-workout-event-type-code-system" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Workout Event Type Code System" ] ;
@@ -801,7 +803,7 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-workout-event-type-value-set> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-workout-event-type-value-set> ;
          fhir:reference [ fhir:v "ValueSet/apple-health-kit-workout-event-type-value-set" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Workout Event Type Value Set" ] ;
@@ -813,7 +815,7 @@
          fhir:value [ fhir:v "StructureDefinition:logical" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutSample> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitWorkoutSample> ;
          fhir:reference [ fhir:v "StructureDefinition/AppleHealthKitWorkoutSample" ]
        ] ;
        fhir:name [ fhir:v "Apple HealthKit Workout Sample Logical Model" ] ;
@@ -825,7 +827,7 @@
          fhir:value [ fhir:v "StructureDefinition:logical" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/Environmental> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/Environmental> ;
          fhir:reference [ fhir:v "StructureDefinition/Environmental" ]
        ] ;
        fhir:name [ fhir:v "Environmental" ] ;
@@ -837,14 +839,14 @@
          fhir:value [ fhir:v "Patient" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/Patient/jane-doe> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/Patient/jane-doe> ;
          fhir:reference [ fhir:v "Patient/jane-doe" ]
        ] ;
        fhir:name [ fhir:v "Example Patient: Jane Doe" ] ;
        fhir:description [ fhir:v "A sample patient resource for Jane Doe." ] ;
        fhir:example [
-         fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrPatient"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrPatient>
+         fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient>
        ]
      ] [
        fhir:extension ( [
@@ -852,14 +854,14 @@
          fhir:value [ fhir:v "Composition" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/Composition/jane-doe-composition> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/Composition/jane-doe-composition> ;
          fhir:reference [ fhir:v "Composition/jane-doe-composition" ]
        ] ;
        fhir:name [ fhir:v "Jane Doe Composition" ] ;
        fhir:description [ fhir:v "A minimal narrative composition for Jane Doe's patient data." ] ;
        fhir:example [
-         fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrComposition"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrComposition>
+         fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrComposition"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrComposition>
        ]
      ] [
        fhir:extension ( [
@@ -867,14 +869,14 @@
          fhir:value [ fhir:v "DocumentReference" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/DocumentReference/jane-doe-genomics-document> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/DocumentReference/jane-doe-genomics-document> ;
          fhir:reference [ fhir:v "DocumentReference/jane-doe-genomics-document" ]
        ] ;
        fhir:name [ fhir:v "Jane Doe PDF Report" ] ;
        fhir:description [ fhir:v "A PDF genomics report for Jane Doe regarding celiac disease." ] ;
        fhir:example [
-         fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrDocumentReference"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrDocumentReference>
+         fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrDocumentReference"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrDocumentReference>
        ]
      ] [
        fhir:extension ( [
@@ -882,14 +884,14 @@
          fhir:value [ fhir:v "Media" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/Media/jane-doe-media> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/Media/jane-doe-media> ;
          fhir:reference [ fhir:v "Media/jane-doe-media" ]
        ] ;
        fhir:name [ fhir:v "Jane Doe Smartphone Photo" ] ;
        fhir:description [ fhir:v "A JPEG photo taken from Jane Doe's smartphone." ] ;
        fhir:example [
-         fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrMedia"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrMedia>
+         fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrMedia"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrMedia>
        ]
      ] [
        fhir:extension ( [
@@ -897,7 +899,7 @@
          fhir:value [ fhir:v "StructureDefinition:logical" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/NutrientOuttake> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/NutrientOuttake> ;
          fhir:reference [ fhir:v "StructureDefinition/NutrientOuttake" ]
        ] ;
        fhir:name [ fhir:v "Nutrient Outtake" ] ;
@@ -909,7 +911,7 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/pcd-sleep-observation> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation> ;
          fhir:reference [ fhir:v "StructureDefinition/pcd-sleep-observation" ]
        ] ;
        fhir:name [ fhir:v "Patient contributed data: sleep observation" ] ;
@@ -921,7 +923,7 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/ValueSet/pcd-sleep-observation-code> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code> ;
          fhir:reference [ fhir:v "ValueSet/pcd-sleep-observation-code" ]
        ] ;
        fhir:name [ fhir:v "Patient contributed data: sleep observation code" ] ;
@@ -933,7 +935,7 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/ValueSet/pcd-sleep-observation-value> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-value> ;
          fhir:reference [ fhir:v "ValueSet/pcd-sleep-observation-value" ]
        ] ;
        fhir:name [ fhir:v "Patient contributed data: sleep stage value" ] ;
@@ -945,14 +947,14 @@
          fhir:value [ fhir:v "Observation" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/Observation/PCDSleepObservation-duration-example> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/Observation/PCDSleepObservation-duration-example> ;
          fhir:reference [ fhir:v "Observation/PCDSleepObservation-duration-example" ]
        ] ;
        fhir:name [ fhir:v "PCDSleepObservation-duration-example" ] ;
        fhir:description [ fhir:v "Example - pcd-sleep-observation duration" ] ;
        fhir:example [
-         fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/pcd-sleep-observation"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/pcd-sleep-observation>
+         fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation>
        ]
      ] [
        fhir:extension ( [
@@ -960,14 +962,14 @@
          fhir:value [ fhir:v "Observation" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/Observation/PCDSleepObservation-stage-example> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/Observation/PCDSleepObservation-stage-example> ;
          fhir:reference [ fhir:v "Observation/PCDSleepObservation-stage-example" ]
        ] ;
        fhir:name [ fhir:v "PCDSleepObservation-stage-example" ] ;
        fhir:description [ fhir:v "Example - pcd-sleep-observation stage" ] ;
        fhir:example [
-         fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/pcd-sleep-observation"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/pcd-sleep-observation>
+         fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation>
        ]
      ] [
        fhir:extension ( [
@@ -975,7 +977,7 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrBundle> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle> ;
          fhir:reference [ fhir:v "StructureDefinition/PhrBundle" ]
        ] ;
        fhir:name [ fhir:v "PhrBundle" ] ;
@@ -987,14 +989,14 @@
          fhir:value [ fhir:v "Bundle" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/Bundle/PhrBundle-example> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/Bundle/PhrBundle-example> ;
          fhir:reference [ fhir:v "Bundle/PhrBundle-example" ]
        ] ;
        fhir:name [ fhir:v "PhrBundle-example" ] ;
        fhir:description [ fhir:v "PhrBundle Example" ] ;
        fhir:example [
-         fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrBundle"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrBundle>
+         fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle>
        ]
      ] [
        fhir:extension ( [
@@ -1002,7 +1004,7 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrComposition> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrComposition> ;
          fhir:reference [ fhir:v "StructureDefinition/PhrComposition" ]
        ] ;
        fhir:name [ fhir:v "PhrComposition" ] ;
@@ -1014,7 +1016,7 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrDocumentReference> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrDocumentReference> ;
          fhir:reference [ fhir:v "StructureDefinition/PhrDocumentReference" ]
        ] ;
        fhir:name [ fhir:v "PhrDocumentReference" ] ;
@@ -1026,7 +1028,7 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrMedia> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrMedia> ;
          fhir:reference [ fhir:v "StructureDefinition/PhrMedia" ]
        ] ;
        fhir:name [ fhir:v "PhrMedia" ] ;
@@ -1038,7 +1040,7 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrPatient> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient> ;
          fhir:reference [ fhir:v "StructureDefinition/PhrPatient" ]
        ] ;
        fhir:name [ fhir:v "PhrPatient" ] ;
@@ -1050,7 +1052,7 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrProvenance> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance> ;
          fhir:reference [ fhir:v "StructureDefinition/PhrProvenance" ]
        ] ;
        fhir:name [ fhir:v "PhrProvenance" ] ;
@@ -1062,14 +1064,14 @@
          fhir:value [ fhir:v "Provenance" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/Provenance/jane-doe-media-provenance> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/Provenance/jane-doe-media-provenance> ;
          fhir:reference [ fhir:v "Provenance/jane-doe-media-provenance" ]
        ] ;
        fhir:name [ fhir:v "Provenance for Jane Doe's Smartphone Photo" ] ;
        fhir:description [ fhir:v "Self-attested provenance record for Jane Doe's smartphone photo." ] ;
        fhir:example [
-         fhir:v "http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrProvenance"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrProvenance>
+         fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance>
        ]
      ] [
        fhir:extension ( [
@@ -1077,7 +1079,7 @@
          fhir:value [ fhir:v "SearchParameter" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/SearchParameter/patient-identifier> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/SearchParameter/patient-identifier> ;
          fhir:reference [ fhir:v "SearchParameter/patient-identifier" ]
        ] ;
        fhir:name [ fhir:v "Search by identifier in patient with multipleOr" ] ;
@@ -1089,7 +1091,7 @@
          fhir:value [ fhir:v "SearchParameter" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/SearchParameter/search-from-date> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/SearchParameter/search-from-date> ;
          fhir:reference [ fhir:v "SearchParameter/search-from-date" ]
        ] ;
        fhir:name [ fhir:v "Search From Date" ] ;
@@ -1101,7 +1103,7 @@
          fhir:value [ fhir:v "StructureDefinition:logical" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/sphr/StructureDefinition/SocialMedia> ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/SocialMedia> ;
          fhir:reference [ fhir:v "StructureDefinition/SocialMedia" ]
        ] ;
        fhir:name [ fhir:v "SocialMedia" ] ;
@@ -1342,99 +1344,99 @@
      ] )
   ] . # 
 
-<http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-biological-sex-code-system> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-biological-sex-code-system> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-biological-sex-value-set> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-biological-sex-value-set> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitCategorySample> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitCategorySample> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-category-type-code-system> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-category-type-code-system> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-category-type-value-set> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-category-type-value-set> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-characteristic-type-code-system> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-characteristic-type-code-system> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-characteristic-type-value-set> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-characteristic-type-value-set> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitCorrelationSample> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitCorrelationSample> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-correlation-type-code-system> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-correlation-type-code-system> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-correlation-type-value-set> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-correlation-type-value-set> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitHealthStoreCharacteristic> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitHealthStoreCharacteristic> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitObject> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitObject> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitQuantitySample> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitQuantitySample> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-quantity-type-code-system> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-quantity-type-code-system> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-quantity-type-value-set> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-quantity-type-value-set> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitSample> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitSample> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-sample-type-code-system> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-sample-type-code-system> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-sample-type-value-set> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-sample-type-value-set> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutActivity> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitWorkoutActivity> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-workout-activity-type-code-system> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-workout-activity-type-code-system> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-workout-activity-type-value-set> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-workout-activity-type-value-set> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutEvent> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitWorkoutEvent> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/CodeSystem/apple-health-kit-workout-event-type-code-system> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-workout-event-type-code-system> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/ValueSet/apple-health-kit-workout-event-type-value-set> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-workout-event-type-value-set> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/AppleHealthKitWorkoutSample> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/AppleHealthKitWorkoutSample> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/Environmental> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/Environmental> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/Patient/jane-doe> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/Patient/jane-doe> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/Composition/jane-doe-composition> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/Composition/jane-doe-composition> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/DocumentReference/jane-doe-genomics-document> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/DocumentReference/jane-doe-genomics-document> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/Media/jane-doe-media> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/Media/jane-doe-media> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/NutrientOuttake> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/NutrientOuttake> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/pcd-sleep-observation> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/ValueSet/pcd-sleep-observation-code> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/ValueSet/pcd-sleep-observation-value> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-value> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/Observation/PCDSleepObservation-duration-example> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/Observation/PCDSleepObservation-duration-example> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/Observation/PCDSleepObservation-stage-example> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/Observation/PCDSleepObservation-stage-example> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrBundle> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/Bundle/PhrBundle-example> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/Bundle/PhrBundle-example> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrComposition> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/PhrComposition> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrDocumentReference> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/PhrDocumentReference> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrMedia> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/PhrMedia> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrPatient> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/PhrProvenance> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/Provenance/jane-doe-media-provenance> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/Provenance/jane-doe-media-provenance> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/SearchParameter/patient-identifier> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/SearchParameter/patient-identifier> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/SearchParameter/search-from-date> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/SearchParameter/search-from-date> a fhir:uv .
 
-<http://hl7.org/fhir/uv/sphr/StructureDefinition/SocialMedia> a fhir:uv .
+<http://hl7.org/fhir/uv/phr/StructureDefinition/SocialMedia> a fhir:uv .
 
 # -------------------------------------------------------------------------------------
 
