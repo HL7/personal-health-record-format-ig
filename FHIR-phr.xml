@@ -52,7 +52,6 @@
 <artifact id="SearchParameter/search-from-date" key="SearchParameter-search-from-date" name="Search From Date"/>
 <artifact id="SearchParameter/patient-identifier" key="SearchParameter-patient-identifier" name="Search by identifier in patient with multipleOr"/>
 <artifact id="StructureDefinition/SocialMedia" key="StructureDefinition-SocialMedia" name="SocialMedia"/>
-<artifact id="Procedure/acupuncture-procedure-1234" key="Procedure-acupuncture-procedure-1234" name="acupuncture-procedure-1234"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="api" name="API Endpoints"/>

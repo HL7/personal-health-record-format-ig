@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PatientHealthRecordsIG"] ; # 
   fhir:title [ fhir:v "Personal Health Records"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-15T12:17:17-06:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-15T12:20:20-06:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
@@ -522,17 +522,6 @@
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] ) ;
      fhir:resource ( [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Procedure" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/phr/Procedure/acupuncture-procedure-1234> ;
-         fhir:reference [ fhir:v "Procedure/acupuncture-procedure-1234" ]
-       ] ;
-       fhir:name [ fhir:v "acupuncture-procedure-1234" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
-     ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "CodeSystem" ]
@@ -1362,8 +1351,6 @@
        fhir:value [ fhir:v "input-cache/txcache" ]
      ] )
   ] . # 
-
-<http://hl7.org/fhir/uv/phr/Procedure/acupuncture-procedure-1234> a fhir:uv .
 
 <http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-biological-sex-code-system> a fhir:uv .
 

@@ -14,7 +14,7 @@
   <name value="PatientHealthRecordsIG"/>
   <title value="Personal Health Records"/>
   <status value="draft"/>
-  <date value="2024-12-15T12:17:17-06:00"/>
+  <date value="2024-12-15T12:20:20-06:00"/>
   <publisher value="HL7 International / Patient Empowerment"/>
   <contact>
     <name value="HL7 International / Patient Empowerment"/>
@@ -454,16 +454,6 @@
         <valueString value="true"/>
       </extension>
     </extension>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Procedure"/>
-      </extension>
-      <reference>
-        <reference value="Procedure/acupuncture-procedure-1234"/>
-      </reference>
-      <name value="acupuncture-procedure-1234"/>
-      <exampleBoolean value="true"/>
-    </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
