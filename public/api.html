@@ -241,25 +241,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Systems MAY wish to implement standard APIs for generating a <code class="language-plaintext highlighter-rouge">.phr</code> or <code class="language-plaintext highlighter-rouge">.sphr</code> file.  Standard API queries that have been used in other systems are listed below.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># export everything from a single-user system as a FHIR Bundle</span>
-GET /Bundle/<span class="nv">$ehi</span><span class="nt">-export</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>
 
 <span class="c"># export everything from a single-user system as an NDJSON Bulkd Data file</span>
-GET /Bundle/<span class="nv">$ehi</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>ndjson
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>ndjson
 
 <span class="c"># export everything from a single-user system as a PHR file</span>
-GET /Bundle/<span class="nv">$ehi</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>phr
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>phr
 
 <span class="c"># export everything from a single-user system as a SPHR file with security</span>
-GET /Bundle/<span class="nv">$ehi</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>sphr
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>sphr
 
 <span class="c"># export everything from a specific date to current from a single-user system</span>
-GET /Bundle/<span class="nv">$ehi</span><span class="nt">-export</span>?start<span class="o">=</span>2010
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?start<span class="o">=</span>2010
 
 <span class="c"># export everything in a specific date range from a single-user system</span>
-GET /Bundle/<span class="nv">$ehi</span><span class="nt">-export</span>?start<span class="o">=</span>2010&amp;end<span class="o">=</span>2020-06
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?start<span class="o">=</span>2010&amp;end<span class="o">=</span>2020-06
 
 <span class="c"># export everything for a specific patient in a multi-user system</span>
-GET /Bundle/<span class="nv">$ehi</span><span class="nt">-export</span>?patient<span class="o">=</span>Patient/12345
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?patient<span class="o">=</span>Patient/12345
 
 <span class="c"># post a record to another system to be imported (NDJSON format)</span>
 POST /Bundle/<span class="nv">$import</span>
@@ -286,7 +286,7 @@ POST /Bundle/<span class="nv">$import</span>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  Package hl7.fhir.uv.phr#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Dec 15, 2024 10:45-0600">2024-12-15</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  Package hl7.fhir.uv.phr#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Dec 15, 2024 12:17-0600">2024-12-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

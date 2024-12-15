@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="08f7e65c-fb03-4227-87e7-e8354673f452"/>
+  <id value="c977eba2-e62a-4628-8342-14963ed6c8e2"/>
   <meta>
-    <lastUpdated value="2024-12-15T10:45:04.510-06:00"/>
+    <lastUpdated value="2024-12-15T12:17:17.566-06:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -73,7 +73,7 @@
         <title value="Apple HealthKit Biological Sex Value Set"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2024-12-15T10:45:04-06:00"/>
+        <date value="2024-12-15T12:17:17-06:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -82,8 +82,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:233eb9c8-fba3-48ed-93fa-47fff806a557"/>
-          <timestamp value="2024-12-15T10:45:27-06:00"/>
+          <identifier value="urn:uuid:3515e634-9310-4550-8da5-12775ae267d4"/>
+          <timestamp value="2024-12-15T12:17:41-06:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -681,7 +681,7 @@
         <title value="Apple HealthKit Category Type Value Set"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2024-12-15T10:45:04-06:00"/>
+        <date value="2024-12-15T12:17:17-06:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -690,8 +690,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:af573047-9c37-4d1c-b936-d3028eb1fa74"/>
-          <timestamp value="2024-12-15T10:45:27-06:00"/>
+          <identifier value="urn:uuid:a6e3f70b-5ed3-4f74-88e2-8e41d41fe20a"/>
+          <timestamp value="2024-12-15T12:17:41-06:00"/>
           <total value="65"/>
           <offset value="0"/>
           <parameter>
@@ -1025,7 +1025,7 @@
         <title value="Apple HealthKit Charactersitic Type Value Set"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2024-12-15T10:45:04-06:00"/>
+        <date value="2024-12-15T12:17:17-06:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -1034,8 +1034,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:64925a43-bed1-4655-b1f9-aded7174e923"/>
-          <timestamp value="2024-12-15T10:45:27-06:00"/>
+          <identifier value="urn:uuid:bcd8a457-549f-4428-b3ae-2b85554f8e7c"/>
+          <timestamp value="2024-12-15T12:17:41-06:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -1117,7 +1117,7 @@
         <title value="Apple HealthKit Correlation Type Value Set"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2024-12-15T10:45:04-06:00"/>
+        <date value="2024-12-15T12:17:17-06:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -1126,8 +1126,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:049069bd-40e3-4bec-ae26-b666e8278ab3"/>
-          <timestamp value="2024-12-15T10:45:27-06:00"/>
+          <identifier value="urn:uuid:94b37141-63f5-4c50-970f-33a90e3f6d39"/>
+          <timestamp value="2024-12-15T12:17:41-06:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -1833,7 +1833,7 @@
         <title value="Apple HealthKit Quantity Type Value Set"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2024-12-15T10:45:04-06:00"/>
+        <date value="2024-12-15T12:17:17-06:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -1842,8 +1842,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:27e3d816-0d1f-4c9b-84da-5fb2cfc7761f"/>
-          <timestamp value="2024-12-15T10:45:27-06:00"/>
+          <identifier value="urn:uuid:fad4b75c-15c4-413e-b7a1-f425318070c6"/>
+          <timestamp value="2024-12-15T12:17:41-06:00"/>
           <total value="80"/>
           <offset value="0"/>
           <parameter>
@@ -2348,7 +2348,7 @@
         <title value="Apple HealthKit Sample Type Value Set"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2024-12-15T10:45:04-06:00"/>
+        <date value="2024-12-15T12:17:17-06:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -2357,8 +2357,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:b211d8d6-1142-4723-abbf-7410502f8cba"/>
-          <timestamp value="2024-12-15T10:45:28-06:00"/>
+          <identifier value="urn:uuid:7a5e1900-c44e-47b3-8c33-00a78bb6ba05"/>
+          <timestamp value="2024-12-15T12:17:41-06:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -3109,7 +3109,7 @@
         <title value="Apple HealthKit Workout Activity Type Value Set"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2024-12-15T10:45:04-06:00"/>
+        <date value="2024-12-15T12:17:17-06:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -3118,8 +3118,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:45ba9417-e35a-4504-b8ec-108db87bf6c5"/>
-          <timestamp value="2024-12-15T10:45:28-06:00"/>
+          <identifier value="urn:uuid:df646548-9e3c-437f-a85e-1fd1c87665f5"/>
+          <timestamp value="2024-12-15T12:17:41-06:00"/>
           <total value="83"/>
           <offset value="0"/>
           <parameter>
@@ -3576,7 +3576,7 @@
         <title value="Apple HealthKit Workout Event Type Value Set"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2024-12-15T10:45:04-06:00"/>
+        <date value="2024-12-15T12:17:17-06:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -3585,8 +3585,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:01401c57-aa9c-462a-9317-888e93f5d165"/>
-          <timestamp value="2024-12-15T10:45:28-06:00"/>
+          <identifier value="urn:uuid:3767f80a-216c-4846-b22b-f2e1c405a636"/>
+          <timestamp value="2024-12-15T12:17:41-06:00"/>
           <total value="8"/>
           <offset value="0"/>
           <parameter>
@@ -3728,7 +3728,7 @@
         <title value="Patient contributed data: sleep observation code"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2024-12-15T10:45:04-06:00"/>
+        <date value="2024-12-15T12:17:17-06:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -3737,8 +3737,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:1d76ea6f-aa0c-4822-a8fe-a56869a0df5c"/>
-          <timestamp value="2024-12-15T10:45:28-06:00"/>
+          <identifier value="urn:uuid:586ddbef-ac8e-440b-bf20-9573e09fdf81"/>
+          <timestamp value="2024-12-15T12:17:41-06:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -3879,7 +3879,7 @@
         <title value="Patient contributed data: sleep stage value"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2024-12-15T10:45:04-06:00"/>
+        <date value="2024-12-15T12:17:17-06:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -3888,8 +3888,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:6cd4f9a7-0fd8-42d6-b4b1-9aa78edc2537"/>
-          <timestamp value="2024-12-15T10:45:28-06:00"/>
+          <identifier value="urn:uuid:756746ae-edc6-4fad-af9c-976676644a33"/>
+          <timestamp value="2024-12-15T12:17:41-06:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>

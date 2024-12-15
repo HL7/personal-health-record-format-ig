@@ -20,7 +20,7 @@
   fhir:version [ fhir:v "1.0.0-ballot"] ; # 
   fhir:name [ fhir:v "PhrBundle"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-15T10:45:04-06:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-15T12:17:17-06:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;

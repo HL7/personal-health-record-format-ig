@@ -38,7 +38,7 @@ Description: "Standard PHR profile of the Bundle resource."
 
 Instance: PhrBundle-example
 InstanceOf: PhrBundle
-Description: "PhrBundle Example"
+Description: "Jane Doe - PhrBundle"
 Usage: #example
 * type = #document
 * timestamp = "2024-12-11T07:00:00Z"

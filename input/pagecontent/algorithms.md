@@ -1,4 +1,6 @@
 
+The following algorithms are provided for implementors who wish to add advanced functionalities to their PHR implmentations.
+
 #### Normalize Patient Identifiers
 The algorithm for normalizing patient identifiers is intended to ensure consistency in patient data across different healthcare systems. This process simplifies the management of a health records, aiming to enhance the accuracy and accessibility of these records. 
 

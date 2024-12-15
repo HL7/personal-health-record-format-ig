@@ -10,7 +10,7 @@ Description: "Standard PHR profile of the Provenance resource."
 
 Instance: JaneDoePhrMediaProvenance
 InstanceOf: PhrProvenance
-Title: "Provenance for Jane Doe's Smartphone Photo"
+Title: "Jane Doe's Photo Provenance"
 Description: "Self-attested provenance record for Jane Doe's smartphone photo."
 Usage: #example
 * id = "jane-doe-media-provenance"

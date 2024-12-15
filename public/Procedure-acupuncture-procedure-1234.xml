@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="acupuncture-procedure-1234"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Procedure acupuncture-procedure-1234</b></p><a name="acupuncture-procedure-1234"> </a><a name="hcacupuncture-procedure-1234"> </a><a name="acupuncture-procedure-1234-en-US"> </a><p><b>status</b>: Completed</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 386637004}">Acupuncture therapy</span></p><p><b>subject</b>: <a href="Patient/example">John Doe</a></p><p><b>performed</b>: 2024-01-16</p><h3>Performers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 223366}">Acupuncturist</span></td><td><a href="Practitioner/example">Dr. Jane Smith</a></td></tr></table><p><b>location</b>: <a href="Location/1">Acupuncture Clinic</a></p><p><b>reasonCode</b>: <span title="Codes:">Chronic back pain</span></p><p><b>outcome</b>: <span title="Codes:">Patient reported reduced pain levels</span></p><p><b>note</b>: Patient tolerated procedure well without any complications.</p></div>
+  </text>
+  <status value="completed"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="386637004"/>
+      <display value="Acupuncture (procedure)"/>
+    </coding>
+    <text value="Acupuncture therapy"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+    <display value="John Doe"/>
+  </subject>
+  <performedDateTime value="2024-01-16"/>
+  <performer>
+    <function>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="223366"/>
+        <display value="Acupuncturist"/>
+      </coding>
+    </function>
+    <actor>
+      <reference value="Practitioner/example"/>
+      <display value="Dr. Jane Smith"/>
+    </actor>
+  </performer>
+  <location>
+    <reference value="Location/1"/>
+    <display value="Acupuncture Clinic"/>
+  </location>
+  <reasonCode>
+    <text value="Chronic back pain"/>
+  </reasonCode>
+  <outcome>
+    <text value="Patient reported reduced pain levels"/>
+  </outcome>
+  <note>
+    <text value="Patient tolerated procedure well without any complications."/>
+  </note>
+</Procedure>

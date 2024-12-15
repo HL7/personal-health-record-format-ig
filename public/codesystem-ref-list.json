@@ -110,8 +110,8 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "ValueSet-pcd-sleep-observation-code.html" : "Patient contributed data: sleep observation code",
-      "ValueSet-pcd-sleep-observation-value.html" : "Patient contributed data: sleep stage value"
+      "ValueSet-pcd-sleep-observation-value.html" : "Patient contributed data: sleep stage value",
+      "ValueSet-pcd-sleep-observation-code.html" : "Patient contributed data: sleep observation code"
     }
   ]
 }

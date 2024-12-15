@@ -7,7 +7,7 @@ Description: "Standard PHR profile of the Patient resource."
 
 Instance: JaneDoe
 InstanceOf: PhrPatient
-Title: "Example Patient: Jane Doe"
+Title: "Jane Doe"
 Description: "A sample patient resource for Jane Doe."
 Usage: #example
 * id = "jane-doe"

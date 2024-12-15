@@ -1,7 +1,19 @@
 PatientHealthRecordsIG
 =========================================
 
+Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource Procedure/acupuncture-procedure-1234.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
 Generic: line 0, col 0, Warning - The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content) (INFORMATIONAL)
+Generic: line 0, col 0, Error - The link 'Patient/example' for "John Doe" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'Practitioner/example' for "Dr. Jane Smith" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'Location/1' for "Acupuncture Clinic" cannot be resolved (NOTFOUND)
+/Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Procedure-acupuncture-procedure-1234.json: line 9, col 4, Error - Wrong Display Name 'Acupuncture (procedure)' for http://snomed.info/sct#386637004. Valid display is one of 2 choices: 'Obstetric procedure (procedure)' or 'Obstetric procedure' (for the language(s) 'en-US') (INVALID)
+/Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Procedure-acupuncture-procedure-1234.json: line 4, col 4, Error - Unable to resolve resource with reference 'Patient/example' (STRUCTURE)
+/Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Procedure-acupuncture-procedure-1234.json: line 26, col 8, Error - Unknown code '223366' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240801' (CODEINVALID)
+/Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Procedure-acupuncture-procedure-1234.json: line 22, col 8, Error - Unable to resolve resource with reference 'Practitioner/example' (STRUCTURE)
+/Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Procedure-acupuncture-procedure-1234.json: line 37, col 4, Error - Unable to resolve resource with reference 'Location/1' (STRUCTURE)
+/Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Procedure-acupuncture-procedure-1234.json: line 0, col 0, Error - Hyperlink 'Patient/example' at 'div/p/a' for 'John Doe' does not resolve (INVALID)
+/Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Procedure-acupuncture-procedure-1234.json: line 0, col 0, Error - Hyperlink 'Practitioner/example' at 'div/table/tr/td/a' for 'Dr. Jane Smith' does not resolve (INVALID)
+/Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Procedure-acupuncture-procedure-1234.json: line 0, col 0, Error - Hyperlink 'Location/1' at 'div/p/a' for 'Acupuncture Clinic' does not resolve (INVALID)
 
-err = 0, warn = 1, info = 0
+err = 8, warn = 2, info = 0
 IG Publisher Version: 1.8.1

@@ -31,10 +31,11 @@
 <artifact id="ValueSet/apple-health-kit-workout-event-type-value-set" key="ValueSet-AppleHealthKitWorkoutEventTypeValueSet" name="Apple HealthKit Workout Event Type Value Set"/>
 <artifact id="StructureDefinition/AppleHealthKitWorkoutSample" key="StructureDefinition-AppleHealthKitWorkoutSample" name="Apple HealthKit Workout Sample Logical Model"/>
 <artifact id="StructureDefinition/Environmental" key="StructureDefinition-Environmental" name="Environmental"/>
-<artifact id="Patient/jane-doe" key="Patient-jane-doe" name="Example Patient: Jane Doe"/>
+<artifact id="Patient/jane-doe" key="Patient-jane-doe" name="Jane Doe"/>
 <artifact id="Composition/jane-doe-composition" key="Composition-jane-doe-composition" name="Jane Doe Composition"/>
 <artifact id="DocumentReference/jane-doe-genomics-document" key="DocumentReference-jane-doe-genomics-document" name="Jane Doe PDF Report"/>
 <artifact id="Media/jane-doe-media" key="Media-jane-doe-media" name="Jane Doe Smartphone Photo"/>
+<artifact id="Provenance/jane-doe-media-provenance" key="Provenance-jane-doe-media-provenance" name="Jane Doe's Photo Provenance"/>
 <artifact id="StructureDefinition/NutrientOuttake" key="StructureDefinition-NutrientOuttake" name="Nutrient Outtake"/>
 <artifact id="Observation/PCDSleepObservation-duration-example" key="Observation-PCDSleepObservation-duration-example" name="PCDSleepObservation-duration-example"/>
 <artifact id="Observation/PCDSleepObservation-stage-example" key="Observation-PCDSleepObservation-stage-example" name="PCDSleepObservation-stage-example"/>
@@ -48,10 +49,10 @@
 <artifact id="StructureDefinition/PhrMedia" key="StructureDefinition-PhrMedia" name="PhrMedia"/>
 <artifact id="StructureDefinition/PhrPatient" key="StructureDefinition-PhrPatient" name="PhrPatient"/>
 <artifact id="StructureDefinition/PhrProvenance" key="StructureDefinition-PhrProvenance" name="PhrProvenance"/>
-<artifact id="Provenance/jane-doe-media-provenance" key="Provenance-jane-doe-media-provenance" name="Provenance for Jane Doe's Smartphone Photo"/>
 <artifact id="SearchParameter/search-from-date" key="SearchParameter-search-from-date" name="Search From Date"/>
 <artifact id="SearchParameter/patient-identifier" key="SearchParameter-patient-identifier" name="Search by identifier in patient with multipleOr"/>
 <artifact id="StructureDefinition/SocialMedia" key="StructureDefinition-SocialMedia" name="SocialMedia"/>
+<artifact id="Procedure/acupuncture-procedure-1234" key="Procedure-acupuncture-procedure-1234" name="acupuncture-procedure-1234"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="api" name="API Endpoints"/>

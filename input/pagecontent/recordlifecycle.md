@@ -1,5 +1,7 @@
 
-> Work in progress.  Content to be determined.
+Record lifecycle management involves overseeing records from their creation to their final disposal. This process ensures that records are handled consistently and securely at every stage. Managing the lifecycle of records includes activities such as creating, updating, accessing, storing, archiving, and deleting records. 
+
+#### Record Lifecycle Events 
 
 | Section |  Header Name | 
 | ---------- | :-------------------- | 
@@ -43,7 +45,6 @@
 | RI.1.4 | Record Completeness | | |
 | RI.2 | Record Synchronization | | |
 | RI.3 | Record Archive and Restore | | |
-
 
 
 ### References  

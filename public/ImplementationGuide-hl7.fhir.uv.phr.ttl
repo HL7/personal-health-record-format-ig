@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PatientHealthRecordsIG"] ; # 
   fhir:title [ fhir:v "Personal Health Records"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-15T10:45:04-06:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-15T12:17:17-06:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
@@ -524,6 +524,17 @@
      fhir:resource ( [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Procedure" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/phr/Procedure/acupuncture-procedure-1234> ;
+         fhir:reference [ fhir:v "Procedure/acupuncture-procedure-1234" ]
+       ] ;
+       fhir:name [ fhir:v "acupuncture-procedure-1234" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
@@ -842,7 +853,7 @@
          fhir:link <http://hl7.org/fhir/uv/phr/Patient/jane-doe> ;
          fhir:reference [ fhir:v "Patient/jane-doe" ]
        ] ;
-       fhir:name [ fhir:v "Example Patient: Jane Doe" ] ;
+       fhir:name [ fhir:v "Jane Doe" ] ;
        fhir:description [ fhir:v "A sample patient resource for Jane Doe." ] ;
        fhir:example [
          fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient"^^xsd:anyURI ;
@@ -892,6 +903,21 @@
        fhir:example [
          fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrMedia"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrMedia>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Provenance" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/phr/Provenance/jane-doe-media-provenance> ;
+         fhir:reference [ fhir:v "Provenance/jane-doe-media-provenance" ]
+       ] ;
+       fhir:name [ fhir:v "Jane Doe's Photo Provenance" ] ;
+       fhir:description [ fhir:v "Self-attested provenance record for Jane Doe's smartphone photo." ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance>
        ]
      ] [
        fhir:extension ( [
@@ -993,7 +1019,7 @@
          fhir:reference [ fhir:v "Bundle/PhrBundle-example" ]
        ] ;
        fhir:name [ fhir:v "PhrBundle-example" ] ;
-       fhir:description [ fhir:v "PhrBundle Example" ] ;
+       fhir:description [ fhir:v "Jane Doe - PhrBundle" ] ;
        fhir:example [
          fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle>
@@ -1058,21 +1084,6 @@
        fhir:name [ fhir:v "PhrProvenance" ] ;
        fhir:description [ fhir:v "Standard PHR profile of the Provenance resource." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Provenance" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/uv/phr/Provenance/jane-doe-media-provenance> ;
-         fhir:reference [ fhir:v "Provenance/jane-doe-media-provenance" ]
-       ] ;
-       fhir:name [ fhir:v "Provenance for Jane Doe's Smartphone Photo" ] ;
-       fhir:description [ fhir:v "Self-attested provenance record for Jane Doe's smartphone photo." ] ;
-       fhir:example [
-         fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance>
-       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1352,6 +1363,8 @@
      ] )
   ] . # 
 
+<http://hl7.org/fhir/uv/phr/Procedure/acupuncture-procedure-1234> a fhir:uv .
+
 <http://hl7.org/fhir/uv/phr/CodeSystem/apple-health-kit-biological-sex-code-system> a fhir:uv .
 
 <http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-biological-sex-value-set> a fhir:uv .
@@ -1412,6 +1425,8 @@
 
 <http://hl7.org/fhir/uv/phr/Media/jane-doe-media> a fhir:uv .
 
+<http://hl7.org/fhir/uv/phr/Provenance/jane-doe-media-provenance> a fhir:uv .
+
 <http://hl7.org/fhir/uv/phr/StructureDefinition/NutrientOuttake> a fhir:uv .
 
 <http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation> a fhir:uv .
@@ -1437,8 +1452,6 @@
 <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient> a fhir:uv .
 
 <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance> a fhir:uv .
-
-<http://hl7.org/fhir/uv/phr/Provenance/jane-doe-media-provenance> a fhir:uv .
 
 <http://hl7.org/fhir/uv/phr/SearchParameter/patient-identifier> a fhir:uv .
 
