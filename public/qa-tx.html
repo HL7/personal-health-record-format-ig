@@ -20,12 +20,12 @@ cache-control:public, max-age=600
 connection:keep-alive
 content-length:2125
 content-type:application/fhir+json
-date:Sat, 14 Dec 2024 03:36:06 GMT
+date:Sun, 15 Dec 2024 16:44:59 GMT
 pragma:no-cache
 server:nginx
-x-request-id:179-18834
+x-request-id:179-95165
 
-{"resourceType" : "CapabilityStatement","id" : "FhirServer","meta" : {"tag" : [{"system" : "http://hl7.org/fhir/v3/ObservationValue","code" : "SUBSETTED","display" : "Subsetted"}]},"url" : "http://tx.fhir.org/r4/CapabilityStatement/tx","version" : "4.0.1-3.4.32","name" : "FHIRReferenceServer","title" : "FHIR Reference Server Conformance Statement","status" : "active","date" : "2024-12-14T03:36:06.487Z","contact" : [{"telecom" : [{"system" : "other","value" : "http://healthintersections.com.au/"}]}],"kind" : "instance","instantiates" : ["http://hl7.org/fhir/CapabilityStatement/terminology-server","http://hl7.org/fhir/CapabilityStatement/terminology-server"],"software" : {"name" : "Reference Server","version" : "3.4.32","releaseDate" : "2024-12-02T04:08:13.065Z"},"implementation" : {"description" : "FHIR Server running at http://tx.fhir.org/r4","url" : "http://tx.fhir.org/r4"},"fhirVersion" : "4.0.1","format" : ["application/fhir+xml","application/fhir+json"],"rest" : [{"mode" : "server","security" : {"cors" : true},"resource" : [{"type" : "CodeSystem","operation" : [{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/CodeSystem-validate-code"},{"name" : "lookup","definition" : "http://hl7.org/fhir/OperationDefinition/CodeSystem-lookup"}]},{"type" : "ValueSet","operation" : [{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-validate-code"},{"name" : "expand","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"}]}],"operation" : [{"name" : "expand","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"},{"name" : "lookup","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-lookup"},{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/Resource-validate"},{"name" : "translate","definition" : "http://hl7.org/fhir/OperationDefinition/ConceptMap-translate"},{"name" : "closure","definition" : "http://hl7.org/fhir/OperationDefinition/ConceptMap-closure"},{"name" : "versions","definition" : "http://tx.fhir.org/r4/OperationDefinition/fso-versions"}]}]}
+{"resourceType" : "CapabilityStatement","id" : "FhirServer","meta" : {"tag" : [{"system" : "http://hl7.org/fhir/v3/ObservationValue","code" : "SUBSETTED","display" : "Subsetted"}]},"url" : "http://tx.fhir.org/r4/CapabilityStatement/tx","version" : "4.0.1-3.4.32","name" : "FHIRReferenceServer","title" : "FHIR Reference Server Conformance Statement","status" : "active","date" : "2024-12-15T16:44:59.820Z","contact" : [{"telecom" : [{"system" : "other","value" : "http://healthintersections.com.au/"}]}],"kind" : "instance","instantiates" : ["http://hl7.org/fhir/CapabilityStatement/terminology-server","http://hl7.org/fhir/CapabilityStatement/terminology-server"],"software" : {"name" : "Reference Server","version" : "3.4.32","releaseDate" : "2024-12-02T04:08:13.065Z"},"implementation" : {"description" : "FHIR Server running at http://tx.fhir.org/r4","url" : "http://tx.fhir.org/r4"},"fhirVersion" : "4.0.1","format" : ["application/fhir+xml","application/fhir+json"],"rest" : [{"mode" : "server","security" : {"cors" : true},"resource" : [{"type" : "CodeSystem","operation" : [{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/CodeSystem-validate-code"},{"name" : "lookup","definition" : "http://hl7.org/fhir/OperationDefinition/CodeSystem-lookup"}]},{"type" : "ValueSet","operation" : [{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-validate-code"},{"name" : "expand","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"}]}],"operation" : [{"name" : "expand","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"},{"name" : "lookup","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-lookup"},{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/Resource-validate"},{"name" : "translate","definition" : "http://hl7.org/fhir/OperationDefinition/ConceptMap-translate"},{"name" : "closure","definition" : "http://hl7.org/fhir/OperationDefinition/ConceptMap-closure"},{"name" : "versions","definition" : "http://tx.fhir.org/r4/OperationDefinition/fso-versions"}]}]}
 
 </pre><hr/>
 <a name="l2"> </a><h3>2</h3>
@@ -37,10 +37,10 @@ Accept: application/fhir+json; fhirVersion=4.0
 Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
 User-Agent: fhir/publisher
 
-{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://hl7.org/fhir/fhir-types","code":"ImplementationGuide"}},{"name":"displayLanguage","valueString":"en, en-US, en_US"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"1e3be143-6f99-40fc-a2db-1078c785409c"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://hl7.org/fhir/fhir-types","code":"ImplementationGuide"}},{"name":"displayLanguage","valueString":"en, en-US, en_US"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"a9be5bf9-012f-4a21-a6b6-cfe3968b9006"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
 
 
-Response (00:00:00.66): 
+Response (00:00:00.57): 
 
 200
 access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
@@ -50,75 +50,13 @@ cache-control:public, max-age=600
 connection:keep-alive
 content-length:1451
 content-type:application/fhir+json
-date:Sat, 14 Dec 2024 03:36:13 GMT
-last-modified:Sat, 14 Dec 2024 03:36:13 GMT
+date:Sun, 15 Dec 2024 16:45:05 GMT
+last-modified:Sun, 15 Dec 2024 16:45:05 GMT
 pragma:no-cache
 server:nginx
-x-request-id:179-18838
+x-request-id:179-95169
 
 {"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "system","valueUri" : "http://hl7.org/fhir/fhir-types"},{"name" : "x-caused-by-unknown-system","valueCanonical" : "http://hl7.org/fhir/fhir-types"},{"name" : "code","valueCode" : "ImplementationGuide"},{"name" : "message","valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/fhir-types' could not be found, so the code cannot be validated"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-found"}],"text" : "A definition for CodeSystem 'http://hl7.org/fhir/fhir-types' could not be found, so the code cannot be validated"},"location" : ["Coding.system"],"expression" : ["Coding.system"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=en, en-US, en_US, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate \"[http://hl7.org/fhir/fhir-types#ImplementationGuide (\"\")]\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check \"http://hl7.org/fhir/fhir-types#ImplementationGuide\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn't find CodeSystem \"http://hl7.org/fhir/fhir-types\"\r\n"}]}
-
-</pre><hr/>
-<a name="l3"> </a><h3>3</h3>
-<pre>
-Request: 
-
-POST http://tx.fhir.org/r4/ValueSet/$validate-code? HTTP/1.0
-Accept: application/fhir+json; fhirVersion=4.0
-Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
-User-Agent: fhir/publisher
-
-{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://loinc.org","code":"93832-4"}},{"name":"displayLanguage","valueString":"en-US"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"valueSet","resource":{"resourceType":"ValueSet","url":"http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0","version":"1.0.0-ballot","status":"active","compose":{"include":[{"system":"http://loinc.org","concept":[{"code":"93831-6","display":"Deep sleep duration"},{"code":"93830-8","display":"Light sleep duration"},{"code":"93829-0","display":"REM sleep duration"},{"code":"93832-4","display":"Sleep duration"}]}]}}},{"name":"cache-id","valueId":"1e3be143-6f99-40fc-a2db-1078c785409c"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
-
-
-Response (00:00:00.63): 
-
-200
-access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
-access-control-allow-origin:*
-access-control-expose-headers:Content-Location, Location
-cache-control:public, max-age=600
-connection:keep-alive
-content-length:1290
-content-type:application/fhir+json
-date:Sat, 14 Dec 2024 03:36:17 GMT
-last-modified:Sat, 14 Dec 2024 03:36:17 GMT
-pragma:no-cache
-server:nginx
-x-request-id:179-18839
-
-{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : true},{"name" : "system","valueUri" : "http://loinc.org"},{"name" : "code","valueCode" : "93832-4"},{"name" : "version","valueString" : "2.78"},{"name" : "display","valueString" : "Sleep duration"},{"name" : "diagnostics","valueString" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0|1.0.0-ballot: Analysing\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0|1.0.0-ballot: Parameters: disp-lang=en-US, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0|1.0.0-ballot: CodeSystem found: \"http://loinc.org|2.78\"\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0|1.0.0-ballot: Validate \"[http://loinc.org#93832-4 (\"\")]\"\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0|1.0.0-ballot: Check \"http://loinc.org#93832-4\"\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0|1.0.0-ballot: CodeSystem found: http://loinc.org|2.78 for http://loinc.org\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0|1.0.0-ballot: Code \"93832-4\" found in http://loinc.org|2.78\r\n"}]}
-
-</pre><hr/>
-<a name="l4"> </a><h3>4</h3>
-<pre>
-Request: 
-
-POST http://tx.fhir.org/r4/ValueSet/$validate-code? HTTP/1.0
-Accept: application/fhir+json; fhirVersion=4.0
-Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
-User-Agent: fhir/publisher
-
-{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://snomed.info/sct","code":"258158006"}},{"name":"displayLanguage","valueString":"en-US"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"valueSet","resource":{"resourceType":"ValueSet","url":"http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1","version":"1.0.0-ballot","status":"active","compose":{"include":[{"system":"http://snomed.info/sct","concept":[{"code":"258158006","display":"Sleep, function (observable entity)"}]}]}}},{"name":"cache-id","valueId":"1e3be143-6f99-40fc-a2db-1078c785409c"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
-
-
-Response (00:00:00.65): 
-
-200
-access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
-access-control-allow-origin:*
-access-control-expose-headers:Content-Location, Location
-cache-control:public, max-age=600
-connection:keep-alive
-content-length:1547
-content-type:application/fhir+json
-date:Sat, 14 Dec 2024 03:36:17 GMT
-last-modified:Sat, 14 Dec 2024 03:36:17 GMT
-pragma:no-cache
-server:nginx
-x-request-id:179-18840
-
-{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : true},{"name" : "system","valueUri" : "http://snomed.info/sct"},{"name" : "code","valueCode" : "258158006"},{"name" : "version","valueString" : "http://snomed.info/sct/900000000000207008/version/20240801"},{"name" : "display","valueString" : "Sleep"},{"name" : "diagnostics","valueString" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1|1.0.0-ballot: Analysing\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1|1.0.0-ballot: Parameters: disp-lang=en-US, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1|1.0.0-ballot: CodeSystem found: \"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240801\"\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1|1.0.0-ballot: Validate \"[http://snomed.info/sct#258158006 (\"\")]\"\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1|1.0.0-ballot: Check \"http://snomed.info/sct#258158006\"\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1|1.0.0-ballot: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240801 for http://snomed.info/sct\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1|1.0.0-ballot: Code \"258158006\" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240801\r\n"}]}
 
 --- 1 -----------------
 Request: 
@@ -138,12 +76,12 @@ cache-control:public, max-age=600
 connection:keep-alive
 content-length:2125
 content-type:application/fhir+json
-date:Sat, 14 Dec 2024 03:36:06 GMT
+date:Sun, 15 Dec 2024 16:44:59 GMT
 pragma:no-cache
 server:nginx
-x-request-id:179-18834
+x-request-id:179-95165
 
-{"resourceType" : "CapabilityStatement","id" : "FhirServer","meta" : {"tag" : [{"system" : "http://hl7.org/fhir/v3/ObservationValue","code" : "SUBSETTED","display" : "Subsetted"}]},"url" : "http://tx.fhir.org/r4/CapabilityStatement/tx","version" : "4.0.1-3.4.32","name" : "FHIRReferenceServer","title" : "FHIR Reference Server Conformance Statement","status" : "active","date" : "2024-12-14T03:36:06.487Z","contact" : [{"telecom" : [{"system" : "other","value" : "http://healthintersections.com.au/"}]}],"kind" : "instance","instantiates" : ["http://hl7.org/fhir/CapabilityStatement/terminology-server","http://hl7.org/fhir/CapabilityStatement/terminology-server"],"software" : {"name" : "Reference Server","version" : "3.4.32","releaseDate" : "2024-12-02T04:08:13.065Z"},"implementation" : {"description" : "FHIR Server running at http://tx.fhir.org/r4","url" : "http://tx.fhir.org/r4"},"fhirVersion" : "4.0.1","format" : ["application/fhir+xml","application/fhir+json"],"rest" : [{"mode" : "server","security" : {"cors" : true},"resource" : [{"type" : "CodeSystem","operation" : [{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/CodeSystem-validate-code"},{"name" : "lookup","definition" : "http://hl7.org/fhir/OperationDefinition/CodeSystem-lookup"}]},{"type" : "ValueSet","operation" : [{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-validate-code"},{"name" : "expand","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"}]}],"operation" : [{"name" : "expand","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"},{"name" : "lookup","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-lookup"},{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/Resource-validate"},{"name" : "translate","definition" : "http://hl7.org/fhir/OperationDefinition/ConceptMap-translate"},{"name" : "closure","definition" : "http://hl7.org/fhir/OperationDefinition/ConceptMap-closure"},{"name" : "versions","definition" : "http://tx.fhir.org/r4/OperationDefinition/fso-versions"}]}]}
+{"resourceType" : "CapabilityStatement","id" : "FhirServer","meta" : {"tag" : [{"system" : "http://hl7.org/fhir/v3/ObservationValue","code" : "SUBSETTED","display" : "Subsetted"}]},"url" : "http://tx.fhir.org/r4/CapabilityStatement/tx","version" : "4.0.1-3.4.32","name" : "FHIRReferenceServer","title" : "FHIR Reference Server Conformance Statement","status" : "active","date" : "2024-12-15T16:44:59.820Z","contact" : [{"telecom" : [{"system" : "other","value" : "http://healthintersections.com.au/"}]}],"kind" : "instance","instantiates" : ["http://hl7.org/fhir/CapabilityStatement/terminology-server","http://hl7.org/fhir/CapabilityStatement/terminology-server"],"software" : {"name" : "Reference Server","version" : "3.4.32","releaseDate" : "2024-12-02T04:08:13.065Z"},"implementation" : {"description" : "FHIR Server running at http://tx.fhir.org/r4","url" : "http://tx.fhir.org/r4"},"fhirVersion" : "4.0.1","format" : ["application/fhir+xml","application/fhir+json"],"rest" : [{"mode" : "server","security" : {"cors" : true},"resource" : [{"type" : "CodeSystem","operation" : [{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/CodeSystem-validate-code"},{"name" : "lookup","definition" : "http://hl7.org/fhir/OperationDefinition/CodeSystem-lookup"}]},{"type" : "ValueSet","operation" : [{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-validate-code"},{"name" : "expand","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"}]}],"operation" : [{"name" : "expand","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"},{"name" : "lookup","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-lookup"},{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/Resource-validate"},{"name" : "translate","definition" : "http://hl7.org/fhir/OperationDefinition/ConceptMap-translate"},{"name" : "closure","definition" : "http://hl7.org/fhir/OperationDefinition/ConceptMap-closure"},{"name" : "versions","definition" : "http://tx.fhir.org/r4/OperationDefinition/fso-versions"}]}]}
 
 --- 2 -----------------
 Request: 
@@ -153,10 +91,10 @@ Accept: application/fhir+json; fhirVersion=4.0
 Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
 User-Agent: fhir/publisher
 
-{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://hl7.org/fhir/fhir-types","code":"ImplementationGuide"}},{"name":"displayLanguage","valueString":"en, en-US, en_US"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"1e3be143-6f99-40fc-a2db-1078c785409c"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://hl7.org/fhir/fhir-types","code":"ImplementationGuide"}},{"name":"displayLanguage","valueString":"en, en-US, en_US"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"a9be5bf9-012f-4a21-a6b6-cfe3968b9006"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
 
 
-Response (00:00:00.66): 
+Response (00:00:00.57): 
 
 200
 access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
@@ -166,69 +104,11 @@ cache-control:public, max-age=600
 connection:keep-alive
 content-length:1451
 content-type:application/fhir+json
-date:Sat, 14 Dec 2024 03:36:13 GMT
-last-modified:Sat, 14 Dec 2024 03:36:13 GMT
+date:Sun, 15 Dec 2024 16:45:05 GMT
+last-modified:Sun, 15 Dec 2024 16:45:05 GMT
 pragma:no-cache
 server:nginx
-x-request-id:179-18838
+x-request-id:179-95169
 
 {"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "system","valueUri" : "http://hl7.org/fhir/fhir-types"},{"name" : "x-caused-by-unknown-system","valueCanonical" : "http://hl7.org/fhir/fhir-types"},{"name" : "code","valueCode" : "ImplementationGuide"},{"name" : "message","valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/fhir-types' could not be found, so the code cannot be validated"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-found"}],"text" : "A definition for CodeSystem 'http://hl7.org/fhir/fhir-types' could not be found, so the code cannot be validated"},"location" : ["Coding.system"],"expression" : ["Coding.system"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=en, en-US, en_US, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate \"[http://hl7.org/fhir/fhir-types#ImplementationGuide (\"\")]\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check \"http://hl7.org/fhir/fhir-types#ImplementationGuide\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn't find CodeSystem \"http://hl7.org/fhir/fhir-types\"\r\n"}]}
-
---- 3 -----------------
-Request: 
-
-POST http://tx.fhir.org/r4/ValueSet/$validate-code? HTTP/1.0
-Accept: application/fhir+json; fhirVersion=4.0
-Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
-User-Agent: fhir/publisher
-
-{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://loinc.org","code":"93832-4"}},{"name":"displayLanguage","valueString":"en-US"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"valueSet","resource":{"resourceType":"ValueSet","url":"http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0","version":"1.0.0-ballot","status":"active","compose":{"include":[{"system":"http://loinc.org","concept":[{"code":"93831-6","display":"Deep sleep duration"},{"code":"93830-8","display":"Light sleep duration"},{"code":"93829-0","display":"REM sleep duration"},{"code":"93832-4","display":"Sleep duration"}]}]}}},{"name":"cache-id","valueId":"1e3be143-6f99-40fc-a2db-1078c785409c"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
-
-
-Response (00:00:00.63): 
-
-200
-access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
-access-control-allow-origin:*
-access-control-expose-headers:Content-Location, Location
-cache-control:public, max-age=600
-connection:keep-alive
-content-length:1290
-content-type:application/fhir+json
-date:Sat, 14 Dec 2024 03:36:17 GMT
-last-modified:Sat, 14 Dec 2024 03:36:17 GMT
-pragma:no-cache
-server:nginx
-x-request-id:179-18839
-
-{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : true},{"name" : "system","valueUri" : "http://loinc.org"},{"name" : "code","valueCode" : "93832-4"},{"name" : "version","valueString" : "2.78"},{"name" : "display","valueString" : "Sleep duration"},{"name" : "diagnostics","valueString" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0|1.0.0-ballot: Analysing\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0|1.0.0-ballot: Parameters: disp-lang=en-US, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0|1.0.0-ballot: CodeSystem found: \"http://loinc.org|2.78\"\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0|1.0.0-ballot: Validate \"[http://loinc.org#93832-4 (\"\")]\"\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0|1.0.0-ballot: Check \"http://loinc.org#93832-4\"\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0|1.0.0-ballot: CodeSystem found: http://loinc.org|2.78 for http://loinc.org\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--0|1.0.0-ballot: Code \"93832-4\" found in http://loinc.org|2.78\r\n"}]}
-
---- 4 -----------------
-Request: 
-
-POST http://tx.fhir.org/r4/ValueSet/$validate-code? HTTP/1.0
-Accept: application/fhir+json; fhirVersion=4.0
-Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
-User-Agent: fhir/publisher
-
-{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://snomed.info/sct","code":"258158006"}},{"name":"displayLanguage","valueString":"en-US"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"valueSet","resource":{"resourceType":"ValueSet","url":"http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1","version":"1.0.0-ballot","status":"active","compose":{"include":[{"system":"http://snomed.info/sct","concept":[{"code":"258158006","display":"Sleep, function (observable entity)"}]}]}}},{"name":"cache-id","valueId":"1e3be143-6f99-40fc-a2db-1078c785409c"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
-
-
-Response (00:00:00.65): 
-
-200
-access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
-access-control-allow-origin:*
-access-control-expose-headers:Content-Location, Location
-cache-control:public, max-age=600
-connection:keep-alive
-content-length:1547
-content-type:application/fhir+json
-date:Sat, 14 Dec 2024 03:36:17 GMT
-last-modified:Sat, 14 Dec 2024 03:36:17 GMT
-pragma:no-cache
-server:nginx
-x-request-id:179-18840
-
-{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : true},{"name" : "system","valueUri" : "http://snomed.info/sct"},{"name" : "code","valueCode" : "258158006"},{"name" : "version","valueString" : "http://snomed.info/sct/900000000000207008/version/20240801"},{"name" : "display","valueString" : "Sleep"},{"name" : "diagnostics","valueString" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1|1.0.0-ballot: Analysing\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1|1.0.0-ballot: Parameters: disp-lang=en-US, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1|1.0.0-ballot: CodeSystem found: \"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240801\"\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1|1.0.0-ballot: Validate \"[http://snomed.info/sct#258158006 (\"\")]\"\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1|1.0.0-ballot: Check \"http://snomed.info/sct#258158006\"\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1|1.0.0-ballot: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240801 for http://snomed.info/sct\r\n0 0: 0ms http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code--1|1.0.0-ballot: Code \"258158006\" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240801\r\n"}]}
 </pre></head></html>

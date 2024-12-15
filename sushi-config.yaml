@@ -83,20 +83,21 @@ publisher:
 
 menu:
   Home: index.html
-  Record Keeping: recordkeeping.html
-  Conformance: conformance.html
-  Data Model: datamodel.html
-  APIs: api.html
   Functional Model:
+    Conformance: conformance.html
+    Data Model: datamodel.html
     Functional Model: functionality.html
     Record Lifecycle: recordlifecycle.html
     Security: security.html
   Supplemental:
+    Export APIs: api.html
+    Record Keeping: recordkeeping.html
     Annotations: annotations.html
     History: history.html
     Physiology Simulations: physiology.html
     Algorithms: algorithms.html
     Operating Systems: operating-systems.html
+    Longitudinal Records: longitudinal.html
   Patient Personas:
     Index: personas-index.html
     Thompson Familiy: persona-thompson-family.html
@@ -153,6 +154,8 @@ pages:
     title: Algorithms
   api.md:
     title: API Endpoints
+  longitudinal.md:
+    title: Longitudinal Records
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

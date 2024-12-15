@@ -24,7 +24,7 @@
      fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-12-13T21:36:12-06:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-15T10:45:04-06:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;

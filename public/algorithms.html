@@ -99,23 +99,17 @@
   <li>
     <a href="index.html">Home</a>
   </li>
-  <li>
-    <a href="recordkeeping.html">Record Keeping</a>
-  </li>
-  <li>
-    <a href="conformance.html">Conformance</a>
-  </li>
-  <li>
-    <a href="datamodel.html">Data Model</a>
-  </li>
-  <li>
-    <a href="api.html">APIs</a>
-  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Model
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
+      <li>
+        <a href="conformance.html">Conformance</a>
+      </li>
+      <li>
+        <a href="datamodel.html">Data Model</a>
+      </li>
       <li>
         <a href="functionality.html">Functional Model</a>
       </li>
@@ -133,6 +127,12 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="api.html">Export APIs</a>
+      </li>
+      <li>
+        <a href="recordkeeping.html">Record Keeping</a>
+      </li>
+      <li>
         <a href="annotations.html">Annotations</a>
       </li>
       <li>
@@ -146,6 +146,9 @@
       </li>
       <li>
         <a href="operating-systems.html">Operating Systems</a>
+      </li>
+      <li>
+        <a href="longitudinal.html">Longitudinal Records</a>
       </li>
     </ul>
   </li>
@@ -236,22 +239,89 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 
 <h4 id="normalize-patient-identifiers">Normalize Patient Identifiers</h4>
-<p>The algorithm for normalizing patient identifiers is developed to ensure consistency in patient data across different healthcare systems. This process simplifies the management of a health records, aiming to enhance the accuracy and accessibility of these records.</p>
+<p>The algorithm for normalizing patient identifiers is intended to ensure consistency in patient data across different healthcare systems. This process simplifies the management of a health records, aiming to enhance the accuracy and accessibility of these records.</p>
 
-<h4 id="longitudinal-chronology">Longitudinal Chronology</h4>
-<p>An algorithm has been developed to organize patient records in chronological order. Its main function is to sort various entries, like doctor's notes and test results, by their dates. This makes it easier to view a patient's medical history over time. By putting the records in order, the algorithm helps doctors and healthcare providers track changes and patterns in a patient's health, supporting more informed medical decisions and analysis. This straightforward approach aims to improve patient care by providing a clearer picture of each patient's medical journey.</p>
+<ol>
+  <li>Input Validation: Verify that the patient identifier is a valid, non-empty string containing only permitted characters (typically alphanumeric).</li>
+  <li>Standardize Case: Convert the entire identifier to a consistent case (typically lowercase or uppercase) to eliminate variations caused by different capitalization.</li>
+  <li>Remove Extraneous Spaces: Strip all leading, trailing, and unnecessary internal whitespaces from the identifier to ensure uniform formatting.</li>
+  <li>Remove Special Characters: Eliminate any non-standard punctuation, symbols, or formatting characters that could create inconsistencies across different healthcare systems.</li>
+  <li>Apply Standardization Rules: Implement a predefined set of rules to handle common identifier variations, such as:</li>
+  <li>Removing hyphens or other separators
+– Handling different identifier format conventions
+– Resolving potential alias or alternate identifier formats<br />
+– Validation Check: Confirm that the normalized identifier meets predefined length, format, and content requirements for the specific healthcare system.</li>
+  <li>Generate Unique Internal Identifier: If necessary, create a consistent, internal unique identifier.</li>
+  <li>Output: Return the standardized, clean patient identifier ready for use in health record management systems.</li>
+</ol>
+
+<h4 id="longitudinal-chronology-sorting">Longitudinal Chronology (Sorting)</h4>
+<p>This algorithm is intended to organize patient records in chronological order. Its main function is to sort various entries, like doctor's notes and test results, by their dates. This makes it easier to view a patient's medical history over time. By putting the records in order, the algorithm helps doctors and healthcare providers track changes and patterns in a patient's health, supporting more informed medical decisions and analysis. This straightforward approach aims to improve patient care by providing a clearer picture of each patient's medical journey.</p>
+
+<ol>
+  <li>Data Collection: Gather all patient records from various sources, including doctor's notes, test results, medical procedures, and diagnostic reports.</li>
+  <li>Date Extraction: Parse and extract the date information from each medical record, ensuring consistent date format parsing across different document types and potential date representations.</li>
+  <li>Date Validation: Verify the integrity and validity of extracted dates, checking for:
+– Completeness of date information
+– Realistic date ranges
+– Handling of potential data entry errors or incomplete timestamps</li>
+  <li>Sorting Mechanism: Implement a stable sorting algorithm (such as merge sort or TimSort) to arrange records from earliest to latest chronological order, preserving the original metadata of each record.</li>
+  <li>Handle Ambiguous Timestamps: Develop a resolution strategy for records with:
+– Identical dates
+– Partial or imprecise date information
+– Potential conflicts in chronological placement</li>
+  <li>Create Ordered Sequence: Generate a new, sequentially ordered list of patient records that represents the patient's medical history in precise temporal progression.</li>
+  <li>Metadata Preservation: Ensure that each record maintains its original detailed information while being reordered, allowing for comprehensive review of medical history.</li>
+  <li>Output Preparation: Produce a chronologically sorted collection of patient records that can be easily reviewed by healthcare providers for comprehensive medical assessment.</li>
+</ol>
 
 <h4 id="reminders">Reminders</h4>
-<p>A simple algorithm has been created to send out reminders based on a schedule. It uses a clock to keep track of time and automatically triggers alerts for tasks or events at predetermined times. This tool is designed to be straightforward and user-friendly, helping individuals stay organized and on top of their schedules without the need for manual reminders. By providing timely notifications, it assists in managing daily routines and appointments efficiently.</p>
+<p>This algorithm is intended to send out reminders based on a schedule. It uses a clock to keep track of time and automatically triggers alerts for tasks or events at predetermined times. This tool is designed to be straightforward and user-friendly, helping individuals stay organized and on top of their schedules without the need for manual reminders. By providing timely notifications, it assists in managing daily routines and appointments efficiently.</p>
+
+<ol>
+  <li>Reminder Input: Capture event details including precise timestamp, description, and notification preference.</li>
+  <li>Time Tracking: Continuously monitor system clock against stored reminder timestamps.</li>
+  <li>Trigger Check: Compare current time with scheduled reminders, identifying when an alert should be generated.</li>
+  <li>Notification Dispatch: When time matches, immediately send personalized reminder through preferred communication channel.</li>
+  <li>Recurrence Management: Update recurring reminders by automatically calculating and setting next trigger time after each notification.</li>
+  <li>User Control: Provide basic options to modify, snooze, or delete individual reminders as needed.</li>
+</ol>
 
 <h4 id="summarize-document">Summarize Document</h4>
-<p>An algorithm has been developed to summarize patient records by converting them into a clinical text normal form. After this standardization, it then uses large language models to create a narrative text. This process simplifies complex medical data into a more readable format, making it easier for healthcare professionals to quickly understand a patient's history. The algorithm aims to enhance the efficiency of reviewing patient records by providing clear, concise summaries.</p>
+<p>This algorithm is intended to summarize patient records by converting them into a clinical text normal form. After this standardization, it then uses large language models to create a narrative text. This process simplifies complex medical data into a more readable format, making it easier for healthcare professionals to quickly understand a patient's history. The algorithm aims to enhance the efficiency of reviewing patient records by providing clear, concise summaries.</p>
 
-<h4 id="scuba-smart-agents">SCUBA Smart Agents</h4>
-<p>An algorithm has been designed, inspired by SCUBA diving technology, to act as a software agent that counts down a resource. This tool mimics the way a SCUBA diver's equipment monitors air supply, but it applies this concept to other resources that need tracking. The algorithm provides a countdown, alerting users as the resource depletes over time. This functionality is particularly useful in scenarios where managing the usage of a limited resource is critical, ensuring users are aware of the remaining quantity and can plan accordingly.</p>
+<ol>
+  <li>Ingest FHIR-formatted patient records.</li>
+  <li>Apply LLM-driven clinical text normalization to standardize medical terminology and structure.</li>
+  <li>Insert generated narrative summary into {Resource}.text.div field.</li>
+  <li>Gather all text.div narratives.</li>
+  <li>Apply a second round of LLM-driven analysis, and summarize into a coherent narrative summary.</li>
+  <li>Validate summary for clinical accuracy and patient privacy compliance.</li>
+</ol>
 
 <h4 id="gaps-in-care-reporting">Gaps in Care Reporting</h4>
-<p>An algorithm has been developed to generate reports on gaps in healthcare, specifically focusing on routine procedures like annual physicals or breast/prostate cancer screenings for middle-aged individuals. This tool scans patient records to identify when these important health checks are due or overdue. By highlighting these gaps, the algorithm assists healthcare providers in ensuring that patients receive timely and necessary medical attention. This approach aims to promote preventive healthcare and early detection, contributing to better health outcomes.</p>
+<p>This algorithm is intended to generate reports on gaps in healthcare, specifically focusing on routine procedures like annual physicals or breast/prostate cancer screenings for middle-aged individuals. This tool scans patient records to identify when these important health checks are due or overdue. By highlighting these gaps, the algorithm assists healthcare providers in ensuring that patients receive timely and necessary medical attention. This approach aims to promote preventive healthcare and early detection, contributing to better health outcomes.</p>
+
+<ol>
+  <li>Define Screening Criteria: Establish standard screening intervals for key health checks based on age, gender, and clinical guidelines.</li>
+  <li>Patient Record Analysis: Scan comprehensive patient records to identify most recent screening dates for each recommended procedure.</li>
+  <li>Gap Identification: Compare patient's last screening date against recommended interval, flagging procedures that are due or overdue.</li>
+  <li>Risk Stratification: Prioritize gaps based on patient age, medical history, and potential health risks.</li>
+  <li>Report Generation: Create a clear, actionable summary highlighting missed or upcoming preventive screenings.</li>
+  <li>Notification Preparation: Generate patient and provider alerts for recommended health interventions.</li>
+</ol>
+
+<h4 id="smart-agents-scuba-etc">Smart Agents (SCUBA, etc)</h4>
+<p>This algorithm is intended to act as a software agent that monitors a resource, such as Oxygen usage by a SCUBA diver. This tool mimics a SCUBA diver's dive computer which monitors the amount of air remaining, but applies this concept to other resources that need tracking. The algorithm provides a utilization metric, alerting users as the resource depletes over time. This functionality is particularly useful in scenarios where managing the usage of a limited resource is critical (i.e. remaining medication reserves), ensuring users are aware of the remaining quantity and can plan accordingly.</p>
+
+<ol>
+  <li>Initialize Resource Parameters: Define total resource quantity, critical threshold, and measurement interval.</li>
+  <li>Continuous Monitoring: Track real-time resource consumption and calculate remaining quantity.</li>
+  <li>Consumption Rate Calculation: Compute utilization velocity and projected depletion time.</li>
+  <li>Alert Generation: Create graduated warning levels as resource approaches critical thresholds.</li>
+  <li>Predictive Projection: Forecast estimated time remaining based on current consumption pattern.</li>
+  <li>User Notification: Dispatch alerts indicating resource status and recommended actions.</li>
+</ol>
 
 
 
@@ -271,7 +341,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  Package hl7.fhir.uv.phr#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 13, 2024 21:36-0600">2024-12-13</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  Package hl7.fhir.uv.phr#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Dec 15, 2024 10:45-0600">2024-12-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

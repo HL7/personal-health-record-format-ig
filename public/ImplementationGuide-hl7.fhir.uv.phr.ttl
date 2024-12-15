@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PatientHealthRecordsIG"] ; # 
   fhir:title [ fhir:v "Personal Health Records"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-13T21:36:12-06:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-15T10:45:04-06:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
@@ -1293,6 +1293,14 @@
          ] ) ;
          fhir:name [ fhir:v "api.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "API Endpoints" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "longitudinal.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "longitudinal.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Longitudinal Records" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;
