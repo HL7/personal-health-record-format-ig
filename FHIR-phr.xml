@@ -31,6 +31,7 @@
 <artifact id="ValueSet/apple-health-kit-workout-event-type-value-set" key="ValueSet-AppleHealthKitWorkoutEventTypeValueSet" name="Apple HealthKit Workout Event Type Value Set"/>
 <artifact id="StructureDefinition/AppleHealthKitWorkoutSample" key="StructureDefinition-AppleHealthKitWorkoutSample" name="Apple HealthKit Workout Sample Logical Model"/>
 <artifact id="StructureDefinition/Environmental" key="StructureDefinition-Environmental" name="Environmental"/>
+<artifact id="StructureDefinition/FinancialReceipt" key="StructureDefinition-FinancialReceipt" name="Financial Receipt"/>
 <artifact id="Patient/jane-doe" key="Patient-jane-doe" name="Jane Doe"/>
 <artifact id="Composition/jane-doe-composition" key="Composition-jane-doe-composition" name="Jane Doe Composition"/>
 <artifact id="DocumentReference/jane-doe-genomics-document" key="DocumentReference-jane-doe-genomics-document" name="Jane Doe PDF Report"/>
@@ -42,6 +43,7 @@
 <artifact id="StructureDefinition/pcd-sleep-observation" key="StructureDefinition-PCDSleepObservation" name="Patient contributed data: sleep observation"/>
 <artifact id="ValueSet/pcd-sleep-observation-code" key="ValueSet-PCDSleepObservationCode" name="Patient contributed data: sleep observation code"/>
 <artifact id="ValueSet/pcd-sleep-observation-value" key="ValueSet-PCDSleepStageValueCode" name="Patient contributed data: sleep stage value"/>
+<artifact id="Bundle/pdr-message" key="Bundle-pdr-message" name="PatientDataReceipt Message"/>
 <artifact id="StructureDefinition/PhrBundle" key="StructureDefinition-PhrBundle" name="PhrBundle"/>
 <artifact id="Bundle/PhrBundle-example" key="Bundle-PhrBundle-example" name="PhrBundle-example"/>
 <artifact id="StructureDefinition/PhrComposition" key="StructureDefinition-PhrComposition" name="PhrComposition"/>
@@ -74,7 +76,7 @@
 <page key="operating-systems" name="Operating Systems"/>
 <page key="personas" name="Patient Personas"/>
 <page key="personas-index" name="Patient Personas"/>
-<page key="physiology" name="Physiology Simulations"/>
+<page key="physiology" name="Physiology Domains"/>
 <page key="recordkeeping" name="Record Keeping"/>
 <page key="recordlifecycle" name="Record Lifecycle"/>
 <page key="security" name="Security"/>

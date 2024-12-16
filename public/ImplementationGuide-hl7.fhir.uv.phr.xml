@@ -14,7 +14,7 @@
   <name value="PatientHealthRecordsIG"/>
   <title value="Personal Health Records"/>
   <status value="draft"/>
-  <date value="2024-12-15T12:20:20-06:00"/>
+  <date value="2024-12-15T20:08:17-06:00"/>
   <publisher value="HL7 International / Patient Empowerment"/>
   <contact>
     <name value="HL7 International / Patient Empowerment"/>
@@ -742,6 +742,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/FinancialReceipt"/>
+      </reference>
+      <name value="Financial Receipt"/>
+      <description value="Financial receipt for over-the-counter (OTC) purchases.  Based off the Claim resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Patient"/>
       </extension>
       <reference>
@@ -838,6 +849,17 @@
       <name value="Patient contributed data: sleep stage value"/>
       <description value="This value set includes codes to track patient sleep values recorded by device or app"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/pdr-message"/>
+      </reference>
+      <name value="PatientDataReceipt Message"/>
+      <description value="An atomic update to a patient record; sent via a commit/push command and POST or PUT operation."/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1055,7 +1077,7 @@
           <valueUrl value="physiology.html"/>
         </extension>
         <nameUrl value="physiology.html"/>
-        <title value="Physiology Simulations"/>
+        <title value="Physiology Domains"/>
         <generation value="markdown"/>
       </page>
       <page>

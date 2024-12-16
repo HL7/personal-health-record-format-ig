@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Physiology Simulations - Personal Health Records v1.0.0-ballot</title>
+    <title>Physiology Domains - Personal Health Records v1.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -127,28 +127,28 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="api.html">Export APIs</a>
+        <a href="history.html">History</a>
       </li>
       <li>
         <a href="recordkeeping.html">Record Keeping</a>
       </li>
       <li>
+        <a href="longitudinal.html">Longitudinal Records</a>
+      </li>
+      <li>
+        <a href="api.html">Export APIs</a>
+      </li>
+      <li>
         <a href="annotations.html">Annotations</a>
-      </li>
-      <li>
-        <a href="history.html">History</a>
-      </li>
-      <li>
-        <a href="physiology.html">Physiology Simulations</a>
       </li>
       <li>
         <a href="algorithms.html">Algorithms</a>
       </li>
       <li>
-        <a href="operating-systems.html">Operating Systems</a>
+        <a href="physiology.html">Physiology Domains</a>
       </li>
       <li>
-        <a href="longitudinal.html">Longitudinal Records</a>
+        <a href="operating-systems.html">Operating Systems</a>
       </li>
     </ul>
   </li>
@@ -198,7 +198,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Physiology Simulations</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Physiology Domains</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -219,7 +219,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Personal Health Records - Local Development build (v1.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.org/fhir/uv/phr/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Physiology Simulations</h2>
+  <h2>Physiology Domains</h2>
   
 
 
@@ -236,18 +236,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#medical-domains" id="markdown-toc-medical-domains">Medical Domains</a></li>
+  <li><a href="#domain-analysis" id="markdown-toc-domain-analysis">Domain Analysis</a></li>
   <li><a href="#synthetic-data-generator-installation" id="markdown-toc-synthetic-data-generator-installation">Synthetic Data Generator Installation</a></li>
   <li><a href="#references" id="markdown-toc-references">References</a></li>
 </ul>
 
 </div>
 
-<p>Recurring challenges with designing PHR apps include figuring out which data to include (all of it?  just the hospital data?  fitness data?) and then finding suitable test data.  This implementation guide does not purport to provide algorithms or workflows for every medical category.  However, we can reference the Synthea synthetic data generator, and recommend that PHR developers use it's algorithms for generating sample data for various medical conditions.</p>
+<p>Recurring challenges with designing PHR apps include figuring out which data to include (all of it?  just the hospital data?  fitness data?) and then finding suitable test data.  This implementation guide does not purport to provide algorithms or workflows for every medical domain.  However, we can reference the Synthea synthetic data generator, and recommend that PHR developers use it's algorithms for generating sample data for various medical conditions.</p>
 
 <p><img src="./Tutorial-Dermatogram.jpg" alt="./Tutorial-Dermatogram.jpg" width="100%" /></p>
 
-<h3 id="medical-domains">Medical Domains</h3>
+<h3 id="domain-analysis">Domain Analysis</h3>
+
+<p>The following table provides links to clinical workflow simulations, relevant terminologies, file types, estimated data usage, and diagnostic algorithms used in various medical domains that are typically incorporated into electronic medical records.</p>
+
+<blockquote>
+  <p>Note:  the following table was partially generated using Claude LLM. Please review for accuracy.</p>
+</blockquote>
 
 <table>
   <thead>
@@ -266,168 +272,168 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: left"><a href="https://www.hl7.org/fhir/R4/valueset-sequence-type.html">Sequence Type</a> <br /> <a href="https://www.hl7.org/fhir/R4/valueset-chromosome-human.html">Human Chromosome</a> <br /></td>
       <td style="text-align: left">FASTQ, BAM, VCFs</td>
       <td style="text-align: left">~1TB</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left">Pharmacogenenomics <br /> Personalized Medicine <br /></td>
+      <td style="text-align: left">Annual/Lifetime</td>
+      <td style="text-align: left">Pharmacogenomics <br /> Personalized Medicine <br /> Genetic Risk Scoring</td>
     </tr>
     <tr>
       <td>Radiology</td>
-      <td style="text-align: left"><a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html">AcquisitionModality</a> <br /> <a href="https://www.hl7.org/fhir/valueset-bodysite-laterality.html">Laterality</a> <br />  <a href="https://www.hl7.org/fhir/valueset-body-site.html">SNOMED CT Body Structures</a> <br /></td>
-      <td style="text-align: left">DICOM, JPG</td>
+      <td style="text-align: left"><a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html">AcquisitionModality</a> <br /> <a href="https://www.hl7.org/fhir/valueset-bodysite-laterality.html">Laterality</a> <br /> <a href="https://www.hl7.org/fhir/valueset-body-site.html">SNOMED CT Body Structures</a> <br /></td>
+      <td style="text-align: left">DICOM, JPG, PNG</td>
       <td style="text-align: left">~1GB</td>
-      <td style="text-align: left">per study</td>
-      <td style="text-align: left">Surgical Planning <br /> Autosegmentation <br /> Medication Dosage</td>
+      <td style="text-align: left">Per Study</td>
+      <td style="text-align: left">Surgical Planning <br /> Autosegmentation <br /> Lesion Detection <br /> Radiation Therapy Planning</td>
     </tr>
     <tr>
       <td>Embryology</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left">PDF</td>
+      <td style="text-align: left"><a href="https://www.ncbi.nlm.nih.gov/books/NBK10794/">Embryonic Development Stages</a></td>
+      <td style="text-align: left">PDF, SVG</td>
       <td style="text-align: left">~100KB</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">Periodic Checkups</td>
+      <td style="text-align: left">Developmental Anomaly Detection <br /> Genetic Screening</td>
     </tr>
     <tr>
       <td><a href="https://github.com/synthetichealth/synthea/tree/master/src/main/resources/modules/dermatitis">Dermatology</a></td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://browser.ihtsdotools.org/">SNOMED CT Skin Conditions</a></td>
+      <td style="text-align: left">JPG, PNG, DICOM</td>
       <td style="text-align: left">~2MB</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">As Needed</td>
+      <td style="text-align: left">Skin Lesion Classification <br /> Melanoma Detection <br /> Dermatitis Progression</td>
     </tr>
     <tr>
       <td><a href="https://github.com/synthetichealth/synthea/blob/master/src/main/resources/modules/hypothyroidism.json">Endocrinology</a></td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.icd10data.com/ICD10CM/Codes/E00-E89">Endocrine Disorder Codes</a></td>
+      <td style="text-align: left">PDF, CSV</td>
       <td style="text-align: left">~100KB</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">Quarterly/Annually</td>
+      <td style="text-align: left">Hormone Level Analysis <br /> Thyroid Function Evaluation</td>
     </tr>
     <tr>
       <td><a href="https://github.com/synthetichealth/synthea/blob/master/src/main/resources/cdc_growth_charts.json">Pediatrics</a></td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.cdc.gov/growthcharts/">Pediatric Growth Standards</a></td>
+      <td style="text-align: left">PDF, CSV</td>
       <td style="text-align: left">~100KB</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">Periodic Checkups</td>
+      <td style="text-align: left">Growth Trajectory Monitoring <br /> Developmental Milestone Tracking</td>
     </tr>
     <tr>
       <td><a href="https://github.com/synthetichealth/synthea/blob/master/src/main/resources/biometrics.yml">Metabolism &amp; Biometrics</a></td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://loinc.org/">HL7 Observation Codes</a></td>
+      <td style="text-align: left">CSV, JSON</td>
       <td style="text-align: left">~100KB</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">Daily/Weekly</td>
+      <td style="text-align: left">Metabolic Rate Calculation <br /> Body Composition Analysis</td>
     </tr>
     <tr>
       <td><a href="https://github.com/synthetichealth/synthea/blob/master/src/main/resources/modules/epilepsy.json">Neurology</a></td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.who.int/standards/classifications/classification-of-diseases/international-classification-of-diseases">Neurological Disorder Classifications</a></td>
+      <td style="text-align: left">EEG, MRI, PDF</td>
       <td style="text-align: left">~100KB</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">Periodic/As Needed</td>
+      <td style="text-align: left">Seizure Pattern Recognition <br /> Neuroplasticity Mapping</td>
     </tr>
     <tr>
       <td><a href="https://github.com/synthetichealth/synthea/blob/master/src/main/resources/physiology/generators/circulation_hemodynamics.yml"> Cardiology &amp; Hemodynamics</a></td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.icd10data.com/ICD10CM/Codes/I00-I99">Cardiac Condition Codes</a></td>
+      <td style="text-align: left">ECG, DICOM</td>
       <td style="text-align: left">~5GB</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">Periodic/Continuous</td>
+      <td style="text-align: left">Arrhythmia Detection <br /> Cardiovascular Risk Scoring</td>
     </tr>
     <tr>
       <td><a href="https://github.com/synthetichealth/synthea/blob/master/src/main/resources/modules/lung_cancer.json">Pulmonology</a></td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.icd10data.com/ICD10CM/Codes/J00-J99">Respiratory Disorder Codes</a></td>
+      <td style="text-align: left">X-Ray, CT, PDF</td>
+      <td style="text-align: left">~500MB</td>
+      <td style="text-align: left">Periodic/As Needed</td>
+      <td style="text-align: left">Lung Function Analysis <br /> Cancer Progression Tracking</td>
     </tr>
     <tr>
       <td>Kinesthesiology</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.icd10data.com/ICD10CM/Codes/G00-G99">Movement Disorder Codes</a></td>
+      <td style="text-align: left">Video, CSV</td>
+      <td style="text-align: left">~200MB</td>
+      <td style="text-align: left">As Needed</td>
+      <td style="text-align: left">Movement Pattern Analysis <br /> Rehabilitation Tracking</td>
     </tr>
     <tr>
       <td><a href="https://github.com/synthetichealth/synthea/blob/master/src/main/resources/immunization_schedule.json">Immunology</a></td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.cdc.gov/vaccines/schedules/">Immunization Codes</a></td>
+      <td style="text-align: left">PDF, CSV</td>
       <td style="text-align: left">~100KB</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">Periodic</td>
+      <td style="text-align: left">Immune Response Profiling <br /> Vaccination Efficacy</td>
     </tr>
     <tr>
       <td><a href="https://github.com/synthetichealth/synthea/tree/master/src/main/resources/modules/covid19">Virology (COVID19)</a></td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.cdc.gov/coronavirus/2019-ncov/">COVID-19 Diagnostic Codes</a></td>
+      <td style="text-align: left">PDF, CSV</td>
       <td style="text-align: left">~20KB</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">Periodic/As Needed</td>
+      <td style="text-align: left">Viral Load Tracking <br /> Variant Identification</td>
     </tr>
     <tr>
       <td>Gastroenterology</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.icd10data.com/ICD10CM/Codes/K00-K95">Digestive System Disorder Codes</a></td>
+      <td style="text-align: left">Endoscopy, MRI</td>
       <td style="text-align: left">~4GB</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">As Needed</td>
+      <td style="text-align: left">Inflammatory Marker Analysis <br /> Digestive Function Evaluation</td>
     </tr>
     <tr>
       <td><a href="https://github.com/synthetichealth/synthea/blob/master/src/main/resources/modules/female_reproduction.json">Obstetrics</a></td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.icd10data.com/ICD10CM/Codes/O00-O9A">Pregnancy Complication Codes</a></td>
+      <td style="text-align: left">Ultrasound, PDF</td>
       <td style="text-align: left">~100MB</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">Periodic</td>
+      <td style="text-align: left">Fetal Development Monitoring <br /> High-Risk Pregnancy Identification</td>
     </tr>
     <tr>
       <td><a href="https://github.com/synthetichealth/synthea/blob/master/src/main/resources/modules/pregnancy.json">Pregnancy</a></td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.icd10data.com/ICD10CM/Codes/O00-O9A">Maternal Health Codes</a></td>
+      <td style="text-align: left">Ultrasound, PDF</td>
       <td style="text-align: left">~100MB</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">Monthly/Trimesterly</td>
+      <td style="text-align: left">Gestational Age Tracking <br /> Prenatal Health Assessment</td>
     </tr>
     <tr>
-      <td>Gynocology</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td>Gynecology</td>
+      <td style="text-align: left"><a href="https://www.icd10data.com/ICD10CM/Codes/N00-N99">Reproductive Health Codes</a></td>
+      <td style="text-align: left">Ultrasound, PDF</td>
+      <td style="text-align: left">~200MB</td>
+      <td style="text-align: left">Annual/As Needed</td>
+      <td style="text-align: left">Reproductive Health Screening <br /> Hormonal Balance Analysis</td>
     </tr>
     <tr>
       <td>Andrology</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.icd10data.com/ICD10CM/Codes/N00-N99">Male Reproductive Health Codes</a></td>
+      <td style="text-align: left">Semen Analysis, PDF</td>
+      <td style="text-align: left">~100MB</td>
+      <td style="text-align: left">Annual/As Needed</td>
+      <td style="text-align: left">Fertility Assessment <br /> Hormonal Profiling</td>
     </tr>
     <tr>
       <td><a href="https://github.com/synthetichealth/synthea/blob/master/src/main/resources/modules/urinary_tract_infections.json">Urology</a></td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.icd10data.com/ICD10CM/Codes/N00-N99">Urinary System Disorder Codes</a></td>
+      <td style="text-align: left">Ultrasound, CT</td>
+      <td style="text-align: left">~200MB</td>
+      <td style="text-align: left">Periodic/As Needed</td>
+      <td style="text-align: left">Kidney Function Analysis <br /> Urinary Tract Infection Tracking</td>
     </tr>
     <tr>
       <td><a href="https://github.com/synthetichealth/synthea/blob/master/src/main/resources/modules/wellness_encounters.json">Healthy Aging</a></td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.icd10data.com/ICD10CM/Codes/Z00-Z99">Geriatric Assessment Codes</a></td>
+      <td style="text-align: left">PDF, CSV</td>
+      <td style="text-align: left">~100KB</td>
+      <td style="text-align: left">Annual</td>
+      <td style="text-align: left">Cognitive Function Screening <br /> Lifestyle Risk Assessment</td>
     </tr>
     <tr>
       <td><a href="https://github.com/synthetichealth/synthea/blob/master/src/main/resources/modules/hospice_treatment.json">Hospice Care</a></td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://www.icd10data.com/ICD10CM/Codes/Z00-Z99">Palliative Care Codes</a></td>
+      <td style="text-align: left">PDF, Medical Records</td>
+      <td style="text-align: left">~200MB</td>
+      <td style="text-align: left">Ongoing</td>
+      <td style="text-align: left">Symptom Management <br /> Quality of Life Assessment</td>
     </tr>
   </tbody>
 </table>
@@ -468,7 +474,7 @@ git clone https://github.com/synthetichealth/synthea
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  Package hl7.fhir.uv.phr#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Dec 15, 2024 12:20-0600">2024-12-15</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  Package hl7.fhir.uv.phr#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Dec 15, 2024 20:08-0600">2024-12-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

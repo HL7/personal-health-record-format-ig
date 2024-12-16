@@ -1,6 +1,19 @@
 
 The following algorithms are provided for implementors who wish to add advanced functionalities to their PHR implmentations.
 
+#### Quality Control Checks  
+This algorithm is intended as a high-level quality control check for longitudinal records assembled from multiple healthcare systems.  
+
+1. Data Extraction and Integration: Collect and consolidate data from all relevant EHR sources into a unified repository.
+2. Deduplicate Records - Identify and remove duplicate entries to ensure data uniqueness and accuracy.
+3. Validate Resource Coherence: Ensure that all data entities and their relationships form a coherent and interconnected graph.
+4. Standardize Units of Measure: Convert all observations to consistent units of measure to maintain uniformity across the PHR.
+5. Ensure Terminology Consistency: Map and standardize medical terminologies to ensure semantic consistency throughout the record.
+6. Validate and Update Formulas: Review and update any derived data or calculated fields to use current and accurate formulas.
+7. Mitigate Social Determinate Bias: Analyze and adjust the data to align racial and sex/gender data.
+8. Verify Correct Patient Mapping: Confirm that all records are accurately associated with the correct patient using unique identifiers.
+
+
 #### Normalize Patient Identifiers
 The algorithm for normalizing patient identifiers is intended to ensure consistency in patient data across different healthcare systems. This process simplifies the management of a health records, aiming to enhance the accuracy and accessibility of these records. 
 

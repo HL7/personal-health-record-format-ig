@@ -26,8 +26,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.141"],
       "uses" : {
       },
-      "StructureDefinition-PhrMedia.html" : "PhrMedia",
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
+      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation",
+      "StructureDefinition-PhrMedia.html" : "PhrMedia"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
@@ -111,8 +111,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.241"],
       "uses" : {
       },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition",
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
+      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
+      "StructureDefinition-PhrComposition.html" : "PhrComposition"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
@@ -168,8 +168,8 @@
       "sources" : ["2.16.840.1.113883.3.88.12.80.46"],
       "uses" : {
       },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition",
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
+      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
+      "StructureDefinition-PhrComposition.html" : "PhrComposition"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/document-reference-status",
@@ -197,8 +197,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.244"],
       "uses" : {
       },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition",
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
+      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
+      "StructureDefinition-PhrComposition.html" : "PhrComposition"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/event-status",
@@ -254,15 +254,15 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-PhrMedia.html" : "PhrMedia",
-      "StructureDefinition-PhrProvenance.html" : "PhrProvenance",
       "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation",
-      "StructureDefinition-PhrComposition.html" : "PhrComposition",
-      "StructureDefinition-PhrPatient.html" : "PhrPatient",
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
       "StructureDefinition-SocialMedia.html" : "SocialMedia",
       "StructureDefinition-NutrientOuttake.html" : "Nutrient Outtake",
-      "StructureDefinition-PhrBundle.html" : "PhrBundle"
+      "StructureDefinition-PhrMedia.html" : "PhrMedia",
+      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
+      "StructureDefinition-PhrProvenance.html" : "PhrProvenance",
+      "StructureDefinition-PhrBundle.html" : "PhrBundle",
+      "StructureDefinition-PhrPatient.html" : "PhrPatient",
+      "StructureDefinition-PhrComposition.html" : "PhrComposition"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -700,10 +700,10 @@
       "uses" : {
       },
       "StructureDefinition-AppleHealthKitQuantitySample.html" : "Apple HealthKit Quantity Sample Logical Model",
-      "StructureDefinition-AppleHealthKitCorrelationSample.html" : "Apple HealthKit Correlation Sample Logical Model",
-      "StructureDefinition-AppleHealthKitWorkoutSample.html" : "Apple HealthKit Workout Sample Logical Model",
+      "StructureDefinition-AppleHealthKitCategorySample.html" : "Apple HealthKit Category Sample Logical Model",
       "StructureDefinition-AppleHealthKitSample.html" : "Apple HealthKit Sample Logical Model",
-      "StructureDefinition-AppleHealthKitCategorySample.html" : "Apple HealthKit Category Sample Logical Model"
+      "StructureDefinition-AppleHealthKitCorrelationSample.html" : "Apple HealthKit Correlation Sample Logical Model",
+      "StructureDefinition-AppleHealthKitWorkoutSample.html" : "Apple HealthKit Workout Sample Logical Model"
     },
     {
       "url" : "http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-workout-activity-type-value-set",
@@ -764,8 +764,8 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
       "uses" : {
       },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition",
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
+      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
+      "StructureDefinition-PhrComposition.html" : "PhrComposition"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification",

@@ -955,6 +955,14 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","The ambient temperature","The ambient temperature","","","","","","","","","",,,,,"",,,,"Environmental.temperature",1,1,"",""
 "Environmental","Environmental.humidity","Environmental.humidity","","","",1,1,"","","","BackboneElement {[]} {[]}
 ","The ambient humidity","The ambient humidity","","","","","","","","","",,,,,"",,,,"Environmental.humidity",1,1,"",""
+"FinancialReceipt","FinancialReceipt","FinancialReceipt","","","",0,*,"","","","null {[]} {[]}
+","Financial Receipt","Financial receipt for over-the-counter (OTC) purchases.  Based off the Claim resource.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FinancialReceipt","FinancialReceipt.subject","FinancialReceipt.subject","","","",1,1,"","","","Reference {[]} {[]}
+","The patient or person that purchased the item","The patient or person that purchased the item","","","","","","","","","",,,,,"",,,,"FinancialReceipt.subject",1,1,"",""
+"FinancialReceipt","FinancialReceipt.date","FinancialReceipt.date","","","",1,1,"","","","dateTime {[]} {[]}
+","The date that the item was purchased","The date that the item was purchased","","","","","","","","","",,,,,"",,,,"FinancialReceipt.date",1,1,"",""
+"FinancialReceipt","FinancialReceipt.amount","FinancialReceipt.amount","","","",1,1,"","","","Money {[]} {[]}
+","The amount that the item cost","The amount that the item cost","","","","","","","","","",,,,,"",,,,"FinancialReceipt.amount",1,1,"",""
 "NutrientOuttake","NutrientOuttake","NutrientOuttake","","","",0,*,"","","","null {[]} {[]}
 ","Nutrient Outtake","Standard PHR profile of the NutrientOuttake resource.","","","","","","","","","",,,,,"",,,,"DomainResource",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
 dom-3:If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource {contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()}dom-4:If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated {contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()}dom-5:If a resource is contained in another resource, it SHALL NOT have a security label {contained.meta.security.empty()}dom-6:A resource should have narrative for robust management {text.`div`.exists()}"

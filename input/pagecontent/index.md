@@ -73,9 +73,6 @@ This guide is particularly interested in the problem of collecting and aggregati
 Copyright (c) 2021+ Health Level Seven International and MITRE.org.   
 Published under the Creative Commons "Attribution 4.0 International" (CC BY 4.0) License
 
-#### IP Statements
-{% include ip-statements.xhtml %} 
-
 #### Dependencies
 {% include dependency-table.xhtml %}
 
@@ -84,3 +81,6 @@ Published under the Creative Commons "Attribution 4.0 International" (CC BY 4.0)
 
 #### Cross Version Analysis
 {% include cross-version-analysis.xhtml %}
+
+#### IP Statements
+{% include ip-statements.xhtml %} 

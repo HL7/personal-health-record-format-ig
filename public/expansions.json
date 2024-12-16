@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "404cdd8f-7d68-438d-8075-9ac317e457d7",
+  "id" : "6c1b1ed6-c779-4462-9897-ca3fb9b90eb4",
   "meta" : {
-    "lastUpdated" : "2024-12-15T12:20:20.158-06:00"
+    "lastUpdated" : "2024-12-15T20:08:17.739-06:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,7 +19,7 @@
       "title" : "Apple HealthKit Biological Sex Value Set",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2024-12-15T12:20:20-06:00",
+      "date" : "2024-12-15T20:08:17-06:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -28,8 +28,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:2a5664be-6ba8-409b-ab79-ae3a19733f5f",
-        "timestamp" : "2024-12-15T12:20:42-06:00",
+        "identifier" : "urn:uuid:4f3beb87-b456-484a-968e-ab91c2721680",
+        "timestamp" : "2024-12-15T20:08:42-06:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -85,7 +85,7 @@
       "title" : "Apple HealthKit Category Type Value Set",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2024-12-15T12:20:20-06:00",
+      "date" : "2024-12-15T20:08:17-06:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -94,8 +94,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:c7e99b73-555a-44b4-b6b7-90214c14b4e4",
-        "timestamp" : "2024-12-15T12:20:42-06:00",
+        "identifier" : "urn:uuid:76e44fe4-2766-48e1-9934-377d3aacbbba",
+        "timestamp" : "2024-12-15T20:08:42-06:00",
         "total" : 65,
         "offset" : 0,
         "parameter" : [{
@@ -391,7 +391,7 @@
       "title" : "Apple HealthKit Charactersitic Type Value Set",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2024-12-15T12:20:20-06:00",
+      "date" : "2024-12-15T20:08:17-06:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -400,8 +400,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:abe8da8e-b8df-4470-bdc9-ef09375df188",
-        "timestamp" : "2024-12-15T12:20:42-06:00",
+        "identifier" : "urn:uuid:b17bf633-3eb7-41de-9ce8-48a4333e7c6d",
+        "timestamp" : "2024-12-15T20:08:42-06:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -445,7 +445,7 @@
       "title" : "Apple HealthKit Correlation Type Value Set",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2024-12-15T12:20:20-06:00",
+      "date" : "2024-12-15T20:08:17-06:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -454,8 +454,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:94778977-d535-4cd5-953d-071d2cfd6f1a",
-        "timestamp" : "2024-12-15T12:20:42-06:00",
+        "identifier" : "urn:uuid:03349ac9-c1c5-4595-8355-0c376d8eb16c",
+        "timestamp" : "2024-12-15T20:08:42-06:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -499,7 +499,7 @@
       "title" : "Apple HealthKit Quantity Type Value Set",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2024-12-15T12:20:20-06:00",
+      "date" : "2024-12-15T20:08:17-06:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -508,8 +508,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:82fc7e07-090a-4be0-b253-fabde9a6635e",
-        "timestamp" : "2024-12-15T12:20:42-06:00",
+        "identifier" : "urn:uuid:1f85a46b-be5a-4030-9fdf-c569d296228a",
+        "timestamp" : "2024-12-15T20:08:42-06:00",
         "total" : 80,
         "offset" : 0,
         "parameter" : [{
@@ -944,7 +944,7 @@
       "title" : "Apple HealthKit Sample Type Value Set",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2024-12-15T12:20:20-06:00",
+      "date" : "2024-12-15T20:08:17-06:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -953,8 +953,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:f02e6961-520a-48f9-85eb-c6e7cb4c46af",
-        "timestamp" : "2024-12-15T12:20:42-06:00",
+        "identifier" : "urn:uuid:68fd673c-ea77-4e92-9243-b915b56ab27a",
+        "timestamp" : "2024-12-15T20:08:42-06:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -1019,7 +1019,7 @@
       "title" : "Apple HealthKit Workout Activity Type Value Set",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2024-12-15T12:20:20-06:00",
+      "date" : "2024-12-15T20:08:17-06:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -1028,8 +1028,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:8e39a19f-7939-47bc-8b0c-d52c0b9ced41",
-        "timestamp" : "2024-12-15T12:20:42-06:00",
+        "identifier" : "urn:uuid:b54d6202-3047-4e11-bf40-a5843670cc63",
+        "timestamp" : "2024-12-15T20:08:42-06:00",
         "total" : 83,
         "offset" : 0,
         "parameter" : [{
@@ -1400,7 +1400,7 @@
       "title" : "Apple HealthKit Workout Event Type Value Set",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2024-12-15T12:20:20-06:00",
+      "date" : "2024-12-15T20:08:17-06:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -1409,8 +1409,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:66ded9da-0bb9-4664-bec7-00abd53c8690",
-        "timestamp" : "2024-12-15T12:20:43-06:00",
+        "identifier" : "urn:uuid:5586e1dc-ba42-4084-98a9-b9dba92d273c",
+        "timestamp" : "2024-12-15T20:08:42-06:00",
         "total" : 8,
         "offset" : 0,
         "parameter" : [{
@@ -1486,7 +1486,7 @@
       "title" : "Patient contributed data: sleep observation code",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2024-12-15T12:20:20-06:00",
+      "date" : "2024-12-15T20:08:17-06:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -1495,8 +1495,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:e86b2c93-ec1e-440a-a03c-10e6e280d2fe",
-        "timestamp" : "2024-12-15T12:20:43-06:00",
+        "identifier" : "urn:uuid:dda3a356-2717-4f67-b915-9da6ec15bbf8",
+        "timestamp" : "2024-12-15T20:08:42-06:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -1577,7 +1577,7 @@
       "title" : "Patient contributed data: sleep stage value",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2024-12-15T12:20:20-06:00",
+      "date" : "2024-12-15T20:08:17-06:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -1586,8 +1586,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:f0de399a-0f46-43fc-9c19-7de993b2f555",
-        "timestamp" : "2024-12-15T12:20:43-06:00",
+        "identifier" : "urn:uuid:9646a96a-9ceb-40a2-983b-e1a3a64f78b6",
+        "timestamp" : "2024-12-15T20:08:43-06:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{

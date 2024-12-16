@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PatientHealthRecordsIG"] ; # 
   fhir:title [ fhir:v "Personal Health Records"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-15T12:20:20-06:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-15T20:08:17-06:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
@@ -836,6 +836,18 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/phr/StructureDefinition/FinancialReceipt> ;
+         fhir:reference [ fhir:v "StructureDefinition/FinancialReceipt" ]
+       ] ;
+       fhir:name [ fhir:v "Financial Receipt" ] ;
+       fhir:description [ fhir:v "Financial receipt for over-the-counter (OTC) purchases.  Based off the Claim resource." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "Patient" ]
        ] ) ;
        fhir:reference [
@@ -956,6 +968,18 @@
        fhir:name [ fhir:v "Patient contributed data: sleep stage value" ] ;
        fhir:description [ fhir:v "This value set includes codes to track patient sleep values recorded by device or app" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/phr/Bundle/pdr-message> ;
+         fhir:reference [ fhir:v "Bundle/pdr-message" ]
+       ] ;
+       fhir:name [ fhir:v "PatientDataReceipt Message" ] ;
+       fhir:description [ fhir:v "An atomic update to a patient record; sent via a commit/push command and POST or PUT operation." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1196,7 +1220,7 @@
            fhir:value [ fhir:v "physiology.html"^^xsd:anyURI ]
          ] ) ;
          fhir:name [ fhir:v "physiology.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Physiology Simulations" ] ;
+         fhir:title [ fhir:v "Physiology Domains" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
@@ -1404,6 +1428,8 @@
 
 <http://hl7.org/fhir/uv/phr/StructureDefinition/Environmental> a fhir:uv .
 
+<http://hl7.org/fhir/uv/phr/StructureDefinition/FinancialReceipt> a fhir:uv .
+
 <http://hl7.org/fhir/uv/phr/Patient/jane-doe> a fhir:uv .
 
 <http://hl7.org/fhir/uv/phr/Composition/jane-doe-composition> a fhir:uv .
@@ -1421,6 +1447,8 @@
 <http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code> a fhir:uv .
 
 <http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-value> a fhir:uv .
+
+<http://hl7.org/fhir/uv/phr/Bundle/pdr-message> a fhir:uv .
 
 <http://hl7.org/fhir/uv/phr/Observation/PCDSleepObservation-duration-example> a fhir:uv .
 

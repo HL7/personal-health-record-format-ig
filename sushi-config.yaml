@@ -90,14 +90,14 @@ menu:
     Record Lifecycle: recordlifecycle.html
     Security: security.html
   Supplemental:
-    Export APIs: api.html
-    Record Keeping: recordkeeping.html
-    Annotations: annotations.html
     History: history.html
-    Physiology Simulations: physiology.html
-    Algorithms: algorithms.html
-    Operating Systems: operating-systems.html
+    Record Keeping: recordkeeping.html
     Longitudinal Records: longitudinal.html
+    Export APIs: api.html
+    Annotations: annotations.html
+    Algorithms: algorithms.html
+    Physiology Domains: physiology.html
+    Operating Systems: operating-systems.html
   Patient Personas:
     Index: personas-index.html
     Thompson Familiy: persona-thompson-family.html
@@ -129,7 +129,7 @@ pages:
   history.md:
     title: History    
   physiology.md:
-    title: Physiology Simulations
+    title: Physiology Domains
   personas.md:
     title: Patient Personas
   persona-william.md:

@@ -147,6 +147,13 @@
     "name" : "Environmental"
   },
   {
+    "id" : "FinancialReceipt",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/phr/StructureDefinition/FinancialReceipt",
+    "version" : "1.0.0-ballot",
+    "name" : "FinancialReceipt"
+  },
+  {
     "id" : "NutrientOuttake",
     "type" : "StructureDefinition",
     "url" : "http://hl7.org/fhir/uv/phr/StructureDefinition/NutrientOuttake",
