@@ -14,7 +14,7 @@
   "name" : "PatientHealthRecordsIG",
   "title" : "Personal Health Records",
   "status" : "draft",
-  "date" : "2024-12-15T20:08:17-06:00",
+  "date" : "2024-12-18T01:48:59-06:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [{
     "name" : "HL7 International / Patient Empowerment",
@@ -73,7 +73,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "ci-build"
+        "valueString" : "ballot"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -352,7 +352,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "ci-build"
+        "valueString" : "ballot"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -1373,7 +1373,7 @@
           "valueUrl" : "personas-index.html"
         }],
         "nameUrl" : "personas-index.html",
-        "title" : "Patient Personas",
+        "title" : "Personas Index",
         "generation" : "markdown"
       },
       {

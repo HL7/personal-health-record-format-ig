@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PatientHealthRecordsIG"] ; # 
   fhir:title [ fhir:v "Personal Health Records"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-15T20:08:17-06:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-18T01:48:59-06:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
@@ -82,7 +82,7 @@
          fhir:value [ fhir:v "releaselabel" ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ci-build" ]
+         fhir:value [ fhir:v "ballot" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
@@ -310,7 +310,7 @@
          fhir:value [ fhir:v "releaselabel" ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ci-build" ]
+         fhir:value [ fhir:v "ballot" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
@@ -1292,7 +1292,7 @@
            fhir:value [ fhir:v "personas-index.html"^^xsd:anyURI ]
          ] ) ;
          fhir:name [ fhir:v "personas-index.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Patient Personas" ] ;
+         fhir:title [ fhir:v "Personas Index" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

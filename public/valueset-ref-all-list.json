@@ -255,14 +255,14 @@
       "uses" : {
       },
       "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation",
-      "StructureDefinition-SocialMedia.html" : "SocialMedia",
-      "StructureDefinition-NutrientOuttake.html" : "Nutrient Outtake",
       "StructureDefinition-PhrMedia.html" : "PhrMedia",
+      "StructureDefinition-SocialMedia.html" : "SocialMedia",
       "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
+      "StructureDefinition-NutrientOuttake.html" : "Nutrient Outtake",
       "StructureDefinition-PhrProvenance.html" : "PhrProvenance",
       "StructureDefinition-PhrBundle.html" : "PhrBundle",
-      "StructureDefinition-PhrPatient.html" : "PhrPatient",
-      "StructureDefinition-PhrComposition.html" : "PhrComposition"
+      "StructureDefinition-PhrComposition.html" : "PhrComposition",
+      "StructureDefinition-PhrPatient.html" : "PhrPatient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -700,10 +700,10 @@
       "uses" : {
       },
       "StructureDefinition-AppleHealthKitQuantitySample.html" : "Apple HealthKit Quantity Sample Logical Model",
-      "StructureDefinition-AppleHealthKitCategorySample.html" : "Apple HealthKit Category Sample Logical Model",
       "StructureDefinition-AppleHealthKitSample.html" : "Apple HealthKit Sample Logical Model",
-      "StructureDefinition-AppleHealthKitCorrelationSample.html" : "Apple HealthKit Correlation Sample Logical Model",
-      "StructureDefinition-AppleHealthKitWorkoutSample.html" : "Apple HealthKit Workout Sample Logical Model"
+      "StructureDefinition-AppleHealthKitCategorySample.html" : "Apple HealthKit Category Sample Logical Model",
+      "StructureDefinition-AppleHealthKitWorkoutSample.html" : "Apple HealthKit Workout Sample Logical Model",
+      "StructureDefinition-AppleHealthKitCorrelationSample.html" : "Apple HealthKit Correlation Sample Logical Model"
     },
     {
       "url" : "http://hl7.org/fhir/uv/phr/ValueSet/apple-health-kit-workout-activity-type-value-set",

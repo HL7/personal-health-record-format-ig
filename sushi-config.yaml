@@ -93,7 +93,7 @@ menu:
     History: history.html
     Record Keeping: recordkeeping.html
     Longitudinal Records: longitudinal.html
-    Export APIs: api.html
+    API Endpoints: api.html
     Annotations: annotations.html
     Algorithms: algorithms.html
     Physiology Domains: physiology.html
@@ -147,7 +147,7 @@ pages:
   persona-journey-e.md:
     title: Marcella
   personas-index.md:
-    title: Patient Personas
+    title: Personas Index
   operating-systems.md:
     title: Operating Systems
   algorithms.md:

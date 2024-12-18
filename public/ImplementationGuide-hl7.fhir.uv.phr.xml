@@ -14,7 +14,7 @@
   <name value="PatientHealthRecordsIG"/>
   <title value="Personal Health Records"/>
   <status value="draft"/>
-  <date value="2024-12-15T20:08:17-06:00"/>
+  <date value="2024-12-18T01:48:59-06:00"/>
   <publisher value="HL7 International / Patient Empowerment"/>
   <contact>
     <name value="HL7 International / Patient Empowerment"/>
@@ -64,7 +64,7 @@
         <valueString value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="ci-build"/>
+        <valueString value="ballot"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -267,7 +267,7 @@
         <valueCode value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="ci-build"/>
+        <valueString value="ballot"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -1149,7 +1149,7 @@
           <valueUrl value="personas-index.html"/>
         </extension>
         <nameUrl value="personas-index.html"/>
-        <title value="Patient Personas"/>
+        <title value="Personas Index"/>
         <generation value="markdown"/>
       </page>
       <page>
