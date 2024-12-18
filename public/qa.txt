@@ -1,10 +1,10 @@
 PatientHealthRecordsIG : Validation Results
 =========================================
 
-err = 0, warn = 1, info = 0
+err = 0, warn = 0, info = 0
 IG Publisher Version: 1.8.3
-Generated Wed Dec 18 01:49:52 CST 2024. FHIR version 4.0.1 for hl7.fhir.uv.phr#1.0.0-ballot (canonical = http://hl7.org/fhir/uv/phr)
- Build Errors : 0 / 1 / 0
+Generated Wed Dec 18 11:21:46 CST 2024. FHIR version 4.0.1 for hl7.fhir.uv.phr#1.0.0-ballot (canonical = http://hl7.org/fhir/uv/phr)
+ Build Errors : 0 / 0 / 0
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Bundle-PhrBundle-example : 0 / 0 / 14
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Bundle-pdr-message : 0 / 0 / 6
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-apple-health-kit-biological-sex-code-system : 0 / 0 / 2
@@ -57,7 +57,6 @@ Generated Wed Dec 18 01:49:52 CST 2024. FHIR version 4.0.1 for hl7.fhir.uv.phr#1
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/ValueSet-pcd-sleep-observation-value : 0 / 0 / 1
 </table>
 == n/a ==
-WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content)
 == fsh-generated/resources/Bundle-PhrBundle-example.json ==
 == fsh-generated/resources/Bundle-pdr-message.json ==
 == fsh-generated/resources/CodeSystem-apple-health-kit-biological-sex-code-system.json ==
