@@ -64,10 +64,6 @@
     "http://hl7.org/fhir/StructureDefinition/geolocation": [
       "Bundle.entry.resource.address"
     ],
-    "http://hl7.org/fhir/StructureDefinition/organization-period": [
-      "AppleHealthKitWorkoutActivity",
-      "AppleHealthKitWorkoutEvent.dateInterval"
-    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
       "StructureDefinition.snapshot.element"
     ],
@@ -78,7 +74,6 @@
       "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg": [
-      "CodeSystem",
       "ImplementationGuide",
       "SearchParameter",
       "StructureDefinition",
