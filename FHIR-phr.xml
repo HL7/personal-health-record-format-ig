@@ -30,58 +30,58 @@
 <artifact deprecated="true" id="CodeSystem/apple-health-kit-workout-event-type-code-system" key="CodeSystem-AppleHealthKitWorkoutEventTypeCodeSystem" name="Apple HealthKit Workout Event Type Code System"/>
 <artifact deprecated="true" id="ValueSet/apple-health-kit-workout-event-type-value-set" key="ValueSet-AppleHealthKitWorkoutEventTypeValueSet" name="Apple HealthKit Workout Event Type Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/AppleHealthKitWorkoutSample" key="StructureDefinition-AppleHealthKitWorkoutSample" name="Apple HealthKit Workout Sample Logical Model"/>
-<artifact id="StructureDefinition/Environmental" key="StructureDefinition-Environmental" name="Environmental"/>
-<artifact id="StructureDefinition/FinancialReceipt" key="StructureDefinition-FinancialReceipt" name="Financial Receipt"/>
-<artifact id="Patient/jane-doe" key="Patient-jane-doe" name="Jane Doe"/>
-<artifact id="Composition/jane-doe-composition" key="Composition-jane-doe-composition" name="Jane Doe Composition"/>
-<artifact id="DocumentReference/jane-doe-genomics-document" key="DocumentReference-jane-doe-genomics-document" name="Jane Doe PDF Report"/>
-<artifact id="Media/jane-doe-media" key="Media-jane-doe-media" name="Jane Doe Smartphone Photo"/>
-<artifact id="Provenance/jane-doe-media-provenance" key="Provenance-jane-doe-media-provenance" name="Jane Doe's Photo Provenance"/>
-<artifact id="StructureDefinition/NutrientOuttake" key="StructureDefinition-NutrientOuttake" name="Nutrient Outtake"/>
-<artifact id="Observation/PCDSleepObservation-duration-example" key="Observation-PCDSleepObservation-duration-example" name="PCDSleepObservation-duration-example"/>
-<artifact id="Observation/PCDSleepObservation-stage-example" key="Observation-PCDSleepObservation-stage-example" name="PCDSleepObservation-stage-example"/>
-<artifact id="StructureDefinition/pcd-sleep-observation" key="StructureDefinition-PCDSleepObservation" name="Patient contributed data: sleep observation"/>
-<artifact id="ValueSet/pcd-sleep-observation-code" key="ValueSet-PCDSleepObservationCode" name="Patient contributed data: sleep observation code"/>
-<artifact id="ValueSet/pcd-sleep-observation-value" key="ValueSet-PCDSleepStageValueCode" name="Patient contributed data: sleep stage value"/>
-<artifact id="Bundle/pdr-message" key="Bundle-pdr-message" name="PatientDataReceipt Message"/>
-<artifact id="StructureDefinition/PhrBundle" key="StructureDefinition-PhrBundle" name="PhrBundle"/>
-<artifact id="Bundle/PhrBundle-example" key="Bundle-PhrBundle-example" name="PhrBundle-example"/>
-<artifact id="StructureDefinition/PhrComposition" key="StructureDefinition-PhrComposition" name="PhrComposition"/>
-<artifact id="StructureDefinition/PhrDocumentReference" key="StructureDefinition-PhrDocumentReference" name="PhrDocumentReference"/>
-<artifact id="StructureDefinition/PhrMedia" key="StructureDefinition-PhrMedia" name="PhrMedia"/>
-<artifact id="StructureDefinition/PhrPatient" key="StructureDefinition-PhrPatient" name="PhrPatient"/>
-<artifact id="StructureDefinition/PhrProvenance" key="StructureDefinition-PhrProvenance" name="PhrProvenance"/>
-<artifact id="SearchParameter/search-from-date" key="SearchParameter-search-from-date" name="Search From Date"/>
-<artifact id="SearchParameter/patient-identifier" key="SearchParameter-patient-identifier" name="Search by identifier in patient with multipleOr"/>
-<artifact id="StructureDefinition/SocialMedia" key="StructureDefinition-SocialMedia" name="SocialMedia"/>
+<artifact deprecated="true" id="StructureDefinition/Environmental" key="StructureDefinition-Environmental" name="Environmental"/>
+<artifact deprecated="true" id="StructureDefinition/FinancialReceipt" key="StructureDefinition-FinancialReceipt" name="Financial Receipt"/>
+<artifact deprecated="true" id="Patient/jane-doe" key="Patient-jane-doe" name="Jane Doe"/>
+<artifact deprecated="true" id="Composition/jane-doe-composition" key="Composition-jane-doe-composition" name="Jane Doe Composition"/>
+<artifact deprecated="true" id="DocumentReference/jane-doe-genomics-document" key="DocumentReference-jane-doe-genomics-document" name="Jane Doe PDF Report"/>
+<artifact deprecated="true" id="Media/jane-doe-media" key="Media-jane-doe-media" name="Jane Doe Smartphone Photo"/>
+<artifact deprecated="true" id="Provenance/jane-doe-media-provenance" key="Provenance-jane-doe-media-provenance" name="Jane Doe's Photo Provenance"/>
+<artifact deprecated="true" id="StructureDefinition/NutrientOuttake" key="StructureDefinition-NutrientOuttake" name="Nutrient Outtake"/>
+<artifact deprecated="true" id="Observation/PCDSleepObservation-duration-example" key="Observation-PCDSleepObservation-duration-example" name="PCDSleepObservation-duration-example"/>
+<artifact deprecated="true" id="Observation/PCDSleepObservation-stage-example" key="Observation-PCDSleepObservation-stage-example" name="PCDSleepObservation-stage-example"/>
+<artifact deprecated="true" id="StructureDefinition/pcd-sleep-observation" key="StructureDefinition-PCDSleepObservation" name="Patient contributed data: sleep observation"/>
+<artifact deprecated="true" id="ValueSet/pcd-sleep-observation-code" key="ValueSet-PCDSleepObservationCode" name="Patient contributed data: sleep observation code"/>
+<artifact deprecated="true" id="ValueSet/pcd-sleep-observation-value" key="ValueSet-PCDSleepStageValueCode" name="Patient contributed data: sleep stage value"/>
+<artifact deprecated="true" id="Bundle/pdr-message" key="Bundle-pdr-message" name="PatientDataReceipt Message"/>
+<artifact deprecated="true" id="StructureDefinition/PhrBundle" key="StructureDefinition-PhrBundle" name="PhrBundle"/>
+<artifact deprecated="true" id="Bundle/PhrBundle-example" key="Bundle-PhrBundle-example" name="PhrBundle-example"/>
+<artifact deprecated="true" id="StructureDefinition/PhrComposition" key="StructureDefinition-PhrComposition" name="PhrComposition"/>
+<artifact deprecated="true" id="StructureDefinition/PhrDocumentReference" key="StructureDefinition-PhrDocumentReference" name="PhrDocumentReference"/>
+<artifact deprecated="true" id="StructureDefinition/PhrMedia" key="StructureDefinition-PhrMedia" name="PhrMedia"/>
+<artifact deprecated="true" id="StructureDefinition/PhrPatient" key="StructureDefinition-PhrPatient" name="PhrPatient"/>
+<artifact deprecated="true" id="StructureDefinition/PhrProvenance" key="StructureDefinition-PhrProvenance" name="PhrProvenance"/>
+<artifact deprecated="true" id="SearchParameter/search-from-date" key="SearchParameter-search-from-date" name="Search From Date"/>
+<artifact deprecated="true" id="SearchParameter/patient-identifier" key="SearchParameter-patient-identifier" name="Search by identifier in patient with multipleOr"/>
+<artifact deprecated="true" id="StructureDefinition/SocialMedia" key="StructureDefinition-SocialMedia" name="SocialMedia"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
-<page key="api" name="API Endpoints"/>
-<page key="algorithms" name="Algorithms"/>
-<page key="persona-journey-a" name="Anne"/>
-<page key="annotations" name="Annotations"/>
+<page deprecated="true" key="api" name="API Endpoints"/>
+<page deprecated="true" key="algorithms" name="Algorithms"/>
+<page deprecated="true" key="persona-journey-a" name="Anne"/>
+<page deprecated="true" key="annotations" name="Annotations"/>
 <page key="artifacts" name="Artifacts Summary"/>
-<page key="conformance" name="Conformance Recommendations"/>
-<page key="datamodel" name="Data Model"/>
+<page deprecated="true" key="conformance" name="Conformance Recommendations"/>
+<page deprecated="true" key="datamodel" name="Data Model"/>
 <page deprecated="true" key="datastorage" name="Data Storage"/>
 <page deprecated="true" key="downloads" name="Downloads"/>
-<page key="persona-journey-b" name="Earl"/>
+<page deprecated="true" key="persona-journey-b" name="Earl"/>
 <page deprecated="true" key="environments" name="Environments"/>
-<page key="functionality" name="Functional Model"/>
+<page deprecated="true" key="functionality" name="Functional Model"/>
 <page key="index" name="Getting Started"/>
-<page key="history" name="History"/>
-<page key="longitudinal" name="Longitudinal Records"/>
-<page key="persona-journey-e" name="Marcella"/>
-<page key="persona-journey-c" name="Markus"/>
-<page key="operating-systems" name="Operating Systems"/>
-<page key="personas" name="Patient Personas"/>
-<page key="personas-index" name="Personas Index"/>
-<page key="physiology" name="Physiology Domains"/>
-<page key="recordkeeping" name="Record Keeping"/>
-<page key="recordlifecycle" name="Record Lifecycle"/>
-<page key="security" name="Security"/>
+<page deprecated="true" key="history" name="History"/>
+<page deprecated="true" key="longitudinal" name="Longitudinal Records"/>
+<page deprecated="true" key="persona-journey-e" name="Marcella"/>
+<page deprecated="true" key="persona-journey-c" name="Markus"/>
+<page deprecated="true" key="operating-systems" name="Operating Systems"/>
+<page deprecated="true" key="personas" name="Patient Personas"/>
+<page deprecated="true" key="personas-index" name="Personas Index"/>
+<page deprecated="true" key="physiology" name="Physiology Domains"/>
+<page deprecated="true" key="recordkeeping" name="Record Keeping"/>
+<page deprecated="true" key="recordlifecycle" name="Record Lifecycle"/>
+<page deprecated="true" key="security" name="Security"/>
 <page key="toc" name="Table of Contents"/>
-<page key="persona-thompson-family" name="Thompson Family"/>
-<page key="persona-william" name="William Sim"/>
-<page key="persona-journey-d" name="Wilma"/>
+<page deprecated="true" key="persona-thompson-family" name="Thompson Family"/>
+<page deprecated="true" key="persona-william" name="William Sim"/>
+<page deprecated="true" key="persona-journey-d" name="Wilma"/>
 </specification>
