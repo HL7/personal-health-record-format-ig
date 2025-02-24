@@ -9,6 +9,6 @@
     "category": "Personal Healthcare",
     "ci-build": "https://build.fhir.org/ig/HL7/personal-health-record-format-ig",
     "title": "Personal Health Record",
-    "introduction": "A specifcation for a personal health record file format, for collecting and assembling longitudinal records from multiple EHR vendors",
+    "introduction": "A specifcation for a personal health record file format, for collecting and assembling longitudinal records from multiple EHR vendors and consumer medical devices",
     "desc" : "The initial release of this implementation guide."
 }
