@@ -14,7 +14,7 @@
   <name value="PatientHealthRecordsIG"/>
   <title value="Personal Health Records"/>
   <status value="draft"/>
-  <date value="2024-12-18T11:20:50-06:00"/>
+  <date value="2025-03-04T22:49:02-06:00"/>
   <publisher value="HL7 International / Patient Empowerment"/>
   <contact>
     <name value="HL7 International / Patient Empowerment"/>
@@ -40,7 +40,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="6.1.0"/>
+    <version value="6.2.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -48,7 +48,7 @@
     </extension>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
-    <version value="5.1.0"/>
+    <version value="5.2.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -454,281 +454,6 @@
         <valueString value="true"/>
       </extension>
     </extension>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/apple-health-kit-biological-sex-code-system"/>
-      </reference>
-      <name value="Apple HealthKit Biological Sex Code System"/>
-      <description value="Constants indicating the user’s sex."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/apple-health-kit-biological-sex-value-set"/>
-      </reference>
-      <name value="Apple HealthKit Biological Sex Value Set"/>
-      <description value="Apple HealthKit Biological Sex Value Set"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/AppleHealthKitCategorySample"/>
-      </reference>
-      <name value="Apple HealthKit Category Sample Logical Model"/>
-      <description value="Data elements for the Apple HealthKit HKCategorySample."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/apple-health-kit-category-type-code-system"/>
-      </reference>
-      <name value="Apple HealthKit Category Type Code System"/>
-      <description value="HKCategoryTypeIdentifier - Identifiers for creating category types."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/apple-health-kit-category-type-value-set"/>
-      </reference>
-      <name value="Apple HealthKit Category Type Value Set"/>
-      <description value="A type that identifies samples that contain a value from a small set of possible values."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/apple-health-kit-characteristic-type-code-system"/>
-      </reference>
-      <name value="Apple HealthKit Characteristic Type Code System"/>
-      <description value="The identifiers that create characteristic type objects."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/apple-health-kit-characteristic-type-value-set"/>
-      </reference>
-      <name value="Apple HealthKit Charactersitic Type Value Set"/>
-      <description value="Apple HealthKit Charactersitic Type Value Set"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/AppleHealthKitCorrelationSample"/>
-      </reference>
-      <name value="Apple HealthKit Correlation Sample Logical Model"/>
-      <description value="Data elements for the Apple HealthKit HKCorrelation."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/apple-health-kit-correlation-type-code-system"/>
-      </reference>
-      <name value="Apple HealthKit Correlation Type Code System"/>
-      <description value="Code System required for defining correlationType ValueSet"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/apple-health-kit-correlation-type-value-set"/>
-      </reference>
-      <name value="Apple HealthKit Correlation Type Value Set"/>
-      <description value="Possible values for AppleHealthKitSample.correlationType"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/AppleHealthKitHealthStoreCharacteristic"/>
-      </reference>
-      <name value="Apple HealthKit HealthStore Characteristic Logical Model"/>
-      <description value="Relevant Data elements that correspond to the CharacteristicType stored in Apple HealthStore."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical:abstract"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/AppleHealthKitObject"/>
-      </reference>
-      <name value="Apple HealthKit Object Logical Model"/>
-      <description value="Data elements for the Apple HealthKit HKObject."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/AppleHealthKitQuantitySample"/>
-      </reference>
-      <name value="Apple HealthKit Quantity Sample Logical Model"/>
-      <description value="Data elements for the Apple HealthKit HKQuantitySample."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/apple-health-kit-quantity-type-code-system"/>
-      </reference>
-      <name value="Apple HealthKit Quantity Type Code System"/>
-      <description value="Code System required for defining quantityType ValueSet"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/apple-health-kit-quantity-type-value-set"/>
-      </reference>
-      <name value="Apple HealthKit Quantity Type Value Set"/>
-      <description value="Possible values for AppleHealthKitSample.quantityType"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical:abstract"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/AppleHealthKitSample"/>
-      </reference>
-      <name value="Apple HealthKit Sample Logical Model"/>
-      <description value="Data elements for the Apple HealthKit HKSample."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/apple-health-kit-sample-type-code-system"/>
-      </reference>
-      <name value="Apple HealthKit Sample Type Code System"/>
-      <description value="Code System required for defining sampleType ValueSet"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/apple-health-kit-sample-type-value-set"/>
-      </reference>
-      <name value="Apple HealthKit Sample Type Value Set"/>
-      <description value="Possible values for AppleHealthKitSample.sampleType"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/AppleHealthKitWorkoutActivity"/>
-      </reference>
-      <name value="Apple HealthKit Workout Activity Logical Model"/>
-      <description value="Data elements for the Apple HealthKit HKWorkoutActivity."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/apple-health-kit-workout-activity-type-code-system"/>
-      </reference>
-      <name value="Apple HealthKit Workout Activity Type Code System"/>
-      <description value="Code System required for defining workoutActivityType ValueSet"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/apple-health-kit-workout-activity-type-value-set"/>
-      </reference>
-      <name value="Apple HealthKit Workout Activity Type Value Set"/>
-      <description value="Possible values for AppleHealthLitSample.workoutActivityType"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/AppleHealthKitWorkoutEvent"/>
-      </reference>
-      <name value="Apple HealthKit Workout Event Logical Model"/>
-      <description value="Data elements for the Apple HealthKit HKWorkoutEvent."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/apple-health-kit-workout-event-type-code-system"/>
-      </reference>
-      <name value="Apple HealthKit Workout Event Type Code System"/>
-      <description value="Code System required for defining workout event type ValueSet"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/apple-health-kit-workout-event-type-value-set"/>
-      </reference>
-      <name value="Apple HealthKit Workout Event Type Value Set"/>
-      <description value="Possible values for AppleHealthKitWorkoutEvent.type"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/AppleHealthKitWorkoutSample"/>
-      </reference>
-      <name value="Apple HealthKit Workout Sample Logical Model"/>
-      <description value="Data elements for the Apple HealthKit HKWorkout."/>
-      <exampleBoolean value="false"/>
-    </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:logical"/>
