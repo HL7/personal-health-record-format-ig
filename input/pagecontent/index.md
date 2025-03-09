@@ -1,6 +1,6 @@
 The purpose of this implementation guide is to help the reader implement a Patient Health Record (in a programming language of their choice).  The notion of a Patient Health Record (PHR) grows out of the concept of an Electronic Medical Record (EMR).  The major difference being in ownership.  The PHR being owned by the patient; and the EMR being owned by the hospital.
 
-The following document will offer design guidance and standardized APIs for helping you develop your application; based on the healthcare industry standard of Fast Healthcare Interoperability Resources (FHIR).  The scope of this document does not attempt to prescribe how you, the implementor, ought to go about programming your software.  What it does provide, is guidance on how to successfully exchange data with other PHR and EHR apps.  In effect, it documents widely supported (and government recognized) data standards and file formats for importing/exporting data into your software.
+The following document will offer design guidance and standardized APIs for helping you develop your application; based on the healthcare industry standard of Fast Healthcare Interoperability Resources (FHIR).  The scope of this document does not attempt to prescribe how you, the implementor, ought to go about programming your software.  What it does provide, is guidance on how to successfully exchange data with other PHR and EMR apps.  In effect, it documents widely supported (and government recognized) data standards and file formats for importing/exporting data into your software.
 
 ### Expectations for this Implementation Guide
 
@@ -17,11 +17,11 @@ Readers are encouraged to think of this implementation guide as a marathon, not 
 
 ### Purpose / Design Philosophy
 
-The core of the Patient Health Record should be medical grade, and able to incorporate any medical record that you receive after a visit to the hospital; and which the Patient can then carry from one healthcare provider to the next.  As such, a modern Patient Health Record needs to essentially be able to receive captured data from throughout the hospital.  Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychaitry.  All of it is relavent.  
+The core of the Personal Health Record should be medical grade, and able to incorporate any medical record that you receive after a visit to the hospital; and which the patient can then carry from one healthcare provider to the next.  As such, a modern Personal Health Record needs to essentially be able to receive captured data from throughout the hospital.  Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychiatry.  All of it is relevent.  
 
 ### Use Cases  
 
-This guide is particularly interested in the problem of collecting and aggregating patient health records from multiple health records into a coherent whole.  In the healthcare industry, these types of records are known as `longitudinal` records.  
+This guide is particularly interested in the problem of collecting and aggregating medical records from multiple healthcare systems and devices into a coherent whole.  In the healthcare industry, these types of compiled records are known as `longitudinal` records.  
 
 - *Longitudinal Health Records* - Assembly of records over a long time span; generally multiple decades (20 years or more), and possibly from different healthcare systems with different practices or standards of care.
 

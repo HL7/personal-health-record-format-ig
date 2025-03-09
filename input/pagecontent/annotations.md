@@ -10,7 +10,7 @@ IPS to the patient directly, either by push or pull.
 
 If a patient doesn't actually get their health record or patient summary, and instead receive only a token to it such as a QR code or URL, what exactly do they get?
 
-If would be good to have a consistent workflow around IPS handling whether the document 
+It would be good to have a consistent workflow around IPS handling whether the document 
 is held directly by the patient or not.
 
 ### Managing the health record
@@ -28,7 +28,7 @@ Furthermore, consultation with patients brings forward a very clear requirement 
 if we're going to pass the summary on, we need to be able to comment on it, or correct it. 
 Most clinical records contain inaccuracies, or information that a patient wishes to 
 clarify or extend because the summary is too brief or too clinical. A patient may (should)
-hesitate to pass on a patient summary containing information. For this reason, the 
+hesitate to pass on a patient summary containing incorrect or outdated information. For this reason, the 
 IPS infrastructure needs to make allowance for patient corrections to the summary.
 
 ## Provider use cases

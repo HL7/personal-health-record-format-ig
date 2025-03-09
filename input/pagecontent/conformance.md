@@ -19,8 +19,7 @@ In this specification, the key words “MUST”, “MUST NOT”, “REQUIRED”,
 | [SMART on FHIR - App Launch](https://hl7.org/fhir/smart-app-launch/) |   | NOT APPLICABLE | SHOULD |
 | [C-CDA on FHIR](http://hl7.org/fhir/us/ccda/) |   | MAY | MAY |
 | [PACIO - Advanced Directives](https://build.fhir.org/ig/HL7/fhir-pacio-adi/) |   | SHOULD | MAY |
-| [PACIO - Cognitive Status](https://build.fhir.org/ig/HL7/fhir-pacio-cognitive-status/) | Neurology | MAY | MAY |
-| [PACIO - Functional Status](https://build.fhir.org/ig/HL7/fhir-pacio-functional-status/) | Physical Therapy | MAY | MAY |
+| [PACIO - Personal Functioning and Engagement](https://build.fhir.org/ig/HL7/fhir-pacio-pfe/)) | Neurology | MAY | MAY |
 | [SMART Health Cards - Vaccine & Testing](https://build.fhir.org/ig/HL7/fhir-shc-vaccination-ig/) | Epidemiology  | SHOULD | MAY |
 | [mCode](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/examples.html) | Oncology | SHOULD | MAY |
 | [Gravity - Social Determinates of Health](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/) | Social Work | SHOULD | MAY |

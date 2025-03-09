@@ -1,4 +1,4 @@
-A complete longitudinal patient health record may feasibly span 100 years or more.  This presents numerous challenges, espcially considering that the earliest EMR systems were only first written in the early 1970s.  Statue of limitations require that healthcare practitioners keep pediatric records until an 18th birthday, but even an 18 year storage requirement by providers falls well short of a 76yr life expectancy.  Anybody over 30 years of age is therefore almost guaranteed to have some records on hardcopy paper, compact disk, USB drive, floppy drive, or other storage medium.  
+A complete longitudinal patient health record may feasibly span 100 years or more.  This presents numerous challenges, especially considering that the earliest EMR systems were only first written in the early 1970s.  Statue of limitations require that healthcare practitioners keep pediatric records until an 18th birthday, but even an 18 year storage requirement by providers falls well short of a 76yr life expectancy.  Anybody over 30 years of age is therefore almost guaranteed to have some records on hardcopy paper, compact disk, USB drive, floppy drive, or other storage medium.  
 
 As such, this implementation guide concerns itself with this specific data storage challenge that is unique to patients, and does not immediately assume availability of B2B over-the-wire data interfaces.  This guide differs from guides produced by other working groups, in that it is less concerned with over-the-wire workflows, and more concerned with the notion of a patient asking for a copy of their complete medical history, and how that would work with compact disks, digital video disks, thumbdrive, and other storage devices for bulk data; and how that would be imported into the another system.  
 
@@ -80,7 +80,7 @@ For conformance testing with this IG, the primary success critieria is that syst
 
 #### Creating a Standard Personal Health Record    
 
-The process flows below is based on encrypting files with PGP/GPG utilities, which support asymmetric cryptography algorithms and X.509 certificates.
+The process flow below is based on encrypting files with PGP/GPG utilities, which support asymmetric cryptography algorithms and X.509 certificates.
 
 - Gather the data you want to include.
 - Convert or encode the data as FHIR resources.
@@ -90,7 +90,7 @@ The process flows below is based on encrypting files with PGP/GPG utilities, whi
 - If over 16MB, use Bulk Data format and save as nd-json.
 - Add international patient summary (if needed).
 - Add problem oriented health record components (if needed).
-- Add provenance resources and optionally sign then with a FHIR Signature.
+- Add provenance resources and optionally sign them with a FHIR Signature.
 - Add media and supporting documents.
 - Optionally add a FHIR Signature to a PhrBundle instance.
 - Rename the .ndjson file with .phr extension.
@@ -144,7 +144,7 @@ But to make that happen, we must clarify the details of the envelope that will c
 - [How to properly register a file extension on mac so it will also work by running open from the command line? ](https://apple.stackexchange.com/questions/94954/how-to-properly-register-a-file-extension-on-mac-so-it-will-also-work-by-running)
 - [Adding or registering a file type so it can be associated with an application](https://superuser.com/questions/1080453/adding-or-registering-a-file-type-so-it-can-be-associated-with-an-application)
 - [Set default app for .file type file](https://answers.microsoft.com/en-us/windows/forum/all/set-default-app-for-file-type-file/c449afd5-2eff-4f3b-8faf-8ce7ced50f30)
-- [File extension associations and default apps in Windows 10, how to handle this using commandline](https://social.technet.microsoft.com/Forums/en-US/9f4e8e66-b1f4-47a4-931f-862fb8ac3ab3/file-extension-associations-and-default-apps-in-windows-10-how-to-handle-this-using-commandline)
+- [How to Change File Associations in Windows 10](https://www.ninjaone.com/blog/how-to-change-file-associations/)  
 
 
 
