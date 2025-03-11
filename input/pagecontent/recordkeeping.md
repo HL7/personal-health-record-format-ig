@@ -1,42 +1,54 @@
-A complete longitudinal patient health record may feasibly span 100 years or more.  This presents numerous challenges, especially considering that the earliest EMR systems were only first written in the early 1970s.  Statue of limitations require that healthcare practitioners keep pediatric records until an 18th birthday, but even an 18 year storage requirement by providers falls well short of a 76yr life expectancy.  Anybody over 30 years of age is therefore almost guaranteed to have some records on hardcopy paper, compact disk, USB drive, floppy drive, or other storage medium.  
+A complete longitudinal patient health record may feasibly span 100 years or more.  This presents numerous challenges, especially considering that the earliest EMR systems were only first written in the early 1970s.  Statute of limitations specify that healthcare practitioners keep pediatric records until an 18th birthday, but even an 18 year storage requirement by providers falls well short of a 76yr lifespan.  Anybody over 30 years of age is therefore almost guaranteed to have some records on hardcopy paper, compact disk, USB drive, floppy drive, or other storage mediums.  
 
-As such, this implementation guide concerns itself with this specific data storage challenge that is unique to patients, and does not immediately assume availability of B2B over-the-wire data interfaces.  This guide differs from guides produced by other working groups, in that it is less concerned with over-the-wire workflows, and more concerned with the notion of a patient asking for a copy of their complete medical history, and how that would work with compact disks, digital video disks, thumbdrive, and other storage devices for bulk data; and how that would be imported into the another system.  
+As such, this implementation guide is particularly concerned with this data storage challenge that is unique to patients, and does not immediately assume availability of B2B over-the-wire data interfaces.  This guide differs from guides produced by other working groups, in that it is less concerned with over-the-wire workflows, and more concerned with the notion of a patient asking for a copy of their complete medical history, and how that would work with devices... be they smartphones, consumer medical devices, compact disks (CD), digital video disks (DVD), thumbdrives, and other storage devices for bulk data; and how that would be imported into the another system.  
 
-> Note: The only portion of this Implementation Guide that is required for conformance testing is the ability to import/export the .sphr filetype.  All other parts of this implementation guide are optional, and are provided to assist the implementor in modeling patient histories in FHIR format. 
 
 ### FHIR Storage 
 
-A useful way to think of data storage is in terms of slow-motion data transfer.  The earliest electronic data storage devices were actually cathode ray tubes, the same devices used in computer monitors for decades.  As such, there isn't as much difference as one may think between the devices that store bits and the devices that transmit data to a person's eyes or transmits data over the wire.  These things are actually quite similar, if one considers the storage device as similar to an actor on the wire that can send or receive data.  In this sense, storage is just like any other data transfer - but with the ability to press a `pause` button indefinately mid-transfer.  
+A useful way to think of data storage is in terms of slow-motion data transfer.  The earliest electronic data storage devices were cathode ray tubes, the same devices used in computer monitors for decades.  As such, there isn't as much difference between the devices that store bits and the devices that display data or transmits data over the wire as many people think.  If one considers the storage device as an actor on the wire that can send or receive data, storage is just like any other data transfer - but with the ability to press a `pause` button indefinately mid-transfer.  
 
-As such, this implementation guide recommends that implementors treat storage in much the same way as over-the-wire data transfers.  
+As such, this implementation guide recommends that implementors treat storage in much the same way as over-the-wire data transfers.  We simply are defining file formats, rather than wire formats.  To this extent, we recommend the following principles when exporting data from their systems:
 
 - Systems MUST use FHIR data schemas to claim to be compliant with this IG.  
-- Systems SHOULD use the same MIME types when possible.
+- Systems SHOULD use the `.phr` and `.sphr` MIME types when possible.
 - Systems MAY treat directories as Bundle entries or NDJSON lines by default.
 
 ![./SphrFileType.jpg](./SphrFileType.jpg){:width="40%"}  
 
-#### File Extensions
+#### File Extensions - .phr
 
-- Files contain patient health information using Fast Healthcare Interoperability Resources SHOULD be saved with a `.sphr` extension.  Such files may include multiple FHIR resources, as is typical in a Bundle resource.
-- Files that contain only a single record (or single type of record) MAY be saved with a file extension of the resource type.  For example:  `.Observation.fhir` 
+The `.phr` file extension is introduced in this guide, to a) specify files which contain FHIR resources, and b) to allow 3rd party applications to identify files which contain FHIR resources.  Data exports containing FHIR resources SHOULD be saved with a `.phr` extension, using new-line deliminated JSON (NDJSON) format, similar to the Bulk Data specification. 
+
+This format is a simple, text-based format that is easy to parse and edit.  It is also a good fit for streaming data, as it is easy to append to a file without having to rewrite the entire file.  And perhaps most importantly, it allows multiple .phr files to be easily 'globbed' together.  
+
+#### File Extensions - .sphr
+
+The `.sphr` file extension is introduced for when there are additional supporting materials, which cannot be fully expressed in FHIR format.  The `.sphr` is a zip folder, which contains one or more FHIR resources, as well as additional supporting materials.  
+
+The `.sphr` file extension is intended to be used for data exports that are saved to a CD, DVD, thumbdrive, etc.  Each `.sphr` folder should contain at least one `.phr` file within it, as well as additional supporting materials such as images, documents, and other media.
+
+Per the `.zip` specification, the `.sphr` folder may be cryptographically signed.
+
 
 #### Meta Data
 
-The `.sphr ` container should contain two meta data files.  One of these files is a Composition record, which acts like the 'cover page' of the bundle.  This record records ownership, versioning, and various other data elements necessary for parsing the record.  The second file is an International Patient Summary file, which acts as a manifest and table of contents of critical documents in the record.  
-
+The `.sphr ` container MAY contain two meta data files.  One of these files is a Composition record, which acts like the 'cover page' of the bundle.  This record records ownership, versioning, and various other data elements necessary for parsing the record.  The second file is an International Patient Summary file, which acts as a manifest and table of contents of critical documents in the record.  
 
 #### Compression  
 
-Files containing patient health information MAY be zipped, with either a `.fhir.zip` or `.fhir.gz` extension. When using compression, systems SHOULD use the [DEFLATE](https://en.wikipedia.org/wiki/Deflate) algorithm.  DEFLATE is supported by both ZIP and GZIP compression utilities.  
+Files containing patient health information MAY be zipped. The `.sphr` file extension is an alias for `.fhir.zip` or `.fhir.gz`. When using compression, systems SHOULD use the [DEFLATE](https://en.wikipedia.org/wiki/Deflate) algorithm.  DEFLATE is supported by both ZIP and GZIP compression utilities.  
 
 #### Media Files & Raw Documents
 
-TBD
+Supporting media files and raw documents may be added into the `.sphr` directory.  Such files may include DICOM files, 3D models, images, PDFs, and other media.  Each record SHOULD have a corresponding FHIR DocumentReference pointer in the `.phr` file.  
 
 #### Bulk Data Exports
 
 Should use [NDJSON format](http://ndjson.org/) and save to a password encrypted zip file.  Please see [Bulk Data Access IG](https://hl7.org/fhir/uv/bulkdata/) more additional design guidance.
+
+The primary difference between the Bulk Data Access format and the `.phr` file, is that Bulk Data exports data according to resource type.  That is, all Observations get written to an `Observation.ndjson` file; all Condititions get written to a `Conditions.ndjson` file, all MedicationStatements to a `MedicationStatement.ndjson` file, and so forth.  
+
+Meanwhile, the `.phr` file is a single hetergenous `.ndjson` file that contains all of the data for a patient.  It is a `.ndjson` file with mixed resource types.  This is done to simplify the process of importing and exporting data.  It is also done to simplify the process of querying data.  It is easier to query a single file than it is to query multiple files.  However, it does introduce import/export parsing requirements, that are not present in the Bulk Data Access format.
 
 ### Data provenance and security
 

@@ -244,50 +244,57 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>A complete longitudinal patient health record may feasibly span 100 years or more.  This presents numerous challenges, especially considering that the earliest EMR systems were only first written in the early 1970s.  Statue of limitations require that healthcare practitioners keep pediatric records until an 18th birthday, but even an 18 year storage requirement by providers falls well short of a 76yr life expectancy.  Anybody over 30 years of age is therefore almost guaranteed to have some records on hardcopy paper, compact disk, USB drive, floppy drive, or other storage medium.</p>
+<p>A complete longitudinal patient health record may feasibly span 100 years or more.  This presents numerous challenges, especially considering that the earliest EMR systems were only first written in the early 1970s.  Statute of limitations specify that healthcare practitioners keep pediatric records until an 18th birthday, but even an 18 year storage requirement by providers falls well short of a 76yr lifespan.  Anybody over 30 years of age is therefore almost guaranteed to have some records on hardcopy paper, compact disk, USB drive, floppy drive, or other storage mediums.</p>
 
-<p>As such, this implementation guide concerns itself with this specific data storage challenge that is unique to patients, and does not immediately assume availability of B2B over-the-wire data interfaces.  This guide differs from guides produced by other working groups, in that it is less concerned with over-the-wire workflows, and more concerned with the notion of a patient asking for a copy of their complete medical history, and how that would work with compact disks, digital video disks, thumbdrive, and other storage devices for bulk data; and how that would be imported into the another system.</p>
-
-<blockquote>
-  <p>Note: The only portion of this Implementation Guide that is required for conformance testing is the ability to import/export the .sphr filetype.  All other parts of this implementation guide are optional, and are provided to assist the implementor in modeling patient histories in FHIR format.</p>
-</blockquote>
+<p>As such, this implementation guide is particularly concerned with this data storage challenge that is unique to patients, and does not immediately assume availability of B2B over-the-wire data interfaces.  This guide differs from guides produced by other working groups, in that it is less concerned with over-the-wire workflows, and more concerned with the notion of a patient asking for a copy of their complete medical history, and how that would work with devices… be they smartphones, consumer medical devices, compact disks (CD), digital video disks (DVD), thumbdrives, and other storage devices for bulk data; and how that would be imported into the another system.</p>
 
 <h3 id="fhir-storage">FHIR Storage</h3>
 
-<p>A useful way to think of data storage is in terms of slow-motion data transfer.  The earliest electronic data storage devices were actually cathode ray tubes, the same devices used in computer monitors for decades.  As such, there isn't as much difference as one may think between the devices that store bits and the devices that transmit data to a person's eyes or transmits data over the wire.  These things are actually quite similar, if one considers the storage device as similar to an actor on the wire that can send or receive data.  In this sense, storage is just like any other data transfer - but with the ability to press a <code class="language-plaintext highlighter-rouge">pause</code> button indefinately mid-transfer.</p>
+<p>A useful way to think of data storage is in terms of slow-motion data transfer.  The earliest electronic data storage devices were cathode ray tubes, the same devices used in computer monitors for decades.  As such, there isn't as much difference between the devices that store bits and the devices that display data or transmits data over the wire as many people think.  If one considers the storage device as an actor on the wire that can send or receive data, storage is just like any other data transfer - but with the ability to press a <code class="language-plaintext highlighter-rouge">pause</code> button indefinately mid-transfer.</p>
 
-<p>As such, this implementation guide recommends that implementors treat storage in much the same way as over-the-wire data transfers.</p>
+<p>As such, this implementation guide recommends that implementors treat storage in much the same way as over-the-wire data transfers.  We simply are defining file formats, rather than wire formats.  To this extent, we recommend the following principles when exporting data from their systems:</p>
 
 <ul>
   <li>Systems MUST use FHIR data schemas to claim to be compliant with this IG.</li>
-  <li>Systems SHOULD use the same MIME types when possible.</li>
+  <li>Systems SHOULD use the <code class="language-plaintext highlighter-rouge">.phr</code> and <code class="language-plaintext highlighter-rouge">.sphr</code> MIME types when possible.</li>
   <li>Systems MAY treat directories as Bundle entries or NDJSON lines by default.</li>
 </ul>
 
 <p><img src="./SphrFileType.jpg" alt="./SphrFileType.jpg" width="40%" /></p>
 
-<h4 id="file-extensions">File Extensions</h4>
+<h4 id="file-extensions---phr">File Extensions - .phr</h4>
 
-<ul>
-  <li>Files contain patient health information using Fast Healthcare Interoperability Resources SHOULD be saved with a <code class="language-plaintext highlighter-rouge">.sphr</code> extension.  Such files may include multiple FHIR resources, as is typical in a Bundle resource.</li>
-  <li>Files that contain only a single record (or single type of record) MAY be saved with a file extension of the resource type.  For example:  <code class="language-plaintext highlighter-rouge">.Observation.fhir</code></li>
-</ul>
+<p>The <code class="language-plaintext highlighter-rouge">.phr</code> file extension is introduced in this guide, to a) specify files which contain FHIR resources, and b) to allow 3rd party applications to identify files which contain FHIR resources.  Data exports containing FHIR resources SHOULD be saved with a <code class="language-plaintext highlighter-rouge">.phr</code> extension, using new-line deliminated JSON (NDJSON) format, similar to the Bulk Data specification.</p>
+
+<p>This format is a simple, text-based format that is easy to parse and edit.  It is also a good fit for streaming data, as it is easy to append to a file without having to rewrite the entire file.  And perhaps most importantly, it allows multiple .phr files to be easily 'globbed' together.</p>
+
+<h4 id="file-extensions---sphr">File Extensions - .sphr</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">.sphr</code> file extension is introduced for when there are additional supporting materials, which cannot be fully expressed in FHIR format.  The <code class="language-plaintext highlighter-rouge">.sphr</code> is a zip folder, which contains one or more FHIR resources, as well as additional supporting materials.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">.sphr</code> file extension is intended to be used for data exports that are saved to a CD, DVD, thumbdrive, etc.  Each <code class="language-plaintext highlighter-rouge">.sphr</code> folder should contain at least one <code class="language-plaintext highlighter-rouge">.phr</code> file within it, as well as additional supporting materials such as images, documents, and other media.</p>
+
+<p>Per the <code class="language-plaintext highlighter-rouge">.zip</code> specification, the <code class="language-plaintext highlighter-rouge">.sphr</code> folder may be cryptographically signed.</p>
 
 <h4 id="meta-data">Meta Data</h4>
 
-<p>The <code class="language-plaintext highlighter-rouge">.sphr </code> container should contain two meta data files.  One of these files is a Composition record, which acts like the 'cover page' of the bundle.  This record records ownership, versioning, and various other data elements necessary for parsing the record.  The second file is an International Patient Summary file, which acts as a manifest and table of contents of critical documents in the record.</p>
+<p>The <code class="language-plaintext highlighter-rouge">.sphr </code> container MAY contain two meta data files.  One of these files is a Composition record, which acts like the 'cover page' of the bundle.  This record records ownership, versioning, and various other data elements necessary for parsing the record.  The second file is an International Patient Summary file, which acts as a manifest and table of contents of critical documents in the record.</p>
 
 <h4 id="compression">Compression</h4>
 
-<p>Files containing patient health information MAY be zipped, with either a <code class="language-plaintext highlighter-rouge">.fhir.zip</code> or <code class="language-plaintext highlighter-rouge">.fhir.gz</code> extension. When using compression, systems SHOULD use the <a href="https://en.wikipedia.org/wiki/Deflate">DEFLATE</a> algorithm.  DEFLATE is supported by both ZIP and GZIP compression utilities.</p>
+<p>Files containing patient health information MAY be zipped. The <code class="language-plaintext highlighter-rouge">.sphr</code> file extension is an alias for <code class="language-plaintext highlighter-rouge">.fhir.zip</code> or <code class="language-plaintext highlighter-rouge">.fhir.gz</code>. When using compression, systems SHOULD use the <a href="https://en.wikipedia.org/wiki/Deflate">DEFLATE</a> algorithm.  DEFLATE is supported by both ZIP and GZIP compression utilities.</p>
 
 <h4 id="media-files--raw-documents">Media Files &amp; Raw Documents</h4>
 
-<p>TBD</p>
+<p>Supporting media files and raw documents may be added into the <code class="language-plaintext highlighter-rouge">.sphr</code> directory.  Such files may include DICOM files, 3D models, images, PDFs, and other media.  Each record SHOULD have a corresponding FHIR DocumentReference pointer in the <code class="language-plaintext highlighter-rouge">.phr</code> file.</p>
 
 <h4 id="bulk-data-exports">Bulk Data Exports</h4>
 
 <p>Should use <a href="http://ndjson.org/">NDJSON format</a> and save to a password encrypted zip file.  Please see <a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Access IG</a> more additional design guidance.</p>
+
+<p>The primary difference between the Bulk Data Access format and the <code class="language-plaintext highlighter-rouge">.phr</code> file, is that Bulk Data exports data according to resource type.  That is, all Observations get written to an <code class="language-plaintext highlighter-rouge">Observation.ndjson</code> file; all Condititions get written to a <code class="language-plaintext highlighter-rouge">Conditions.ndjson</code> file, all MedicationStatements to a <code class="language-plaintext highlighter-rouge">MedicationStatement.ndjson</code> file, and so forth.</p>
+
+<p>Meanwhile, the <code class="language-plaintext highlighter-rouge">.phr</code> file is a single hetergenous <code class="language-plaintext highlighter-rouge">.ndjson</code> file that contains all of the data for a patient.  It is a <code class="language-plaintext highlighter-rouge">.ndjson</code> file with mixed resource types.  This is done to simplify the process of importing and exporting data.  It is also done to simplify the process of querying data.  It is easier to query a single file than it is to query multiple files.  However, it does introduce import/export parsing requirements, that are not present in the Bulk Data Access format.</p>
 
 <h3 id="data-provenance-and-security">Data provenance and security</h3>
 
@@ -421,7 +428,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  Package hl7.fhir.uv.phr#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Mar 8, 2025 09:49-0600">2025-03-08</span>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  Package hl7.fhir.uv.phr#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 11, 2025 13:10-0500">2025-03-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

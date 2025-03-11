@@ -26,8 +26,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.141"],
       "uses" : {
       },
-      "StructureDefinition-PhrMedia.html" : "PhrMedia",
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
+      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation",
+      "StructureDefinition-PhrMedia.html" : "PhrMedia"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
@@ -254,15 +254,15 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-PhrMedia.html" : "PhrMedia",
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
-      "StructureDefinition-PhrProvenance.html" : "PhrProvenance",
-      "StructureDefinition-PhrPatient.html" : "PhrPatient",
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation",
-      "StructureDefinition-SocialMedia.html" : "SocialMedia",
-      "StructureDefinition-NutrientOuttake.html" : "Nutrient Outtake",
       "StructureDefinition-PhrBundle.html" : "PhrBundle",
-      "StructureDefinition-PhrComposition.html" : "PhrComposition"
+      "StructureDefinition-PhrPatient.html" : "PhrPatient",
+      "StructureDefinition-SocialMedia.html" : "SocialMedia",
+      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation",
+      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
+      "StructureDefinition-NutrientOuttake.html" : "Nutrient Outtake",
+      "StructureDefinition-PhrComposition.html" : "PhrComposition",
+      "StructureDefinition-PhrMedia.html" : "PhrMedia",
+      "StructureDefinition-PhrProvenance.html" : "PhrProvenance"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
