@@ -5,6 +5,7 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="CodeSystem/appetite-changes-codes" key="CodeSystem-appetite-changes-codes" name="Appetite Changes Codes"/>
 <artifact deprecated="true" id="CodeSystem/apple-health-kit-biological-sex-code-system" key="CodeSystem-AppleHealthKitBiologicalSexCodeSystem" name="Apple HealthKit Biological Sex Code System"/>
 <artifact deprecated="true" id="ValueSet/apple-health-kit-biological-sex-value-set" key="ValueSet-AppleHealthKitBiologicalSexValueSet" name="Apple HealthKit Biological Sex Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/AppleHealthKitCategorySample" key="StructureDefinition-AppleHealthKitCategorySample" name="Apple HealthKit Category Sample Logical Model"/>
@@ -30,16 +31,108 @@
 <artifact deprecated="true" id="CodeSystem/apple-health-kit-workout-event-type-code-system" key="CodeSystem-AppleHealthKitWorkoutEventTypeCodeSystem" name="Apple HealthKit Workout Event Type Code System"/>
 <artifact deprecated="true" id="ValueSet/apple-health-kit-workout-event-type-value-set" key="ValueSet-AppleHealthKitWorkoutEventTypeValueSet" name="Apple HealthKit Workout Event Type Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/AppleHealthKitWorkoutSample" key="StructureDefinition-AppleHealthKitWorkoutSample" name="Apple HealthKit Workout Sample Logical Model"/>
+<artifact id="CodeSystem/body-posture-codes" key="CodeSystem-body-posture-codes" name="Body Posture Codes"/>
+<artifact id="ValueSet/body-temperature-measurement-location" key="ValueSet-body-temperature-measurement-location" name="Body Temperature Measurement Location Codes"/>
+<artifact id="CodeSystem/body-temperature-measurement-location-codes" key="CodeSystem-body-temperature-measurement-location-codes" name="Body Temperature Measurement Location Codes"/>
+<artifact id="ValueSet/observation-ecg-classification-codes" key="ValueSet-observation-ecg-classification-codes" name="ECG Classification Codes"/>
+<artifact id="CodeSystem/ecg-classification-codes" key="CodeSystem-ecg-classification-codes" name="ECG Classification Codes"/>
+<artifact id="CodeSystem/ecg-codes" key="CodeSystem-ecg-codes" name="ECG Classification Codes"/>
+<artifact id="ValueSet/observation-ecg-lead-codes" key="ValueSet-observation-ecg-lead-codes" name="ECG Lead Codes"/>
+<artifact id="ValueSet/observation-ecgcodes" key="ValueSet-observation-ecgcodes" name="ECG Lead Codes"/>
+<artifact id="CodeSystem/ecg-lead-codes" key="CodeSystem-ecg-lead-codes" name="ECG Lead Codes"/>
+<artifact id="ValueSet/observation-ecg-symptoms-status-codes" key="ValueSet-observation-ecg-symptoms-status-codes" name="ECG Symptoms Status Codes"/>
+<artifact id="CodeSystem/ecg-symptoms-status-codes" key="CodeSystem-ecg-symptoms-status-codes" name="ECG Symptoms Status Codes"/>
 <artifact id="StructureDefinition/Environmental" key="StructureDefinition-Environmental" name="Environmental"/>
 <artifact id="StructureDefinition/FinancialReceipt" key="StructureDefinition-FinancialReceipt" name="Financial Receipt"/>
+<artifact id="CodeSystem/gad7-risk-codes" key="CodeSystem-gad7-risk-codes" name="GAD-7 Assesment Risk Codes"/>
+<artifact id="Questionnaire/gad7" key="Questionnaire-gad7" name="GAD-7 assesment"/>
+<artifact id="CodeSystem/hearing-sensitivity-codes" key="CodeSystem-hearing-sensitivity-codes" name="Hearing Sensitivity Codes"/>
 <artifact id="Patient/jane-doe" key="Patient-jane-doe" name="Jane Doe"/>
 <artifact id="Composition/jane-doe-composition" key="Composition-jane-doe-composition" name="Jane Doe Composition"/>
 <artifact id="DocumentReference/jane-doe-genomics-document" key="DocumentReference-jane-doe-genomics-document" name="Jane Doe PDF Report"/>
 <artifact id="Media/jane-doe-media" key="Media-jane-doe-media" name="Jane Doe Smartphone Photo"/>
 <artifact id="Provenance/jane-doe-media-provenance" key="Provenance-jane-doe-media-provenance" name="Jane Doe's Photo Provenance"/>
 <artifact id="StructureDefinition/NutrientOuttake" key="StructureDefinition-NutrientOuttake" name="Nutrient Outtake"/>
+<artifact id="ValueSet/observation-activity-codes" key="ValueSet-observation-activity-codes" name="Observation Activity Codes"/>
+<artifact id="ValueSet/observation-alchol-consumption-codes" key="ValueSet-observation-alchol-consumption-codes" name="Observation AlcholConsumption Codes"/>
+<artifact id="ValueSet/observation-body-mesurements-codes" key="ValueSet-observation-body-mesurements-codes" name="Observation BodyMesurements Codes"/>
+<artifact id="ValueSet/observation-diving-codes" key="ValueSet-observation-diving-codes" name="Observation Diving Codes"/>
+<artifact id="ValueSet/observation-gad7-risk-codes" key="ValueSet-observation-gad7-risk-codes" name="Observation GAD7 Risk Codes"/>
+<artifact id="ValueSet/observation-hearing-codes" key="ValueSet-observation-hearing-codes" name="Observation Hearing Codes"/>
+<artifact id="ValueSet/observation-lab-results-codes" key="ValueSet-observation-lab-results-codes" name="Observation LabResults Codes"/>
+<artifact id="ValueSet/observation-mind-codes" key="ValueSet-observation-mind-codes" name="Observation Mind Codes"/>
+<artifact id="ValueSet/observation-mindfulness-codes" key="ValueSet-observation-mindfulness-codes" name="Observation Mindfulness Codes"/>
+<artifact id="ValueSet/observation-mobility-codes" key="ValueSet-observation-mobility-codes" name="Observation Mobility Codes"/>
+<artifact id="ValueSet/observation-nutrition-codes" key="ValueSet-observation-nutrition-codes" name="Observation Nutrition Codes"/>
+<artifact id="CodeSystem/observation-pghd-codes" key="CodeSystem-observation-pghd-codes" name="Observation PGHD Codes"/>
+<artifact id="ValueSet/observation-phq9-risk-codes" key="ValueSet-observation-phq9-risk-codes" name="Observation PHQ9Risk Codes"/>
+<artifact id="ValueSet/observation-reproductive-health-codes" key="ValueSet-observation-reproductive-health-codes" name="Observation ReproductiveHealth Codes"/>
+<artifact id="ValueSet/observation-scored-assessment-codes" key="ValueSet-observation-scored-assessment-codes" name="Observation Scored Assessment Codes"/>
+<artifact id="ValueSet/observation-selfcare-codes" key="ValueSet-observation-selfcare-codes" name="Observation SelfCare Codes"/>
+<artifact id="ValueSet/observation-sleep-codes" key="ValueSet-observation-sleep-codes" name="Observation Sleep Codes"/>
+<artifact id="ValueSet/observation-state-of-mind-association-codes" key="ValueSet-observation-state-of-mind-association-codes" name="Observation State of Mind Association Codes"/>
+<artifact id="ValueSet/observation-scored-assessment-score-codes" key="ValueSet-observation-scored-assessment-score-codes" name="Observation State of Mind Codes"/>
+<artifact id="ValueSet/observation-state-of-mind-codes" key="ValueSet-observation-state-of-mind-codes" name="Observation State of Mind Codes"/>
+<artifact id="ValueSet/observation-state-of-mind-kind-codes" key="ValueSet-observation-state-of-mind-kind-codes" name="Observation State of Mind Kind Codes"/>
+<artifact id="ValueSet/observation-state-of-mind-label-codes" key="ValueSet-observation-state-of-mind-label-codes" name="Observation State of Mind Label Codes"/>
+<artifact id="ValueSet/observation-state-of-mind-valence-codes" key="ValueSet-observation-state-of-mind-valence-codes" name="Observation State of Mind Valence Codes"/>
+<artifact id="ValueSet/observation-symptom-codes" key="ValueSet-observation-symptom-codes" name="Observation Symptom Codes"/>
+<artifact id="ValueSet/observation-uvexposure-codes" key="ValueSet-observation-uvexposure-codes" name="Observation UVExposure Codes"/>
+<artifact id="ValueSet/observation-vital-signs-codes" key="ValueSet-observation-vital-signs-codes" name="Observation Vitalsigns Codes"/>
+<artifact id="ValueSet/observation-workout-codes" key="ValueSet-observation-workout-codes" name="Observation Workout Codes"/>
+<artifact id="Observation/pghd-sleep-episode-2" key="Observation-pghd-sleep-episode-2" name="ObservationSleepEpisodeExample2"/>
 <artifact id="Observation/PCDSleepObservation-duration-example" key="Observation-PCDSleepObservation-duration-example" name="PCDSleepObservation-duration-example"/>
 <artifact id="Observation/PCDSleepObservation-stage-example" key="Observation-PCDSleepObservation-stage-example" name="PCDSleepObservation-stage-example"/>
+<artifact id="StructureDefinition/pghd-activity" key="StructureDefinition-pghd-activity" name="PGHD Activity Profile"/>
+<artifact id="StructureDefinition/pghd-alchol-consumption" key="StructureDefinition-pghd-alchol-consumption" name="PGHD AlcholConsumption Profile"/>
+<artifact id="StructureDefinition/pghd-alchol-use" key="StructureDefinition-pghd-alchol-use" name="PGHD AlcholUse Profile"/>
+<artifact id="StructureDefinition/pghd-audiogram" key="StructureDefinition-pghd-audiogram" name="PGHD Audiogram Profile"/>
+<artifact id="StructureDefinition/pghd-bmi" key="StructureDefinition-pghd-bmi" name="PGHD BMI Profile"/>
+<artifact id="StructureDefinition/pghd-blood-glucose" key="StructureDefinition-pghd-blood-glucose" name="PGHD BloodGlucose Profile"/>
+<artifact id="StructureDefinition/pghd-bloodpressure" key="StructureDefinition-pghd-bloodpressure" name="PGHD BloodPressure Profile"/>
+<artifact id="StructureDefinition/pghd-bodymeasurement" key="StructureDefinition-pghd-bodymeasurement" name="PGHD Body Measurement Profile"/>
+<artifact id="StructureDefinition/pghd-bodyheight" key="StructureDefinition-pghd-bodyheight" name="PGHD BodyHeight Profile"/>
+<artifact id="StructureDefinition/pghd-bodytemperature" key="StructureDefinition-pghd-bodytemperature" name="PGHD BodyTemperature Profile"/>
+<artifact id="StructureDefinition/pghd-bodyweight" key="StructureDefinition-pghd-bodyweight" name="PGHD BodyWeight Profile"/>
+<artifact id="StructureDefinition/pghd-cardiac-function" key="StructureDefinition-pghd-cardiac-function" name="PGHD Cardiac Function Profile"/>
+<artifact id="StructureDefinition/pghd-device" key="StructureDefinition-pghd-device" name="PGHD Device Profile"/>
+<artifact id="StructureDefinition/pghd-diving" key="StructureDefinition-pghd-diving" name="PGHD Diving Profile"/>
+<artifact id="StructureDefinition/pghd-electrocardiogram" key="StructureDefinition-pghd-electrocardiogram" name="PGHD Electrocardiogram Profile"/>
+<artifact id="StructureDefinition/pghd-food" key="StructureDefinition-pghd-food" name="PGHD Food Profile"/>
+<artifact id="StructureDefinition/pghd-hearing" key="StructureDefinition-pghd-hearing" name="PGHD Hearing Profile"/>
+<artifact id="StructureDefinition/pghd-hearing-sensitivity" key="StructureDefinition-pghd-hearing-sensitivity" name="PGHD HearingSensitivity Profile"/>
+<artifact id="StructureDefinition/pghd-heartrate" key="StructureDefinition-pghd-heartrate" name="PGHD HeartRate Profile"/>
+<artifact id="StructureDefinition/pghd-heartbeat" key="StructureDefinition-pghd-heartbeat" name="PGHD Heartbeat Profile"/>
+<artifact id="StructureDefinition/pghd-medication-adherence" key="StructureDefinition-pghd-medication-adherence" name="PGHD MedicationAdherence Profile"/>
+<artifact id="StructureDefinition/pghd-medicationadministration-insulin" key="StructureDefinition-pghd-medicationadministration-insulin" name="PGHD MedicationAdministration Insulin Profile"/>
+<artifact id="StructureDefinition/pghd-medicationdispense" key="StructureDefinition-pghd-medicationdispense" name="PGHD MedicationDispense Profile"/>
+<artifact id="StructureDefinition/pghd-mindfulness" key="StructureDefinition-pghd-mindfulness" name="PGHD Mindfulness Profile"/>
+<artifact id="StructureDefinition/pghd-mobility" key="StructureDefinition-pghd-mobility" name="PGHD Mobility Profile"/>
+<artifact id="StructureDefinition/pghd-nutrition" key="StructureDefinition-pghd-nutrition" name="PGHD Nutrition Profile"/>
+<artifact id="StructureDefinition/pghd-observation-scored-assessment" key="StructureDefinition-pghd-observation-scored-assessment" name="PGHD Observation Scored Assessment Profile"/>
+<artifact id="StructureDefinition/pghd-observation-state-of-mind" key="StructureDefinition-pghd-observation-state-of-mind" name="PGHD Observation State of Mind Profile"/>
+<artifact id="StructureDefinition/pghd-oxygenSaturation" key="StructureDefinition-pghd-oxygenSaturation" name="PGHD OxygenSaturation Profile"/>
+<artifact id="StructureDefinition/pghd-patient" key="StructureDefinition-pghd-patient" name="PGHD Patient Profile"/>
+<artifact id="StructureDefinition/pghd-pregnancy-status" key="StructureDefinition-pghd-pregnancy-status" name="PGHD Pregnancy Status Profile"/>
+<artifact id="StructureDefinition/pghd-questionnaire" key="StructureDefinition-pghd-questionnaire" name="PGHD Questionnaire Profile"/>
+<artifact id="StructureDefinition/pghd-questionnaire-response" key="StructureDefinition-pghd-questionnaire-response" name="PGHD QuestionnaireResponse Profile"/>
+<artifact id="StructureDefinition/pghd-reproductive-health" key="StructureDefinition-pghd-reproductive-health" name="PGHD ReproductiveHealth Profile"/>
+<artifact id="StructureDefinition/pghd-respiratoryrate" key="StructureDefinition-pghd-respiratoryrate" name="PGHD RespiratoryRate Profile"/>
+<artifact id="StructureDefinition/pghd-careplan-selfcare" key="StructureDefinition-pghd-careplan-selfcare" name="PGHD SelfCare Plan Profile"/>
+<artifact id="StructureDefinition/pghd-selfcare" key="StructureDefinition-pghd-selfcare" name="PGHD SelfCare Profile"/>
+<artifact id="StructureDefinition/pghd-sleep-episode" key="StructureDefinition-pghd-sleep-episode" name="PGHD Sleep Episode Profile"/>
+<artifact id="StructureDefinition/pghd-sleep" key="StructureDefinition-pghd-sleep" name="PGHD Sleep Profile"/>
+<artifact id="StructureDefinition/pghd-snore-event" key="StructureDefinition-pghd-snore-event" name="PGHD SnoreEvent Profile"/>
+<artifact id="StructureDefinition/pghd-snore-index" key="StructureDefinition-pghd-snore-index" name="PGHD SnoreIndex Profile"/>
+<artifact id="StructureDefinition/pghd-symptom" key="StructureDefinition-pghd-symptom" name="PGHD Symptom Profile"/>
+<artifact id="StructureDefinition/pghd-testresult" key="StructureDefinition-pghd-testresult" name="PGHD TestResult Profile"/>
+<artifact id="StructureDefinition/pghd-uvexposure" key="StructureDefinition-pghd-uvexposure" name="PGHD UVExposure Profile"/>
+<artifact id="StructureDefinition/pghd-vitalsigns" key="StructureDefinition-pghd-vitalsigns" name="PGHD Vital Signs Profile"/>
+<artifact id="StructureDefinition/pghd-voltage-measurement" key="StructureDefinition-pghd-voltage-measurement" name="PGHD VoltageMeasurement Profile"/>
+<artifact id="StructureDefinition/pghd-workout" key="StructureDefinition-pghd-workout" name="PGHD Workout Profile"/>
+<artifact id="Patient/1" key="Patient-1" name="PGHDPatientExample"/>
+<artifact id="CodeSystem/phq9-risk-codes" key="CodeSystem-phq9-risk-codes" name="PHQ-9 Assesment Risk Codes"/>
+<artifact id="Questionnaire/phq9" key="Questionnaire-phq9" name="PHQ-9 assesment"/>
 <artifact id="StructureDefinition/pcd-sleep-observation" key="StructureDefinition-PCDSleepObservation" name="Patient contributed data: sleep observation"/>
 <artifact id="ValueSet/pcd-sleep-observation-code" key="ValueSet-PCDSleepObservationCode" name="Patient contributed data: sleep observation code"/>
 <artifact id="ValueSet/pcd-sleep-observation-value" key="ValueSet-PCDSleepStageValueCode" name="Patient contributed data: sleep stage value"/>
@@ -51,9 +144,96 @@
 <artifact id="StructureDefinition/PhrMedia" key="StructureDefinition-PhrMedia" name="PhrMedia"/>
 <artifact id="StructureDefinition/PhrPatient" key="StructureDefinition-PhrPatient" name="PhrPatient"/>
 <artifact id="StructureDefinition/PhrProvenance" key="StructureDefinition-PhrProvenance" name="PhrProvenance"/>
+<artifact id="QuestionnaireResponse/gad7" key="QuestionnaireResponse-gad7" name="QuestionnaireResponseScoredAssessmentGAD7Example"/>
+<artifact id="QuestionnaireResponse/phq9" key="QuestionnaireResponse-phq9" name="QuestionnaireResponseScoredAssessmentPHQ9Example"/>
+<artifact id="CodeSystem/scored-assessment-codes" key="CodeSystem-scored-assessment-codes" name="Scored Assessment Codes"/>
+<artifact id="Observation/ScoredAssessmentGAD7Example" key="Observation-ScoredAssessmentGAD7Example" name="ScoredAssessmentGAD7Example"/>
+<artifact id="Observation/ScoredAssessmentPHQ9Example" key="Observation-ScoredAssessmentPHQ9Example" name="ScoredAssessmentPHQ9Example"/>
 <artifact id="SearchParameter/search-from-date" key="SearchParameter-search-from-date" name="Search From Date"/>
 <artifact id="SearchParameter/patient-identifier" key="SearchParameter-patient-identifier" name="Search by identifier in patient with multipleOr"/>
+<artifact id="ValueSet/sleep-analysis" key="ValueSet-sleep-analysis" name="Sleep Analysis"/>
+<artifact id="CodeSystem/sleep-analysis-codes" key="CodeSystem-sleep-analysis-codes" name="Sleep Analysis Codes"/>
+<artifact id="CodeSystem/sleep-episode-codes" key="CodeSystem-sleep-episode-codes" name="Sleep Episode Codes"/>
+<artifact id="CodeSystem/snore-event-item-codes" key="CodeSystem-snore-event-item-codes" name="Snore Event Item Codes"/>
 <artifact id="StructureDefinition/SocialMedia" key="StructureDefinition-SocialMedia" name="SocialMedia"/>
+<artifact id="CodeSystem/state-of-mind-association-codes" key="CodeSystem-state-of-mind-association-codes" name="State of Mind Association Codes"/>
+<artifact id="CodeSystem/state-of-mind-codes" key="CodeSystem-state-of-mind-codes" name="State of Mind Codes"/>
+<artifact id="CodeSystem/state-of-mind-kind-codes" key="CodeSystem-state-of-mind-kind-codes" name="State of Mind Kind Codes"/>
+<artifact id="CodeSystem/state-of-mind-label-codes" key="CodeSystem-state-of-mind-label-codes" name="State of Mind Label Codes"/>
+<artifact id="CodeSystem/state-of-mind-valence-codes" key="CodeSystem-state-of-mind-valence-codes" name="State of Mind Valence Codes"/>
+<artifact id="Observation/StateOfMind2Example" key="Observation-StateOfMind2Example" name="StateOfMind2Example"/>
+<artifact id="Observation/StateOfMindExample" key="Observation-StateOfMindExample" name="StateOfMindExample"/>
+<artifact id="ValueSet/appetite-changes" key="ValueSet-appetite-changes" name="Symptom Appetite Changes"/>
+<artifact id="ValueSet/symptom-presence" key="ValueSet-symptom-presence" name="Symptom Presence"/>
+<artifact id="CodeSystem/presence-codes" key="CodeSystem-presence-codes" name="Symptom Presence Codes"/>
+<artifact id="ValueSet/symptom-severity" key="ValueSet-symptom-severity" name="Symptom Severity"/>
+<artifact id="CodeSystem/symptom-severity-codes" key="CodeSystem-symptom-severity-codes" name="Symptom Severity Codes"/>
+<artifact id="Observation/pghd-activity-activeEnergyBurned" key="Observation-pghd-activity-activeEnergyBurned" name="pghd-activity-activeEnergyBurned"/>
+<artifact id="Observation/pghd-activity-activeEnergyBurned-underwater-diving" key="Observation-pghd-activity-activeEnergyBurned-underwater-diving" name="pghd-activity-activeEnergyBurned-underwaterDiving"/>
+<artifact id="Observation/pghd-activity-activeEnergyBurned-walking" key="Observation-pghd-activity-activeEnergyBurned-walking" name="pghd-activity-activeEnergyBurned-walking"/>
+<artifact id="Observation/pghd-activity-appleExerciseTime" key="Observation-pghd-activity-appleExerciseTime" name="pghd-activity-appleExerciseTime"/>
+<artifact id="Observation/pghd-activity-appleMoveTime" key="Observation-pghd-activity-appleMoveTime" name="pghd-activity-appleMoveTime"/>
+<artifact id="Observation/pghd-activity-appleStandHour" key="Observation-pghd-activity-appleStandHour" name="pghd-activity-appleStandHour"/>
+<artifact id="Observation/pghd-activity-basalEnergyBurned" key="Observation-pghd-activity-basalEnergyBurned" name="pghd-activity-basalEnergyBurned"/>
+<artifact id="Observation/pghd-activity-cyclingCadence" key="Observation-pghd-activity-cyclingCadence" name="pghd-activity-cyclingCadence"/>
+<artifact id="Observation/pghd-activity-distanceWalkingRunning-walking" key="Observation-pghd-activity-distanceWalkingRunning-walking" name="pghd-activity-distanceWalkingRunning-walking"/>
+<artifact id="Observation/pghd-alchol-consumption-blood-alcohol-content" key="Observation-pghd-alchol-consumption-blood-alcohol-content" name="pghd-alchol-consumption-bloodAlcoholContent"/>
+<artifact id="Observation/pghd-alchol-use-number-of-alcoholic-beverages" key="Observation-pghd-alchol-use-number-of-alcoholic-beverages" name="pghd-alchol-use-numberOfAlcoholicBeverages"/>
+<artifact id="Observation/pghd-audiogram" key="Observation-pghd-audiogram" name="pghd-audiogram"/>
+<artifact id="Observation/pghd-blood-glucose-1" key="Observation-pghd-blood-glucose-1" name="pghd-blood-glucose-1"/>
+<artifact id="Observation/pghd-blood-glucose-2" key="Observation-pghd-blood-glucose-2" name="pghd-blood-glucose-2"/>
+<artifact id="Observation/pghd-blood-glucose-3" key="Observation-pghd-blood-glucose-3" name="pghd-blood-glucose-3"/>
+<artifact id="Observation/pghd-bloodpressure" key="Observation-pghd-bloodpressure" name="pghd-bloodpressure"/>
+<artifact id="Observation/pghd-bmi" key="Observation-pghd-bmi" name="pghd-bmi"/>
+<artifact id="Observation/pghd-bodyheight" key="Observation-pghd-bodyheight" name="pghd-bodyheight"/>
+<artifact id="Observation/pghd-bodymeasurement-body-fat-percentage" key="Observation-pghd-bodymeasurement-body-fat-percentage" name="pghd-bodymeasurement"/>
+<artifact id="Observation/pghd-bodytemperature" key="Observation-pghd-bodytemperature" name="pghd-bodytemperature"/>
+<artifact id="Observation/pghd-bodyweight" key="Observation-pghd-bodyweight" name="pghd-bodyweight"/>
+<artifact id="Observation/pghd-cardiac-function-lowHeart-rate-event" key="Observation-pghd-cardiac-function-lowHeart-rate-event" name="pghd-cardiac-function-lowHeartRateEvent"/>
+<artifact id="Observation/pghd-diving-underwater-depthg" key="Observation-pghd-diving-underwater-depthg" name="pghd-diving-underwaterDepth"/>
+<artifact id="Observation/pghd-diving-water-temperature" key="Observation-pghd-diving-water-temperature" name="pghd-diving-waterTemperature"/>
+<artifact id="Observation/pghd-food" key="Observation-pghd-food" name="pghd-food"/>
+<artifact id="Observation/pghd-hearing-environmental-audio-exposure" key="Observation-pghd-hearing-environmental-audio-exposure" name="pghd-hearing-environmentalAudioExposure"/>
+<artifact id="Observation/pghd-hearingSensitivity-1" key="Observation-pghd-hearingSensitivity-1" name="pghd-hearingSensitivity-1"/>
+<artifact id="Observation/pghd-hearingSensitivity-2" key="Observation-pghd-hearingSensitivity-2" name="pghd-hearingSensitivity-2"/>
+<artifact id="Observation/pghd-hearingSensitivity-3" key="Observation-pghd-hearingSensitivity-3" name="pghd-hearingSensitivity-3"/>
+<artifact id="Observation/pghd-hearingSensitivity-4" key="Observation-pghd-hearingSensitivity-4" name="pghd-hearingSensitivity-4"/>
+<artifact id="Observation/pghd-heart-electrocardiogram" key="Observation-pghd-heart-electrocardiogram" name="pghd-heart-electrocardiogram"/>
+<artifact id="Observation/pghd-heartbeat" key="Observation-pghd-heartbeat" name="pghd-heartbeat"/>
+<artifact id="Observation/pghd-heartrate" key="Observation-pghd-heartrate" name="pghd-heartrate"/>
+<artifact id="Observation/pghd-medication-adherence" key="Observation-pghd-medication-adherence" name="pghd-medication-adherence"/>
+<artifact id="MedicationAdministration/pghd-medicationadministration-insulin-1" key="MedicationAdministration-pghd-medicationadministration-insulin-1" name="pghd-medicationadministration-insulin"/>
+<artifact id="Observation/pghd-mindfulness-mindful-session" key="Observation-pghd-mindfulness-mindful-session" name="pghd-mindfulness-mindfulSession"/>
+<artifact id="Observation/pghd-mobility-stair-descent-speed" key="Observation-pghd-mobility-stair-descent-speed" name="pghd-mobility-stairDescentSpeed"/>
+<artifact id="Observation/pghd-nutrition-dietary-carbohydrates" key="Observation-pghd-nutrition-dietary-carbohydrates" name="pghd-nutrition-dietaryCarbohydrates"/>
+<artifact id="Observation/pghd-nutrition-dietary-energy-consumed" key="Observation-pghd-nutrition-dietary-energy-consumed" name="pghd-nutrition-dietaryEnergyConsumed"/>
+<artifact id="Observation/pghd-nutrition-dietary-fiber" key="Observation-pghd-nutrition-dietary-fiber" name="pghd-nutrition-dietaryFiber"/>
+<artifact id="Observation/pghd-nutrition-dietary-protein" key="Observation-pghd-nutrition-dietary-protein" name="pghd-nutrition-dietaryProtein"/>
+<artifact id="Observation/pghd-oxygenSaturation" key="Observation-pghd-oxygenSaturation" name="pghd-oxygenSaturation"/>
+<artifact id="Observation/pghd-pregnancy-status" key="Observation-pghd-pregnancy-status" name="pghd-pregnancy-status"/>
+<artifact id="Observation/pghd-reproductive-health-intermenstrual-bleeding" key="Observation-pghd-reproductive-health-intermenstrual-bleeding" name="pghd-reproductive-health-intermenstrualBleeding"/>
+<artifact id="Observation/pghd-respiratoryrate" key="Observation-pghd-respiratoryrate" name="pghd-respiratoryrate"/>
+<artifact id="Observation/pghd-selfcare-handwashingEvent" key="Observation-pghd-selfcare-handwashingEvent" name="pghd-selfcare-handwashingEvent"/>
+<artifact id="Observation/pghd-sleep-asleep-core" key="Observation-pghd-sleep-asleep-core" name="pghd-sleep-asleepCore"/>
+<artifact id="Observation/pghd-sleep-episode-1" key="Observation-pghd-sleep-episode-1" name="pghd-sleep-episode-1"/>
+<artifact id="Observation/pghd-sleep-episode-core-sleep-1" key="Observation-pghd-sleep-episode-core-sleep-1" name="pghd-sleep-episode-core-sleep-1"/>
+<artifact id="Observation/pghd-sleep-episode-core-sleep-2" key="Observation-pghd-sleep-episode-core-sleep-2" name="pghd-sleep-episode-core-sleep-2"/>
+<artifact id="Observation/pghd-sleep-episode-deep-sleep-2" key="Observation-pghd-sleep-episode-deep-sleep-2" name="pghd-sleep-episode-deep-sleep-"/>
+<artifact id="Observation/pghd-sleep-episode-deep-sleep-1" key="Observation-pghd-sleep-episode-deep-sleep-1" name="pghd-sleep-episode-deep-sleep-1"/>
+<artifact id="Observation/pghd-sleep-episode-latency-to-sleep-onset-1" key="Observation-pghd-sleep-episode-latency-to-sleep-onset-1" name="pghd-sleep-episode-latency-to-sleep-onset-1"/>
+<artifact id="Observation/pghd-sleep-episode-latency-to-sleep-onset-2" key="Observation-pghd-sleep-episode-latency-to-sleep-onset-2" name="pghd-sleep-episode-latency-to-sleep-onset-2"/>
+<artifact id="Observation/pghd-snore-event-1" key="Observation-pghd-snore-event-1" name="pghd-snore-event-1"/>
+<artifact id="Observation/pghd-snore-event-2" key="Observation-pghd-snore-event-2" name="pghd-snore-event-2"/>
+<artifact id="Observation/pghd-snore-event-3" key="Observation-pghd-snore-event-3" name="pghd-snore-event-3"/>
+<artifact id="Observation/pghd-snore-index-1" key="Observation-pghd-snore-index-1" name="pghd-snore-index-"/>
+<artifact id="Observation/pghd-snore-index-2" key="Observation-pghd-snore-index-2" name="pghd-snore-index-2"/>
+<artifact id="Observation/pghd-symptom-fever" key="Observation-pghd-symptom-fever" name="pghd-symptom-fever"/>
+<artifact id="Observation/pghd-testresult-forced-vital-capacity" key="Observation-pghd-testresult-forced-vital-capacity" name="pghd-testresult-forcedVitalCapacity"/>
+<artifact id="Observation/pghd-uvexposure" key="Observation-pghd-uvexposure" name="pghd-uvexposure"/>
+<artifact id="Observation/pghd-vitalsigns-apple-sleeping-wrist-temperature" key="Observation-pghd-vitalsigns-apple-sleeping-wrist-temperature" name="pghd-vitalsigns-appleSleepingWristTemperature"/>
+<artifact id="Observation/pghd-voltage-measurement" key="Observation-pghd-voltage-measurement" name="pghd-voltage-measurement"/>
+<artifact id="Observation/pghd-workout-underwater-diving" key="Observation-pghd-workout-underwater-diving" name="pghd-workout-underwaterDiving"/>
+<artifact id="Observation/pghd-workout-walking" key="Observation-pghd-workout-walking" name="pghd-workout-walking"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="api" name="API Endpoints"/>
@@ -75,6 +255,7 @@
 <page key="persona-journey-c" name="Markus"/>
 <page key="operating-systems" name="Operating Systems"/>
 <page key="personas" name="Patient Personas"/>
+<page key="pghd" name="Patient-generated health data(PGHD)"/>
 <page key="personas-index" name="Personas Index"/>
 <page key="physiology" name="Physiology Domains"/>
 <page key="recordkeeping" name="Record Keeping"/>

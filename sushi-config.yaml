@@ -31,6 +31,9 @@ publisher:
 # dependencies:
 #   hl7.fhir.us.core: 7.0.0
 
+dependencies:
+  hl7.fhir.uv.ips: 1.1.0
+
 # dependencies:
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
@@ -98,6 +101,7 @@ menu:
     Algorithms: algorithms.html
     Physiology Domains: physiology.html
     Operating Systems: operating-systems.html
+    Patient-generated health data(PGHD): pghd.html
   Patient Personas:
     Index: personas-index.html
     Thompson Familiy: persona-thompson-family.html
@@ -156,6 +160,8 @@ pages:
     title: API Endpoints
   longitudinal.md:
     title: Longitudinal Records
+  pghd.md:
+    title: Patient-generated health data(PGHD)
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
