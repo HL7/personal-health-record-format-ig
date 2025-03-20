@@ -8,6 +8,8 @@ In effect, this implementation guide does not specify what functionality should 
 
 ### PHR Functional Model (FHIR-ized)
 
+The section and header names for the following table can be found in the [Personal Health Record System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88).  Implementors are encouraged to download the associated PDF which contains detailed descriptions of each item.
+
 #### Personal Health
 
 | Section |  Header Name | Relevant FHIR Standard | Notes  |
@@ -27,7 +29,7 @@ In effect, this implementation guide does not specify what functionality should 
 | PH.2.4 |Produce and Present Ad Hoc Views of the Personal Health Record | [PlanDefinition](https://www.hl7.org/fhir/R4B/plandefinition.html) | |
 | PH.2.5 | Manage Historical and Current State Data | [Endpoint](https://www.hl7.org/fhir/R4B/endpoint.html) <br/> [Subscription](https://www.hl7.org/fhir/R4B/subscription.html)| |
 | PH.2.5.1 | Manage Problem Lists | [Condition](https://www.hl7.org/fhir/R4B/condition.html)  | | | |
-| PH.2.5.2 | Manage Medication List | [Medication](https://www.hl7.org/fhir/R4B/medication.html) <br/> [MedicationStatement](https://www.hl7.org/fhir/R4B/medicationstatement.html)  | | | |
+| PH.2.5.2 | Manage Medication List | [Medication](https://www.hl7.org/fhir/R4B/medication.html) <br/> [MedicationStatement](https://www.hl7.org/fhir/R4B/medicationstatement.html) <br/> [MedicationRequest](https://www.hl7.org/fhir/R4B/medicationrequest.html)  | | | |
 | PH.2.5.3 | Manage Test Results | [Observation](https://www.hl7.org/fhir/R4B/observation.html) | |
 | PH.2.5.4 | Manage Allergy, Intolerance, and Adverse Reaction List | [AllergyIntolerance](https://www.hl7.org/fhir/R4B/allergyintolerance.html)  | |
 | PH.2.5.5 | Manage Immunization List |  [Immunization](https://www.hl7.org/fhir/R4B/immunization.html) | |
@@ -56,8 +58,8 @@ In effect, this implementation guide does not specify what functionality should 
 | PH.3.6.2 | Public Health Risk Alerts | | |
 | PH.4 | Manage Health Education | [Communication](https://www.hl7.org/fhir/R4B/communication.html) <br/> [DocumentReference](https://www.hl7.org/fhir/R4B/documentreference.html) <br/> [Media](https://www.hl7.org/fhir/R4B/media.html) | |
 | PH.5 | PHR Account Holder Decision Support | | |
-| PH.5.1 | Manage Guidelines and Protocols | [Library](https://www.hl7.org/fhir/R4B/library.html) | |
-| PH.5.2 | Drug Interaction Checking | [Library](https://www.hl7.org/fhir/R4B/library.html) <br/> [Medication](https://www.hl7.org/fhir/R4B/medication.html) | |
+| PH.5.1 | Manage Guidelines and Protocols | [Library](https://www.hl7.org/fhir/R4B/library.html) <br/> [PlanDefinition](https://www.hl7.org/fhir/R4B/plandefinition.html) <br/> [CarePlan](https://www.hl7.org/fhir/R4B/careplan.html) | |
+| PH.5.2 | Drug Interaction Checking | [Library](https://www.hl7.org/fhir/R4B/library.html) <br/> [Medication](https://www.hl7.org/fhir/R4B/medication.html)  <br/> [MedicationRequest](https://www.hl7.org/fhir/R4B/medicationrequest.html)  <br/> [MedicationAdministration](https://www.hl7.org/fhir/R4B/medicationadministration.html) <br/> [CDS Hooks](https://cds-hooks.hl7.org/) | |
 | PH.5.3 | Care-Related Decision Support | [CarePlan](https://www.hl7.org/fhir/R4B/careplan.html) <br/> [RelatedPerson](https://www.hl7.org/fhir/R4B/relatedperson.html) <br/> [CareTeam](https://www.hl7.org/fhir/R4B/careteam.html)| |
 | PH.5.4 | Integration with Third Party Clinical Decision Support Services | [CDS Hooks](https://cds-hooks.hl7.org/) | |
 | PH.5.5 | PHR Account Holder Configured Alerts, Reminders, and/or Notifications | [Communication](https://www.hl7.org/fhir/R4B/communication.html) <br/> [Composition](https://www.hl7.org/fhir/R4B/compisition.html) <br/> [Schedule](https://www.hl7.org/fhir/R4B/schedule.html) <br/> [Flag](https://www.hl7.org/fhir/R4B/flag.html) | |

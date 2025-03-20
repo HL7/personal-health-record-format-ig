@@ -1,5 +1,7 @@
 This implementation guide was developed through meta-analysis of dozens of other guides, journal liturature, and an environment surveys of the PHR market.  Implementators may find the following implementation guides of particular interest.
 
+These implementation guides may provide information on how to obtain information from EHR and payor systems and bring them into a PHR.  Note that it is not an inclusive list.  Implementers are encouraged to research adoption on each guide.
+
 In this specification, the key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” are to be interpreted as described in RFC2119.
 
 | Implementation Guide  | Specialty | Resources | APIs |
@@ -28,7 +30,7 @@ In this specification, the key words “MUST”, “MUST NOT”, “REQUIRED”,
 | [Radiation Dose Summary](https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/) | Radiology  | MAY | MAY |
 | [Breast Radiology Reporting](https://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/) |  Radiology | MAY | MAY |
 | [mCODE](http://hl7.org/fhir/us/mcode/) | | MAY | MAY |
-| [Allergy Intolerance](https://build.fhir.org/ig/hl7ch/ch-allergyintolerance/document.html) | Immunology  | SHOULD | MAY |
+| [CH Allergy Intolerance](https://build.fhir.org/ig/hl7ch/ch-allergyintolerance/document.html) | Immunology  | SHOULD | MAY |
 | [Vital Signs](https://build.fhir.org/ig/HL7/cimi-vital-signs/) | Intensive Care  | SHOULD | MAY |
 | [UDAP Security](https://build.fhir.org/ig/HL7/fhir-udap-security-ig/) |   | NOT APPLICABLE | SHOULD |
 | [SNOMED Terminology Server](https://build.fhir.org/ig/IHTSDO/snomed-ig/) |   | SHOULD | MAY |
