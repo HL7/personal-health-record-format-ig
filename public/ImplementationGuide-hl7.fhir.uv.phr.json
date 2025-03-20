@@ -14,7 +14,7 @@
   "name" : "PatientHealthRecordsIG",
   "title" : "Personal Health Records",
   "status" : "draft",
-  "date" : "2025-03-11T13:10:34-05:00",
+  "date" : "2025-03-20T16:03:27-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [{
     "name" : "HL7 International / Patient Empowerment",
@@ -332,7 +332,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#0.3.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.4.1"
     },
     {
       "extension" : [{

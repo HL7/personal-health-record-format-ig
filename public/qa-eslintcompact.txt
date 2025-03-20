@@ -2,7 +2,9 @@ PatientHealthRecordsIG
 =========================================
 
 Generic: line 0, col 0, Warning - The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content) (INFORMATIONAL)
-/Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-NutrientOuttake.json: line 1, col 17826, Info - The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated (BUSINESSRULE)
+/Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/ImplementationGuide-hl7.fhir.uv.phr.json: line 1, col 24484, Error - HL7 Implementation Guides must state their status explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status (BUSINESSRULE)
+/Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/ImplementationGuide-hl7.fhir.uv.phr.json: line 1, col 24484, Warning - HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm (BUSINESSRULE)
+/Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-NutrientOuttake.json: line 1, col 17973, Info - The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated (BUSINESSRULE)
 
-err = 0, warn = 1, info = 1
-IG Publisher Version: 1.8.3
+err = 1, warn = 2, info = 1
+IG Publisher Version: 1.8.22

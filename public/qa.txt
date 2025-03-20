@@ -1,15 +1,15 @@
 PatientHealthRecordsIG : Validation Results
 =========================================
 
-err = 0, warn = 1, info = 1
-IG Publisher Version: 1.8.3 Out of date - current version is 1.8.20
-Generated Tue Mar 11 13:11:28 CDT 2025. FHIR version 4.0.1 for hl7.fhir.uv.phr#1.0.0-ballot (canonical = http://hl7.org/fhir/uv/phr)
+err = 1, warn = 2, info = 1
+IG Publisher Version: 1.8.22 Out of date - current version is ?pub-ver-1?
+Generated Thu Mar 20 16:04:55 CDT 2025. FHIR version 4.0.1 for hl7.fhir.uv.phr#1.0.0-ballot (canonical = http://hl7.org/fhir/uv/phr)
  Build Errors : 0 / 1 / 0
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Bundle-PhrBundle-example : 0 / 0 / 14
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Bundle-pdr-message : 0 / 0 / 6
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Composition-jane-doe-composition : 0 / 0 / 1
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/DocumentReference-jane-doe-genomics-document : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/ImplementationGuide-hl7.fhir.uv.phr : 0 / 0 / 1
+ /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/ImplementationGuide-hl7.fhir.uv.phr : 1 / 1 / 1
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Media-jane-doe-media : 0 / 0 / 1
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Observation-PCDSleepObservation-duration-example : 0 / 0 / 1
  /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Observation-PCDSleepObservation-stage-example : 0 / 0 / 1
@@ -38,6 +38,8 @@ WARNING: The jira specification file appears to be out of date with the versions
 == fsh-generated/resources/Composition-jane-doe-composition.json ==
 == fsh-generated/resources/DocumentReference-jane-doe-genomics-document.json ==
 == fsh-generated/resources/ImplementationGuide-hl7.fhir.uv.phr.json ==
+ERROR: ImplementationGuide/hl7.fhir.uv.phr: ImplementationGuide: HL7 Implementation Guides must state their status explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+WARNING: ImplementationGuide/hl7.fhir.uv.phr: ImplementationGuide: HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
 == fsh-generated/resources/Media-jane-doe-media.json ==
 == fsh-generated/resources/Observation-PCDSleepObservation-duration-example.json ==
 == fsh-generated/resources/Observation-PCDSleepObservation-stage-example.json ==
