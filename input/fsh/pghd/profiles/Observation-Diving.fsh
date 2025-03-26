@@ -1,0 +1,12 @@
+Profile: PGHDDiving
+Parent: Observation
+Id: pghd-diving
+Title: "PGHD Diving Profile"
+Description: """
+This profile defines how to represent Diving.
+"""
+* insert ObservationPGHDRules(Diving)
+* category[ObservationCategory].coding.code = #activity (exactly)
+* code.coding[PGHDCode] from ObservationDiving
+* value[x] only Quantity
+* value[x] MS

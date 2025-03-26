@@ -1,0 +1,25 @@
+Instance: pghd-hearingSensitivity-3
+InstanceOf: PGHDHearingSensitivity
+Description: "HearingSensitivity Example"
+Usage: #example
+* id = "pghd-hearingSensitivity-3"
+* identifier
+  * system = "urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3"
+  * value = "DE430E9B-03F4-4310-ACA1-508787B240CD_3"
+* status = #final
+* category = $CodeSystemObservationCategory#exam "Exam"
+* code = $CodeSystemObservationPGHDCodes#hearingSensitivity "Hearing sensitivity"
+* subject = Reference(Patient/1)
+* effectivePeriod
+  * start = "2023-12-01T05:33:42Z"
+  * end = "2023-12-01T05:35:22Z"
+* performer = Reference(Patient/1)
+* component[frequency]
+  * code = $CodeSystemHearingSensivityCodes#frequency "Frequency"
+  * valueQuantity = 2000 'Hz' "Hz"
+* component[leftEarSensitivity]
+  * valueQuantity = 70 'dB' "dB"
+  * code = $CodeSystemHearingSensivityCodes#leftEarSensitivity "Left ear sensitivity"
+* component[rightEarSensitivity]
+  * code = $CodeSystemHearingSensivityCodes#rightEarSensitivity "Right ear sensitivity"
+  * valueQuantity = 75 'dB' "dB"
