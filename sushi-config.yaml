@@ -8,15 +8,19 @@ canonical: http://hl7.org/fhir/uv/phr
 name: PatientHealthRecordsIG
 title: Personal Health Records
 description: Guidance on how to create longitudinal personal health records using FHIR.  Exporting, file formats, patient examples, and more.
-status: draft # draft | active | retired | unknown
-version: 1.0.0-ballot
+status: active # draft | active | retired | unknown
+version: 1.0.0-ballot2
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
-releaseLabel: ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: STU 1 ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status 
+    valueCode: trial-use
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 1
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  
     valueCode: pe
 publisher:

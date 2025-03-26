@@ -17,9 +17,8 @@ Usage: #example
 * status = #current
 * subject = Reference(JaneDoe)
 * date = "2024-12-11T05:22:27.249Z"
-* author[0].reference = "http://hospital.example.org/Practitioner/123"
 * author[0].display = "Dr. Smith"
 * content[0].attachment.contentType = #application/pdf
-* content[0].attachment.url = "http://hospital.example.org/reports/jane-doe-genomics.pdf"
 * content[0].attachment.title = "Genomics Report for Jane Doe"
 * content[0].attachment.creation = "2024-12-11T05:22:27.249Z"
+

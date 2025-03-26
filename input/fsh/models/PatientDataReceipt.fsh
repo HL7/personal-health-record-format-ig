@@ -21,7 +21,7 @@ Usage: #example
 Instance: pdr-message-header
 InstanceOf: MessageHeader
 Usage: #inline
-* eventUri = "urn:mitre:healthmanager:pdr"
+* eventCoding.display = "http://example.org/baseR4/MessageHeader/345de01e-9680-4ca9-9eb5-abcceb9d799a"
 * source.endpoint = "http://example.org"
 * focus[0] = Reference(http://example.org/baseR4/Encounter/ee6beac6-aaaa-957c-767e-1e1caa5c816c)
 * focus[+] = Reference(http://example.org/baseR4/Procedure/ee6beac6-aaaa-957c-767e-1e1c925c816c)

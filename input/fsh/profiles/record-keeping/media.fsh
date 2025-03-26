@@ -19,6 +19,5 @@ Usage: #example
 * subject = Reference(JaneDoe)
 * createdDateTime = "2024-12-11T05:22:27.249Z"
 * content.contentType = #image/jpeg
-* content.url = "http://hospital.example.org/media/jane-doe-smartphone-photo.jpg"
 * content.title = "Jane Doe Smartphone Photo"
-
+// * content.url = "http://hospital.example.org/media/jane-doe-smartphone-photo.jpg"
