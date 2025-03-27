@@ -42,7 +42,6 @@ cd output
 open -a "Google Chrome" index.html
 ```
 
-
 #### Contributing  
 
 ```shell

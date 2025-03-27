@@ -8,7 +8,6 @@ It is our hope that your applications should be able to load any of the followin
 | Patient ID | PatientName   | Primary Diagnosis  | Source | .phr | .sphr |
 | ------------- | :-------- | :-------- | :-------- | :-------- | 
 | john-doe | John Doe | Diabetic  |  | [ JohnDoe.phr ](JohnDoe.phr) |  |
-| 12724069 | Timmy Smart | Foster Child  | Cerner | [ TimmySmart.phr ](TimmySmart-FosterCareTimeline.phr) |  |
 | jenny-m | Jenny M |  Cancer | MCODE | [JennyM-cancer-patient.phr](JennyM-cancer-patient.phr) |  |  
 | betsy | Betsy Johnson |  | PACIO | [BetsySmithJohnson.phr](PACIO/BetsySmithJohnson.phr) |  |  
 | wsim001 | William Sim | Pediatric Cancer | DICOM | [WilliamSim.phr](WilliamSim.phr) |  [WilliamSim.sphr](WilliamSim.sphr) | 
@@ -79,4 +78,9 @@ For additional research on patient narratives and the circumstances that shape m
 - [Node on FHIR - Clinical Scenarios](https://github.com/clinical-meteor/clinical-scenarios)    
 - [SMART on FHIR Test Patient Data (Cerner)](https://docs.google.com/document/d/10RnVyF1etl_17pyCyK96tyhUWRbrTyEcqpwzW-Z-Ybs/edit)  
 - [Figma - Patient Personas (GoInvo)](https://www.figma.com/proto/MzUwuSOpldbZXQk4aYobgk/V2-Library?page-id=644%3A4036&node-id=1209%3A3275)  
-- [Pediatric Leukemia](https://pediatricimaging.org/diseases/leukemia/)
+- [Pediatric Leukemia](https://pediatricimaging.org/diseases/leukemia/)  
+- [Synthea: Downloads](https://synthea.mitre.org/downloads)
+- [The Coherent Dataset (9GB)](https://synthea-open-data.s3.amazonaws.com/coherent/coherent-11-07-2022.zip)
+
+
+

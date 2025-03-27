@@ -7,7 +7,7 @@ Medical records have been around since as long as there have been practicing phy
  
  Soon after, the personal computing revolution saw the general population become able to purchase a home computer, and with it a flury of patients using these PCs to manage their personal health using spreadsheets and small self-written offline medical record management utilities.    
  
- Many of these utilities were eventually abandoned; but others found themselves in a process of consolidation and gravitating towards what would eventually become the major electronic medical record vendors (i.e. Meditech, Epic, Cerner, Allscripts, etc).
+ Many of these utilities were eventually abandoned; but others found themselves in a process of consolidation and gravitating towards what would eventually become the major electronic medical record vendors (i.e. Meditech, Epic, Cerner (now Oracle), Allscripts (now Veradigm/Altera) etc).
  
  Eventually these systems had need to exchange information with each other, and an era of point-to-point communication was begun using HL7 v2.  After nearly 3 decades of this approach, the need to renegotiate interfaces between every business partner eventually led to the development of reusable data endpoints, as described by Fast Healthcare Interoperability Resources (FHIR).  
  

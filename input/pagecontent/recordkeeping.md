@@ -90,7 +90,7 @@ A SMART Health Links based solution will distribute the encryption key within a 
 
 For conformance testing with this IG, the primary success critieria is that systems MUST have the ability to import/export the `.sphr` filetype. This entails storing FHIR records in a new-line delimited file (including a cover composition resource, a document manifest, and provenance records as needed), compressing the file with DEFLATE algorithm (as needed), and then signing with an X.509 security certificate. 
 
-#### Creating a Standard Personal Health Record    
+#### Creating a Personal Health Record    
 
 The process flow below is based on encrypting files with PGP/GPG utilities, which support asymmetric cryptography algorithms and X.509 certificates.
 
@@ -111,7 +111,7 @@ The process flow below is based on encrypting files with PGP/GPG utilities, whic
 - Rename the .phr file with .sphr extension.
 - Optionally hash the file and produce a JWS signature using your discoverable X.509 certificate.
 
-#### Importing a Standard Personal Health Record 
+#### Importing a Personal Health Record 
 
 - Configure operating sytem to open the .sphr with the application of your choice.
 - If .sphr not registered, rename to .zip

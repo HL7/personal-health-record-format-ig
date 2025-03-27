@@ -121,7 +121,6 @@ If you later want to unregister your new UTI, pass the -u option to lsregister:
 - [HealthKit on FHIR](https://github.com/StanfordBDHG/HealthKitOnFHIR)
 
 
-
 ### Flutter  
 - [Flutter documentation](https://docs.flutter.dev/)
 - [Flutter for Android](https://docs.flutter.dev/get-started/flutter-for/android-devs)  
