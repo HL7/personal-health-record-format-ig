@@ -8,7 +8,13 @@ Readers are encouraged to think of this implementation guide as a marathon, not 
 
 ### What is a Personal Health Record?   
 
+Nearly two decades ago, the Markle Foundation's Personal Health workgroup convened to discuss the state-of-the-art in managing personal health information. The workgroup defined the PHR as "an electronic application through which individuals can access, manage and share their health information, and that of others for whom they are authorized, in a private, secure, and confidential environment." Their early vision was that PHRs would enable individuals to access and coordinate comprehensive, lifelong health information and exchange necessary parts of it.
+
 ![VennDiagram.png](VennDiagram.png){:width="100%"}    
+
+The core of the Personal Health Record should be medical grade, and able to incorporate any medical record that you receive after a visit to the hospital; and which the patient can then carry from one healthcare provider to the next. As such, a modern Personal Health Record needs to essentially be able to receive captured data from throughout the hospital. Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychiatry. All of it is relevent." to "The purpose of this specification is to provide standard mechanisms for a PHR to interoperate, facilitating sharing of information obtained by the PHR from healthcare encounters, personal documentation and measurement, and other sources.
+
+The diagram above shows the intersection of the data collected by the patient, compared to the data collected by the hospital EHR or insurance systems.  
 
 ### Relevant Law
 
