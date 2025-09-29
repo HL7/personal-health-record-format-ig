@@ -12,9 +12,26 @@ Readers are encouraged to think of this implementation guide as a marathon, not 
 
 ### Relevant Law
 
-- 21st Century Cures
-- Medicare 
-- CARES Act
+| **Country**     | **Initiative / Law**                             | **Type**                            | **FHIR/API Integration**                                                                                      |
+|------------------|--------------------------------------------------|-------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| **Netherlands**  | MedMij Framework                                | Policy/Standard + Certification     | Yes (HL7 FHIR) – MedMij defines FHIR-based APIs; all certified PHRs use these standard APIs.                  |
+|                  | PGO Personal Health Environments (apps)         | Private PHR Platforms (gov’t backed)| Yes – Must be MedMij-certified; patients access data via DigiD login and FHIR APIs.                           |
+| **Australia**    | My Health Record (MyHR)                         | Government-run National PHR         | Partial – Transitioning from CDA to FHIR-based APIs via FHIR Gateway for consumer access.                     |
+|                  | National Digital Health Strategy                | Policy/Strategy                     | Yes – Emphasizes HL7 FHIR alignment; publishes FHIR implementation guides.                                    |
+| **Japan**        | MynaPortal Health Access                        | Government portal & APIs            | Yes – APIs link MynaPortal with private PHRs; using FHIR for new infrastructure.                              |
+|                  | Medical DX/Data Health Plans                    | National Policy                     | Yes – Standardizing EMR data and enabling patient access; includes SMART Health Cards (FHIR).                 |
+|                  | Personal Information Protection Commission      | National Law                        | Not specifically.  Only specifies handling of personal data and patient data ownership.                       |
+|                  | Act on the Protection of Personal Information   | National Law                        | Not specifically.  Only specifies handling of personal data and patient data ownership.                       |
+| **United States**| 21st Century Cures Act & ONC/CMS Rules          | Federal Laws/Regulations            | Yes – Mandates HL7 FHIR APIs (US Core profiles); SMART on FHIR widely implemented.                            |
+|                  | Blue Button 2.0 / Apple Health Records          | Government & Private Platforms      | Yes – FHIR-based APIs for claims and provider data; app ecosystem supports FHIR APIs.                         |
+| **Canada**       | Connected Care Act (Bill C-72, 2024)            | Proposed Federal Law                | Yes (Planned) – Would mandate interoperable systems; aligns with Pan-Canadian FHIR specs.                     |
+|                  | Provincial Portals / Pan-Canadian FHIR Profiles | Patient portals / Standards         | Partial – Web portals exist; FHIR-based standards in adoption phase.                                          |
+| **UK (England)** | NHS App & GP Record Access                      | NHS-operated Digital Services       | Yes – NHS APIs (e.g., GP Connect) use FHIR; patients access data via NHS App.                                 |
+|                  | CareConnect FHIR Profiles / Patients Know Best  | National Profiles / Private PHR     | Yes – Profiles define FHIR structures; private apps integrate via NHS APIs.                                   |
+| **Germany**      | Patient Data Protection Act (PDSG) / ePA        | National Law & PHR Platform         | Partial – Currently uses CDA/IHE XDS; migrating to HL7 FHIR (ePA 2.0, Basisprofil DE).                        |
+| **Finland**      | Kanta PHR                                       | Government PHR platform             | Yes – Fully HL7 FHIR-based with open APIs; apps write to/read from PHR using Finnish FHIR profiles.           |
+| **Taiwan**       | My Health Bank                                  | National PHR Portal (NHI)           | Partial – APIs/SDK provided; transitioning toward FHIR from legacy HL7 standards.                             |
+| **India**        | Ayushman Bharat Digital Mission (ABDM)         | National Health IT Framework        | Yes – HL7 FHIR adopted as primary exchange standard; personal consent-based PHR model.                        |
 
 ### Purpose / Design Philosophy
 
