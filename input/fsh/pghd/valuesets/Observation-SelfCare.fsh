@@ -1,0 +1,11 @@
+ValueSet: ObservationSelfCare
+Id: observation-selfcare-codes
+Title: "Observation SelfCare Codes"
+Description: """
+Codes representing selfcare-related measurement items  
+セルフケアに関連する測定項目を表すコード
+"""
+* insert ValueSetRules
+
+* ObservationPGHD#handwashingEvent
+* ObservationPGHD#toothbrushingEvent
