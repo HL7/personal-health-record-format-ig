@@ -1,6 +1,6 @@
-ValueSet: ObservationBodyMesurementsValueSet
-Id: observation-body-mesurements-codes
-Title: "Observation BodyMesurements Codes"
+ValueSet: ObservationBodyMeasurementsValueSet
+Id: observation-body-measurements-codes
+Title: "Observation BodyMeasurements Codes"
 Description: """
 Codes representing measurement items related to physical measurements
 """

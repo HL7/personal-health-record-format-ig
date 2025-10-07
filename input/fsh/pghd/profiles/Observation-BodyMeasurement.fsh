@@ -10,6 +10,6 @@ This profile defines how to represent body measurements.
 * . ^short = "PGHD Body Measurements Profile "
 
 * category[ObservationCategory].coding.code = #exam (exactly)
-* code.coding[PGHDCode] from ObservationBodyMesurementsValueSet (required)
+* code.coding[PGHDCode] from ObservationBodyMeasurementsValueSet (required)
 * value[x] only Quantity
 * value[x] MS
