@@ -1,6 +1,6 @@
 Instance: pghd-mindfulness-mindfulSession
 InstanceOf: PGHDMindfulness
-Description: "Mindfulness Example (マインドフル時間の例)"
+Description: "Mindfulness Example"
 Usage: #example
 * id = "pghd-mindfulness-mindful-session"
 * identifier

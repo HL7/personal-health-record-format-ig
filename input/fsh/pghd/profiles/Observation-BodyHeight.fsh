@@ -3,12 +3,11 @@ Parent: bodyheight
 Id: pghd-bodyheight
 Title: "PGHD BodyHeight Profile"
 Description: """
-This profile defines how to represent body height measurements.  
-このプロファイルは、身長の測定値を表す方法を定義します。
+This profile defines how to represent body height measurements.
 """
 * insert ProfileRules
 * insert VitalSignsRules
-* . ^short = "PGHD Body Height Profile  (身長 プロファイル)"
+* . ^short = "PGHD Body Height Profile"
 
 * code.coding[BodyHeightCode] from $ValueSetVitalSignsLoincCodes (required)
 * code.coding contains PGHDCode 0..1

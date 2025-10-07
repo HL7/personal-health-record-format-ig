@@ -1,6 +1,6 @@
 Instance: pghd-bloodpressure
 InstanceOf: PGHDBloodPressure
-Description: "BloodPressure Example (血圧の例)"
+Description: "BloodPressure Example"
 Usage: #example
 * id = "pghd-bloodpressure"
 * identifier

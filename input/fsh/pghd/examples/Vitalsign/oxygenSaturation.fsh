@@ -1,6 +1,6 @@
 Instance: pghd-oxygenSaturation
 InstanceOf: PGHDOxygenSaturation
-Description: "OxygenSaturation Example (血中酸素濃度の例)"
+Description: "OxygenSaturation Example"
 Usage: #example
 * id = "pghd-oxygenSaturation"
 * identifier

@@ -2,8 +2,7 @@ ValueSet: SleepAnalysisValueSet
 Id: sleep-analysis
 Title: "Sleep Analysis"
 Description: """
-Codes for stages of sleep  
-睡眠のステージを表すコード
+Codes for stages of sleep
 """
 * insert ValueSetRules
 

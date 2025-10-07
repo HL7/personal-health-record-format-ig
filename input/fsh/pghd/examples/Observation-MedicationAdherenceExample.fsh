@@ -1,6 +1,6 @@
 Instance: pghd-medication-adherence
 InstanceOf: PGHDMedicationAdherence
-Description: "MedicationAdherence Example (服薬アドヒアランス率の例)"
+Description: "MedicationAdherence Example"
 Usage: #example
 * id = "pghd-medication-adherence"
 * status = #final

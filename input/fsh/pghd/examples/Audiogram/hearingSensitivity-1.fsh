@@ -1,6 +1,6 @@
 Instance: pghd-hearingSensitivity-1
 InstanceOf: PGHDHearingSensitivity
-Description: "HearingSensitivity Example (聴力の例)"
+Description: "HearingSensitivity Example"
 Usage: #example
 * id = "pghd-hearingSensitivity-1"
 * identifier

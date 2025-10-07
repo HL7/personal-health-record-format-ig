@@ -3,12 +3,11 @@ Parent: Observation
 Id: pghd-snore-event
 Title: "PGHD SnoreEvent Profile"
 Description: """
-This profile defines how to represent SnoreEvent.  
-このプロファイルは、いびきイベントに関する情報を表す方法を定義します。
+This profile defines how to represent SnoreEvent.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Snore Event Profile (いびきイベント プロファイル)"
+* . ^short = "PGHD Snore Event Profile"
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
 * code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)

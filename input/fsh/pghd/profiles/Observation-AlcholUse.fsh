@@ -1,12 +1,11 @@
 Profile: PGHDAlcholUse
 Parent: PGHDAlcholConsumption
 Id: pghd-alchol-use
-Title: "PGHD Alchol Use Profile"
+Title: "PGHD AlcholUse Profile"
 Description: """
-This profile defines how to represent Alchol use.  
-このプロファイルは、一日あたりの飲酒量に関する情報を表す方法を定義します。
+This profile defines how to represent Alchol use.
 """
-* . ^short = "PGHD Alchol Use Profile (飲酒量 プロファイル)"
+* . ^short = "PGHD Alchol Use Profile"
 
 * code.coding[PGHDCode].code = #numberOfAlcoholicBeverages (exactly)
 * code.coding[LOINCCode].code = #74013-4 (exactly)

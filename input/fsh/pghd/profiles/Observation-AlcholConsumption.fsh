@@ -1,14 +1,13 @@
 Profile: PGHDAlcholConsumption
 Parent: Observation
 Id: pghd-alchol-consumption
-Title: "PGHD Alchol Consumption Profile"
+Title: "PGHD AlcholConsumption Profile"
 Description: """
-This profile defines how to represent Alchol Consumption.  
-このプロファイルは、飲酒に関する情報を表す方法を定義します。
+This profile defines how to represent AlcholConsumption.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Alchol Consumption Profile (飲酒 プロファイル)"
+* . ^short = "PGHD Alchol Consumption Profile"
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
 * code.coding[PGHDCode] from ObservationAlcholConsumption

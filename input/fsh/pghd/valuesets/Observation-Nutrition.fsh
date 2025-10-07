@@ -2,8 +2,7 @@ ValueSet: ObservationNutrition
 Id: observation-nutrition-codes
 Title: "Observation Nutrition Codes"
 Description: """
-Codes representing nutrition-related measures  
-栄養に関連する測定項目を表すコード
+Codes representing nutrition-related measures
 """
 * insert ValueSetRules
 

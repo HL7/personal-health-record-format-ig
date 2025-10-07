@@ -1,6 +1,6 @@
 Instance: pghd-symptom-fever
 InstanceOf: PGHDSymptom
-Description: "Symptom fever Example (症状の発熱の例)"
+Description: "Symptom fever Example"
 Usage: #example
 * id = "pghd-symptom-fever"
 * identifier

@@ -2,8 +2,7 @@ ValueSet: ObservationVitalsignsValueSet
 Id: observation-vital-signs-codes
 Title: "Observation Vitalsigns Codes"
 Description: """
-Codes representing vitalsigns-related measurement items  
-バイタルサインに関連する測定項目を表すコード
+Codes representing vitalsigns-related measurement items
 """
 * insert ValueSetRules
 

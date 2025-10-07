@@ -3,12 +3,11 @@ Parent: Observation
 Id: pghd-electrocardiogram
 Title: "PGHD Electrocardiogram Profile"
 Description: """
-This profile defines how to represent Electrocardiogram.  
-このプロファイルは、心電図に関する情報を表す方法を定義します。
+This profile defines how to represent Electrocardiogram.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Electrocardiogram Profile (心電図 プロファイル)"
+* . ^short = "PGHD Electrocardiogram Profile"
 
 * category[ObservationCategory].coding.code = #exam (exactly)
 * code.coding[PGHDCode].code = #electrocardiogram (exactly)

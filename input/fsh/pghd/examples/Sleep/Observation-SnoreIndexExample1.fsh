@@ -1,6 +1,6 @@
 Instance: pghd-snore-index-
 InstanceOf: PGHDSnoreIndex
-Description: "SnoreIndex Example (いびき指数の例)"
+Description: "SnoreIndex Example"
 Usage: #example
 * contained
   * resourceType = "Device"

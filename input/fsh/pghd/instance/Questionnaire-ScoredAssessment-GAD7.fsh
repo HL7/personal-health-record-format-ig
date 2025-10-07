@@ -13,7 +13,7 @@ Usage:  #definition
 * item[0]
   * linkId = "69725-0"
   * code = $CodeSystemLoinc#69725-0 "Feeling nervous, anxious or on edge in last 2 weeks"
-  * text = "緊張感、不安感または神経過敏を感じる"
+  * text = "Feeling nervous, anxious or on edge"
   * type = #choice
   * answerOption[0]
     * valueCoding = $CodeSystemLoinc#LA6568-5 "Not at all"
@@ -28,7 +28,7 @@ Usage:  #definition
 * item[1]
   * linkId = "68509-9"
   * code = $CodeSystemLoinc#68509-9 "Not able to stop or control worrying in the last 2 weeks"
-  * text = "心配することを止められない、または心配をコントロールできない"
+  * text = "Over the past 2 weeks have you not been able to stop or control worrying"
   * type = #choice
   * answerOption[0]
     * valueCoding = $CodeSystemLoinc#LA6568-5 "Not at all"
@@ -43,7 +43,7 @@ Usage:  #definition
 * item[2]
   * linkId = "69733-4"
   * code = $CodeSystemLoinc#69733-4 "Worrying too much about different things in last 2 weeks [Reported.PHQ]"
-  * text = "いろいろなことを心配しすぎる"
+  * text = "Worrying too much about different things"
   * type = #choice
   * answerOption[0]
     * valueCoding = $CodeSystemLoinc#LA6568-5 "Not at all"
@@ -58,7 +58,7 @@ Usage:  #definition
 * item[3]
   * linkId = "69734-2"
   * code = $CodeSystemLoinc#69734-2 "Trouble relaxing in last 2 weeks [Reported.PHQ]"
-  * text = "くつろぐことが難しい"
+  * text = "Trouble relaxing"
   * type = #choice
   * answerOption[0]
     * valueCoding = $CodeSystemLoinc#LA6568-5 "Not at all"
@@ -73,7 +73,7 @@ Usage:  #definition
 * item[4]
   * linkId = "69735-9"
   * code = $CodeSystemLoinc#69735-9 "Being so restless that it is hard to sit still in last 2 weeks [Reported.PHQ]"
-  * text = "じっとしていることができないほど落ち着かない"
+  * text = "Being so restless that it is hard to sit still"
   * type = #choice
   * answerOption[0]
     * valueCoding = $CodeSystemLoinc#LA6568-5 "Not at all"
@@ -88,7 +88,7 @@ Usage:  #definition
 * item[5]
   * linkId = "69689-8"
   * code = $CodeSystemLoinc#69689-8 "Becoming easily annoyed or irritable in last 4 weeks [Reported.PHQ]"
-  * text = "いらいらしがちであり、怒りっぽい"
+  * text = "Becoming easily annoyed or irritable."
   * type = #choice
   * answerOption[0]
     * valueCoding = $CodeSystemLoinc#LA6568-5 "Not at all"
@@ -103,7 +103,7 @@ Usage:  #definition
 * item[6]
   * linkId = "69736-7"
   * code = $CodeSystemLoinc#69736-7 "Feeling afraid as if something awful might happen in last 2 weeks [Reported.PHQ]"
-  * text = "何か恐ろしいことがおこるのではないかと恐れを感じる"
+  * text = "Feeling afraid as if something awful might happen"
   * type = #choice
   * answerOption[0]
     * valueCoding = $CodeSystemLoinc#LA6568-5 "Not at all"

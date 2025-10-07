@@ -1,6 +1,6 @@
 Instance: pghd-heart-electrocardiogram
 InstanceOf: PGHDElectrocardiogram
-Description: "Heart electrocardiogram Example (心臓の心電図の例)"
+Description: "Heart electrocardiogram Example"
 Usage: #example
 * id = "pghd-heart-electrocardiogram"
 * contained = Inline-Instance-Device

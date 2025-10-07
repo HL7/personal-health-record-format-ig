@@ -3,12 +3,11 @@ Parent: Observation
 Id: pghd-heartbeat
 Title: "PGHD Heartbeat Profile"
 Description: """
-This profile defines how to represent Heartbeat.  
-このプロファイルは、心拍に関する情報を表す方法を定義します。
+This profile defines how to represent Heartbeat.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Heartbeat Profile (心拍 プロファイル)"
+* . ^short = "PGHD Heartbeat Profile"
 
 * category[ObservationCategory].coding.code = #exam (exactly)
 * code.coding[PGHDCode].code = #heartBeatSeries (exactly)

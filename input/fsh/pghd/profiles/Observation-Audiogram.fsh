@@ -3,12 +3,11 @@ Parent: Observation
 Id: pghd-audiogram
 Title: "PGHD Audiogram Profile"
 Description: """
-This profile defines how to represent Audiogram.  
-このプロファイルは、聴覚検査を表す方法を定義します。
+This profile defines how to represent Audiogram.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Audiogram Profile (聴覚検査 プロファイル)"
+* . ^short = "PGHD Audiogram Profile"
 
 * category[ObservationCategory].coding.code = #exam (exactly)
 * code.coding[PGHDCode].code = #Audiogram (exactly)

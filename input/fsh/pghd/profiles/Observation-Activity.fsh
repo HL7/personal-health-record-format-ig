@@ -3,12 +3,11 @@ Parent: Observation
 Id: pghd-activity
 Title: "PGHD Activity Profile"
 Description: """
-This profile defines how to represent Activity.  
-このプロファイルは、アクティビティに関する情報を表す方法を定義します。
+This profile defines how to represent Activity.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Activity Profile (アクティビティ プロファイル)"
+* . ^short = "PGHD Activity Profile"
 
 * category[ObservationCategory].coding.code = #activity (exactly)
 * code.coding[PGHDCode] from ObservationActivity

@@ -2,8 +2,7 @@ CodeSystem: StateOfMindValence
 Id: state-of-mind-valence-codes
 Title: "State of Mind Valence Codes"
 Description: """
-Codes for state of mind valence 
-心の状態を表すコード
+Codes for state of mind valence
 """
 * insert CodeSystemRules
 
@@ -14,11 +13,3 @@ Codes for state of mind valence
 * #slightlyPleasant "Slightly Pleasant" ""
 * #pleasant "Pleasant" ""
 * #veryPleasant "Very Pleasant" ""
-
-* insert CodeDesignationRules(#veryUnpleasant, 非常に不快)
-* insert CodeDesignationRules(#unpleasant, 不快)
-* insert CodeDesignationRules(#slightlyUnpleasant, やや不快)
-* insert CodeDesignationRules(#neutral, どちらとも言えない)
-* insert CodeDesignationRules(#slightlyPleasant, やや快適)
-* insert CodeDesignationRules(#pleasant, 快適)
-* insert CodeDesignationRules(#veryPleasant, 非常に快適)

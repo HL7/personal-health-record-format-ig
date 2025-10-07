@@ -2,8 +2,7 @@ CodeSystem: EcgLead
 Id: ecg-lead-codes
 Title: "ECG Lead Codes"
 Description: """
-Codes for ECG induction  
-心電図の誘導を表すコード
+Codes for ECG induction
 """
 * insert CodeSystemRules
 

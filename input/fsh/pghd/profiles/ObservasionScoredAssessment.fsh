@@ -3,12 +3,11 @@ Parent: Observation
 Id: pghd-observation-scored-assessment
 Title: "PGHD Scored Assessment Profile"
 Description: """
-This profile defines the implementation of the Scored Assessment.   
-このプロファイルは、メンタルヘルス評価の情報を定義します。
+This profile defines the implementation of the Scored Assessment.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Scored Assessment Profile (メンタルヘルス評価 プロファイル)"
+* . ^short = "PGHD Scored Assessment Profile"
 
 * category[ObservationCategory].coding.code = #survey (exactly)
 * code.coding[PGHDCode] from ObservationMind

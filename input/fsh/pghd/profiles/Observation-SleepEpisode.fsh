@@ -3,12 +3,11 @@ Parent: Observation
 Id: pghd-sleep-episode
 Title: "PGHD Sleep Episode Profile"
 Description: """
-This profile defines how to represent Sleep episode.  
-このプロファイルは、睡眠エピソードを表す方法を定義します。
+This profile defines how to represent Sleep episode.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Sleep Episode Profile (睡眠エピソード プロファイル)"
+* . ^short = "PGHD Sleep Episode Profile"
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
 * code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)

@@ -1,6 +1,6 @@
 Instance: pghd-activity-distanceWalkingRunning-walking
 InstanceOf: PGHDActivity
-Description: "Activity distanceWalkingRunning Example (アクティビティのウォーキング＋ランニングの例)"
+Description: "Activity distanceWalkingRunning Example"
 Usage: #example
 * id = "pghd-activity-distanceWalkingRunning-walking"
 * identifier

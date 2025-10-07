@@ -1,6 +1,6 @@
 Instance: pghd-vitalsigns-appleSleepingWristTemperature
 InstanceOf: PGHDVitalSigns
-Description: "VitalSigns appleSleepingWristTemperature Example (バイタルサインの手首体温の例)"
+Description: "VitalSigns appleSleepingWristTemperature Example"
 Usage: #example
 * id = "pghd-vitalsigns-apple-sleeping-wrist-temperature"
 * identifier

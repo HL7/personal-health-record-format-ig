@@ -3,12 +3,11 @@ Parent: Observation
 Id: pghd-diving
 Title: "PGHD Diving Profile"
 Description: """
-This profile defines how to represent Diving.  
-このプロファイルは、ダイビングを表す方法を定義します。
+This profile defines how to represent Diving.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD CDiving Profile (ダイビング プロファイル)"
+* . ^short = "PGHD CDiving Profile"
 
 * category[ObservationCategory].coding.code = #activity (exactly)
 * code.coding[PGHDCode] from ObservationDiving

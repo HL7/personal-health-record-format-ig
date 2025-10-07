@@ -3,12 +3,11 @@ Parent: Observation
 Id: pghd-observation-state-of-mind
 Title: "PGHD State of Mind Profile"
 Description: """
-This profile defines the implementation of the State of Mind.   
-このプロファイルは、心の状態の情報を定義します。
+This profile defines the implementation of the State of Mind.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD State of Mind Profile (心の状態 プロファイル)"
+* . ^short = "PGHD State of Mind Profile"
 
 * category[ObservationCategory].coding.code = #survey (exactly)
 * code.coding[PGHDCode] from ObservationMind

@@ -3,12 +3,11 @@ Parent: Observation
 Id: pghd-blood-glucose
 Title: "PGHD BloodGlucose Profile"
 Description: """
-This profile defines how to represent blood glucose.  
-このプロファイルは、血糖値を表す方法を定義します。
+This profile defines how to represent blood glucose.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Blood Glucose Profile (血糖値 プロファイル)"
+* . ^short = "PGHD Blood Glucose Profile"
 
 * category[ObservationCategory].coding.code = #vital-signs (exactly)
 * code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)

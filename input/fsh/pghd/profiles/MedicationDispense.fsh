@@ -3,11 +3,10 @@ Parent: MedicationDispense
 Id: pghd-medicationdispense
 Title: "PGHD MedicationDispense Profile"
 Description: """
-This profile defines the dispensing on the part of a pharmacy.  
-このプロファイルは薬局の調剤を定義します。
+This profile defines the dispensing on the part of a pharmacy.
 """
 * insert ProfileRules
-* . ^short = "PGHD MedicationDispense Profile (薬局調剤 プロファイル)"
+* . ^short = "PGHD MedicationDispense Profile"
 
 * status MS
 * medication[x] MS

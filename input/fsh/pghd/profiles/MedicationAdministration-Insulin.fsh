@@ -3,11 +3,10 @@ Parent: MedicationAdministration
 Id: pghd-medicationadministration-insulin
 Title: "PGHD MedicationAdministration Insulin Profile"
 Description: """
-This profile defines the administered insulin doses of a patient.  
-このプロファイルはインスリン投与を定義します。
+This profile defines the administered insulin doses of a patient.
 """
 * insert ProfileRules
-* . ^short = "PGHD MedicationAdministration Insulin Profile (インスリン投与 プロファイル)"
+* . ^short = "PGHD MedicationAdministration Insulin Profile"
 
 * identifier MS
 * status MS

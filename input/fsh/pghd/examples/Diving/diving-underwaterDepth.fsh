@@ -1,6 +1,6 @@
 Instance: pghd-diving-underwaterDepth
 InstanceOf: PGHDDiving
-Description: "Diving underwaterDepth Example (ダイビングの水深の例)"
+Description: "Diving underwaterDepth Example"
 Usage: #example
 * id = "pghd-diving-underwater-depthg"
 * identifier

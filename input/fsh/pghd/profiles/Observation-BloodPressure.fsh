@@ -3,12 +3,11 @@ Parent: bp
 Id: pghd-bloodpressure
 Title: "PGHD BloodPressure Profile"
 Description: """
-This profile defines how to represent blood pressure measurements.   
-このプロファイルは、血圧の測定値を表す方法を定義します。
+This profile defines how to represent blood pressure measurements.
 """
 * insert ProfileRules
 * insert VitalSignsRules
-* . ^short = "PGHD Blood Pressure Profile (血圧 プロファイル)"
+* . ^short = "PGHD Blood Pressure Profile"
 
 * code.coding[BPCode] from $ValueSetVitalSignsLoincCodes (required)
 * code.coding contains PGHDCode 0..1

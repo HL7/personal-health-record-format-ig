@@ -1,6 +1,6 @@
 Instance: pghd-alchol-use-numberOfAlcoholicBeverages
 InstanceOf: PGHDAlcholUse
-Description: "AlcholUse numberOfAlcoholicBeverages Example (飲酒の飲酒量の例)"
+Description: "AlcholUse numberOfAlcoholicBeverages Example"
 Usage: #example
 * id = "pghd-alchol-use-number-of-alcoholic-beverages"
 * contained = Inline-Instance-Device

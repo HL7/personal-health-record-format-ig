@@ -1,6 +1,6 @@
 Instance: QuestionnaireResponseScoredAssessmentPHQ9Example
 InstanceOf: PGHDQuestionnaireResponse
-Description: "PHQ-9 Scored Assessment Example (うつ病リスク評価の例)"
+Description: "PHQ-9 Scored Assessment Example"
 * id = "phq9"
 * questionnaire = Canonical(QuestionnaireScoredAssessmentPHQ9)
 * status = #completed

@@ -1,6 +1,6 @@
 Instance: pghd-nutrition-dietaryCarbohydrates
 InstanceOf: PGHDNutrition
-Description: "Nutrition dietaryCarbohydrates Example (栄養の炭水化物の例)"
+Description: "Nutrition dietaryCarbohydrates Example"
 Usage: #example
 * id = "pghd-nutrition-dietary-carbohydrates"
 * identifier

@@ -2,8 +2,7 @@ CodeSystem: BodyTemperatureMeasurementLocation
 Id: body-temperature-measurement-location-codes
 Title: "Body Temperature Measurement Location Codes"
 Description: """
-Code indicating the location where the body temperature was measured  
-体温を測定した場所を表すコード
+Code indicating the location where the body temperature was measured
 """
 * insert CodeSystemRules
 
@@ -21,18 +20,3 @@ Code indicating the location where the body temperature was measured
 * #forehead "Forehead" "The temperature was taken on the forehead."
 * #vagina "Vagina" "The temperature was taken in the vagina."
 * #wrist "Wrist" "The temperature was taken on the wrist."
-
-* insert CodeDesignationRules(#other, その他)
-* insert CodeDesignationRules(#armpit, 脇の下)
-* insert CodeDesignationRules(#body, 体)
-* insert CodeDesignationRules(#ear, 耳)
-* insert CodeDesignationRules(#finger, 指)
-* insert CodeDesignationRules(#gastroIntestinal, 胃腸)
-* insert CodeDesignationRules(#mouth, 口)
-* insert CodeDesignationRules(#rectum, 直腸)
-* insert CodeDesignationRules(#toe, つま先)
-* insert CodeDesignationRules(#earDrum, 鼓膜)
-* insert CodeDesignationRules(#temporalArtery, 側頭動脈)
-* insert CodeDesignationRules(#forehead, 額)
-* insert CodeDesignationRules(#vagina, 膣)
-* insert CodeDesignationRules(#wrist, 手首)

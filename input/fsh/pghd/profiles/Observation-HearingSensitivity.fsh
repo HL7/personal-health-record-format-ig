@@ -1,14 +1,13 @@
 Profile: PGHDHearingSensitivity
 Parent: Observation
 Id: pghd-hearing-sensitivity
-Title: "PGHD Hearing Sensitivity Profile"
+Title: "PGHD HearingSensitivity Profile"
 Description: """
-This profile defines how to represent HearingSensitivity.  
-このプロファイルは、聴力感度に関する情報を表す方法を定義します。
+This profile defines how to represent HearingSensitivity.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Hearing Sensitivity Profile (聴力感度 プロファイル)"
+* . ^short = "PGHD Hearing Sensitivity Profile"
 
 * category[ObservationCategory].coding.code = #exam (exactly)
 * code.coding[PGHDCode].code = #hearingSensitivity (exactly)

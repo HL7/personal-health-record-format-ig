@@ -1,6 +1,6 @@
 Instance: pghd-heartrate
 InstanceOf: PGHDHeartRate
-Description: "HeartRate Example (心拍数の例)"
+Description: "HeartRate Example"
 Usage: #example
 * id = "pghd-heartrate"
 * identifier

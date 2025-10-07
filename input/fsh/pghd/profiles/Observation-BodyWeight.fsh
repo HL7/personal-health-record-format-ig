@@ -3,12 +3,11 @@ Parent: bodyweight
 Id: pghd-bodyweight
 Title: "PGHD BodyWeight Profile"
 Description: """
-This profile defines how to represent body weight measurements.   
-このプロファイルは、体重の測定値を表す方法を定義します。
+This profile defines how to represent body weight measurements.
 """
 * insert ProfileRules
 * insert VitalSignsRules
-* . ^short = "PGHD Body Weight Profile (体重 プロファイル)"
+* . ^short = "PGHD Body Weight Profile"
 
 * code.coding[BodyWeightCode] from $ValueSetVitalSignsLoincCodes (required)
 * code.coding contains PGHDCode 0..1

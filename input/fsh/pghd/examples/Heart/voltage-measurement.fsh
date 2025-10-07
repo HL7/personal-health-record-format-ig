@@ -1,6 +1,6 @@
 Instance: pghd-voltage-measurement
 InstanceOf: PGHDVoltageMeasurement
-Description: "VoltageMeasurement Example (心電図の電圧の例)"
+Description: "VoltageMeasurement Example"
 Usage: #example
 * id = "pghd-voltage-measurement"
 * contained = Inline-Instance-Device

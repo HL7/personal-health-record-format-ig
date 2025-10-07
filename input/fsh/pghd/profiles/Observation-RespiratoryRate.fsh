@@ -1,14 +1,13 @@
 Profile: PGHDRespiratoryRate
 Parent: resprate
 Id: pghd-respiratoryrate
-Title: "PGHD Respiratory Rate Profile"
+Title: "PGHD RespiratoryRate Profile"
 Description: """
-This profile defines how to represent respiratory rate measurements.   
-このプロファイルは、呼吸数の測定値を表す方法を定義します。
+This profile defines how to represent respiratory rate measurements. 
 """
 * insert ProfileRules
 * insert VitalSignsRules
-* . ^short = "PGHD Respiratory Rate Profile (呼吸数 プロファイル)"
+* . ^short = "PGHD Respiratory Rate Profile"
 
 * code.coding contains PGHDCode 0..1
 * code.coding[PGHDCode] from ObservationVitalsignsValueSet (required)

@@ -1,6 +1,6 @@
 Instance: pghd-activity-appleExerciseTime
 InstanceOf: PGHDActivity
-Description: "Activity appleExerciseTime Example (アクティビティのエクササイズ時間の例)"
+Description: "Activity appleExerciseTime Example"
 Usage: #example
 * id = "pghd-activity-appleExerciseTime"
 * contained = Inline-Instance-Device

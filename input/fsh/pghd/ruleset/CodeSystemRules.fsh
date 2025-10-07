@@ -4,4 +4,3 @@ RuleSet: CodeSystemRules
 * ^compositional = false
 * ^content = #complete
 * ^caseSensitive  = true
-* ^copyright = "Copyright 2024+"

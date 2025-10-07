@@ -3,11 +3,11 @@ Parent: Questionnaire
 Id: pghd-questionnaire
 Title: "PGHD Questionnaire Profile"
 Description: """
-This profile defines the questionnaire.  
-このプロファイルは質問票を定義します。
+This profile defines the questionnaire.
 """
 * insert ProfileRules
-* . ^short = "PGHD Questionnaire Profile (質問票 プロファイル)"
+* . ^short = "PGHD Questionnaire Profile"
+
 * url MS
 * version MS
 * name MS

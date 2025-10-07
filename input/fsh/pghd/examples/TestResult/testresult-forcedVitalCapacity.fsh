@@ -1,6 +1,6 @@
 Instance: pghd-testresult-forcedVitalCapacity
 InstanceOf: PGHDTestResult
-Description: "TestResult forcedVitalCapacity Example (検査結果の努力肺活量の例)"
+Description: "TestResult forcedVitalCapacity Example"
 Usage: #example
 * id = "pghd-testresult-forced-vital-capacity"
 * identifier

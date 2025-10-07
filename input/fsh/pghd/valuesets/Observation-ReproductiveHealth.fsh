@@ -2,8 +2,7 @@ ValueSet: ObservationReproductiveHealth
 Id: observation-reproductive-health-codes
 Title: "Observation ReproductiveHealth Codes"
 Description: """
-Codes representing reproductive-health-related measures  
-周期記録に関連する測定項目を表すコード
+Codes representing reproductive-health-related measures
 """
 * insert ValueSetRules
 

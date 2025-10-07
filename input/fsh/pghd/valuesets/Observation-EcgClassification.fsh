@@ -2,8 +2,7 @@ ValueSet: ObservationEcgClassificationValueSet
 Id: observation-ecg-classification-codes
 Title: "ECG Classification Codes"
 Description: """
-Codes for classification of ECG waveforms  
-心電図波形の分類を表すコード
+Codes for classification of ECG waveforms
 """
 * insert ValueSetRules
 

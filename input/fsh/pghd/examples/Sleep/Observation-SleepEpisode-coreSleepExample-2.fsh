@@ -1,6 +1,6 @@
 Instance: pghd-sleep-episode-core-sleep-2
 InstanceOf: PGHDSleepEpisode
-Description: "SleepEpisode Example (睡眠エピソードの例)"
+Description: "SleepEpisode Example"
 Usage: #example
 // https://opensource.ieee.org/omh/1752/-/blob/main/sample_data/sleep/light-sleep-sample-data-two.json
 * id = "pghd-sleep-episode-core-sleep-2"

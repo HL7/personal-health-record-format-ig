@@ -1,6 +1,6 @@
 Instance: pghd-activity-cyclingCadence
 InstanceOf: PGHDActivity
-Description: "Activity cyclingCadence Example (アクティビティのサイクリングケイデンスの例)"
+Description: "Activity cyclingCadence Example"
 Usage: #example
 * id = "pghd-activity-cyclingCadence"
 * contained = Inline-Instance-Device

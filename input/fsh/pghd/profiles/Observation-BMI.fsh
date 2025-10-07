@@ -3,12 +3,11 @@ Parent: bmi
 Id: pghd-bmi
 Title: "PGHD BMI Profile"
 Description: """
-This profile defines how to represent BMI measurements.   
-このプロファイルは、BMIの測定値を表す方法を定義します。
+This profile defines how to represent BMI measurements.
 """
 * insert ProfileRules
 * insert VitalSignsRules
-* . ^short = "PGHD BMI Profile (BMI プロファイル)"
+* . ^short = "PGHD BMI Profile"
 
 * code.coding[BMICode] from $ValueSetVitalSignsLoincCodes (required)
 * code.coding contains PGHDCode 0..1

@@ -1,6 +1,6 @@
 Instance: pghd-bodytemperature
 InstanceOf: PGHDBodyTemperature
-Description: "BodyTemperature Example (体温の例)"
+Description: "BodyTemperature Example"
 Usage: #example
 * id = "pghd-bodytemperature"
 * identifier

@@ -1,6 +1,6 @@
 Instance: pghd-food
 InstanceOf: PGHDFood
-Description: "Food Example (食事の例)"
+Description: "Food Example"
 Usage: #example
 * id = "pghd-food"
 * identifier

@@ -1,6 +1,6 @@
 Instance: PGHDPatientExample
 InstanceOf: PGHDPatient
-Description: "Patient Example (患者の例)"
+Description: "Patient Example"
 Usage: #example
 * id = "1"
 * name

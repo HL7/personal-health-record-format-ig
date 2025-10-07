@@ -1,6 +1,6 @@
 Instance: pghd-audiogram
 InstanceOf: PGHDAudiogram
-Description: "Audiogram Example (オージオグラムの例)"
+Description: "Audiogram Example"
 Usage: #example
 * id = "pghd-audiogram"
 * identifier

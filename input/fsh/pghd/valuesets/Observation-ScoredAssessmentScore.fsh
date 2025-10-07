@@ -2,8 +2,7 @@ ValueSet: ObservationScoredAssessmentScore
 Id: observation-scored-assessment-score-codes
 Title: "Observation State of Mind Codes"
 Description: """
-Codes for state of mind  
-心の状態を表すコード
+Codes for state of mind
 """
 * insert ValueSetRules
 

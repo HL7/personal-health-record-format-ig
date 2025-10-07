@@ -1,6 +1,6 @@
 Instance: pghd-sleep-episode-1
 InstanceOf: PGHDSleepEpisode
-Description: "SleepEpisode Example (睡眠エピソードの例)"
+Description: "SleepEpisode Example"
 Usage: #example
 * id = "pghd-sleep-episode-1"
 * contained

@@ -1,6 +1,6 @@
 Instance: pghd-selfcare-handwashingEvent
 InstanceOf: PGHDSelfCare
-Description: "SelfCare handwashingEvent Example (セルフケアの手洗いの例)"
+Description: "SelfCare handwashingEvent Example"
 Usage: #example
 * id = "pghd-selfcare-handwashingEvent"
 * identifier

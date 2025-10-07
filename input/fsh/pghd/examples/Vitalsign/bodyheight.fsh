@@ -1,6 +1,6 @@
 Instance: pghd-bodyheight
 InstanceOf: PGHDBodyHeight
-Description: "BodyHeight Example (身長の例)"
+Description: "BodyHeight Example"
 Usage: #example
 * id = "pghd-bodyheight"
 * identifier

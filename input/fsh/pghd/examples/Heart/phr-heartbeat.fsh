@@ -1,6 +1,6 @@
 Instance: pghd-heartbeat
 InstanceOf: PGHDHeartbeat
-Description: "Heartbeat Example (心拍の例)"
+Description: "Heartbeat Example"
 Usage: #example
 * id = "pghd-heartbeat"
 * contained = Inline-Instance-Device

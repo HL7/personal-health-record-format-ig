@@ -1,6 +1,6 @@
 Instance: pghd-mobility-stairDescentSpeed
 InstanceOf: PGHDMobility
-Description: "Mobility stairDescentSpeed Example (歩行の階段速度: 下降の例)"
+Description: "Mobility stairDescentSpeed Example"
 Usage: #example
 * id = "pghd-mobility-stair-descent-speed"
 * contained = Inline-Instance-Device

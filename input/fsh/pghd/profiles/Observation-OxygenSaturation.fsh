@@ -3,12 +3,11 @@ Parent: oxygensat
 Id: pghd-oxygenSaturation
 Title: "PGHD OxygenSaturation Profile"
 Description: """
-This profile defines how to represent oxygen saturation measurements.   
-このプロファイルは、酸素飽和度の測定値を表す方法を定義します。
+This profile defines how to represent oxygen saturation measurements.
 """
 * insert ProfileRules
 * insert VitalSignsRules
-* . ^short = "PGHD Oxygen Saturation Profile (酸素飽和度 プロファイル)"
+* . ^short = "PGHD Oxygen Saturation Profile"
 
 * code.coding[OxygenSatCode] from $ValueSetVitalSignsLoincCodes (required)
 * code.coding contains PGHDCode 0..1

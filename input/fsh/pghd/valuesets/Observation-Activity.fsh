@@ -2,8 +2,7 @@ ValueSet: ObservationActivity
 Id: observation-activity-codes
 Title: "Observation Activity Codes"
 Description: """
-Codes representing activity-related measurement items  
-アクティビティに関連する測定項目を表すコード
+Codes representing activity-related measurement items
 """
 * insert ValueSetRules
 

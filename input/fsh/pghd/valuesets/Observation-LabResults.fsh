@@ -2,8 +2,7 @@ ValueSet: ObservationLabResultsValueSet
 Id: observation-lab-results-codes
 Title: "Observation LabResults Codes"
 Description: """
-Codes representing measurement items associated with the inspection  
-検査に関連する測定項目を表すコード
+Codes representing measurement items associated with the inspection
 """
 * insert ValueSetRules
 

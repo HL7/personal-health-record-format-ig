@@ -1,6 +1,6 @@
 Instance: pghd-workout-underwaterDiving
 InstanceOf: PGHDWorkout
-Description: "Workout underwaterDiving Example (ワークアウトのダイビングの例)"
+Description: "Workout underwaterDiving Example"
 Usage: #example
 * id = "pghd-workout-underwater-diving"
 * identifier

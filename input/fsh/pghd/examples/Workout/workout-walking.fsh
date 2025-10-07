@@ -1,6 +1,6 @@
 Instance: pghd-workout-walking
 InstanceOf: PGHDWorkout
-Description: "Workout walking Example (ワークアウトのウォーキングの例)"
+Description: "Workout walking Example"
 Usage: #example
 * id = "pghd-workout-walking"
 * identifier

@@ -1,6 +1,6 @@
 Instance: pghd-nutrition-dietaryEnergyConsumed
 InstanceOf: Observation
-Description: "Nutrition dietaryEnergyConsumed Example (栄養の摂取エネルギーの例)"
+Description: "Nutrition dietaryEnergyConsumed Example"
 Usage: #example
 * id = "pghd-nutrition-dietary-energy-consumed"
 * identifier

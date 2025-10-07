@@ -1,6 +1,6 @@
 Instance: pghd-bodymeasurement
 InstanceOf: PGHDBodyMeasurement
-Description: "BodyMeasurement bodyFatPercentage Example (身体計測の体脂肪率の例)"
+Description: "BodyMeasurement bodyFatPercentage Example"
 Usage: #example
 * id = "pghd-bodymeasurement-body-fat-percentage"
 * identifier

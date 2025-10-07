@@ -3,11 +3,11 @@ Parent: QuestionnaireResponse
 Id: pghd-questionnaire-response
 Title: "PGHD QuestionnaireResponse Profile"
 Description: """
-This profile defines the QuestionnaireResponse.  
-このプロファイルは質問票回答を定義します。
+This profile defines the QuestionnaireResponse.
 """
+
 * insert ProfileRules
-* . ^short = "PGHD QuestionnaireResponse Profile (質問票回答 プロファイル)"
+* . ^short = "PGHD QuestionnaireResponse Profile"
 
 * identifier MS
 * questionnaire MS

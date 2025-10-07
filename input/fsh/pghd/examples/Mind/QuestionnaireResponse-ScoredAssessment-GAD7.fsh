@@ -1,6 +1,6 @@
 Instance: QuestionnaireResponseScoredAssessmentGAD7Example
 InstanceOf: PGHDQuestionnaireResponse
-Description: "GAD-7 Scored Assessment Example (不安障害リスク評価の例)"
+Description: "GAD-7 Scored Assessment Example"
 * id = "gad7"
 * questionnaire = Canonical(QuestionnaireScoredAssessmentGAD7)
 * status = #completed

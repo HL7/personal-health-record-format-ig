@@ -3,13 +3,11 @@ Parent: Observation
 Id: pghd-voltage-measurement
 Title: "PGHD VoltageMeasurement Profile"
 Description: """
-This profile defines how to represent VoltageMeasurement.  
-このプロファイルは、電圧に関する情報を表す方法を定義します。
+This profile defines how to represent VoltageMeasurement.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Voltage Measurement Profile (電圧 プロファイル)"
-
+* . ^short = "PGHD Voltage Measurement Profile"
 * category[ObservationCategory].coding.code = #exam (exactly)
 * code.coding[PGHDCode] from ObservationEcgLeadValueSet (required)
 * code.coding[PGHDCode].system = $CodeSystemEcgLeadCodes (exactly)

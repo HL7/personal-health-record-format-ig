@@ -4,10 +4,9 @@ Id: pghd-careplan-selfcare
 Title: "PGHD SelfCare Plan Profile"
 Description: """
 This profile defines the SelfCare Plan.
-このプロファイルはセルフケアプランを定義します。
 """
 * insert ProfileRules
-* . ^short = "PGHD SelfCare Plan Profile (セルフケアプラン プロファイル)"
+* . ^short = "PGHD SelfCare Plan Profile"
 
 * status MS
 * intent MS

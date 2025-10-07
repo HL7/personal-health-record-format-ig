@@ -3,12 +3,11 @@ Parent: Observation
 Id: pghd-medication-adherence
 Title: "PGHD Medication Adherence Profile"
 Description: """
-This profile defines how to represent medication adherence.  
-このプロファイルは、服薬アドヒアランス率の情報を表す方法を定義します。
+This profile defines how to represent medication adherence.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Medication Adherence Profile (服薬アドヒアランス プロファイル)"
+* . ^short = "PGHD Medication Adherence Profile"
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
 * code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)

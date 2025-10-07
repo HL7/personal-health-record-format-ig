@@ -1,6 +1,6 @@
 Instance: pghd-sleep-asleepCore
 InstanceOf: PGHDSleep
-Description: "Sleep asleepCore Example (睡眠のコアの例)"
+Description: "Sleep asleepCore Example"
 Usage: #example
 * id = "pghd-sleep-asleep-core"
 * identifier

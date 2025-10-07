@@ -1,6 +1,6 @@
 Instance: pghd-activity-basalEnergyBurned
 InstanceOf: PGHDActivity
-Description: "Activity basalEnergyBurned Example (アクティビティの安静時消費エネルギーの例)"
+Description: "Activity basalEnergyBurned Example"
 Usage: #example
 * id = "pghd-activity-basalEnergyBurned"
 * contained = Inline-Instance-Device

@@ -1,6 +1,6 @@
 Instance: ScoredAssessmentGAD7Example
 InstanceOf: PGHDObservationScoredAssessment
-Description: "GAD-7 Scored Assessment Example (不安障害リスク評価の例)"
+Description: "GAD-7 Scored Assessment Example"
 * contained = Inline-Instance-Device
 * status = #final
 * category[ObservationCategory] = $CodeSystemObservationCategory#survey "Survey"

@@ -1,6 +1,6 @@
 Instance: pghd-uvexposure
 InstanceOf: PGHDUVExposure
-Description: "UVExposure Example (UV指数の例)"
+Description: "UVExposure Example"
 Usage: #example
 * id = "pghd-uvexposure"
 * identifier

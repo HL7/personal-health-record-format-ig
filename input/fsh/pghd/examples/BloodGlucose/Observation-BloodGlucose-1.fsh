@@ -1,6 +1,6 @@
 Instance: pghd-blood-glucose-1
 InstanceOf: PGHDBloodGlucose
-Description: "BloodGlucose Example (血糖値の例)"
+Description: "BloodGlucose Example"
 Usage: #example
 * contained = Inline-Instance-Device
 * id = "pghd-blood-glucose-1"

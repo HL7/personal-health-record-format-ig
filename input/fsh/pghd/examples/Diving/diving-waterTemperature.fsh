@@ -1,6 +1,6 @@
 Instance: pghd-diving-waterTemperature
 InstanceOf: PGHDDiving
-Description: "Diving waterTemperature Example (ダイビングの水温の例)"
+Description: "Diving waterTemperature Example"
 Usage: #example
 * id = "pghd-diving-water-temperature"
 * identifier

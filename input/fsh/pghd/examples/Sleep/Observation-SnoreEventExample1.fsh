@@ -1,6 +1,6 @@
 Instance: pghd-snore-event-1
 InstanceOf: PGHDSnoreEvent
-Description: "SnoreIndex Example (いびき指数の例)"
+Description: "SnoreIndex Example"
 Usage: #example
 * contained
   * resourceType = "Device"

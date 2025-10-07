@@ -1,6 +1,6 @@
 Instance: pghd-bmi
 InstanceOf: PGHDBMI
-Description: "BMI Example (BMIの例)"
+Description: "BMI Example"
 Usage: #example
 * id = "pghd-bmi"
 * identifier

@@ -1,14 +1,13 @@
 Profile: PGHDHeartRate
 Parent: heartrate
 Id: pghd-heartrate
-Title: "PGHD Heart Rate Profile"
+Title: "PGHD HeartRate Profile"
 Description: """
-This profile defines how to represent heart rate measurements.   
-このプロファイルは、心拍数の測定値を表す方法を定義します。
+This profile defines how to represent heart rate measurements.
 """
 * insert ProfileRules
 * insert VitalSignsRules
-* . ^short = "PGHD Heart Rate Profile (心拍数 プロファイル)"
+* . ^short = "PGHD Heart Rate Profile"
 
 * code.coding[HeartRateCode] from $ValueSetVitalSignsLoincCodes (required)
 * code.coding contains PGHDCode 0..1

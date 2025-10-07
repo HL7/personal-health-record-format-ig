@@ -1,6 +1,6 @@
 Instance: pghd-alchol-consumption-bloodAlcoholContent
 InstanceOf: PGHDAlcholConsumption
-Description: "AlcholConsumption bloodAlcoholContent Example (飲酒の血中アルコール濃度の例)"
+Description: "AlcholConsumption bloodAlcoholContent Example"
 Usage: #example
 * id = "pghd-alchol-consumption-blood-alcohol-content"
 * contained = Inline-Instance-Device

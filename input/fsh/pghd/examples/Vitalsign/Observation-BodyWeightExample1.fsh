@@ -1,6 +1,6 @@
 Instance: pghd-bodyweight
 InstanceOf: PGHDBodyWeight
-Description: "Body Weight Example (体重の例)"
+Description: "Body Weight Example"
 Usage: #example
 * id = "pghd-bodyweight"
 * identifier

@@ -1,6 +1,6 @@
 Instance: pghd-pregnancy-status
 InstanceOf: PGHDPregnancyStatus
-Description: "PregnancyStatus Example (妊娠の例)"
+Description: "PregnancyStatus Example"
 Usage: #example
 * id = "pghd-pregnancy-status"
 * identifier

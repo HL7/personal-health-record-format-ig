@@ -2,8 +2,7 @@ ValueSet: ObservationWorkout
 Id: observation-workout-codes
 Title: "Observation Workout Codes"
 Description: """
-Codes representing workout-related measurement items  
-運動に関連する測定項目を表すコード
+Codes representing workout-related measurement items
 """
 * insert ValueSetRules
 

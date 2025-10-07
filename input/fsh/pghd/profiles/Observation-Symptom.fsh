@@ -3,12 +3,11 @@ Parent: Observation
 Id: pghd-symptom
 Title: "PGHD Symptom Profile"
 Description: """
-This profile defines how to represent Symptom.  
-このプロファイルは、症状を表す方法を定義します。
+This profile defines how to represent Symptom.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Symptom Profile (症状 プロファイル)"
+* . ^short = "PGHD Symptom Profile"
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
 * code.coding[PGHDCode] from ObservationSymptom

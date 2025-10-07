@@ -1,6 +1,6 @@
 Instance: pghd-activity-activeEnergyBurned-underwaterDiving
 InstanceOf: PGHDActivity
-Description: "Activity activeEnergyBurned Example (アクティビティのムーブ (アクティブエネルギー)の例)"
+Description: "Activity activeEnergyBurned Example"
 Usage: #example
 * id = "pghd-activity-activeEnergyBurned-underwater-diving"
 * identifier

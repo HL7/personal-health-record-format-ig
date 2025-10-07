@@ -2,8 +2,7 @@ ValueSet: ObservationSelfCare
 Id: observation-selfcare-codes
 Title: "Observation SelfCare Codes"
 Description: """
-Codes representing selfcare-related measurement items  
-セルフケアに関連する測定項目を表すコード
+Codes representing selfcare-related measurement items
 """
 * insert ValueSetRules
 

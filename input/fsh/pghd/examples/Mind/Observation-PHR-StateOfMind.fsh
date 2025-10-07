@@ -1,6 +1,6 @@
 Instance: StateOfMindExample
 InstanceOf: PGHDObservationStateOfMind
-Description: "State of Mind Example (心の状態の例)"
+Description: "State of Mind Example"
 * contained = Inline-Instance-Device
 * status = #final
 * category[ObservationCategory] = $CodeSystemObservationCategory#survey "Survey"

@@ -1,6 +1,6 @@
 Instance: pghd-activity-appleStandHour
 InstanceOf: PGHDActivity
-Description: "Activity appleStandHour Example (アクティビティのスタンドの例)"
+Description: "Activity appleStandHour Example"
 Usage: #example
 * id = "pghd-activity-appleStandHour"
 * contained = Inline-Instance-Device

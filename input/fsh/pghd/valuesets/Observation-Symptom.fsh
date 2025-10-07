@@ -2,8 +2,7 @@ ValueSet: ObservationSymptom
 Id: observation-symptom-codes
 Title: "Observation Symptom Codes"
 Description: """
-Codes representing symptom-related measurement items  
-症状に関連する測定項目を表すコード
+Codes representing symptom-related measurement items
 """
 * insert ValueSetRules
 

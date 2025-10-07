@@ -1,6 +1,6 @@
 Instance: pghd-cardiac-function-lowHeartRateEvent
 InstanceOf: PGHDCardiacFunction
-Description: "CardiacFunction lowHeartRateEvent Example (心機能の低心拍の通知の例)"
+Description: "CardiacFunction lowHeartRateEvent Example"
 Usage: #example
 * id = "pghd-cardiac-function-lowHeart-rate-event"
 * identifier

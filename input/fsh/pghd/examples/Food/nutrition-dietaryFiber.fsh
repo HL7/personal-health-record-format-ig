@@ -1,6 +1,6 @@
 Instance: pghd-nutrition-dietaryFiber
 InstanceOf: PGHDNutrition
-Description: "Nutrition dietaryFiber Example (栄養の食物繊維の例)"
+Description: "Nutrition dietaryFiber Example"
 Usage: #example
 * id = "pghd-nutrition-dietary-fiber"
 * identifier

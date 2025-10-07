@@ -1,6 +1,6 @@
 Instance: ScoredAssessmentPHQ9Example
 InstanceOf: PGHDObservationScoredAssessment
-Description: "PHQ-9 Scored Assessment Example (うつ病リスク評価の例)"
+Description: "PHQ-9 Scored Assessment Example"
 * contained = Inline-Instance-Device
 * status = #final
 * category[ObservationCategory] = $CodeSystemObservationCategory#survey "Survey"

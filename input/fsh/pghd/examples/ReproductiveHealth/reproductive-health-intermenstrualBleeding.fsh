@@ -1,6 +1,6 @@
 Instance: pghd-reproductive-health-intermenstrualBleeding
 InstanceOf: PGHDReproductiveHealth
-Description: "ReproductiveHealth intermenstrualBleeding Example (周期記録の点状出血の例)"
+Description: "ReproductiveHealth intermenstrualBleeding Example"
 Usage: #example
 * id = "pghd-reproductive-health-intermenstrual-bleeding"
 * identifier

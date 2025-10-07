@@ -1,6 +1,6 @@
 Instance: pghd-sleep-episode-latency-to-sleep-onset-1
 InstanceOf: PGHDSleepEpisode
-Description: "SleepEpisode Example (睡眠エピソードの例)"
+Description: "SleepEpisode Example"
 Usage: #example
 // https://opensource.ieee.org/omh/1752/-/blob/main/sample_data/sleep/sleep-onset-latency-sample-data.json
 * id = "pghd-sleep-episode-latency-to-sleep-onset-1"

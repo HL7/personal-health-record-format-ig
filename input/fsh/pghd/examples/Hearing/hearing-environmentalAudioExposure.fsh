@@ -1,6 +1,6 @@
 Instance: pghd-hearing-environmentalAudioExposure
 InstanceOf: PGHDHearing
-Description: "Hearing environmentalAudioExposure Example (聴覚の環境音レベルの例)"
+Description: "Hearing environmentalAudioExposure Example"
 Usage: #example
 * id = "pghd-hearing-environmental-audio-exposure"
 * contained = Inline-Instance-Device

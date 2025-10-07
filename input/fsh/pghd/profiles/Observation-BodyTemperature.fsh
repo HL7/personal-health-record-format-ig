@@ -1,14 +1,13 @@
 Profile: PGHDBodyTemperature
 Parent: bodytemp
 Id: pghd-bodytemperature
-Title: "PGHD Body Temperature Profile"
+Title: "PGHD BodyTemperature Profile"
 Description: """
-This profile defines how to represent body temperature measurements.   
-このプロファイルは、体温の測定値を表す方法を定義します。
+This profile defines how to represent body temperature measurements. 
 """
 * insert ProfileRules
 * insert VitalSignsRules
-* . ^short = "PGHD Body Temperature Profile (体温 プロファイル)"
+* . ^short = "PGHD Body Temperature Profile"
 
 * code.coding[BodyTempCode] from $ValueSetVitalSignsLoincCodes (required)
 * code.coding contains PGHDCode 0..1

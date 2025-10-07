@@ -1,6 +1,6 @@
 Instance: pghd-activity-appleMoveTime
 InstanceOf: PGHDActivity
-Description: "Activity appleMoveTime Example (ムーブ時間の例)"
+Description: "Activity appleMoveTime Example"
 Usage: #example
 * id = "pghd-activity-appleMoveTime"
 * contained = Inline-Instance-Device

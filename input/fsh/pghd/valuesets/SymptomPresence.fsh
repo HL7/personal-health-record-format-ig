@@ -2,8 +2,7 @@ ValueSet: SymptomPresenceValueSet
 Id: symptom-presence
 Title: "Symptom Presence"
 Description: """
-Code for presence or absence of symptoms  
-症状の有無を表すコード
+Code for presence or absence of symptoms
 """
 * insert ValueSetRules
 

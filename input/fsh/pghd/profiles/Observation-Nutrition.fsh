@@ -3,12 +3,11 @@ Parent: Observation
 Id: pghd-nutrition
 Title: "PGHD Nutrition Profile"
 Description: """
-This profile defines how to represent Nutrition.  
-このプロファイルは、栄養を表す方法を定義します。
+This profile defines how to represent Nutrition.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Nutrition Profile (栄養 プロファイル)"
+* . ^short = "PGHD Nutrition Profile"
 
 * category[ObservationCategory].coding.code = #social-history	 (exactly)
 * code.coding[PGHDCode] from ObservationNutrition

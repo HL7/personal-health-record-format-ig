@@ -1,9 +1,8 @@
-ValueSet: ObservationBodyMeasurementsValueSet
-Id: observation-body-measurements-codes
-Title: "Observation BodyMeasurements Codes"
+ValueSet: ObservationBodyMesurementsValueSet
+Id: observation-body-mesurements-codes
+Title: "Observation BodyMesurements Codes"
 Description: """
-Codes representing measurement items related to physical measurements  
-身体計測に関連する測定項目を表すコード
+Codes representing measurement items related to physical measurements
 """
 * insert ValueSetRules
 

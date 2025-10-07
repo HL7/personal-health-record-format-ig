@@ -1,6 +1,6 @@
 Instance: pghd-respiratoryrate
 InstanceOf: PGHDRespiratoryRate
-Description: "RespiratoryRate Example (呼吸数の例)"
+Description: "RespiratoryRate Example"
 Usage: #example
 * id = "pghd-respiratoryrate"
 * identifier

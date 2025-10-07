@@ -1,6 +1,6 @@
 Instance: pghd-nutrition-dietaryProtein
 InstanceOf: PGHDNutrition
-Description: "Nutrition dietaryProtein Example (栄養のタンパク質の例)"
+Description: "Nutrition dietaryProtein Example"
 Usage: #example
 * id = "pghd-nutrition-dietary-protein"
 * identifier

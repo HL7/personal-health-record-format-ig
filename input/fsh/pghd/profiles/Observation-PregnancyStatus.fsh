@@ -3,12 +3,11 @@ Parent: Observation
 Id: pghd-pregnancy-status
 Title: "PGHD Pregnancy Status Profile"
 Description: """
-This profile defines how to represent Pregnancy status.  
-このプロファイルは、妊娠に関する情報を表す方法を定義します。
+This profile defines how to represent Pregnancy status.
 """
 * insert ProfileRules
 * insert ObservationRules
-* . ^short = "PGHD Pregnancy Status Profile (妊娠 プロファイル)"
+* . ^short = "PGHD Pregnancy Status Profile"
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
 * code.coding[PGHDCode].code = #pregnancy (exactly)
