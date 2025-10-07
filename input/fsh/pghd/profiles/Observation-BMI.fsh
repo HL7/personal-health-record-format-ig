@@ -12,7 +12,7 @@ This profile defines how to represent BMI measurements.
 
 * code.coding[BMICode] from $ValueSetVitalSignsLoincCodes (required)
 * code.coding contains PGHDCode 0..1
-* code.coding[PGHDCode] from ObservationBodyMesurementsValueSet (required)
+* code.coding[PGHDCode] from ObservationBodyMeasurementsValueSet (required)
 * code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * code.coding[PGHDCode].code = #bodyMassIndex (exactly)
 * valueQuantity.unit = "kg/m2" (exactly)

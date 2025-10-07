@@ -12,7 +12,7 @@ This profile defines how to represent body weight measurements.
 
 * code.coding[BodyWeightCode] from $ValueSetVitalSignsLoincCodes (required)
 * code.coding contains PGHDCode 0..1
-* code.coding[PGHDCode] from ObservationBodyMesurementsValueSet (required)
+* code.coding[PGHDCode] from ObservationBodyMeasurementsValueSet (required)
 * code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * code.coding[PGHDCode].code = #bodyMass (exactly)
 * valueQuantity.unit = "kg" (exactly)
