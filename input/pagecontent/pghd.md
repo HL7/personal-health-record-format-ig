@@ -47,7 +47,7 @@ PGHD data models are influenced by several major standards and frameworks:
 - **Kanta PHR (Finland):**  
   Uses FHIR-based resources for personal health data, mapping each data type to FHIR Observation or related resources. Codes and units are standardized using LOINC, SNOMED CT, and UCUM where possible.
 
-![Relationship-b/w-Standards-from-Data-Perspective](pghd/relationship-bw-standards-from-data-perspective.png)
+![Relationship-b/w-Standards-from-Data-Perspective](relationship-bw-standards-from-data-perspective.png)
 
 #### Comparison Table
 
@@ -59,9 +59,9 @@ PGHD data models are influenced by several major standards and frameworks:
 | Metadata         | Common & per-type                          | Common & per-type                           | Standardized metadata schema              | FHIR elements                                 |
 | Standardization  | Proprietary             | Proprietary         | IEEE 1752                            | FHIR, LOINC, SNOMED                           |
 
-![Data Types of HealthKit](pghd/data-type-healthkit.png)
+![Data Types of HealthKit](data-type-healthkit.png)
 
-![Data Types of Haelth Connect](pghd/data-type-health-connect.png)
+![Data Types of Haelth Connect](data-type-health-connect.png)
 
 Most PGHD items in this guide are mapped to the FHIR Observation resource. Data types, units, and metadata are aligned as much as possible with existing FHIR profiles, and mappings to these major standards are considered for interoperability.
 
@@ -73,7 +73,7 @@ Many PGHD data items are not yet fully covered by international code systems suc
 
 **The current code system serves as an interim solution and will be replaced once comprehensive coverage by international standards such as LOINC and SNOMED CT IPS is achieved.**
 
-> _Insert: Code system mapping table b/w HealthKit/Health Connect and proprietary codes
+[PGHG Code Mapping Table](pghd-code-mapping.md)
 
 ---
 
@@ -83,12 +83,12 @@ Many PGHD data items are not yet fully covered by international code systems suc
 - **Value Types:** Numerical, categorical, sampled, and compound data are mapped to appropriate FHIR elements (e.g., valueQuantity, valueCodeableConcept, valueSampledData, component).
 - **Metadata:** Generation time, device information, and measurement context are mapped to FHIR elements such as effectiveDateTime, device, and extensions.
 
-![Data Structure of HealthKit (e.g. bodyTemperature)](pghd/data-structure-of-healthkit.png)
-![Data Structure of Health Connect (e.g. BodyTemperatureRecord)](pghd/data-structure-of-health-connect.png)
-![Data Structure of Open mHealth (e.g. body_temperature)](pghd/data-structure-of-open-mhealth.png)
-![Data Structure of Kanta PHR (e.g. Body temperature)](pghd/data-structre-of-kanta-phr.png)
+![Data Structure of HealthKit (e.g. bodyTemperature)](data-structure-of-healthkit.png)
+![Data Structure of Health Connect (e.g. BodyTemperatureRecord)](data-structure-of-health-connect.png)
+![Data Structure of Open mHealth (e.g. body_temperature)](data-structure-of-open-mhealth.png)
+![Data Structure of Kanta PHR (e.g. Body temperature)](data-structre-of-kanta-phr.png)
 
-![Common Data Structure in PHR Standards](pghd/common-data-structure-in-phr-standards.png)
-![Basics of Mapping Common PHR Data Structure to FHIR](pghd/basics-of-mapping-common-phr-data-structure-to-fhir.png)
+![Common Data Structure in PHR Standards](common-data-structure-in-phr-standards.png)
+![Basics of Mapping Common PHR Data Structure to FHIR](basics-of-mapping-common-phr-data-structure-to-fhir.png)
 
 ---
