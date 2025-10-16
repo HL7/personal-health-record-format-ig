@@ -1,304 +1,94 @@
-### Information on Patient-generated health data(PGHD)
-  
-We have prepared profiles to handle PGHD information.  
-This implementation guide deals with general PGHD information that can be collected on mobile devices, and does not deal with information related to data shared from medical institutions to individual patients.
+# Patient Generated Health Data (PGHD)
 
-We support iOS's HealthKit, Android's Health Connect, and Open mHealth. HealthKit and Health Connect are frameworks for storing healthcare data on devices and sharing it between apps.
+## Introduction
 
-### About Various Standards
+Patient Generated Health Data (PGHD) refers to health-related data created, recorded, or gathered by patients or their caregivers, outside of clinical settings. This includes daily activity logs, self-measured vital signs, dietary records, symptom diaries, and more. PGHD complements Electronic Health Records (EHR) by providing a more holistic view of a patient’s health, especially between clinical visits.
 
-#### Apple Healthkit
+---
 
-Apple HealthKit is a healthcare application framework, developed by Apple, that enables users to manage their health information centrally. HealthKit collects health data from the user's devices, such as the iPhone and Apple Watch, and consolidates it in one location.  
-With HealthKit, users can monitor and manage a variety of health information, including exercise volume, sleep patterns, heart rate, and meal content.  
-Additionally, HealthKit can integrate with other healthcare apps, providing users with a more comprehensive management of their health information. For instance, users can import data collected from a specific fitness app into HealthKit, thereby gaining a more detailed understanding of their health status.
+## Scope
 
-#### Google Health Connect
+This guide describes the principles and best practices for representing and exchanging PGHD using HL7 FHIR. It is intended for implementers of personal health record (PHR) systems, mobile health apps, and any system that collects or utilizes patient-generated data.
 
-Google Health Connect is a comprehensive platform designed to manage health and fitness data on Android-equipped smartphones.  
-It automatically gathers data from various health and fitness apps, providing a central hub for managing this information. Users can easily access data such as step count, sleep duration, heart rate, blood pressure, and weight all in one place.  
-Moreover, the collected data can be shared with other health and fitness apps. This cross-app utilization of data enables more effective health management, as it provides a broader and more detailed view of the user's health status.
+---
 
-#### Open mHealth
+## Use Cases
 
-Open mHealth is a non-profit organization dedicated to standardizing mobile health (mHealth) data. The organization's primary goal is to eliminate the fragmentation of health data, thereby improving its compatibility and availability.  
-Open mHealth offers an open architecture and a shared data format. This approach enables developers to integrate and analyze data from a variety of sources. As a result, patients, healthcare providers, and researchers can access more comprehensive and personalized health information.  
-Specifically, the Open mHealth framework facilitates the central management and analysis of health data from diverse sources, including wearable devices and mobile apps.  
+- **Chronic Disease Management:** Patients record daily blood pressure, glucose, or weight at home and share with clinicians.
+- **Wellness Tracking:** Individuals use wearables or apps to track steps, sleep, or nutrition.
+- **Symptom Monitoring:** Patients log symptoms or side effects between visits.
+- **Remote Patient Monitoring:** Devices automatically transmit vital signs to care teams.
 
-#### Finnish PHR
+---
 
-In Finland, a PHR service known as "Kanta" is provided to all citizens. This service is operated by the Finnish Social Security Institution, Kela.  
-Through the Kanta service, patients can access their medical records online. Additionally, healthcare professionals such as doctors and pharmacists can also access this information. This shared access allows healthcare providers to gain a more detailed understanding of a patient's health status, enabling them to develop more effective treatment plans.  
-Furthermore, the Kanta service allows patients to manage their health information and share it with healthcare providers as needed. This empowers patients with a better understanding of their health status, enabling them to make informed medical decisions.
+## Data Model
 
-#### Positioning of Each Standard
+PGHD covers a wide range of data types, including but not limited to:
 
-The positioning of each standard is as follows:
+- Vital Signs (e.g., body temperature, blood pressure, heart rate)
+- Activity (e.g., step count, exercise duration, calories burned)
+- Nutrition (e.g., calorie intake, nutrient consumption)
+- Sleep (e.g., sleep duration, sleep quality)
+- Symptoms/Condition (e.g., pain level, mood, self-reported symptoms)
 
-Standards like HealthKit and Health Connect are designed for smartphones and wearable devices that gather user health information.
-Open mHealth is a standard aimed at collecting health information that can be sourced from HealthKit, Health Connect, wearable devices, and smartphone apps.
-Finnish PHR and the PGHD outlined in this implementation guide are positioned to handle the integration of health data from smartphones, wearable devices, and other sources, with treatment information from electronic medical records.
+### Relationship with Major PGHD Standards
 
-![Positioning of Each Standard](pghd/standards-en.png)
+PGHD data models are influenced by several major standards and frameworks:
 
-<p style="clear:both;"></p>
+- **Apple HealthKit:**  
+  Provides a class-based data structure (e.g., HKSample, HKQuantitySample) for health and fitness data on iOS devices. Each data type (steps, heart rate, sleep, etc.) is represented as a class with associated metadata and units.
 
-#### About the Items Handled in This Implementation Guide
+- **Google Health Connect:**  
+  Offers a similar class-based approach for Android, with records for each data type (e.g., ActiveCaloriesBurnedRecord, BasalBodyTemperatureRecord). Units and metadata are explicitly defined for each record.
 
-In this implementation guide, items are defined to encompass the health information utilized in each standard.
+- **Open mHealth:**  
+  Defines JSON schemas for each data type, focusing on interoperability and open standards (IEEE1752). Data values and units are typically contained within the same object.
 
-![Items Handled in This Implementation Guide](pghd/items-en.png)
+- **Kanta PHR (Finland):**  
+  Uses FHIR-based resources for personal health data, mapping each data type to FHIR Observation or related resources. Codes and units are standardized using LOINC, SNOMED CT, and UCUM where possible.
 
-<p style="clear:both;"></p>
+![Relationship-b/w-Standards-from-Data-Perspective](pghd/relationship-bw-standards-from-data-perspective.png)
 
-### FHIR Specification
+#### Comparison Table
 
-#### Elements of Profile
+| Category         | Apple HealthKit                              | Google Health Connect                        | Open mHealth                              | Kanta PHR (Finland)                          |
+|------------------|---------------------------------------------|---------------------------------------------|-------------------------------------------|----------------------------------------------|
+| Data Types       | 100+ (steps, HR, sleep…)                   | 40+ (steps, HR, sleep…)                    | JSON schema-based                        | FHIR-based                                   |
+| Structure        | Class-based (e.g., HKSample)               | Class-based (e.g., Record)                 | JSON object                               | FHIR Resource                                |
+| Unit Handling    | Value + unit object (explicit type: HKUnit)| Value + unit fields                         | Value + unit object                       | Value + unit object (FHIR Quantity)          |
+| Metadata         | Common & per-type                          | Common & per-type                           | Standardized metadata schema              | FHIR elements                                 |
+| Standardization  | Proprietary             | Proprietary         | IEEE 1752                            | FHIR, LOINC, SNOMED                           |
 
-##### Mapping of Data Acquisition Time
+![Data Types of HealthKit](pghd/data-type-healthkit.png)
 
-The date and time of data acquisition are mapped to Observation.effectiveDatetime for instantaneous values, and to Observation.effectivePeriod for other cases.
+![Data Types of Haelth Connect](pghd/data-type-health-connect.png)
 
-- HealthKit
-  - Map to effectiveDatetime if HKSample.startDate and HKSample.endDate are the same value.
-  - Map to effectivePeriod if HKSample.startDate and HKSample.endDate are different values.
+Most PGHD items in this guide are mapped to the FHIR Observation resource. Data types, units, and metadata are aligned as much as possible with existing FHIR profiles, and mappings to these major standards are considered for interoperability.
 
-- Health Connect
-  - Map to effectiveDatetime if the Record has a value in the time attribute.
-  - Map to effectivePeriod if the Record has values in both startDate and endDate attributes.
+---
 
+## Code Systems
 
-##### Mapping of Data Values
+Many PGHD data items are not yet fully covered by international code systems such as LOINC and SNOMED CT. Therefore, a proprietary (temporary) code system is currently used.
 
-Data values can be divided into three types
+**The current code system serves as an interim solution and will be replaced once comprehensive coverage by international standards such as LOINC and SNOMED CT IPS is achieved.**
 
+> _Insert: Code system mapping table b/w HealthKit/Health Connect and proprietary codes
 
-- Quantitative data
-  - Data expressed in quantity and units, such as weight, height, and body temperature
+---
 
-- Qualitative data
-  - Data expressed in categories, such as types and degrees of symptoms
+## Mapping to FHIR
 
-- Sampling data
-  - Data measured by sampling at a certain cycle, such as electrocardiograms
+- **Observation:** Most PGHD data is represented as FHIR Observation resources.
+- **Value Types:** Numerical, categorical, sampled, and compound data are mapped to appropriate FHIR elements (e.g., valueQuantity, valueCodeableConcept, valueSampledData, component).
+- **Metadata:** Generation time, device information, and measurement context are mapped to FHIR elements such as effectiveDateTime, device, and extensions.
 
+![Data Structure of HealthKit (e.g. bodyTemperature)](pghd/data-structure-of-healthkit.png)
+![Data Structure of Health Connect (e.g. BodyTemperatureRecord)](pghd/data-structure-of-health-connect.png)
+![Data Structure of Open mHealth (e.g. body_temperature)](pghd/data-structure-of-open-mhealth.png)
+![Data Structure of Kanta PHR (e.g. Body temperature)](pghd/data-structre-of-kanta-phr.png)
 
-Depending on the type of data, select the appropriate element from value[x] and map it. The table below provides a guide for mapping:
+![Common Data Structure in PHR Standards](pghd/common-data-structure-in-phr-standards.png)
+![Basics of Mapping Common PHR Data Structure to FHIR](pghd/basics-of-mapping-common-phr-data-structure-to-fhir.png)
 
-|Data Type	|Mapped Element|
-|--- | ---|
-|Quantitative data	|Observation.valueQuantity|
-|Qualitative data	|Observation.valueCodeableConcept|
-|Sampling data	|Observation.valueSampledData|
-
-#### Required Elements in PGHD
-
-Elements that are crucial and indispensable for PGHD information are defined as required elements. These include:
-
-- Elements indicating the subject of PGHD data, such as Observation.subject.
-- The date and time when PGHD data was measured, such as Observation.effective[x].
-- The measurement item of PGHD data, such as Observation.code.
-
-#### Must Support Elements in PGHD
-
-The elements that we aim to obtain as much as possible for PGHD information are defined as Must Support. These include:
-
-- Required elements: Elements with a minimum cardinality of 1 or more need to be supported, hence they are considered Must Support.
-- Measurement results of PGHD data, such as Observation.value[x].  
-  However, results of data like low heart rate notification that only require the observation date and time and do not need result values, are not considered required.
-- Device information, such as Observation.device.
-- Information category, such as Observation.category.
-- Elements that are closely related between resources, such as Observation.hasMember.
-
-#### Standardization of PGHD Codes
-
-In order to uniformly handle data from HealthKit, Health Connect, Open mHealth, and Finnish PHR, standardization is performed to assign the same code (referred to as Observation PGHD Codes) to data representing the same concept.
-The codes that are subject to this standardization include:
-
-- Observation.code, which represents the type of data.
-- Observation.valueCodeableConcept, which represents the type of qualitative data.
-
-If data corresponding to the same concept exists in both HealthKit and Health Connect, the code is defined to match the code and name of Apple HealthKit, which has a wider data coverage range.
-
-#### Implementation of LOINC Codes in PGHD
-
-To enhance the searchability of PGHD, the implementation guide is defined to incorporate the international standard code LOINC into Observation.code. The table below provides an example of how LOINC codes are implemented:
-
-|Concept |Blood Sugar Level |Step Count|
-|--- | --- | ---|
-|Data Type Name (HealthKit/HealthConnect) |bloodGlucose /BloodGlucoseRecord |stepCount /StepsRecord|
-|Observation PGHD Codes |bloodGlucose |stepCount|
-|LOINC Code |15074-8 (Glucose [Moles/volume] in Blood) |N/A (Not set)|
-
-#### Standardization of Units in PGHD
-
-The units of quantity data in PGHD are standardized with reference to standard conventions:
-
-- Units of examination and measurement are standardized according to LOINC.
-- Units of nutrition are standardized according to the Japanese Food Standard Ingredient Table.
-
-### Profiles
-
-#### Activity
-
-Activity is a data category related to physical activity.  
-It includes the number of steps, the number of floors climbed, and energy consumed at rest.
-
-##### Profile
-
-- [PGHD Activity Profile](StructureDefinition-pghd-activity.html)
-
-#### VitalSign
-
-Vitalsign is a data category for the most basic information about life.  
-It includes heart rate, blood pressure, respiratory rate, and blood oxygen saturation.
-
-##### Profile
-
-- [PGHD VitalSign Profile](StructureDefinition-pghd-vitalsigns.html)
-- [PGHD OxygenSaturation Profile](StructureDefinition-pghd-oxygenSaturation.html)
-- [PGHD RespiratoryRate Profile](StructureDefinition-pghd-respiratoryrate.html)
-- [PGHD Heartrate Profile](StructureDefinition-pghd-heartrate.html)
-
-#### Sleep
-
-This data category is related to sleep and sleep symptoms.
-It includes profiles of sleep duration (by stage), sleep episodes, and snoring index.
-
-##### Profile
-
-- [PGHD Sleep Profile](StructureDefinition-pghd-sleep.html)
-- [PGHD Sleep Episode Profile](StructureDefinition-pghd-sleep-episode.html)
-- [PGHD SnoreIndex Profile](StructureDefinition-pghd-snore-index.html)
-- [PGHD SnoreEvent Profile](StructureDefinition-pghd-snore-event.html)
-
-#### Exercise
-
-Exercise is a data category related to the exercise for maintaining health and strengthening the body.  
-It includes the types of workouts.
-
-##### Profile
-
-- [PGHD Workout Profile](StructureDefinition-pghd-workout.html)
-
-#### BodyMesurement
-
-BodyMesurement is a data category related to measurements used to assess physical development and health.  
-It includes height, weight, BMI, body fat percentage, body temperature, etc.
-
-##### Profile
-
-- [PGHD BMI Profile](StructureDefinition-pghd-bmi.html)
-- [PGHD BodyTemperature Profile](StructureDefinition-pghd-bodytemperature.html)
-- [PGHD BodyHeight Profile](StructureDefinition-pghd-bodyheight.html)
-- [PGHD BodyMesurement Profile](StructureDefinition-pghd-bodymeasurement.html)
-
-#### Nutrition
-
-Nutrition is a data category for nutrients consumed.  
-It includes caffeine, vitamins, and energy intake.
-
-##### Profile
-
-- [PGHD Nutrition Profile](StructureDefinition-pghd-nutrition.html)
-
-#### Symptom
-
-Symptom is a data category for distress caused by physical or mental illness.  
-They include cough, dizziness, mood changes, fever, and headache.
-
-##### Profile
-
-- [PGHD Symptom Profile](StructureDefinition-pghd-symptom.html)
-
-#### Walking
-
-Walking is a data category related to walking speed and walking time.  
-It includes walking stability, walking speed, and stair climbing and descending speed.
-
-##### Profile
-
-- [PGHD Mobility Profile](StructureDefinition-pghd-mobility.html)
-
-#### Hearing
-
-Hearing is a data category for measurement data related to hearing.  
-These include hearing, environmental sound exposure, and environmental sound exposure events.
-
-##### Profile
-
-- [PGHD Hearing Profile](StructureDefinition-pghd-hearing.html)
-
-#### AlcholConsumption
-
-AlcholConsumption is a data category for measured data on alcohol consumed.  
-It includes blood alcohol concentration and number of alcoholic beverages consumed.
-
-##### Profile
-
-- [PGHD AlcholConsumption Profile](StructureDefinition-pghd-alchol-consumption.html)
-
-#### ReproductiveHealth
-
-ReproductiveHealth is a category of data related to menstrual cycles.
-
-##### Profile
-
-- [PGHD ReproductiveHealth Profile](StructureDefinition-pghd-reproductive-health.html)
-
-#### Inspection
-
-Inspecton is a data category related to measured data used to determine the cause of a health condition or abnormality.  
-It includes blood glucose levels and test results such as skin potential activity, forced lung capacity, and number of times insulin is used.
-
-##### Profile
-
-- [PGHD BloodGlucose Profile](StructureDefinition-pghd-blood-glucose.html)
-- [PGHD TestResult Profile](StructureDefinition-pghd-testresult.html)
-
-#### UVExposure
-
-UVExposure is a data category for ultraviolet measurement data.
-
-##### Profile
-
-- [PGHD UVExposure Profile](StructureDefinition-pghd-uvexposure.html)
-
-#### SelfCare
-
-SelfCare is a data category about the care you take to maintain health and prevent disease.  
-It includes hand washing and tooth brushing.
-
-##### Profile
-
-- [PGHD SelfCare Profile](StructureDefinition-pghd-selfcare.html)
-
-#### Medication
-
-This data category is used to check the status of medications and medications being taken.
-It includes profiles for medication adherence, dispensing at pharmacies, and insulin administration.
-
-##### Profile
-
-- [PGHD MedicationAdherence Profile](StructureDefinition-pghd-medication-adherence.html)
-- [PGHD MedicationDispense Profile](StructureDefinition-pghd-medicationdispense.html)
-- [PGHD MedicationAdministration Insulin Profile](StructureDefinition-pghd-medicationadministration-insulin.html)
-
-#### Questionnaire
-
-This is a data category of questions intended to solicit information from patients and their responses.
-It contains profiles of the questionnaire and the responses.
-
-##### Profile
-
-- [PGHD Questionnaire Profile](StructureDefinition-pghd-questionnaire.html)
-- [PGHD QuestionnaireResponse Profile](StructureDefinition-pghd-questionnaire-response.html)
-
-#### Self-Care Plan
-
-This data category deals with self-care plans proposed by decision support.
-It contains profiles of self-care plans.
-
-##### Profile
-
-- [PGHD SelfCare Plan Profile](StructureDefinition-pghd-careplan-selfcare.html)
+---
