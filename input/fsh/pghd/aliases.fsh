@@ -32,3 +32,4 @@ Alias: $CodeSystemStateOfMindAssociationCodes = http://hl7.org/fhir/uv/phr/CodeS
 Alias: $CodeSystemGAD7RiskCodes = http://hl7.org/fhir/uv/phr/CodeSystem/gad7-risk-codes
 Alias: $CodeSystemPHQ9RiskCodes = http://hl7.org/fhir/uv/phr/CodeSystem/phq9-risk-codes
 Alias: $CodeSystemScoredAssessmentCodes = http://hl7.org/fhir/uv/phr/CodeSystem/scored-assessment-codes
+Alias: $CodeSystemSymptomSNOMEDCT = http://snomed.info/sct
