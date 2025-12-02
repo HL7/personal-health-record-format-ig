@@ -39,7 +39,6 @@ Codes representing symptom-related measurement items with SNOMED CT
 * $CodeSystemSymptomSNOMEDCT#64531003
 * $CodeSystemSymptomSNOMEDCT#267036007
 * $CodeSystemSymptomSNOMEDCT#68235000
-* $CodeSystemSymptomSNOMEDCT#80313002
 * $CodeSystemSymptomSNOMEDCT#247950007
 * $CodeSystemSymptomSNOMEDCT#267102003
 * $CodeSystemSymptomSNOMEDCT#31908003
