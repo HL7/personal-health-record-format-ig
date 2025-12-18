@@ -344,4 +344,3 @@ Request only specific elements to reduce payload size:
 ```http
 GET /Observation?_elements=code,valueQuantity,effectiveDateTime
 ```  
-s
