@@ -73,7 +73,8 @@ dependencies:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
-# parameters:
+parameters:
+  default-language: en
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
 #
