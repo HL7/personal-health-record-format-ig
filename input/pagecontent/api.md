@@ -344,7 +344,4 @@ Request only specific elements to reduce payload size:
 ```http
 GET /Observation?_elements=code,valueQuantity,effectiveDateTime
 ```  
-<<<<<<< HEAD
->>>>>>> 4392ea04 (FHIR-53519: Add expanded query and filtering documentation to API page)
-=======
->>>>>>> 4392ea04 (FHIR-53519: Add expanded query and filtering documentation to API page)
+s
