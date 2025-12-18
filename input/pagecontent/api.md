@@ -164,4 +164,81 @@ When sharing via SMART Health Link:
 #### References
 
 - [SMART Health Links Specification](https://docs.smarthealthit.org/smart-health-links/)
-- [SMART Health Cards](https://smarthealth.cards/)  
+- [SMART Health Cards](https://smarthealth.cards/)
+
+### Streaming PHR Data Over HTTP
+
+While the .phr format is primarily designed for file-based storage and exchange, systems may also transmit PHR data directly over HTTP connections using streaming techniques.
+
+#### Content-Type Headers
+
+When transmitting .phr content over HTTP, use the following headers:
+
+```http
+Content-Type: application/x-ndjson
+Content-Disposition: attachment; filename="patient-record.phr"
+X-PHR-Version: 1.0
+```
+
+For FHIR-aware systems:
+```http
+Content-Type: application/fhir+ndjson
+```
+
+#### Streaming Benefits
+
+NDJSON format is well-suited for streaming because each line is a complete, parseable JSON object. Receivers can process records as they arrive without waiting for the complete transmission, enabling:
+
+- **Progressive rendering**: Display data as it arrives
+- **Memory efficiency**: Process large records without loading entire payload
+- **Resilience**: Partial data available even if connection interrupts
+- **Real-time feedback**: Show progress indicators during transfer
+
+#### Streaming Implementation Example
+
+**Server (streaming response):**
+
+```javascript
+// Node.js example
+response.setHeader('Content-Type', 'application/x-ndjson');
+response.setHeader('Transfer-Encoding', 'chunked');
+
+for await (const resource of patientResources) {
+  response.write(JSON.stringify(resource) + '\n');
+}
+response.end();
+```
+
+**Client (streaming consumption):**
+
+```javascript
+// Process each line as it arrives
+const readline = require('readline');
+const rl = readline.createInterface({ input: response });
+
+rl.on('line', (line) => {
+  const resource = JSON.parse(line);
+  processResource(resource);
+});
+```
+
+#### Comparison with Bulk Data IG
+
+| Aspect | PHR Format | Bulk Data IG |
+|--------|-----------|--------------|
+| File structure | Single heterogeneous .ndjson | Separate file per resource type |
+| Typical use | Single patient export | Multi-patient population export |
+| Resource ordering | Patient-centric, mixed types | Grouped by resourceType |
+| Streaming | Well-suited | Designed for batch |
+
+The PHR format uses a single file with mixed resource types for patient-centric simplicity, while Bulk Data separates by type (Observation.ndjson, Condition.ndjson, etc.) for scalability with large populations.
+
+#### Error Handling
+
+For streaming transfers, errors may occur mid-stream. Recommended approach:
+
+```json
+{"resourceType":"OperationOutcome","issue":[{"severity":"error","code":"processing","diagnostics":"Error at line 847: invalid reference"}]}
+```
+
+Include OperationOutcome resources inline to indicate processing errors while allowing the stream to continue for partial data recovery.  
