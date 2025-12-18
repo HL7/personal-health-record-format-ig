@@ -211,6 +211,9 @@ For streaming transfers, errors may occur mid-stream. Recommended approach:
 
 Include OperationOutcome resources inline to indicate processing errors while allowing the stream to continue for partial data recovery.  
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 8404341b (FHIR-53513: Add PHR streaming over HTTP documentation to API page)
+=======
 >>>>>>> 8404341b (FHIR-53513: Add PHR streaming over HTTP documentation to API page)
 =======
 >>>>>>> 8404341b (FHIR-53513: Add PHR streaming over HTTP documentation to API page)
