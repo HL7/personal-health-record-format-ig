@@ -90,6 +90,7 @@ parameters:
 
 menu:
   Home: index.html
+  FAQ: faq.html
   Functional Model:
     Conformance: conformance.html
     Data Model: datamodel.html
@@ -120,6 +121,8 @@ menu:
 pages:
   index.md:
     title: Getting Started
+  faq.md:
+    title: FAQ
   recordkeeping.md:
     title: Record Keeping    
   conformance.md:
