@@ -92,3 +92,137 @@ Many PGHD data items are not yet fully covered by international code systems suc
 ![Basics of Mapping Common PHR Data Structure to FHIR](basics-of-mapping-common-phr-data-structure-to-fhir.png)
 
 ---
+
+## Platform Integration Details
+
+### Apple HealthKit Mapping
+
+Detailed mapping of HealthKit types to FHIR Observations with LOINC codes:
+
+| HealthKit Type | FHIR Resource | LOINC Code | Notes |
+|----------------|---------------|------------|-------|
+| HKQuantityTypeIdentifierStepCount | Observation | 55423-8 | Number of steps in 24 hour |
+| HKQuantityTypeIdentifierHeartRate | Observation | 8867-4 | Heart rate |
+| HKQuantityTypeIdentifierBloodPressureSystolic | Observation | 8480-6 | Systolic blood pressure |
+| HKQuantityTypeIdentifierBloodPressureDiastolic | Observation | 8462-4 | Diastolic blood pressure |
+| HKQuantityTypeIdentifierBodyMass | Observation | 29463-7 | Body weight |
+| HKQuantityTypeIdentifierOxygenSaturation | Observation | 2708-6 | Oxygen saturation |
+| HKCategoryTypeIdentifierSleepAnalysis | Observation | 93832-4 | Sleep duration |
+
+Reference: [HealthKit on FHIR](https://github.com/StanfordBDHG/HealthKitOnFHIR)
+
+### Google Health Connect Example
+
+```json
+{
+  "resourceType": "Observation",
+  "meta": {
+    "source": "urn:google:health-connect"
+  },
+  "status": "final",
+  "category": [{
+    "coding": [{
+      "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code": "activity"
+    }]
+  }],
+  "code": {
+    "coding": [{
+      "system": "http://loinc.org",
+      "code": "55423-8",
+      "display": "Number of steps in 24 hour Measured"
+    }]
+  },
+  "effectivePeriod": {
+    "start": "2025-01-15T00:00:00Z",
+    "end": "2025-01-15T23:59:59Z"
+  },
+  "valueQuantity": {
+    "value": 8742,
+    "unit": "steps",
+    "system": "http://unitsofmeasure.org",
+    "code": "{steps}"
+  },
+  "device": {
+    "display": "Google Pixel Watch 2"
+  }
+}
+```
+
+---
+
+## Physical Activity IG Alignment
+
+The [Physical Activity IG](https://build.fhir.org/ig/HL7/physical-activity) provides standardized profiles for activity data. PHR systems incorporating fitness and activity data SHOULD align with these profiles:
+
+- **PA Observation Activity Measure** - Daily/weekly activity totals
+- **PA Observation Activity Group** - Grouped activity sessions
+- **PA Goal** - Activity goals and targets
+- **PA Care Plan** - Exercise prescriptions
+
+---
+
+## Device Resources
+
+Wearable devices and connected health devices SHOULD be represented using FHIR Device resources:
+
+```json
+{
+  "resourceType": "Device",
+  "id": "fitbit-charge-5",
+  "identifier": [{
+    "system": "urn:fitbit:device-id",
+    "value": "ABC123456"
+  }],
+  "manufacturer": "Fitbit",
+  "deviceName": [{
+    "name": "Charge 5",
+    "type": "model-name"
+  }],
+  "type": {
+    "coding": [{
+      "system": "http://snomed.info/sct",
+      "code": "706767009",
+      "display": "Patient data recorder"
+    }]
+  },
+  "patient": {
+    "reference": "Patient/example"
+  }
+}
+```
+
+---
+
+## Data Aggregation
+
+Consumer devices often report high-frequency data. Systems SHOULD aggregate this data appropriately:
+
+| Raw Data | Aggregation Strategy | Use Case |
+|----------|---------------------|----------|
+| Per-second heart rate | Hourly averages + daily min/max | Trend analysis |
+| Per-step timestamps | Daily totals | Activity tracking |
+| Per-minute sleep stages | Sleep session summary | Sleep quality assessment |
+| Continuous glucose | 15-minute intervals | Glucose management |
+
+---
+
+## Data Quality Indicators
+
+Consumer device data quality varies. Include quality metadata using extensions or meta.tag:
+
+- Device-captured vs manually entered
+- Validated vs unvalidated measurements
+- Professional-grade vs consumer-grade devices
+- Clinician-verified vs patient-reported
+
+---
+
+## References
+
+- [Physical Activity IG](https://build.fhir.org/ig/HL7/physical-activity)
+- [Patient Health Devices IG](http://hl7.org/fhir/uv/phd/)
+- [HealthKit on FHIR](https://github.com/StanfordBDHG/HealthKitOnFHIR)
+- [Google Health Connect](https://developer.android.com/health-and-fitness/guides/health-connect)
+
+---

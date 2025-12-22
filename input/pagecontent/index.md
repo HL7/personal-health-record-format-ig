@@ -59,6 +59,10 @@ This guide is particularly interested in the problem of collecting and aggregati
 
 - *Multiple Chronic Conditions* - Not all medical conditions are reported to all healthcare providers. Conversely, specialists will report results for one area of medicine, which needs to be incorporate and reconciled with the patient's master record.
 
+- *Lifelog* - Digital records of an individual's daily activities collected continuously from wearable devices, smartphones, and smart home sensors, including step counts, sleep duration and quality, heart rate, and other biometric measurements that can be used for predictive and preemptive medicine by establishing baseline health patterns and detecting early warning signs of deterioration.
+
+- *Healthy Living* - Proactive wellness management focused on disease prevention rather than treatment, where individuals without acute conditions use their PHR to optimize lifestyle factors such as nutrition tracking, physical activity goals, sleep hygiene, stress management, and preventive screening schedules to extend healthy life expectancy.
+
 - *Differential Diagnoses* - Case presentation for rare diseases can require differential diagnosis, as clinicians generate hypotheses and tests for one condition after another to explain a set of symptoms.
 
 - *Alternative Care* - Massage, Acupuncture, etc. - Patients may wish to track alternative modalities of healthcare that are not recognized or tracked by a healthcare provider or network.
@@ -71,13 +75,34 @@ This guide is particularly interested in the problem of collecting and aggregati
 
 - *Climate Refugees* - Patients that have been forced to relocate, due to fires, floods, and similar events, will likely have medical records in multiple clinics or hospitals.
 
-### Acknowledgements  
+### Acknowledgements
 
 - Jan Oldenburg, Patient Empowerment Workgroup
 - Dr. Neelima Karipineni, MITRE
-- Salim K Semy, MITRE  
+- Salim K Semy, MITRE
 - Dave Carlson, Clinical Cloud Solutions
 - Savannah Mueller, EMI Advisors
+- Japanese PHR Council (日本PHR協会)
+- Japan Association for Medical Informatics (JAMI - 日本医療情報学会)
+- University of Ehime School of Medicine
+- Kyoto University Graduate School of Medicine
+- PHR Business Association
+
+#### International Standards Alignment
+
+This guide aligns with and acknowledges work from:
+- HL7 International Patient Summary (IPS) Task Force
+- HL7 Vulcan Accelerator (Real World Data & Adverse Events)
+- HL7 Physical Activity Implementation Guide contributors
+- Open mHealth schema developers
+- CDISC standards community
+- SMART Health IT community (SMART Health Links, SMART Health Cards)
+
+#### Academic & Research Institutions
+
+- Stanford Biodesign Digital Health Group (HealthKit on FHIR)
+- European Institute for Innovation through Health Data (i~HD)
+- National Academy of Medicine (Implementing High Quality Primary Care)
 
 ### References  
 
@@ -97,13 +122,13 @@ Copyright (c) 2021+ Health Level Seven International and MITRE.org.
 Published under the Creative Commons "Attribution 4.0 International" (CC BY 4.0) License
 
 #### Dependencies
-{% include dependency-table.xhtml %}
+{% include dependency-table-en.xhtml %}
 
 #### Globals
-{% include globals-table.xhtml %}
+{% include globals-table-en.xhtml %}
 
 #### Cross Version Analysis
-{% include cross-version-analysis.xhtml %}
+{% include cross-version-analysis-en.xhtml %}
 
 #### IP Statements
-{% include ip-statements.xhtml %} 
+{% include ip-statements-en.xhtml %} 
