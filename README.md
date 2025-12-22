@@ -27,7 +27,6 @@ cd fhir-directory-attestation
 ```
 
 
-
 ### Compiling Documentation  
 
 ```bash 
@@ -41,6 +40,7 @@ cd fhir-directory-attestation
 cd output
 open -a "Google Chrome" index.html
 ```
+
 
 #### Contributing  
 
