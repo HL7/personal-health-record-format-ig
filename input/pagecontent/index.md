@@ -97,13 +97,13 @@ Copyright (c) 2021+ Health Level Seven International and MITRE.org.
 Published under the Creative Commons "Attribution 4.0 International" (CC BY 4.0) License
 
 #### Dependencies
-{% include dependency-table.xhtml %}
+{% include dependency-table-en.xhtml %}
 
 #### Globals
-{% include globals-table.xhtml %}
+{% include globals-table-en.xhtml %}
 
 #### Cross Version Analysis
-{% include cross-version-analysis.xhtml %}
+{% include cross-version-analysis-en.xhtml %}
 
 #### IP Statements
-{% include ip-statements.xhtml %} 
+{% include ip-statements-en.xhtml %} 

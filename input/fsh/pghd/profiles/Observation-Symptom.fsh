@@ -6,11 +6,12 @@ Description: """
 This profile defines how to represent Symptom.
 """
 * insert ProfileRules
-* insert ObservationRules
+* insert ObservationSymptomRules
 * . ^short = "PGHD Symptom Profile"
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
-* code.coding[PGHDCode] from ObservationSymptom
+* code.coding[PGHDCodes] from ObservationSymptom
+* code.coding[SNOMEDCT] from ObservationSymptomSNOMEDCT
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
 * valueCodeableConcept.coding ^slicing.discriminator[=].path = "system"
