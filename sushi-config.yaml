@@ -9,7 +9,7 @@ name: PatientHealthRecordsIG
 title: Personal Health Records
 description: Guidance on how to create longitudinal personal health records using FHIR.  Exporting, file formats, patient examples, and more.
 status: active # draft | active | retired | unknown
-version: 1.0.0-ballot2
+version: 1.0.0-ballot2.1
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: STU 1 ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
