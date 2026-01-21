@@ -164,7 +164,9 @@ pages:
   longitudinal.md:
     title: Longitudinal Records
   pghd.md:
-    title: Patient-generated health data(PGHD)
+    title: Patient-generated health data (PGHD)
+  pghd-code-mapping.md:
+    title: PHR Code Mapping
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
