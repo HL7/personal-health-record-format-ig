@@ -49,6 +49,8 @@ PGHD data models are influenced by several major standards and frameworks:
 
 ![Relationship-b/w-Standards-from-Data-Perspective](pghd/relationship-bw-standards-from-data-perspective.png){: width="70%"}
 
+<br clear="all" />
+
 #### Comparison Table
 
 | Category         | Apple HealthKit                              | Google Health Connect                        | Open mHealth                              | Kanta PHR (Finland)                          |
@@ -61,7 +63,11 @@ PGHD data models are influenced by several major standards and frameworks:
 
 ![Data Types of HealthKit](pghd/data-type-healthkit.png){: width="70%"}
 
+<br clear="all" />
+
 ![Data Types of Haelth Connect](pghd/data-type-health-connect.png){: width="70%"}
+
+<br clear="all" />
 
 Most PGHD items in this guide are mapped to the FHIR Observation resource. Data types, units, and metadata are aligned as much as possible with existing FHIR profiles, and mappings to these major standards are considered for interoperability.
 
@@ -84,11 +90,23 @@ Many PGHD data items are not yet fully covered by international code systems suc
 - **Metadata:** Generation time, device information, and measurement context are mapped to FHIR elements such as effectiveDateTime, device, and extensions.
 
 ![Data Structure of HealthKit (e.g. bodyTemperature)](pghd/data-structure-of-healthkit.png){: width="70%"}
+
+<br clear="all" />
 ![Data Structure of Health Connect (e.g. BodyTemperatureRecord)](pghd/data-structure-of-health-connect.png){: width="70%"}
+
+<br clear="all" />
 ![Data Structure of Open mHealth (e.g. body_temperature)](pghd/data-structure-of-open-mhealth.png){: width="70%"}
+
+<br clear="all" />
 ![Data Structure of Kanta PHR (e.g. Body temperature)](pghd/data-structre-of-kanta-phr.png){: width="70%"}
 
+<br clear="all" />
+
 ![Common Data Structure in PHR Standards](pghd/common-data-structure-in-phr-standards.png){: width="70%"}
+
+<br clear="all" />
 ![Basics of Mapping Common PHR Data Structure to FHIR](pghd/basics-of-mapping-common-phr-data-structure-to-fhir.png){: width="70%"}
+
+<br clear="all" />
 
 ---
