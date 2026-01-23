@@ -104,7 +104,7 @@ menu:
     Algorithms: algorithms.html
     Physiology Domains: physiology.html
     Operating Systems: operating-systems.html
-    Patient-generated health data(PGHD): pghd.html
+    Patient Generated Health Data: pghd.html
   Patient Personas:
     Index: personas-index.html
     Thompson Familiy: persona-thompson-family.html
@@ -164,7 +164,9 @@ pages:
   longitudinal.md:
     title: Longitudinal Records
   pghd.md:
-    title: Patient-generated health data(PGHD)
+    title: Patient Generated Health Data (PGHD)
+  pghd-code-mapping.md:
+    title: PHR Code Mapping
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
