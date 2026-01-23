@@ -1,5 +1,3 @@
-# Patient Generated Health Data (PGHD)
-
 ## Introduction
 
 Patient Generated Health Data (PGHD) refers to health-related data created, recorded, or gathered by patients or their caregivers, outside of clinical settings. This includes daily activity logs, self-measured vital signs, dietary records, symptom diaries, and more. PGHD complements Electronic Health Records (EHR) by providing a more holistic view of a patient’s health, especially between clinical visits.
