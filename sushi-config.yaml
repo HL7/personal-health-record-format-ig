@@ -93,7 +93,6 @@ menu:
     Conformance: conformance.html
     Data Model: datamodel.html
     Functional Model: functionality.html
-    Record Lifecycle: recordlifecycle.html
     Security: security.html
   Supplemental:
     History: history.html
@@ -127,8 +126,6 @@ pages:
     title: Data Model    
   functionality.md:
     title: Functional Model
-  recordlifecycle.md:
-    title: Record Lifecycle    
   annotations.md:
     title: Annotations
   security.md:
