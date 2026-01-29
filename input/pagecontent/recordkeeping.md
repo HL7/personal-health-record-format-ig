@@ -9,7 +9,7 @@ A useful way to think of data storage is in terms of slow-motion data transfer. 
 
 As such, this implementation guide recommends that implementors treat storage in much the same way as over-the-wire data transfers.  We simply are defining file formats, rather than wire formats.  To this extent, we recommend the following principles when exporting data from their systems:
 
-- Systems MUST use FHIR data schemas to claim to be compliant with this IG.  
+- Systems MUST use FHIR data schemas when importing or exporting data to claim to be compliant with this IG.
 - Systems SHOULD use the `.phr` and `.sphr` MIME types when possible.
 - Systems MAY treat directories as Bundle entries or NDJSON lines by default.
 
