@@ -1,85 +1,54 @@
+Security and trust infrastructure for personal health records involves authentication, authorization, access control, audit logging, and secure data exchange. The [PHR-S Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88) defines a comprehensive Trust Infrastructure (TI) section covering these concerns. This page maps those requirements to relevant FHIR implementation guides and specifications.
 
-> Work in progress.  Content to be determined.
+### FHIR Security Implementation Guides
 
-| Section |  Header Name | 
+PHR systems conforming to this IG SHOULD implement the following security specifications:
+
+| Security Concern | FHIR Implementation Guide | Usage |
+|------------------|--------------------------|-------|
+| App authorization | [SMART App Launch](https://hl7.org/fhir/smart-app-launch/) | OAuth 2.0-based authorization for apps accessing FHIR data |
+| Identity verification | [UDAP Security](https://build.fhir.org/ig/HL7/fhir-udap-security-ig/) | Unified Data Access Profiles for scalable identity trust |
+| Audit logging | [FHIR AuditEvent](https://www.hl7.org/fhir/R4/auditevent.html) | Logging access, disclosure, and modification events |
+| Consent management | [FHIR Consent](https://www.hl7.org/fhir/R4/consent.html) | Patient-directed access control and consent directives |
+| Data integrity | [FHIR Provenance](https://www.hl7.org/fhir/R4/provenance.html) | Tracking data origin, authorship, and chain of custody |
+| Transport security | [FHIR Security Module](https://www.hl7.org/fhir/security.html) | TLS, signatures, and general security guidance |
+
+For file-based exchange using the `.sphr` format, see also the [Data Provenance and Security](recordkeeping.html#data-provenance-and-security) section in Record Keeping, which covers signing, encryption, and trust mechanisms for PHR files.
+
+### PHR-S Functional Model: Trust Infrastructure
+
+The following table lists the Trust Infrastructure (TI) section headings from the [PHR-S Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88). Implementors are encouraged to download the associated PDF for detailed requirements.
+
+| Section |  Header Name |
 | ---------- | :-------------------- |
-| TI.1 | Security | | |
-| TI.1.1 | Entity Authentication | | |
-| TI.1.2 | Entity Authorization | | |
-| TI.1.3 | Entity Access Control | | |
-| TI.1.3.1 | Emergency Access Control | | |
-| TI.1.4 | Patient Access Management | | |
-| TI.1.5 | Non-Repudiation | | |
-| TI.1.6 | Secure Data Exchange | | |
-| TI.1.7 | Secure Data Routing | | |
-| TI.1.8 | Patient Privacy and Confidentiality | | |
-| TI.1.8.1 | Redact Patient Identifying Information | | |
-| TI.1.8.2 | Protect Individual Patient Identity | | |
-| TI.1.9 | System Operation Measurements | | |
-| TI.1.10 | Service Availability | | |
-| TI.1.11 | Trusted Information Exchange Environment | | |
-| TI.2 | Audit | | |
-| TI.2.1 | Audit Triggers | | |
-| TI.2.1.1 | Record Entry Audit Triggers | | |
-| TI.2.1.2 | Security Audit Triggers | | |
-| TI.2.1.2.1 | Security Event Security Audit Trigger | | |
-| TI.2.1.2.2 | User Authentication to the System (Start user session) Security Audit Trigger | | |
-| TI.2.1.2.3 | User Authentication (System Prompt for Password Change) Security Audit Trigger | | |
-| TI.2.1.2.4 | User Request to Change Password Security Audit Trigger | | |
-| TI.2.1.2.5 | User Log Out (End user session) Security Audit Trigger | | |
-| TI.2.1.2.6 | User Access (Successful) Security Audit Trigger | | |
-| TI.2.1.2.7 | User Attempts to Access Data (Unsuccessful -- Access Denied) Security Audit Trigger | | |
-| TI.2.1.2.8 | Extraordinary User Access (Break the Glass) Security Audit Trigger | | |
-| TI.2.1.2.9 | User Permissions (Authorization) Security Audit Trigger | | |
-| TI.2.1.3 | System Audit Triggers | | |
-| TI.2.1.3.1 | System Event System Audit Trigger | | |
-| TI.2.1.3.2 | System Started System Audit Trigger | | |
-| TI.2.1.3.3 | Back Up Started System Audit Trigger | | |
-| TI.2.1.3.4 | Back Up Completed System Audit Trigger | | |
-| TI.2.1.3.5 | Back Up Recovery Started System Audit Trigger | | |
-| TI.2.1.3.6 | Back Up Recovery Completed System Audit Trigger | | |
-| TI.2.1.3.7 | Batch Job Started System Audit Trigger | | |
-| TI.2.1.3.8 | Batch Job Completed System Audit Trigger | | |
-| TI.2.1.3.9 | Maintenance Started System Audit Trigger | | |
-| TI.2.1.3.10 | Maintenance Completed System Audit Trigger | | |
-| TI.2.1.3.11 | Resource Usage System Audit Trigger | | |
-| TI.2.1.3.12 | System Maintenance Events -Local Access System Audit Trigger | | |
-| TI.2.1.3.13 | System Maintenance Events - Remote Access System Audit Trigger | | |
-| TI.2.1.3.14 | System Maintenance - PHR or Clinical Software System Audit Trigger | | |
-| TI.2.1.3.15 | System Maintenance - Codes, Vocabulary, Knowledge, Rules System Audit Trigger | | |
-| TI.2.1.3.16 | Data Corruption System Audit Trigger | | |
-| TI.2.1.4 | Clinical Audit Triggers | | |
-| TI.2.1.4.1 | Clinical Alerts Clinical Audit Trigger | | |
-| TI.2.1.4.2 | Acknowledgements of Clinically Significant Report Changes Clinical Audit Trigger | | |
-| TI.2.1.4.3 | Disable Decision Support Alerts Clinical Audit Trigger | | |
-| TI.2.2 | Audit Log Management | | |
-| TI.2.2.1 | Audit Log Indelibility | | |
-| TI.2.3 | Audit Notification and Review | | |
-| TI.3 | Registry and Directory Services | | |
-| TI.4 | Standard Terminology and Terminology Services | | |
-| TI.4.1 | Standard Terminology and Terminology Models | | |
-| TI.4.2 | Maintenance and Versioning of Standard Terminologies | | |
-| TI.4.3 | Terminology Mapping | | |
-| TI.5 | Standards-Based Interoperability | | |
-| TI.5.1 | Application, Structured-Message, and Structured-Document Interchange Standards | | |
-| TI.5.1.1 | Application Interchange Standards | | |
-| TI.5.1.2 | Structured-Document Interchange Standards | | |
-| TI.5.1.3 | Structured-Message Interchange Standards | | |
-| TI.5.2 | Interchange Standards Versioning and Maintenance | | |
-| TI.5.3 | Standards-Based Application Integration  | | |
-| TI.5.4 | Interchange Agreements | | |
-| TI.5.5 | System Integration | | |
-| TI.6 | Business Rules Management | | |
-| TI.7 | Workflow Management | | |
-| TI.8 | Database Backup and Recovery | | |
-| TI.9 | System Management Operations and Performance | | |
-| TI.10 | Standard or Preferred Clinical Models and Clinical Model Services | | |
-| TI.10.1 | Standard or Preferred Clinical Models | | |
-| TI.10.2 | Maintenance and Versioning of Standard or Preferred Clinical Models | | |
-| TI.10.3 | Clinical Model Mapping | | |
+| TI.1 | Security |
+| TI.1.1 | Entity Authentication |
+| TI.1.2 | Entity Authorization |
+| TI.1.3 | Entity Access Control |
+| TI.1.4 | Patient Access Management |
+| TI.1.5 | Non-Repudiation |
+| TI.1.6 | Secure Data Exchange |
+| TI.1.7 | Secure Data Routing |
+| TI.1.8 | Patient Privacy and Confidentiality |
+| TI.1.9 | System Operation Measurements |
+| TI.1.10 | Service Availability |
+| TI.1.11 | Trusted Information Exchange Environment |
+| TI.2 | Audit |
+| TI.2.1 | Audit Triggers |
+| TI.2.2 | Audit Log Management |
+| TI.2.3 | Audit Notification and Review |
+| TI.3 | Registry and Directory Services |
+| TI.4 | Standard Terminology and Terminology Services |
+| TI.5 | Standards-Based Interoperability |
+| TI.6 | Business Rules Management |
+| TI.7 | Workflow Management |
+| TI.8 | Database Backup and Recovery |
+| TI.9 | System Management Operations and Performance |
+| TI.10 | Standard or Preferred Clinical Models and Clinical Model Services |
 
+### References
 
-
-### References  
-
-[Personal Health Record System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88)
+- [PHR-S Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88)
+- [FHIR Security and Privacy Module](https://www.hl7.org/fhir/security.html)
+- [SMART App Launch IG](https://hl7.org/fhir/smart-app-launch/)
+- [UDAP Security IG](https://build.fhir.org/ig/HL7/fhir-udap-security-ig/)
