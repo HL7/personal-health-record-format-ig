@@ -102,6 +102,7 @@ menu:
     API Endpoints: api.html
     Annotations: annotations.html
     Algorithms: algorithms.html
+    Clinical Research: clinical-research.html
     Physiology Domains: physiology.html
     Operating Systems: operating-systems.html
     Patient-generated health data(PGHD): pghd.html
@@ -163,6 +164,8 @@ pages:
     title: API Endpoints
   longitudinal.md:
     title: Longitudinal Records
+  clinical-research.md:
+    title: Clinical Research
   pghd.md:
     title: Patient-generated health data(PGHD)
 
