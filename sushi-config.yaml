@@ -105,6 +105,7 @@ menu:
     Physiology Domains: physiology.html
     Operating Systems: operating-systems.html
     Patient-generated health data(PGHD): pghd.html
+    Logical Models: logical-models.html
   Patient Personas:
     Index: personas-index.html
     Thompson Familiy: persona-thompson-family.html
@@ -165,6 +166,8 @@ pages:
     title: Longitudinal Records
   pghd.md:
     title: Patient-generated health data(PGHD)
+  logical-models.md:
+    title: Logical Models
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
