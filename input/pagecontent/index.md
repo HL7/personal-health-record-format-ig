@@ -59,6 +59,10 @@ This guide is particularly interested in the problem of collecting and aggregati
 
 - *Multiple Chronic Conditions* - Not all medical conditions are reported to all healthcare providers. Conversely, specialists will report results for one area of medicine, which needs to be incorporate and reconciled with the patient's master record.
 
+- *Lifelog* - Digital records of an individual's daily activities collected continuously from wearable devices, smartphones, and smart home sensors, including step counts, sleep duration and quality, heart rate, and other biometric measurements that can be used for predictive and preemptive medicine by establishing baseline health patterns and detecting early warning signs of deterioration.
+
+- *Healthy Living* - Proactive wellness management focused on disease prevention rather than treatment, where individuals without acute conditions use their PHR to optimize lifestyle factors such as nutrition tracking, physical activity goals, sleep hygiene, stress management, and preventive screening schedules to extend healthy life expectancy.
+
 - *Differential Diagnoses* - Case presentation for rare diseases can require differential diagnosis, as clinicians generate hypotheses and tests for one condition after another to explain a set of symptoms.
 
 - *Alternative Care* - Massage, Acupuncture, etc. - Patients may wish to track alternative modalities of healthcare that are not recognized or tracked by a healthcare provider or network.
