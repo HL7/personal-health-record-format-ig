@@ -9,3 +9,45 @@ The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValue
 # this is the first ballot; will get to this for second ballot
 
 # will get better URI set up for next ballot; but running short on time right now
+
+# This setting supress errors for original PHR IG
+
+## ERRORS
+
+#The <script> containing the javascript '// 28409da5-35bd-45a'... is illegal and not allowed on the HL7 ci-build - put the script in a .js file in a trusted template (if it is justified and needed)
+#The <script> containing the javascript '// a283f3f4-9f8a-435'... is illegal and not allowed on the HL7 ci-build - put the script in a .js file in a trusted template (if it is justified and needed)
+
+The <script> containing the javascript
+The <script> containing the javascript.*
+
+The link '../StructureDefinition-PhrBundle.csv' for "CSV" cannot be resolved
+The link '../StructureDefinition-PhrBundle.xlsx' for "Excel" cannot be resolved
+The link '../StructureDefinition-PhrBundle.sch' for "Schematron" cannot be resolved
+
+The link '../StructureDefinition-PhrMedia.csv' for "CSV" cannot be resolved
+The link '../StructureDefinition-PhrMedia.xlsx' for "Excel" cannot be resolved
+The link '../StructureDefinition-PhrMedia.sch' for "Schematron" cannot be resolved
+
+The image source 'relationship-bw-standards-from-data-perspective.png' cannot be resolved
+The image source 'data-type-healthkit.png' cannot be resolved
+The image source 'data-type-health-connect.png' cannot be resolved
+The link 'pghd-code-mapping.md' for "PGHG Code Mapping Table" cannot be resolved
+The image source 'data-structure-of-healthkit.png' cannot be resolved
+The image source 'data-structure-of-health-connect.png' cannot be resolved
+The image source 'data-structure-of-open-mhealth.png' cannot be resolved
+The image source 'data-structre-of-kanta-phr.png' cannot be resolved
+The image source 'common-data-structure-in-phr-standards.png' cannot be resolved
+The image source 'basics-of-mapping-common-phr-data-structure-to-fhir.png' cannot be resolved
+
+
+## WARNING
+### output/en/operating-systems.html
+Illegal HTML: illegal html element: PATH_TO_APP ( with the path to your dummy application, eg:)
+
+
+## INFORMATION
+The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'The PHR annotation SHALL not contain any files not described in the manifest.'
+The html source contains the word 'MAY' but it is not in a text phrase marked as a conformance clause: 'Systems MAY wish to implement standard APIs for generating a .phr or .sphr file. Standard API queries that have been used in other systems are listed below.'
+The html source contains the word 'SHALL NOT' but it is not in a text phrase marked as a conformance clause: 'In this specification, the key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” are to be interpreted as described in RFC2119.'
+The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause: 'Systems SHOULD use the .phr and .sphr MIME types when possible.'
+

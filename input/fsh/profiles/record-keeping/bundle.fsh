@@ -2,6 +2,9 @@
 // This file can be renamed, and additional FSH files can be added.
 // SUSHI will look for definitions in any file using the .fsh ending.
 
+// // [E.Kimura]: Do not use Bundle Resource
+
+/*
 Profile: PhrBundle
 Parent: Bundle
 Description: "Standard PHR profile of the Bundle resource."
@@ -15,9 +18,9 @@ Description: "Standard PHR profile of the Bundle resource."
 * entry ^slicing.description = "Slice based on the entry.resource pattern"
 
 // 2023-06-09  we may need to change cardinality on IPA; TBD
-// question:  can a record have multiple IPAs? 
+// question:  can a record have multiple IPAs?
 
-* entry contains 
+* entry contains
     primaryPatientResource 1..* MS and
     coverPage 1..1 MS and
     internationalPatientSummary 0..* MS and
@@ -54,3 +57,5 @@ Usage: #example
 * entry[=].fullUrl = "https://example.org/baseR4/Media/jane-doe-media"
 * entry[+].resource = JaneDoePhrMediaProvenance
 * entry[=].fullUrl = "https://example.org/baseR4/Provenance/jane-doe-media-provenance"
+
+*/
