@@ -22,7 +22,7 @@ The core of the Personal Health Record should be medical grade, and able to inco
 
 The diagram above shows the intersection of the data collected by the patient, compared to the data collected by the hospital EHR or insurance systems.
 
-For a comprehensive definition of personal health record system capabilities, see the [HL7 PHR System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88).
+For more details on functionality of a personal health record system, the reader is encouraged to review the [HL7 PHR System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88).
 
 ### Relevant Law
 
