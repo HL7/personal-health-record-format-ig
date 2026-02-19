@@ -36,7 +36,7 @@ Files containing patient health information should be signed with a password, an
 
 If supported on your operating system, a preferred method of encrypting and decrypting files is with PGP/GPG utilities, which support asymmetric cryptography algorithms such as X.509.  
 
-Therefore, when exporting data from the Personal Health Record:
+Therefore, when exporting data to a .phr or .sphr file:
 
 Write the contents of a collection into either a FHIR Bundle with a .json extension, or a NDJSON file with a .ndjson extension.  After writing the contents to the filesystem, compress the data if desired.  Then convert the relevant X509 certificate into GPG format.  Once done, encrypt the file.
 
