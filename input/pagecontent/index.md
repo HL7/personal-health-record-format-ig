@@ -18,9 +18,8 @@ Nearly two decades ago, the Markle Foundation's Personal Health workgroup conven
 
 ![VennDiagram.png](VennDiagram.png){:width="100%"}    
 
-The diagram above shows the intersection of the data collected by the patient, compared to the data collected by the hospital EHR or insurance systems.
+The diagram above shows the intersection of the data collected by the patient, compared to the data collected by clinical EHR or insurance systems.  The core of the Personal Health Record should be medical grade, and able to incorporate records from any clinical source or setting; and which the patient can then carry from one healthcare provider to the next. This specification establishes standard mechanisms for a PHR to interoperate with other systems (clinical and otherwise), thereby facilitating sharing of information obtained by the PHR from healthcare encounters, personal documentation and measurement, and other sources.  
 
-The core of the Personal Health Record should be medical grade, and able to incorporate any medical record that you receive after a visit to the hospital; and which the patient can then carry from one healthcare provider to the next. As such, a modern Personal Health Record needs to essentially be able to receive captured data from throughout the hospital. Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychiatry. All of it is relevent.  
 
 For more details on functionality of a personal health record system, the reader is encouraged to review the [HL7 PHR System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88).
 
