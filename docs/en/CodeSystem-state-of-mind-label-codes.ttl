@@ -1,0 +1,217 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-label-codes> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "state-of-mind-label-codes"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem state-of-mind-label-codes</b></p><a name=\"state-of-mind-label-codes\"> </a><a name=\"hcstate-of-mind-label-codes\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-label-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">amazed<a name=\"state-of-mind-label-codes-amazed\"> </a></td><td>Amazed</td></tr><tr><td style=\"white-space:nowrap\">amused<a name=\"state-of-mind-label-codes-amused\"> </a></td><td>Amused</td></tr><tr><td style=\"white-space:nowrap\">angry<a name=\"state-of-mind-label-codes-angry\"> </a></td><td>Angry</td></tr><tr><td style=\"white-space:nowrap\">annoyed<a name=\"state-of-mind-label-codes-annoyed\"> </a></td><td>Annoyed</td></tr><tr><td style=\"white-space:nowrap\">anxious<a name=\"state-of-mind-label-codes-anxious\"> </a></td><td>Anxious</td></tr><tr><td style=\"white-space:nowrap\">ashamed<a name=\"state-of-mind-label-codes-ashamed\"> </a></td><td>Ashamed</td></tr><tr><td style=\"white-space:nowrap\">brave<a name=\"state-of-mind-label-codes-brave\"> </a></td><td>Brave</td></tr><tr><td style=\"white-space:nowrap\">calm<a name=\"state-of-mind-label-codes-calm\"> </a></td><td>Calm</td></tr><tr><td style=\"white-space:nowrap\">confident<a name=\"state-of-mind-label-codes-confident\"> </a></td><td>Confident</td></tr><tr><td style=\"white-space:nowrap\">content<a name=\"state-of-mind-label-codes-content\"> </a></td><td>Content</td></tr><tr><td style=\"white-space:nowrap\">disappointed<a name=\"state-of-mind-label-codes-disappointed\"> </a></td><td>Disappointed</td></tr><tr><td style=\"white-space:nowrap\">discouraged<a name=\"state-of-mind-label-codes-discouraged\"> </a></td><td>Discouraged</td></tr><tr><td style=\"white-space:nowrap\">disgusted<a name=\"state-of-mind-label-codes-disgusted\"> </a></td><td>Disgusted</td></tr><tr><td style=\"white-space:nowrap\">drained<a name=\"state-of-mind-label-codes-drained\"> </a></td><td>Drained</td></tr><tr><td style=\"white-space:nowrap\">embarrassed<a name=\"state-of-mind-label-codes-embarrassed\"> </a></td><td>Embarrassed</td></tr><tr><td style=\"white-space:nowrap\">excited<a name=\"state-of-mind-label-codes-excited\"> </a></td><td>Excited</td></tr><tr><td style=\"white-space:nowrap\">frustrated<a name=\"state-of-mind-label-codes-frustrated\"> </a></td><td>Frustrated</td></tr><tr><td style=\"white-space:nowrap\">grateful<a name=\"state-of-mind-label-codes-grateful\"> </a></td><td>Grateful</td></tr><tr><td style=\"white-space:nowrap\">guilty<a name=\"state-of-mind-label-codes-guilty\"> </a></td><td>Guilty</td></tr><tr><td style=\"white-space:nowrap\">happy<a name=\"state-of-mind-label-codes-happy\"> </a></td><td>Happy</td></tr><tr><td style=\"white-space:nowrap\">hopeful<a name=\"state-of-mind-label-codes-hopeful\"> </a></td><td>Hopeful</td></tr><tr><td style=\"white-space:nowrap\">hopeless<a name=\"state-of-mind-label-codes-hopeless\"> </a></td><td>Hopeless</td></tr><tr><td style=\"white-space:nowrap\">indifferent<a name=\"state-of-mind-label-codes-indifferent\"> </a></td><td>Indifferent</td></tr><tr><td style=\"white-space:nowrap\">irritated<a name=\"state-of-mind-label-codes-irritated\"> </a></td><td>Irritated</td></tr><tr><td style=\"white-space:nowrap\">jealous<a name=\"state-of-mind-label-codes-jealous\"> </a></td><td>Jealous</td></tr><tr><td style=\"white-space:nowrap\">joyful<a name=\"state-of-mind-label-codes-joyful\"> </a></td><td>Joyful</td></tr><tr><td style=\"white-space:nowrap\">lonely<a name=\"state-of-mind-label-codes-lonely\"> </a></td><td>Lonely</td></tr><tr><td style=\"white-space:nowrap\">overwhelmed<a name=\"state-of-mind-label-codes-overwhelmed\"> </a></td><td>Overwhelmed</td></tr><tr><td style=\"white-space:nowrap\">passionate<a name=\"state-of-mind-label-codes-passionate\"> </a></td><td>Passionate</td></tr><tr><td style=\"white-space:nowrap\">peaceful<a name=\"state-of-mind-label-codes-peaceful\"> </a></td><td>Peaceful</td></tr><tr><td style=\"white-space:nowrap\">proud<a name=\"state-of-mind-label-codes-proud\"> </a></td><td>Proud</td></tr><tr><td style=\"white-space:nowrap\">relieved<a name=\"state-of-mind-label-codes-relieved\"> </a></td><td>Relieved</td></tr><tr><td style=\"white-space:nowrap\">sad<a name=\"state-of-mind-label-codes-sad\"> </a></td><td>Sad</td></tr><tr><td style=\"white-space:nowrap\">satisfied<a name=\"state-of-mind-label-codes-satisfied\"> </a></td><td>Satisfied</td></tr><tr><td style=\"white-space:nowrap\">scared<a name=\"state-of-mind-label-codes-scared\"> </a></td><td>Scared</td></tr><tr><td style=\"white-space:nowrap\">stressed<a name=\"state-of-mind-label-codes-stressed\"> </a></td><td>Stressed</td></tr><tr><td style=\"white-space:nowrap\">surprised<a name=\"state-of-mind-label-codes-surprised\"> </a></td><td>Surprised</td></tr><tr><td style=\"white-space:nowrap\">worried<a name=\"state-of-mind-label-codes-worried\"> </a></td><td>Worried</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "pe"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 1 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-label-codes"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-label-codes>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0-ballot2"] ; # 
+  fhir:name [ fhir:v "StateOfMindLabel"] ; # 
+  fhir:title [ fhir:v "State of Mind Label Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-03-12T15:47:36-05:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientempowerment" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes for state of mind label"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:compositional [ fhir:v false] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "38"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "amazed" ] ;
+     fhir:display [ fhir:v "Amazed" ]
+  ] [
+     fhir:code [ fhir:v "amused" ] ;
+     fhir:display [ fhir:v "Amused" ]
+  ] [
+     fhir:code [ fhir:v "angry" ] ;
+     fhir:display [ fhir:v "Angry" ]
+  ] [
+     fhir:code [ fhir:v "annoyed" ] ;
+     fhir:display [ fhir:v "Annoyed" ]
+  ] [
+     fhir:code [ fhir:v "anxious" ] ;
+     fhir:display [ fhir:v "Anxious" ]
+  ] [
+     fhir:code [ fhir:v "ashamed" ] ;
+     fhir:display [ fhir:v "Ashamed" ]
+  ] [
+     fhir:code [ fhir:v "brave" ] ;
+     fhir:display [ fhir:v "Brave" ]
+  ] [
+     fhir:code [ fhir:v "calm" ] ;
+     fhir:display [ fhir:v "Calm" ]
+  ] [
+     fhir:code [ fhir:v "confident" ] ;
+     fhir:display [ fhir:v "Confident" ]
+  ] [
+     fhir:code [ fhir:v "content" ] ;
+     fhir:display [ fhir:v "Content" ]
+  ] [
+     fhir:code [ fhir:v "disappointed" ] ;
+     fhir:display [ fhir:v "Disappointed" ]
+  ] [
+     fhir:code [ fhir:v "discouraged" ] ;
+     fhir:display [ fhir:v "Discouraged" ]
+  ] [
+     fhir:code [ fhir:v "disgusted" ] ;
+     fhir:display [ fhir:v "Disgusted" ]
+  ] [
+     fhir:code [ fhir:v "drained" ] ;
+     fhir:display [ fhir:v "Drained" ]
+  ] [
+     fhir:code [ fhir:v "embarrassed" ] ;
+     fhir:display [ fhir:v "Embarrassed" ]
+  ] [
+     fhir:code [ fhir:v "excited" ] ;
+     fhir:display [ fhir:v "Excited" ]
+  ] [
+     fhir:code [ fhir:v "frustrated" ] ;
+     fhir:display [ fhir:v "Frustrated" ]
+  ] [
+     fhir:code [ fhir:v "grateful" ] ;
+     fhir:display [ fhir:v "Grateful" ]
+  ] [
+     fhir:code [ fhir:v "guilty" ] ;
+     fhir:display [ fhir:v "Guilty" ]
+  ] [
+     fhir:code [ fhir:v "happy" ] ;
+     fhir:display [ fhir:v "Happy" ]
+  ] [
+     fhir:code [ fhir:v "hopeful" ] ;
+     fhir:display [ fhir:v "Hopeful" ]
+  ] [
+     fhir:code [ fhir:v "hopeless" ] ;
+     fhir:display [ fhir:v "Hopeless" ]
+  ] [
+     fhir:code [ fhir:v "indifferent" ] ;
+     fhir:display [ fhir:v "Indifferent" ]
+  ] [
+     fhir:code [ fhir:v "irritated" ] ;
+     fhir:display [ fhir:v "Irritated" ]
+  ] [
+     fhir:code [ fhir:v "jealous" ] ;
+     fhir:display [ fhir:v "Jealous" ]
+  ] [
+     fhir:code [ fhir:v "joyful" ] ;
+     fhir:display [ fhir:v "Joyful" ]
+  ] [
+     fhir:code [ fhir:v "lonely" ] ;
+     fhir:display [ fhir:v "Lonely" ]
+  ] [
+     fhir:code [ fhir:v "overwhelmed" ] ;
+     fhir:display [ fhir:v "Overwhelmed" ]
+  ] [
+     fhir:code [ fhir:v "passionate" ] ;
+     fhir:display [ fhir:v "Passionate" ]
+  ] [
+     fhir:code [ fhir:v "peaceful" ] ;
+     fhir:display [ fhir:v "Peaceful" ]
+  ] [
+     fhir:code [ fhir:v "proud" ] ;
+     fhir:display [ fhir:v "Proud" ]
+  ] [
+     fhir:code [ fhir:v "relieved" ] ;
+     fhir:display [ fhir:v "Relieved" ]
+  ] [
+     fhir:code [ fhir:v "sad" ] ;
+     fhir:display [ fhir:v "Sad" ]
+  ] [
+     fhir:code [ fhir:v "satisfied" ] ;
+     fhir:display [ fhir:v "Satisfied" ]
+  ] [
+     fhir:code [ fhir:v "scared" ] ;
+     fhir:display [ fhir:v "Scared" ]
+  ] [
+     fhir:code [ fhir:v "stressed" ] ;
+     fhir:display [ fhir:v "Stressed" ]
+  ] [
+     fhir:code [ fhir:v "surprised" ] ;
+     fhir:display [ fhir:v "Surprised" ]
+  ] [
+     fhir:code [ fhir:v "worried" ] ;
+     fhir:display [ fhir:v "Worried" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

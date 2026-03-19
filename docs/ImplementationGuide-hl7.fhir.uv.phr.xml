@@ -1,0 +1,3100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.uv.phr"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide hl7.fhir.uv.phr</b></p><a name="hl7.fhir.uv.phr"> </a><a name="hchl7.fhir.uv.phr"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p></div><h2>PatientHealthRecordsIG</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr</pre><div><p>Guidance on how to create longitudinal personal health records using FHIR.  Exporting, file formats, patient examples, and more.</p>
+</div></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+  <version value="1.0.0-ballot2"/>
+  <name value="PatientHealthRecordsIG"/>
+  <title value="Personal Health Records"/>
+  <status value="active"/>
+  <date value="2026-03-12T15:47:36-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <description value="Guidance on how to create longitudinal personal health records using FHIR.  Exporting, file formats, patient examples, and more."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.uv.phr"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="7.1.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_uv_ips">
+    <uri value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+    <packageId value="hl7.fhir.uv.ips"/>
+    <version value="1.1.0"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2022+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="STU 1 ballot"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/uv/phr/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="i18n-default-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="en"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r4#0.9.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2022+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="STU 1 ballot"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/uv/phr/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="i18n-default-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="en"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/appetite-changes-codes"/>
+      </reference>
+      <name value="Appetite Changes Codes"/>
+      <description value="Codes expressing changes in appetite"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/body-posture-codes"/>
+      </reference>
+      <name value="Body Posture Codes"/>
+      <description value="Code for posture"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/body-temperature-measurement-location"/>
+      </reference>
+      <name value="Body Temperature Measurement Location Codes"/>
+      <description value="Code indicating the location where the body temperature was measured"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/body-temperature-measurement-location-codes"/>
+      </reference>
+      <name value="Body Temperature Measurement Location Codes"/>
+      <description value="Code indicating the location where the body temperature was measured"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/symptom-pghd-to-snomedct"/>
+      </reference>
+      <name value="ConceptMapSymptomPGHD2SNOMEDCT"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/symptom-snomedct-to-pghd"/>
+      </reference>
+      <name value="ConceptMapSymptomSNOMEDCT2PGHD"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-ecg-classification-codes"/>
+      </reference>
+      <name value="ECG Classification Codes"/>
+      <description value="Codes for classification of ECG waveforms"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/ecg-codes"/>
+      </reference>
+      <name value="ECG Classification Codes"/>
+      <description value="Codes for ECG and related items"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/ecg-classification-codes"/>
+      </reference>
+      <name value="ECG Classification Codes"/>
+      <description value="Codes for classification of ECG waveforms"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-ecgcodes"/>
+      </reference>
+      <name value="ECG Lead Codes"/>
+      <description value="Codes for ECG and related items"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-ecg-lead-codes"/>
+      </reference>
+      <name value="ECG Lead Codes"/>
+      <description value="Codes for ECG induction"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/ecg-lead-codes"/>
+      </reference>
+      <name value="ECG Lead Codes"/>
+      <description value="Codes for ECG induction"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-ecg-symptoms-status-codes"/>
+      </reference>
+      <name value="ECG Symptoms Status Codes"/>
+      <description value="Code indicating whether or not the user's symptoms are input during ECG waveform acquisition"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/ecg-symptoms-status-codes"/>
+      </reference>
+      <name value="ECG Symptoms Status Codes"/>
+      <description value="Code indicating whether or not the user's symptoms are input during ECG waveform acquisition"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Environmental"/>
+      </reference>
+      <name value="Environmental Observation"/>
+      <description value="A logical model representing environmental conditions relevant to patient health, such as air quality, temperature, noise, and UV exposure. These factors may be collected by consumer weather stations, smartphone sensors, or wearable devices."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/FinancialReceipt"/>
+      </reference>
+      <name value="Financial Receipt"/>
+      <description value="A logical model for over-the-counter (OTC) health-related purchase receipts. Captures expenses for items such as pharmacy purchases, medical supplies, copays, and wellness products that may not generate a formal insurance Claim resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/gad7"/>
+      </reference>
+      <name value="GAD-7 assesment"/>
+      <description value="GAD-7 Scored Assessment"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/gad7-risk-codes"/>
+      </reference>
+      <name value="GAD-7 Assesment Risk Codes"/>
+      <description value="Code for GAD-7 Assesment Risk"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/hearing-sensitivity-codes"/>
+      </reference>
+      <name value="Hearing Sensitivity Codes"/>
+      <description value="Code indicating the type of value of the hearing test result"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/jane-doe"/>
+      </reference>
+      <name value="Jane Doe"/>
+      <description value="A sample patient resource for Jane Doe."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/jane-doe-composition"/>
+      </reference>
+      <name value="Jane Doe Composition"/>
+      <description value="A minimal narrative composition for Jane Doe's patient data."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/PhrComposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/jane-doe-genomics-document"/>
+      </reference>
+      <name value="Jane Doe PDF Report"/>
+      <description value="A PDF genomics report for Jane Doe regarding celiac disease."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/PhrDocumentReference"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Media"/>
+      </extension>
+      <reference>
+        <reference value="Media/jane-doe-media"/>
+      </reference>
+      <name value="Jane Doe Smartphone Photo"/>
+      <description value="A JPEG photo taken from Jane Doe's smartphone."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/PhrMedia"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/jane-doe-media-provenance"/>
+      </reference>
+      <name value="Jane Doe's Photo Provenance"/>
+      <description value="Self-attested provenance record for Jane Doe's smartphone photo."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-activity-codes"/>
+      </reference>
+      <name value="Observation Activity Codes"/>
+      <description value="Codes representing activity-related measurement items"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-alchol-consumption-codes"/>
+      </reference>
+      <name value="Observation AlcholConsumption Codes"/>
+      <description value="Codes representing items measured for alcohol consumption"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-body-measurements-codes"/>
+      </reference>
+      <name value="Observation BodyMeasurements Codes"/>
+      <description value="Codes representing measurement items related to physical measurements"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-diving-codes"/>
+      </reference>
+      <name value="Observation Diving Codes"/>
+      <description value="Codes for diving-related measurement items"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-gad7-risk-codes"/>
+      </reference>
+      <name value="Observation GAD7 Risk Codes"/>
+      <description value="Codes representing GAD-7 Assesment Risk measurement items"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-hearing-codes"/>
+      </reference>
+      <name value="Observation Hearing Codes"/>
+      <description value="Code for a measurement item related to hearing"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-lab-results-codes"/>
+      </reference>
+      <name value="Observation LabResults Codes"/>
+      <description value="Codes representing measurement items associated with the inspection"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-mind-codes"/>
+      </reference>
+      <name value="Observation Mind Codes"/>
+      <description value="Codes representing mind measurement items"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-mindfulness-codes"/>
+      </reference>
+      <name value="Observation Mindfulness Codes"/>
+      <description value="Codes representing mindfulness-related measures"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-mobility-codes"/>
+      </reference>
+      <name value="Observation Mobility Codes"/>
+      <description value="Codes representing mobility-related measurement items"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-nutrition-codes"/>
+      </reference>
+      <name value="Observation Nutrition Codes"/>
+      <description value="Codes representing nutrition-related measures"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/observation-pghd-codes"/>
+      </reference>
+      <name value="Observation PGHD Codes"/>
+      <description value="Code defining the type of PGHD data"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-phq9-risk-codes"/>
+      </reference>
+      <name value="Observation PHQ9Risk Codes"/>
+      <description value="Codes representing PHQ-9 Assesment Risk measurement items"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-reproductive-health-codes"/>
+      </reference>
+      <name value="Observation ReproductiveHealth Codes"/>
+      <description value="Codes representing reproductive-health-related measures"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-scored-assessment-codes"/>
+      </reference>
+      <name value="Observation Scored Assessment Codes"/>
+      <description value="Code for scored assessment"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-selfcare-codes"/>
+      </reference>
+      <name value="Observation SelfCare Codes"/>
+      <description value="Codes representing selfcare-related measurement items"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-sleep-codes"/>
+      </reference>
+      <name value="Observation Sleep Codes"/>
+      <description value="Codes representing sleep-related measurement items"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-state-of-mind-association-codes"/>
+      </reference>
+      <name value="Observation State of Mind Association Codes"/>
+      <description value="Codes for state of mind association"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-scored-assessment-score-codes"/>
+      </reference>
+      <name value="Observation State of Mind Codes"/>
+      <description value="Codes for state of mind"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-state-of-mind-codes"/>
+      </reference>
+      <name value="Observation State of Mind Codes"/>
+      <description value="Codes for state of mind"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-state-of-mind-kind-codes"/>
+      </reference>
+      <name value="Observation State of Mind Kind Codes"/>
+      <description value="Codes for state of mind kind"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-state-of-mind-label-codes"/>
+      </reference>
+      <name value="Observation State of Mind Label Codes"/>
+      <description value="Codes for state of mind label"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-state-of-mind-valence-codes"/>
+      </reference>
+      <name value="Observation State of Mind Valence Codes"/>
+      <description value="Codes for state of mind valence"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-symptom-codes"/>
+      </reference>
+      <name value="Observation Symptom Codes"/>
+      <description value="Codes representing symptom-related measurement items"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-symptom-snomedct-codes"/>
+      </reference>
+      <name value="Observation Symptom SNOMED CT Codes"/>
+      <description value="Codes representing symptom-related measurement items with SNOMED CT"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-uvexposure-codes"/>
+      </reference>
+      <name value="Observation UVExposure Codes"/>
+      <description value="Codes representing UV Exposure-related measurement items"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-vital-signs-codes"/>
+      </reference>
+      <name value="Observation Vitalsigns Codes"/>
+      <description value="Codes representing vitalsigns-related measurement items"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-workout-codes"/>
+      </reference>
+      <name value="Observation Workout Codes"/>
+      <description value="Codes representing workout-related measurement items"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-sleep-episode-2"/>
+      </reference>
+      <name value="ObservationSleepEpisodeExample2"/>
+      <description value="SleepEpisode Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-sleep-episode"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pcd-sleep-observation"/>
+      </reference>
+      <name value="Patient contributed data: sleep observation"/>
+      <description value="patient sleep logs recorded by device or app."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/pcd-sleep-observation-code"/>
+      </reference>
+      <name value="Patient contributed data: sleep observation code"/>
+      <description value="This value set includes codes to track patient sleep recorded by device or app"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/pcd-sleep-observation-value"/>
+      </reference>
+      <name value="Patient contributed data: sleep stage value"/>
+      <description value="This value set includes codes to track patient sleep values recorded by device or app"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/pdr-message"/>
+      </reference>
+      <name value="PatientDataReceipt Message"/>
+      <description value="An atomic update to a patient record; sent via a commit/push command and POST or PUT operation."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/PCDSleepObservation-duration-example"/>
+      </reference>
+      <name value="PCDSleepObservation-duration-example"/>
+      <description value="Example - pcd-sleep-observation duration"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/PCDSleepObservation-stage-example"/>
+      </reference>
+      <name value="PCDSleepObservation-stage-example"/>
+      <description value="Example - pcd-sleep-observation stage"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-activity"/>
+      </reference>
+      <name value="PGHD Activity Profile"/>
+      <description value="This profile defines how to represent Activity."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-alchol-consumption"/>
+      </reference>
+      <name value="PGHD AlcholConsumption Profile"/>
+      <description value="This profile defines how to represent AlcholConsumption."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-alchol-use"/>
+      </reference>
+      <name value="PGHD AlcholUse Profile"/>
+      <description value="This profile defines how to represent Alchol use."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-audiogram"/>
+      </reference>
+      <name value="PGHD Audiogram Profile"/>
+      <description value="This profile defines how to represent Audiogram."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-blood-glucose"/>
+      </reference>
+      <name value="PGHD BloodGlucose Profile"/>
+      <description value="This profile defines how to represent blood glucose."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-bloodpressure"/>
+      </reference>
+      <name value="PGHD BloodPressure Profile"/>
+      <description value="This profile defines how to represent blood pressure measurements."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-bmi"/>
+      </reference>
+      <name value="PGHD BMI Profile"/>
+      <description value="This profile defines how to represent BMI measurements."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-bodymeasurement"/>
+      </reference>
+      <name value="PGHD Body Measurement Profile"/>
+      <description value="This profile defines how to represent body measurements."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-bodyheight"/>
+      </reference>
+      <name value="PGHD BodyHeight Profile"/>
+      <description value="This profile defines how to represent body height measurements."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-bodytemperature"/>
+      </reference>
+      <name value="PGHD BodyTemperature Profile"/>
+      <description value="This profile defines how to represent body temperature measurements."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-bodyweight"/>
+      </reference>
+      <name value="PGHD BodyWeight Profile"/>
+      <description value="This profile defines how to represent body weight measurements."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-cardiac-function"/>
+      </reference>
+      <name value="PGHD Cardiac Function Profile"/>
+      <description value="This profile defines how to represent Cardiac Function."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-device"/>
+      </reference>
+      <name value="PGHD Device Profile"/>
+      <description value="This profile defines the device used for the measurement."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-diving"/>
+      </reference>
+      <name value="PGHD Diving Profile"/>
+      <description value="This profile defines how to represent Diving."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-electrocardiogram"/>
+      </reference>
+      <name value="PGHD Electrocardiogram Profile"/>
+      <description value="This profile defines how to represent Electrocardiogram."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-food"/>
+      </reference>
+      <name value="PGHD Food Profile"/>
+      <description value="This profile defines how to represent Food."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-hearing"/>
+      </reference>
+      <name value="PGHD Hearing Profile"/>
+      <description value="This profile defines how to represent Hearing."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-hearing-sensitivity"/>
+      </reference>
+      <name value="PGHD HearingSensitivity Profile"/>
+      <description value="This profile defines how to represent HearingSensitivity."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-heartbeat"/>
+      </reference>
+      <name value="PGHD Heartbeat Profile"/>
+      <description value="This profile defines how to represent Heartbeat."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-heartrate"/>
+      </reference>
+      <name value="PGHD HeartRate Profile"/>
+      <description value="This profile defines how to represent heart rate measurements."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-medication-adherence"/>
+      </reference>
+      <name value="PGHD Medication Adherence Profile"/>
+      <description value="This profile defines how to represent medication adherence."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-medicationadministration-insulin"/>
+      </reference>
+      <name value="PGHD MedicationAdministration Insulin Profile"/>
+      <description value="This profile defines the administered insulin doses of a patient."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-medicationdispense"/>
+      </reference>
+      <name value="PGHD MedicationDispense Profile"/>
+      <description value="This profile defines the dispensing on the part of a pharmacy."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-mindfulness"/>
+      </reference>
+      <name value="PGHD Mindfulness Profile"/>
+      <description value="This profile defines how to represent Mindfulness."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-mobility"/>
+      </reference>
+      <name value="PGHD Mobility Profile"/>
+      <description value="This profile defines how to represent Mobility."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-nutrition"/>
+      </reference>
+      <name value="PGHD Nutrition Profile"/>
+      <description value="This profile defines how to represent Nutrition."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-oxygenSaturation"/>
+      </reference>
+      <name value="PGHD OxygenSaturation Profile"/>
+      <description value="This profile defines how to represent oxygen saturation measurements."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-patient"/>
+      </reference>
+      <name value="PGHD Patient Profile"/>
+      <description value="This profile defines patient information."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-pregnancy-status"/>
+      </reference>
+      <name value="PGHD Pregnancy Status Profile"/>
+      <description value="This profile defines how to represent Pregnancy status."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-questionnaire"/>
+      </reference>
+      <name value="PGHD Questionnaire Profile"/>
+      <description value="This profile defines the questionnaire."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-questionnaire-response"/>
+      </reference>
+      <name value="PGHD QuestionnaireResponse Profile"/>
+      <description value="This profile defines the QuestionnaireResponse."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-reproductive-health"/>
+      </reference>
+      <name value="PGHD ReproductiveHealth Profile"/>
+      <description value="This profile defines how to represent ReproductiveHealth."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-respiratoryrate"/>
+      </reference>
+      <name value="PGHD RespiratoryRate Profile"/>
+      <description value="This profile defines how to represent respiratory rate measurements."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-observation-scored-assessment"/>
+      </reference>
+      <name value="PGHD Scored Assessment Profile"/>
+      <description value="This profile defines the implementation of the Scored Assessment."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-selfcare"/>
+      </reference>
+      <name value="PGHD Self Care Profile"/>
+      <description value="This profile defines how to represent SelfCare."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-careplan-selfcare"/>
+      </reference>
+      <name value="PGHD SelfCare Plan Profile"/>
+      <description value="This profile defines the SelfCare Plan."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-sleep-episode"/>
+      </reference>
+      <name value="PGHD Sleep Episode Profile"/>
+      <description value="This profile defines how to represent Sleep episode."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-sleep"/>
+      </reference>
+      <name value="PGHD Sleep Profile"/>
+      <description value="This profile defines how to represent Sleep."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-snore-event"/>
+      </reference>
+      <name value="PGHD SnoreEvent Profile"/>
+      <description value="This profile defines how to represent SnoreEvent."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-snore-index"/>
+      </reference>
+      <name value="PGHD SnoreIndex Profile"/>
+      <description value="This profile defines how to represent SnoreIndex."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-observation-state-of-mind"/>
+      </reference>
+      <name value="PGHD State of Mind Profile"/>
+      <description value="This profile defines the implementation of the State of Mind."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-symptom"/>
+      </reference>
+      <name value="PGHD Symptom Profile"/>
+      <description value="This profile defines how to represent Symptom."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-testresult"/>
+      </reference>
+      <name value="PGHD Test Result Profile"/>
+      <description value="This profile defines how to represent TestResult."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-uvexposure"/>
+      </reference>
+      <name value="PGHD UVExposure Profile"/>
+      <description value="This profile defines how to represent UVExposure."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-vitalsigns"/>
+      </reference>
+      <name value="PGHD Vital Signs Profile"/>
+      <description value="This profile defines how to represent vital signs measurements."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-voltage-measurement"/>
+      </reference>
+      <name value="PGHD VoltageMeasurement Profile"/>
+      <description value="This profile defines how to represent VoltageMeasurement."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pghd-workout"/>
+      </reference>
+      <name value="PGHD Workout Profile"/>
+      <description value="This profile defines how to represent Workout."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-activity-activeEnergyBurned"/>
+      </reference>
+      <name value="pghd-activity-activeEnergyBurned"/>
+      <description value="Activity activeEnergyBurned Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-activity-activeEnergyBurned-underwater-diving"/>
+      </reference>
+      <name value="pghd-activity-activeEnergyBurned-underwaterDiving"/>
+      <description value="Activity activeEnergyBurned Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-activity-activeEnergyBurned-walking"/>
+      </reference>
+      <name value="pghd-activity-activeEnergyBurned-walking"/>
+      <description value="Activity activeEnergyBurned Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-activity-appleExerciseTime"/>
+      </reference>
+      <name value="pghd-activity-appleExerciseTime"/>
+      <description value="Activity appleExerciseTime Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-activity-appleMoveTime"/>
+      </reference>
+      <name value="pghd-activity-appleMoveTime"/>
+      <description value="Activity appleMoveTime Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-activity-appleStandHour"/>
+      </reference>
+      <name value="pghd-activity-appleStandHour"/>
+      <description value="Activity appleStandHour Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-activity-basalEnergyBurned"/>
+      </reference>
+      <name value="pghd-activity-basalEnergyBurned"/>
+      <description value="Activity basalEnergyBurned Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-activity-cyclingCadence"/>
+      </reference>
+      <name value="pghd-activity-cyclingCadence"/>
+      <description value="Activity cyclingCadence Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-activity-distanceWalkingRunning-walking"/>
+      </reference>
+      <name value="pghd-activity-distanceWalkingRunning-walking"/>
+      <description value="Activity distanceWalkingRunning Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-alchol-consumption-blood-alcohol-content"/>
+      </reference>
+      <name value="pghd-alchol-consumption-bloodAlcoholContent"/>
+      <description value="AlcholConsumption bloodAlcoholContent Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-alchol-consumption"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-alchol-use-number-of-alcoholic-beverages"/>
+      </reference>
+      <name value="pghd-alchol-use-numberOfAlcoholicBeverages"/>
+      <description value="AlcholUse numberOfAlcoholicBeverages Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-alchol-use"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-audiogram"/>
+      </reference>
+      <name value="pghd-audiogram"/>
+      <description value="Audiogram Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-audiogram"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-blood-glucose-1"/>
+      </reference>
+      <name value="pghd-blood-glucose-1"/>
+      <description value="BloodGlucose Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-blood-glucose"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-blood-glucose-2"/>
+      </reference>
+      <name value="pghd-blood-glucose-2"/>
+      <description value="BloodGlucose Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-blood-glucose"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-blood-glucose-3"/>
+      </reference>
+      <name value="pghd-blood-glucose-3"/>
+      <description value="BloodGlucose Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-blood-glucose"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-bloodpressure"/>
+      </reference>
+      <name value="pghd-bloodpressure"/>
+      <description value="BloodPressure Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-bloodpressure"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-bmi"/>
+      </reference>
+      <name value="pghd-bmi"/>
+      <description value="BMI Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-bmi"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-bodyheight"/>
+      </reference>
+      <name value="pghd-bodyheight"/>
+      <description value="BodyHeight Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-bodyheight"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-bodymeasurement-body-fat-percentage"/>
+      </reference>
+      <name value="pghd-bodymeasurement"/>
+      <description value="BodyMeasurement bodyFatPercentage Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-bodymeasurement"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-bodytemperature"/>
+      </reference>
+      <name value="pghd-bodytemperature"/>
+      <description value="BodyTemperature Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-bodytemperature"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-bodyweight"/>
+      </reference>
+      <name value="pghd-bodyweight"/>
+      <description value="Body Weight Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-bodyweight"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-cardiac-function-lowHeart-rate-event"/>
+      </reference>
+      <name value="pghd-cardiac-function-lowHeartRateEvent"/>
+      <description value="CardiacFunction lowHeartRateEvent Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-cardiac-function"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-diving-underwater-depthg"/>
+      </reference>
+      <name value="pghd-diving-underwaterDepth"/>
+      <description value="Diving underwaterDepth Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-diving"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-diving-water-temperature"/>
+      </reference>
+      <name value="pghd-diving-waterTemperature"/>
+      <description value="Diving waterTemperature Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-diving"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-food"/>
+      </reference>
+      <name value="pghd-food"/>
+      <description value="Food Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-food"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-hearing-environmental-audio-exposure"/>
+      </reference>
+      <name value="pghd-hearing-environmentalAudioExposure"/>
+      <description value="Hearing environmentalAudioExposure Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-hearingSensitivity-1"/>
+      </reference>
+      <name value="pghd-hearingSensitivity-1"/>
+      <description value="HearingSensitivity Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing-sensitivity"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-hearingSensitivity-2"/>
+      </reference>
+      <name value="pghd-hearingSensitivity-2"/>
+      <description value="HearingSensitivity Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing-sensitivity"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-hearingSensitivity-3"/>
+      </reference>
+      <name value="pghd-hearingSensitivity-3"/>
+      <description value="HearingSensitivity Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing-sensitivity"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-hearingSensitivity-4"/>
+      </reference>
+      <name value="pghd-hearingSensitivity-4"/>
+      <description value="HearingSensitivity Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing-sensitivity"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-heart-electrocardiogram"/>
+      </reference>
+      <name value="pghd-heart-electrocardiogram"/>
+      <description value="Heart electrocardiogram Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-electrocardiogram"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-heartbeat"/>
+      </reference>
+      <name value="pghd-heartbeat"/>
+      <description value="Heartbeat Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-heartbeat"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-heartrate"/>
+      </reference>
+      <name value="pghd-heartrate"/>
+      <description value="HeartRate Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-heartrate"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-medication-adherence"/>
+      </reference>
+      <name value="pghd-medication-adherence"/>
+      <description value="MedicationAdherence Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-medication-adherence"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/pghd-medicationadministration-insulin-1"/>
+      </reference>
+      <name value="pghd-medicationadministration-insulin"/>
+      <description value="MedicationAdministration Insulin Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-medicationadministration-insulin"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-mindfulness-mindful-session"/>
+      </reference>
+      <name value="pghd-mindfulness-mindfulSession"/>
+      <description value="Mindfulness Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-mindfulness"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-mobility-stair-descent-speed"/>
+      </reference>
+      <name value="pghd-mobility-stairDescentSpeed"/>
+      <description value="Mobility stairDescentSpeed Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-mobility"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-nutrition-dietary-carbohydrates"/>
+      </reference>
+      <name value="pghd-nutrition-dietaryCarbohydrates"/>
+      <description value="Nutrition dietaryCarbohydrates Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-nutrition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-nutrition-dietary-energy-consumed"/>
+      </reference>
+      <name value="pghd-nutrition-dietaryEnergyConsumed"/>
+      <description value="Nutrition dietaryEnergyConsumed Example"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-nutrition-dietary-fiber"/>
+      </reference>
+      <name value="pghd-nutrition-dietaryFiber"/>
+      <description value="Nutrition dietaryFiber Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-nutrition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-nutrition-dietary-protein"/>
+      </reference>
+      <name value="pghd-nutrition-dietaryProtein"/>
+      <description value="Nutrition dietaryProtein Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-nutrition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-oxygenSaturation"/>
+      </reference>
+      <name value="pghd-oxygenSaturation"/>
+      <description value="OxygenSaturation Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-oxygenSaturation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-pregnancy-status"/>
+      </reference>
+      <name value="pghd-pregnancy-status"/>
+      <description value="PregnancyStatus Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-pregnancy-status"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-reproductive-health-intermenstrual-bleeding"/>
+      </reference>
+      <name value="pghd-reproductive-health-intermenstrualBleeding"/>
+      <description value="ReproductiveHealth intermenstrualBleeding Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-reproductive-health"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-respiratoryrate"/>
+      </reference>
+      <name value="pghd-respiratoryrate"/>
+      <description value="RespiratoryRate Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-respiratoryrate"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-selfcare-handwashingEvent"/>
+      </reference>
+      <name value="pghd-selfcare-handwashingEvent"/>
+      <description value="SelfCare handwashingEvent Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-selfcare"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-sleep-asleep-core"/>
+      </reference>
+      <name value="pghd-sleep-asleepCore"/>
+      <description value="Sleep asleepCore Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-sleep"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-sleep-episode-1"/>
+      </reference>
+      <name value="pghd-sleep-episode-1"/>
+      <description value="SleepEpisode Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-sleep-episode"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-sleep-episode-core-sleep-1"/>
+      </reference>
+      <name value="pghd-sleep-episode-core-sleep-1"/>
+      <description value="SleepEpisode Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-sleep-episode"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-sleep-episode-core-sleep-2"/>
+      </reference>
+      <name value="pghd-sleep-episode-core-sleep-2"/>
+      <description value="SleepEpisode Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-sleep-episode"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-sleep-episode-deep-sleep-2"/>
+      </reference>
+      <name value="pghd-sleep-episode-deep-sleep-"/>
+      <description value="SleepEpisode Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-sleep-episode"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-sleep-episode-deep-sleep-1"/>
+      </reference>
+      <name value="pghd-sleep-episode-deep-sleep-1"/>
+      <description value="SleepEpisode Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-sleep-episode"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-sleep-episode-latency-to-sleep-onset-1"/>
+      </reference>
+      <name value="pghd-sleep-episode-latency-to-sleep-onset-1"/>
+      <description value="SleepEpisode Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-sleep-episode"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-sleep-episode-latency-to-sleep-onset-2"/>
+      </reference>
+      <name value="pghd-sleep-episode-latency-to-sleep-onset-2"/>
+      <description value="SleepEpisode Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-sleep-episode"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-snore-event-1"/>
+      </reference>
+      <name value="pghd-snore-event-1"/>
+      <description value="SnoreIndex Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-snore-event"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-snore-event-2"/>
+      </reference>
+      <name value="pghd-snore-event-2"/>
+      <description value="SnoreIndex Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-snore-event"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-snore-event-3"/>
+      </reference>
+      <name value="pghd-snore-event-3"/>
+      <description value="SnoreIndex Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-snore-event"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-snore-index-1"/>
+      </reference>
+      <name value="pghd-snore-index-"/>
+      <description value="SnoreIndex Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-snore-index"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-snore-index-2"/>
+      </reference>
+      <name value="pghd-snore-index-2"/>
+      <description value="SnoreIndex Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-snore-index"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-symptom-fever"/>
+      </reference>
+      <name value="pghd-symptom-fever"/>
+      <description value="Symptom fever Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-symptom"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-testresult-forced-vital-capacity"/>
+      </reference>
+      <name value="pghd-testresult-forcedVitalCapacity"/>
+      <description value="TestResult forcedVitalCapacity Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-testresult"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-uvexposure"/>
+      </reference>
+      <name value="pghd-uvexposure"/>
+      <description value="UVExposure Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-uvexposure"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-vitalsigns-apple-sleeping-wrist-temperature"/>
+      </reference>
+      <name value="pghd-vitalsigns-appleSleepingWristTemperature"/>
+      <description value="VitalSigns appleSleepingWristTemperature Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-vitalsigns"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-voltage-measurement"/>
+      </reference>
+      <name value="pghd-voltage-measurement"/>
+      <description value="VoltageMeasurement Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-voltage-measurement"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-workout-underwater-diving"/>
+      </reference>
+      <name value="pghd-workout-underwaterDiving"/>
+      <description value="Workout underwaterDiving Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-workout"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pghd-workout-walking"/>
+      </reference>
+      <name value="pghd-workout-walking"/>
+      <description value="Workout walking Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-workout"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/1"/>
+      </reference>
+      <name value="PGHDPatientExample"/>
+      <description value="Patient Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/phq9"/>
+      </reference>
+      <name value="PHQ-9 assesment"/>
+      <description value="PHQ-9 Scored Assessment"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/phq9-risk-codes"/>
+      </reference>
+      <name value="PHQ-9 Assesment Risk Codes"/>
+      <description value="Code for PHQ-9 Assesment Risk"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PhrBundle"/>
+      </reference>
+      <name value="PhrBundle"/>
+      <description value="Standard PHR profile of the Bundle resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/PhrBundle-example"/>
+      </reference>
+      <name value="PhrBundle-example"/>
+      <description value="Jane Doe - PhrBundle"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PhrComposition"/>
+      </reference>
+      <name value="PhrComposition"/>
+      <description value="Standard PHR profile of the Composition resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PhrDocumentReference"/>
+      </reference>
+      <name value="PhrDocumentReference"/>
+      <description value="Standard PHR profile of the DocumentReference resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PhrMedia"/>
+      </reference>
+      <name value="PhrMedia"/>
+      <description value="Standard PHR profile of the Media resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PhrPatient"/>
+      </reference>
+      <name value="PhrPatient"/>
+      <description value="Standard PHR profile of the Patient resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PhrProvenance"/>
+      </reference>
+      <name value="PhrProvenance"/>
+      <description value="Standard PHR profile of the Provenance resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/gad7"/>
+      </reference>
+      <name value="QuestionnaireResponseScoredAssessmentGAD7Example"/>
+      <description value="GAD-7 Scored Assessment Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-questionnaire-response"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/phq9"/>
+      </reference>
+      <name value="QuestionnaireResponseScoredAssessmentPHQ9Example"/>
+      <description value="PHQ-9 Scored Assessment Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-questionnaire-response"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/scored-assessment-codes"/>
+      </reference>
+      <name value="Scored Assessment Codes"/>
+      <description value="Code for scored assessment"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ScoredAssessmentGAD7Example"/>
+      </reference>
+      <name value="ScoredAssessmentGAD7Example"/>
+      <description value="GAD-7 Scored Assessment Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-observation-scored-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ScoredAssessmentPHQ9Example"/>
+      </reference>
+      <name value="ScoredAssessmentPHQ9Example"/>
+      <description value="PHQ-9 Scored Assessment Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-observation-scored-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/patient-identifier"/>
+      </reference>
+      <name value="Search by identifier in patient with multipleOr"/>
+      <description value="This SearchParameter enables query of patient by `identifier` with `mutlipleOr` enabled."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/search-from-date"/>
+      </reference>
+      <name value="Search From Date"/>
+      <description value="Return records from this date"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/sleep-analysis"/>
+      </reference>
+      <name value="Sleep Analysis"/>
+      <description value="Codes for stages of sleep"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/sleep-analysis-codes"/>
+      </reference>
+      <name value="Sleep Analysis Codes"/>
+      <description value="Codes for stages of sleep"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/sleep-episode-codes"/>
+      </reference>
+      <name value="Sleep Episode Codes"/>
+      <description value="Codes for sleep episodes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/snore-event-item-codes"/>
+      </reference>
+      <name value="Snore Event Item Codes"/>
+      <description value="Code representing the measurement used in the snoring event"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/SocialMedia"/>
+      </reference>
+      <name value="Social Media Post"/>
+      <description value="A logical model representing a social media post from platforms such as Facebook, Instagram, Twitter/X, Tumblr, etc. Captures the post content, media attachments, and metadata. Relevant for patient-reported outcomes, behavioral health context, and longitudinal health narratives."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/state-of-mind-association-codes"/>
+      </reference>
+      <name value="State of Mind Association Codes"/>
+      <description value="Codes for state of mind association"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/state-of-mind-codes"/>
+      </reference>
+      <name value="State of Mind Codes"/>
+      <description value="Code for state of mind"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/state-of-mind-kind-codes"/>
+      </reference>
+      <name value="State of Mind Kind Codes"/>
+      <description value="Codes for state of mind kind"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/state-of-mind-label-codes"/>
+      </reference>
+      <name value="State of Mind Label Codes"/>
+      <description value="Codes for state of mind label"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/state-of-mind-valence-codes"/>
+      </reference>
+      <name value="State of Mind Valence Codes"/>
+      <description value="Codes for state of mind valence"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/StateOfMind2Example"/>
+      </reference>
+      <name value="StateOfMind2Example"/>
+      <description value="State of Mind Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-observation-state-of-mind"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/StateOfMindExample"/>
+      </reference>
+      <name value="StateOfMindExample"/>
+      <description value="State of Mind Example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-observation-state-of-mind"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/appetite-changes"/>
+      </reference>
+      <name value="Symptom Appetite Changes"/>
+      <description value="Codes expressing changes in appetite"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/symptom-presence"/>
+      </reference>
+      <name value="Symptom Presence"/>
+      <description value="Code for presence or absence of symptoms"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/presence-codes"/>
+      </reference>
+      <name value="Symptom Presence Codes"/>
+      <description value="Code for presence or absence of symptoms"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/symptom-severity"/>
+      </reference>
+      <name value="Symptom Severity"/>
+      <description value="Code for degree of symptoms"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/symptom-severity-codes"/>
+      </reference>
+      <name value="Symptom Severity Codes"/>
+      <description value="Code for degree of symptoms"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="informative"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Getting Started"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="recordkeeping.html"/>
+        </extension>
+        <nameUrl value="recordkeeping.html"/>
+        <title value="Record Keeping"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="conformance.html"/>
+        </extension>
+        <nameUrl value="conformance.html"/>
+        <title value="Conformance Recommendations"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="datamodel.html"/>
+        </extension>
+        <nameUrl value="datamodel.html"/>
+        <title value="Data Model"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="functionality.html"/>
+        </extension>
+        <nameUrl value="functionality.html"/>
+        <title value="Functional Model"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="recordlifecycle.html"/>
+        </extension>
+        <nameUrl value="recordlifecycle.html"/>
+        <title value="Record Lifecycle"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="annotations.html"/>
+        </extension>
+        <nameUrl value="annotations.html"/>
+        <title value="Annotations"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="security.html"/>
+        </extension>
+        <nameUrl value="security.html"/>
+        <title value="Security"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="history.html"/>
+        </extension>
+        <nameUrl value="history.html"/>
+        <title value="History"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="physiology.html"/>
+        </extension>
+        <nameUrl value="physiology.html"/>
+        <title value="Physiology Domains"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="personas.html"/>
+        </extension>
+        <nameUrl value="personas.html"/>
+        <title value="Patient Personas"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="persona-william.html"/>
+        </extension>
+        <nameUrl value="persona-william.html"/>
+        <title value="William Sim"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="persona-thompson-family.html"/>
+        </extension>
+        <nameUrl value="persona-thompson-family.html"/>
+        <title value="Thompson Family"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="persona-journey-a.html"/>
+        </extension>
+        <nameUrl value="persona-journey-a.html"/>
+        <title value="Anne"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="persona-journey-b.html"/>
+        </extension>
+        <nameUrl value="persona-journey-b.html"/>
+        <title value="Earl"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="persona-journey-c.html"/>
+        </extension>
+        <nameUrl value="persona-journey-c.html"/>
+        <title value="Markus"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="persona-journey-d.html"/>
+        </extension>
+        <nameUrl value="persona-journey-d.html"/>
+        <title value="Wilma"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="persona-journey-e.html"/>
+        </extension>
+        <nameUrl value="persona-journey-e.html"/>
+        <title value="Marcella"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="personas-index.html"/>
+        </extension>
+        <nameUrl value="personas-index.html"/>
+        <title value="Personas Index"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="operating-systems.html"/>
+        </extension>
+        <nameUrl value="operating-systems.html"/>
+        <title value="Operating Systems"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="algorithms.html"/>
+        </extension>
+        <nameUrl value="algorithms.html"/>
+        <title value="Algorithms"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="api.html"/>
+        </extension>
+        <nameUrl value="api.html"/>
+        <title value="API Endpoints"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="longitudinal.html"/>
+        </extension>
+        <nameUrl value="longitudinal.html"/>
+        <title value="Longitudinal Records"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="pghd.html"/>
+        </extension>
+        <nameUrl value="pghd.html"/>
+        <title value="Patient-generated health data(PGHD)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="logical-models.html"/>
+        </extension>
+        <nameUrl value="logical-models.html"/>
+        <title value="Logical Models"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/assets"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

@@ -1,0 +1,2858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary - Personal Health Records v1.0.0-ballot2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"26"}
+    h3,h4,h5,h6{--heading-prefix:"26.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Personal Health Records</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot2 - STU 1 ballot
+
+
+
+  <img alt="International flag" src="../assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Model
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conformance.html">Conformance</a>
+      </li>
+      <li>
+        <a href="datamodel.html">Data Model</a>
+      </li>
+      <li>
+        <a href="functionality.html">Functional Model</a>
+      </li>
+      <li>
+        <a href="recordlifecycle.html">Record Lifecycle</a>
+      </li>
+      <li>
+        <a href="security.html">Security</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="history.html">History</a>
+      </li>
+      <li>
+        <a href="recordkeeping.html">Record Keeping</a>
+      </li>
+      <li>
+        <a href="longitudinal.html">Longitudinal Records</a>
+      </li>
+      <li>
+        <a href="api.html">API Endpoints</a>
+      </li>
+      <li>
+        <a href="annotations.html">Annotations</a>
+      </li>
+      <li>
+        <a href="algorithms.html">Algorithms</a>
+      </li>
+      <li>
+        <a href="physiology.html">Physiology Domains</a>
+      </li>
+      <li>
+        <a href="operating-systems.html">Operating Systems</a>
+      </li>
+      <li>
+        <a href="pghd.html">Patient-generated health data(PGHD)</a>
+      </li>
+      <li>
+        <a href="logical-models.html">Logical Models</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Personas
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="personas-index.html">Index</a>
+      </li>
+      <li>
+        <a href="persona-thompson-family.html">Thompson Familiy</a>
+      </li>
+      <li>
+        <a href="persona-journey-b.html">Cancer - Adult</a>
+      </li>
+      <li>
+        <a href="persona-william.html">Cancer - Pediatric</a>
+      </li>
+      <li>
+        <a href="persona-journey-e.html">Chronic Illness (Lupus)</a>
+      </li>
+      <li>
+        <a href="persona-journey-d.html">Long COVID</a>
+      </li>
+      <li>
+        <a href="persona-journey-a.html">Patient Relocation</a>
+      </li>
+      <li>
+        <a href="persona-journey-c.html">Sports Outpatient / Cardiac</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Personal Health Records - Local Development build (v1.0.0-ballot2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.org/fhir/uv/phr/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc"
+     data-fhir="generated">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Behavior: Search Parameters</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Logical Models</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Questionnaires</a>
+      </li>
+      <li>
+         <a href="#4">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#5">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#6">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#7">Terminology: Concept Maps</a>
+      </li>
+      <li>
+         <a href="#8">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     data-fhir="generated">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Behavior: Search Parameters </h3>
+    <p>These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-search-from-date.html"
+                  title="SearchParameter/search-from-date">
+                  <span title="SearchParameter/search-from-date">Search From Date
+</span>
+               </a>
+            </td>
+            <td>
+<p>Return records from this date</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-patient-identifier.html"
+                  title="SearchParameter/patient-identifier">
+                  <span title="SearchParameter/patient-identifier">Search by identifier in patient with multipleOr
+</span>
+               </a>
+            </td>
+            <td>
+<p>This SearchParameter enables query of patient by <code class="language-plaintext highlighter-rouge">identifier</code> with <code class="language-plaintext highlighter-rouge">mutlipleOr</code> enabled.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Logical Models </h3>
+    <p>These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Environmental.html"
+                  title="StructureDefinition/Environmental">
+                  <span title="StructureDefinition/Environmental">Environmental Observation
+</span>
+               </a>
+            </td>
+            <td>
+<p>A logical model representing environmental conditions relevant to patient health, such as air quality, temperature, noise, and UV exposure. These factors may be collected by consumer weather stations, smartphone sensors, or wearable devices.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FinancialReceipt.html"
+                  title="StructureDefinition/FinancialReceipt">
+                  <span title="StructureDefinition/FinancialReceipt">Financial Receipt
+</span>
+               </a>
+            </td>
+            <td>
+<p>A logical model for over-the-counter (OTC) health-related purchase receipts. Captures expenses for items such as pharmacy purchases, medical supplies, copays, and wellness products that may not generate a formal insurance Claim resource.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-SocialMedia.html"
+                  title="StructureDefinition/SocialMedia">
+                  <span title="StructureDefinition/SocialMedia">Social Media Post
+</span>
+               </a>
+            </td>
+            <td>
+<p>A logical model representing a social media post from platforms such as Facebook, Instagram, Twitter/X, Tumblr, etc. Captures the post content, media attachments, and metadata. Relevant for patient-reported outcomes, behavioral health context, and longitudinal health narratives.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Structures: Questionnaires </h3>
+    <p>These define forms used by systems conforming to this implementation guide to capture or expose data to end users.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-gad7.html" title="Questionnaire/gad7">
+                  <span title="Questionnaire/gad7">GAD-7 assesment
+</span>
+               </a>
+            </td>
+            <td>
+<p>GAD-7 Scored Assessment</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-phq9.html" title="Questionnaire/phq9">
+                  <span title="Questionnaire/phq9">PHQ-9 assesment
+</span>
+               </a>
+            </td>
+            <td>
+<p>PHQ-9 Scored Assessment</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-activity.html"
+                  title="StructureDefinition/pghd-activity">
+                  <span title="StructureDefinition/pghd-activity">PGHD Activity Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Activity.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-alchol-consumption.html"
+                  title="StructureDefinition/pghd-alchol-consumption">
+                  <span title="StructureDefinition/pghd-alchol-consumption">PGHD AlcholConsumption Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent AlcholConsumption.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-alchol-use.html"
+                  title="StructureDefinition/pghd-alchol-use">
+                  <span title="StructureDefinition/pghd-alchol-use">PGHD AlcholUse Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Alchol use.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-audiogram.html"
+                  title="StructureDefinition/pghd-audiogram">
+                  <span title="StructureDefinition/pghd-audiogram">PGHD Audiogram Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Audiogram.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-bmi.html"
+                  title="StructureDefinition/pghd-bmi">
+                  <span title="StructureDefinition/pghd-bmi">PGHD BMI Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent BMI measurements.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-blood-glucose.html"
+                  title="StructureDefinition/pghd-blood-glucose">
+                  <span title="StructureDefinition/pghd-blood-glucose">PGHD BloodGlucose Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent blood glucose.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-bloodpressure.html"
+                  title="StructureDefinition/pghd-bloodpressure">
+                  <span title="StructureDefinition/pghd-bloodpressure">PGHD BloodPressure Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent blood pressure measurements.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-bodymeasurement.html"
+                  title="StructureDefinition/pghd-bodymeasurement">
+                  <span title="StructureDefinition/pghd-bodymeasurement">PGHD Body Measurement Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent body measurements.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-bodyheight.html"
+                  title="StructureDefinition/pghd-bodyheight">
+                  <span title="StructureDefinition/pghd-bodyheight">PGHD BodyHeight Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent body height measurements.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-bodytemperature.html"
+                  title="StructureDefinition/pghd-bodytemperature">
+                  <span title="StructureDefinition/pghd-bodytemperature">PGHD BodyTemperature Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent body temperature measurements.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-bodyweight.html"
+                  title="StructureDefinition/pghd-bodyweight">
+                  <span title="StructureDefinition/pghd-bodyweight">PGHD BodyWeight Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent body weight measurements.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-cardiac-function.html"
+                  title="StructureDefinition/pghd-cardiac-function">
+                  <span title="StructureDefinition/pghd-cardiac-function">PGHD Cardiac Function Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Cardiac Function.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-device.html"
+                  title="StructureDefinition/pghd-device">
+                  <span title="StructureDefinition/pghd-device">PGHD Device Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines the device used for the measurement.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-diving.html"
+                  title="StructureDefinition/pghd-diving">
+                  <span title="StructureDefinition/pghd-diving">PGHD Diving Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Diving.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-electrocardiogram.html"
+                  title="StructureDefinition/pghd-electrocardiogram">
+                  <span title="StructureDefinition/pghd-electrocardiogram">PGHD Electrocardiogram Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Electrocardiogram.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-food.html"
+                  title="StructureDefinition/pghd-food">
+                  <span title="StructureDefinition/pghd-food">PGHD Food Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Food.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-hearing.html"
+                  title="StructureDefinition/pghd-hearing">
+                  <span title="StructureDefinition/pghd-hearing">PGHD Hearing Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Hearing.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-hearing-sensitivity.html"
+                  title="StructureDefinition/pghd-hearing-sensitivity">
+                  <span title="StructureDefinition/pghd-hearing-sensitivity">PGHD HearingSensitivity Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent HearingSensitivity.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-heartrate.html"
+                  title="StructureDefinition/pghd-heartrate">
+                  <span title="StructureDefinition/pghd-heartrate">PGHD HeartRate Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent heart rate measurements.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-heartbeat.html"
+                  title="StructureDefinition/pghd-heartbeat">
+                  <span title="StructureDefinition/pghd-heartbeat">PGHD Heartbeat Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Heartbeat.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-medication-adherence.html"
+                  title="StructureDefinition/pghd-medication-adherence">
+                  <span title="StructureDefinition/pghd-medication-adherence">PGHD Medication Adherence Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent medication adherence.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-medicationadministration-insulin.html"
+                  title="StructureDefinition/pghd-medicationadministration-insulin">
+                  <span title="StructureDefinition/pghd-medicationadministration-insulin">PGHD MedicationAdministration Insulin Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines the administered insulin doses of a patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-medicationdispense.html"
+                  title="StructureDefinition/pghd-medicationdispense">
+                  <span title="StructureDefinition/pghd-medicationdispense">PGHD MedicationDispense Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines the dispensing on the part of a pharmacy.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-mindfulness.html"
+                  title="StructureDefinition/pghd-mindfulness">
+                  <span title="StructureDefinition/pghd-mindfulness">PGHD Mindfulness Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Mindfulness.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-mobility.html"
+                  title="StructureDefinition/pghd-mobility">
+                  <span title="StructureDefinition/pghd-mobility">PGHD Mobility Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Mobility.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-nutrition.html"
+                  title="StructureDefinition/pghd-nutrition">
+                  <span title="StructureDefinition/pghd-nutrition">PGHD Nutrition Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Nutrition.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-oxygenSaturation.html"
+                  title="StructureDefinition/pghd-oxygenSaturation">
+                  <span title="StructureDefinition/pghd-oxygenSaturation">PGHD OxygenSaturation Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent oxygen saturation measurements.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-patient.html"
+                  title="StructureDefinition/pghd-patient">
+                  <span title="StructureDefinition/pghd-patient">PGHD Patient Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines patient information.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-pregnancy-status.html"
+                  title="StructureDefinition/pghd-pregnancy-status">
+                  <span title="StructureDefinition/pghd-pregnancy-status">PGHD Pregnancy Status Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Pregnancy status.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-questionnaire.html"
+                  title="StructureDefinition/pghd-questionnaire">
+                  <span title="StructureDefinition/pghd-questionnaire">PGHD Questionnaire Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines the questionnaire.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-questionnaire-response.html"
+                  title="StructureDefinition/pghd-questionnaire-response">
+                  <span title="StructureDefinition/pghd-questionnaire-response">PGHD QuestionnaireResponse Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines the QuestionnaireResponse.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-reproductive-health.html"
+                  title="StructureDefinition/pghd-reproductive-health">
+                  <span title="StructureDefinition/pghd-reproductive-health">PGHD ReproductiveHealth Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent ReproductiveHealth.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-respiratoryrate.html"
+                  title="StructureDefinition/pghd-respiratoryrate">
+                  <span title="StructureDefinition/pghd-respiratoryrate">PGHD RespiratoryRate Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent respiratory rate measurements.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-observation-scored-assessment.html"
+                  title="StructureDefinition/pghd-observation-scored-assessment">
+                  <span title="StructureDefinition/pghd-observation-scored-assessment">PGHD Scored Assessment Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines the implementation of the Scored Assessment.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-selfcare.html"
+                  title="StructureDefinition/pghd-selfcare">
+                  <span title="StructureDefinition/pghd-selfcare">PGHD Self Care Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent SelfCare.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-careplan-selfcare.html"
+                  title="StructureDefinition/pghd-careplan-selfcare">
+                  <span title="StructureDefinition/pghd-careplan-selfcare">PGHD SelfCare Plan Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines the SelfCare Plan.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-sleep-episode.html"
+                  title="StructureDefinition/pghd-sleep-episode">
+                  <span title="StructureDefinition/pghd-sleep-episode">PGHD Sleep Episode Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Sleep episode.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-sleep.html"
+                  title="StructureDefinition/pghd-sleep">
+                  <span title="StructureDefinition/pghd-sleep">PGHD Sleep Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Sleep.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-snore-event.html"
+                  title="StructureDefinition/pghd-snore-event">
+                  <span title="StructureDefinition/pghd-snore-event">PGHD SnoreEvent Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent SnoreEvent.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-snore-index.html"
+                  title="StructureDefinition/pghd-snore-index">
+                  <span title="StructureDefinition/pghd-snore-index">PGHD SnoreIndex Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent SnoreIndex.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-observation-state-of-mind.html"
+                  title="StructureDefinition/pghd-observation-state-of-mind">
+                  <span title="StructureDefinition/pghd-observation-state-of-mind">PGHD State of Mind Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines the implementation of the State of Mind.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-symptom.html"
+                  title="StructureDefinition/pghd-symptom">
+                  <span title="StructureDefinition/pghd-symptom">PGHD Symptom Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Symptom.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-testresult.html"
+                  title="StructureDefinition/pghd-testresult">
+                  <span title="StructureDefinition/pghd-testresult">PGHD Test Result Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent TestResult.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-uvexposure.html"
+                  title="StructureDefinition/pghd-uvexposure">
+                  <span title="StructureDefinition/pghd-uvexposure">PGHD UVExposure Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent UVExposure.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-vitalsigns.html"
+                  title="StructureDefinition/pghd-vitalsigns">
+                  <span title="StructureDefinition/pghd-vitalsigns">PGHD Vital Signs Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent vital signs measurements.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-voltage-measurement.html"
+                  title="StructureDefinition/pghd-voltage-measurement">
+                  <span title="StructureDefinition/pghd-voltage-measurement">PGHD VoltageMeasurement Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent VoltageMeasurement.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pghd-workout.html"
+                  title="StructureDefinition/pghd-workout">
+                  <span title="StructureDefinition/pghd-workout">PGHD Workout Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile defines how to represent Workout.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pcd-sleep-observation.html"
+                  title="StructureDefinition/pcd-sleep-observation">
+                  <span title="StructureDefinition/pcd-sleep-observation">Patient contributed data: sleep observation
+</span>
+               </a>
+            </td>
+            <td>
+<p>patient sleep logs recorded by device or app.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PhrBundle.html"
+                  title="StructureDefinition/PhrBundle">
+                  <span title="StructureDefinition/PhrBundle">PhrBundle
+</span>
+               </a>
+            </td>
+            <td>
+<p>Standard PHR profile of the Bundle resource.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PhrComposition.html"
+                  title="StructureDefinition/PhrComposition">
+                  <span title="StructureDefinition/PhrComposition">PhrComposition
+</span>
+               </a>
+            </td>
+            <td>
+<p>Standard PHR profile of the Composition resource.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PhrDocumentReference.html"
+                  title="StructureDefinition/PhrDocumentReference">
+                  <span title="StructureDefinition/PhrDocumentReference">PhrDocumentReference
+</span>
+               </a>
+            </td>
+            <td>
+<p>Standard PHR profile of the DocumentReference resource.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PhrMedia.html"
+                  title="StructureDefinition/PhrMedia">
+                  <span title="StructureDefinition/PhrMedia">PhrMedia
+</span>
+               </a>
+            </td>
+            <td>
+<p>Standard PHR profile of the Media resource.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PhrPatient.html"
+                  title="StructureDefinition/PhrPatient">
+                  <span title="StructureDefinition/PhrPatient">PhrPatient
+</span>
+               </a>
+            </td>
+            <td>
+<p>Standard PHR profile of the Patient resource.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PhrProvenance.html"
+                  title="StructureDefinition/PhrProvenance">
+                  <span title="StructureDefinition/PhrProvenance">PhrProvenance
+</span>
+               </a>
+            </td>
+            <td>
+<p>Standard PHR profile of the Provenance resource.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-body-temperature-measurement-location.html"
+                  title="ValueSet/body-temperature-measurement-location">
+                  <span title="ValueSet/body-temperature-measurement-location">Body Temperature Measurement Location Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code indicating the location where the body temperature was measured</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-ecg-classification-codes.html"
+                  title="ValueSet/observation-ecg-classification-codes">
+                  <span title="ValueSet/observation-ecg-classification-codes">ECG Classification Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for classification of ECG waveforms</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-ecg-lead-codes.html"
+                  title="ValueSet/observation-ecg-lead-codes">
+                  <span title="ValueSet/observation-ecg-lead-codes">ECG Lead Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for ECG induction</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-ecgcodes.html"
+                  title="ValueSet/observation-ecgcodes">
+                  <span title="ValueSet/observation-ecgcodes">ECG Lead Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for ECG and related items</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-ecg-symptoms-status-codes.html"
+                  title="ValueSet/observation-ecg-symptoms-status-codes">
+                  <span title="ValueSet/observation-ecg-symptoms-status-codes">ECG Symptoms Status Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code indicating whether or not the user's symptoms are input during ECG waveform acquisition</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-activity-codes.html"
+                  title="ValueSet/observation-activity-codes">
+                  <span title="ValueSet/observation-activity-codes">Observation Activity Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing activity-related measurement items</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-alchol-consumption-codes.html"
+                  title="ValueSet/observation-alchol-consumption-codes">
+                  <span title="ValueSet/observation-alchol-consumption-codes">Observation AlcholConsumption Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing items measured for alcohol consumption</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-body-measurements-codes.html"
+                  title="ValueSet/observation-body-measurements-codes">
+                  <span title="ValueSet/observation-body-measurements-codes">Observation BodyMeasurements Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing measurement items related to physical measurements</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-diving-codes.html"
+                  title="ValueSet/observation-diving-codes">
+                  <span title="ValueSet/observation-diving-codes">Observation Diving Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for diving-related measurement items</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-gad7-risk-codes.html"
+                  title="ValueSet/observation-gad7-risk-codes">
+                  <span title="ValueSet/observation-gad7-risk-codes">Observation GAD7 Risk Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing GAD-7 Assesment Risk measurement items</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-hearing-codes.html"
+                  title="ValueSet/observation-hearing-codes">
+                  <span title="ValueSet/observation-hearing-codes">Observation Hearing Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code for a measurement item related to hearing</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-lab-results-codes.html"
+                  title="ValueSet/observation-lab-results-codes">
+                  <span title="ValueSet/observation-lab-results-codes">Observation LabResults Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing measurement items associated with the inspection</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-mind-codes.html"
+                  title="ValueSet/observation-mind-codes">
+                  <span title="ValueSet/observation-mind-codes">Observation Mind Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing mind measurement items</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-mindfulness-codes.html"
+                  title="ValueSet/observation-mindfulness-codes">
+                  <span title="ValueSet/observation-mindfulness-codes">Observation Mindfulness Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing mindfulness-related measures</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-mobility-codes.html"
+                  title="ValueSet/observation-mobility-codes">
+                  <span title="ValueSet/observation-mobility-codes">Observation Mobility Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing mobility-related measurement items</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-nutrition-codes.html"
+                  title="ValueSet/observation-nutrition-codes">
+                  <span title="ValueSet/observation-nutrition-codes">Observation Nutrition Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing nutrition-related measures</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-phq9-risk-codes.html"
+                  title="ValueSet/observation-phq9-risk-codes">
+                  <span title="ValueSet/observation-phq9-risk-codes">Observation PHQ9Risk Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing PHQ-9 Assesment Risk measurement items</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-reproductive-health-codes.html"
+                  title="ValueSet/observation-reproductive-health-codes">
+                  <span title="ValueSet/observation-reproductive-health-codes">Observation ReproductiveHealth Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing reproductive-health-related measures</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-scored-assessment-codes.html"
+                  title="ValueSet/observation-scored-assessment-codes">
+                  <span title="ValueSet/observation-scored-assessment-codes">Observation Scored Assessment Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code for scored assessment</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-selfcare-codes.html"
+                  title="ValueSet/observation-selfcare-codes">
+                  <span title="ValueSet/observation-selfcare-codes">Observation SelfCare Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing selfcare-related measurement items</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-sleep-codes.html"
+                  title="ValueSet/observation-sleep-codes">
+                  <span title="ValueSet/observation-sleep-codes">Observation Sleep Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing sleep-related measurement items</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-state-of-mind-association-codes.html"
+                  title="ValueSet/observation-state-of-mind-association-codes">
+                  <span title="ValueSet/observation-state-of-mind-association-codes">Observation State of Mind Association Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for state of mind association</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-scored-assessment-score-codes.html"
+                  title="ValueSet/observation-scored-assessment-score-codes">
+                  <span title="ValueSet/observation-scored-assessment-score-codes">Observation State of Mind Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for state of mind</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-state-of-mind-codes.html"
+                  title="ValueSet/observation-state-of-mind-codes">
+                  <span title="ValueSet/observation-state-of-mind-codes">Observation State of Mind Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for state of mind</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-state-of-mind-kind-codes.html"
+                  title="ValueSet/observation-state-of-mind-kind-codes">
+                  <span title="ValueSet/observation-state-of-mind-kind-codes">Observation State of Mind Kind Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for state of mind kind</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-state-of-mind-label-codes.html"
+                  title="ValueSet/observation-state-of-mind-label-codes">
+                  <span title="ValueSet/observation-state-of-mind-label-codes">Observation State of Mind Label Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for state of mind label</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-state-of-mind-valence-codes.html"
+                  title="ValueSet/observation-state-of-mind-valence-codes">
+                  <span title="ValueSet/observation-state-of-mind-valence-codes">Observation State of Mind Valence Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for state of mind valence</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-symptom-codes.html"
+                  title="ValueSet/observation-symptom-codes">
+                  <span title="ValueSet/observation-symptom-codes">Observation Symptom Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing symptom-related measurement items</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-symptom-snomedct-codes.html"
+                  title="ValueSet/observation-symptom-snomedct-codes">
+                  <span title="ValueSet/observation-symptom-snomedct-codes">Observation Symptom SNOMED CT Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing symptom-related measurement items with SNOMED CT</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-uvexposure-codes.html"
+                  title="ValueSet/observation-uvexposure-codes">
+                  <span title="ValueSet/observation-uvexposure-codes">Observation UVExposure Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing UV Exposure-related measurement items</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-vital-signs-codes.html"
+                  title="ValueSet/observation-vital-signs-codes">
+                  <span title="ValueSet/observation-vital-signs-codes">Observation Vitalsigns Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing vitalsigns-related measurement items</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-observation-workout-codes.html"
+                  title="ValueSet/observation-workout-codes">
+                  <span title="ValueSet/observation-workout-codes">Observation Workout Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes representing workout-related measurement items</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-pcd-sleep-observation-code.html"
+                  title="ValueSet/pcd-sleep-observation-code">
+                  <span title="ValueSet/pcd-sleep-observation-code">Patient contributed data: sleep observation code
+</span>
+               </a>
+            </td>
+            <td>
+<p>This value set includes codes to track patient sleep recorded by device or app</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-pcd-sleep-observation-value.html"
+                  title="ValueSet/pcd-sleep-observation-value">
+                  <span title="ValueSet/pcd-sleep-observation-value">Patient contributed data: sleep stage value
+</span>
+               </a>
+            </td>
+            <td>
+<p>This value set includes codes to track patient sleep values recorded by device or app</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-sleep-analysis.html" title="ValueSet/sleep-analysis">
+                  <span title="ValueSet/sleep-analysis">Sleep Analysis
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for stages of sleep</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-appetite-changes.html" title="ValueSet/appetite-changes">
+                  <span title="ValueSet/appetite-changes">Symptom Appetite Changes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes expressing changes in appetite</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-symptom-presence.html" title="ValueSet/symptom-presence">
+                  <span title="ValueSet/symptom-presence">Symptom Presence
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code for presence or absence of symptoms</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-symptom-severity.html" title="ValueSet/symptom-severity">
+                  <span title="ValueSet/symptom-severity">Symptom Severity
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code for degree of symptoms</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-appetite-changes-codes.html"
+                  title="CodeSystem/appetite-changes-codes">
+                  <span title="CodeSystem/appetite-changes-codes">Appetite Changes Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes expressing changes in appetite</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-body-posture-codes.html"
+                  title="CodeSystem/body-posture-codes">
+                  <span title="CodeSystem/body-posture-codes">Body Posture Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code for posture</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-body-temperature-measurement-location-codes.html"
+                  title="CodeSystem/body-temperature-measurement-location-codes">
+                  <span title="CodeSystem/body-temperature-measurement-location-codes">Body Temperature Measurement Location Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code indicating the location where the body temperature was measured</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ecg-classification-codes.html"
+                  title="CodeSystem/ecg-classification-codes">
+                  <span title="CodeSystem/ecg-classification-codes">ECG Classification Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for classification of ECG waveforms</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ecg-codes.html" title="CodeSystem/ecg-codes">
+                  <span title="CodeSystem/ecg-codes">ECG Classification Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for ECG and related items</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ecg-lead-codes.html" title="CodeSystem/ecg-lead-codes">
+                  <span title="CodeSystem/ecg-lead-codes">ECG Lead Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for ECG induction</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ecg-symptoms-status-codes.html"
+                  title="CodeSystem/ecg-symptoms-status-codes">
+                  <span title="CodeSystem/ecg-symptoms-status-codes">ECG Symptoms Status Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code indicating whether or not the user's symptoms are input during ECG waveform acquisition</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-gad7-risk-codes.html"
+                  title="CodeSystem/gad7-risk-codes">
+                  <span title="CodeSystem/gad7-risk-codes">GAD-7 Assesment Risk Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code for GAD-7 Assesment Risk</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-hearing-sensitivity-codes.html"
+                  title="CodeSystem/hearing-sensitivity-codes">
+                  <span title="CodeSystem/hearing-sensitivity-codes">Hearing Sensitivity Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code indicating the type of value of the hearing test result</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-observation-pghd-codes.html"
+                  title="CodeSystem/observation-pghd-codes">
+                  <span title="CodeSystem/observation-pghd-codes">Observation PGHD Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code defining the type of PGHD data</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-phq9-risk-codes.html"
+                  title="CodeSystem/phq9-risk-codes">
+                  <span title="CodeSystem/phq9-risk-codes">PHQ-9 Assesment Risk Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code for PHQ-9 Assesment Risk</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-scored-assessment-codes.html"
+                  title="CodeSystem/scored-assessment-codes">
+                  <span title="CodeSystem/scored-assessment-codes">Scored Assessment Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code for scored assessment</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-sleep-analysis-codes.html"
+                  title="CodeSystem/sleep-analysis-codes">
+                  <span title="CodeSystem/sleep-analysis-codes">Sleep Analysis Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for stages of sleep</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-sleep-episode-codes.html"
+                  title="CodeSystem/sleep-episode-codes">
+                  <span title="CodeSystem/sleep-episode-codes">Sleep Episode Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for sleep episodes</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-snore-event-item-codes.html"
+                  title="CodeSystem/snore-event-item-codes">
+                  <span title="CodeSystem/snore-event-item-codes">Snore Event Item Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code representing the measurement used in the snoring event</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-state-of-mind-association-codes.html"
+                  title="CodeSystem/state-of-mind-association-codes">
+                  <span title="CodeSystem/state-of-mind-association-codes">State of Mind Association Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for state of mind association</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-state-of-mind-codes.html"
+                  title="CodeSystem/state-of-mind-codes">
+                  <span title="CodeSystem/state-of-mind-codes">State of Mind Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code for state of mind</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-state-of-mind-kind-codes.html"
+                  title="CodeSystem/state-of-mind-kind-codes">
+                  <span title="CodeSystem/state-of-mind-kind-codes">State of Mind Kind Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for state of mind kind</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-state-of-mind-label-codes.html"
+                  title="CodeSystem/state-of-mind-label-codes">
+                  <span title="CodeSystem/state-of-mind-label-codes">State of Mind Label Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for state of mind label</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-state-of-mind-valence-codes.html"
+                  title="CodeSystem/state-of-mind-valence-codes">
+                  <span title="CodeSystem/state-of-mind-valence-codes">State of Mind Valence Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for state of mind valence</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-presence-codes.html" title="CodeSystem/presence-codes">
+                  <span title="CodeSystem/presence-codes">Symptom Presence Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code for presence or absence of symptoms</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-symptom-severity-codes.html"
+                  title="CodeSystem/symptom-severity-codes">
+                  <span title="CodeSystem/symptom-severity-codes">Symptom Severity Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code for degree of symptoms</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
+   <h3>Terminology: Concept Maps </h3>
+    <p>These define transformations to convert between codes by systems conforming with this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-symptom-pghd-to-snomedct.html"
+                  title="ConceptMap/symptom-pghd-to-snomedct">
+                  <span title="ConceptMap/symptom-pghd-to-snomedct">ConceptMapSymptomPGHD2SNOMEDCT
+</span>
+               </a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-symptom-snomedct-to-pghd.html"
+                  title="ConceptMap/symptom-snomedct-to-pghd">
+                  <span title="ConceptMap/symptom-snomedct-to-pghd">ConceptMapSymptomSNOMEDCT2PGHD
+</span>
+               </a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="8"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-jane-doe.html" title="Patient/jane-doe">
+                  <span title="Patient/jane-doe">Jane Doe
+</span>
+               </a>
+            </td>
+            <td>
+<p>A sample patient resource for Jane Doe.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-jane-doe-composition.html"
+                  title="Composition/jane-doe-composition">
+                  <span title="Composition/jane-doe-composition">Jane Doe Composition
+</span>
+               </a>
+            </td>
+            <td>
+<p>A minimal narrative composition for Jane Doe's patient data.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DocumentReference-jane-doe-genomics-document.html"
+                  title="DocumentReference/jane-doe-genomics-document">
+                  <span title="DocumentReference/jane-doe-genomics-document">Jane Doe PDF Report
+</span>
+               </a>
+            </td>
+            <td>
+<p>A PDF genomics report for Jane Doe regarding celiac disease.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Media-jane-doe-media.html" title="Media/jane-doe-media">
+                  <span title="Media/jane-doe-media">Jane Doe Smartphone Photo
+</span>
+               </a>
+            </td>
+            <td>
+<p>A JPEG photo taken from Jane Doe's smartphone.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Provenance-jane-doe-media-provenance.html"
+                  title="Provenance/jane-doe-media-provenance">
+                  <span title="Provenance/jane-doe-media-provenance">Jane Doe's Photo Provenance
+</span>
+               </a>
+            </td>
+            <td>
+<p>Self-attested provenance record for Jane Doe's smartphone photo.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-sleep-episode-2.html"
+                  title="Observation/pghd-sleep-episode-2">
+                  <span title="Observation/pghd-sleep-episode-2">ObservationSleepEpisodeExample2
+</span>
+               </a>
+            </td>
+            <td>
+<p>SleepEpisode Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-PCDSleepObservation-duration-example.html"
+                  title="Observation/PCDSleepObservation-duration-example">
+                  <span title="Observation/PCDSleepObservation-duration-example">PCDSleepObservation-duration-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example - pcd-sleep-observation duration</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-PCDSleepObservation-stage-example.html"
+                  title="Observation/PCDSleepObservation-stage-example">
+                  <span title="Observation/PCDSleepObservation-stage-example">PCDSleepObservation-stage-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example - pcd-sleep-observation stage</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-1.html" title="Patient/1">
+                  <span title="Patient/1">PGHDPatientExample
+</span>
+               </a>
+            </td>
+            <td>
+<p>Patient Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-pdr-message.html" title="Bundle/pdr-message">
+                  <span title="Bundle/pdr-message">PatientDataReceipt Message
+</span>
+               </a>
+            </td>
+            <td>
+<p>An atomic update to a patient record; sent via a commit/push command and POST or PUT operation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-PhrBundle-example.html" title="Bundle/PhrBundle-example">
+                  <span title="Bundle/PhrBundle-example">PhrBundle-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Jane Doe - PhrBundle</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-gad7.html"
+                  title="QuestionnaireResponse/gad7">
+                  <span title="QuestionnaireResponse/gad7">QuestionnaireResponseScoredAssessmentGAD7Example
+</span>
+               </a>
+            </td>
+            <td>
+<p>GAD-7 Scored Assessment Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-phq9.html"
+                  title="QuestionnaireResponse/phq9">
+                  <span title="QuestionnaireResponse/phq9">QuestionnaireResponseScoredAssessmentPHQ9Example
+</span>
+               </a>
+            </td>
+            <td>
+<p>PHQ-9 Scored Assessment Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ScoredAssessmentGAD7Example.html"
+                  title="Observation/ScoredAssessmentGAD7Example">
+                  <span title="Observation/ScoredAssessmentGAD7Example">ScoredAssessmentGAD7Example
+</span>
+               </a>
+            </td>
+            <td>
+<p>GAD-7 Scored Assessment Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ScoredAssessmentPHQ9Example.html"
+                  title="Observation/ScoredAssessmentPHQ9Example">
+                  <span title="Observation/ScoredAssessmentPHQ9Example">ScoredAssessmentPHQ9Example
+</span>
+               </a>
+            </td>
+            <td>
+<p>PHQ-9 Scored Assessment Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-StateOfMind2Example.html"
+                  title="Observation/StateOfMind2Example">
+                  <span title="Observation/StateOfMind2Example">StateOfMind2Example
+</span>
+               </a>
+            </td>
+            <td>
+<p>State of Mind Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-StateOfMindExample.html"
+                  title="Observation/StateOfMindExample">
+                  <span title="Observation/StateOfMindExample">StateOfMindExample
+</span>
+               </a>
+            </td>
+            <td>
+<p>State of Mind Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-activity-activeEnergyBurned.html"
+                  title="Observation/pghd-activity-activeEnergyBurned">
+                  <span title="Observation/pghd-activity-activeEnergyBurned">pghd-activity-activeEnergyBurned
+</span>
+               </a>
+            </td>
+            <td>
+<p>Activity activeEnergyBurned Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-activity-activeEnergyBurned-underwater-diving.html"
+                  title="Observation/pghd-activity-activeEnergyBurned-underwater-diving">
+                  <span title="Observation/pghd-activity-activeEnergyBurned-underwater-diving">pghd-activity-activeEnergyBurned-underwaterDiving
+</span>
+               </a>
+            </td>
+            <td>
+<p>Activity activeEnergyBurned Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-activity-activeEnergyBurned-walking.html"
+                  title="Observation/pghd-activity-activeEnergyBurned-walking">
+                  <span title="Observation/pghd-activity-activeEnergyBurned-walking">pghd-activity-activeEnergyBurned-walking
+</span>
+               </a>
+            </td>
+            <td>
+<p>Activity activeEnergyBurned Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-activity-appleExerciseTime.html"
+                  title="Observation/pghd-activity-appleExerciseTime">
+                  <span title="Observation/pghd-activity-appleExerciseTime">pghd-activity-appleExerciseTime
+</span>
+               </a>
+            </td>
+            <td>
+<p>Activity appleExerciseTime Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-activity-appleMoveTime.html"
+                  title="Observation/pghd-activity-appleMoveTime">
+                  <span title="Observation/pghd-activity-appleMoveTime">pghd-activity-appleMoveTime
+</span>
+               </a>
+            </td>
+            <td>
+<p>Activity appleMoveTime Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-activity-appleStandHour.html"
+                  title="Observation/pghd-activity-appleStandHour">
+                  <span title="Observation/pghd-activity-appleStandHour">pghd-activity-appleStandHour
+</span>
+               </a>
+            </td>
+            <td>
+<p>Activity appleStandHour Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-activity-basalEnergyBurned.html"
+                  title="Observation/pghd-activity-basalEnergyBurned">
+                  <span title="Observation/pghd-activity-basalEnergyBurned">pghd-activity-basalEnergyBurned
+</span>
+               </a>
+            </td>
+            <td>
+<p>Activity basalEnergyBurned Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-activity-cyclingCadence.html"
+                  title="Observation/pghd-activity-cyclingCadence">
+                  <span title="Observation/pghd-activity-cyclingCadence">pghd-activity-cyclingCadence
+</span>
+               </a>
+            </td>
+            <td>
+<p>Activity cyclingCadence Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-activity-distanceWalkingRunning-walking.html"
+                  title="Observation/pghd-activity-distanceWalkingRunning-walking">
+                  <span title="Observation/pghd-activity-distanceWalkingRunning-walking">pghd-activity-distanceWalkingRunning-walking
+</span>
+               </a>
+            </td>
+            <td>
+<p>Activity distanceWalkingRunning Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-alchol-consumption-blood-alcohol-content.html"
+                  title="Observation/pghd-alchol-consumption-blood-alcohol-content">
+                  <span title="Observation/pghd-alchol-consumption-blood-alcohol-content">pghd-alchol-consumption-bloodAlcoholContent
+</span>
+               </a>
+            </td>
+            <td>
+<p>AlcholConsumption bloodAlcoholContent Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-alchol-use-number-of-alcoholic-beverages.html"
+                  title="Observation/pghd-alchol-use-number-of-alcoholic-beverages">
+                  <span title="Observation/pghd-alchol-use-number-of-alcoholic-beverages">pghd-alchol-use-numberOfAlcoholicBeverages
+</span>
+               </a>
+            </td>
+            <td>
+<p>AlcholUse numberOfAlcoholicBeverages Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-audiogram.html"
+                  title="Observation/pghd-audiogram">
+                  <span title="Observation/pghd-audiogram">pghd-audiogram
+</span>
+               </a>
+            </td>
+            <td>
+<p>Audiogram Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-blood-glucose-1.html"
+                  title="Observation/pghd-blood-glucose-1">
+                  <span title="Observation/pghd-blood-glucose-1">pghd-blood-glucose-1
+</span>
+               </a>
+            </td>
+            <td>
+<p>BloodGlucose Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-blood-glucose-2.html"
+                  title="Observation/pghd-blood-glucose-2">
+                  <span title="Observation/pghd-blood-glucose-2">pghd-blood-glucose-2
+</span>
+               </a>
+            </td>
+            <td>
+<p>BloodGlucose Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-blood-glucose-3.html"
+                  title="Observation/pghd-blood-glucose-3">
+                  <span title="Observation/pghd-blood-glucose-3">pghd-blood-glucose-3
+</span>
+               </a>
+            </td>
+            <td>
+<p>BloodGlucose Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-bloodpressure.html"
+                  title="Observation/pghd-bloodpressure">
+                  <span title="Observation/pghd-bloodpressure">pghd-bloodpressure
+</span>
+               </a>
+            </td>
+            <td>
+<p>BloodPressure Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-bmi.html" title="Observation/pghd-bmi">
+                  <span title="Observation/pghd-bmi">pghd-bmi
+</span>
+               </a>
+            </td>
+            <td>
+<p>BMI Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-bodyheight.html"
+                  title="Observation/pghd-bodyheight">
+                  <span title="Observation/pghd-bodyheight">pghd-bodyheight
+</span>
+               </a>
+            </td>
+            <td>
+<p>BodyHeight Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-bodymeasurement-body-fat-percentage.html"
+                  title="Observation/pghd-bodymeasurement-body-fat-percentage">
+                  <span title="Observation/pghd-bodymeasurement-body-fat-percentage">pghd-bodymeasurement
+</span>
+               </a>
+            </td>
+            <td>
+<p>BodyMeasurement bodyFatPercentage Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-bodytemperature.html"
+                  title="Observation/pghd-bodytemperature">
+                  <span title="Observation/pghd-bodytemperature">pghd-bodytemperature
+</span>
+               </a>
+            </td>
+            <td>
+<p>BodyTemperature Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-bodyweight.html"
+                  title="Observation/pghd-bodyweight">
+                  <span title="Observation/pghd-bodyweight">pghd-bodyweight
+</span>
+               </a>
+            </td>
+            <td>
+<p>Body Weight Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-cardiac-function-lowHeart-rate-event.html"
+                  title="Observation/pghd-cardiac-function-lowHeart-rate-event">
+                  <span title="Observation/pghd-cardiac-function-lowHeart-rate-event">pghd-cardiac-function-lowHeartRateEvent
+</span>
+               </a>
+            </td>
+            <td>
+<p>CardiacFunction lowHeartRateEvent Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-diving-underwater-depthg.html"
+                  title="Observation/pghd-diving-underwater-depthg">
+                  <span title="Observation/pghd-diving-underwater-depthg">pghd-diving-underwaterDepth
+</span>
+               </a>
+            </td>
+            <td>
+<p>Diving underwaterDepth Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-diving-water-temperature.html"
+                  title="Observation/pghd-diving-water-temperature">
+                  <span title="Observation/pghd-diving-water-temperature">pghd-diving-waterTemperature
+</span>
+               </a>
+            </td>
+            <td>
+<p>Diving waterTemperature Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-food.html" title="Observation/pghd-food">
+                  <span title="Observation/pghd-food">pghd-food
+</span>
+               </a>
+            </td>
+            <td>
+<p>Food Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-hearing-environmental-audio-exposure.html"
+                  title="Observation/pghd-hearing-environmental-audio-exposure">
+                  <span title="Observation/pghd-hearing-environmental-audio-exposure">pghd-hearing-environmentalAudioExposure
+</span>
+               </a>
+            </td>
+            <td>
+<p>Hearing environmentalAudioExposure Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-hearingSensitivity-1.html"
+                  title="Observation/pghd-hearingSensitivity-1">
+                  <span title="Observation/pghd-hearingSensitivity-1">pghd-hearingSensitivity-1
+</span>
+               </a>
+            </td>
+            <td>
+<p>HearingSensitivity Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-hearingSensitivity-2.html"
+                  title="Observation/pghd-hearingSensitivity-2">
+                  <span title="Observation/pghd-hearingSensitivity-2">pghd-hearingSensitivity-2
+</span>
+               </a>
+            </td>
+            <td>
+<p>HearingSensitivity Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-hearingSensitivity-3.html"
+                  title="Observation/pghd-hearingSensitivity-3">
+                  <span title="Observation/pghd-hearingSensitivity-3">pghd-hearingSensitivity-3
+</span>
+               </a>
+            </td>
+            <td>
+<p>HearingSensitivity Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-hearingSensitivity-4.html"
+                  title="Observation/pghd-hearingSensitivity-4">
+                  <span title="Observation/pghd-hearingSensitivity-4">pghd-hearingSensitivity-4
+</span>
+               </a>
+            </td>
+            <td>
+<p>HearingSensitivity Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-heart-electrocardiogram.html"
+                  title="Observation/pghd-heart-electrocardiogram">
+                  <span title="Observation/pghd-heart-electrocardiogram">pghd-heart-electrocardiogram
+</span>
+               </a>
+            </td>
+            <td>
+<p>Heart electrocardiogram Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-heartbeat.html"
+                  title="Observation/pghd-heartbeat">
+                  <span title="Observation/pghd-heartbeat">pghd-heartbeat
+</span>
+               </a>
+            </td>
+            <td>
+<p>Heartbeat Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-heartrate.html"
+                  title="Observation/pghd-heartrate">
+                  <span title="Observation/pghd-heartrate">pghd-heartrate
+</span>
+               </a>
+            </td>
+            <td>
+<p>HeartRate Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-medication-adherence.html"
+                  title="Observation/pghd-medication-adherence">
+                  <span title="Observation/pghd-medication-adherence">pghd-medication-adherence
+</span>
+               </a>
+            </td>
+            <td>
+<p>MedicationAdherence Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-pghd-medicationadministration-insulin-1.html"
+                  title="MedicationAdministration/pghd-medicationadministration-insulin-1">
+                  <span title="MedicationAdministration/pghd-medicationadministration-insulin-1">pghd-medicationadministration-insulin
+</span>
+               </a>
+            </td>
+            <td>
+<p>MedicationAdministration Insulin Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-mindfulness-mindful-session.html"
+                  title="Observation/pghd-mindfulness-mindful-session">
+                  <span title="Observation/pghd-mindfulness-mindful-session">pghd-mindfulness-mindfulSession
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mindfulness Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-mobility-stair-descent-speed.html"
+                  title="Observation/pghd-mobility-stair-descent-speed">
+                  <span title="Observation/pghd-mobility-stair-descent-speed">pghd-mobility-stairDescentSpeed
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mobility stairDescentSpeed Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-nutrition-dietary-carbohydrates.html"
+                  title="Observation/pghd-nutrition-dietary-carbohydrates">
+                  <span title="Observation/pghd-nutrition-dietary-carbohydrates">pghd-nutrition-dietaryCarbohydrates
+</span>
+               </a>
+            </td>
+            <td>
+<p>Nutrition dietaryCarbohydrates Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-nutrition-dietary-energy-consumed.html"
+                  title="Observation/pghd-nutrition-dietary-energy-consumed">
+                  <span title="Observation/pghd-nutrition-dietary-energy-consumed">pghd-nutrition-dietaryEnergyConsumed
+</span>
+               </a>
+            </td>
+            <td>
+<p>Nutrition dietaryEnergyConsumed Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-nutrition-dietary-fiber.html"
+                  title="Observation/pghd-nutrition-dietary-fiber">
+                  <span title="Observation/pghd-nutrition-dietary-fiber">pghd-nutrition-dietaryFiber
+</span>
+               </a>
+            </td>
+            <td>
+<p>Nutrition dietaryFiber Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-nutrition-dietary-protein.html"
+                  title="Observation/pghd-nutrition-dietary-protein">
+                  <span title="Observation/pghd-nutrition-dietary-protein">pghd-nutrition-dietaryProtein
+</span>
+               </a>
+            </td>
+            <td>
+<p>Nutrition dietaryProtein Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-oxygenSaturation.html"
+                  title="Observation/pghd-oxygenSaturation">
+                  <span title="Observation/pghd-oxygenSaturation">pghd-oxygenSaturation
+</span>
+               </a>
+            </td>
+            <td>
+<p>OxygenSaturation Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-pregnancy-status.html"
+                  title="Observation/pghd-pregnancy-status">
+                  <span title="Observation/pghd-pregnancy-status">pghd-pregnancy-status
+</span>
+               </a>
+            </td>
+            <td>
+<p>PregnancyStatus Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-reproductive-health-intermenstrual-bleeding.html"
+                  title="Observation/pghd-reproductive-health-intermenstrual-bleeding">
+                  <span title="Observation/pghd-reproductive-health-intermenstrual-bleeding">pghd-reproductive-health-intermenstrualBleeding
+</span>
+               </a>
+            </td>
+            <td>
+<p>ReproductiveHealth intermenstrualBleeding Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-respiratoryrate.html"
+                  title="Observation/pghd-respiratoryrate">
+                  <span title="Observation/pghd-respiratoryrate">pghd-respiratoryrate
+</span>
+               </a>
+            </td>
+            <td>
+<p>RespiratoryRate Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-selfcare-handwashingEvent.html"
+                  title="Observation/pghd-selfcare-handwashingEvent">
+                  <span title="Observation/pghd-selfcare-handwashingEvent">pghd-selfcare-handwashingEvent
+</span>
+               </a>
+            </td>
+            <td>
+<p>SelfCare handwashingEvent Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-sleep-asleep-core.html"
+                  title="Observation/pghd-sleep-asleep-core">
+                  <span title="Observation/pghd-sleep-asleep-core">pghd-sleep-asleepCore
+</span>
+               </a>
+            </td>
+            <td>
+<p>Sleep asleepCore Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-sleep-episode-1.html"
+                  title="Observation/pghd-sleep-episode-1">
+                  <span title="Observation/pghd-sleep-episode-1">pghd-sleep-episode-1
+</span>
+               </a>
+            </td>
+            <td>
+<p>SleepEpisode Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-sleep-episode-core-sleep-1.html"
+                  title="Observation/pghd-sleep-episode-core-sleep-1">
+                  <span title="Observation/pghd-sleep-episode-core-sleep-1">pghd-sleep-episode-core-sleep-1
+</span>
+               </a>
+            </td>
+            <td>
+<p>SleepEpisode Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-sleep-episode-core-sleep-2.html"
+                  title="Observation/pghd-sleep-episode-core-sleep-2">
+                  <span title="Observation/pghd-sleep-episode-core-sleep-2">pghd-sleep-episode-core-sleep-2
+</span>
+               </a>
+            </td>
+            <td>
+<p>SleepEpisode Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-sleep-episode-deep-sleep-2.html"
+                  title="Observation/pghd-sleep-episode-deep-sleep-2">
+                  <span title="Observation/pghd-sleep-episode-deep-sleep-2">pghd-sleep-episode-deep-sleep-
+</span>
+               </a>
+            </td>
+            <td>
+<p>SleepEpisode Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-sleep-episode-deep-sleep-1.html"
+                  title="Observation/pghd-sleep-episode-deep-sleep-1">
+                  <span title="Observation/pghd-sleep-episode-deep-sleep-1">pghd-sleep-episode-deep-sleep-1
+</span>
+               </a>
+            </td>
+            <td>
+<p>SleepEpisode Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-sleep-episode-latency-to-sleep-onset-1.html"
+                  title="Observation/pghd-sleep-episode-latency-to-sleep-onset-1">
+                  <span title="Observation/pghd-sleep-episode-latency-to-sleep-onset-1">pghd-sleep-episode-latency-to-sleep-onset-1
+</span>
+               </a>
+            </td>
+            <td>
+<p>SleepEpisode Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-sleep-episode-latency-to-sleep-onset-2.html"
+                  title="Observation/pghd-sleep-episode-latency-to-sleep-onset-2">
+                  <span title="Observation/pghd-sleep-episode-latency-to-sleep-onset-2">pghd-sleep-episode-latency-to-sleep-onset-2
+</span>
+               </a>
+            </td>
+            <td>
+<p>SleepEpisode Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-snore-event-1.html"
+                  title="Observation/pghd-snore-event-1">
+                  <span title="Observation/pghd-snore-event-1">pghd-snore-event-1
+</span>
+               </a>
+            </td>
+            <td>
+<p>SnoreIndex Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-snore-event-2.html"
+                  title="Observation/pghd-snore-event-2">
+                  <span title="Observation/pghd-snore-event-2">pghd-snore-event-2
+</span>
+               </a>
+            </td>
+            <td>
+<p>SnoreIndex Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-snore-event-3.html"
+                  title="Observation/pghd-snore-event-3">
+                  <span title="Observation/pghd-snore-event-3">pghd-snore-event-3
+</span>
+               </a>
+            </td>
+            <td>
+<p>SnoreIndex Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-snore-index-1.html"
+                  title="Observation/pghd-snore-index-1">
+                  <span title="Observation/pghd-snore-index-1">pghd-snore-index-
+</span>
+               </a>
+            </td>
+            <td>
+<p>SnoreIndex Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-snore-index-2.html"
+                  title="Observation/pghd-snore-index-2">
+                  <span title="Observation/pghd-snore-index-2">pghd-snore-index-2
+</span>
+               </a>
+            </td>
+            <td>
+<p>SnoreIndex Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-symptom-fever.html"
+                  title="Observation/pghd-symptom-fever">
+                  <span title="Observation/pghd-symptom-fever">pghd-symptom-fever
+</span>
+               </a>
+            </td>
+            <td>
+<p>Symptom fever Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-testresult-forced-vital-capacity.html"
+                  title="Observation/pghd-testresult-forced-vital-capacity">
+                  <span title="Observation/pghd-testresult-forced-vital-capacity">pghd-testresult-forcedVitalCapacity
+</span>
+               </a>
+            </td>
+            <td>
+<p>TestResult forcedVitalCapacity Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-uvexposure.html"
+                  title="Observation/pghd-uvexposure">
+                  <span title="Observation/pghd-uvexposure">pghd-uvexposure
+</span>
+               </a>
+            </td>
+            <td>
+<p>UVExposure Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-vitalsigns-apple-sleeping-wrist-temperature.html"
+                  title="Observation/pghd-vitalsigns-apple-sleeping-wrist-temperature">
+                  <span title="Observation/pghd-vitalsigns-apple-sleeping-wrist-temperature">pghd-vitalsigns-appleSleepingWristTemperature
+</span>
+               </a>
+            </td>
+            <td>
+<p>VitalSigns appleSleepingWristTemperature Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-voltage-measurement.html"
+                  title="Observation/pghd-voltage-measurement">
+                  <span title="Observation/pghd-voltage-measurement">pghd-voltage-measurement
+</span>
+               </a>
+            </td>
+            <td>
+<p>VoltageMeasurement Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-workout-underwater-diving.html"
+                  title="Observation/pghd-workout-underwater-diving">
+                  <span title="Observation/pghd-workout-underwater-diving">pghd-workout-underwaterDiving
+</span>
+               </a>
+            </td>
+            <td>
+<p>Workout underwaterDiving Example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pghd-workout-walking.html"
+                  title="Observation/pghd-workout-walking">
+                  <span title="Observation/pghd-workout-walking">pghd-workout-walking
+</span>
+               </a>
+            </td>
+            <td>
+<p>Workout walking Example</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
+          Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-03-12 15:47:00 -0500">
+    2026-03-12
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir/uv/phr/history.html">Version History</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

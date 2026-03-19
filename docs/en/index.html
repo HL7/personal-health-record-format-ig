@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Getting Started - Personal Health Records v1.0.0-ballot2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Personal Health Records</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot2 - STU 1 ballot
+
+
+
+  <img alt="International flag" src="../assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Model
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conformance.html">Conformance</a>
+      </li>
+      <li>
+        <a href="datamodel.html">Data Model</a>
+      </li>
+      <li>
+        <a href="functionality.html">Functional Model</a>
+      </li>
+      <li>
+        <a href="recordlifecycle.html">Record Lifecycle</a>
+      </li>
+      <li>
+        <a href="security.html">Security</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="history.html">History</a>
+      </li>
+      <li>
+        <a href="recordkeeping.html">Record Keeping</a>
+      </li>
+      <li>
+        <a href="longitudinal.html">Longitudinal Records</a>
+      </li>
+      <li>
+        <a href="api.html">API Endpoints</a>
+      </li>
+      <li>
+        <a href="annotations.html">Annotations</a>
+      </li>
+      <li>
+        <a href="algorithms.html">Algorithms</a>
+      </li>
+      <li>
+        <a href="physiology.html">Physiology Domains</a>
+      </li>
+      <li>
+        <a href="operating-systems.html">Operating Systems</a>
+      </li>
+      <li>
+        <a href="pghd.html">Patient-generated health data(PGHD)</a>
+      </li>
+      <li>
+        <a href="logical-models.html">Logical Models</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Personas
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="personas-index.html">Index</a>
+      </li>
+      <li>
+        <a href="persona-thompson-family.html">Thompson Familiy</a>
+      </li>
+      <li>
+        <a href="persona-journey-b.html">Cancer - Adult</a>
+      </li>
+      <li>
+        <a href="persona-william.html">Cancer - Pediatric</a>
+      </li>
+      <li>
+        <a href="persona-journey-e.html">Chronic Illness (Lupus)</a>
+      </li>
+      <li>
+        <a href="persona-journey-d.html">Long COVID</a>
+      </li>
+      <li>
+        <a href="persona-journey-a.html">Patient Relocation</a>
+      </li>
+      <li>
+        <a href="persona-journey-c.html">Sports Outpatient / Cardiac</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Getting Started</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Personal Health Records - Local Development build (v1.0.0-ballot2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.org/fhir/uv/phr/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Getting Started</h2>
+  
+
+
+
+
+  <table class="colstu" data-fhir="generated">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">1.0.0-ballot2<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr|1.0.0-ballot2"/></span>
+      </td>
+      <td style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          <i>
+            
+              IG
+            
+            Standards status:
+          </i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standards Status">Trial-use</a>
+          
+          
+          Active
+          
+
+            as of 
+2026-03-12
+
+          
+        
+      </td>
+
+      <td>
+        <a href="http://hl7.org/fhir/versions.html#maturity">Maturity Level</a>: 1
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">PatientHealthRecordsIG</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#expectations-for-this-implementation-guide" id="markdown-toc-expectations-for-this-implementation-guide">Expectations for this Implementation Guide</a></li>
+  <li><a href="#what-is-a-personal-health-record" id="markdown-toc-what-is-a-personal-health-record">What is a Personal Health Record?</a></li>
+  <li><a href="#relevant-law" id="markdown-toc-relevant-law">Relevant Law</a></li>
+  <li><a href="#purpose--design-philosophy" id="markdown-toc-purpose--design-philosophy">Purpose / Design Philosophy</a></li>
+  <li><a href="#use-cases" id="markdown-toc-use-cases">Use Cases</a></li>
+  <li><a href="#acknowledgements" id="markdown-toc-acknowledgements">Acknowledgements</a></li>
+  <li><a href="#references" id="markdown-toc-references">References</a></li>
+  <li><a href="#license" id="markdown-toc-license">License</a></li>
+</ul>
+
+</div>
+<p>The purpose of this implementation guide is to help the reader implement a Patient Health Record (in a programming language of their choice).  The notion of a Patient Health Record (PHR) grows out of the concept of an Electronic Medical Record (EMR).  The major difference being in ownership.  The PHR being owned by the patient; and the EMR being owned by the hospital.</p>
+
+<p>The following document will offer design guidance and standardized APIs for helping you develop your application; based on the healthcare industry standard of Fast Healthcare Interoperability Resources (FHIR).  The scope of this document does not attempt to prescribe how you, the implementor, ought to go about programming your software.  What it does provide, is guidance on how to successfully exchange data with other PHR and EMR apps.  In effect, it documents widely supported (and government recognized) data standards and file formats for importing/exporting data into your software.</p>
+
+<h3 id="expectations-for-this-implementation-guide">Expectations for this Implementation Guide</h3>
+
+<p>Readers are encouraged to think of this implementation guide as a marathon, not a sprint.  To further the analogy, the authors of this guide hope to help software implementor plan on whether they are competing in a 26 mile standard marathon, a 50 mile ultramarathon, or an Iron Man triathalon.  Similarly, implementing a complete PHR is no simple task, and in many situations may take upwards of a year of time or more to complete.  We hope to provide guidance that will help implementors strategically plan their implementations and avoid common stumbling blocks.</p>
+
+<h3 id="what-is-a-personal-health-record">What is a Personal Health Record?</h3>
+
+<p>Nearly two decades ago, the Markle Foundation's Personal Health workgroup convened to discuss the state-of-the-art in managing personal health information. The workgroup defined the PHR as "an electronic application through which individuals can access, manage and share their health information, and that of others for whom they are authorized, in a private, secure, and confidential environment." Their early vision was that PHRs would enable individuals to access and coordinate comprehensive, lifelong health information and exchange necessary parts of it.</p>
+
+<p><img src="VennDiagram.png" alt="VennDiagram.png" width="100%" /></p>
+
+<p>The core of the Personal Health Record should be medical grade, and able to incorporate any medical record that you receive after a visit to the hospital; and which the patient can then carry from one healthcare provider to the next. As such, a modern Personal Health Record needs to essentially be able to receive captured data from throughout the hospital. Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychiatry. All of it is relevent." to "The purpose of this specification is to provide standard mechanisms for a PHR to interoperate, facilitating sharing of information obtained by the PHR from healthcare encounters, personal documentation and measurement, and other sources.</p>
+
+<p>The diagram above shows the intersection of the data collected by the patient, compared to the data collected by the hospital EHR or insurance systems.</p>
+
+<h3 id="relevant-law">Relevant Law</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Country</strong></th>
+      <th><strong>Initiative / Law</strong></th>
+      <th><strong>Type</strong></th>
+      <th><strong>FHIR/API Integration</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Netherlands</strong></td>
+      <td>MedMij Framework</td>
+      <td>Policy/Standard + Certification</td>
+      <td>Yes (HL7 FHIR) – MedMij defines FHIR-based APIs; all certified PHRs use these standard APIs.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PGO Personal Health Environments (apps)</td>
+      <td>Private PHR Platforms (gov’t backed)</td>
+      <td>Yes – Must be MedMij-certified; patients access data via DigiD login and FHIR APIs.</td>
+    </tr>
+    <tr>
+      <td><strong>Australia</strong></td>
+      <td>My Health Record (MyHR)</td>
+      <td>Government-run National PHR</td>
+      <td>Partial – Transitioning from CDA to FHIR-based APIs via FHIR Gateway for consumer access.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>National Digital Health Strategy</td>
+      <td>Policy/Strategy</td>
+      <td>Yes – Emphasizes HL7 FHIR alignment; publishes FHIR implementation guides.</td>
+    </tr>
+    <tr>
+      <td><strong>Japan</strong></td>
+      <td>MynaPortal Health Access</td>
+      <td>Government portal &amp; APIs</td>
+      <td>Yes – APIs link MynaPortal with private PHRs; using FHIR for new infrastructure.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Medical DX/Data Health Plans</td>
+      <td>National Policy</td>
+      <td>Yes – Standardizing EMR data and enabling patient access; includes SMART Health Cards (FHIR).</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Personal Information Protection Commission</td>
+      <td>National Law</td>
+      <td>Not specifically.  Only specifies handling of personal data and patient data ownership.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Act on the Protection of Personal Information</td>
+      <td>National Law</td>
+      <td>Not specifically.  Only specifies handling of personal data and patient data ownership.</td>
+    </tr>
+    <tr>
+      <td><strong>United States</strong></td>
+      <td>21st Century Cures Act &amp; ONC/CMS Rules</td>
+      <td>Federal Laws/Regulations</td>
+      <td>Yes – Mandates HL7 FHIR APIs (US Core profiles); SMART on FHIR widely implemented.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Blue Button 2.0 / Apple Health Records</td>
+      <td>Government &amp; Private Platforms</td>
+      <td>Yes – FHIR-based APIs for claims and provider data; app ecosystem supports FHIR APIs.</td>
+    </tr>
+    <tr>
+      <td><strong>Canada</strong></td>
+      <td>Connected Care Act (Bill C-72, 2024)</td>
+      <td>Proposed Federal Law</td>
+      <td>Yes (Planned) – Would mandate interoperable systems; aligns with Pan-Canadian FHIR specs.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Provincial Portals / Pan-Canadian FHIR Profiles</td>
+      <td>Patient portals / Standards</td>
+      <td>Partial – Web portals exist; FHIR-based standards in adoption phase.</td>
+    </tr>
+    <tr>
+      <td><strong>UK (England)</strong></td>
+      <td>NHS App &amp; GP Record Access</td>
+      <td>NHS-operated Digital Services</td>
+      <td>Yes – NHS APIs (e.g., GP Connect) use FHIR; patients access data via NHS App.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>CareConnect FHIR Profiles / Patients Know Best</td>
+      <td>National Profiles / Private PHR</td>
+      <td>Yes – Profiles define FHIR structures; private apps integrate via NHS APIs.</td>
+    </tr>
+    <tr>
+      <td><strong>Germany</strong></td>
+      <td>Patient Data Protection Act (PDSG) / ePA</td>
+      <td>National Law &amp; PHR Platform</td>
+      <td>Partial – Currently uses CDA/IHE XDS; migrating to HL7 FHIR (ePA 2.0, Basisprofil DE).</td>
+    </tr>
+    <tr>
+      <td><strong>Finland</strong></td>
+      <td>Kanta PHR</td>
+      <td>Government PHR platform</td>
+      <td>Yes – Fully HL7 FHIR-based with open APIs; apps write to/read from PHR using Finnish FHIR profiles.</td>
+    </tr>
+    <tr>
+      <td><strong>Taiwan</strong></td>
+      <td>My Health Bank</td>
+      <td>National PHR Portal (NHI)</td>
+      <td>Partial – APIs/SDK provided; transitioning toward FHIR from legacy HL7 standards.</td>
+    </tr>
+    <tr>
+      <td><strong>India</strong></td>
+      <td>Ayushman Bharat Digital Mission (ABDM)</td>
+      <td>National Health IT Framework</td>
+      <td>Yes – HL7 FHIR adopted as primary exchange standard; personal consent-based PHR model.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="purpose--design-philosophy">Purpose / Design Philosophy</h3>
+
+<p>The core of the Personal Health Record should be medical grade, and able to incorporate any medical record that you receive after a visit to the hospital; and which the patient can then carry from one healthcare provider to the next.  As such, a modern Personal Health Record needs to essentially be able to receive captured data from throughout the hospital.  Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychiatry.  All of it is relevent.</p>
+
+<h3 id="use-cases">Use Cases</h3>
+
+<p>This guide is particularly interested in the problem of collecting and aggregating medical records from multiple healthcare systems and devices into a coherent whole.  In the healthcare industry, these types of compiled records are known as <code class="language-plaintext highlighter-rouge">longitudinal</code> records.</p>
+
+<ul>
+  <li>
+    <p><em>Longitudinal Health Records</em> - Assembly of records over a long time span; generally multiple decades (20 years or more), and possibly from different healthcare systems with different practices or standards of care.</p>
+  </li>
+  <li>
+    <p><em>Longitudinal Studies</em> - Clinical studies that follow up on patient results after 20 or more years. Very important for pediatric studies.</p>
+  </li>
+  <li>
+    <p><em>Snowbirds</em> - Many patients have more than one home location, and may spend time in different parts of the country on a seasonal basis. This leads to medical records that are fragmented.</p>
+  </li>
+  <li>
+    <p><em>Symptom Tracking</em> - Symptoms of an illness can evolve as the condition improves or worsens, impacted by such things as climate or diet or circumstances of life.</p>
+  </li>
+  <li>
+    <p><em>Long COVID</em> - An example of an ongoing longitudinal study that has captured national and worldwide attention, as we continued to determine the long-term effects of COVID-19.</p>
+  </li>
+  <li>
+    <p><em>Multiple Chronic Conditions</em> - Not all medical conditions are reported to all healthcare providers. Conversely, specialists will report results for one area of medicine, which needs to be incorporate and reconciled with the patient's master record.</p>
+  </li>
+  <li>
+    <p><em>Differential Diagnoses</em> - Case presentation for rare diseases can require differential diagnosis, as clinicians generate hypotheses and tests for one condition after another to explain a set of symptoms.</p>
+  </li>
+  <li>
+    <p><em>Alternative Care</em> - Massage, Acupuncture, etc. - Patients may wish to track alternative modalities of healthcare that are not recognized or tracked by a healthcare provider or network.</p>
+  </li>
+  <li>
+    <p><em>Bring Your Own Device</em> - Patients may wish to utilize consumer medical devices for tracking their own health.</p>
+  </li>
+  <li>
+    <p><em>Foster Care System</em> - Custody and care of foster children, especially when it crosses state lines, can be complicated; requiring detailed record keeping to align both medical and court proceedings.</p>
+  </li>
+  <li>
+    <p><em>Migrants/Immigrant</em>s - Patients that have immigrated will necessarily have fragmented records that exist in multiple locations or countries.</p>
+  </li>
+  <li>
+    <p><em>Climate Refugees</em> - Patients that have been forced to relocate, due to fires, floods, and similar events, will likely have medical records in multiple clinics or hospitals.</p>
+  </li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+
+<ul>
+  <li>Jan Oldenburg, Patient Empowerment Workgroup</li>
+  <li>Dr. Neelima Karipineni, MITRE</li>
+  <li>Salim K Semy, MITRE</li>
+  <li>Dave Carlson, Clinical Cloud Solutions</li>
+  <li>Savannah Mueller, EMI Advisors</li>
+</ul>
+
+<h3 id="references">References</h3>
+
+<ul>
+  <li><a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88">Patient Health Record - System Functional Model</a></li>
+  <li><a href="https://www.medicalrecords.com/personal-health-records">Personal Health Records Software for Consumers</a></li>
+  <li><a href="https://www.techradar.com/best/best-electronic-health-record-ehr-software">Best Electronic Health Records software of 2022</a></li>
+  <li><a href="http://www.healthinfolaw.org/comparative-analysis/who-owns-medical-records-50-state-comparison">Who Owns Medical Records: 50 State Comparison</a></li>
+  <li><a href="https://www.cms.gov/Medicare/E-Health/PerHealthRecords/PHR_Pilots">Centers for Medicare Services - PHR Pilots</a></li>
+  <li><a href="https://www.nationalacademies.org/our-work/implementing-high-quality-primary-care">Implementing High Quality Primary Care</a></li>
+  <li><a href="https://blog.coupler.io/how-to-export-facebook-data/">How to Export Facebook Data</a></li>
+  <li><a href="https://reference.humanapi.co/reference/getting-started">Human API - Getting Started</a></li>
+  <li><a href="https://www.cms.gov/Medicare/E-Health/PerHealthRecords/Downloads/SummaryofPersonalHealthRecord.pdf">Summary of Responses to an Industry RFI Regarding a Role for CMS with Personal Health Records</a></li>
+  <li><a href="https://github.com/StanfordBDHG/HealthKitOnFHIR">HealthKit on FHIR</a></li>
+</ul>
+
+<h3 id="license">License</h3>
+<p>Copyright (c) 2021+ Health Level Seven International and MITRE.org. <br />
+Published under the Creative Commons "Attribution 4.0 International" (CC BY 4.0) License</p>
+
+<h4 id="dependencies">Dependencies</h4>
+<div><table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="dep" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Implementation Guide Reference">IG</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Explains why this dependency exists">Comment</span></th></tr><tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Volumes/LangCortex/Code/personal-health-record-format-ig/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <span title="Canonical: http://hl7.org/fhir/uv/phr">Personal Health Records</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.phr/1.0.0-ballot2">hl7.fhir.uv.phr#1.0.0-ballot2</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Volumes/LangCortex/Code/personal-health-record-format-ig/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img onclick="tableRowAction(this)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAACwSURBVDhP7ZLBDsIwCIaLZz34xG3f2cQYo5UfYalJoY07ePFL4GcbpZSVWmvJgwifG+njkLDACgfVIehAQ5ffdMDvxSS2Dmqty62UUmS1rIWD8UuWd9xxVt1AnoaSGx6Buap+0G80K3BTtbtwhLPZQL0CSIA9OwUXON7dZkBeASTAThb3bffMjnCHGy00ZgUeqi5f3YOcsw01vsqYMrMljwgLrBDOwP53xL+D3R2k9ALHsmr3Yu73+gAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://terminology.hl7.org/7.1.0" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r4/7.1.0">hl7.terminology.r4#7.1.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Automatically added as a dependency - all IGs depend on HL7 Terminology</td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aaa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Volumes/LangCortex/Code/personal-health-record-format-ig/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://hl7.org/fhir/extensions/5.2.0" title="Canonical: http://hl7.org/fhir/extensions">FHIR Extensions Pack</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.extensions.r4/5.2.0">hl7.fhir.uv.extensions.r4#5.2.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Volumes/LangCortex/Code/personal-health-record-format-ig/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img onclick="tableRowAction(this)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAACwSURBVDhP7ZLBDsIwCIaLZz34xG3f2cQYo5UfYalJoY07ePFL4GcbpZSVWmvJgwifG+njkLDACgfVIehAQ5ffdMDvxSS2Dmqty62UUmS1rIWD8UuWd9xxVt1AnoaSGx6Buap+0G80K3BTtbtwhLPZQL0CSIA9OwUXON7dZkBeASTAThb3bffMjnCHGy00ZgUeqi5f3YOcsw01vsqYMrMljwgLrBDOwP53xL+D3R2k9ALHsmr3Yu73+gAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://hl7.org/fhir/uv/ips/STU1.1" title="Canonical: http://hl7.org/fhir/uv/ips">International Patient Summary Implementation Guide</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.ips/1.1.0">hl7.fhir.uv.ips#1.1.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aba" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Volumes/LangCortex/Code/personal-health-record-format-ig/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMUlEQVR4Xu3LMQoAIBADwftr/v8GtdbqEAthAtMspJJUx9rYW8ftHwAA+NcRAAAAXplLq0BWj/rZigAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://terminology.hl7.org/5.0.0" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r4/5.0.0">hl7.terminology.r4#5.0.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="abb" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Volumes/LangCortex/Code/personal-health-record-format-ig/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://fhir.org/packages/fhir.dicom" title="Canonical: http://fhir.org/packages/fhir.dicom">fhir.dicom</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/fhir.dicom/2022.4.20221006">fhir.dicom#2022.4.20221006</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #fcf7c0" id="ac" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Volumes/LangCortex/Code/personal-health-record-format-ig/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALElEQVR4Xu3IsQ0AIAwEsez6+89AqKGGJj7JzVWS+mm3zgcAAMxwDQAAgFcaYAVAgNGLTjgAAAAASUVORK5CYII=)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAEvnpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjarVdbdsQmDP1nFV0CEojHcnie0x10+b14EM5kkmbS1k4sLGQk7pVEYsZff07zBy4mScZLTCGHYHH57DMXDJJ9XPV6kvXXc79YHTzpzZlgqByke7xm3voBPca03/N2QmqvCx1PBSO5J0rZ+vqsr3tBTp8X2hE4eni2fX+wF3K8I/KP97YjCjnFp631tj37rUr3r3eRgwSKHk/PNsaQMU5sfQSefQXq4uUeGG1PqtB3NWXExMORs3g6t6N069e7ApnxJMcGhuQiXtilayJdwFtQiRCwcH4sPIs9YH7E5sbom+udbVk4mWMZf2DtTpDn/Dgj+ka/0+CwlsKecM+02nDkl3oSXUgn3PHDHz2ndjw/6cF2+AiF+Uj3nD3Na9PYRfEBWIS9Kd3KNYJdXSheXwXc0QaDrE0YrDvjTrbYhhTotqHSKsaZGNxP8tSp0KRxyUYNIXoeHCGZm2F3KRNIytzcSga/bpockSMdScGuXTnkHZ9Y6HKbL3eNku3GdoIpExZDWv3727xrOOeqJSKbDlaIi1c1IApLoH8JmIERmhtUuQDW+/O1eHVgUC6YEzZYbDWPJarQnVzuItrBUCAftUex7wUAEVwLgiEHBmwgJxQQUWSORAAygaCC0FGNXMEAiXBHkOydCyAH1QHf+CbSZcrCDzW6qvPGiQso2rSqGGR5L8if6BNyqIgTLyJBoiTJUoILq/JCiGG15xJd9FFiiDEmE3MsySWfJIUUU0o5lczZoX1LRp3mlHMuBU4LVi74usCglMrVVV+lhhprqtnU0pA+zTdpocWWWm6lc3cdBd5Djz313MuggVQafsgII4408igTqTbd9FNmmNHMNPMsh7VN68v9C9Zos8YXU8swHtagjVGXoNVOZHEGxtgTCI9gDYwhsRdnNpH3vJhbnOE8QlUII0hZ5HRajIFBP4hl0uFuM2eA4v/Cm4np4o3/K3NmUfcmc6+8fcVaX6dEuxh7lOEC1TpU34yzcMIPjt/vpflqgi6BlVvdGkC8VVHIyzr8Pkljv5n4rbwXykvgtAK0/aGiPvYklbhn6TtpfjJ4UzoT9t6n7YpHLS8j+6M07xp+LdGpdiBm2qzKcmLqQUnid6X55QfphsJpsvSFkwFQkk4kg38byU8RHb7jw+EaWR2JqOeoARZT92Somj2jaEq58n5c5knRmrpqVXXdqy67A8EpomE3LcaOqX5RzMcyqxJ2b4VlbsXx3OQs7Q8aLdzKoXwpQoOKgj36sXMn2/pJt+l/Sk3zkqs8zk4VMZobfT6EpMMlPejC1px+2e7EP1jWE6j8c0zmi/pJCgxXbSPtTo6ssYRwZtF4zO48RQ2bNig66Ha+Qft1Zg+vy5STsvZG6HRBq7Mmxnpa49Rg6vlY9ON4XIwvE8v8Q6YVeYklO/UqGpSQgs25P/dxqodbPrXrtanevULCB8/mnZq8TyV7CNAmzLsg1v8i45SVfhl0K0m34g9q46AW3sXodEX1VHRZOXXp1cicDhaSQpTn5wbGdyf7rheY3/bUl6Nys4Bak/FSEScb+4kp/Lb6f5Lsjtv+8bBfp4jXxJP5uW/8dFLHiT+IsvkbxL7pfRLafrkAAAEiaUNDUElDQyBwcm9maWxlAAB4nJ2Qv0rDUBTGf6niP+qkOKhDBteCg2ZyqQqhoBBjBatTmqRYTGJIUopv4Jvow3QQBJ/BWcHZ70YHB7N44eP8OJzzffdeaNlJmJbzu5BmVeH63cHl4MpefGOZtrTFXhCWedfzTmg8n69Ypr50jFfz3J9nIYrLUHUmZWFeVGAdiJ1plRuWWL/t+0fiB7EdpVkkfhLvRGlk2Oz6aTIJfzzNbdpxdnFu+tI2Lj1O8bAZMmFMQkVHNVPnGId9VZeCgHtKQtWEWL2pZipuRKWcXA5FfZFu05C3Wed5ShnKYywvk3BHKk+Th/nf77WPs3rT2pjlQRHUrTmpNRrB+yOsDmDtGVauG7KWfr+tYcapZ/75xi8Ik1B1a4BIzwAADRxpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6ZjNlMmQ5MzgtMDE4Yi00YmEyLThiMzQtNDBiM2Q4MmJjZDMzIgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0ZTMwYzM5LTllYWItNGJjZS1hMjU0LTUxOGY3ODRjODg0NiIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmUxNzgzM2U1LWQ1ZWMtNDM3NC1hYzJlLTk0YzVlN2I5OGUzNyIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09Ik1hYyBPUyIKICAgR0lNUDpUaW1lU3RhbXA9IjE3MjYxMzMyOTE1MjEwMDciCiAgIEdJTVA6VmVyc2lvbj0iMi4xMC4zMCIKICAgdGlmZjpPcmllbnRhdGlvbj0iMSIKICAgeG1wOkNyZWF0b3JUb29sPSJHSU1QIDIuMTAiPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpmN2Q4YzdkZC1mMGNlLTQxNWYtOWQ1ZS04NGE2YThmNGZkMDUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTWFjIE9TKSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyNC0wOS0xMlQxNzoyODoxMSswODowMCIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9InciPz7Mhr9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH6AkMCRwLD3FR3AAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC8SURBVBjTY/gPAf9e/YUwmBig4Nh7CA0T+H/7JqrAhzf3UQR+TeB4DGEx/mdgYPhy/vg32W/iIUxQFW+Xvf7h9tb03AOolv8rHU84/Wf69fsRVOAt80F1+Tcal/k/QAVuqfx0e/tRmVmBBSrAyyPG8zTglpmEEFRAgUfkj8Z9BUVO2ddQFeIC/wQYFBj4PnMwMDCwMDAwCDB95RJj+8DDygsVYBFiY2Bj4f4nCncpA8OfH/9/8zMzMDAwAAB49kdRfpOTuAAAAABJRU5ErkJggg==" alt="." style="background-color: #fcf7c0; background-color: inherit" title="NPM Package IG Dependency" class="hierarchy" /> <a href="http://hl7.org/fhir/tools/0.9.0" title="Canonical: http://hl7.org/fhir/tools">FHIR Tooling Extensions IG</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.tools.r4/0.9.0">hl7.fhir.uv.tools.r4#0.9.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">for example references</td></tr>
+</table></div>
+<table class="grid"><tr><td><p><b>Package hl7.fhir.uv.extensions.r4#5.2.0</b></p>
+<p>This IG defines the global extensions - the ones defined for everyone. These extensions are always in scope wherever FHIR is being used (built Mon, Feb 10, 2025 21:45+1100+11:00)</p>
+</td></tr></table>
+<table class="grid"><tr><td><p><b>Package hl7.fhir.uv.ips#1.1.0</b></p>
+<p>International Patient Summary (IPS) FHIR Implementation Guide (built Tue, Nov 22, 2022 03:24+0000+00:00)</p>
+</td></tr></table>
+<table class="grid"><tr><td><p><b>Package hl7.fhir.uv.tools.r4#0.9.0</b></p>
+<p>This IG defines the extensions that the tools use internally. Some of these extensions are content that are being evaluated for elevation into the main spec, and others are tooling concerns (built Tue, Dec 16, 2025 23:18+1100+11:00)</p>
+</td></tr></table>
+<!--$$3$$-->
+
+<h4 id="globals">Globals</h4>
+<p><i>There are no Global profiles defined</i></p>
+<!--$$4$$-->
+
+<h4 id="cross-version-analysis">Cross Version Analysis</h4>
+<p>This is an R4 IG. None of the features it uses are changed in R4B, so it can be used as is with R4B systems. Packages for both <a href="../package.r4.tgz">R4 (hl7.fhir.uv.phr.r4)</a> and <a href="../package.r4b.tgz">R4B (hl7.fhir.uv.phr.r4b)</a> are available.</p>
+<!--$$2$$-->
+
+<h4 id="ip-statements">IP Statements</h4>
+<p>This publication includes IP covered under the following statements.</p>
+<ul>
+<li>The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. <a href="https://ucum.org/trac/wiki/TermsOfUse">https://ucum.org/trac/wiki/TermsOfUse</a><div data-fhir="generated" id="ipp_1" onclick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_1" style="display: none">
+<ul>
+<li><a href="http://terminology.hl7.org/5.0.0/CodeSystem-v3-ucum.html">Unified Code for Units of Measure (UCUM)</a>: <a href="Observation-PCDSleepObservation-duration-example.html">Observation/PCDSleepObservation-duration-example</a>, <a href="Observation-pghd-activity-activeEnergyBurned.html">Observation/pghd-activity-activeEnergyBurned</a><span id="ips_1" onclick="document.getElementById('ips_1').innerHTML = document.getElementById('ips2_1').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 46 more</span></span><span id="ips2_1" style="display: none">, <a href="Observation-pghd-activity-activeEnergyBurned-underwater-diving.html">Observation/pghd-activity-activeEnergyBurned-underwater-diving</a>, <a href="Observation-pghd-activity-activeEnergyBurned-walking.html">Observation/pghd-activity-activeEnergyBurned-walking</a>, <a href="Observation-pghd-activity-appleExerciseTime.html">Observation/pghd-activity-appleExerciseTime</a>, <a href="Observation-pghd-activity-appleMoveTime.html">Observation/pghd-activity-appleMoveTime</a>, <a href="Observation-pghd-activity-basalEnergyBurned.html">Observation/pghd-activity-basalEnergyBurned</a>, <a href="Observation-pghd-activity-cyclingCadence.html">Observation/pghd-activity-cyclingCadence</a>, <a href="Observation-pghd-activity-distanceWalkingRunning-walking.html">Observation/pghd-activity-distanceWalkingRunning-walking</a>, <a href="Observation-pghd-alchol-consumption-blood-alcohol-content.html">Observation/pghd-alchol-consumption-blood-alcohol-content</a>, <a href="Observation-pghd-blood-glucose-1.html">Observation/pghd-blood-glucose-1</a>, <a href="Observation-pghd-blood-glucose-2.html">Observation/pghd-blood-glucose-2</a>, <a href="Observation-pghd-bloodpressure.html">Observation/pghd-bloodpressure</a>, <a href="Observation-pghd-bmi.html">Observation/pghd-bmi</a>, <a href="Observation-pghd-bodyheight.html">Observation/pghd-bodyheight</a>, <a href="Observation-pghd-bodymeasurement-body-fat-percentage.html">Observation/pghd-bodymeasurement-body-fat-percentage</a>, <a href="Observation-pghd-bodytemperature.html">Observation/pghd-bodytemperature</a>, <a href="Observation-pghd-bodyweight.html">Observation/pghd-bodyweight</a>, <a href="Observation-pghd-diving-underwater-depthg.html">Observation/pghd-diving-underwater-depthg</a>, <a href="Observation-pghd-diving-water-temperature.html">Observation/pghd-diving-water-temperature</a>, <a href="Observation-pghd-hearing-environmental-audio-exposure.html">Observation/pghd-hearing-environmental-audio-exposure</a>, <a href="Observation-pghd-hearingSensitivity-1.html">Observation/pghd-hearingSensitivity-1</a>, <a href="Observation-pghd-hearingSensitivity-2.html">Observation/pghd-hearingSensitivity-2</a>, <a href="Observation-pghd-hearingSensitivity-3.html">Observation/pghd-hearingSensitivity-3</a>, <a href="Observation-pghd-hearingSensitivity-4.html">Observation/pghd-hearingSensitivity-4</a>, <a href="Observation-pghd-heartbeat.html">Observation/pghd-heartbeat</a>, <a href="Observation-pghd-heartrate.html">Observation/pghd-heartrate</a>, <a href="Observation-pghd-medication-adherence.html">Observation/pghd-medication-adherence</a>, <a href="Observation-pghd-mobility-stair-descent-speed.html">Observation/pghd-mobility-stair-descent-speed</a>, <a href="Observation-pghd-nutrition-dietary-carbohydrates.html">Observation/pghd-nutrition-dietary-carbohydrates</a>, <a href="Observation-pghd-nutrition-dietary-energy-consumed.html">Observation/pghd-nutrition-dietary-energy-consumed</a>, <a href="Observation-pghd-nutrition-dietary-fiber.html">Observation/pghd-nutrition-dietary-fiber</a>, <a href="Observation-pghd-nutrition-dietary-protein.html">Observation/pghd-nutrition-dietary-protein</a>, <a href="Observation-pghd-oxygenSaturation.html">Observation/pghd-oxygenSaturation</a>, <a href="Observation-pghd-respiratoryrate.html">Observation/pghd-respiratoryrate</a>, <a href="Observation-pghd-sleep-episode-1.html">Observation/pghd-sleep-episode-1</a>, <a href="Observation-pghd-sleep-episode-2.html">Observation/pghd-sleep-episode-2</a>, <a href="Observation-pghd-sleep-episode-core-sleep-1.html">Observation/pghd-sleep-episode-core-sleep-1</a>, <a href="Observation-pghd-sleep-episode-core-sleep-2.html">Observation/pghd-sleep-episode-core-sleep-2</a>, <a href="Observation-pghd-sleep-episode-deep-sleep-1.html">Observation/pghd-sleep-episode-deep-sleep-1</a>, <a href="Observation-pghd-sleep-episode-deep-sleep-2.html">Observation/pghd-sleep-episode-deep-sleep-2</a>, <a href="Observation-pghd-sleep-episode-latency-to-sleep-onset-1.html">Observation/pghd-sleep-episode-latency-to-sleep-onset-1</a>, <a href="Observation-pghd-sleep-episode-latency-to-sleep-onset-2.html">Observation/pghd-sleep-episode-latency-to-sleep-onset-2</a>, <a href="Observation-pghd-snore-index-1.html">Observation/pghd-snore-index-1</a>, <a href="Observation-pghd-snore-index-2.html">Observation/pghd-snore-index-2</a>, <a href="Observation-pghd-testresult-forced-vital-capacity.html">Observation/pghd-testresult-forced-vital-capacity</a>, <a href="Observation-pghd-vitalsigns-apple-sleeping-wrist-temperature.html">Observation/pghd-vitalsigns-apple-sleeping-wrist-temperature</a> and <a href="CodeSystem-observation-pghd-codes.html">ObservationPGHD</a></span></li>
+</ul>
+</div></li>
+<li>These codes are excerpted from ASTM Standard, E1762-95(2013) - Standard Guide for Electronic Authentication of Health Care Information, Copyright by ASTM International, 100 Barr Harbor Drive, West Conshohocken, PA 19428. Copies of this standard are available through the ASTM Web Site at www.astm.org.<div data-fhir="generated" id="ipp_2" onclick="if (document.getElementById('ipp2_2').innerHTML != '') {document.getElementById('ipp_2').innerHTML = document.getElementById('ipp2_2').innerHTML; document.getElementById('ipp2_2').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_2" style="display: none">
+<ul>
+<li><a href="http://hl7.org/fhir/R4/codesystem-signature-type.html">Signature Type Codes</a>: <a href="Bundle-PhrBundle-example.html">Bundle/PhrBundle-example</a> and <a href="Provenance-jane-doe-media-provenance.html">Provenance/jane-doe-media-provenance</a></li>
+</ul>
+</div></li>
+<li>This material contains content from <a href="http://loinc.org">LOINC</a>. LOINC is copyright &copy; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the <a href="http://loinc.org/license">license</a>. LOINC&reg; is a registered United States trademark of Regenstrief Institute, Inc.<div data-fhir="generated" id="ipp_3" onclick="if (document.getElementById('ipp2_3').innerHTML != '') {document.getElementById('ipp_3').innerHTML = document.getElementById('ipp2_3').innerHTML; document.getElementById('ipp2_3').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_3" style="display: none">
+<ul>
+<li><a href="http://terminology.hl7.org/5.0.0/CodeSystem-v3-loinc.html">LOINC</a>: <a href="Bundle-PhrBundle-example.html">Bundle/PhrBundle-example</a>, <a href="Composition-jane-doe-composition.html">Composition/jane-doe-composition</a><span id="ips_3" onclick="document.getElementById('ips_3').innerHTML = document.getElementById('ips2_3').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 33 more</span></span><span id="ips2_3" style="display: none">, <a href="Questionnaire-gad7.html">GAD7</a>, <a href="Observation-PCDSleepObservation-duration-example.html">Observation/PCDSleepObservation-duration-example</a>, <a href="Observation-ScoredAssessmentGAD7Example.html">Observation/ScoredAssessmentGAD7Example</a>, <a href="Observation-ScoredAssessmentPHQ9Example.html">Observation/ScoredAssessmentPHQ9Example</a>, <a href="Observation-pghd-blood-glucose-1.html">Observation/pghd-blood-glucose-1</a>, <a href="Observation-pghd-blood-glucose-2.html">Observation/pghd-blood-glucose-2</a>, <a href="Observation-pghd-blood-glucose-3.html">Observation/pghd-blood-glucose-3</a>, <a href="Observation-pghd-bloodpressure.html">Observation/pghd-bloodpressure</a>, <a href="Observation-pghd-bmi.html">Observation/pghd-bmi</a>, <a href="Observation-pghd-bodyheight.html">Observation/pghd-bodyheight</a>, <a href="Observation-pghd-bodytemperature.html">Observation/pghd-bodytemperature</a>, <a href="Observation-pghd-bodyweight.html">Observation/pghd-bodyweight</a>, <a href="Observation-pghd-heartrate.html">Observation/pghd-heartrate</a>, <a href="Observation-pghd-oxygenSaturation.html">Observation/pghd-oxygenSaturation</a>, <a href="Observation-pghd-pregnancy-status.html">Observation/pghd-pregnancy-status</a>, <a href="Observation-pghd-respiratoryrate.html">Observation/pghd-respiratoryrate</a>, <a href="ValueSet-observation-scored-assessment-score-codes.html">ObservationScoredAssessmentScore</a>, <a href="StructureDefinition-pcd-sleep-observation.html">PCDSleepObservation</a>, <a href="ValueSet-pcd-sleep-observation-code.html">PCDSleepObservationCode</a>, <a href="StructureDefinition-pghd-bmi.html">PGHDBMI</a>, <a href="StructureDefinition-pghd-bloodpressure.html">PGHDBloodPressure</a>, <a href="StructureDefinition-pghd-bodyheight.html">PGHDBodyHeight</a>, <a href="StructureDefinition-pghd-bodytemperature.html">PGHDBodyTemperature</a>, <a href="StructureDefinition-pghd-bodyweight.html">PGHDBodyWeight</a>, <a href="StructureDefinition-pghd-heartrate.html">PGHDHeartRate</a>, <a href="StructureDefinition-pghd-observation-scored-assessment.html">PGHDObservationScoredAssessment</a>, <a href="StructureDefinition-pghd-oxygenSaturation.html">PGHDOxygenSaturation</a>, <a href="StructureDefinition-pghd-pregnancy-status.html">PGHDPregnancyStatus</a>, <a href="StructureDefinition-pghd-respiratoryrate.html">PGHDRespiratoryRate</a>, <a href="Questionnaire-phq9.html">PHQ9</a>, <a href="StructureDefinition-PhrComposition.html">PhrComposition</a>, <a href="QuestionnaireResponse-gad7.html">QuestionnaireResponse/gad7</a> and <a href="QuestionnaireResponse-phq9.html">QuestionnaireResponse/phq9</a></span></li>
+</ul>
+</div></li>
+<li>This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact <a href="https://www.snomed.org/get-snomed">https://www.snomed.org/get-snomed</a> or <a href="mailto:info@snomed.org">info@snomed.org</a>.<div data-fhir="generated" id="ipp_4" onclick="if (document.getElementById('ipp2_4').innerHTML != '') {document.getElementById('ipp_4').innerHTML = document.getElementById('ipp2_4').innerHTML; document.getElementById('ipp2_4').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_4" style="display: none">
+<ul>
+<li><a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED Clinical Terms&amp;reg; (SNOMED CT&amp;reg;)</a>: <a href="Bundle-PhrBundle-example.html">Bundle/PhrBundle-example</a>, <a href="Bundle-pdr-message.html">Bundle/pdr-message</a><span id="ips_4" onclick="document.getElementById('ips_4').innerHTML = document.getElementById('ips2_4').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 7 more</span></span><span id="ips2_4" style="display: none">, <a href="Media-jane-doe-media.html">Media/jane-doe-media</a>, <a href="Observation-PCDSleepObservation-stage-example.html">Observation/PCDSleepObservation-stage-example</a>, <a href="ValueSet-observation-symptom-snomedct-codes.html">ObservationSymptomSNOMEDCT</a>, <a href="StructureDefinition-pcd-sleep-observation.html">PCDSleepObservation</a>, <a href="ValueSet-pcd-sleep-observation-code.html">PCDSleepObservationCode</a>, <a href="ValueSet-pcd-sleep-observation-value.html">PCDSleepStageValueCode</a> and <a href="StructureDefinition-pghd-symptom.html">PGHDSymptom</a></span></li>
+</ul>
+</div></li>
+<li>This material derives from the HL7 Terminology (THO). THO is copyright &copy;1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: <a href="https://terminology.hl7.org/license.html">https://terminology.hl7.org/license.html</a><div data-fhir="generated" id="ipp_5" onclick="if (document.getElementById('ipp2_5').innerHTML != '') {document.getElementById('ipp_5').innerHTML = document.getElementById('ipp2_5').innerHTML; document.getElementById('ipp2_5').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_5" style="display: none">
+<ul>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-data-absent-reason.html">DataAbsentReason</a>: <a href="Questionnaire-gad7.html">GAD7</a>, <a href="Observation-StateOfMind2Example.html">Observation/StateOfMind2Example</a>, <a href="Observation-pghd-blood-glucose-3.html">Observation/pghd-blood-glucose-3</a>, <a href="Observation-pghd-heartbeat.html">Observation/pghd-heartbeat</a> and <a href="Questionnaire-phq9.html">PHQ9</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-observation-category.html">Observation Category Codes</a>: <a href="Observation-ScoredAssessmentGAD7Example.html">Observation/ScoredAssessmentGAD7Example</a>, <a href="Observation-ScoredAssessmentPHQ9Example.html">Observation/ScoredAssessmentPHQ9Example</a><span id="ips_6" onclick="document.getElementById('ips_6').innerHTML = document.getElementById('ips2_6').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 68 more</span></span><span id="ips2_6" style="display: none">, <a href="Observation-StateOfMind2Example.html">Observation/StateOfMind2Example</a>, <a href="Observation-StateOfMindExample.html">Observation/StateOfMindExample</a>, <a href="Observation-pghd-activity-activeEnergyBurned.html">Observation/pghd-activity-activeEnergyBurned</a>, <a href="Observation-pghd-activity-activeEnergyBurned-underwater-diving.html">Observation/pghd-activity-activeEnergyBurned-underwater-diving</a>, <a href="Observation-pghd-activity-activeEnergyBurned-walking.html">Observation/pghd-activity-activeEnergyBurned-walking</a>, <a href="Observation-pghd-activity-appleExerciseTime.html">Observation/pghd-activity-appleExerciseTime</a>, <a href="Observation-pghd-activity-appleMoveTime.html">Observation/pghd-activity-appleMoveTime</a>, <a href="Observation-pghd-activity-appleStandHour.html">Observation/pghd-activity-appleStandHour</a>, <a href="Observation-pghd-activity-basalEnergyBurned.html">Observation/pghd-activity-basalEnergyBurned</a>, <a href="Observation-pghd-activity-cyclingCadence.html">Observation/pghd-activity-cyclingCadence</a>, <a href="Observation-pghd-activity-distanceWalkingRunning-walking.html">Observation/pghd-activity-distanceWalkingRunning-walking</a>, <a href="Observation-pghd-alchol-consumption-blood-alcohol-content.html">Observation/pghd-alchol-consumption-blood-alcohol-content</a>, <a href="Observation-pghd-alchol-use-number-of-alcoholic-beverages.html">Observation/pghd-alchol-use-number-of-alcoholic-beverages</a>, <a href="Observation-pghd-audiogram.html">Observation/pghd-audiogram</a>, <a href="Observation-pghd-blood-glucose-1.html">Observation/pghd-blood-glucose-1</a>, <a href="Observation-pghd-blood-glucose-2.html">Observation/pghd-blood-glucose-2</a>, <a href="Observation-pghd-blood-glucose-3.html">Observation/pghd-blood-glucose-3</a>, <a href="Observation-pghd-bloodpressure.html">Observation/pghd-bloodpressure</a>, <a href="Observation-pghd-bmi.html">Observation/pghd-bmi</a>, <a href="Observation-pghd-bodyheight.html">Observation/pghd-bodyheight</a>, <a href="Observation-pghd-bodymeasurement-body-fat-percentage.html">Observation/pghd-bodymeasurement-body-fat-percentage</a>, <a href="Observation-pghd-bodytemperature.html">Observation/pghd-bodytemperature</a>, <a href="Observation-pghd-bodyweight.html">Observation/pghd-bodyweight</a>, <a href="Observation-pghd-cardiac-function-lowHeart-rate-event.html">Observation/pghd-cardiac-function-lowHeart-rate-event</a>, <a href="Observation-pghd-diving-underwater-depthg.html">Observation/pghd-diving-underwater-depthg</a>, <a href="Observation-pghd-diving-water-temperature.html">Observation/pghd-diving-water-temperature</a>, <a href="Observation-pghd-food.html">Observation/pghd-food</a>, <a href="Observation-pghd-hearing-environmental-audio-exposure.html">Observation/pghd-hearing-environmental-audio-exposure</a>, <a href="Observation-pghd-hearingSensitivity-1.html">Observation/pghd-hearingSensitivity-1</a>, <a href="Observation-pghd-hearingSensitivity-2.html">Observation/pghd-hearingSensitivity-2</a>, <a href="Observation-pghd-hearingSensitivity-3.html">Observation/pghd-hearingSensitivity-3</a>, <a href="Observation-pghd-hearingSensitivity-4.html">Observation/pghd-hearingSensitivity-4</a>, <a href="Observation-pghd-heart-electrocardiogram.html">Observation/pghd-heart-electrocardiogram</a>, <a href="Observation-pghd-heartbeat.html">Observation/pghd-heartbeat</a>, <a href="Observation-pghd-heartrate.html">Observation/pghd-heartrate</a>, <a href="Observation-pghd-medication-adherence.html">Observation/pghd-medication-adherence</a>, <a href="Observation-pghd-mindfulness-mindful-session.html">Observation/pghd-mindfulness-mindful-session</a>, <a href="Observation-pghd-mobility-stair-descent-speed.html">Observation/pghd-mobility-stair-descent-speed</a>, <a href="Observation-pghd-nutrition-dietary-carbohydrates.html">Observation/pghd-nutrition-dietary-carbohydrates</a>, <a href="Observation-pghd-nutrition-dietary-energy-consumed.html">Observation/pghd-nutrition-dietary-energy-consumed</a>, <a href="Observation-pghd-nutrition-dietary-fiber.html">Observation/pghd-nutrition-dietary-fiber</a>, <a href="Observation-pghd-nutrition-dietary-protein.html">Observation/pghd-nutrition-dietary-protein</a>, <a href="Observation-pghd-oxygenSaturation.html">Observation/pghd-oxygenSaturation</a>, <a href="Observation-pghd-pregnancy-status.html">Observation/pghd-pregnancy-status</a>, <a href="Observation-pghd-reproductive-health-intermenstrual-bleeding.html">Observation/pghd-reproductive-health-intermenstrual-bleeding</a>, <a href="Observation-pghd-respiratoryrate.html">Observation/pghd-respiratoryrate</a>, <a href="Observation-pghd-selfcare-handwashingEvent.html">Observation/pghd-selfcare-handwashingEvent</a>, <a href="Observation-pghd-sleep-asleep-core.html">Observation/pghd-sleep-asleep-core</a>, <a href="Observation-pghd-sleep-episode-1.html">Observation/pghd-sleep-episode-1</a>, <a href="Observation-pghd-sleep-episode-2.html">Observation/pghd-sleep-episode-2</a>, <a href="Observation-pghd-sleep-episode-core-sleep-1.html">Observation/pghd-sleep-episode-core-sleep-1</a>, <a href="Observation-pghd-sleep-episode-core-sleep-2.html">Observation/pghd-sleep-episode-core-sleep-2</a>, <a href="Observation-pghd-sleep-episode-deep-sleep-1.html">Observation/pghd-sleep-episode-deep-sleep-1</a>, <a href="Observation-pghd-sleep-episode-deep-sleep-2.html">Observation/pghd-sleep-episode-deep-sleep-2</a>, <a href="Observation-pghd-sleep-episode-latency-to-sleep-onset-1.html">Observation/pghd-sleep-episode-latency-to-sleep-onset-1</a>, <a href="Observation-pghd-sleep-episode-latency-to-sleep-onset-2.html">Observation/pghd-sleep-episode-latency-to-sleep-onset-2</a>, <a href="Observation-pghd-snore-event-1.html">Observation/pghd-snore-event-1</a>, <a href="Observation-pghd-snore-event-2.html">Observation/pghd-snore-event-2</a>, <a href="Observation-pghd-snore-event-3.html">Observation/pghd-snore-event-3</a>, <a href="Observation-pghd-snore-index-1.html">Observation/pghd-snore-index-1</a>, <a href="Observation-pghd-snore-index-2.html">Observation/pghd-snore-index-2</a>, <a href="Observation-pghd-symptom-fever.html">Observation/pghd-symptom-fever</a>, <a href="Observation-pghd-testresult-forced-vital-capacity.html">Observation/pghd-testresult-forced-vital-capacity</a>, <a href="Observation-pghd-uvexposure.html">Observation/pghd-uvexposure</a>, <a href="Observation-pghd-vitalsigns-apple-sleeping-wrist-temperature.html">Observation/pghd-vitalsigns-apple-sleeping-wrist-temperature</a>, <a href="Observation-pghd-voltage-measurement.html">Observation/pghd-voltage-measurement</a>, <a href="Observation-pghd-workout-underwater-diving.html">Observation/pghd-workout-underwater-diving</a> and <a href="Observation-pghd-workout-walking.html">Observation/pghd-workout-walking</a></span></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-provenance-participant-type.html">Provenance participant type</a>: <a href="Bundle-PhrBundle-example.html">Bundle/PhrBundle-example</a> and <a href="Provenance-jane-doe-media-provenance.html">Provenance/jane-doe-media-provenance</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-referencerange-meaning.html">Observation Reference Range Meaning Codes</a>: <a href="Observation-pghd-blood-glucose-2.html">Observation/pghd-blood-glucose-2</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-v2-0203.html">identifierType</a>: <a href="Bundle-pdr-message.html">Bundle/pdr-message</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html">ActCode</a>: <a href="Bundle-pdr-message.html">Bundle/pdr-message</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-MaritalStatus.html">MaritalStatus</a>: <a href="Bundle-pdr-message.html">Bundle/pdr-message</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>: <a href="Observation-pghd-blood-glucose-2.html">Observation/pghd-blood-glucose-2</a></li>
+</ul>
+</div></li>
+<li>Using RxNorm codes of type SAB=RXNORM as this specification describes does not require  a UMLS license. Access to the full set of RxNorm definitions, and/or additional use of other RxNorm structures and information requires a UMLS license. The use of RxNorm in this specification is pursuant to HL7's status as a licensee of the NLM UMLS. HL7's license does not convey the right to use RxNorm to any users of this specification; implementers must acquire a license to use RxNorm in their own right.<div data-fhir="generated" id="ipp_6" onclick="if (document.getElementById('ipp2_6').innerHTML != '') {document.getElementById('ipp_6').innerHTML = document.getElementById('ipp2_6').innerHTML; document.getElementById('ipp2_6').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_6" style="display: none">
+<ul>
+<li><a href="http://terminology.hl7.org/5.0.0/CodeSystem-v3-rxNorm.html">RxNorm</a>: <a href="MedicationAdministration-pghd-medicationadministration-insulin-1.html">MedicationAdministration/pghd-medicationadministration-insulin-1</a></li>
+</ul>
+</div></li>
+</ul>
+<!--$$1$$-->
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
+          Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-03-12 15:47:00 -0500">
+    2026-03-12
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir/uv/phr/history.html">Version History</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

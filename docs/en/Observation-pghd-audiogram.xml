@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="pghd-audiogram"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-audiogram"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><p class="res-header-id"><b>Generated Narrative: Observation pghd-audiogram</b></p><a name="pghd-audiogram"> </a><a name="hcpghd-audiogram"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-pghd-audiogram.html">PGHD Audiogram Profile</a></p></div><p><b>identifier</b>: <code>urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3</code>/DE430E9B-03F4-4310-ACA1-508787B240CD</p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category exam}">Exam</span></p><p><b>code</b>: <span title="Codes:{http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes Audiogram}">Audiogram</span></p><p><b>subject</b>: <a href="Patient-1.html">John Doe Male, DoB: 1990-01-01</a></p><p><b>effective</b>: 2023-12-01 05:33:42+0000 --&gt; 2023-12-01 05:35:22+0000</p><p><b>performer</b>: <a href="Patient-1.html">John Doe Male, DoB: 1990-01-01</a></p><p><b>hasMember</b>: </p><ul><li><a href="Observation-pghd-hearingSensitivity-1.html">Observation Hearing sensitivity</a></li><li><a href="Observation-pghd-hearingSensitivity-2.html">Observation Hearing sensitivity</a></li><li><a href="Observation-pghd-hearingSensitivity-3.html">Observation Hearing sensitivity</a></li><li><a href="Observation-pghd-hearingSensitivity-4.html">Observation Hearing sensitivity</a></li></ul></div>
+  </text>
+  <identifier>
+    <system value="urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3"/>
+    <value value="DE430E9B-03F4-4310-ACA1-508787B240CD"/>
+  </identifier>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="exam"/>
+      <display value="Exam"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"/>
+      <code value="Audiogram"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/1"/>
+  </subject>
+  <effectivePeriod>
+    <start value="2023-12-01T05:33:42Z"/>
+    <end value="2023-12-01T05:35:22Z"/>
+  </effectivePeriod>
+  <performer>
+    <reference value="Patient/1"/>
+  </performer>
+  <hasMember>
+    <reference value="Observation/pghd-hearingSensitivity-1"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/pghd-hearingSensitivity-2"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/pghd-hearingSensitivity-3"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/pghd-hearingSensitivity-4"/>
+  </hasMember>
+</Observation>

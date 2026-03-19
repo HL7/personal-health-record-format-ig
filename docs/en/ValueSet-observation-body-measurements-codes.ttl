@@ -1,0 +1,123 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/phr/ValueSet/observation-body-measurements-codes> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "observation-body-measurements-codes"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet observation-body-measurements-codes</b></p><a name=\"observation-body-measurements-codes\"> </a><a name=\"hcobservation-body-measurements-codes\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-observation-pghd-codes.html\"><code>http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?1.0.0-ballot2</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-height\">height</a></td><td style=\"color: #cccccc\">Height</td><td>A quantity sample type that measures the user's height.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-bodyMass\">bodyMass</a></td><td style=\"color: #cccccc\">Body mass</td><td>A quantity sample type that measures the user's weight.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-bodyMassIndex\">bodyMassIndex</a></td><td style=\"color: #cccccc\">Body mass index</td><td>A quantity sample type that measures the user's body mass index.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-leanBodyMass\">leanBodyMass</a></td><td style=\"color: #cccccc\">Lean body mass</td><td>A quantity sample type that measures the user's lean body mass.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-bodyFatPercentage\">bodyFatPercentage</a></td><td style=\"color: #cccccc\">Body fat percentage</td><td>A quantity sample type that measures the user's body fat percentage.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-waistCircumference\">waistCircumference</a></td><td style=\"color: #cccccc\">Waist circumference</td><td>A quantity sample type that measures the user's waist circumference.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-hipCircumference\">hipCircumference</a></td><td style=\"color: #cccccc\">Hip circumference</td><td>A quantity sample type that measures the user's hip circumference.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-boneMass\">boneMass</a></td><td style=\"color: #cccccc\">Bone mass</td><td>A quantity sample type that measures the user's bone mass</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "pe"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 1 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/uv/phr/ValueSet/observation-body-measurements-codes"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/uv/phr/ValueSet/observation-body-measurements-codes>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0-ballot2"] ; # 
+  fhir:name [ fhir:v "ObservationBodyMeasurementsValueSet"] ; # 
+  fhir:title [ fhir:v "Observation BodyMeasurements Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-03-12T15:47:36-05:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientempowerment" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes representing measurement items related to physical measurements"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "height" ]
+       ] [
+         fhir:code [ fhir:v "bodyMass" ]
+       ] [
+         fhir:code [ fhir:v "bodyMassIndex" ]
+       ] [
+         fhir:code [ fhir:v "leanBodyMass" ]
+       ] [
+         fhir:code [ fhir:v "bodyFatPercentage" ]
+       ] [
+         fhir:code [ fhir:v "waistCircumference" ]
+       ] [
+         fhir:code [ fhir:v "hipCircumference" ]
+       ] [
+         fhir:code [ fhir:v "boneMass" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
