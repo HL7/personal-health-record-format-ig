@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="ecg-lead-codes"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem ecg-lead-codes</b></p><a name="ecg-lead-codes"> </a><a name="hcecg-lead-codes"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/ecg-lead-codes</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td></tr><tr><td style="white-space:nowrap">appleWatchSimilarToLeadI<a name="ecg-lead-codes-appleWatchSimilarToLeadI"> </a></td></tr><tr><td style="white-space:nowrap">I<a name="ecg-lead-codes-I"> </a></td></tr><tr><td style="white-space:nowrap">II<a name="ecg-lead-codes-II"> </a></td></tr><tr><td style="white-space:nowrap">III<a name="ecg-lead-codes-III"> </a></td></tr><tr><td style="white-space:nowrap">aVR<a name="ecg-lead-codes-aVR"> </a></td></tr><tr><td style="white-space:nowrap">aVL<a name="ecg-lead-codes-aVL"> </a></td></tr><tr><td style="white-space:nowrap">aVF<a name="ecg-lead-codes-aVF"> </a></td></tr><tr><td style="white-space:nowrap">V1<a name="ecg-lead-codes-V1"> </a></td></tr><tr><td style="white-space:nowrap">V2<a name="ecg-lead-codes-V2"> </a></td></tr><tr><td style="white-space:nowrap">V3<a name="ecg-lead-codes-V3"> </a></td></tr><tr><td style="white-space:nowrap">V4<a name="ecg-lead-codes-V4"> </a></td></tr><tr><td style="white-space:nowrap">V5<a name="ecg-lead-codes-V5"> </a></td></tr><tr><td style="white-space:nowrap">V6<a name="ecg-lead-codes-V6"> </a></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/CodeSystem/ecg-lead-codes"/>
+  <version value="1.0.0-ballot2"/>
+  <name value="EcgLead"/>
+  <title value="ECG Lead Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-12T15:47:36-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <description value="Codes for ECG induction"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <compositional value="false"/>
+  <content value="complete"/>
+  <count value="13"/>
+  <concept>
+    <code value="appleWatchSimilarToLeadI"/>
+    <display value="appleWatchSimilarToLeadI"/>
+  </concept>
+  <concept>
+    <code value="I"/>
+    <display value="I"/>
+  </concept>
+  <concept>
+    <code value="II"/>
+    <display value="II"/>
+  </concept>
+  <concept>
+    <code value="III"/>
+    <display value="III"/>
+  </concept>
+  <concept>
+    <code value="aVR"/>
+    <display value="aVR"/>
+  </concept>
+  <concept>
+    <code value="aVL"/>
+    <display value="aVL"/>
+  </concept>
+  <concept>
+    <code value="aVF"/>
+    <display value="aVF"/>
+  </concept>
+  <concept>
+    <code value="V1"/>
+    <display value="V1"/>
+  </concept>
+  <concept>
+    <code value="V2"/>
+    <display value="V2"/>
+  </concept>
+  <concept>
+    <code value="V3"/>
+    <display value="V3"/>
+  </concept>
+  <concept>
+    <code value="V4"/>
+    <display value="V4"/>
+  </concept>
+  <concept>
+    <code value="V5"/>
+    <display value="V5"/>
+  </concept>
+  <concept>
+    <code value="V6"/>
+    <display value="V6"/>
+  </concept>
+</CodeSystem>

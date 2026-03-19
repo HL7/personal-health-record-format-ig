@@ -1,0 +1,88 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "body-posture-codes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem body-posture-codes</b></p><a name=\"body-posture-codes\"> </a><a name=\"hcbody-posture-codes\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/body-posture-codes</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">sitting<a name=\"body-posture-codes-sitting\"> </a></td><td>Sitting</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">standing<a name=\"body-posture-codes-standing\"> </a></td><td>Standing</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">lyingDown<a name=\"body-posture-codes-lyingDown\"> </a></td><td>Lying down</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">\u00a0\u00a0supine<a name=\"body-posture-codes-supine\"> </a></td><td>Supine</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">\u00a0\u00a0prone<a name=\"body-posture-codes-prone\"> </a></td><td>Prone</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">\u00a0\u00a0recumbent<a name=\"body-posture-codes-recumbent\"> </a></td><td>Recumbent</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">\u00a0\u00a0semiRecumbent<a name=\"body-posture-codes-semiRecumbent\"> </a></td><td>Semi recumbent</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pe"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  }],
+  "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/body-posture-codes",
+  "version" : "1.0.0-ballot2",
+  "name" : "BodyPosture",
+  "title" : "Body Posture Codes",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-12T15:47:36-05:00",
+  "publisher" : "HL7 International / Patient Empowerment",
+  "contact" : [{
+    "name" : "HL7 International / Patient Empowerment",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/patientempowerment"
+    }]
+  }],
+  "description" : "Code for posture",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "hierarchyMeaning" : "is-a",
+  "compositional" : false,
+  "content" : "complete",
+  "count" : 7,
+  "concept" : [{
+    "code" : "sitting",
+    "display" : "Sitting"
+  },
+  {
+    "code" : "standing",
+    "display" : "Standing"
+  },
+  {
+    "code" : "lyingDown",
+    "display" : "Lying down",
+    "concept" : [{
+      "code" : "supine",
+      "display" : "Supine"
+    },
+    {
+      "code" : "prone",
+      "display" : "Prone"
+    },
+    {
+      "code" : "recumbent",
+      "display" : "Recumbent"
+    },
+    {
+      "code" : "semiRecumbent",
+      "display" : "Semi recumbent"
+    }]
+  }]
+}

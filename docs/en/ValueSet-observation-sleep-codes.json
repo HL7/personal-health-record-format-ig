@@ -1,0 +1,70 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "observation-sleep-codes",
+  "language" : "en",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet observation-sleep-codes</b></p><a name=\"observation-sleep-codes\"> </a><a name=\"hcobservation-sleep-codes\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-observation-pghd-codes.html\"><code>http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;1.0.0-ballot2</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-sleepAnalysis\">sleepAnalysis</a></td><td style=\"color: #cccccc\">Sleep analysis</td><td>A category sample type for sleep analysis information.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-sleepAHI\">sleepAHI</a></td><td style=\"color: #cccccc\">Sleep ahi</td><td>The number of apnea and hypopnea events recorded per hour of sleep.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-sleepArousalIndex\">sleepArousalIndex</a></td><td style=\"color: #cccccc\">Sleep arousal index</td><td>The average number of arousals per hour of sleep.</td></tr></table></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pe"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  }],
+  "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-sleep-codes",
+  "version" : "1.0.0-ballot2",
+  "name" : "ObservationSleep",
+  "title" : "Observation Sleep Codes",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-12T15:47:36-05:00",
+  "publisher" : "HL7 International / Patient Empowerment",
+  "contact" : [{
+    "name" : "HL7 International / Patient Empowerment",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/patientempowerment"
+    }]
+  }],
+  "description" : "Codes representing sleep-related measurement items",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes",
+      "concept" : [{
+        "code" : "sleepAnalysis"
+      },
+      {
+        "code" : "sleepAHI"
+      },
+      {
+        "code" : "sleepArousalIndex"
+      }]
+    }]
+  }
+}

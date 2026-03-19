@@ -1,0 +1,159 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/phr/CodeSystem/body-temperature-measurement-location-codes> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "body-temperature-measurement-location-codes"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem body-temperature-measurement-location-codes</b></p><a name=\"body-temperature-measurement-location-codes\"> </a><a name=\"hcbody-temperature-measurement-location-codes\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/body-temperature-measurement-location-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"body-temperature-measurement-location-codes-other\"> </a></td><td>Other</td><td>The temperature was taken at a location that is not otherwise in this list.</td></tr><tr><td style=\"white-space:nowrap\">armpit<a name=\"body-temperature-measurement-location-codes-armpit\"> </a></td><td>Armpit</td><td>The temperature was taken in the armpit.</td></tr><tr><td style=\"white-space:nowrap\">body<a name=\"body-temperature-measurement-location-codes-body\"> </a></td><td>Body</td><td>The temperature was taken on the body.</td></tr><tr><td style=\"white-space:nowrap\">ear<a name=\"body-temperature-measurement-location-codes-ear\"> </a></td><td>Ear</td><td>The temperature was taken in the ear.</td></tr><tr><td style=\"white-space:nowrap\">finger<a name=\"body-temperature-measurement-location-codes-finger\"> </a></td><td>Finger</td><td>The temperature was taken at the finger.</td></tr><tr><td style=\"white-space:nowrap\">gastroIntestinal<a name=\"body-temperature-measurement-location-codes-gastroIntestinal\"> </a></td><td>Gastrointestinal</td><td>The temperature was taken inside the gastrointestinal tract.</td></tr><tr><td style=\"white-space:nowrap\">mouth<a name=\"body-temperature-measurement-location-codes-mouth\"> </a></td><td>Mouth</td><td>The temperature was taken in the mouth.</td></tr><tr><td style=\"white-space:nowrap\">rectum<a name=\"body-temperature-measurement-location-codes-rectum\"> </a></td><td>Rectum</td><td>The temperature was taken in the rectum.</td></tr><tr><td style=\"white-space:nowrap\">toe<a name=\"body-temperature-measurement-location-codes-toe\"> </a></td><td>Toe</td><td>The temperature was taken at the toe.</td></tr><tr><td style=\"white-space:nowrap\">earDrum<a name=\"body-temperature-measurement-location-codes-earDrum\"> </a></td><td>Ear drum</td><td>The temperature was taken on the eardrum.</td></tr><tr><td style=\"white-space:nowrap\">temporalArtery<a name=\"body-temperature-measurement-location-codes-temporalArtery\"> </a></td><td>Temporal artery</td><td>The temperature was taken at the temporal artery.</td></tr><tr><td style=\"white-space:nowrap\">forehead<a name=\"body-temperature-measurement-location-codes-forehead\"> </a></td><td>Forehead</td><td>The temperature was taken on the forehead.</td></tr><tr><td style=\"white-space:nowrap\">vagina<a name=\"body-temperature-measurement-location-codes-vagina\"> </a></td><td>Vagina</td><td>The temperature was taken in the vagina.</td></tr><tr><td style=\"white-space:nowrap\">wrist<a name=\"body-temperature-measurement-location-codes-wrist\"> </a></td><td>Wrist</td><td>The temperature was taken on the wrist.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "pe"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 1 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/uv/phr/CodeSystem/body-temperature-measurement-location-codes"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/uv/phr/CodeSystem/body-temperature-measurement-location-codes>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0-ballot2"] ; # 
+  fhir:name [ fhir:v "BodyTemperatureMeasurementLocation"] ; # 
+  fhir:title [ fhir:v "Body Temperature Measurement Location Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-03-12T15:47:36-05:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientempowerment" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Code indicating the location where the body temperature was measured"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:compositional [ fhir:v false] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "14"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "other" ] ;
+     fhir:display [ fhir:v "Other" ] ;
+     fhir:definition [ fhir:v "The temperature was taken at a location that is not otherwise in this list." ]
+  ] [
+     fhir:code [ fhir:v "armpit" ] ;
+     fhir:display [ fhir:v "Armpit" ] ;
+     fhir:definition [ fhir:v "The temperature was taken in the armpit." ]
+  ] [
+     fhir:code [ fhir:v "body" ] ;
+     fhir:display [ fhir:v "Body" ] ;
+     fhir:definition [ fhir:v "The temperature was taken on the body." ]
+  ] [
+     fhir:code [ fhir:v "ear" ] ;
+     fhir:display [ fhir:v "Ear" ] ;
+     fhir:definition [ fhir:v "The temperature was taken in the ear." ]
+  ] [
+     fhir:code [ fhir:v "finger" ] ;
+     fhir:display [ fhir:v "Finger" ] ;
+     fhir:definition [ fhir:v "The temperature was taken at the finger." ]
+  ] [
+     fhir:code [ fhir:v "gastroIntestinal" ] ;
+     fhir:display [ fhir:v "Gastrointestinal" ] ;
+     fhir:definition [ fhir:v "The temperature was taken inside the gastrointestinal tract." ]
+  ] [
+     fhir:code [ fhir:v "mouth" ] ;
+     fhir:display [ fhir:v "Mouth" ] ;
+     fhir:definition [ fhir:v "The temperature was taken in the mouth." ]
+  ] [
+     fhir:code [ fhir:v "rectum" ] ;
+     fhir:display [ fhir:v "Rectum" ] ;
+     fhir:definition [ fhir:v "The temperature was taken in the rectum." ]
+  ] [
+     fhir:code [ fhir:v "toe" ] ;
+     fhir:display [ fhir:v "Toe" ] ;
+     fhir:definition [ fhir:v "The temperature was taken at the toe." ]
+  ] [
+     fhir:code [ fhir:v "earDrum" ] ;
+     fhir:display [ fhir:v "Ear drum" ] ;
+     fhir:definition [ fhir:v "The temperature was taken on the eardrum." ]
+  ] [
+     fhir:code [ fhir:v "temporalArtery" ] ;
+     fhir:display [ fhir:v "Temporal artery" ] ;
+     fhir:definition [ fhir:v "The temperature was taken at the temporal artery." ]
+  ] [
+     fhir:code [ fhir:v "forehead" ] ;
+     fhir:display [ fhir:v "Forehead" ] ;
+     fhir:definition [ fhir:v "The temperature was taken on the forehead." ]
+  ] [
+     fhir:code [ fhir:v "vagina" ] ;
+     fhir:display [ fhir:v "Vagina" ] ;
+     fhir:definition [ fhir:v "The temperature was taken in the vagina." ]
+  ] [
+     fhir:code [ fhir:v "wrist" ] ;
+     fhir:display [ fhir:v "Wrist" ] ;
+     fhir:definition [ fhir:v "The temperature was taken on the wrist." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

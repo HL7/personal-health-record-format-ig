@@ -1,0 +1,156 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-association-codes> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "state-of-mind-association-codes"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem state-of-mind-association-codes</b></p><a name=\"state-of-mind-association-codes\"> </a><a name=\"hcstate-of-mind-association-codes\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-association-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">community<a name=\"state-of-mind-association-codes-community\"> </a></td><td>Community</td></tr><tr><td style=\"white-space:nowrap\">currentEvents<a name=\"state-of-mind-association-codes-currentEvents\"> </a></td><td>Current Events</td></tr><tr><td style=\"white-space:nowrap\">dating<a name=\"state-of-mind-association-codes-dating\"> </a></td><td>Dating</td></tr><tr><td style=\"white-space:nowrap\">education<a name=\"state-of-mind-association-codes-education\"> </a></td><td>Education</td></tr><tr><td style=\"white-space:nowrap\">family<a name=\"state-of-mind-association-codes-family\"> </a></td><td>Family</td></tr><tr><td style=\"white-space:nowrap\">fitness<a name=\"state-of-mind-association-codes-fitness\"> </a></td><td>Fitness</td></tr><tr><td style=\"white-space:nowrap\">friends<a name=\"state-of-mind-association-codes-friends\"> </a></td><td>Friends</td></tr><tr><td style=\"white-space:nowrap\">health<a name=\"state-of-mind-association-codes-health\"> </a></td><td>Health</td></tr><tr><td style=\"white-space:nowrap\">hobbies<a name=\"state-of-mind-association-codes-hobbies\"> </a></td><td>Hobbies</td></tr><tr><td style=\"white-space:nowrap\">identity<a name=\"state-of-mind-association-codes-identity\"> </a></td><td>Identity</td></tr><tr><td style=\"white-space:nowrap\">money<a name=\"state-of-mind-association-codes-money\"> </a></td><td>Money</td></tr><tr><td style=\"white-space:nowrap\">partner<a name=\"state-of-mind-association-codes-partner\"> </a></td><td>Partner</td></tr><tr><td style=\"white-space:nowrap\">selfCare<a name=\"state-of-mind-association-codes-selfCare\"> </a></td><td>Self-Care</td></tr><tr><td style=\"white-space:nowrap\">spirituality<a name=\"state-of-mind-association-codes-spirituality\"> </a></td><td>Spirituality</td></tr><tr><td style=\"white-space:nowrap\">tasks<a name=\"state-of-mind-association-codes-tasks\"> </a></td><td>Tasks</td></tr><tr><td style=\"white-space:nowrap\">travel<a name=\"state-of-mind-association-codes-travel\"> </a></td><td>Travel</td></tr><tr><td style=\"white-space:nowrap\">weather<a name=\"state-of-mind-association-codes-weather\"> </a></td><td>Weather</td></tr><tr><td style=\"white-space:nowrap\">work<a name=\"state-of-mind-association-codes-work\"> </a></td><td>Work</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "pe"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 1 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-association-codes"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-association-codes>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0-ballot2"] ; # 
+  fhir:name [ fhir:v "StateOfMindAssociation"] ; # 
+  fhir:title [ fhir:v "State of Mind Association Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-03-12T15:47:36-05:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientempowerment" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes for state of mind association"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:compositional [ fhir:v false] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "18"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "community" ] ;
+     fhir:display [ fhir:v "Community" ]
+  ] [
+     fhir:code [ fhir:v "currentEvents" ] ;
+     fhir:display [ fhir:v "Current Events" ]
+  ] [
+     fhir:code [ fhir:v "dating" ] ;
+     fhir:display [ fhir:v "Dating" ]
+  ] [
+     fhir:code [ fhir:v "education" ] ;
+     fhir:display [ fhir:v "Education" ]
+  ] [
+     fhir:code [ fhir:v "family" ] ;
+     fhir:display [ fhir:v "Family" ]
+  ] [
+     fhir:code [ fhir:v "fitness" ] ;
+     fhir:display [ fhir:v "Fitness" ]
+  ] [
+     fhir:code [ fhir:v "friends" ] ;
+     fhir:display [ fhir:v "Friends" ]
+  ] [
+     fhir:code [ fhir:v "health" ] ;
+     fhir:display [ fhir:v "Health" ]
+  ] [
+     fhir:code [ fhir:v "hobbies" ] ;
+     fhir:display [ fhir:v "Hobbies" ]
+  ] [
+     fhir:code [ fhir:v "identity" ] ;
+     fhir:display [ fhir:v "Identity" ]
+  ] [
+     fhir:code [ fhir:v "money" ] ;
+     fhir:display [ fhir:v "Money" ]
+  ] [
+     fhir:code [ fhir:v "partner" ] ;
+     fhir:display [ fhir:v "Partner" ]
+  ] [
+     fhir:code [ fhir:v "selfCare" ] ;
+     fhir:display [ fhir:v "Self-Care" ]
+  ] [
+     fhir:code [ fhir:v "spirituality" ] ;
+     fhir:display [ fhir:v "Spirituality" ]
+  ] [
+     fhir:code [ fhir:v "tasks" ] ;
+     fhir:display [ fhir:v "Tasks" ]
+  ] [
+     fhir:code [ fhir:v "travel" ] ;
+     fhir:display [ fhir:v "Travel" ]
+  ] [
+     fhir:code [ fhir:v "weather" ] ;
+     fhir:display [ fhir:v "Weather" ]
+  ] [
+     fhir:code [ fhir:v "work" ] ;
+     fhir:display [ fhir:v "Work" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

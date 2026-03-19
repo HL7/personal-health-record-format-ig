@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="ecg-classification-codes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem ecg-classification-codes</b></p><a name="ecg-classification-codes"> </a><a name="hcecg-classification-codes"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/ecg-classification-codes</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">sinusRhythm<a name="ecg-classification-codes-sinusRhythm"> </a></td><td>Sinus rhythm</td><td>The sample exhibits no signs of atrial fibrillation.</td></tr><tr><td style="white-space:nowrap">atrialFibrillation<a name="ecg-classification-codes-atrialFibrillation"> </a></td><td>Atrial fibrillation</td><td>The sample exhibits signs of atrial fibrillation.</td></tr><tr><td style="white-space:nowrap">inconclusiveHighHeartRate<a name="ecg-classification-codes-inconclusiveHighHeartRate"> </a></td><td>Inconclusive high heart rate</td><td>An unclassifiable sample caused by a rapid heart rate.</td></tr><tr><td style="white-space:nowrap">inconclusiveLowHeartRate<a name="ecg-classification-codes-inconclusiveLowHeartRate"> </a></td><td>Inconclusive low heartrate</td><td>An unclassifiable sample caused by a heart rate below 50 bpm.</td></tr><tr><td style="white-space:nowrap">inconclusivePoorReading<a name="ecg-classification-codes-inconclusivePoorReading"> </a></td><td>Inconclusive poor reading</td><td>An unclassifiable sample caused by an unclear signal.</td></tr><tr><td style="white-space:nowrap">inconclusiveOther<a name="ecg-classification-codes-inconclusiveOther"> </a></td><td>Inconclusive other</td><td>An unclassifiable sample caused by an unknown issue.</td></tr><tr><td style="white-space:nowrap">unrecognized<a name="ecg-classification-codes-unrecognized"> </a></td><td>Unrecognized</td><td>A sample classification that this version of HealthKit doesn’t recognize.</td></tr><tr><td style="white-space:nowrap">notSet<a name="ecg-classification-codes-notSet"> </a></td><td>Not set</td><td>A sample that doesn’t have an assigned classification.</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/CodeSystem/ecg-classification-codes"/>
+  <version value="1.0.0-ballot2"/>
+  <name value="EcgClassification"/>
+  <title value="ECG Classification Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-12T15:47:36-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <description value="Codes for classification of ECG waveforms"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <compositional value="false"/>
+  <content value="complete"/>
+  <count value="8"/>
+  <concept>
+    <code value="sinusRhythm"/>
+    <display value="Sinus rhythm"/>
+    <definition value="The sample exhibits no signs of atrial fibrillation."/>
+  </concept>
+  <concept>
+    <code value="atrialFibrillation"/>
+    <display value="Atrial fibrillation"/>
+    <definition value="The sample exhibits signs of atrial fibrillation."/>
+  </concept>
+  <concept>
+    <code value="inconclusiveHighHeartRate"/>
+    <display value="Inconclusive high heart rate"/>
+    <definition value="An unclassifiable sample caused by a rapid heart rate."/>
+  </concept>
+  <concept>
+    <code value="inconclusiveLowHeartRate"/>
+    <display value="Inconclusive low heartrate"/>
+    <definition value="An unclassifiable sample caused by a heart rate below 50 bpm."/>
+  </concept>
+  <concept>
+    <code value="inconclusivePoorReading"/>
+    <display value="Inconclusive poor reading"/>
+    <definition value="An unclassifiable sample caused by an unclear signal."/>
+  </concept>
+  <concept>
+    <code value="inconclusiveOther"/>
+    <display value="Inconclusive other"/>
+    <definition value="An unclassifiable sample caused by an unknown issue."/>
+  </concept>
+  <concept>
+    <code value="unrecognized"/>
+    <display value="Unrecognized"/>
+    <definition value="A sample classification that this version of HealthKit doesn’t recognize."/>
+  </concept>
+  <concept>
+    <code value="notSet"/>
+    <display value="Not set"/>
+    <definition value="A sample that doesn’t have an assigned classification."/>
+  </concept>
+</CodeSystem>

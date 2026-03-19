@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="state-of-mind-valence-codes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem state-of-mind-valence-codes</b></p><a name="state-of-mind-valence-codes"> </a><a name="hcstate-of-mind-valence-codes"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-valence-codes</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">veryUnpleasant<a name="state-of-mind-valence-codes-veryUnpleasant"> </a></td><td>Very Unpleasant</td></tr><tr><td style="white-space:nowrap">unpleasant<a name="state-of-mind-valence-codes-unpleasant"> </a></td><td>Unpleasant</td></tr><tr><td style="white-space:nowrap">slightlyUnpleasant<a name="state-of-mind-valence-codes-slightlyUnpleasant"> </a></td><td>Unpleasant</td></tr><tr><td style="white-space:nowrap">neutral<a name="state-of-mind-valence-codes-neutral"> </a></td><td>Slightly Neutral</td></tr><tr><td style="white-space:nowrap">slightlyPleasant<a name="state-of-mind-valence-codes-slightlyPleasant"> </a></td><td>Slightly Pleasant</td></tr><tr><td style="white-space:nowrap">pleasant<a name="state-of-mind-valence-codes-pleasant"> </a></td><td>Pleasant</td></tr><tr><td style="white-space:nowrap">veryPleasant<a name="state-of-mind-valence-codes-veryPleasant"> </a></td><td>Very Pleasant</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-valence-codes"/>
+  <version value="1.0.0-ballot2"/>
+  <name value="StateOfMindValence"/>
+  <title value="State of Mind Valence Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-12T15:47:36-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <description value="Codes for state of mind valence"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <compositional value="false"/>
+  <content value="complete"/>
+  <count value="7"/>
+  <concept>
+    <code value="veryUnpleasant"/>
+    <display value="Very Unpleasant"/>
+  </concept>
+  <concept>
+    <code value="unpleasant"/>
+    <display value="Unpleasant"/>
+  </concept>
+  <concept>
+    <code value="slightlyUnpleasant"/>
+    <display value="Unpleasant"/>
+  </concept>
+  <concept>
+    <code value="neutral"/>
+    <display value="Slightly Neutral"/>
+  </concept>
+  <concept>
+    <code value="slightlyPleasant"/>
+    <display value="Slightly Pleasant"/>
+  </concept>
+  <concept>
+    <code value="pleasant"/>
+    <display value="Pleasant"/>
+  </concept>
+  <concept>
+    <code value="veryPleasant"/>
+    <display value="Very Pleasant"/>
+  </concept>
+</CodeSystem>
