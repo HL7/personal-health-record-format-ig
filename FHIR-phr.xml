@@ -44,17 +44,17 @@
 <artifact id="CodeSystem/ecg-lead-codes" key="CodeSystem-ecg-lead-codes" name="ECG Lead Codes"/>
 <artifact id="ValueSet/observation-ecg-symptoms-status-codes" key="ValueSet-observation-ecg-symptoms-status-codes" name="ECG Symptoms Status Codes"/>
 <artifact id="CodeSystem/ecg-symptoms-status-codes" key="CodeSystem-ecg-symptoms-status-codes" name="ECG Symptoms Status Codes"/>
-<artifact id="StructureDefinition/Environmental" key="StructureDefinition-Environmental" name="Environmental"/>
+<artifact id="StructureDefinition/Environmental" key="StructureDefinition-Environmental" name="Environmental Observation"/>
 <artifact id="StructureDefinition/FinancialReceipt" key="StructureDefinition-FinancialReceipt" name="Financial Receipt"/>
 <artifact id="CodeSystem/gad7-risk-codes" key="CodeSystem-gad7-risk-codes" name="GAD-7 Assesment Risk Codes"/>
 <artifact id="Questionnaire/gad7" key="Questionnaire-gad7" name="GAD-7 assesment"/>
 <artifact id="CodeSystem/hearing-sensitivity-codes" key="CodeSystem-hearing-sensitivity-codes" name="Hearing Sensitivity Codes"/>
-<artifact id="Patient/jane-doe" key="Patient-jane-doe" name="Jane Doe"/>
-<artifact id="Composition/jane-doe-composition" key="Composition-jane-doe-composition" name="Jane Doe Composition"/>
-<artifact id="DocumentReference/jane-doe-genomics-document" key="DocumentReference-jane-doe-genomics-document" name="Jane Doe PDF Report"/>
-<artifact id="Media/jane-doe-media" key="Media-jane-doe-media" name="Jane Doe Smartphone Photo"/>
-<artifact id="Provenance/jane-doe-media-provenance" key="Provenance-jane-doe-media-provenance" name="Jane Doe's Photo Provenance"/>
-<artifact id="StructureDefinition/NutrientOuttake" key="StructureDefinition-NutrientOuttake" name="Nutrient Outtake"/>
+<artifact deprecated="true" id="Patient/jane-doe" key="Patient-jane-doe" name="Jane Doe"/>
+<artifact deprecated="true" id="Composition/jane-doe-composition" key="Composition-jane-doe-composition" name="Jane Doe Composition"/>
+<artifact deprecated="true" id="DocumentReference/jane-doe-genomics-document" key="DocumentReference-jane-doe-genomics-document" name="Jane Doe PDF Report"/>
+<artifact deprecated="true" id="Media/jane-doe-media" key="Media-jane-doe-media" name="Jane Doe Smartphone Photo"/>
+<artifact deprecated="true" id="Provenance/jane-doe-media-provenance" key="Provenance-jane-doe-media-provenance" name="Jane Doe's Photo Provenance"/>
+<artifact deprecated="true" id="StructureDefinition/NutrientOuttake" key="StructureDefinition-NutrientOuttake" name="Nutrient Outtake"/>
 <artifact id="ValueSet/observation-activity-codes" key="ValueSet-observation-activity-codes" name="Observation Activity Codes"/>
 <artifact id="ValueSet/observation-alchol-consumption-codes" key="ValueSet-observation-alchol-consumption-codes" name="Observation AlcholConsumption Codes"/>
 <artifact id="ValueSet/observation-body-measurements-codes" key="ValueSet-observation-body-measurements-codes" name="Observation BodyMeasurements Codes"/>
@@ -84,8 +84,8 @@
 <artifact id="ValueSet/observation-vital-signs-codes" key="ValueSet-observation-vital-signs-codes" name="Observation Vitalsigns Codes"/>
 <artifact id="ValueSet/observation-workout-codes" key="ValueSet-observation-workout-codes" name="Observation Workout Codes"/>
 <artifact id="Observation/pghd-sleep-episode-2" key="Observation-pghd-sleep-episode-2" name="ObservationSleepEpisodeExample2"/>
-<artifact id="Observation/PCDSleepObservation-duration-example" key="Observation-PCDSleepObservation-duration-example" name="PCDSleepObservation-duration-example"/>
-<artifact id="Observation/PCDSleepObservation-stage-example" key="Observation-PCDSleepObservation-stage-example" name="PCDSleepObservation-stage-example"/>
+<artifact deprecated="true" id="Observation/PCDSleepObservation-duration-example" key="Observation-PCDSleepObservation-duration-example" name="PCDSleepObservation-duration-example"/>
+<artifact deprecated="true" id="Observation/PCDSleepObservation-stage-example" key="Observation-PCDSleepObservation-stage-example" name="PCDSleepObservation-stage-example"/>
 <artifact id="StructureDefinition/pghd-activity" key="StructureDefinition-pghd-activity" name="PGHD Activity Profile"/>
 <artifact id="StructureDefinition/pghd-alchol-consumption" key="StructureDefinition-pghd-alchol-consumption" name="PGHD AlcholConsumption Profile"/>
 <artifact id="StructureDefinition/pghd-alchol-use" key="StructureDefinition-pghd-alchol-use" name="PGHD AlcholUse Profile"/>
@@ -136,17 +136,17 @@
 <artifact id="Patient/1" key="Patient-1" name="PGHDPatientExample"/>
 <artifact id="CodeSystem/phq9-risk-codes" key="CodeSystem-phq9-risk-codes" name="PHQ-9 Assesment Risk Codes"/>
 <artifact id="Questionnaire/phq9" key="Questionnaire-phq9" name="PHQ-9 assesment"/>
-<artifact id="StructureDefinition/pcd-sleep-observation" key="StructureDefinition-PCDSleepObservation" name="Patient contributed data: sleep observation"/>
+<artifact deprecated="true" id="StructureDefinition/pcd-sleep-observation" key="StructureDefinition-PCDSleepObservation" name="Patient contributed data: sleep observation"/>
 <artifact id="ValueSet/pcd-sleep-observation-code" key="ValueSet-PCDSleepObservationCode" name="Patient contributed data: sleep observation code"/>
 <artifact id="ValueSet/pcd-sleep-observation-value" key="ValueSet-PCDSleepStageValueCode" name="Patient contributed data: sleep stage value"/>
 <artifact id="Bundle/pdr-message" key="Bundle-pdr-message" name="PatientDataReceipt Message"/>
 <artifact id="StructureDefinition/PhrBundle" key="StructureDefinition-PhrBundle" name="PhrBundle"/>
-<artifact id="Bundle/PhrBundle-example" key="Bundle-PhrBundle-example" name="PhrBundle-example"/>
-<artifact id="StructureDefinition/PhrComposition" key="StructureDefinition-PhrComposition" name="PhrComposition"/>
-<artifact id="StructureDefinition/PhrDocumentReference" key="StructureDefinition-PhrDocumentReference" name="PhrDocumentReference"/>
-<artifact id="StructureDefinition/PhrMedia" key="StructureDefinition-PhrMedia" name="PhrMedia"/>
-<artifact id="StructureDefinition/PhrPatient" key="StructureDefinition-PhrPatient" name="PhrPatient"/>
-<artifact id="StructureDefinition/PhrProvenance" key="StructureDefinition-PhrProvenance" name="PhrProvenance"/>
+<artifact deprecated="true" id="Bundle/PhrBundle-example" key="Bundle-PhrBundle-example" name="PhrBundle-example"/>
+<artifact deprecated="true" id="StructureDefinition/PhrComposition" key="StructureDefinition-PhrComposition" name="PhrComposition"/>
+<artifact deprecated="true" id="StructureDefinition/PhrDocumentReference" key="StructureDefinition-PhrDocumentReference" name="PhrDocumentReference"/>
+<artifact deprecated="true" id="StructureDefinition/PhrMedia" key="StructureDefinition-PhrMedia" name="PhrMedia"/>
+<artifact deprecated="true" id="StructureDefinition/PhrPatient" key="StructureDefinition-PhrPatient" name="PhrPatient"/>
+<artifact deprecated="true" id="StructureDefinition/PhrProvenance" key="StructureDefinition-PhrProvenance" name="PhrProvenance"/>
 <artifact id="QuestionnaireResponse/gad7" key="QuestionnaireResponse-gad7" name="QuestionnaireResponseScoredAssessmentGAD7Example"/>
 <artifact id="QuestionnaireResponse/phq9" key="QuestionnaireResponse-phq9" name="QuestionnaireResponseScoredAssessmentPHQ9Example"/>
 <artifact id="CodeSystem/scored-assessment-codes" key="CodeSystem-scored-assessment-codes" name="Scored Assessment Codes"/>
@@ -158,7 +158,7 @@
 <artifact id="CodeSystem/sleep-analysis-codes" key="CodeSystem-sleep-analysis-codes" name="Sleep Analysis Codes"/>
 <artifact id="CodeSystem/sleep-episode-codes" key="CodeSystem-sleep-episode-codes" name="Sleep Episode Codes"/>
 <artifact id="CodeSystem/snore-event-item-codes" key="CodeSystem-snore-event-item-codes" name="Snore Event Item Codes"/>
-<artifact id="StructureDefinition/SocialMedia" key="StructureDefinition-SocialMedia" name="SocialMedia"/>
+<artifact id="StructureDefinition/SocialMedia" key="StructureDefinition-SocialMedia" name="Social Media Post"/>
 <artifact id="CodeSystem/state-of-mind-association-codes" key="CodeSystem-state-of-mind-association-codes" name="State of Mind Association Codes"/>
 <artifact id="CodeSystem/state-of-mind-codes" key="CodeSystem-state-of-mind-codes" name="State of Mind Codes"/>
 <artifact id="CodeSystem/state-of-mind-kind-codes" key="CodeSystem-state-of-mind-kind-codes" name="State of Mind Kind Codes"/>
@@ -253,6 +253,7 @@
 <page key="functionality" name="Functional Model"/>
 <page key="index" name="Getting Started"/>
 <page key="history" name="History"/>
+<page key="logical-models" name="Logical Models"/>
 <page key="longitudinal" name="Longitudinal Records"/>
 <page key="persona-journey-e" name="Marcella"/>
 <page key="persona-journey-c" name="Markus"/>

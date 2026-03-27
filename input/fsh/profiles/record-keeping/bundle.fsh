@@ -36,21 +36,3 @@ Description: "Standard PHR profile of the Bundle resource."
 
 
 
-Instance: PhrBundle-example
-InstanceOf: PhrBundle
-Description: "Jane Doe - PhrBundle"
-Usage: #example
-* type = #document
-* timestamp = "2024-12-11T07:00:00Z"
-* identifier[0].system = "urn:uuid"
-* identifier[0].value = "123e4567-e89b-12d3-a456-426614174000"
-* entry[0].resource = JaneDoePhrComposition
-* entry[=].fullUrl = "https://example.org/baseR4/Composition/jane-doe-composition"
-* entry[+].resource = JaneDoe
-* entry[=].fullUrl = "https://example.org/baseR4/Patient/jane-doe"
-* entry[+].resource = JaneDoePhrDocument
-* entry[=].fullUrl = "https://example.org/baseR4/DocumentReference/jane-doe-genomics-document"
-* entry[+].resource = JaneDoePhrMedia
-* entry[=].fullUrl = "https://example.org/baseR4/Media/jane-doe-media"
-* entry[+].resource = JaneDoePhrMediaProvenance
-* entry[=].fullUrl = "https://example.org/baseR4/Provenance/jane-doe-media-provenance"
