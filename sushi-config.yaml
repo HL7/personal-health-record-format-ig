@@ -104,7 +104,7 @@ menu:
     Algorithms: algorithms.html
     Physiology Domains: physiology.html
     Operating Systems: operating-systems.html
-    Patient-generated health data(PGHD): pghd.html
+    Patient Generated Health Data: pghd.html
     Logical Models: logical-models.html
   Patient Personas:
     Index: personas-index.html
@@ -165,7 +165,9 @@ pages:
   longitudinal.md:
     title: Longitudinal Records
   pghd.md:
-    title: Patient-generated health data(PGHD)
+    title: Patient Generated Health Data (PGHD)
+  pghd-code-mapping.md:
+    title: PHR Code Mapping
   logical-models.md:
     title: Logical Models
 
