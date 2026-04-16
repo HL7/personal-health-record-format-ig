@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Patient",
+  "id" : "1",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-patient"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: Patient 1</b></p><a name=\"1\"> </a><a name=\"hc1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-pghd-patient.html\">PGHD Patient Profile</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">John Doe Male, DoB: 1990-01-01</p><hr/></div>"
+  },
+  "name" : [{
+    "text" : "John Doe",
+    "family" : "Doe",
+    "given" : ["John"]
+  }],
+  "gender" : "male",
+  "birthDate" : "1990-01-01"
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="body-posture-codes"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem body-posture-codes</b></p><a name="body-posture-codes"> </a><a name="hcbody-posture-codes"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/body-posture-codes</code> defines the following codes in a Is-A hierarchy:</p><table class="codes"><tr><td><b>Lvl</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>1</td><td style="white-space:nowrap">sitting<a name="body-posture-codes-sitting"> </a></td><td>Sitting</td></tr><tr><td>1</td><td style="white-space:nowrap">standing<a name="body-posture-codes-standing"> </a></td><td>Standing</td></tr><tr><td>1</td><td style="white-space:nowrap">lyingDown<a name="body-posture-codes-lyingDown"> </a></td><td>Lying down</td></tr><tr><td>2</td><td style="white-space:nowrap">  supine<a name="body-posture-codes-supine"> </a></td><td>Supine</td></tr><tr><td>2</td><td style="white-space:nowrap">  prone<a name="body-posture-codes-prone"> </a></td><td>Prone</td></tr><tr><td>2</td><td style="white-space:nowrap">  recumbent<a name="body-posture-codes-recumbent"> </a></td><td>Recumbent</td></tr><tr><td>2</td><td style="white-space:nowrap">  semiRecumbent<a name="body-posture-codes-semiRecumbent"> </a></td><td>Semi recumbent</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/CodeSystem/body-posture-codes"/>
+  <version value="1.0.0-ballot2"/>
+  <name value="BodyPosture"/>
+  <title value="Body Posture Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-16T16:46:43-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <description value="Code for posture"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <hierarchyMeaning value="is-a"/>
+  <compositional value="false"/>
+  <content value="complete"/>
+  <count value="7"/>
+  <concept>
+    <code value="sitting"/>
+    <display value="Sitting"/>
+  </concept>
+  <concept>
+    <code value="standing"/>
+    <display value="Standing"/>
+  </concept>
+  <concept>
+    <code value="lyingDown"/>
+    <display value="Lying down"/>
+    <concept>
+      <code value="supine"/>
+      <display value="Supine"/>
+    </concept>
+    <concept>
+      <code value="prone"/>
+      <display value="Prone"/>
+    </concept>
+    <concept>
+      <code value="recumbent"/>
+      <display value="Recumbent"/>
+    </concept>
+    <concept>
+      <code value="semiRecumbent"/>
+      <display value="Semi recumbent"/>
+    </concept>
+  </concept>
+</CodeSystem>

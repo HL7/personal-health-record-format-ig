@@ -1,63 +1,807 @@
 PatientHealthRecordsIG : Validation Results
 =========================================
 
-err = 1, warn = 2, info = 1
-IG Publisher Version: 1.8.22 Out of date - current version is ?pub-ver-1?
-Generated Thu Mar 20 16:04:55 CDT 2025. FHIR version 4.0.1 for hl7.fhir.uv.phr#1.0.0-ballot (canonical = http://hl7.org/fhir/uv/phr)
- Build Errors : 0 / 1 / 0
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Bundle-PhrBundle-example : 0 / 0 / 14
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Bundle-pdr-message : 0 / 0 / 6
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Composition-jane-doe-composition : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/DocumentReference-jane-doe-genomics-document : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/ImplementationGuide-hl7.fhir.uv.phr : 1 / 1 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Media-jane-doe-media : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Observation-PCDSleepObservation-duration-example : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Observation-PCDSleepObservation-stage-example : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Patient-jane-doe : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/Provenance-jane-doe-media-provenance : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/SearchParameter-patient-identifier : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/SearchParameter-search-from-date : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-Environmental : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-FinancialReceipt : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-NutrientOuttake : 0 / 0 / 2
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-PhrBundle : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-PhrComposition : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-PhrDocumentReference : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-PhrMedia : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-PhrPatient : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-PhrProvenance : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-SocialMedia : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pcd-sleep-observation : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/ValueSet-pcd-sleep-observation-code : 0 / 0 / 1
- /Users/awatson/Code/implementation-guides/personal-health-record-format-ig/fsh-generated/resources/ValueSet-pcd-sleep-observation-value : 0 / 0 / 1
+err = 88, warn = 230, info = 76
+IG Publisher Version: 2.0.29 Out of date - current version is 2.2.6
+Generated Thu Apr 16 16:50:54 CDT 2026. FHIR version 4.0.1 for hl7.fhir.uv.phr#1.0.0-ballot2 (canonical = http://hl7.org/fhir/uv/phr)
+ Build Errors : 59 / 4 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Bundle-pdr-message : 0 / 6 / 5
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-appetite-changes-codes : 0 / 0 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-body-posture-codes : 0 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-body-temperature-measurement-location-codes : 0 / 0 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-ecg-classification-codes : 0 / 0 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-ecg-codes : 0 / 0 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-ecg-lead-codes : 0 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-ecg-symptoms-status-codes : 0 / 0 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-gad7-risk-codes : 0 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-hearing-sensitivity-codes : 0 / 0 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-observation-pghd-codes : 0 / 127 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-phq9-risk-codes : 0 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-presence-codes : 0 / 0 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-scored-assessment-codes : 0 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-sleep-analysis-codes : 0 / 0 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-sleep-episode-codes : 0 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-snore-event-item-codes : 0 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-state-of-mind-association-codes : 0 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-state-of-mind-codes : 0 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-state-of-mind-kind-codes : 0 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-state-of-mind-label-codes : 0 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-state-of-mind-valence-codes : 0 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-symptom-severity-codes : 0 / 0 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ConceptMap-symptom-pghd-to-snomedct : 2 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ConceptMap-symptom-snomedct-to-pghd : 2 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ImplementationGuide-hl7.fhir.uv.phr : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/MedicationAdministration-pghd-medicationadministration-insulin-1 : 0 / 0 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-ScoredAssessmentGAD7Example : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-ScoredAssessmentPHQ9Example : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-StateOfMind2Example : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-StateOfMindExample : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned-underwater-diving : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned-walking : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-appleExerciseTime : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-appleMoveTime : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-appleStandHour : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-basalEnergyBurned : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-cyclingCadence : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-distanceWalkingRunning-walking : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-alchol-consumption-blood-alcohol-content : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-alchol-use-number-of-alcoholic-beverages : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-audiogram : 1 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-blood-glucose-1 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-blood-glucose-2 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-blood-glucose-3 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-bloodpressure : 0 / 1 / 6
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-bmi : 0 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-bodyheight : 0 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-bodymeasurement-body-fat-percentage : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-bodytemperature : 0 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-bodyweight : 0 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-cardiac-function-lowHeart-rate-event : 0 / 1 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-diving-underwater-depthg : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-diving-water-temperature : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-food : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-hearing-environmental-audio-exposure : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-hearingSensitivity-1 : 1 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-hearingSensitivity-2 : 1 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-hearingSensitivity-3 : 1 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-hearingSensitivity-4 : 1 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-heart-electrocardiogram : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-heartbeat : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-heartrate : 0 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-medication-adherence : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-mindfulness-mindful-session : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-mobility-stair-descent-speed : 1 / 0 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-nutrition-dietary-carbohydrates : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-nutrition-dietary-energy-consumed : 0 / 1 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-nutrition-dietary-fiber : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-nutrition-dietary-protein : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-oxygenSaturation : 0 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-pregnancy-status : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-reproductive-health-intermenstrual-bleeding : 0 / 1 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-respiratoryrate : 0 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-selfcare-handwashingEvent : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-sleep-asleep-core : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-sleep-episode-1 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-sleep-episode-2 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-sleep-episode-core-sleep-1 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-sleep-episode-core-sleep-2 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-sleep-episode-deep-sleep-1 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-sleep-episode-deep-sleep-2 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-sleep-episode-latency-to-sleep-onset-1 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-sleep-episode-latency-to-sleep-onset-2 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-snore-event-1 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-snore-event-2 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-snore-event-3 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-snore-index-1 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-snore-index-2 : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-symptom-fever : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-testresult-forced-vital-capacity : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-uvexposure : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-vitalsigns-apple-sleeping-wrist-temperature : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-voltage-measurement : 0 / 0 / 3
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-workout-underwater-diving : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-workout-walking : 1 / 1 / 4
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Patient-1 : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Questionnaire-gad7 : 0 / 0 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/Questionnaire-phq9 : 0 / 0 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/QuestionnaireResponse-gad7 : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/QuestionnaireResponse-phq9 : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/SearchParameter-patient-identifier : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/SearchParameter-search-from-date : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-Environmental : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-FinancialReceipt : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-PhrBundle : 0 / 1 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-SocialMedia : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-activity : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-alchol-consumption : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-alchol-use : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-audiogram : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-blood-glucose : 0 / 3 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-bloodpressure : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-bmi : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-bodyheight : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-bodymeasurement : 0 / 3 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-bodytemperature : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-bodyweight : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-cardiac-function : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-careplan-selfcare : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-device : 0 / 0 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-diving : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-electrocardiogram : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-food : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-hearing : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-hearing-sensitivity : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-heartbeat : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-heartrate : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-medication-adherence : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-medicationadministration-insulin : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-medicationdispense : 0 / 4 / 2
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-mindfulness : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-mobility : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-nutrition : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-observation-scored-assessment : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-observation-state-of-mind : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-oxygenSaturation : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-patient : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-pregnancy-status : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-questionnaire : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-questionnaire-response : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-reproductive-health : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-respiratoryrate : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-selfcare : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-sleep : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-sleep-episode : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-snore-event : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-snore-index : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-symptom : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-testresult : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-uvexposure : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-vitalsigns : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-voltage-measurement : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/StructureDefinition-pghd-workout : 0 / 1 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-appetite-changes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-body-temperature-measurement-location : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-activity-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-alchol-consumption-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-body-measurements-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-diving-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-ecg-classification-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-ecg-lead-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-ecg-symptoms-status-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-ecgcodes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-gad7-risk-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-hearing-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-lab-results-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-mind-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-mindfulness-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-mobility-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-nutrition-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-phq9-risk-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-reproductive-health-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-scored-assessment-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-scored-assessment-score-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-selfcare-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-sleep-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-state-of-mind-association-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-state-of-mind-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-state-of-mind-kind-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-state-of-mind-label-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-state-of-mind-valence-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-symptom-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-symptom-snomedct-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-uvexposure-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-vital-signs-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-observation-workout-codes : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-pcd-sleep-observation-code : 1 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-pcd-sleep-observation-value : 1 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-sleep-analysis : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-symptom-presence : 0 / 0 / 1
+ /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-symptom-severity : 0 / 0 / 1
 </table>
 == n/a ==
+ERROR: There are multiple resources with the same title [ECG Lead Codes].  This is not allowed because it produces duplicate entries in the table of contents.
+ERROR: There are multiple resources with the same title [Observation State of Mind Codes].  This is not allowed because it produces duplicate entries in the table of contents.
+ERROR: There are multiple resources with the same title [Body Temperature Measurement Location Codes].  This is not allowed because it produces duplicate entries in the table of contents.
+ERROR: There are multiple resources with the same title [ECG Classification Codes].  This is not allowed because it produces duplicate entries in the table of contents.
+ERROR: There are multiple resources with the same title [ECG Symptoms Status Codes].  This is not allowed because it produces duplicate entries in the table of contents.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ConceptMap/symptom-pghd-to-snomedct.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ConceptMap/symptom-snomedct-to-pghd.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content)
-== fsh-generated/resources/Bundle-PhrBundle-example.json ==
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrComposition.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 503, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrComposition.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 708, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrComposition.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1082, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrComposition.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1634, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrComposition.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1838, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrComposition.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 2209, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: en/StructureDefinition-PhrComposition.html#/html/body/div/div/div/div/div/p/a at Line 2647, column 41: The link '../StructureDefinition-PhrComposition.csv' for "CSV" cannot be resolved
+ERROR: en/StructureDefinition-PhrComposition.html#/html/body/div/div/div/div/div/p/a at Line 2647, column 102: The link '../StructureDefinition-PhrComposition.xlsx' for "Excel" cannot be resolved
+ERROR: en/StructureDefinition-PhrComposition.html#/html/body/div/div/div/div/div/p/a at Line 2647, column 166: The link '../StructureDefinition-PhrComposition.sch' for "Schematron" cannot be resolved
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrDocumentReference.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 440, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrDocumentReference.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 600, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrDocumentReference.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 862, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrDocumentReference.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1307, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrDocumentReference.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1466, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrDocumentReference.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1725, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: en/StructureDefinition-PhrDocumentReference.html#/html/body/div/div/div/div/div/p/a at Line 2119, column 41: The link '../StructureDefinition-PhrDocumentReference.csv' for "CSV" cannot be resolved
+ERROR: en/StructureDefinition-PhrDocumentReference.html#/html/body/div/div/div/div/div/p/a at Line 2119, column 108: The link '../StructureDefinition-PhrDocumentReference.xlsx' for "Excel" cannot be resolved
+ERROR: en/StructureDefinition-PhrDocumentReference.html#/html/body/div/div/div/div/div/p/a at Line 2119, column 178: The link '../StructureDefinition-PhrDocumentReference.sch' for "Schematron" cannot be resolved
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrMedia.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 428, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrMedia.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 588, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrMedia.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 784, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrMedia.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1145, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrMedia.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1304, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrMedia.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1497, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: en/StructureDefinition-PhrMedia.html#/html/body/div/div/div/div/div/p/a at Line 1819, column 41: The link '../StructureDefinition-PhrMedia.csv' for "CSV" cannot be resolved
+ERROR: en/StructureDefinition-PhrMedia.html#/html/body/div/div/div/div/div/p/a at Line 1819, column 96: The link '../StructureDefinition-PhrMedia.xlsx' for "Excel" cannot be resolved
+ERROR: en/StructureDefinition-PhrMedia.html#/html/body/div/div/div/div/div/p/a at Line 1819, column 154: The link '../StructureDefinition-PhrMedia.sch' for "Schematron" cannot be resolved
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 465, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 625, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 915, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1343, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1502, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1789, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: en/StructureDefinition-PhrPatient.html#/html/body/div/div/div/div/div/p/a at Line 2141, column 41: The link '../StructureDefinition-PhrPatient.csv' for "CSV" cannot be resolved
+ERROR: en/StructureDefinition-PhrPatient.html#/html/body/div/div/div/div/div/p/a at Line 2141, column 98: The link '../StructureDefinition-PhrPatient.xlsx' for "Excel" cannot be resolved
+ERROR: en/StructureDefinition-PhrPatient.html#/html/body/div/div/div/div/div/p/a at Line 2141, column 158: The link '../StructureDefinition-PhrPatient.sch' for "Schematron" cannot be resolved
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrProvenance.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 445, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrProvenance.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 567, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrProvenance.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 772, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrProvenance.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1136, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrProvenance.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1257, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-PhrProvenance.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1459, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: en/StructureDefinition-PhrProvenance.html#/html/body/div/div/div/div/div/p/a at Line 1767, column 41: The link '../StructureDefinition-PhrProvenance.csv' for "CSV" cannot be resolved
+ERROR: en/StructureDefinition-PhrProvenance.html#/html/body/div/div/div/div/div/p/a at Line 1767, column 101: The link '../StructureDefinition-PhrProvenance.xlsx' for "Excel" cannot be resolved
+ERROR: en/StructureDefinition-PhrProvenance.html#/html/body/div/div/div/div/div/p/a at Line 1767, column 164: The link '../StructureDefinition-PhrProvenance.sch' for "Schematron" cannot be resolved
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-pcd-sleep-observation.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 458, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-pcd-sleep-observation.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 684, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-pcd-sleep-observation.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1080, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-pcd-sleep-observation.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1617, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-pcd-sleep-observation.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 1842, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/StructureDefinition-pcd-sleep-observation.html#/html/body/div/div/div/div/div/div/div/div/div/table/script at Line 2235, column 353: The <script> containing the javascript '// e30089e4-1926-451'... is illegal and not allowed on the HL7 ci-build - put the script in a  .js file in a trusted template (if it is justified and needed)
+ERROR: en/StructureDefinition-pcd-sleep-observation.html#/html/body/div/div/div/div/div/p/a at Line 2703, column 41: The link '../StructureDefinition-pcd-sleep-observation.csv' for "CSV" cannot be resolved
+ERROR: en/StructureDefinition-pcd-sleep-observation.html#/html/body/div/div/div/div/div/p/a at Line 2703, column 109: The link '../StructureDefinition-pcd-sleep-observation.xlsx' for "Excel" cannot be resolved
+ERROR: en/StructureDefinition-pcd-sleep-observation.html#/html/body/div/div/div/div/div/p/a at Line 2703, column 180: The link '../StructureDefinition-pcd-sleep-observation.sch' for "Schematron" cannot be resolved
+INFORMATION: en/annotations.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause
+INFORMATION: en/conformance.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause
+WARNING: /Volumes/LangCortex/Code/personal-health-record-format-ig/output/en/operating-systems.html: Illegal HTML: illegal html element: PATH_TO_APP ( with the path to your dummy application, eg:)
+INFORMATION: en/pghd-code-mapping.html: The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause
+INFORMATION: en/recordkeeping.html: The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause
 == fsh-generated/resources/Bundle-pdr-message.json ==
-== fsh-generated/resources/Composition-jane-doe-composition.json ==
-== fsh-generated/resources/DocumentReference-jane-doe-genomics-document.json ==
+WARNING: Bundle/pdr-message: Bundle.entry[1].resource/*Patient/71a8b156-760b-df6b-859e-eefc7932a526*/.identifier[0].system: No definition could be found for URL value 'https://github.com/synthetichealth/synthea'
+WARNING: Bundle/pdr-message: Bundle.entry[1].resource/*Patient/71a8b156-760b-df6b-859e-eefc7932a526*/.identifier[1].system: No definition could be found for URL value 'urn:mitre:healthmanager:account:username'
+WARNING: Bundle/pdr-message: Bundle.entry[1].resource/*Patient/71a8b156-760b-df6b-859e-eefc7932a526*/.identifier[2].system: No definition could be found for URL value 'http://hospital.smarthealthit.org'
+WARNING: Bundle/pdr-message: Bundle.entry[1].resource/*Patient/71a8b156-760b-df6b-859e-eefc7932a526*/.identifier[5].system: No definition could be found for URL value 'http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber'
+WARNING: Bundle/pdr-message: Bundle.entry[2].resource/*Encounter/ee6beac6-aaaa-957c-767e-1e1caa5c816c*/.identifier[0].system: No definition could be found for URL value 'https://github.com/synthetichealth/synthea'
+WARNING: Bundle/pdr-message: Bundle.entry[3].resource/*Procedure/ee6beac6-aaaa-957c-767e-1e1c925c816c*/.identifier[0].system: No definition could be found for URL value 'https://github.com/synthetichealth/synthea'
+== fsh-generated/resources/CodeSystem-appetite-changes-codes.json ==
+INFORMATION: CodeSystem/appetite-changes-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+== fsh-generated/resources/CodeSystem-body-posture-codes.json ==
+INFORMATION: CodeSystem/body-posture-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+WARNING: CodeSystem/body-posture-codes: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+== fsh-generated/resources/CodeSystem-body-temperature-measurement-location-codes.json ==
+INFORMATION: CodeSystem/body-temperature-measurement-location-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+== fsh-generated/resources/CodeSystem-ecg-classification-codes.json ==
+INFORMATION: CodeSystem/ecg-classification-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+== fsh-generated/resources/CodeSystem-ecg-codes.json ==
+INFORMATION: CodeSystem/ecg-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+== fsh-generated/resources/CodeSystem-ecg-lead-codes.json ==
+INFORMATION: CodeSystem/ecg-lead-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+WARNING: CodeSystem/ecg-lead-codes: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+== fsh-generated/resources/CodeSystem-ecg-symptoms-status-codes.json ==
+INFORMATION: CodeSystem/ecg-symptoms-status-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+== fsh-generated/resources/CodeSystem-gad7-risk-codes.json ==
+INFORMATION: CodeSystem/gad7-risk-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+WARNING: CodeSystem/gad7-risk-codes: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+== fsh-generated/resources/CodeSystem-hearing-sensitivity-codes.json ==
+INFORMATION: CodeSystem/hearing-sensitivity-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+== fsh-generated/resources/CodeSystem-observation-pghd-codes.json ==
+INFORMATION: CodeSystem/observation-pghd-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[0].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[1].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[2].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[4].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[5].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[7].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[8].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[9].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[10].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[11].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[12].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[13].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[14].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[15].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[16].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[17].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[21].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[22].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[24].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[25].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[26].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[27].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[28].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[31].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[33].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[34].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[40].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[41].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[42].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[43].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[44].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[45].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[0].concept[46].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[1].concept[0].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[2].concept[0].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[2].concept[1].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[2].concept[2].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[2].concept[4].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[2].concept[5].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[2].concept[6].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[2].concept[7].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[2].concept[8].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[3].concept[0].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[3].concept[1].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[4].concept[0].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[4].concept[2].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[4].concept[3].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[6].concept[0].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[6].concept[1].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[6].concept[2].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[6].concept[3].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[6].concept[5].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[6].concept[7].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[6].concept[8].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[6].concept[9].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[6].concept[10].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[6].concept[11].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[6].concept[12].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[6].concept[13].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[8].concept[4].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[8].concept[5].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[9].concept[0].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[9].concept[2].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[9].concept[3].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[9].concept[4].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[9].concept[5].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[9].concept[6].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[9].concept[7].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[9].concept[8].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[0].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[1].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[2].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[3].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[4].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[5].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[6].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[7].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[8].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[9].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[10].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[11].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[12].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[13].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[14].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[15].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[16].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[17].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[18].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[19].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[20].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[21].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[22].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[23].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[24].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[25].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[26].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[27].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[28].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[29].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[30].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[31].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[32].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[33].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[34].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[35].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[36].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[37].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[38].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[39].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[40].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[41].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[42].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[10].concept[43].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[11].concept[0].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[15].concept[0].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[15].concept[2].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[15].concept[3].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[15].concept[4].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[15].concept[5].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[15].concept[6].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[15].concept[7].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[15].concept[11].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[15].concept[12].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[15].concept[13].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[15].concept[14].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+WARNING: CodeSystem/observation-pghd-codes: CodeSystem.concept[15].concept[15].property[0]: The property 'unit' has no definition in CodeSystem.property. Many terminology tools won't know what to do with it
+== fsh-generated/resources/CodeSystem-phq9-risk-codes.json ==
+INFORMATION: CodeSystem/phq9-risk-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+WARNING: CodeSystem/phq9-risk-codes: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+== fsh-generated/resources/CodeSystem-presence-codes.json ==
+INFORMATION: CodeSystem/presence-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+== fsh-generated/resources/CodeSystem-scored-assessment-codes.json ==
+INFORMATION: CodeSystem/scored-assessment-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+WARNING: CodeSystem/scored-assessment-codes: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+== fsh-generated/resources/CodeSystem-sleep-analysis-codes.json ==
+INFORMATION: CodeSystem/sleep-analysis-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+== fsh-generated/resources/CodeSystem-sleep-episode-codes.json ==
+INFORMATION: CodeSystem/sleep-episode-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+WARNING: CodeSystem/sleep-episode-codes: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+== fsh-generated/resources/CodeSystem-snore-event-item-codes.json ==
+INFORMATION: CodeSystem/snore-event-item-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+WARNING: CodeSystem/snore-event-item-codes: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+== fsh-generated/resources/CodeSystem-state-of-mind-association-codes.json ==
+INFORMATION: CodeSystem/state-of-mind-association-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+WARNING: CodeSystem/state-of-mind-association-codes: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+== fsh-generated/resources/CodeSystem-state-of-mind-codes.json ==
+INFORMATION: CodeSystem/state-of-mind-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+WARNING: CodeSystem/state-of-mind-codes: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+== fsh-generated/resources/CodeSystem-state-of-mind-kind-codes.json ==
+INFORMATION: CodeSystem/state-of-mind-kind-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+WARNING: CodeSystem/state-of-mind-kind-codes: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+== fsh-generated/resources/CodeSystem-state-of-mind-label-codes.json ==
+INFORMATION: CodeSystem/state-of-mind-label-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+WARNING: CodeSystem/state-of-mind-label-codes: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+== fsh-generated/resources/CodeSystem-state-of-mind-valence-codes.json ==
+INFORMATION: CodeSystem/state-of-mind-valence-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+WARNING: CodeSystem/state-of-mind-valence-codes: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+== fsh-generated/resources/CodeSystem-symptom-severity-codes.json ==
+INFORMATION: CodeSystem/symptom-severity-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+== fsh-generated/resources/ConceptMap-symptom-pghd-to-snomedct.json ==
+INFORMATION: ConceptMap/symptom-pghd-to-snomedct: ConceptMap.group[0].target: Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
+ERROR: ConceptMap/symptom-pghd-to-snomedct: ConceptMap: Concept maps published by HL7 SHALL conform to the ShareableConceptMap profile, which says that the element ConceptMap.title is mandatory, but it is not present
+WARNING: ConceptMap/symptom-pghd-to-snomedct: ConceptMap: Concept maps published by HL7 SHALL conform to the ShareableConceptMap profile, which says that the element ConceptMap.name should be present, but it is not
+ERROR: ConceptMap/symptom-pghd-to-snomedct: ConceptMap: Concept maps published by HL7 SHALL conform to the ShareableConceptMap profile, which says that the element ConceptMap.description is mandatory, but it is not present
+== fsh-generated/resources/ConceptMap-symptom-snomedct-to-pghd.json ==
+INFORMATION: ConceptMap/symptom-snomedct-to-pghd: ConceptMap.group[0].source: Source Code System http://snomed.info/sct is only supported on the terminology server, so the source codes are not validated for performance reasons
+ERROR: ConceptMap/symptom-snomedct-to-pghd: ConceptMap: Concept maps published by HL7 SHALL conform to the ShareableConceptMap profile, which says that the element ConceptMap.title is mandatory, but it is not present
+WARNING: ConceptMap/symptom-snomedct-to-pghd: ConceptMap: Concept maps published by HL7 SHALL conform to the ShareableConceptMap profile, which says that the element ConceptMap.name should be present, but it is not
+ERROR: ConceptMap/symptom-snomedct-to-pghd: ConceptMap: Concept maps published by HL7 SHALL conform to the ShareableConceptMap profile, which says that the element ConceptMap.description is mandatory, but it is not present
 == fsh-generated/resources/ImplementationGuide-hl7.fhir.uv.phr.json ==
-ERROR: ImplementationGuide/hl7.fhir.uv.phr: ImplementationGuide: HL7 Implementation Guides must state their status explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-WARNING: ImplementationGuide/hl7.fhir.uv.phr: ImplementationGuide: HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-== fsh-generated/resources/Media-jane-doe-media.json ==
-== fsh-generated/resources/Observation-PCDSleepObservation-duration-example.json ==
-== fsh-generated/resources/Observation-PCDSleepObservation-stage-example.json ==
-== fsh-generated/resources/Patient-jane-doe.json ==
-== fsh-generated/resources/Provenance-jane-doe-media-provenance.json ==
+WARNING: ImplementationGuide/hl7.fhir.uv.phr: ImplementationGuide.dependsOn[2]: The ImplementationGuide uses package hl7.fhir.uv.ips#1.1.0 released on 2022-11-22, but the most recent appropriate version is 2.0.0. This reference is getting old and the more recent version should be considered
+== fsh-generated/resources/MedicationAdministration-pghd-medicationadministration-insulin-1.json ==
+== fsh-generated/resources/Observation-ScoredAssessmentGAD7Example.json ==
+ERROR: Observation/ScoredAssessmentGAD7Example: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-observation-scored-assessment|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/ScoredAssessmentGAD7Example: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-observation-scored-assessment|1.0.0-ballot2)
+== fsh-generated/resources/Observation-ScoredAssessmentPHQ9Example.json ==
+ERROR: Observation/ScoredAssessmentPHQ9Example: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-observation-scored-assessment|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/ScoredAssessmentPHQ9Example: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-observation-scored-assessment|1.0.0-ballot2)
+== fsh-generated/resources/Observation-StateOfMind2Example.json ==
+ERROR: Observation/StateOfMind2Example: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-observation-state-of-mind|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/StateOfMind2Example: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-observation-state-of-mind|1.0.0-ballot2)
+== fsh-generated/resources/Observation-StateOfMindExample.json ==
+ERROR: Observation/StateOfMindExample: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-observation-state-of-mind|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/StateOfMindExample: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-observation-state-of-mind|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned.json ==
+ERROR: Observation/pghd-activity-activeEnergyBurned: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-activity-activeEnergyBurned: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned-underwater-diving.json ==
+WARNING: Observation/pghd-activity-activeEnergyBurned-underwater-diving: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-activity-activeEnergyBurned-underwater-diving: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-activity-activeEnergyBurned-underwater-diving: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned-walking.json ==
+WARNING: Observation/pghd-activity-activeEnergyBurned-walking: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-activity-activeEnergyBurned-walking: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-activity-activeEnergyBurned-walking: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-activity-appleExerciseTime.json ==
+ERROR: Observation/pghd-activity-appleExerciseTime: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-activity-appleExerciseTime: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-activity-appleMoveTime.json ==
+ERROR: Observation/pghd-activity-appleMoveTime: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-activity-appleMoveTime: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-activity-appleStandHour.json ==
+ERROR: Observation/pghd-activity-appleStandHour: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-activity-appleStandHour: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-activity-basalEnergyBurned.json ==
+ERROR: Observation/pghd-activity-basalEnergyBurned: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-activity-basalEnergyBurned: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-activity-cyclingCadence.json ==
+ERROR: Observation/pghd-activity-cyclingCadence: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-activity-cyclingCadence: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-activity-distanceWalkingRunning-walking.json ==
+WARNING: Observation/pghd-activity-distanceWalkingRunning-walking: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-activity-distanceWalkingRunning-walking: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-activity-distanceWalkingRunning-walking: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-alchol-consumption-blood-alcohol-content.json ==
+ERROR: Observation/pghd-alchol-consumption-blood-alcohol-content: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-alchol-consumption|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-alchol-consumption-blood-alcohol-content: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-alchol-consumption|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-alchol-use-number-of-alcoholic-beverages.json ==
+ERROR: Observation/pghd-alchol-use-number-of-alcoholic-beverages: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-alchol-use|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-alchol-use-number-of-alcoholic-beverages: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-alchol-use|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-audiogram.json ==
+WARNING: Observation/pghd-audiogram: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-audiogram: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-audiogram|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-audiogram: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-audiogram|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-blood-glucose-1.json ==
+== fsh-generated/resources/Observation-pghd-blood-glucose-2.json ==
+== fsh-generated/resources/Observation-pghd-blood-glucose-3.json ==
+== fsh-generated/resources/Observation-pghd-bloodpressure.json ==
+WARNING: Observation/pghd-bloodpressure: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+INFORMATION: Observation/pghd-bloodpressure: Observation.component[0].code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/pghd-bloodpressure: Observation.component[1].code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Observation-pghd-bmi.json ==
+WARNING: Observation/pghd-bmi: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+== fsh-generated/resources/Observation-pghd-bodyheight.json ==
+WARNING: Observation/pghd-bodyheight: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+== fsh-generated/resources/Observation-pghd-bodymeasurement-body-fat-percentage.json ==
+WARNING: Observation/pghd-bodymeasurement-body-fat-percentage: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-bodymeasurement-body-fat-percentage: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-bodymeasurement|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-bodymeasurement-body-fat-percentage: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-bodymeasurement|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-bodytemperature.json ==
+WARNING: Observation/pghd-bodytemperature: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+== fsh-generated/resources/Observation-pghd-bodyweight.json ==
+WARNING: Observation/pghd-bodyweight: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+== fsh-generated/resources/Observation-pghd-cardiac-function-lowHeart-rate-event.json ==
+WARNING: Observation/pghd-cardiac-function-lowHeart-rate-event: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+== fsh-generated/resources/Observation-pghd-diving-underwater-depthg.json ==
+WARNING: Observation/pghd-diving-underwater-depthg: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-diving-underwater-depthg: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-diving|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-diving-underwater-depthg: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-diving|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-diving-water-temperature.json ==
+WARNING: Observation/pghd-diving-water-temperature: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-diving-water-temperature: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-diving|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-diving-water-temperature: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-diving|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-food.json ==
+WARNING: Observation/pghd-food: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-food: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-food|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-food: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-food|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-hearing-environmental-audio-exposure.json ==
+ERROR: Observation/pghd-hearing-environmental-audio-exposure: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-hearing-environmental-audio-exposure: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-hearingSensitivity-1.json ==
+WARNING: Observation/pghd-hearingSensitivity-1: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-hearingSensitivity-1: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing-sensitivity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-hearingSensitivity-1: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing-sensitivity|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-hearingSensitivity-2.json ==
+WARNING: Observation/pghd-hearingSensitivity-2: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-hearingSensitivity-2: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing-sensitivity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-hearingSensitivity-2: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing-sensitivity|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-hearingSensitivity-3.json ==
+WARNING: Observation/pghd-hearingSensitivity-3: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-hearingSensitivity-3: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing-sensitivity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-hearingSensitivity-3: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing-sensitivity|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-hearingSensitivity-4.json ==
+WARNING: Observation/pghd-hearingSensitivity-4: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-hearingSensitivity-4: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing-sensitivity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-hearingSensitivity-4: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing-sensitivity|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-heart-electrocardiogram.json ==
+ERROR: Observation/pghd-heart-electrocardiogram: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-electrocardiogram|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-heart-electrocardiogram: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-electrocardiogram|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-heartbeat.json ==
+ERROR: Observation/pghd-heartbeat: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-heartbeat|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-heartbeat: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-heartbeat|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-heartrate.json ==
+WARNING: Observation/pghd-heartrate: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+== fsh-generated/resources/Observation-pghd-medication-adherence.json ==
+== fsh-generated/resources/Observation-pghd-mindfulness-mindful-session.json ==
+WARNING: Observation/pghd-mindfulness-mindful-session: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-mindfulness-mindful-session: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-mindfulness|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-mindfulness-mindful-session: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-mindfulness|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-mobility-stair-descent-speed.json ==
+ERROR: Observation/pghd-mobility-stair-descent-speed: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-mobility|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-mobility-stair-descent-speed: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-mobility|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-nutrition-dietary-carbohydrates.json ==
+WARNING: Observation/pghd-nutrition-dietary-carbohydrates: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-nutrition-dietary-carbohydrates: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-nutrition|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-nutrition-dietary-carbohydrates: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-nutrition|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-nutrition-dietary-energy-consumed.json ==
+WARNING: Observation/pghd-nutrition-dietary-energy-consumed: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+== fsh-generated/resources/Observation-pghd-nutrition-dietary-fiber.json ==
+WARNING: Observation/pghd-nutrition-dietary-fiber: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-nutrition-dietary-fiber: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-nutrition|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-nutrition-dietary-fiber: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-nutrition|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-nutrition-dietary-protein.json ==
+WARNING: Observation/pghd-nutrition-dietary-protein: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-nutrition-dietary-protein: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-nutrition|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-nutrition-dietary-protein: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-nutrition|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-oxygenSaturation.json ==
+WARNING: Observation/pghd-oxygenSaturation: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+== fsh-generated/resources/Observation-pghd-pregnancy-status.json ==
+WARNING: Observation/pghd-pregnancy-status: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-pregnancy-status: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-pregnancy-status|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-pregnancy-status: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-pregnancy-status|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-reproductive-health-intermenstrual-bleeding.json ==
+WARNING: Observation/pghd-reproductive-health-intermenstrual-bleeding: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+== fsh-generated/resources/Observation-pghd-respiratoryrate.json ==
+WARNING: Observation/pghd-respiratoryrate: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+== fsh-generated/resources/Observation-pghd-selfcare-handwashingEvent.json ==
+WARNING: Observation/pghd-selfcare-handwashingEvent: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-selfcare-handwashingEvent: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-selfcare|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-selfcare-handwashingEvent: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-selfcare|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-sleep-asleep-core.json ==
+WARNING: Observation/pghd-sleep-asleep-core: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-sleep-asleep-core: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-sleep|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-sleep-asleep-core: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-sleep|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-sleep-episode-1.json ==
+== fsh-generated/resources/Observation-pghd-sleep-episode-2.json ==
+== fsh-generated/resources/Observation-pghd-sleep-episode-core-sleep-1.json ==
+== fsh-generated/resources/Observation-pghd-sleep-episode-core-sleep-2.json ==
+== fsh-generated/resources/Observation-pghd-sleep-episode-deep-sleep-1.json ==
+== fsh-generated/resources/Observation-pghd-sleep-episode-deep-sleep-2.json ==
+== fsh-generated/resources/Observation-pghd-sleep-episode-latency-to-sleep-onset-1.json ==
+== fsh-generated/resources/Observation-pghd-sleep-episode-latency-to-sleep-onset-2.json ==
+== fsh-generated/resources/Observation-pghd-snore-event-1.json ==
+== fsh-generated/resources/Observation-pghd-snore-event-2.json ==
+== fsh-generated/resources/Observation-pghd-snore-event-3.json ==
+== fsh-generated/resources/Observation-pghd-snore-index-1.json ==
+== fsh-generated/resources/Observation-pghd-snore-index-2.json ==
+== fsh-generated/resources/Observation-pghd-symptom-fever.json ==
+WARNING: Observation/pghd-symptom-fever: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-symptom-fever: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCodes in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-symptom|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-symptom-fever: Observation.code: Observation.code.coding:PGHDCodes: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-symptom|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-testresult-forced-vital-capacity.json ==
+WARNING: Observation/pghd-testresult-forced-vital-capacity: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-testresult-forced-vital-capacity: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-testresult|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-testresult-forced-vital-capacity: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-testresult|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-uvexposure.json ==
+WARNING: Observation/pghd-uvexposure: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-uvexposure: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-uvexposure|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-uvexposure: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-uvexposure|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-vitalsigns-apple-sleeping-wrist-temperature.json ==
+WARNING: Observation/pghd-vitalsigns-apple-sleeping-wrist-temperature: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-vitalsigns-apple-sleeping-wrist-temperature: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-vitalsigns|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-vitalsigns-apple-sleeping-wrist-temperature: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-vitalsigns|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-voltage-measurement.json ==
+== fsh-generated/resources/Observation-pghd-workout-underwater-diving.json ==
+WARNING: Observation/pghd-workout-underwater-diving: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-workout-underwater-diving: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-workout|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-workout-underwater-diving: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-workout|1.0.0-ballot2)
+== fsh-generated/resources/Observation-pghd-workout-walking.json ==
+WARNING: Observation/pghd-workout-walking: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
+ERROR: Observation/pghd-workout-walking: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-workout|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pghd-workout-walking: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-workout|1.0.0-ballot2)
+== fsh-generated/resources/Patient-1.json ==
+== fsh-generated/resources/Questionnaire-gad7.json ==
+INFORMATION: Resource: The resource Questionnaire/gad7 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/Questionnaire-phq9.json ==
+INFORMATION: Resource: The resource Questionnaire/phq9 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/QuestionnaireResponse-gad7.json ==
+== fsh-generated/resources/QuestionnaireResponse-phq9.json ==
 == fsh-generated/resources/SearchParameter-patient-identifier.json ==
 == fsh-generated/resources/SearchParameter-search-from-date.json ==
 == fsh-generated/resources/StructureDefinition-Environmental.json ==
 == fsh-generated/resources/StructureDefinition-FinancialReceipt.json ==
-== fsh-generated/resources/StructureDefinition-NutrientOuttake.json ==
-INFORMATION: StructureDefinition/NutrientOuttake: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 == fsh-generated/resources/StructureDefinition-PhrBundle.json ==
-== fsh-generated/resources/StructureDefinition-PhrComposition.json ==
-== fsh-generated/resources/StructureDefinition-PhrDocumentReference.json ==
-== fsh-generated/resources/StructureDefinition-PhrMedia.json ==
-== fsh-generated/resources/StructureDefinition-PhrPatient.json ==
-== fsh-generated/resources/StructureDefinition-PhrProvenance.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-SocialMedia.json ==
-== fsh-generated/resources/StructureDefinition-pcd-sleep-observation.json ==
+== fsh-generated/resources/StructureDefinition-pghd-activity.json ==
+WARNING: StructureDefinition/pghd-activity: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-alchol-consumption.json ==
+WARNING: StructureDefinition/pghd-alchol-consumption: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-alchol-use.json ==
+WARNING: StructureDefinition/pghd-alchol-use: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-audiogram.json ==
+WARNING: StructureDefinition/pghd-audiogram: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-blood-glucose.json ==
+WARNING: StructureDefinition/pghd-blood-glucose: StructureDefinition.snapshot.element[56].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation' to 'http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation|5.2.0'
+WARNING: StructureDefinition/pghd-blood-glucose: StructureDefinition.differential.element[19].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation' to 'http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation|5.2.0'
+INFORMATION: StructureDefinition/pghd-blood-glucose: Observation.value[x].extension: The extension http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation|5.2.0 is deprecated with the note: 'Replaced by [[[http://hl7.org/fhir/StructureDefinition/extension-quantity-translation]]]'
+WARNING: StructureDefinition/pghd-blood-glucose: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-bloodpressure.json ==
+== fsh-generated/resources/StructureDefinition-pghd-bmi.json ==
+== fsh-generated/resources/StructureDefinition-pghd-bodyheight.json ==
+== fsh-generated/resources/StructureDefinition-pghd-bodymeasurement.json ==
+WARNING: StructureDefinition/pghd-bodymeasurement: StructureDefinition.snapshot.element[0].short: value should not start or finish with whitespace 'PGHD Body Measurements Profile '
+WARNING: StructureDefinition/pghd-bodymeasurement: StructureDefinition.differential.element[0].short: value should not start or finish with whitespace 'PGHD Body Measurements Profile '
+WARNING: StructureDefinition/pghd-bodymeasurement: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-bodytemperature.json ==
+== fsh-generated/resources/StructureDefinition-pghd-bodyweight.json ==
+== fsh-generated/resources/StructureDefinition-pghd-cardiac-function.json ==
+WARNING: StructureDefinition/pghd-cardiac-function: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-careplan-selfcare.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-careplan-selfcare'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-pghd-device.json ==
+INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-device'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated/resources/StructureDefinition-pghd-diving.json ==
+WARNING: StructureDefinition/pghd-diving: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-electrocardiogram.json ==
+WARNING: StructureDefinition/pghd-electrocardiogram: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-food.json ==
+WARNING: StructureDefinition/pghd-food: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-hearing.json ==
+WARNING: StructureDefinition/pghd-hearing: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-hearing-sensitivity.json ==
+WARNING: StructureDefinition/pghd-hearing-sensitivity: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-heartbeat.json ==
+WARNING: StructureDefinition/pghd-heartbeat: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-heartrate.json ==
+== fsh-generated/resources/StructureDefinition-pghd-medication-adherence.json ==
+WARNING: StructureDefinition/pghd-medication-adherence: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-medicationadministration-insulin.json ==
+== fsh-generated/resources/StructureDefinition-pghd-medicationdispense.json ==
+WARNING: StructureDefinition/pghd-medicationdispense: StructureDefinition.snapshot.element[26].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#5.0.0), 3.0.0 (from hl7.terminology.r4#7.1.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType' to 'http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType|3.0.0'
+INFORMATION: StructureDefinition/pghd-medicationdispense: StructureDefinition.snapshot.element[28].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+WARNING: StructureDefinition/pghd-medicationdispense: StructureDefinition.snapshot.element[84].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#5.0.0), 3.0.0 (from hl7.terminology.r4#7.1.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode' to 'http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode|3.0.0'
+WARNING: StructureDefinition/pghd-medicationdispense: StructureDefinition.snapshot.element[85].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#5.0.0), 3.0.0 (from hl7.terminology.r4#7.1.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason' to 'http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason|3.0.0'
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-medicationdispense'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-pghd-mindfulness.json ==
+WARNING: StructureDefinition/pghd-mindfulness: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-mobility.json ==
+WARNING: StructureDefinition/pghd-mobility: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-nutrition.json ==
+WARNING: StructureDefinition/pghd-nutrition: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-observation-scored-assessment.json ==
+WARNING: StructureDefinition/pghd-observation-scored-assessment: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-observation-state-of-mind.json ==
+WARNING: StructureDefinition/pghd-observation-state-of-mind: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-oxygenSaturation.json ==
+== fsh-generated/resources/StructureDefinition-pghd-patient.json ==
+== fsh-generated/resources/StructureDefinition-pghd-pregnancy-status.json ==
+WARNING: StructureDefinition/pghd-pregnancy-status: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-questionnaire.json ==
+== fsh-generated/resources/StructureDefinition-pghd-questionnaire-response.json ==
+== fsh-generated/resources/StructureDefinition-pghd-reproductive-health.json ==
+WARNING: StructureDefinition/pghd-reproductive-health: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-respiratoryrate.json ==
+== fsh-generated/resources/StructureDefinition-pghd-selfcare.json ==
+WARNING: StructureDefinition/pghd-selfcare: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-sleep.json ==
+WARNING: StructureDefinition/pghd-sleep: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-sleep-episode.json ==
+WARNING: StructureDefinition/pghd-sleep-episode: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-snore-event.json ==
+WARNING: StructureDefinition/pghd-snore-event: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-snore-index.json ==
+WARNING: StructureDefinition/pghd-snore-index: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-symptom.json ==
+WARNING: StructureDefinition/pghd-symptom: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-testresult.json ==
+WARNING: StructureDefinition/pghd-testresult: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-uvexposure.json ==
+WARNING: StructureDefinition/pghd-uvexposure: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-vitalsigns.json ==
+WARNING: StructureDefinition/pghd-vitalsigns: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-voltage-measurement.json ==
+WARNING: StructureDefinition/pghd-voltage-measurement: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-pghd-workout.json ==
+WARNING: StructureDefinition/pghd-workout: StructureDefinition.snapshot: The slice 'ObservationCategory' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/ValueSet-appetite-changes.json ==
+== fsh-generated/resources/ValueSet-body-temperature-measurement-location.json ==
+== fsh-generated/resources/ValueSet-observation-activity-codes.json ==
+== fsh-generated/resources/ValueSet-observation-alchol-consumption-codes.json ==
+== fsh-generated/resources/ValueSet-observation-body-measurements-codes.json ==
+== fsh-generated/resources/ValueSet-observation-diving-codes.json ==
+== fsh-generated/resources/ValueSet-observation-ecg-classification-codes.json ==
+== fsh-generated/resources/ValueSet-observation-ecg-lead-codes.json ==
+== fsh-generated/resources/ValueSet-observation-ecg-symptoms-status-codes.json ==
+== fsh-generated/resources/ValueSet-observation-ecgcodes.json ==
+== fsh-generated/resources/ValueSet-observation-gad7-risk-codes.json ==
+== fsh-generated/resources/ValueSet-observation-hearing-codes.json ==
+== fsh-generated/resources/ValueSet-observation-lab-results-codes.json ==
+== fsh-generated/resources/ValueSet-observation-mind-codes.json ==
+== fsh-generated/resources/ValueSet-observation-mindfulness-codes.json ==
+== fsh-generated/resources/ValueSet-observation-mobility-codes.json ==
+== fsh-generated/resources/ValueSet-observation-nutrition-codes.json ==
+== fsh-generated/resources/ValueSet-observation-phq9-risk-codes.json ==
+== fsh-generated/resources/ValueSet-observation-reproductive-health-codes.json ==
+== fsh-generated/resources/ValueSet-observation-scored-assessment-codes.json ==
+== fsh-generated/resources/ValueSet-observation-scored-assessment-score-codes.json ==
+== fsh-generated/resources/ValueSet-observation-selfcare-codes.json ==
+== fsh-generated/resources/ValueSet-observation-sleep-codes.json ==
+== fsh-generated/resources/ValueSet-observation-state-of-mind-association-codes.json ==
+== fsh-generated/resources/ValueSet-observation-state-of-mind-codes.json ==
+== fsh-generated/resources/ValueSet-observation-state-of-mind-kind-codes.json ==
+== fsh-generated/resources/ValueSet-observation-state-of-mind-label-codes.json ==
+== fsh-generated/resources/ValueSet-observation-state-of-mind-valence-codes.json ==
+== fsh-generated/resources/ValueSet-observation-symptom-codes.json ==
+== fsh-generated/resources/ValueSet-observation-symptom-snomedct-codes.json ==
+== fsh-generated/resources/ValueSet-observation-uvexposure-codes.json ==
+== fsh-generated/resources/ValueSet-observation-vital-signs-codes.json ==
+== fsh-generated/resources/ValueSet-observation-workout-codes.json ==
 == fsh-generated/resources/ValueSet-pcd-sleep-observation-code.json ==
+ERROR: ValueSet/pcd-sleep-observation-code: ValueSet: Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-pcd-sleep-observation-value.json ==
+ERROR: ValueSet/pcd-sleep-observation-value: ValueSet: Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-sleep-analysis.json ==
+== fsh-generated/resources/ValueSet-symptom-presence.json ==
+== fsh-generated/resources/ValueSet-symptom-severity.json ==

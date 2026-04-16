@@ -258,8 +258,9 @@
 <page key="persona-journey-e" name="Marcella"/>
 <page key="persona-journey-c" name="Markus"/>
 <page key="operating-systems" name="Operating Systems"/>
+<page key="pghd-code-mapping" name="PHR Code Mapping"/>
+<page key="pghd" name="Patient Generated Health Data (PGHD)"/>
 <page key="personas" name="Patient Personas"/>
-<page key="pghd" name="Patient-generated health data(PGHD)"/>
 <page key="personas-index" name="Personas Index"/>
 <page key="physiology" name="Physiology Domains"/>
 <page key="recordkeeping" name="Record Keeping"/>

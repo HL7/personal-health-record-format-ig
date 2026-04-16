@@ -1,0 +1,74 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ecg-symptoms-status-codes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ecg-symptoms-status-codes</b></p><a name=\"ecg-symptoms-status-codes\"> </a><a name=\"hcecg-symptoms-status-codes\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/ecg-symptoms-status-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">none<a name=\"ecg-symptoms-status-codes-none\"> </a></td><td>None</td><td>The user didn’t enter a symptom when they recorded the ECG.</td></tr><tr><td style=\"white-space:nowrap\">present<a name=\"ecg-symptoms-status-codes-present\"> </a></td><td>Present</td><td>The user added a symptom when they recorded the ECG.</td></tr><tr><td style=\"white-space:nowrap\">notSet<a name=\"ecg-symptoms-status-codes-notSet\"> </a></td><td>Not set</td><td>A sample that doesn’t have an assigned classification.</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pe"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  }],
+  "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/ecg-symptoms-status-codes",
+  "version" : "1.0.0-ballot2",
+  "name" : "EcgSymptomsStatus",
+  "title" : "ECG Symptoms Status Codes",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-04-16T16:46:43-05:00",
+  "publisher" : "HL7 International / Patient Empowerment",
+  "contact" : [{
+    "name" : "HL7 International / Patient Empowerment",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/patientempowerment"
+    }]
+  }],
+  "description" : "Code indicating whether or not the user's symptoms are input during ECG waveform acquisition",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "compositional" : false,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "none",
+    "display" : "None",
+    "definition" : "The user didn’t enter a symptom when they recorded the ECG."
+  },
+  {
+    "code" : "present",
+    "display" : "Present",
+    "definition" : "The user added a symptom when they recorded the ECG."
+  },
+  {
+    "code" : "notSet",
+    "display" : "Not set",
+    "definition" : "A sample that doesn’t have an assigned classification."
+  }]
+}
