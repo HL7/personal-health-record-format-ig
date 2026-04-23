@@ -47,7 +47,7 @@ Return records from this date
   "version" : "1.0.0-ballot2",
   "name" : "SearchFromDateSearchParameter",
   "status" : "active",
-  "date" : "2026-04-16T16:46:43-05:00",
+  "date" : "2026-04-23T16:43:45-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

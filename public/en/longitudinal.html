@@ -135,10 +135,10 @@
         <a href="functionality.html">Functional Model</a>
       </li>
       <li>
-        <a href="longitudinal.html">Immutable Records</a>
+        <a href="annotations.html">Annotations</a>
       </li>
       <li>
-        <a href="annotations.html">Annotations</a>
+        <a href="longitudinal.html">Merging and Versioning</a>
       </li>
       <li>
         <a href="pghd.html">Patient Generated Health Data</a>
@@ -264,27 +264,40 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#architecture-features" id="markdown-toc-architecture-features">Architecture Features</a>    <ul>
+      <li><a href="#authoritative-repository-management" id="markdown-toc-authoritative-repository-management">Authoritative Repository Management</a></li>
+      <li><a href="#branching-and-merging" id="markdown-toc-branching-and-merging">Branching and Merging</a></li>
+      <li><a href="#versioning-and-change-tracking" id="markdown-toc-versioning-and-change-tracking">Versioning and Change Tracking</a></li>
+      <li><a href="#replication-and-synchronization" id="markdown-toc-replication-and-synchronization">Replication and Synchronization</a></li>
+      <li><a href="#rollback-and-recovery" id="markdown-toc-rollback-and-recovery">Rollback and Recovery</a></li>
+      <li><a href="#offline-operation-and-conflict-resolution" id="markdown-toc-offline-operation-and-conflict-resolution">Offline Operation and Conflict Resolution</a></li>
+    </ul>
+  </li>
+</ul>
+
 </div>
-
-<p>The core idea has been to establish a robust mechanism for bidirectional synchronization of electronic health records (EHRs) between clinical systems, ancillary services, personal health record (PHR) platforms, and the patient's own health apps and devices. By leveraging standards like FHIR and NDJSON, this PHR approach enables  exchange of structured medical data.</p>
-
-<blockquote>
-  <p>Note:  the following is a first-draft of this content, and is subject to changes and re-writes.</p>
-</blockquote>
-
 <h4 id="record-lifecycle-operations">Record Lifecycle Operations</h4>
 
-<p>However, once we have structured data, we need to consider the details of how we construct longitudinal records from multiple sources. In doing so, we are inspired by both the SPHR-FM Record Lifecycle specifications and the Git utility (which is a distributed version control system that allows multiple users to collaborate on a project while maintaining a complete history of changes).  In Git, each record is added to a "repository" and can be "committed" with a timestamp and a message (RI.1.1.2).  The repository can be "cloned" to create a local copy (RI.1.1.9), and changes can be "pulled" from the repository and "pushed" or merged into it (RI.1.1.19).  We would draw the reader's attention to how these operations are similar to the SPHR-FM Record Lifecycle operations.  By aligning these two approaches, we can leverage the power of both acylic graphs and the SPHR-FM Record Lifecycle specifications to create a robust mechanism for managing longitudinal records.</p>
+<p>When a Personal Health Record (PHR) obtains data from external systems, the initial longitudinal record exchange may be performed using an Electronic Health Information (EHI) export capability, such as the HL7 International EHI Export API / Bulk FHIR export pattern, which provides a patient-scoped mechanism to retrieve a comprehensive snapshot of longitudinal clinical data from an originating EHR. The HL7 International Bulk Data Access specification defines asynchronous export semantics suitable for transferring complete patient records or large clinical histories.</p>
+
+<p>After an initial export has been imported into a PHR, subsequent exchanges should avoid requiring full re-export whenever possible. Instead, incremental updates may be conveyed as atomic changes using mechanisms such as SMART Health Links, Patient Data Receipts, or event-driven notifications. These patterns allow a receiving PHR to determine what has changed since the prior import and apply only the newly available content, preserving provenance and reducing duplication.</p>
+
+<p>Where event synchronization is needed, HL7 International FHIRCast can provide session- or event-based notification that relevant clinical context has changed, allowing a PHR or downstream system to request only newly available resources rather than repeating a full export. In this model, FHIRCast acts as a trigger, while Smart Health Links or similar exchange artifacts provide retrievable payload references.</p>
+
+<p>Taken together, these mechanisms create a lifecycle comparable to distributed source-control workflows:</p>
+
+<p>Clone: initial longitudinal record acquisition through EHI export / bulk patient export
+Pull: retrieval of incremental changes from external systems
+Commit: application of atomic updates into the local longitudinal record
+Merge: reconciliation of overlapping data received from multiple EHR sources</p>
+
+<p>This pattern is especially important when a PHR imports multiple exports over time, including repeated exports from the same EHR and exports from different organizations. The PHR SHOULD preserve source provenance, compare resource identity and version metadata, and reconcile overlapping records using stable identifiers, timestamps, and provenance references so that newer representations supplement rather than overwrite clinically significant prior information.</p>
+
+<p>A practical merge strategy is to treat the imported export as a source branch: resources already present in the PHR may be matched using logical identifiers, version metadata, or Provenance relationships, while newly received resources are appended and conflicting updates are retained with explicit provenance until reconciliation rules are applied.</p>
 
 <p><img src="git-like-operations.png" alt="git-like-operations" width="100%" /></p>
-
-<p>Importantly, this architecture suggests a formal record-keeping mechanism by which we can manage,  index, update,merge, and export entire medical histories from a system. This formal mechanism is known as a Directed Acylic Graphs (DAGs), which are designed to ensure data integrity and consistency. Each record is assigned a unique <a href="https://www.simplilearn.com/tutorials/cyber-security-tutorial/sha-256-algorithm">SHA-256</a> hash, and the hash of each record includes the hash of the previous record in the chain. This creates a tamper-evident, immutable record of the patient's health data.</p>
-
-<blockquote>
-  <p>Note:  We envision these atomic updates as eventually including the <a href="https://open-health-manager.github.io/patient-data-receipt-ig/">Patient Data Receipt</a> standard.</p>
-</blockquote>
 
 <h4 id="consolidation-of-distributed-records">Consolidation of Distributed Records</h4>
 
@@ -295,7 +308,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Key aspects of the above diagram include:</p>
 
 <ul>
-  <li>The EHR system acts as the central "master" repository, serving as the authoritative source of truth for the patient's health data. Updates and changes originate from the EHR.</li>
+  <li>The EHR system serves as an authoritative source of truth for the patient's health data at that organization or healthcare system. Updates and changes originate from the EHR.</li>
   <li>Ancillary services like labs and radiology systems have synchronized their records with the EHR, sending new data and receiving updates.</li>
   <li>The PHR system, which the patient has access to, also synchronizes with the EHR, allowing the patient to view, contribute to, and manage their health information.</li>
   <li>The patient's own health apps and personal devices can connect to the PHR system, pulling data and sending new health metrics or self-reported information to be incorporated into the patient's comprehensive record.</li>
@@ -304,42 +317,104 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>This approach offers several benefits: it empowers patients to be active participants in their healthcare, enables real-time data sharing between providers and ancillary services, and creates a comprehensive, longitudinal view of the patient's health history. The use of standardized data formats and versioning principles helps address challenges around data silos, fragmentation, and lack of interoperability that often plague traditional healthcare IT systems.</p>
 
-<h4 id="architecture-features">Architecture Features</h4>
+<h2 id="architecture-features">Architecture Features</h2>
 
-<p>Directed acyclic graph interpretation of Personal Health Records allow a number of architectural features that implementors are encouraged to consider:</p>
+<p>A directed acyclic graph (DAG) interpretation of Personal Health Records supports several architectural features that implementers are encouraged to consider.</p>
 
-<h5 id="authoritative-repository-management">Authoritative Repository Management:</h5>
+<h3 id="authoritative-repository-management">Authoritative Repository Management</h3>
 
-<p>Both EHR and PHR systems act as legally recognized  repositories of medical data for patients.  It is the duty of clinicians and hospital administrators to keep these records up to date and accurate, to the fullest extent possible.  These repositories are accessible to patients via the 21st Century Cures Act.</p>
+<p>Both EHR and PHR systems may function as legally recognized repositories of patient medical information, depending on jurisdiction and operational context. In provider-operated environments, clinicians and healthcare organizations are responsible for maintaining records that are complete, current, and clinically reliable to the fullest extent possible. These repositories are increasingly accessible to patients through regulatory frameworks such as the 21st Century Cures Act.</p>
 
-<h5 id="branching-and-merging">Branching and Merging:</h5>
+<p>A PHR does not replace the originating EHR as the authoritative source for provider-entered data, but may maintain patient-curated longitudinal copies that combine data from multiple authoritative systems.</p>
 
-<p>Each connected system (e.g., labs, radiology, PHR, patient apps) manages it's own records about the patient, and is treated as a "feature" branch, diverging from the main EHR or PHR branch.</p>
+<h3 id="branching-and-merging">Branching and Merging</h3>
 
-<p>When a system needs to sync data, it performs a FHIR based GET operation from the other system to fetch a specific patient's records.  The system then makes its own updates in its internal record keeping system. In the case of a PHR, typically implemented as a single-user system, the patient will be the user of the application.</p>
+<p>Each connected system (for example laboratories, radiology systems, specialist EHRs, PHRs, or patient applications) maintains its own representation of patient information and may be viewed conceptually as a branch derived from one or more upstream repositories.</p>
 
-<p>When ready to push changes back to the EHR or other system, the system performs a POST operation, which initiates a record update and merge back into the main EHR branch.  The EHR system utilizes it's internal merge strategies and conflict resolution algorithms to ensure data integrity during the merging process.</p>
+<p>When synchronization is required, a system retrieves patient data using standard FHIR interactions such as <code class="language-plaintext highlighter-rouge">GET</code>, search, or export operations. The receiving system then incorporates that information into its own local repository according to internal storage and reconciliation rules.</p>
 
-<h5 id="versioning-and-change-tracking">Versioning and Change Tracking:</h5>
+<p>When updates are returned to another system, resources are submitted using FHIR <code class="language-plaintext highlighter-rouge">POST</code>, <code class="language-plaintext highlighter-rouge">PUT</code>, or <code class="language-plaintext highlighter-rouge">PATCH</code> interactions, depending on whether new resources are created or existing resources are updated. The receiving repository applies its own merge policies, identifier matching rules, and conflict handling to determine whether incoming content creates a new version, updates an existing resource, or coexists as an alternate representation.</p>
 
-<p>Each commit to the EHR's main branch represents a new version of the patient's medical data, with associated metadata (author, timestamp, change description, etc.).  In the case of a PHR, the author will be the patient owner.</p>
+<p>For PHR implementations, this merge process is especially important because repeated imports may originate from:</p>
 
-<p>Connected systems can use <code class="language-plaintext highlighter-rouge">log</code> and <code class="language-plaintext highlighter-rouge">diff</code> style commands to review the history of changes and understand the evolution of the patient's health records over time.</p>
+<ul>
+  <li>newer exports from the same EHR</li>
+  <li>exports from additional EHR systems</li>
+  <li>patient-entered observations or documents</li>
+  <li>linked records delivered through SMART Health Links or similar exchange patterns</li>
+</ul>
 
-<h5 id="replication-and-synchronization">Replication and Synchronization:</h5>
+<p>A practical merge strategy is to compare resource identifiers, business identifiers, timestamps, and provenance relationships before deciding whether resources represent replacement, supplementation, or coexistence.</p>
 
-<p>When a new system (e.g., a patient's PHR) connects to the framework, it performs a <code class="language-plaintext highlighter-rouge">clone</code> of the EHR's main repository to obtain a local copy of the patient's full medical history.</p>
+<h3 id="versioning-and-change-tracking">Versioning and Change Tracking</h3>
 
-<p>Subsequent updates are handled through the standard <code class="language-plaintext highlighter-rouge">pull</code> and <code class="language-plaintext highlighter-rouge">push</code> operations, ensuring that all connected systems maintain a consistent view of the patient's data.</p>
+<p>FHIR resource versioning provides native support for longitudinal change tracking through <code class="language-plaintext highlighter-rouge">meta.versionId</code>, <code class="language-plaintext highlighter-rouge">meta.lastUpdated</code>, and server-maintained history interactions.</p>
 
-<h5 id="rollback-and-recovery">Rollback and Recovery:</h5>
+<p>Each accepted update to a resource may create a new server version that can later be retrieved using:</p>
 
-<p>When issues arise, the framework utilizes <code class="language-plaintext highlighter-rouge">revert</code> and <code class="language-plaintext highlighter-rouge">reset</code> commands to rollback changes or restore the patient's medical data to a previous known-good state.  This versioning and commit history provide a reliable audit trail and enables recovery from data corruption or accidental modifications.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vread</code> to access a specific historical version of a resource</li>
+  <li><code class="language-plaintext highlighter-rouge">history-instance</code> to retrieve the version history for an individual resource</li>
+  <li><code class="language-plaintext highlighter-rouge">history-type</code> to review change activity across a resource type</li>
+</ul>
 
-<h5 id="offline-capabilities-and-conflict-resolution">Offline Capabilities and Conflict Resolution:</h5>
+<p>For example:</p>
 
-<p>This architecture allows connected systems like PHRs to maintain local "feature" branches and perform occasional pull and sync operations with the central EHR repository.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GET [base]/Patient/[id]/_history</code> retrieves the sequence of prior versions</li>
+  <li><code class="language-plaintext highlighter-rouge">GET [base]/Patient/[id]/_history/[versionId]</code> retrieves a specific version (<code class="language-plaintext highlighter-rouge">vread</code>)</li>
+</ul>
 
+<p>These capabilities allow implementers to treat resource evolution similarly to a versioned filesystem: each accepted change becomes an addressable historical state rather than replacing prior content without traceability.</p>
+
+<p>Where available, <code class="language-plaintext highlighter-rouge">Provenance</code> resources should accompany updates so that systems can preserve author, timestamp, source system, and reason for change.</p>
+
+<p>In this sense, resource history functions as a version-addressable clinical object store, while provenance functions as the commit metadata associated with each accepted change.</p>
+
+<h3 id="replication-and-synchronization">Replication and Synchronization</h3>
+
+<p>When a new PHR or downstream system connects, it may obtain an initial longitudinal copy of patient data through EHI Export, Bulk FHIR export, or patient-scoped retrieval APIs.</p>
+
+<p>Subsequent synchronization may use incremental retrieval patterns rather than repeating full export operations. Systems may combine:</p>
+
+<ul>
+  <li>bulk export for initial acquisition</li>
+  <li>SMART Health Links for incremental payload exchange</li>
+  <li>Patient Data Receipts for atomic update references</li>
+  <li>FHIRCast event notifications to signal that new data is available</li>
+</ul>
+
+<p>This supports a clone-and-pull lifecycle in which only newly available content is transferred after the initial exchange.</p>
+
+<h3 id="rollback-and-recovery">Rollback and Recovery</h3>
+
+<p>FHIR does not define Git-style rollback commands directly; instead, prior resource versions remain accessible through history interactions when supported by the server.</p>
+
+<p>If an incorrect update is identified, a system may:</p>
+
+<ul>
+  <li>retrieve a prior version using <code class="language-plaintext highlighter-rouge">vread</code></li>
+  <li>resubmit that prior state as a new update</li>
+  <li>preserve the corrective action through a new version entry</li>
+</ul>
+
+<p>This creates an auditable correction chain rather than deleting historical states.</p>
+
+<h3 id="offline-operation-and-conflict-resolution">Offline Operation and Conflict Resolution</h3>
+
+<p>PHRs and other intermittently connected systems may maintain local copies of patient data and synchronize periodically.</p>
+
+<p>Because offline systems may update data independently, reconciliation should consider:</p>
+
+<ul>
+  <li>resource identity</li>
+  <li>version identifiers</li>
+  <li>business identifiers</li>
+  <li>provenance</li>
+  <li>timestamp ordering</li>
+</ul>
+
+<p>Where conflicts cannot be safely resolved automatically, systems should preserve both representations until human or policy-based reconciliation occurs.</p>
 
 
 
@@ -368,8 +443,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-04-16 16:46:00 -0500">
-    2026-04-16
+  <span title="2026-04-23 16:43:00 -0500">
+    2026-04-23
   </span>
 
           <br/>

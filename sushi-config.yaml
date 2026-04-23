@@ -97,8 +97,8 @@ menu:
     History: history.html
     Security: security.html
     Functional Model: functionality.html
-    Immutable Records: longitudinal.html
     Annotations: annotations.html
+    Merging and Versioning: longitudinal.html
     Patient Generated Health Data: pghd.html
     Physiology Domains: physiology.html
     Operating Systems: operating-systems.html

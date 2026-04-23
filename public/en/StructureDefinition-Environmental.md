@@ -62,7 +62,7 @@ Other representations of profile: [CSV](../StructureDefinition-Environmental.csv
   "name" : "Environmental",
   "title" : "Environmental Observation",
   "status" : "active",
-  "date" : "2026-04-16T16:46:43-05:00",
+  "date" : "2026-04-23T16:43:45-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

@@ -422,10 +422,6 @@
   - **Section:** 6
   - **Description:** Section overlaps with functional model and doesn't offer guidance on interoperability through FHIR. Confusing and un-useful maintenance required to keep aligned with PHR system functional model. EHR WG now has a FHIR IG for this purpose. Recommend removing.
 
-- [ ] [FHIR-50756](https://jira.hl7.org/browse/FHIR-50756) - Clarify and clean record lifecycle operations
-  - **JIRA Status:** Triaged | **Ballot:** may-2025
-  - **Section:** 23.0.1
-  - **Description:** What is SPHR-FM - do you mean the Personal Health Record System Functional Model? In the diagram, why is the first commit to EHR listed referred to as the Fifth, should it be First? Unclear how this section relates to the PHR FHIR IG.
 
 - [ ] [FHIR-50759](https://jira.hl7.org/browse/FHIR-50759) - Several statements regarding record lifecycle section appear incorrect
   - **JIRA Status:** Triaged | **Ballot:** may-2025

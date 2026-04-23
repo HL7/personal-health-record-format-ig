@@ -65,6 +65,7 @@ Generic: line 0, col 0, Error - The link '../StructureDefinition-pcd-sleep-obser
 Generic: line 0, col 0, Error - The link '../StructureDefinition-pcd-sleep-observation.sch' for "Schematron" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Info - The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause (BUSINESSRULE)
 Generic: line 0, col 0, Info - The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause (BUSINESSRULE)
+Generic: line 0, col 0, Info - The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause (BUSINESSRULE)
 Generic: line 0, col 0, Warning - Illegal HTML: illegal html element: PATH_TO_APP ( with the path to your dummy application, eg:) (INVALID)
 Generic: line 0, col 0, Info - The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause (BUSINESSRULE)
 Generic: line 0, col 0, Info - The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause (BUSINESSRULE)
@@ -414,5 +415,5 @@ Generic: line 0, col 0, Info - The html source contains the word 'SHOULD' but it
 /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-pcd-sleep-observation-code.json: line 1, col 4868, Error - Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present (REQUIRED)
 /Volumes/LangCortex/Code/personal-health-record-format-ig/fsh-generated/resources/ValueSet-pcd-sleep-observation-value.json: line 1, col 4211, Error - Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present (REQUIRED)
 
-err = 88, warn = 230, info = 76
+err = 88, warn = 230, info = 77
 IG Publisher Version: 2.0.29

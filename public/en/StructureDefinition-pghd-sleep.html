@@ -137,10 +137,10 @@
         <a href="functionality.html">Functional Model</a>
       </li>
       <li>
-        <a href="longitudinal.html">Immutable Records</a>
+        <a href="annotations.html">Annotations</a>
       </li>
       <li>
-        <a href="annotations.html">Annotations</a>
+        <a href="longitudinal.html">Merging and Versioning</a>
       </li>
       <li>
         <a href="pghd.html">Patient Generated Health Data</a>
@@ -343,13 +343,6 @@ PGHD Sleep Profile
             Standards status:
           </i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standards Status">Trial-use</a>
           
-          
-          Active
-          
-
-            as of 
-2026-04-16
-
           
         
       </td>
@@ -575,7 +568,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-pghd-device.html">PGHD Device Profile</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">(Measurement) Device</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 16f81505-2101-4211-a161-3f117da349b3
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0e46a5d8-87df-478f-819f-76194dcdbf58
 document.getElementById('cbpghd-sleepK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('pghd-sleepK'), 'binding', document.getElementById('cbpghd-sleepK-binding').checked, document.getElementById('pppghd-sleepK'));
 document.getElementById('cbpghd-sleepK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -939,7 +932,7 @@ filterDesc(document.getElementById('pghd-sleepK'), 'obligation', document.getEle
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-pghd-device.html">PGHD Device Profile</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">(Measurement) Device</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 16f81505-2101-4211-a161-3f117da349b3
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0e46a5d8-87df-478f-819f-76194dcdbf58
 document.getElementById('cbpghd-sleepD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('pghd-sleepD'), 'binding', document.getElementById('cbpghd-sleepD-binding').checked, document.getElementById('pppghd-sleepD'));
 document.getElementById('cbpghd-sleepD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1558,7 +1551,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 16f81505-2101-4211-a161-3f117da349b3
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0e46a5d8-87df-478f-819f-76194dcdbf58
 document.getElementById('cbpghd-sleepS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('pghd-sleepS'), 'binding', document.getElementById('cbpghd-sleepS-binding').checked, document.getElementById('pppghd-sleepS'));
 document.getElementById('cbpghd-sleepS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2288,7 +2281,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-pghd-device.html">PGHD Device Profile</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">(Measurement) Device</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 16f81505-2101-4211-a161-3f117da349b3
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0e46a5d8-87df-478f-819f-76194dcdbf58
 document.getElementById('cbpghd-sleepKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('pghd-sleepKA'), 'binding', document.getElementById('cbpghd-sleepKA-binding').checked, document.getElementById('pppghd-sleepKA'));
 document.getElementById('cbpghd-sleepKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2651,7 +2644,7 @@ filterDesc(document.getElementById('pghd-sleepKA'), 'obligation', document.getEl
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-pghd-device.html">PGHD Device Profile</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">(Measurement) Device</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 16f81505-2101-4211-a161-3f117da349b3
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0e46a5d8-87df-478f-819f-76194dcdbf58
 document.getElementById('cbpghd-sleepDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('pghd-sleepDA'), 'binding', document.getElementById('cbpghd-sleepDA-binding').checked, document.getElementById('pppghd-sleepDA'));
 document.getElementById('cbpghd-sleepDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3267,7 +3260,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 16f81505-2101-4211-a161-3f117da349b3
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0e46a5d8-87df-478f-819f-76194dcdbf58
 document.getElementById('cbpghd-sleepSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('pghd-sleepSA'), 'binding', document.getElementById('cbpghd-sleepSA-binding').checked, document.getElementById('pppghd-sleepSA'));
 document.getElementById('cbpghd-sleepSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3887,8 +3880,8 @@ Summary
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-04-16 16:46:00 -0500">
-    2026-04-16
+  <span title="2026-04-23 16:43:00 -0500">
+    2026-04-23
   </span>
 
           <br/>
