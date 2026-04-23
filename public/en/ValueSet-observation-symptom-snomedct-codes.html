@@ -1,0 +1,436 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Observation Symptom SNOMED CT Codes - Personal Health Records v1.0.0-ballot2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"27.84"}
+    h3,h4,h5,h6{--heading-prefix:"27.84"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Personal Health Records</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot2 - STU 1 ballot
+
+
+
+  <img alt="International flag" src="../assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="datamodel.html">Longitudinal Data Model</a>
+      </li>
+      <li>
+        <a href="api.html">API Endpoints</a>
+      </li>
+      <li>
+        <a href="recordkeeping.html">File Formats</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="history.html">History</a>
+      </li>
+      <li>
+        <a href="security.html">Security</a>
+      </li>
+      <li>
+        <a href="functionality.html">Functional Model</a>
+      </li>
+      <li>
+        <a href="annotations.html">Annotations</a>
+      </li>
+      <li>
+        <a href="longitudinal.html">Merging and Versioning</a>
+      </li>
+      <li>
+        <a href="pghd.html">Patient Generated Health Data</a>
+      </li>
+      <li>
+        <a href="physiology.html">Physiology Domains</a>
+      </li>
+      <li>
+        <a href="operating-systems.html">Operating Systems</a>
+      </li>
+      <li>
+        <a href="logical-models.html">Logical Models</a>
+      </li>
+      <li>
+        <a href="conformance.html">Conformance</a>
+      </li>
+      <li>
+        <a href="algorithms.html">Algorithms</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Personas
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="personas-index.html">Index</a>
+      </li>
+      <li>
+        <a href="persona-thompson-family.html">Thompson Familiy</a>
+      </li>
+      <li>
+        <a href="persona-journey-b.html">Cancer - Adult</a>
+      </li>
+      <li>
+        <a href="persona-william.html">Cancer - Pediatric</a>
+      </li>
+      <li>
+        <a href="persona-journey-e.html">Chronic Illness (Lupus)</a>
+      </li>
+      <li>
+        <a href="persona-journey-d.html">Long COVID</a>
+      </li>
+      <li>
+        <a href="persona-journey-a.html">Patient Relocation</a>
+      </li>
+      <li>
+        <a href="persona-journey-c.html">Sports Outpatient / Cardiac</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Observation Symptom SNOMED CT Codes</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-valueset -->
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Personal Health Records - Local Development build (v1.0.0-ballot2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.org/fhir/uv/phr/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-observation-symptom-snomedct-codes.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-observation-symptom-snomedct-codes.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-observation-symptom-snomedct-codes.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">ValueSet: Observation Symptom SNOMED CT Codes
+
+  </h2>
+  <table class="colstu" data-fhir="generated">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hl7.org/fhir/uv/phr/ValueSet/observation-symptom-snomedct-codes<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/uv/phr/ValueSet/observation-symptom-snomedct-codes"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">1.0.0-ballot2<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/uv/phr/ValueSet/observation-symptom-snomedct-codes|1.0.0-ballot2"/></span>
+      </td>
+      <td style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          <i>
+            
+            Standards status:
+          </i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standards Status">Trial-use</a>
+          
+          
+        
+      </td>
+
+      <td>
+        <a href="http://hl7.org/fhir/versions.html#maturity">Maturity Level</a>: 1
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">ObservationSymptomSNOMEDCT</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>Codes representing symptom-related measurement items with SNOMED CT</p>
+
+</p>
+
+
+  <p>
+    <b>References</b>
+  </p>
+  
+<ul>
+ <li><a href="StructureDefinition-pghd-symptom.html">PGHD Symptom Profile</a></li>
+</ul>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <a name="definition"> </a>
+
+<!-- Content Logical Definition heading in the fragment -->
+  <h3>Logical Definition (CLD)</h3>
+<div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="observation-symptom-snomedct-codes"> </a><a name="hcobservation-symptom-snomedct-codes"> </a>
+<ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b><a href="ValueSet-observation-symptom-codes.html">ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd|1.0.0-ballot2]</a></b></td></tr><tr><td><a href="http://snomed.info/id/51197009">51197009</a></td><td style="color: #cccccc">Stomach cramps</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-abdominalCramps">abdominalCramps</a></td></tr><tr><td><a href="http://snomed.info/id/403364000">403364000</a></td><td style="color: #cccccc">Acne macule (finding)</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-acne">acne</a></td></tr><tr><td><a href="http://snomed.info/id/249473004">249473004</a></td><td style="color: #cccccc">Change in appetite</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-appetiteChanges">appetiteChanges</a></td></tr><tr><td><a href="http://snomed.info/id/165232002">165232002</a></td><td style="color: #cccccc">Bladder: incontinent</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-bladderIncontinence">bladderIncontinence</a></td></tr><tr><td><a href="http://snomed.info/id/116289008">116289008</a></td><td style="color: #cccccc">Abdominal bloating</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-bloating">bloating</a></td></tr><tr><td><a href="http://snomed.info/id/53430007">53430007</a></td><td style="color: #cccccc">Mastodynia</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-breastPain">breastPain</a></td></tr><tr><td><a href="http://snomed.info/id/23924001">23924001</a></td><td style="color: #cccccc">Pressure in chest</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-chestTightnessOrPain">chestTightnessOrPain</a></td></tr><tr><td><a href="http://snomed.info/id/43724002">43724002</a></td><td style="color: #cccccc">Shivering</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-chills">chills</a></td></tr><tr><td><a href="http://snomed.info/id/14760008">14760008</a></td><td style="color: #cccccc">Constipation</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-constipation">constipation</a></td></tr><tr><td><a href="http://snomed.info/id/49727002">49727002</a></td><td style="color: #cccccc">Cough</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-coughing">coughing</a></td></tr><tr><td><a href="http://snomed.info/id/62315008">62315008</a></td><td style="color: #cccccc">Diarrhea</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-diarrhea">diarrhea</a></td></tr><tr><td><a href="http://snomed.info/id/404640003">404640003</a></td><td style="color: #cccccc">Dizziness (finding)</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dizziness">dizziness</a></td></tr><tr><td><a href="http://snomed.info/id/106076001">106076001</a></td><td style="color: #cccccc">Skin finding</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-drySkin">drySkin</a></td></tr><tr><td><a href="http://snomed.info/id/271594007">271594007</a></td><td style="color: #cccccc">Syncope attack</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-fainting">fainting</a></td></tr><tr><td><a href="http://snomed.info/id/84229001">84229001</a></td><td style="color: #cccccc">Fatigue</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-fatigue">fatigue</a></td></tr><tr><td><a href="http://snomed.info/id/386661006">386661006</a></td><td style="color: #cccccc">Fever (finding)</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-fever">fever</a></td></tr><tr><td><a href="http://snomed.info/id/22253000">22253000</a></td><td style="color: #cccccc">Pain</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-generalizedBodyAche">generalizedBodyAche</a></td></tr><tr><td><a href="http://snomed.info/id/278040002">278040002</a></td><td style="color: #cccccc">Loss of hair</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-hairLoss">hairLoss</a></td></tr><tr><td><a href="http://snomed.info/id/25064002">25064002</a></td><td style="color: #cccccc">Headache</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-headache">headache</a></td></tr><tr><td><a href="http://snomed.info/id/16331000">16331000</a></td><td style="color: #cccccc">Heartburn</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-heartburn">heartburn</a></td></tr><tr><td><a href="http://snomed.info/id/198436008">198436008</a></td><td style="color: #cccccc">Menopausal flushing</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-hotFlashes">hotFlashes</a></td></tr><tr><td><a href="http://snomed.info/id/44169009">44169009</a></td><td style="color: #cccccc">Absent smell</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-lossOfSmell">lossOfSmell</a></td></tr><tr><td><a href="http://snomed.info/id/36955009">36955009</a></td><td style="color: #cccccc">Ageusia</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-lossOfTaste">lossOfTaste</a></td></tr><tr><td><a href="http://snomed.info/id/279039007">279039007</a></td><td style="color: #cccccc">Low back pain</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-lowerBackPain">lowerBackPain</a></td></tr><tr><td><a href="http://snomed.info/id/225038006">225038006</a></td><td style="color: #cccccc">Memory lapses</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-memoryLapse">memoryLapse</a></td></tr><tr><td><a href="http://snomed.info/id/106131003">106131003</a></td><td style="color: #cccccc">Mood finding</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-moodChanges">moodChanges</a></td></tr><tr><td><a href="http://snomed.info/id/422587007">422587007</a></td><td style="color: #cccccc">Nausea (finding)</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-nausea">nausea</a></td></tr><tr><td><a href="http://snomed.info/id/42984000">42984000</a></td><td style="color: #cccccc">Night sweats</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-nightSweats">nightSweats</a></td></tr><tr><td><a href="http://snomed.info/id/30473006">30473006</a></td><td style="color: #cccccc">Pain in pelvis</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-pelvicPain">pelvicPain</a></td></tr><tr><td><a href="http://snomed.info/id/80313002">80313002</a></td><td style="color: #cccccc">Palpitations</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-rapidPoundingOrFlutteringHeartbeat">rapidPoundingOrFlutteringHeartbeat</a><br/><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-skippedHeartbeat">skippedHeartbeat</a></td></tr><tr><td><a href="http://snomed.info/id/64531003">64531003</a></td><td style="color: #cccccc">Nasal discharge</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-runnyNose">runnyNose</a></td></tr><tr><td><a href="http://snomed.info/id/267036007">267036007</a></td><td style="color: #cccccc">Dyspnea</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-shortnessOfBreath">shortnessOfBreath</a></td></tr><tr><td><a href="http://snomed.info/id/68235000">68235000</a></td><td style="color: #cccccc">Nasal congestion</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-sinusCongestion">sinusCongestion</a></td></tr><tr><td><a href="http://snomed.info/id/247950007">247950007</a></td><td style="color: #cccccc">Sleep behavior</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-sleepChanges">sleepChanges</a></td></tr><tr><td><a href="http://snomed.info/id/267102003">267102003</a></td><td style="color: #cccccc">Sore throat (finding)</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-soreThroat">soreThroat</a></td></tr><tr><td><a href="http://snomed.info/id/31908003">31908003</a></td><td style="color: #cccccc">Vaginal dryness</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-vaginalDryness">vaginalDryness</a></td></tr><tr><td><a href="http://snomed.info/id/300359004">300359004</a></td><td style="color: #cccccc">Finding of vomiting</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-vomiting">vomiting</a></td></tr><tr><td><a href="http://snomed.info/id/56018004">56018004</a></td><td style="color: #cccccc">Wheezing</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-wheezing">wheezing</a></td></tr></table></li></ul></div>
+
+  <p>&#160;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansion</h3>
+
+  <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"/><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025<span class="copy-text-inline"><button data-clipboard-text="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201" title="Click to Copy URL" class="btn-copy"> </button></span></p><p>This value set contains 38 concepts</p><table class="codes" data-fhir="generated"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display (en)</b></td><td><b><a href="ValueSet-observation-symptom-codes.html">ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd|1.0.0-ballot2]</a></b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name="x-http://snomed.info/sct-51197009"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/51197009">51197009</a></td><td>Stomach cramps</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-abdominalCramps">abdominalCramps</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;51197009&quot;, &quot;display&quot;: &quot;Stomach cramps&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;51197009&quot;&gt;&lt;display value=&quot;Stomach cramps&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-403364000"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/403364000">403364000</a></td><td>Acne macule (finding)</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-acne">acne</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;403364000&quot;, &quot;display&quot;: &quot;Acne macule (finding)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;403364000&quot;&gt;&lt;display value=&quot;Acne macule (finding)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-249473004"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/249473004">249473004</a></td><td>Change in appetite</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-appetiteChanges">appetiteChanges</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;249473004&quot;, &quot;display&quot;: &quot;Change in appetite&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;249473004&quot;&gt;&lt;display value=&quot;Change in appetite&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-165232002"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/165232002">165232002</a></td><td>Bladder: incontinent</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-bladderIncontinence">bladderIncontinence</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;165232002&quot;, &quot;display&quot;: &quot;Bladder: incontinent&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;165232002&quot;&gt;&lt;display value=&quot;Bladder: incontinent&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-116289008"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/116289008">116289008</a></td><td>Abdominal bloating</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-bloating">bloating</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;116289008&quot;, &quot;display&quot;: &quot;Abdominal bloating&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;116289008&quot;&gt;&lt;display value=&quot;Abdominal bloating&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-53430007"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/53430007">53430007</a></td><td>Mastodynia</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-breastPain">breastPain</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;53430007&quot;, &quot;display&quot;: &quot;Mastodynia&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;53430007&quot;&gt;&lt;display value=&quot;Mastodynia&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-23924001"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/23924001">23924001</a></td><td>Pressure in chest</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-chestTightnessOrPain">chestTightnessOrPain</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;23924001&quot;, &quot;display&quot;: &quot;Pressure in chest&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;23924001&quot;&gt;&lt;display value=&quot;Pressure in chest&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-43724002"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/43724002">43724002</a></td><td>Shivering</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-chills">chills</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;43724002&quot;, &quot;display&quot;: &quot;Shivering&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;43724002&quot;&gt;&lt;display value=&quot;Shivering&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-14760008"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/14760008">14760008</a></td><td>Constipation</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-constipation">constipation</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;14760008&quot;, &quot;display&quot;: &quot;Constipation&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;14760008&quot;&gt;&lt;display value=&quot;Constipation&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-49727002"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/49727002">49727002</a></td><td>Cough</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-coughing">coughing</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;49727002&quot;, &quot;display&quot;: &quot;Cough&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;49727002&quot;&gt;&lt;display value=&quot;Cough&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-62315008"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/62315008">62315008</a></td><td>Diarrhea</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-diarrhea">diarrhea</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;62315008&quot;, &quot;display&quot;: &quot;Diarrhea&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;62315008&quot;&gt;&lt;display value=&quot;Diarrhea&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-404640003"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/404640003">404640003</a></td><td>Dizziness (finding)</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dizziness">dizziness</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;404640003&quot;, &quot;display&quot;: &quot;Dizziness (finding)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;404640003&quot;&gt;&lt;display value=&quot;Dizziness (finding)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-106076001"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/106076001">106076001</a></td><td>Skin finding</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-drySkin">drySkin</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;106076001&quot;, &quot;display&quot;: &quot;Skin finding&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;106076001&quot;&gt;&lt;display value=&quot;Skin finding&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-271594007"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/271594007">271594007</a></td><td>Syncope attack</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-fainting">fainting</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;271594007&quot;, &quot;display&quot;: &quot;Syncope attack&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;271594007&quot;&gt;&lt;display value=&quot;Syncope attack&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-84229001"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/84229001">84229001</a></td><td>Fatigue</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-fatigue">fatigue</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;84229001&quot;, &quot;display&quot;: &quot;Fatigue&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;84229001&quot;&gt;&lt;display value=&quot;Fatigue&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-386661006"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/386661006">386661006</a></td><td>Fever (finding)</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-fever">fever</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;386661006&quot;, &quot;display&quot;: &quot;Fever (finding)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;386661006&quot;&gt;&lt;display value=&quot;Fever (finding)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-22253000"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/22253000">22253000</a></td><td>Pain</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-generalizedBodyAche">generalizedBodyAche</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;22253000&quot;, &quot;display&quot;: &quot;Pain&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;22253000&quot;&gt;&lt;display value=&quot;Pain&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-278040002"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/278040002">278040002</a></td><td>Loss of hair</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-hairLoss">hairLoss</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;278040002&quot;, &quot;display&quot;: &quot;Loss of hair&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;278040002&quot;&gt;&lt;display value=&quot;Loss of hair&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-25064002"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/25064002">25064002</a></td><td>Headache</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-headache">headache</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;25064002&quot;, &quot;display&quot;: &quot;Headache&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;25064002&quot;&gt;&lt;display value=&quot;Headache&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-16331000"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/16331000">16331000</a></td><td>Heartburn</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-heartburn">heartburn</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;16331000&quot;, &quot;display&quot;: &quot;Heartburn&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;16331000&quot;&gt;&lt;display value=&quot;Heartburn&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-198436008"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/198436008">198436008</a></td><td>Menopausal flushing</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-hotFlashes">hotFlashes</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;198436008&quot;, &quot;display&quot;: &quot;Menopausal flushing&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;198436008&quot;&gt;&lt;display value=&quot;Menopausal flushing&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-44169009"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/44169009">44169009</a></td><td>Absent smell</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-lossOfSmell">lossOfSmell</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;44169009&quot;, &quot;display&quot;: &quot;Absent smell&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;44169009&quot;&gt;&lt;display value=&quot;Absent smell&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-36955009"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/36955009">36955009</a></td><td>Ageusia</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-lossOfTaste">lossOfTaste</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;36955009&quot;, &quot;display&quot;: &quot;Ageusia&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;36955009&quot;&gt;&lt;display value=&quot;Ageusia&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-279039007"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/279039007">279039007</a></td><td>Low back pain</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-lowerBackPain">lowerBackPain</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;279039007&quot;, &quot;display&quot;: &quot;Low back pain&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;279039007&quot;&gt;&lt;display value=&quot;Low back pain&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-225038006"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/225038006">225038006</a></td><td>Memory lapses</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-memoryLapse">memoryLapse</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;225038006&quot;, &quot;display&quot;: &quot;Memory lapses&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;225038006&quot;&gt;&lt;display value=&quot;Memory lapses&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-106131003"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/106131003">106131003</a></td><td>Mood finding</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-moodChanges">moodChanges</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;106131003&quot;, &quot;display&quot;: &quot;Mood finding&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;106131003&quot;&gt;&lt;display value=&quot;Mood finding&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-422587007"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/422587007">422587007</a></td><td>Nausea (finding)</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-nausea">nausea</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;422587007&quot;, &quot;display&quot;: &quot;Nausea (finding)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;422587007&quot;&gt;&lt;display value=&quot;Nausea (finding)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-42984000"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/42984000">42984000</a></td><td>Night sweats</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-nightSweats">nightSweats</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;42984000&quot;, &quot;display&quot;: &quot;Night sweats&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;42984000&quot;&gt;&lt;display value=&quot;Night sweats&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-30473006"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/30473006">30473006</a></td><td>Pain in pelvis</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-pelvicPain">pelvicPain</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;30473006&quot;, &quot;display&quot;: &quot;Pain in pelvis&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;30473006&quot;&gt;&lt;display value=&quot;Pain in pelvis&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-80313002"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/80313002">80313002</a></td><td>Palpitations</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-rapidPoundingOrFlutteringHeartbeat">rapidPoundingOrFlutteringHeartbeat</a><br/><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-skippedHeartbeat">skippedHeartbeat</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;80313002&quot;, &quot;display&quot;: &quot;Palpitations&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;80313002&quot;&gt;&lt;display value=&quot;Palpitations&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-64531003"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/64531003">64531003</a></td><td>Nasal discharge</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-runnyNose">runnyNose</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;64531003&quot;, &quot;display&quot;: &quot;Nasal discharge&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;64531003&quot;&gt;&lt;display value=&quot;Nasal discharge&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-267036007"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/267036007">267036007</a></td><td>Dyspnea</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-shortnessOfBreath">shortnessOfBreath</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;267036007&quot;, &quot;display&quot;: &quot;Dyspnea&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;267036007&quot;&gt;&lt;display value=&quot;Dyspnea&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-68235000"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/68235000">68235000</a></td><td>Nasal congestion</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-sinusCongestion">sinusCongestion</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;68235000&quot;, &quot;display&quot;: &quot;Nasal congestion&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;68235000&quot;&gt;&lt;display value=&quot;Nasal congestion&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-247950007"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/247950007">247950007</a></td><td>Sleep behavior</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-sleepChanges">sleepChanges</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;247950007&quot;, &quot;display&quot;: &quot;Sleep behavior&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;247950007&quot;&gt;&lt;display value=&quot;Sleep behavior&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-267102003"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/267102003">267102003</a></td><td>Sore throat (finding)</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-soreThroat">soreThroat</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;267102003&quot;, &quot;display&quot;: &quot;Sore throat (finding)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;267102003&quot;&gt;&lt;display value=&quot;Sore throat (finding)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-31908003"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/31908003">31908003</a></td><td>Vaginal dryness</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-vaginalDryness">vaginalDryness</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;31908003&quot;, &quot;display&quot;: &quot;Vaginal dryness&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;31908003&quot;&gt;&lt;display value=&quot;Vaginal dryness&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-300359004"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/300359004">300359004</a></td><td>Finding of vomiting</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-vomiting">vomiting</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;300359004&quot;, &quot;display&quot;: &quot;Finding of vomiting&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;300359004&quot;&gt;&lt;display value=&quot;Finding of vomiting&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://snomed.info/sct-56018004"> </a><code>http://snomed.info/sct</code></td><td style="white-space:nowrap">  <a href="http://snomed.info/id/56018004">56018004</a></td><td>Wheezing</td><td><span title="EQUIVALENT">~</span><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-wheezing">wheezing</a></td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;56018004&quot;, &quot;display&quot;: &quot;Wheezing&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;56018004&quot;&gt;&lt;display value=&quot;Wheezing&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr></table></div>
+
+  <hr/>
+  <p>
+    <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology">Description of the above table(s)</a>.
+  </p>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
+          Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-04-23 16:43:00 -0500">
+    2026-04-23
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir/uv/phr/history.html">Version History</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

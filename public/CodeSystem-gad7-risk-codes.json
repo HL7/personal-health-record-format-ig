@@ -1,0 +1,75 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "gad7-risk-codes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem gad7-risk-codes</b></p><a name=\"gad7-risk-codes\"> </a><a name=\"hcgad7-risk-codes\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/gad7-risk-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">noneToMinimal<a name=\"gad7-risk-codes-noneToMinimal\"> </a></td><td>Minimal</td></tr><tr><td style=\"white-space:nowrap\">mild<a name=\"gad7-risk-codes-mild\"> </a></td><td>Mild</td></tr><tr><td style=\"white-space:nowrap\">moderate<a name=\"gad7-risk-codes-moderate\"> </a></td><td>Moderate</td></tr><tr><td style=\"white-space:nowrap\">severe<a name=\"gad7-risk-codes-severe\"> </a></td><td>Severe</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pe"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  }],
+  "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/gad7-risk-codes",
+  "version" : "1.0.0-ballot2",
+  "name" : "GAD7Risk",
+  "title" : "GAD-7 Assesment Risk Codes",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-04-23T16:43:45-05:00",
+  "publisher" : "HL7 International / Patient Empowerment",
+  "contact" : [{
+    "name" : "HL7 International / Patient Empowerment",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/patientempowerment"
+    }]
+  }],
+  "description" : "Code for GAD-7 Assesment Risk",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "compositional" : false,
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "noneToMinimal",
+    "display" : "Minimal"
+  },
+  {
+    "code" : "mild",
+    "display" : "Mild"
+  },
+  {
+    "code" : "moderate",
+    "display" : "Moderate"
+  },
+  {
+    "code" : "severe",
+    "display" : "Severe"
+  }]
+}

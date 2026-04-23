@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="symptom-severity-codes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem symptom-severity-codes</b></p><a name="symptom-severity-codes"> </a><a name="hcsymptom-severity-codes"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/symptom-severity-codes</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">severe<a name="symptom-severity-codes-severe"> </a></td><td>Severe</td><td>The symptom is severe.</td></tr><tr><td style="white-space:nowrap">mild<a name="symptom-severity-codes-mild"> </a></td><td>Mild</td><td>The symptom is mild.</td></tr><tr><td style="white-space:nowrap">moderate<a name="symptom-severity-codes-moderate"> </a></td><td>Moderate</td><td>The symptom is moderate.</td></tr><tr><td style="white-space:nowrap">unspecified<a name="symptom-severity-codes-unspecified"> </a></td><td>Unspecified</td><td>The symptom’s severity is not specified.</td></tr><tr><td style="white-space:nowrap">notPresent<a name="symptom-severity-codes-notPresent"> </a></td><td>Not present</td><td>The symptom is not present.</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/CodeSystem/symptom-severity-codes"/>
+  <version value="1.0.0-ballot2"/>
+  <name value="SymptomSeverity"/>
+  <title value="Symptom Severity Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-23T16:43:45-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <description value="Code for degree of symptoms"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <compositional value="false"/>
+  <content value="complete"/>
+  <count value="5"/>
+  <concept>
+    <code value="severe"/>
+    <display value="Severe"/>
+    <definition value="The symptom is severe."/>
+  </concept>
+  <concept>
+    <code value="mild"/>
+    <display value="Mild"/>
+    <definition value="The symptom is mild."/>
+  </concept>
+  <concept>
+    <code value="moderate"/>
+    <display value="Moderate"/>
+    <definition value="The symptom is moderate."/>
+  </concept>
+  <concept>
+    <code value="unspecified"/>
+    <display value="Unspecified"/>
+    <definition value="The symptom’s severity is not specified."/>
+  </concept>
+  <concept>
+    <code value="notPresent"/>
+    <display value="Not present"/>
+    <definition value="The symptom is not present."/>
+  </concept>
+</CodeSystem>

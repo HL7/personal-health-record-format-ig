@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="symptom-snomedct-to-pghd"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap symptom-snomedct-to-pghd</b></p><a name="symptom-snomedct-to-pghd"> </a><a name="hcsymptom-snomedct-to-pghd"> </a><p>Mapping from <a href="ValueSet-observation-symptom-snomedct-codes.html">Observation Symptom SNOMED CT Codes</a> to <a href="ValueSet-observation-symptom-codes.html">Observation Symptom Codes</a></p><br/><p><b>Group 1 </b>Mapping from <a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED CT (all versions)</a> to <a href="CodeSystem-observation-pghd-codes.html">Observation PGHD Codes</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>51197009 (Stomach cramps)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>abdominalCramps (Bdominal cramps)</td></tr><tr><td>403364000 (Acne macule (finding))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>acne</td></tr><tr><td>249473004 (Change in appetite)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>appetiteChanges</td></tr><tr><td>165232002 (Bladder: incontinent)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>bladderIncontinence</td></tr><tr><td>116289008 (Abdominal bloating)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>bloating</td></tr><tr><td>53430007 (Mastodynia)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>breastPain</td></tr><tr><td>23924001 (Pressure in chest)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>chestTightnessOrPain</td></tr><tr><td>43724002 (Shivering)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>chills</td></tr><tr><td>14760008 (Constipation)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>constipation</td></tr><tr><td>49727002 (Cough)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>coughing</td></tr><tr><td>62315008 (Diarrhea)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>diarrhea</td></tr><tr><td>404640003 (Dizziness (finding))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>dizziness</td></tr><tr><td>106076001 (Skin finding)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>drySkin</td></tr><tr><td>271594007 (Syncope attack)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>fainting</td></tr><tr><td>84229001 (Fatigue)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>fatigue</td></tr><tr><td>386661006 (Fever (finding))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>fever</td></tr><tr><td>22253000 (Pain)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>generalizedBodyAche</td></tr><tr><td>278040002 (Loss of hair)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>hairLoss</td></tr><tr><td>25064002 (Headache)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>headache</td></tr><tr><td>16331000 (Heartburn)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>heartburn</td></tr><tr><td>198436008 (Menopausal flushing)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>hotFlashes</td></tr><tr><td>44169009 (Absent smell)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>lossOfSmell</td></tr><tr><td>36955009 (Ageusia)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>lossOfTaste</td></tr><tr><td>279039007 (Low back pain)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>lowerBackPain</td></tr><tr><td>225038006 (Memory lapses)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>memoryLapse</td></tr><tr><td>106131003 (Mood finding)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>moodChanges</td></tr><tr><td>422587007 (Nausea (finding))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>nausea</td></tr><tr><td>42984000 (Night sweats)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>nightSweats</td></tr><tr><td>30473006 (Pain in pelvis)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>pelvicPain</td></tr><tr><td>80313002 (Palpitations)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>rapidPoundingOrFlutteringHeartbeat</td></tr><tr><td>64531003 (Nasal discharge)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>runnyNose</td></tr><tr><td>267036007 (Dyspnea)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>shortnessOfBreath</td></tr><tr><td>68235000 (Nasal congestion)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>sinusCongestion</td></tr><tr><td>80313002 (Palpitations)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>skippedHeartbeat</td></tr><tr><td>247950007 (Sleep behavior)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>sleepChanges</td></tr><tr><td>267102003 (Sore throat (finding))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>soreThroat</td></tr><tr><td>31908003 (Vaginal dryness)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>vaginalDryness</td></tr><tr><td>300359004 (Finding of vomiting)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>vomiting</td></tr><tr><td>56018004 (Wheezing)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>wheezing</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd"/>
+  <version value="1.0.0-ballot2"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-23T16:43:45-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <sourceUri value="http://hl7.org/fhir/uv/phr/ValueSet/observation-symptom-snomedct-codes"/>
+  <targetUri value="http://hl7.org/fhir/uv/phr/ValueSet/observation-symptom-codes"/>
+  <group>
+    <source value="http://snomed.info/sct"/>
+    <target value="http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"/>
+    <element>
+      <code value="51197009"/>
+      <target>
+        <code value="abdominalCramps"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="403364000"/>
+      <target>
+        <code value="acne"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="249473004"/>
+      <target>
+        <code value="appetiteChanges"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="165232002"/>
+      <target>
+        <code value="bladderIncontinence"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="116289008"/>
+      <target>
+        <code value="bloating"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="53430007"/>
+      <target>
+        <code value="breastPain"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="23924001"/>
+      <target>
+        <code value="chestTightnessOrPain"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="43724002"/>
+      <target>
+        <code value="chills"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="14760008"/>
+      <target>
+        <code value="constipation"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="49727002"/>
+      <target>
+        <code value="coughing"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="62315008"/>
+      <target>
+        <code value="diarrhea"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="404640003"/>
+      <target>
+        <code value="dizziness"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="106076001"/>
+      <target>
+        <code value="drySkin"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="271594007"/>
+      <target>
+        <code value="fainting"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="84229001"/>
+      <target>
+        <code value="fatigue"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="386661006"/>
+      <target>
+        <code value="fever"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="22253000"/>
+      <target>
+        <code value="generalizedBodyAche"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="278040002"/>
+      <target>
+        <code value="hairLoss"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="25064002"/>
+      <target>
+        <code value="headache"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="16331000"/>
+      <target>
+        <code value="heartburn"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="198436008"/>
+      <target>
+        <code value="hotFlashes"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="44169009"/>
+      <target>
+        <code value="lossOfSmell"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="36955009"/>
+      <target>
+        <code value="lossOfTaste"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="279039007"/>
+      <target>
+        <code value="lowerBackPain"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="225038006"/>
+      <target>
+        <code value="memoryLapse"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="106131003"/>
+      <target>
+        <code value="moodChanges"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="422587007"/>
+      <target>
+        <code value="nausea"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="42984000"/>
+      <target>
+        <code value="nightSweats"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="30473006"/>
+      <target>
+        <code value="pelvicPain"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="80313002"/>
+      <target>
+        <code value="rapidPoundingOrFlutteringHeartbeat"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="64531003"/>
+      <target>
+        <code value="runnyNose"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="267036007"/>
+      <target>
+        <code value="shortnessOfBreath"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="68235000"/>
+      <target>
+        <code value="sinusCongestion"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="80313002"/>
+      <target>
+        <code value="skippedHeartbeat"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="247950007"/>
+      <target>
+        <code value="sleepChanges"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="267102003"/>
+      <target>
+        <code value="soreThroat"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="31908003"/>
+      <target>
+        <code value="vaginalDryness"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="300359004"/>
+      <target>
+        <code value="vomiting"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="56018004"/>
+      <target>
+        <code value="wheezing"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

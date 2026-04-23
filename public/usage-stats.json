@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.uv.phr",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0-ballot2",
   "fhirVersion": "4.0.1",
   "jurisdiction": "001",
   "extensions": [],
@@ -11,40 +11,100 @@
         "title": "PhrBundle"
       }
     ],
-    "Composition": [
+    "Observation": [
       {
-        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrComposition",
-        "title": "PhrComposition"
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-reproductive-health",
+        "title": "PGHD ReproductiveHealth Profile"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-respiratoryrate",
+        "title": "PGHD RespiratoryRate Profile"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-selfcare",
+        "title": "PGHD Self Care Profile"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-sleep",
+        "title": "PGHD Sleep Profile"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-sleep-episode",
+        "title": "PGHD Sleep Episode Profile"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-snore-event",
+        "title": "PGHD SnoreEvent Profile"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-snore-index",
+        "title": "PGHD SnoreIndex Profile"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-symptom",
+        "title": "PGHD Symptom Profile"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-testresult",
+        "title": "PGHD Test Result Profile"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-uvexposure",
+        "title": "PGHD UVExposure Profile"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-vitalsigns",
+        "title": "PGHD Vital Signs Profile"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-voltage-measurement",
+        "title": "PGHD VoltageMeasurement Profile"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-workout",
+        "title": "PGHD Workout Profile"
       }
     ],
-    "DocumentReference": [
+    "CarePlan": [
       {
-        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrDocumentReference",
-        "title": "PhrDocumentReference"
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-careplan-selfcare",
+        "title": "PGHD SelfCare Plan Profile"
       }
     ],
-    "Media": [
+    "Device": [
       {
-        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrMedia",
-        "title": "PhrMedia"
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-device",
+        "title": "PGHD Device Profile"
+      }
+    ],
+    "MedicationAdministration": [
+      {
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-medicationadministration-insulin",
+        "title": "PGHD MedicationAdministration Insulin Profile"
+      }
+    ],
+    "MedicationDispense": [
+      {
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-medicationdispense",
+        "title": "PGHD MedicationDispense Profile"
       }
     ],
     "Patient": [
       {
-        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrPatient",
-        "title": "PhrPatient"
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-patient",
+        "title": "PGHD Patient Profile"
       }
     ],
-    "Provenance": [
+    "Questionnaire": [
       {
-        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrProvenance",
-        "title": "PhrProvenance"
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-questionnaire",
+        "title": "PGHD Questionnaire Profile"
       }
     ],
-    "Observation": [
+    "QuestionnaireResponse": [
       {
-        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pcd-sleep-observation",
-        "title": "Patient contributed data: sleep observation"
+        "url": "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-questionnaire-response",
+        "title": "PGHD QuestionnaireResponse Profile"
       }
     ]
   },
@@ -61,8 +121,15 @@
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
       "StructureDefinition.snapshot.element.binding"
     ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
     "http://hl7.org/fhir/StructureDefinition/geolocation": [
       "Bundle.entry.resource.address"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation": [
+      "Observation.valueQuantity",
+      "Observation.value[x]"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
       "StructureDefinition.snapshot.element"
@@ -70,11 +137,32 @@
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
     ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm": [
+      "CodeSystem",
+      "ConceptMap",
+      "ImplementationGuide",
+      "SearchParameter",
+      "StructureDefinition",
+      "ValueSet"
+    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
       "StructureDefinition.snapshot.element.type"
     ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg": [
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "CodeSystem",
+      "ConceptMap",
       "ImplementationGuide",
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page",
+      "SearchParameter",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg": [
+      "CodeSystem",
+      "ConceptMap",
+      "ImplementationGuide",
+      "Questionnaire",
       "SearchParameter",
       "StructureDefinition",
       "ValueSet"

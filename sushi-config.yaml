@@ -89,21 +89,22 @@ dependencies:
 
 menu:
   Home: index.html
-  Functional Model:
-    Conformance: conformance.html
-    Data Model: datamodel.html
-    Functional Model: functionality.html
-    Security: security.html
+  Specification:
+    Longitudinal Data Model: datamodel.html
+    API Endpoints: api.html
+    File Formats: recordkeeping.html
   Supplemental:
     History: history.html
-    Record Keeping: recordkeeping.html
-    Longitudinal Records: longitudinal.html
-    API Endpoints: api.html
+    Security: security.html
+    Functional Model: functionality.html
     Annotations: annotations.html
-    Algorithms: algorithms.html
+    Merging and Versioning: longitudinal.html
+    Patient Generated Health Data: pghd.html
     Physiology Domains: physiology.html
     Operating Systems: operating-systems.html
-    Patient-generated health data(PGHD): pghd.html
+    Logical Models: logical-models.html
+    Conformance: conformance.html
+    Algorithms: algorithms.html
   Patient Personas:
     Index: personas-index.html
     Thompson Familiy: persona-thompson-family.html
@@ -161,7 +162,11 @@ pages:
   longitudinal.md:
     title: Longitudinal Records
   pghd.md:
-    title: Patient-generated health data(PGHD)
+    title: Patient Generated Health Data (PGHD)
+  pghd-code-mapping.md:
+    title: PHR Code Mapping
+  logical-models.md:
+    title: Logical Models
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

@@ -8,8 +8,9 @@ In this specification, the key words “MUST”, “MUST NOT”, “REQUIRED”,
 | --------------------- | --------  | :-------- | :-------- | 
 | [Electronic Health Information Export API](https://build.fhir.org/ig/argonautproject/ehi-api/) |   | SHOULD | MUST |
 | [Record Lifecycle](https://build.fhir.org/ig/HL7/ehrs-rle-ig/) | Medical Records | NOT APPLICABLE | MUST |
-| [Patient Data Receipt](https://open-health-manager.github.io/patient-data-receipt-ig/) (experimental) | Medical Records | NOT APPLICABLE | MAY |
+| [SMART Health Cards and Links](https://build.fhir.org/ig/HL7/smart-health-cards-and-links/) | Epidemiology  | SHOULD | MAY |
 | [PHR-S Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88)  |  | SHOULD | MAY |
+| [Patient Data Receipt](https://open-health-manager.github.io/patient-data-receipt-ig/) | Medical Records | NOT APPLICABLE | SHOULD |
 | [Argonaut Data Query](http://www.fhir.org/guides/argonaut/r2/) | Internal Medicine  | SHOULD | SHOULD |
 | [Argonaut Data Write](https://hackmd.io/@erichaas/rJVqJGmeY/%2FwTGb4Gk6R6O4NVut5yaJig) | Internal Medicine  | SHOULD | SHOULD |
 | [Argonaut Scheduling](http://fhir.org/guides/argonaut/scheduling/) | Primary Care | SHOULD | MAY |
@@ -22,7 +23,6 @@ In this specification, the key words “MUST”, “MUST NOT”, “REQUIRED”,
 | [C-CDA on FHIR](http://hl7.org/fhir/us/ccda/) |   | MAY | MAY |
 | [PACIO - Advanced Directives](https://build.fhir.org/ig/HL7/fhir-pacio-adi/) |   | SHOULD | MAY |
 | [PACIO - Personal Functioning and Engagement](https://build.fhir.org/ig/HL7/fhir-pacio-pfe/)) | Neurology | MAY | MAY |
-| [SMART Health Cards - Vaccine & Testing](https://build.fhir.org/ig/HL7/fhir-shc-vaccination-ig/) | Epidemiology  | SHOULD | MAY |
 | [mCode](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/examples.html) | Oncology | SHOULD | MAY |
 | [Gravity - Social Determinates of Health](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/) | Social Work | SHOULD | MAY |
 | [Dental Data Exchange](https://build.fhir.org/ig/HL7/dental-data-exchange/) | Dental  | MAY | MAY |

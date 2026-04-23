@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="observation-activity-codes"/>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet observation-activity-codes</b></p><a name="observation-activity-codes"> </a><a name="hcobservation-activity-codes"> </a><ul><li>Include these codes as defined in <a href="CodeSystem-observation-pghd-codes.html"><code>http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;1.0.0-ballot2</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-stepCount">stepCount</a></td><td style="color: #cccccc">Step count</td><td>A quantity sample type that measures the number of steps the user has taken.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-distanceWalkingRunning">distanceWalkingRunning</a></td><td style="color: #cccccc">Distance walking running</td><td>A quantity sample type that measures the distance the user has moved by walking or running.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-runningGroundContactTime">runningGroundContactTime</a></td><td style="color: #cccccc">Running ground contact time</td><td>A quantity sample type that measures the amount of time the runner's foot is in contact with the ground while running.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-runningPower">runningPower</a></td><td style="color: #cccccc">Running power</td><td>A quantity sample type that measures the rate of work required for the runner to maintain their speed.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-runningSpeed">runningSpeed</a></td><td style="color: #cccccc">Running speed</td><td>A quantity sample type that measures the runner's speed.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-runningStrideLength">runningStrideLength</a></td><td style="color: #cccccc">Running stride length</td><td>A quantity sample type that measures the distance covered by a single step while running.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-runningVerticalOscillation">runningVerticalOscillation</a></td><td style="color: #cccccc">Running vertical oscillation</td><td>A quantity sample type measuring pelvis vertical range of motion during a single running stride.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-distanceCycling">distanceCycling</a></td><td style="color: #cccccc">Distance cycling</td><td>A quantity sample type that measures the distance the user has moved by cycling.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-pushCount">pushCount</a></td><td style="color: #cccccc">Push count</td><td>A quantity sample type that measures the number of pushes that the user has performed while using a wheelchair.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-distanceWheelchair">distanceWheelchair</a></td><td style="color: #cccccc">Distance wheelchair</td><td>A quantity sample type that measures the distance the user has moved using a wheelchair.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-swimmingStrokeCount">swimmingStrokeCount</a></td><td style="color: #cccccc">Swimming stroke count</td><td>A quantity sample type that measures the number of strokes performed while swimming.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-distanceSwimming">distanceSwimming</a></td><td style="color: #cccccc">Distance swimming</td><td>A quantity sample type that measures the distance the user has moved while swimming.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-distanceDownhillSnowSports">distanceDownhillSnowSports</a></td><td style="color: #cccccc">Distance downhill snow sports</td><td>A quantity sample type that measures the distance the user has traveled while skiing or snowboarding.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-basalEnergyBurned">basalEnergyBurned</a></td><td style="color: #cccccc">Basal energyBurned</td><td>A quantity sample type that measures the resting energy burned by the user.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-activeEnergyBurned">activeEnergyBurned</a></td><td style="color: #cccccc">Active energy burned</td><td>A quantity sample type that measures the amount of active energy the user has burned.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-totalEnergyBurned">totalEnergyBurned</a></td><td style="color: #cccccc">Total energy burned</td><td>Captures the user's steps cadence. Each record represents a series of measurements.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-flightsClimbed">flightsClimbed</a></td><td style="color: #cccccc">Flights climbed</td><td>A quantity sample type that measures the number flights of stairs that the user has climbed.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-nikeFuel">nikeFuel</a></td><td style="color: #cccccc">NikeFuel</td><td>A quantity sample type that measures the number of NikeFuel points the user has earned.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-appleExerciseTime">appleExerciseTime</a></td><td style="color: #cccccc">Apple exercise time</td><td>A quantity sample type that measures the amount of time the user spent exercising.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-appleMoveTime">appleMoveTime</a></td><td style="color: #cccccc">Apple move time</td><td>A quantity sample type that measures the amount of time the user has spent performing activities that involve full-body movements during the specified day.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-appleStandTime">appleStandTime</a></td><td style="color: #cccccc">Apple stand time</td><td>A quantity sample type that measures the amount of time the user has spent standing.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-vo2Max">vo2Max</a></td><td style="color: #cccccc">VO2 max</td><td>A quantity sample that measures the maximal oxygen consumption during exercise.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-lowCardioFitnessEvent">lowCardioFitnessEvent</a></td><td style="color: #cccccc">Low cardio fitness event</td><td>An event that indicates the user's VO2 max values consistently fall below a particular aerobic fitness threshold.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-appleStandHour">appleStandHour</a></td><td style="color: #cccccc">Apple stand hour</td><td>A category sample type that counts the number of hours in the day during which the user has stood and moved for at least one minute per hour.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-cyclingCadence">cyclingCadence</a></td><td style="color: #cccccc">Cycling cadence</td><td>Captures the user's cycling pedaling cadence. Each record represents a series of measurements.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-cyclingFunctionalThresholdPower">cyclingFunctionalThresholdPower</a></td><td style="color: #cccccc">Cycling functional threshold power</td><td>A quantity sample type that measures the highest average power output the user can maintain for an hour.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-cyclingPower">cyclingPower</a></td><td style="color: #cccccc">Cycling power</td><td>A quantity sample type that measures power output by the user while cycling.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-cyclingSpeed">cyclingSpeed</a></td><td style="color: #cccccc">Cycling speed</td><td>A quantity sample type measuring the user's speed while cycling.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-distance">distance</a></td><td style="color: #cccccc">Distance</td><td>Captures distance travelled by the user since the last reading.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-elevationGained">elevationGained</a></td><td style="color: #cccccc">Elevation gained</td><td>Captures the elevation gained by the user since the last reading.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-physicalEffort">physicalEffort</a></td><td style="color: #cccccc">Physical effort</td><td>A quantity sample type that records an estimate of the energy the user using.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-power">power</a></td><td style="color: #cccccc">Power</td><td>Captures the power generated by the user, e.g. during rowing with a power meter. Each record represents a series of measurements.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-stepsCadence">stepsCadence</a></td><td style="color: #cccccc">Steps cadence</td><td>Captures the user's steps cadence. Each record represents a series of measurements.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-speed">speed</a></td><td style="color: #cccccc">Speed</td><td>Captures the user's speed, e.g. during running. Each record represents a series of measurements.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-pace">pace</a></td><td style="color: #cccccc">Pace</td><td>Pace at a specific point in time. Will be 0 if the user stops moving, otherwise the value will be in milliseconds/kilometer.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-moderateActivity">moderateActivity</a></td><td style="color: #cccccc">Moderate activity</td><td>Represents moderate (3.0-5.9 MET) activity.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-vigorousActivity">vigorousActivity</a></td><td style="color: #cccccc">Vigorous activity</td><td>Represents vigorous (6.0- MET) activity.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-moderateToVigorousActivity">moderateToVigorousActivity</a></td><td style="color: #cccccc">Moderate to vigorous activity</td><td>Weekly moderate to vigorous physical activity in minutes.</td></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-met">met</a></td><td style="color: #cccccc">Met</td><td/></tr><tr><td><a href="CodeSystem-observation-pghd-codes.html#observation-pghd-codes-metByStandardRmr">metByStandardRmr</a></td><td style="color: #cccccc">Met by standard RMR</td><td>Metabolic equivalent of task (MET) calculated based on either measured, estimated or reported exercise metabolic rate and the standard resting metabolic rate (RMR).</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/ValueSet/observation-activity-codes"/>
+  <version value="1.0.0-ballot2"/>
+  <name value="ObservationActivity"/>
+  <title value="Observation Activity Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-23T16:43:45-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <description value="Codes representing activity-related measurement items"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"/>
+      <concept>
+        <code value="stepCount"/>
+      </concept>
+      <concept>
+        <code value="distanceWalkingRunning"/>
+      </concept>
+      <concept>
+        <code value="runningGroundContactTime"/>
+      </concept>
+      <concept>
+        <code value="runningPower"/>
+      </concept>
+      <concept>
+        <code value="runningSpeed"/>
+      </concept>
+      <concept>
+        <code value="runningStrideLength"/>
+      </concept>
+      <concept>
+        <code value="runningVerticalOscillation"/>
+      </concept>
+      <concept>
+        <code value="distanceCycling"/>
+      </concept>
+      <concept>
+        <code value="pushCount"/>
+      </concept>
+      <concept>
+        <code value="distanceWheelchair"/>
+      </concept>
+      <concept>
+        <code value="swimmingStrokeCount"/>
+      </concept>
+      <concept>
+        <code value="distanceSwimming"/>
+      </concept>
+      <concept>
+        <code value="distanceDownhillSnowSports"/>
+      </concept>
+      <concept>
+        <code value="basalEnergyBurned"/>
+      </concept>
+      <concept>
+        <code value="activeEnergyBurned"/>
+      </concept>
+      <concept>
+        <code value="totalEnergyBurned"/>
+      </concept>
+      <concept>
+        <code value="flightsClimbed"/>
+      </concept>
+      <concept>
+        <code value="nikeFuel"/>
+      </concept>
+      <concept>
+        <code value="appleExerciseTime"/>
+      </concept>
+      <concept>
+        <code value="appleMoveTime"/>
+      </concept>
+      <concept>
+        <code value="appleStandTime"/>
+      </concept>
+      <concept>
+        <code value="vo2Max"/>
+      </concept>
+      <concept>
+        <code value="lowCardioFitnessEvent"/>
+      </concept>
+      <concept>
+        <code value="appleStandHour"/>
+      </concept>
+      <concept>
+        <code value="cyclingCadence"/>
+      </concept>
+      <concept>
+        <code value="cyclingFunctionalThresholdPower"/>
+      </concept>
+      <concept>
+        <code value="cyclingPower"/>
+      </concept>
+      <concept>
+        <code value="cyclingSpeed"/>
+      </concept>
+      <concept>
+        <code value="distance"/>
+      </concept>
+      <concept>
+        <code value="elevationGained"/>
+      </concept>
+      <concept>
+        <code value="physicalEffort"/>
+      </concept>
+      <concept>
+        <code value="power"/>
+      </concept>
+      <concept>
+        <code value="stepsCadence"/>
+      </concept>
+      <concept>
+        <code value="speed"/>
+      </concept>
+      <concept>
+        <code value="pace"/>
+      </concept>
+      <concept>
+        <code value="moderateActivity"/>
+      </concept>
+      <concept>
+        <code value="vigorousActivity"/>
+      </concept>
+      <concept>
+        <code value="moderateToVigorousActivity"/>
+      </concept>
+      <concept>
+        <code value="met"/>
+      </concept>
+      <concept>
+        <code value="metByStandardRmr"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

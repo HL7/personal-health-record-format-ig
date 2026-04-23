@@ -1,0 +1,2940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="observation-pghd-codes"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem observation-pghd-codes</b></p><a name="observation-pghd-codes"> </a><a name="hcobservation-pghd-codes"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes</code> defines the following codes in a Grouped By hierarchy:</p><table class="codes"><tr><td><b>Lvl</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style="white-space:nowrap">Activity<a name="observation-pghd-codes-Activity"> </a></td><td>Activity</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  activeEnergyBurned<a name="observation-pghd-codes-activeEnergyBurned"> </a></td><td>Active energy burned</td><td>A quantity sample type that measures the amount of active energy the user has burned.</td></tr><tr><td>2</td><td style="white-space:nowrap">  appleExerciseTime<a name="observation-pghd-codes-appleExerciseTime"> </a></td><td>Apple exercise time</td><td>A quantity sample type that measures the amount of time the user spent exercising.</td></tr><tr><td>2</td><td style="white-space:nowrap">  appleMoveTime<a name="observation-pghd-codes-appleMoveTime"> </a></td><td>Apple move time</td><td>A quantity sample type that measures the amount of time the user has spent performing activities that involve full-body movements during the specified day.</td></tr><tr><td>2</td><td style="white-space:nowrap">  appleStandHour<a name="observation-pghd-codes-appleStandHour"> </a></td><td>Apple stand hour</td><td>A category sample type that counts the number of hours in the day during which the user has stood and moved for at least one minute per hour.</td></tr><tr><td>2</td><td style="white-space:nowrap">  appleStandTime<a name="observation-pghd-codes-appleStandTime"> </a></td><td>Apple stand time</td><td>A quantity sample type that measures the amount of time the user has spent standing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  basalEnergyBurned<a name="observation-pghd-codes-basalEnergyBurned"> </a></td><td>Basal energyBurned</td><td>A quantity sample type that measures the resting energy burned by the user.</td></tr><tr><td>2</td><td style="white-space:nowrap">  cyclingCadence<a name="observation-pghd-codes-cyclingCadence"> </a></td><td>Cycling cadence</td><td>Captures the user's cycling pedaling cadence. Each record represents a series of measurements.</td></tr><tr><td>2</td><td style="white-space:nowrap">  cyclingFunctionalThresholdPower<a name="observation-pghd-codes-cyclingFunctionalThresholdPower"> </a></td><td>Cycling functional threshold power</td><td>A quantity sample type that measures the highest average power output the user can maintain for an hour.</td></tr><tr><td>2</td><td style="white-space:nowrap">  cyclingPower<a name="observation-pghd-codes-cyclingPower"> </a></td><td>Cycling power</td><td>A quantity sample type that measures power output by the user while cycling.</td></tr><tr><td>2</td><td style="white-space:nowrap">  cyclingSpeed<a name="observation-pghd-codes-cyclingSpeed"> </a></td><td>Cycling speed</td><td>A quantity sample type measuring the user's speed while cycling.</td></tr><tr><td>2</td><td style="white-space:nowrap">  distance<a name="observation-pghd-codes-distance"> </a></td><td>Distance</td><td>Captures distance travelled by the user since the last reading.</td></tr><tr><td>2</td><td style="white-space:nowrap">  elevationGained<a name="observation-pghd-codes-elevationGained"> </a></td><td>Elevation gained</td><td>Captures the elevation gained by the user since the last reading.</td></tr><tr><td>2</td><td style="white-space:nowrap">  totalEnergyBurned<a name="observation-pghd-codes-totalEnergyBurned"> </a></td><td>Total energy burned</td><td>Captures the user's steps cadence. Each record represents a series of measurements.</td></tr><tr><td>2</td><td style="white-space:nowrap">  distanceCycling<a name="observation-pghd-codes-distanceCycling"> </a></td><td>Distance cycling</td><td>A quantity sample type that measures the distance the user has moved by cycling.</td></tr><tr><td>2</td><td style="white-space:nowrap">  distanceDownhillSnowSports<a name="observation-pghd-codes-distanceDownhillSnowSports"> </a></td><td>Distance downhill snow sports</td><td>A quantity sample type that measures the distance the user has traveled while skiing or snowboarding.</td></tr><tr><td>2</td><td style="white-space:nowrap">  distanceSwimming<a name="observation-pghd-codes-distanceSwimming"> </a></td><td>Distance swimming</td><td>A quantity sample type that measures the distance the user has moved while swimming.</td></tr><tr><td>2</td><td style="white-space:nowrap">  distanceWalkingRunning<a name="observation-pghd-codes-distanceWalkingRunning"> </a></td><td>Distance walking running</td><td>A quantity sample type that measures the distance the user has moved by walking or running.</td></tr><tr><td>2</td><td style="white-space:nowrap">  distanceWheelchair<a name="observation-pghd-codes-distanceWheelchair"> </a></td><td>Distance wheelchair</td><td>A quantity sample type that measures the distance the user has moved using a wheelchair.</td></tr><tr><td>2</td><td style="white-space:nowrap">  flightsClimbed<a name="observation-pghd-codes-flightsClimbed"> </a></td><td>Flights climbed</td><td>A quantity sample type that measures the number flights of stairs that the user has climbed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  lowCardioFitnessEvent<a name="observation-pghd-codes-lowCardioFitnessEvent"> </a></td><td>Low cardio fitness event</td><td>An event that indicates the user's VO2 max values consistently fall below a particular aerobic fitness threshold.</td></tr><tr><td>2</td><td style="white-space:nowrap">  nikeFuel<a name="observation-pghd-codes-nikeFuel"> </a></td><td>NikeFuel</td><td>A quantity sample type that measures the number of NikeFuel points the user has earned.</td></tr><tr><td>2</td><td style="white-space:nowrap">  physicalEffort<a name="observation-pghd-codes-physicalEffort"> </a></td><td>Physical effort</td><td>A quantity sample type that records an estimate of the energy the user using.</td></tr><tr><td>2</td><td style="white-space:nowrap">  power<a name="observation-pghd-codes-power"> </a></td><td>Power</td><td>Captures the power generated by the user, e.g. during rowing with a power meter. Each record represents a series of measurements.</td></tr><tr><td>2</td><td style="white-space:nowrap">  pushCount<a name="observation-pghd-codes-pushCount"> </a></td><td>Push count</td><td>A quantity sample type that measures the number of pushes that the user has performed while using a wheelchair.</td></tr><tr><td>2</td><td style="white-space:nowrap">  runningGroundContactTime<a name="observation-pghd-codes-runningGroundContactTime"> </a></td><td>Running ground contact time</td><td>A quantity sample type that measures the amount of time the runner's foot is in contact with the ground while running.</td></tr><tr><td>2</td><td style="white-space:nowrap">  runningPower<a name="observation-pghd-codes-runningPower"> </a></td><td>Running power</td><td>A quantity sample type that measures the rate of work required for the runner to maintain their speed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  runningSpeed<a name="observation-pghd-codes-runningSpeed"> </a></td><td>Running speed</td><td>A quantity sample type that measures the runner's speed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  runningStrideLength<a name="observation-pghd-codes-runningStrideLength"> </a></td><td>Running stride length</td><td>A quantity sample type that measures the distance covered by a single step while running.</td></tr><tr><td>2</td><td style="white-space:nowrap">  runningVerticalOscillation<a name="observation-pghd-codes-runningVerticalOscillation"> </a></td><td>Running vertical oscillation</td><td>A quantity sample type measuring pelvis vertical range of motion during a single running stride.</td></tr><tr><td>2</td><td style="white-space:nowrap">  stepsCadence<a name="observation-pghd-codes-stepsCadence"> </a></td><td>Steps cadence</td><td>Captures the user's steps cadence. Each record represents a series of measurements.</td></tr><tr><td>2</td><td style="white-space:nowrap">  stepCount<a name="observation-pghd-codes-stepCount"> </a></td><td>Step count</td><td>A quantity sample type that measures the number of steps the user has taken.</td></tr><tr><td>2</td><td style="white-space:nowrap">  speed<a name="observation-pghd-codes-speed"> </a></td><td>Speed</td><td>Captures the user's speed, e.g. during running. Each record represents a series of measurements.</td></tr><tr><td>2</td><td style="white-space:nowrap">  swimmingStrokeCount<a name="observation-pghd-codes-swimmingStrokeCount"> </a></td><td>Swimming stroke count</td><td>A quantity sample type that measures the number of strokes performed while swimming.</td></tr><tr><td>2</td><td style="white-space:nowrap">  vo2Max<a name="observation-pghd-codes-vo2Max"> </a></td><td>VO2 max</td><td>A quantity sample that measures the maximal oxygen consumption during exercise.</td></tr><tr><td>2</td><td style="white-space:nowrap">  pace<a name="observation-pghd-codes-pace"> </a></td><td>Pace</td><td>Pace at a specific point in time. Will be 0 if the user stops moving, otherwise the value will be in milliseconds/kilometer.</td></tr><tr><td>2</td><td style="white-space:nowrap">  moderateActivity<a name="observation-pghd-codes-moderateActivity"> </a></td><td>Moderate activity</td><td>Represents moderate (3.0-5.9 MET) activity.</td></tr><tr><td>2</td><td style="white-space:nowrap">  vigorousActivity<a name="observation-pghd-codes-vigorousActivity"> </a></td><td>Vigorous activity</td><td>Represents vigorous (6.0- MET) activity.</td></tr><tr><td>2</td><td style="white-space:nowrap">  moderateToVigorousActivity<a name="observation-pghd-codes-moderateToVigorousActivity"> </a></td><td>Moderate to vigorous activity</td><td>Weekly moderate to vigorous physical activity in minutes.</td></tr><tr><td>2</td><td style="white-space:nowrap">  met<a name="observation-pghd-codes-met"> </a></td><td>Met</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  metByStandardRmr<a name="observation-pghd-codes-metByStandardRmr"> </a></td><td>Met by standard RMR</td><td>Metabolic equivalent of task (MET) calculated based on either measured, estimated or reported exercise metabolic rate and the standard resting metabolic rate (RMR).</td></tr><tr><td>2</td><td style="white-space:nowrap">  crossCountrySkiingSpeed<a name="observation-pghd-codes-crossCountrySkiingSpeed"> </a></td><td>Cross country skiing speed</td><td>A quantity sample type measuring the user's speed while cross country skiing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  distanceCrossCountrySkiing<a name="observation-pghd-codes-distanceCrossCountrySkiing"> </a></td><td>Distance cross country skiing</td><td>A quantity sample type that measures the distance the user has moved while cross country skiing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  paddleSportsSpeed<a name="observation-pghd-codes-paddleSportsSpeed"> </a></td><td>Paddle sports speed</td><td>A quantity sample type measuring the user's speed during paddle sports.</td></tr><tr><td>2</td><td style="white-space:nowrap">  distancePaddleSports<a name="observation-pghd-codes-distancePaddleSports"> </a></td><td>Distance paddle sports</td><td>A quantity sample type that measures the distance the user has moved during paddle sports.</td></tr><tr><td>2</td><td style="white-space:nowrap">  rowingSpeed<a name="observation-pghd-codes-rowingSpeed"> </a></td><td>Rowing speed</td><td>A quantity sample type measuring the user's rowing speed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  distanceRowing<a name="observation-pghd-codes-distanceRowing"> </a></td><td>Distance rowing</td><td>A quantity sample type measuring the distance the user has rowed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  distanceSkatingSports<a name="observation-pghd-codes-distanceSkatingSports"> </a></td><td>Distance skating sports</td><td>A quantity sample type that measures the distance the user has skated.</td></tr><tr><td>2</td><td style="white-space:nowrap">  estimatedWorkoutEffortScore<a name="observation-pghd-codes-estimatedWorkoutEffortScore"> </a></td><td>Estimated workout effort score</td><td>A quantity sample type that represents estimate of exertion score.</td></tr><tr><td>2</td><td style="white-space:nowrap">  workoutEffortScore<a name="observation-pghd-codes-workoutEffortScore"> </a></td><td>Workout effort score</td><td>A quantity sample type that represents exertion score.</td></tr><tr><td>1</td><td style="white-space:nowrap">AlcoholConsumption<a name="observation-pghd-codes-AlcoholConsumption"> </a></td><td>Alcohol consumption</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  bloodAlcoholContent<a name="observation-pghd-codes-bloodAlcoholContent"> </a></td><td>Blood alcohol content</td><td>quantity sample type that measures the user's blood alcohol content.</td></tr><tr><td>2</td><td style="white-space:nowrap">  numberOfAlcoholicBeverages<a name="observation-pghd-codes-numberOfAlcoholicBeverages"> </a></td><td>Number of alcoholic beverages</td><td>A quantity sample type that measures the number of standard alcoholic drinks that the user has consumed.</td></tr><tr><td>1</td><td style="white-space:nowrap">BodyMeasurements<a name="observation-pghd-codes-BodyMeasurements"> </a></td><td>Body measurements</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  appleSleepingWristTemperature<a name="observation-pghd-codes-appleSleepingWristTemperature"> </a></td><td>Apple sleeping wrist temperature</td><td>A quantity sample type that records the wrist temperature during sleep.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bodyFatPercentage<a name="observation-pghd-codes-bodyFatPercentage"> </a></td><td>Body fat percentage</td><td>A quantity sample type that measures the user's body fat percentage.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bodyMass<a name="observation-pghd-codes-bodyMass"> </a></td><td>Body mass</td><td>A quantity sample type that measures the user's weight.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bodyMassIndex<a name="observation-pghd-codes-bodyMassIndex"> </a></td><td>Body mass index</td><td>A quantity sample type that measures the user's body mass index.</td></tr><tr><td>2</td><td style="white-space:nowrap">  height<a name="observation-pghd-codes-height"> </a></td><td>Height</td><td>A quantity sample type that measures the user's height.</td></tr><tr><td>2</td><td style="white-space:nowrap">  hipCircumference<a name="observation-pghd-codes-hipCircumference"> </a></td><td>Hip circumference</td><td>A quantity sample type that measures the user's hip circumference.</td></tr><tr><td>2</td><td style="white-space:nowrap">  leanBodyMass<a name="observation-pghd-codes-leanBodyMass"> </a></td><td>Lean body mass</td><td>A quantity sample type that measures the user's lean body mass.</td></tr><tr><td>2</td><td style="white-space:nowrap">  waistCircumference<a name="observation-pghd-codes-waistCircumference"> </a></td><td>Waist circumference</td><td>A quantity sample type that measures the user's waist circumference.</td></tr><tr><td>2</td><td style="white-space:nowrap">  boneMass<a name="observation-pghd-codes-boneMass"> </a></td><td>Bone mass</td><td>A quantity sample type that measures the user's bone mass</td></tr><tr><td>1</td><td style="white-space:nowrap">Diving<a name="observation-pghd-codes-Diving"> </a></td><td>Diving</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  underwaterDepth<a name="observation-pghd-codes-underwaterDepth"> </a></td><td>Underwater depth</td><td>A quantity sample that records a person's depth underwater.</td></tr><tr><td>2</td><td style="white-space:nowrap">  waterTemperature<a name="observation-pghd-codes-waterTemperature"> </a></td><td>Water temperature</td><td>A quantity sample that records the water temperature.</td></tr><tr><td>1</td><td style="white-space:nowrap">Hearing<a name="observation-pghd-codes-Hearing"> </a></td><td>Hearing</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  environmentalAudioExposure<a name="observation-pghd-codes-environmentalAudioExposure"> </a></td><td>Environmental audio exposure</td><td>A quantity sample type that measures audio exposure to sounds in the environment.</td></tr><tr><td>2</td><td style="white-space:nowrap">  environmentalAudioExposureEvent<a name="observation-pghd-codes-environmentalAudioExposureEvent"> </a></td><td>Environmental audio exposure event</td><td>A category sample type that records exposure to potentially damaging sounds from the environment.</td></tr><tr><td>2</td><td style="white-space:nowrap">  environmentalSoundReduction<a name="observation-pghd-codes-environmentalSoundReduction"> </a></td><td>Environmental sound reduction</td><td>The environmental sound level reduced while user wearing AirPods Pro and using Active Noise Cancellation or Adaptive Transparency mode.</td></tr><tr><td>2</td><td style="white-space:nowrap">  headphoneAudioExposure<a name="observation-pghd-codes-headphoneAudioExposure"> </a></td><td>Headphone audio exposure</td><td>A quantity sample type that measures audio exposure from headphones.</td></tr><tr><td>2</td><td style="white-space:nowrap">  headphoneAudioExposureEvent<a name="observation-pghd-codes-headphoneAudioExposureEvent"> </a></td><td>Headphone audio exposure event</td><td>A category sample type that records exposure to potentially damaging sounds from headphones.</td></tr><tr><td>1</td><td style="white-space:nowrap">Heart<a name="observation-pghd-codes-Heart"> </a></td><td>Heart</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  electrocardiogram<a name="observation-pghd-codes-electrocardiogram"> </a></td><td>Electrocardiogram</td><td>A type that identifies samples containing electrocardiogram data.</td></tr><tr><td>2</td><td style="white-space:nowrap">  heartBeatSeries<a name="observation-pghd-codes-heartBeatSeries"> </a></td><td>Heart beat series</td><td>A series sample containing heartbeat data.</td></tr><tr><td>1</td><td style="white-space:nowrap">LabAndTestResults<a name="observation-pghd-codes-LabAndTestResults"> </a></td><td>Lab and test results</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  bloodGlucose<a name="observation-pghd-codes-bloodGlucose"> </a></td><td>Blood glucose</td><td>A quantity sample type that measures the user's blood glucose level.</td></tr><tr><td>2</td><td style="white-space:nowrap">  electrodermalActivity<a name="observation-pghd-codes-electrodermalActivity"> </a></td><td>Electrodermal activity</td><td>A quantity sample type that measures electrodermal activity.</td></tr><tr><td>2</td><td style="white-space:nowrap">  forcedExpiratoryVolume1<a name="observation-pghd-codes-forcedExpiratoryVolume1"> </a></td><td>Forced expiratory volume1</td><td>A quantity sample type that measures the amount of air that can be forcibly exhaled from the lungs during the first second of a forced exhalation.</td></tr><tr><td>2</td><td style="white-space:nowrap">  forcedVitalCapacity<a name="observation-pghd-codes-forcedVitalCapacity"> </a></td><td>Forced vital capacity</td><td>A quantity sample type that measures the amount of air that can be forcibly exhaled from the lungs after taking the deepest breath possible.</td></tr><tr><td>2</td><td style="white-space:nowrap">  inhalerUsage<a name="observation-pghd-codes-inhalerUsage"> </a></td><td>Inhaler usage</td><td>A quantity sample type that measures the number of puffs the user takes from their inhaler.</td></tr><tr><td>2</td><td style="white-space:nowrap">  insulinDelivery<a name="observation-pghd-codes-insulinDelivery"> </a></td><td>Insulin delivery</td><td>A quantity sample that measures the amount of insulin delivered.</td></tr><tr><td>2</td><td style="white-space:nowrap">  numberOfTimesFallen<a name="observation-pghd-codes-numberOfTimesFallen"> </a></td><td>Number of times fallen</td><td>A quantity sample type that measures the number of times the user fell.</td></tr><tr><td>2</td><td style="white-space:nowrap">  peakExpiratoryFlowRate<a name="observation-pghd-codes-peakExpiratoryFlowRate"> </a></td><td>Peak expiratory flow rate</td><td>A quantity sample type that measures the user's maximum flow rate generated during a forceful exhalation.</td></tr><tr><td>2</td><td style="white-space:nowrap">  peripheralPerfusionIndex<a name="observation-pghd-codes-peripheralPerfusionIndex"> </a></td><td>Peripheral perfusion index</td><td>A quantity sample type that measures the user's peripheral perfusion index.</td></tr><tr><td>2</td><td style="white-space:nowrap">  timeInDaylight<a name="observation-pghd-codes-timeInDaylight"> </a></td><td>Time in daylight</td><td>A quantity sample type that captures the amount of time the user spent in daylight.</td></tr><tr><td>2</td><td style="white-space:nowrap">  inspiratoryTime<a name="observation-pghd-codes-inspiratoryTime"> </a></td><td>Inspiratory time</td><td>The duration of a person's inspiration, either a single measurement, or the result of aggregating several measurements made over time.</td></tr><tr><td>2</td><td style="white-space:nowrap">  ventilationCycleTime<a name="observation-pghd-codes-ventilationCycleTime"> </a></td><td>Ventilation cycle time</td><td>Represents the duration of a person's complete respiration.</td></tr><tr><td>2</td><td style="white-space:nowrap">  minuteVolume<a name="observation-pghd-codes-minuteVolume"> </a></td><td>Minute volume</td><td>The volume of gas inhaled or exhaled from a person's lungs per minute.</td></tr><tr><td>2</td><td style="white-space:nowrap">  breathCarbonMonoxide<a name="observation-pghd-codes-breathCarbonMonoxide"> </a></td><td>Breath carbon monoxide</td><td>The amount of carbon monoxide gas present in a person's exhaled breath.</td></tr><tr><td>1</td><td style="white-space:nowrap">Mindfulness<a name="observation-pghd-codes-Mindfulness"> </a></td><td>Mindfulness</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  mindfulSession<a name="observation-pghd-codes-mindfulSession"> </a></td><td>Mindful session</td><td>A category sample type for recording a mindful session.</td></tr><tr><td>1</td><td style="white-space:nowrap">Sleep<a name="observation-pghd-codes-Sleep"> </a></td><td>Sleep</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  sleepAnalysis<a name="observation-pghd-codes-sleepAnalysis"> </a></td><td>Sleep analysis</td><td>A category sample type for sleep analysis information.</td></tr><tr><td>2</td><td style="white-space:nowrap">  sleepEpisode<a name="observation-pghd-codes-sleepEpisode"> </a></td><td>Sleep episode</td><td>Represents one sleep episode, which can be the main sleep event (i.e., a night sleep for most people) or a nap.</td></tr><tr><td>2</td><td style="white-space:nowrap">  snoreIndex<a name="observation-pghd-codes-snoreIndex"> </a></td><td>Snore index</td><td>The number of snore events per hour.</td></tr><tr><td>2</td><td style="white-space:nowrap">  snoreEvent<a name="observation-pghd-codes-snoreEvent"> </a></td><td>Snore event</td><td>A data type that represents the loudness, duration of snoring, and the posture during snoring.</td></tr><tr><td>2</td><td style="white-space:nowrap">  sleepAHI<a name="observation-pghd-codes-sleepAHI"> </a></td><td>Sleep ahi</td><td>The number of apnea and hypopnea events recorded per hour of sleep.</td></tr><tr><td>2</td><td style="white-space:nowrap">  sleepArousalIndex<a name="observation-pghd-codes-sleepArousalIndex"> </a></td><td>Sleep arousal index</td><td>The average number of arousals per hour of sleep.</td></tr><tr><td>2</td><td style="white-space:nowrap">  appleSleepingBreathingDisturbances<a name="observation-pghd-codes-appleSleepingBreathingDisturbances"> </a></td><td>Apple sleeping breathing disturbances</td><td>A quantity sample type that measures a nightly breathing disturbances.</td></tr><tr><td>2</td><td style="white-space:nowrap">  sleepApneaEvent<a name="observation-pghd-codes-sleepApneaEvent"> </a></td><td>Sleep apnea event</td><td>A category type that represents sleep apnea event.</td></tr><tr><td>1</td><td style="white-space:nowrap">Mobility<a name="observation-pghd-codes-Mobility"> </a></td><td>Mobility</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  appleWalkingSteadiness<a name="observation-pghd-codes-appleWalkingSteadiness"> </a></td><td>Apple walking steadiness</td><td>A quantity sample type that measures the steadiness of the user's gait.</td></tr><tr><td>2</td><td style="white-space:nowrap">  appleWalkingSteadinessEvent<a name="observation-pghd-codes-appleWalkingSteadinessEvent"> </a></td><td>Apple walking steadiness event</td><td>A category sample type that records an incident where the user showed a reduced score for their gait's steadiness.</td></tr><tr><td>2</td><td style="white-space:nowrap">  sixMinuteWalkTestDistance<a name="observation-pghd-codes-sixMinuteWalkTestDistance"> </a></td><td>Six minute walk test distance</td><td>A quantity sample type that stores the distance a user can walk during a six-minute walk test.</td></tr><tr><td>2</td><td style="white-space:nowrap">  walkingSpeed<a name="observation-pghd-codes-walkingSpeed"> </a></td><td>Walking speed</td><td>A quantity sample type that measures the user's average speed when walking steadily over flat ground.</td></tr><tr><td>2</td><td style="white-space:nowrap">  walkingStepLength<a name="observation-pghd-codes-walkingStepLength"> </a></td><td>Walking step length</td><td>A quantity sample type that measures the average length of the user's step when walking steadily over flat ground.</td></tr><tr><td>2</td><td style="white-space:nowrap">  walkingAsymmetryPercentage<a name="observation-pghd-codes-walkingAsymmetryPercentage"> </a></td><td>Walking asymmetry percentage</td><td>A quantity sample type that measures the percentage of steps in which one foot moves at a different speed than the other when walking on flat ground.</td></tr><tr><td>2</td><td style="white-space:nowrap">  walkingDoubleSupportPercentage<a name="observation-pghd-codes-walkingDoubleSupportPercentage"> </a></td><td>Walking double support percentage</td><td>A quantity sample type that measures the percentage of time when both of the user's feet touch the ground while walking steadily over flat ground.</td></tr><tr><td>2</td><td style="white-space:nowrap">  stairAscentSpeed<a name="observation-pghd-codes-stairAscentSpeed"> </a></td><td>Stair ascent speed</td><td>A quantity sample type measuring the user's speed while climbing a flight of stairs.</td></tr><tr><td>2</td><td style="white-space:nowrap">  stairDescentSpeed<a name="observation-pghd-codes-stairDescentSpeed"> </a></td><td>Stair descent speed</td><td>A quantity sample type measuring the user's speed while descending a flight of stairs.</td></tr><tr><td>1</td><td style="white-space:nowrap">Nutrition<a name="observation-pghd-codes-Nutrition"> </a></td><td>Nutrition</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryBiotin<a name="observation-pghd-codes-dietaryBiotin"> </a></td><td>Biotin</td><td>A quantity sample type that measures the amount of biotin (vitamin B7) consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryCaffeine<a name="observation-pghd-codes-dietaryCaffeine"> </a></td><td>Caffeine</td><td>A quantity sample type that measures the amount of caffeine consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryCalcium<a name="observation-pghd-codes-dietaryCalcium"> </a></td><td>Calcium</td><td>A quantity sample type that measures the amount of calcium consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryCarbohydrates<a name="observation-pghd-codes-dietaryCarbohydrates"> </a></td><td>Carbohydrates</td><td>A quantity sample type that measures the amount of carbohydrates consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryChloride<a name="observation-pghd-codes-dietaryChloride"> </a></td><td>Chloride</td><td>A quantity sample type that measures the amount of chloride consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryCholesterol<a name="observation-pghd-codes-dietaryCholesterol"> </a></td><td>Cholesterol</td><td>A quantity sample type that measures the amount of cholesterol consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryChromium<a name="observation-pghd-codes-dietaryChromium"> </a></td><td>Chromium</td><td>A quantity sample type that measures the amount of chromium consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryCopper<a name="observation-pghd-codes-dietaryCopper"> </a></td><td>Copper</td><td>A quantity sample type that measures the amount of copper consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryEnergyConsumed<a name="observation-pghd-codes-dietaryEnergyConsumed"> </a></td><td>Energy consumed</td><td>A quantity sample type that measures the amount of energy consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryEnergyFromFat<a name="observation-pghd-codes-dietaryEnergyFromFat"> </a></td><td>Energy from fat</td><td>A quantity sample type that measures the amount of energy form fat.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryFatMonounsaturated<a name="observation-pghd-codes-dietaryFatMonounsaturated"> </a></td><td>Fat monounsaturated</td><td>A quantity sample type that measures the amount of monounsaturated fat consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryFatPolyunsaturated<a name="observation-pghd-codes-dietaryFatPolyunsaturated"> </a></td><td>Fat polyunsaturated</td><td>A quantity sample type that measures the amount of polyunsaturated fat consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryFatUnsaturated<a name="observation-pghd-codes-dietaryFatUnsaturated"> </a></td><td>Fat unsaturated</td><td>A quantity sample type that measures the amount of unsaturated fat consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryTransFat<a name="observation-pghd-codes-dietaryTransFat"> </a></td><td>Trans fat</td><td>A quantity sample type that measures the amount of trans fat consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryFatSaturated<a name="observation-pghd-codes-dietaryFatSaturated"> </a></td><td>Fat saturated</td><td>A quantity sample type that measures the amount of saturated fat consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryFatTotal<a name="observation-pghd-codes-dietaryFatTotal"> </a></td><td>Fat total</td><td>A quantity sample type that measures the total amount of fat consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryFiber<a name="observation-pghd-codes-dietaryFiber"> </a></td><td>Fiber</td><td>A quantity sample type that measures the amount of fiber consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryFolateOrFolicAcid<a name="observation-pghd-codes-dietaryFolateOrFolicAcid"> </a></td><td>Folate or folic acid</td><td>A quantity sample type that measures the amount of folate (folic acid) consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryFolate<a name="observation-pghd-codes-dietaryFolate"> </a></td><td>Folate</td><td>A quantity sample type that measures the amount of folate consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryFolicAcid<a name="observation-pghd-codes-dietaryFolicAcid"> </a></td><td>Folic acid</td><td>A quantity sample type that measures the amount of folic acid consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryIodine<a name="observation-pghd-codes-dietaryIodine"> </a></td><td>Iodine</td><td>A quantity sample type that measures the amount of iodine consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryIron<a name="observation-pghd-codes-dietaryIron"> </a></td><td>Iron</td><td>A quantity sample type that measures the amount of iron consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryMagnesium<a name="observation-pghd-codes-dietaryMagnesium"> </a></td><td>Magnesium</td><td>A quantity sample type that measures the amount of magnesium consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryManganese<a name="observation-pghd-codes-dietaryManganese"> </a></td><td>Manganese</td><td>A quantity sample type that measures the amount of manganese consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryMolybdenum<a name="observation-pghd-codes-dietaryMolybdenum"> </a></td><td>Molybdenum</td><td>A quantity sample type that measures the amount of molybdenum consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryNiacin<a name="observation-pghd-codes-dietaryNiacin"> </a></td><td>Niacin</td><td>A quantity sample type that measures the amount of niacin (vitamin B3) consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryPantothenicAcid<a name="observation-pghd-codes-dietaryPantothenicAcid"> </a></td><td>Pantothenic acid</td><td>A quantity sample type that measures the amount of pantothenic acid (vitamin B5) consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryPhosphorus<a name="observation-pghd-codes-dietaryPhosphorus"> </a></td><td>Phosphorus</td><td>A quantity sample type that measures the amount of phosphorus consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryPotassium<a name="observation-pghd-codes-dietaryPotassium"> </a></td><td>Potassium</td><td>A quantity sample type that measures the amount of potassium consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryProtein<a name="observation-pghd-codes-dietaryProtein"> </a></td><td>Protein</td><td>A quantity sample type that measures the amount of protein consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryRiboflavin<a name="observation-pghd-codes-dietaryRiboflavin"> </a></td><td>Riboflavin</td><td>A quantity sample type that measures the amount of riboflavin (vitamin B2) consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietarySelenium<a name="observation-pghd-codes-dietarySelenium"> </a></td><td>Selenium</td><td>A quantity sample type that measures the amount of selenium consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietarySodium<a name="observation-pghd-codes-dietarySodium"> </a></td><td>Sodium</td><td>A quantity sample type that measures the amount of sodium consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietarySugar<a name="observation-pghd-codes-dietarySugar"> </a></td><td>Sugar</td><td>A quantity sample type that measures the amount of sugar consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryThiamin<a name="observation-pghd-codes-dietaryThiamin"> </a></td><td>Thiamin</td><td>A quantity sample type that measures the amount of thiamin (vitamin B1) consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryVitaminA<a name="observation-pghd-codes-dietaryVitaminA"> </a></td><td>Vitamin a</td><td>A quantity sample type that measures the amount of vitamin A consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryVitaminB12<a name="observation-pghd-codes-dietaryVitaminB12"> </a></td><td>Dietary vitamin b12</td><td>A quantity sample type that measures the amount of cyanocobalamin (vitamin B12) consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryVitaminB6<a name="observation-pghd-codes-dietaryVitaminB6"> </a></td><td>Vitamin b6</td><td>A quantity sample type that measures the amount of pyridoxine (vitamin B6) consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryVitaminC<a name="observation-pghd-codes-dietaryVitaminC"> </a></td><td>Vitamin c</td><td>A quantity sample type that measures the amount of vitamin C consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryVitaminD<a name="observation-pghd-codes-dietaryVitaminD"> </a></td><td>Vitamin d</td><td>A quantity sample type that measures the amount of vitamin D consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryVitaminE<a name="observation-pghd-codes-dietaryVitaminE"> </a></td><td>Vitamin e</td><td>A quantity sample type that measures the amount of vitamin E consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryVitaminK<a name="observation-pghd-codes-dietaryVitaminK"> </a></td><td>Vitamin k</td><td>A quantity sample type that measures the amount of vitamin K consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryWater<a name="observation-pghd-codes-dietaryWater"> </a></td><td>Water</td><td>A quantity sample type that measures the amount of water consumed.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dietaryZinc<a name="observation-pghd-codes-dietaryZinc"> </a></td><td>Zinc</td><td>A quantity sample type that measures the amount of zinc consumed.</td></tr><tr><td>1</td><td style="white-space:nowrap">ReproductiveHealth<a name="observation-pghd-codes-ReproductiveHealth"> </a></td><td>Reproductive health</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  basalBodyTemperature<a name="observation-pghd-codes-basalBodyTemperature"> </a></td><td>Basal body temperature</td><td>A quantity sample type that records the user's basal body temperature.</td></tr><tr><td>2</td><td style="white-space:nowrap">  cervicalMucusQuality<a name="observation-pghd-codes-cervicalMucusQuality"> </a></td><td>Cervical mucus quality</td><td>A category sample type that records the quality of the user's cervical mucus.</td></tr><tr><td>2</td><td style="white-space:nowrap">  contraceptive<a name="observation-pghd-codes-contraceptive"> </a></td><td>Contraceptive</td><td>A category sample type that records the use of contraceptives.</td></tr><tr><td>2</td><td style="white-space:nowrap">  intermenstrualBleeding<a name="observation-pghd-codes-intermenstrualBleeding"> </a></td><td>Intermenstrual bleeding</td><td>A category sample type that records spotting outside the normal menstruation period.</td></tr><tr><td>2</td><td style="white-space:nowrap">  irregularMenstrualCycles<a name="observation-pghd-codes-irregularMenstrualCycles"> </a></td><td>Irregular menstrual cycles</td><td>A category sample that indicates an irregular menstrual cycle.</td></tr><tr><td>2</td><td style="white-space:nowrap">  infrequentMenstrualCycles<a name="observation-pghd-codes-infrequentMenstrualCycles"> </a></td><td>Infrequent menstrual cycles</td><td>A category sample that indicates an infrequent menstrual cycle.</td></tr><tr><td>2</td><td style="white-space:nowrap">  lactation<a name="observation-pghd-codes-lactation"> </a></td><td>Lactation</td><td>A category type that records lactation.</td></tr><tr><td>2</td><td style="white-space:nowrap">  menstrualFlow<a name="observation-pghd-codes-menstrualFlow"> </a></td><td>Menstrual flow</td><td>A category sample type that records menstrual cycles.</td></tr><tr><td>2</td><td style="white-space:nowrap">  menstrualPeriod<a name="observation-pghd-codes-menstrualPeriod"> </a></td><td>Menstrual period</td><td>A category sample type that records menstrual periods.</td></tr><tr><td>2</td><td style="white-space:nowrap">  ovulationTestResult<a name="observation-pghd-codes-ovulationTestResult"> </a></td><td>Ovulation test result</td><td>A category sample type that records the result of an ovulation home test.</td></tr><tr><td>2</td><td style="white-space:nowrap">  persistentIntermenstrualBleeding<a name="observation-pghd-codes-persistentIntermenstrualBleeding"> </a></td><td>Persistent intermenstrual bleeding</td><td>A category sample that indicates persistent intermenstrual bleeding.</td></tr><tr><td>2</td><td style="white-space:nowrap">  pregnancy<a name="observation-pghd-codes-pregnancy"> </a></td><td>Pregnancy</td><td>A category type that records pregnancy.</td></tr><tr><td>2</td><td style="white-space:nowrap">  pregnancyTestResult<a name="observation-pghd-codes-pregnancyTestResult"> </a></td><td>Pregnancy test result</td><td>A category type that represents the results from a home pregnancy test.</td></tr><tr><td>2</td><td style="white-space:nowrap">  progesteroneTestResult<a name="observation-pghd-codes-progesteroneTestResult"> </a></td><td>Progesterone test result</td><td>A category type that represents the results from a home progesterone test.</td></tr><tr><td>2</td><td style="white-space:nowrap">  prolongedMenstrualPeriods<a name="observation-pghd-codes-prolongedMenstrualPeriods"> </a></td><td>Prolonged menstrual periods</td><td>A category sample that indicates a prolonged menstrual cycle.</td></tr><tr><td>2</td><td style="white-space:nowrap">  sexualActivity<a name="observation-pghd-codes-sexualActivity"> </a></td><td>Sexual activity</td><td>A category sample type that records sexual activity.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bleedingAfterPregnancy<a name="observation-pghd-codes-bleedingAfterPregnancy"> </a></td><td>Bleeding after pregnancy</td><td>A category type that represents bleeding after pregnancy.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bleedingDuringPregnancy<a name="observation-pghd-codes-bleedingDuringPregnancy"> </a></td><td>Bleeding during pregnancy</td><td>A category type that represents bleeding during pregnancy.</td></tr><tr><td>1</td><td style="white-space:nowrap">SelfCare<a name="observation-pghd-codes-SelfCare"> </a></td><td>Self care</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  handwashingEvent<a name="observation-pghd-codes-handwashingEvent"> </a></td><td>Handwashing event</td><td>A category sample type for handwashing events.</td></tr><tr><td>2</td><td style="white-space:nowrap">  toothbrushingEvent<a name="observation-pghd-codes-toothbrushingEvent"> </a></td><td>Toothbrushing event</td><td>A category sample type for toothbrushing events.</td></tr><tr><td>1</td><td style="white-space:nowrap">Symptom<a name="observation-pghd-codes-Symptom"> </a></td><td>Symptom</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  abdominalCramps<a name="observation-pghd-codes-abdominalCramps"> </a></td><td>Bdominal cramps</td><td>A category type that records abdominal cramps as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  acne<a name="observation-pghd-codes-acne"> </a></td><td>Acne</td><td>A category type that records acne as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  appetiteChanges<a name="observation-pghd-codes-appetiteChanges"> </a></td><td>Appetite changes</td><td>A category type that records changes in appetite as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bladderIncontinence<a name="observation-pghd-codes-bladderIncontinence"> </a></td><td>Bladder incontinence</td><td>A category type that records bladder incontinence as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bloating<a name="observation-pghd-codes-bloating"> </a></td><td>Bloating</td><td>A category type that records bloating as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  breastPain<a name="observation-pghd-codes-breastPain"> </a></td><td>Breast pain</td><td>A category type that records breast pain as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  chestTightnessOrPain<a name="observation-pghd-codes-chestTightnessOrPain"> </a></td><td>Chest tightness or pain</td><td>A category type that records chest tightness or pain as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  chills<a name="observation-pghd-codes-chills"> </a></td><td>Chills</td><td>A category type that records chills as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  constipation<a name="observation-pghd-codes-constipation"> </a></td><td>Constipation</td><td>A category type that records constipation as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  coughing<a name="observation-pghd-codes-coughing"> </a></td><td>Coughing</td><td>A category type that records coughing as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  diarrhea<a name="observation-pghd-codes-diarrhea"> </a></td><td>Diarrhea</td><td>A category type that records diarrhea as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dizziness<a name="observation-pghd-codes-dizziness"> </a></td><td>Dizziness</td><td>A category type that records dizziness as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  drySkin<a name="observation-pghd-codes-drySkin"> </a></td><td>Dry skin</td><td>A category type that records dry skin as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  fainting<a name="observation-pghd-codes-fainting"> </a></td><td>Fainting</td><td>A category type that records fainting as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  fatigue<a name="observation-pghd-codes-fatigue"> </a></td><td>Fatigue</td><td>A category type that records fatigue as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  fever<a name="observation-pghd-codes-fever"> </a></td><td>Fever</td><td>A category type that records fever as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  generalizedBodyAche<a name="observation-pghd-codes-generalizedBodyAche"> </a></td><td>Generalized body ache</td><td>A category type that records body ache as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  hairLoss<a name="observation-pghd-codes-hairLoss"> </a></td><td>Hair loss</td><td>A category type that records hair loss as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  headache<a name="observation-pghd-codes-headache"> </a></td><td>Headache</td><td>A category type that records headache as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  heartburn<a name="observation-pghd-codes-heartburn"> </a></td><td>Heartburn</td><td>A category type that records heartburn as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  hotFlashes<a name="observation-pghd-codes-hotFlashes"> </a></td><td>Hot flashes</td><td>A category type that records hot flashes as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  lossOfSmell<a name="observation-pghd-codes-lossOfSmell"> </a></td><td>Loss of smell</td><td>A category type that records loss of smell as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  lossOfTaste<a name="observation-pghd-codes-lossOfTaste"> </a></td><td>Loss of taste</td><td>A category type that records loss of taste as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  lowerBackPain<a name="observation-pghd-codes-lowerBackPain"> </a></td><td>Lower back pain</td><td>A category type that records lower back pain as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  memoryLapse<a name="observation-pghd-codes-memoryLapse"> </a></td><td>Memory lapse</td><td>A category type that records memory lapse as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  moodChanges<a name="observation-pghd-codes-moodChanges"> </a></td><td>Mood changes</td><td>A category type that records mood changes as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  nausea<a name="observation-pghd-codes-nausea"> </a></td><td>Nausea</td><td>A category type that records nausea as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  nightSweats<a name="observation-pghd-codes-nightSweats"> </a></td><td>Night sweats</td><td>A category type that records night sweats as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  pelvicPain<a name="observation-pghd-codes-pelvicPain"> </a></td><td>Pelvic pain</td><td>A category type that records pelvic pain as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  rapidPoundingOrFlutteringHeartbeat<a name="observation-pghd-codes-rapidPoundingOrFlutteringHeartbeat"> </a></td><td>Rapid pounding or fluttering heartbeat</td><td>A category type that records a rapid,  pounding,  or fluttering heartbeat as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  runnyNose<a name="observation-pghd-codes-runnyNose"> </a></td><td>Runny nose</td><td>A category type that records runny nose as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  shortnessOfBreath<a name="observation-pghd-codes-shortnessOfBreath"> </a></td><td>Shortness of breath</td><td>A category type that records shortness of breath as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  sinusCongestion<a name="observation-pghd-codes-sinusCongestion"> </a></td><td>Sinus congestion</td><td>A category type that records sinus congestion as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  skippedHeartbeat<a name="observation-pghd-codes-skippedHeartbeat"> </a></td><td>Skipped heartbeat</td><td>A category type that records skipped heartbeat as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  sleepChanges<a name="observation-pghd-codes-sleepChanges"> </a></td><td>Sleep changes</td><td>A category type that records sleep changes as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  soreThroat<a name="observation-pghd-codes-soreThroat"> </a></td><td>Sore throat</td><td>A category type that records sore throat as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  vaginalDryness<a name="observation-pghd-codes-vaginalDryness"> </a></td><td>Vaginal dryness</td><td>A category type that records vaginal dryness as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  vomiting<a name="observation-pghd-codes-vomiting"> </a></td><td>Vomiting</td><td>A category type that records vomiting as a symptom.</td></tr><tr><td>2</td><td style="white-space:nowrap">  wheezing<a name="observation-pghd-codes-wheezing"> </a></td><td>Wheezing</td><td>A category type that records wheezing as a symptom.</td></tr><tr><td>1</td><td style="white-space:nowrap">UVExposure<a name="observation-pghd-codes-UVExposure"> </a></td><td>Uv exposure</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  uvExposure<a name="observation-pghd-codes-uvExposure"> </a></td><td>Uv exposure</td><td>A quantity sample type that measures the user's exposure to UV radiation.</td></tr><tr><td>1</td><td style="white-space:nowrap">VitalSigns<a name="observation-pghd-codes-VitalSigns"> </a></td><td>Vital signs</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  atrialFibrillationBurden<a name="observation-pghd-codes-atrialFibrillationBurden"> </a></td><td>Atrial fibrillation burden</td><td>A quantity type that measures an estimate of the percentage of time a person's heart shows signs of atrial fibrillation (AFib) while wearing Apple Watch.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bloodPressure<a name="observation-pghd-codes-bloodPressure"> </a></td><td>Blood pressure</td><td>A correlation sample that combines a systolic sample and a diastolic sample into a single blood pressure reading.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bloodPressureDiastolic<a name="observation-pghd-codes-bloodPressureDiastolic"> </a></td><td>Blood pressure diastolic</td><td>A quantity sample type that measures the user's diastolic blood pressure.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bloodPressureSystolic<a name="observation-pghd-codes-bloodPressureSystolic"> </a></td><td>Blood pressure systolic</td><td>A quantity sample type that measures the user's systolic blood pressure.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bodyTemperature<a name="observation-pghd-codes-bodyTemperature"> </a></td><td>Body temperature</td><td>A quantity sample type that measures the user's body temperature.</td></tr><tr><td>2</td><td style="white-space:nowrap">  heartRate<a name="observation-pghd-codes-heartRate"> </a></td><td>Heart rate</td><td>A quantity sample type that measures the user's heart rate.</td></tr><tr><td>2</td><td style="white-space:nowrap">  heartRateVariabilitySDNN<a name="observation-pghd-codes-heartRateVariabilitySDNN"> </a></td><td>Heart rate variability sdnn</td><td>A quantity sample type that measures the standard deviation of heartbeat intervals.</td></tr><tr><td>2</td><td style="white-space:nowrap">  heartRateRecoveryOneMinute<a name="observation-pghd-codes-heartRateRecoveryOneMinute"> </a></td><td>Heart rate recovery one minute</td><td>A quantity sample that records the reduction in heart rate from the peak exercise rate to the rate one minute after exercising ended.</td></tr><tr><td>2</td><td style="white-space:nowrap">  highHeartRateEvent<a name="observation-pghd-codes-highHeartRateEvent"> </a></td><td>High heart rate event</td><td>A category sample type for high heart rate events.</td></tr><tr><td>2</td><td style="white-space:nowrap">  irregularHeartRhythmEvent<a name="observation-pghd-codes-irregularHeartRhythmEvent"> </a></td><td>Irregular heart rhythm event</td><td>A category sample type for irregular heart rhythm events.</td></tr><tr><td>2</td><td style="white-space:nowrap">  lowHeartRateEvent<a name="observation-pghd-codes-lowHeartRateEvent"> </a></td><td>Low heart rate event</td><td>A category sample type for low heart rate events.</td></tr><tr><td>2</td><td style="white-space:nowrap">  oxygenSaturation<a name="observation-pghd-codes-oxygenSaturation"> </a></td><td>Oxygen saturation</td><td>A quantity sample type that measures the user's oxygen saturation.</td></tr><tr><td>2</td><td style="white-space:nowrap">  respiratoryRate<a name="observation-pghd-codes-respiratoryRate"> </a></td><td>Respiratory rate</td><td>A quantity sample type that measures the user's respiratory rate.</td></tr><tr><td>2</td><td style="white-space:nowrap">  restingHeartRate<a name="observation-pghd-codes-restingHeartRate"> </a></td><td>Resting heart rate</td><td>A quantity sample type that measures the user's resting heart rate.</td></tr><tr><td>2</td><td style="white-space:nowrap">  walkingHeartRateAverage<a name="observation-pghd-codes-walkingHeartRateAverage"> </a></td><td>Walking heart rate average</td><td>A quantity sample type that measures the user's heart rate while walking.</td></tr><tr><td>2</td><td style="white-space:nowrap">  rrInterval<a name="observation-pghd-codes-rrInterval"> </a></td><td>Rr interval</td><td>The time period between successive R waves.</td></tr><tr><td>1</td><td style="white-space:nowrap">WorkoutActivity<a name="observation-pghd-codes-WorkoutActivity"> </a></td><td>Workout activity</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  americanFootball<a name="observation-pghd-codes-americanFootball"> </a></td><td>American football</td><td>The constant for playing American football.</td></tr><tr><td>2</td><td style="white-space:nowrap">  archery<a name="observation-pghd-codes-archery"> </a></td><td>Archery</td><td>The constant for shooting archery.</td></tr><tr><td>2</td><td style="white-space:nowrap">  australianFootball<a name="observation-pghd-codes-australianFootball"> </a></td><td>Australian football</td><td>The constant for playing Australian football.</td></tr><tr><td>2</td><td style="white-space:nowrap">  badminton<a name="observation-pghd-codes-badminton"> </a></td><td>Badminton</td><td>The constant for playing badminton.</td></tr><tr><td>2</td><td style="white-space:nowrap">  barre<a name="observation-pghd-codes-barre"> </a></td><td>Barre</td><td>The constant for barre workout.</td></tr><tr><td>2</td><td style="white-space:nowrap">  baseball<a name="observation-pghd-codes-baseball"> </a></td><td>Baseball</td><td>The constant for playing baseball.</td></tr><tr><td>2</td><td style="white-space:nowrap">  basketball<a name="observation-pghd-codes-basketball"> </a></td><td>Basketball</td><td>The constant for playing basketball.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bowling<a name="observation-pghd-codes-bowling"> </a></td><td>Bowling</td><td>The constant for bowling.</td></tr><tr><td>2</td><td style="white-space:nowrap">  boxing<a name="observation-pghd-codes-boxing"> </a></td><td>Boxing</td><td>The constant for boxing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  cardioDance<a name="observation-pghd-codes-cardioDance"> </a></td><td>Cardio dance</td><td>The constant for cardiovascular dance workouts.</td></tr><tr><td>2</td><td style="white-space:nowrap">  climbing<a name="observation-pghd-codes-climbing"> </a></td><td>Climbing</td><td>The constant for climbing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  cooldown<a name="observation-pghd-codes-cooldown"> </a></td><td>Cooldown</td><td>The constant for low intensity stretching and mobility exercises following a more vigorous workout.</td></tr><tr><td>2</td><td style="white-space:nowrap">  coreTraining<a name="observation-pghd-codes-coreTraining"> </a></td><td>Core training</td><td>The constant for core training.</td></tr><tr><td>2</td><td style="white-space:nowrap">  cricket<a name="observation-pghd-codes-cricket"> </a></td><td>Cricket</td><td>The constant for playing cricket.</td></tr><tr><td>2</td><td style="white-space:nowrap">  crossCountrySkiing<a name="observation-pghd-codes-crossCountrySkiing"> </a></td><td>Cross country skiing</td><td>The constant for cross country skiing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  crossTraining<a name="observation-pghd-codes-crossTraining"> </a></td><td>Cross training</td><td>The constant for exercise that includes any mixture of cardio, strength, and/or flexibility training.</td></tr><tr><td>2</td><td style="white-space:nowrap">  curling<a name="observation-pghd-codes-curling"> </a></td><td>Curling</td><td>The constant for curling.</td></tr><tr><td>2</td><td style="white-space:nowrap">  cycling<a name="observation-pghd-codes-cycling"> </a></td><td>Cycling</td><td>The constant for cycling.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dance<a name="observation-pghd-codes-dance"> </a></td><td>Dance</td><td>(Deprecated) The constant for dancing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  danceInspiredTraining<a name="observation-pghd-codes-danceInspiredTraining"> </a></td><td>Dance inspired training</td><td>(Deprecated) The constant for workouts inspired by dance, including Pilates, Barre, and Feldenkrais.</td></tr><tr><td>2</td><td style="white-space:nowrap">  discSports<a name="observation-pghd-codes-discSports"> </a></td><td>Disc sports</td><td>The constant for playing disc sports such as Ultimate and Disc Golf.</td></tr><tr><td>2</td><td style="white-space:nowrap">  downhillSkiing<a name="observation-pghd-codes-downhillSkiing"> </a></td><td>Downhill skiing</td><td>The constant for downhill skiing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  elliptical<a name="observation-pghd-codes-elliptical"> </a></td><td>Elliptical</td><td>The constant for workouts on an elliptical machine.</td></tr><tr><td>2</td><td style="white-space:nowrap">  equestrianSports<a name="observation-pghd-codes-equestrianSports"> </a></td><td>Equestrian sports</td><td>The constant for activities that involve riding a horse, including polo, horse racing, and horse riding.</td></tr><tr><td>2</td><td style="white-space:nowrap">  fencing<a name="observation-pghd-codes-fencing"> </a></td><td>Fencing</td><td>The constant for fencing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  fishing<a name="observation-pghd-codes-fishing"> </a></td><td>Fishing</td><td>The constant for fishing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  fitnessGaming<a name="observation-pghd-codes-fitnessGaming"> </a></td><td>Fitness gaming</td><td>The constant for playing fitness-based video games.</td></tr><tr><td>2</td><td style="white-space:nowrap">  flexibility<a name="observation-pghd-codes-flexibility"> </a></td><td>Flexibility</td><td>The constant for a flexibility workout.</td></tr><tr><td>2</td><td style="white-space:nowrap">  functionalStrengthTraining<a name="observation-pghd-codes-functionalStrengthTraining"> </a></td><td>Functional strength training</td><td>The constant for strength training, primarily with free weights and body weight.</td></tr><tr><td>2</td><td style="white-space:nowrap">  golf<a name="observation-pghd-codes-golf"> </a></td><td>Golf</td><td>The constant for playing golf.</td></tr><tr><td>2</td><td style="white-space:nowrap">  gymnastics<a name="observation-pghd-codes-gymnastics"> </a></td><td>Gymnastics</td><td>Performing gymnastics.</td></tr><tr><td>2</td><td style="white-space:nowrap">  handball<a name="observation-pghd-codes-handball"> </a></td><td>Handball</td><td>The constant for playing handball.</td></tr><tr><td>2</td><td style="white-space:nowrap">  handCycling<a name="observation-pghd-codes-handCycling"> </a></td><td>Hand cycling</td><td>The constant for hand cycling.</td></tr><tr><td>2</td><td style="white-space:nowrap">  highIntensityIntervalTraining<a name="observation-pghd-codes-highIntensityIntervalTraining"> </a></td><td>High intensity interval training</td><td>The constant for high intensity interval training.</td></tr><tr><td>2</td><td style="white-space:nowrap">  hiking<a name="observation-pghd-codes-hiking"> </a></td><td>Hiking</td><td>The constant for hiking.</td></tr><tr><td>2</td><td style="white-space:nowrap">  hockey<a name="observation-pghd-codes-hockey"> </a></td><td>Hockey</td><td>The constant for playing hockey, including ice hockey, field hockey, and related sports.</td></tr><tr><td>2</td><td style="white-space:nowrap">  hunting<a name="observation-pghd-codes-hunting"> </a></td><td>Hunting</td><td>The constant for hunting.</td></tr><tr><td>2</td><td style="white-space:nowrap">  jumpRope<a name="observation-pghd-codes-jumpRope"> </a></td><td>Jump rope</td><td>The constant for jumping rope.</td></tr><tr><td>2</td><td style="white-space:nowrap">  kickboxing<a name="observation-pghd-codes-kickboxing"> </a></td><td>Kickboxing</td><td>The constant for kickboxing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  lacrosse<a name="observation-pghd-codes-lacrosse"> </a></td><td>Lacrosse</td><td>The constant for playing lacrosse.</td></tr><tr><td>2</td><td style="white-space:nowrap">  martialArts<a name="observation-pghd-codes-martialArts"> </a></td><td>Martial arts</td><td>The constant for practicing martial arts.</td></tr><tr><td>2</td><td style="white-space:nowrap">  mindAndBody<a name="observation-pghd-codes-mindAndBody"> </a></td><td>Mind and body</td><td>The constant for performing activities like walking meditation, Gyrotonic exercise, and Qigong.</td></tr><tr><td>2</td><td style="white-space:nowrap">  mixedCardio<a name="observation-pghd-codes-mixedCardio"> </a></td><td>Mixed cardio</td><td>The constant for workouts that mix a variety of cardio exercise machines or modalities.</td></tr><tr><td>2</td><td style="white-space:nowrap">  mixedMetabolicCardioTraining<a name="observation-pghd-codes-mixedMetabolicCardioTraining"> </a></td><td>Mixed metabolic cardio training</td><td>The constant for performing any mix of cardio-focused exercises.</td></tr><tr><td>2</td><td style="white-space:nowrap">  other<a name="observation-pghd-codes-other"> </a></td><td>Other</td><td>The constant for a workout that does not match any of the other workout activity types.</td></tr><tr><td>2</td><td style="white-space:nowrap">  paddleSports<a name="observation-pghd-codes-paddleSports"> </a></td><td>Paddle sports</td><td>The constant for canoeing, kayaking, paddling an outrigger, paddling a stand-up paddle board, and related sports.</td></tr><tr><td>2</td><td style="white-space:nowrap">  pickleball<a name="observation-pghd-codes-pickleball"> </a></td><td>Pickleball</td><td>The constant for playing pickleball.</td></tr><tr><td>2</td><td style="white-space:nowrap">  pilates<a name="observation-pghd-codes-pilates"> </a></td><td>Pilates</td><td>The constant for a pilates workout.</td></tr><tr><td>2</td><td style="white-space:nowrap">  play<a name="observation-pghd-codes-play"> </a></td><td>Play</td><td>The constant for play-based activities like tag, dodgeball, hopscotch, tetherball, and playing on a jungle gym.</td></tr><tr><td>2</td><td style="white-space:nowrap">  preparationAndRecovery<a name="observation-pghd-codes-preparationAndRecovery"> </a></td><td>Preparation and recovery</td><td>The constant for warm-up and therapeutic activities like foam rolling and stretching.</td></tr><tr><td>2</td><td style="white-space:nowrap">  racquetball<a name="observation-pghd-codes-racquetball"> </a></td><td>Racquetball</td><td>The constant for playing racquetball.</td></tr><tr><td>2</td><td style="white-space:nowrap">  rowing<a name="observation-pghd-codes-rowing"> </a></td><td>Rowing</td><td>The constant for rowing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  rugby<a name="observation-pghd-codes-rugby"> </a></td><td>Rugby</td><td>The constant for playing rugby.</td></tr><tr><td>2</td><td style="white-space:nowrap">  running<a name="observation-pghd-codes-running"> </a></td><td>Running</td><td>The constant for running and jogging.</td></tr><tr><td>2</td><td style="white-space:nowrap">  sailing<a name="observation-pghd-codes-sailing"> </a></td><td>Sailing</td><td>The constant for sailing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  skatingSports<a name="observation-pghd-codes-skatingSports"> </a></td><td>Skating sports</td><td>The constant for skating activities, including ice skating, speed skating, inline skating, and skateboarding.</td></tr><tr><td>2</td><td style="white-space:nowrap">  snowboarding<a name="observation-pghd-codes-snowboarding"> </a></td><td>Snowboarding</td><td>The constant for snowboarding.</td></tr><tr><td>2</td><td style="white-space:nowrap">  snowSports<a name="observation-pghd-codes-snowSports"> </a></td><td>Snow sports</td><td>The constant for a variety of snow sports, including sledding, snowmobiling, or building a snowman.</td></tr><tr><td>2</td><td style="white-space:nowrap">  soccer<a name="observation-pghd-codes-soccer"> </a></td><td>Soccer</td><td>The constant for playing soccer.</td></tr><tr><td>2</td><td style="white-space:nowrap">  socialDance<a name="observation-pghd-codes-socialDance"> </a></td><td>Social dance</td><td>The constant for dancing with a partner or partners, such as swing, salsa, or folk dances.</td></tr><tr><td>2</td><td style="white-space:nowrap">  softball<a name="observation-pghd-codes-softball"> </a></td><td>Softball</td><td>The constant for playing softball.</td></tr><tr><td>2</td><td style="white-space:nowrap">  squash<a name="observation-pghd-codes-squash"> </a></td><td>Squash</td><td>The constant for playing squash.</td></tr><tr><td>2</td><td style="white-space:nowrap">  stairClimbing<a name="observation-pghd-codes-stairClimbing"> </a></td><td>Stair climbing</td><td>The constant for workouts using a stair climbing machine.</td></tr><tr><td>2</td><td style="white-space:nowrap">  stairs<a name="observation-pghd-codes-stairs"> </a></td><td>Stairs</td><td>The constant for running, walking, or other drills using stairs (for example, in a stadium or inside a multilevel building).</td></tr><tr><td>2</td><td style="white-space:nowrap">  stepTraining<a name="observation-pghd-codes-stepTraining"> </a></td><td>Step training</td><td>The constant for training using a step bench.</td></tr><tr><td>2</td><td style="white-space:nowrap">  surfingSports<a name="observation-pghd-codes-surfingSports"> </a></td><td>Surfing sports</td><td>The constant for a variety of surf sports, including surfing, kite surfing, and wind surfing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  swimBikeRun<a name="observation-pghd-codes-swimBikeRun"> </a></td><td>Swim bike run</td><td>The constant for multisport activities like triathlons.</td></tr><tr><td>2</td><td style="white-space:nowrap">  swimming<a name="observation-pghd-codes-swimming"> </a></td><td>Swimming</td><td>The constant for swimming.</td></tr><tr><td>2</td><td style="white-space:nowrap">  tableTennis<a name="observation-pghd-codes-tableTennis"> </a></td><td>Table tennis</td><td>The constant for playing table tennis.</td></tr><tr><td>2</td><td style="white-space:nowrap">  taiChi<a name="observation-pghd-codes-taiChi"> </a></td><td>Tai chi</td><td>The constant for tai chi.</td></tr><tr><td>2</td><td style="white-space:nowrap">  tennis<a name="observation-pghd-codes-tennis"> </a></td><td>Tennis</td><td>The constant for playing tennis.</td></tr><tr><td>2</td><td style="white-space:nowrap">  trackAndField<a name="observation-pghd-codes-trackAndField"> </a></td><td>Track and field</td><td>Participating in track and field events, including shot put, javelin, pole vaulting, and related sports.</td></tr><tr><td>2</td><td style="white-space:nowrap">  traditionalStrengthTraining<a name="observation-pghd-codes-traditionalStrengthTraining"> </a></td><td>Traditional strength training</td><td>The constant for strength training exercises primarily using machines or free weights.</td></tr><tr><td>2</td><td style="white-space:nowrap">  transition<a name="observation-pghd-codes-transition"> </a></td><td>Transition</td><td>A constant for the transition time between activities in a multisport workout.</td></tr><tr><td>2</td><td style="white-space:nowrap">  underwaterDiving<a name="observation-pghd-codes-underwaterDiving"> </a></td><td>Underwater diving</td><td>The constant for underwater diving.</td></tr><tr><td>2</td><td style="white-space:nowrap">  volleyball<a name="observation-pghd-codes-volleyball"> </a></td><td>Volleyball</td><td>The constant for playing volleyball.</td></tr><tr><td>2</td><td style="white-space:nowrap">  walking<a name="observation-pghd-codes-walking"> </a></td><td>Walking</td><td>The constant for walking.</td></tr><tr><td>2</td><td style="white-space:nowrap">  waterFitness<a name="observation-pghd-codes-waterFitness"> </a></td><td>Water fitness</td><td>The constant for aerobic exercise performed in shallow water.</td></tr><tr><td>2</td><td style="white-space:nowrap">  waterPolo<a name="observation-pghd-codes-waterPolo"> </a></td><td>Water polo</td><td>The constant for playing water polo.</td></tr><tr><td>2</td><td style="white-space:nowrap">  waterSports<a name="observation-pghd-codes-waterSports"> </a></td><td>Water sports</td><td>The constant for a variety of water sports, including water skiing, wake boarding, and related activities.</td></tr><tr><td>2</td><td style="white-space:nowrap">  wheelchairRunPace<a name="observation-pghd-codes-wheelchairRunPace"> </a></td><td>Wheelchair run pace</td><td>The constant for wheelchair workout at running pace.</td></tr><tr><td>2</td><td style="white-space:nowrap">  wheelchairWalkPace<a name="observation-pghd-codes-wheelchairWalkPace"> </a></td><td>Wheelchair walk pace</td><td>The constant for a wheelchair workout at walking pace.</td></tr><tr><td>2</td><td style="white-space:nowrap">  wrestling<a name="observation-pghd-codes-wrestling"> </a></td><td>Wrestling</td><td>The constant for wrestling.</td></tr><tr><td>2</td><td style="white-space:nowrap">  yoga<a name="observation-pghd-codes-yoga"> </a></td><td>Yoga</td><td>The constant for practicing yoga.</td></tr><tr><td>2</td><td style="white-space:nowrap">  backExtension<a name="observation-pghd-codes-backExtension"> </a></td><td>Back extension</td><td>The constant for back Extension.</td></tr><tr><td>2</td><td style="white-space:nowrap">  barbellShoulderPress<a name="observation-pghd-codes-barbellShoulderPress"> </a></td><td>Barbell shoulder press</td><td>The constant for barbell shoulder press.</td></tr><tr><td>2</td><td style="white-space:nowrap">  benchPress<a name="observation-pghd-codes-benchPress"> </a></td><td>Bench press</td><td>The constant for bench press.</td></tr><tr><td>2</td><td style="white-space:nowrap">  benchSitUp<a name="observation-pghd-codes-benchSitUp"> </a></td><td>Bench sit up</td><td>The constant for bench sit up.</td></tr><tr><td>2</td><td style="white-space:nowrap">  biking<a name="observation-pghd-codes-biking"> </a></td><td>Biking</td><td>The constant for biking.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bikingStationary<a name="observation-pghd-codes-bikingStationary"> </a></td><td>Biking stationary</td><td>The constant for biking stationary.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bootCamp<a name="observation-pghd-codes-bootCamp"> </a></td><td>Boot camp</td><td>The constant for boot camp.</td></tr><tr><td>2</td><td style="white-space:nowrap">  burpee<a name="observation-pghd-codes-burpee"> </a></td><td>Burpee</td><td>The constant for burpee.</td></tr><tr><td>2</td><td style="white-space:nowrap">  calisthenics<a name="observation-pghd-codes-calisthenics"> </a></td><td>Calisthenics</td><td>The constant for calisthenics.</td></tr><tr><td>2</td><td style="white-space:nowrap">  crunch<a name="observation-pghd-codes-crunch"> </a></td><td>Crunch</td><td>The constant for crunch.</td></tr><tr><td>2</td><td style="white-space:nowrap">  deadlift<a name="observation-pghd-codes-deadlift"> </a></td><td>Deadlift</td><td>The constant for deadlift.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dumbbellCurlLeftArm<a name="observation-pghd-codes-dumbbellCurlLeftArm"> </a></td><td>Dumbbell curl left arm</td><td>The constant for dumbbell curl left arm.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dumbbellCurlRightArm<a name="observation-pghd-codes-dumbbellCurlRightArm"> </a></td><td>Dumbbell curl right arm</td><td>The constant for dumbbell curl right arm.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dumbbellFrontRaise<a name="observation-pghd-codes-dumbbellFrontRaise"> </a></td><td>Dumbbell front raise</td><td>The constant for dumbbell front raise.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dumbbellLateralRaise<a name="observation-pghd-codes-dumbbellLateralRaise"> </a></td><td>Dumbbell lateral raise</td><td>The constant for dumbbell lateral raise.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dumbbellTricepsExtensionLeftArm<a name="observation-pghd-codes-dumbbellTricepsExtensionLeftArm"> </a></td><td>Dumbbell triceps extension left arm</td><td>The constant for dumbbell triceps extension left arm.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dumbbellTricepsExtensionRightArm<a name="observation-pghd-codes-dumbbellTricepsExtensionRightArm"> </a></td><td>Dumbbell triceps extension right arm</td><td>The constant for dumbbell triceps extension right arm.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dumbbellTricepsExtensionTwoArm<a name="observation-pghd-codes-dumbbellTricepsExtensionTwoArm"> </a></td><td>Dumbbell triceps extension two arm</td><td>The constant for dumbbell triceps extension two arm.</td></tr><tr><td>2</td><td style="white-space:nowrap">  exerciseClass<a name="observation-pghd-codes-exerciseClass"> </a></td><td>Exercise class</td><td>The constant for exercise class.</td></tr><tr><td>2</td><td style="white-space:nowrap">  forwardTwist<a name="observation-pghd-codes-forwardTwist"> </a></td><td>Forward twist</td><td>The constant for forward twist.</td></tr><tr><td>2</td><td style="white-space:nowrap">  frisbeeDisc<a name="observation-pghd-codes-frisbeeDisc"> </a></td><td>Frisbee disc</td><td>The constant for frisbee disc.</td></tr><tr><td>2</td><td style="white-space:nowrap">  guidedBreathing<a name="observation-pghd-codes-guidedBreathing"> </a></td><td>Guided breathing</td><td>The constant for guided breathing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  iceHockey<a name="observation-pghd-codes-iceHockey"> </a></td><td>Ice hockey</td><td>The constant for ice hockey.</td></tr><tr><td>2</td><td style="white-space:nowrap">  iceSkating<a name="observation-pghd-codes-iceSkating"> </a></td><td>Ice skating</td><td>The constant for ice skating.</td></tr><tr><td>2</td><td style="white-space:nowrap">  jumpingJack<a name="observation-pghd-codes-jumpingJack"> </a></td><td>Jumping jack</td><td>The constant for jumping jack.</td></tr><tr><td>2</td><td style="white-space:nowrap">  latPullDown<a name="observation-pghd-codes-latPullDown"> </a></td><td>Lat pull down</td><td>The constant for lat pull down.</td></tr><tr><td>2</td><td style="white-space:nowrap">  lunge<a name="observation-pghd-codes-lunge"> </a></td><td>Lunge</td><td>The constant for lunge.</td></tr><tr><td>2</td><td style="white-space:nowrap">  meditation<a name="observation-pghd-codes-meditation"> </a></td><td>Meditation</td><td>The constant for meditation.</td></tr><tr><td>2</td><td style="white-space:nowrap">  paraGliding<a name="observation-pghd-codes-paraGliding"> </a></td><td>Para gliding</td><td>The constant for para gliding.</td></tr><tr><td>2</td><td style="white-space:nowrap">  plank<a name="observation-pghd-codes-plank"> </a></td><td>Plank</td><td>The constant for plank.</td></tr><tr><td>2</td><td style="white-space:nowrap">  rockClimbing<a name="observation-pghd-codes-rockClimbing"> </a></td><td>Rock climbing</td><td>The constant for rock climbing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  rollerHockey<a name="observation-pghd-codes-rollerHockey"> </a></td><td>Roller hockey</td><td>The constant for roller hockey.</td></tr><tr><td>2</td><td style="white-space:nowrap">  rowingMachine<a name="observation-pghd-codes-rowingMachine"> </a></td><td>Rowing machine</td><td>The constant for rowing machine.</td></tr><tr><td>2</td><td style="white-space:nowrap">  runningTreadmill<a name="observation-pghd-codes-runningTreadmill"> </a></td><td>Running treadmill</td><td>The constant for running treadmill.</td></tr><tr><td>2</td><td style="white-space:nowrap">  scubaDiving<a name="observation-pghd-codes-scubaDiving"> </a></td><td>Scuba diving</td><td>The constant for scuba diving.</td></tr><tr><td>2</td><td style="white-space:nowrap">  skiing<a name="observation-pghd-codes-skiing"> </a></td><td>Skiing</td><td>The constant for skiing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  snowshoeing<a name="observation-pghd-codes-snowshoeing"> </a></td><td>Snowshoeing</td><td>The constant for snowshoeing.</td></tr><tr><td>2</td><td style="white-space:nowrap">  squat<a name="observation-pghd-codes-squat"> </a></td><td>Squat</td><td>The constant for squat.</td></tr><tr><td>2</td><td style="white-space:nowrap">  strengthTraining<a name="observation-pghd-codes-strengthTraining"> </a></td><td>Strength training</td><td>The constant for strength training.</td></tr><tr><td>2</td><td style="white-space:nowrap">  stretching<a name="observation-pghd-codes-stretching"> </a></td><td>Stretching</td><td>The constant for stretching.</td></tr><tr><td>2</td><td style="white-space:nowrap">  swimmingOpenWater<a name="observation-pghd-codes-swimmingOpenWater"> </a></td><td>Swimming open water</td><td>The constant for swimming open water.</td></tr><tr><td>2</td><td style="white-space:nowrap">  swimmingPool<a name="observation-pghd-codes-swimmingPool"> </a></td><td>Swimming pool</td><td>The constant for swimming pool.</td></tr><tr><td>2</td><td style="white-space:nowrap">  upperTwist<a name="observation-pghd-codes-upperTwist"> </a></td><td>Upper twist</td><td>The constant for upper twist.</td></tr><tr><td>2</td><td style="white-space:nowrap">  weightlifting<a name="observation-pghd-codes-weightlifting"> </a></td><td>Weightlifting</td><td>The constant for weightlifting.</td></tr><tr><td>2</td><td style="white-space:nowrap">  wheelchair<a name="observation-pghd-codes-wheelchair"> </a></td><td>Wheelchair</td><td>The constant for wheelchair.</td></tr><tr><td>2</td><td style="white-space:nowrap">  workout<a name="observation-pghd-codes-workout"> </a></td><td>Workout</td><td>The constant for workout.</td></tr><tr><td>2</td><td style="white-space:nowrap">  armCurl<a name="observation-pghd-codes-armCurl"> </a></td><td>Arm curl</td><td>The constant for arm curl exercises targeting the biceps.</td></tr><tr><td>2</td><td style="white-space:nowrap">  ballSlam<a name="observation-pghd-codes-ballSlam"> </a></td><td>Ball slam</td><td>The constant for full-body workouts using a slam ball.</td></tr><tr><td>2</td><td style="white-space:nowrap">  doubleArmTricepsExtension<a name="observation-pghd-codes-doubleArmTricepsExtension"> </a></td><td>Double arm triceps extension</td><td>The constant for triceps extension exercises using both arms.</td></tr><tr><td>2</td><td style="white-space:nowrap">  dumbbellRow<a name="observation-pghd-codes-dumbbellRow"> </a></td><td>Dumbbell row</td><td>The constant for back-strengthening exercises using dumbbells.</td></tr><tr><td>2</td><td style="white-space:nowrap">  frontRaise<a name="observation-pghd-codes-frontRaise"> </a></td><td>Front raise</td><td>The constant for shoulder workouts lifting weights in front of the body.</td></tr><tr><td>2</td><td style="white-space:nowrap">  hipThrust<a name="observation-pghd-codes-hipThrust"> </a></td><td>Hip thrust</td><td>The constant for glute-focused exercises involving hip elevation.</td></tr><tr><td>2</td><td style="white-space:nowrap">  hulaHoop<a name="observation-pghd-codes-hulaHoop"> </a></td><td>Hula hoop</td><td>The constant for core and cardio workouts using a hula hoop.</td></tr><tr><td>2</td><td style="white-space:nowrap">  kettlebellSwing<a name="observation-pghd-codes-kettlebellSwing"> </a></td><td>Kettlebell swing</td><td>The constant for dynamic full-body workouts using a kettlebell.</td></tr><tr><td>2</td><td style="white-space:nowrap">  lateralRaise<a name="observation-pghd-codes-lateralRaise"> </a></td><td>Lateral raise</td><td>The constant for shoulder workouts lifting weights to the sides.</td></tr><tr><td>2</td><td style="white-space:nowrap">  legCurl<a name="observation-pghd-codes-legCurl"> </a></td><td>Leg curl</td><td>The constant for hamstring-focused leg curl exercises.</td></tr><tr><td>2</td><td style="white-space:nowrap">  legExtension<a name="observation-pghd-codes-legExtension"> </a></td><td>Leg extension</td><td>The constant for quadriceps-focused leg extension exercises.</td></tr><tr><td>2</td><td style="white-space:nowrap">  legPress<a name="observation-pghd-codes-legPress"> </a></td><td>Leg press</td><td>The constant for lower-body strength training using a leg press machine.</td></tr><tr><td>2</td><td style="white-space:nowrap">  legRaise<a name="observation-pghd-codes-legRaise"> </a></td><td>Leg raise</td><td>The constant for abdominal and hip flexor exercises involving leg lifts.</td></tr><tr><td>2</td><td style="white-space:nowrap">  mountainClimber<a name="observation-pghd-codes-mountainClimber"> </a></td><td>Mountain climber</td><td>The constant for cardio and core workouts simulating climbing motion.</td></tr><tr><td>2</td><td style="white-space:nowrap">  otherWorkout<a name="observation-pghd-codes-otherWorkout"> </a></td><td>Other workout</td><td>The constant for workouts not categorized under specific types.</td></tr><tr><td>2</td><td style="white-space:nowrap">  pause<a name="observation-pghd-codes-pause"> </a></td><td>Pause</td><td>The constant for temporary pauses during a workout session.</td></tr><tr><td>2</td><td style="white-space:nowrap">  pullUp<a name="observation-pghd-codes-pullUp"> </a></td><td>Pull-up</td><td>The constant for upper-body strength exercises involving pulling up the body.</td></tr><tr><td>2</td><td style="white-space:nowrap">  punch<a name="observation-pghd-codes-punch"> </a></td><td>Punch</td><td>The constant for boxing-style workouts involving punching motions.</td></tr><tr><td>2</td><td style="white-space:nowrap">  rest<a name="observation-pghd-codes-rest"> </a></td><td>Rest</td><td>The constant for rest periods between or after workouts.</td></tr><tr><td>2</td><td style="white-space:nowrap">  shoulderPress<a name="observation-pghd-codes-shoulderPress"> </a></td><td>Shoulder press</td><td>The constant for overhead pressing exercises targeting the shoulders.</td></tr><tr><td>2</td><td style="white-space:nowrap">  singleArmTricepsExtension<a name="observation-pghd-codes-singleArmTricepsExtension"> </a></td><td>Single arm triceps extension</td><td>The constant for triceps extension exercises using one arm.</td></tr><tr><td>2</td><td style="white-space:nowrap">  sitUp<a name="observation-pghd-codes-sitUp"> </a></td><td>Sit-up</td><td>The constant for abdominal exercises involving torso lifts.</td></tr><tr><td>2</td><td style="white-space:nowrap">  stairClimbingMachine<a name="observation-pghd-codes-stairClimbingMachine"> </a></td><td>Stair climbing</td><td>The constant for workouts using a stair climbing machine.</td></tr><tr><td>2</td><td style="white-space:nowrap">  swimmingBackstroke<a name="observation-pghd-codes-swimmingBackstroke"> </a></td><td>Swimming backstroke</td><td>The constant for swimming using the backstroke technique.</td></tr><tr><td>2</td><td style="white-space:nowrap">  swimmingBreaststroke<a name="observation-pghd-codes-swimmingBreaststroke"> </a></td><td>Swimming breaststroke</td><td>The constant for swimming using the breaststroke technique.</td></tr><tr><td>2</td><td style="white-space:nowrap">  swimmingButterfly<a name="observation-pghd-codes-swimmingButterfly"> </a></td><td>Swimming butterfly</td><td>The constant for swimming using the butterfly stroke.</td></tr><tr><td>2</td><td style="white-space:nowrap">  swimmingFreestyle<a name="observation-pghd-codes-swimmingFreestyle"> </a></td><td>Swimming freestyle</td><td>The constant for swimming using the freestyle stroke.</td></tr><tr><td>2</td><td style="white-space:nowrap">  swimmingMixed<a name="observation-pghd-codes-swimmingMixed"> </a></td><td>Swimming mixed</td><td>The constant for swimming using a combination of strokes.</td></tr><tr><td>2</td><td style="white-space:nowrap">  swimmingOther<a name="observation-pghd-codes-swimmingOther"> </a></td><td>Swimming other</td><td>The constant for swimming using other or unspecified techniques.</td></tr><tr><td>1</td><td style="white-space:nowrap">Audiogram<a name="observation-pghd-codes-Audiogram"> </a></td><td>Audiogram</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  hearingSensitivity<a name="observation-pghd-codes-hearingSensitivity"> </a></td><td>Hearing sensitivity</td><td>A pair of frequencies and left/right ear sensitivity data to represent the patient's hearing sensitivity for each frequency.</td></tr><tr><td>1</td><td style="white-space:nowrap">food<a name="observation-pghd-codes-food"> </a></td><td>Food</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">medicationAdherence<a name="observation-pghd-codes-medicationAdherence"> </a></td><td>Medication adherence</td><td>The degree to which a patient correctly follows medical advice, particularly in relation to taking prescribed medication.</td></tr><tr><td>1</td><td style="white-space:nowrap">Mind<a name="observation-pghd-codes-Mind"> </a></td><td>Mind</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  stateOfMind<a name="observation-pghd-codes-stateOfMind"> </a></td><td>State of Mind</td><td>Momentary emotions and daily moods.</td></tr><tr><td>2</td><td style="white-space:nowrap">  gad7<a name="observation-pghd-codes-gad7"> </a></td><td>GAD-7 assessment</td><td>The Generalized Anxiety Disorder 7-item scale.</td></tr><tr><td>2</td><td style="white-space:nowrap">  phq9<a name="observation-pghd-codes-phq9"> </a></td><td>PHQ-9 assessment</td><td>The nine-item Patient Health Questionnaire.</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"/>
+  <version value="1.0.0-ballot2"/>
+  <name value="ObservationPGHD"/>
+  <title value="Observation PGHD Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-23T16:43:45-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <description value="Code defining the type of PGHD data"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <hierarchyMeaning value="grouped-by"/>
+  <compositional value="false"/>
+  <content value="complete"/>
+  <count value="405"/>
+  <concept>
+    <code value="Activity"/>
+    <display value="Activity"/>
+    <concept>
+      <code value="activeEnergyBurned"/>
+      <display value="Active energy burned"/>
+      <definition value="A quantity sample type that measures the amount of active energy the user has burned."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="kcal"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="appleExerciseTime"/>
+      <display value="Apple exercise time"/>
+      <definition value="A quantity sample type that measures the amount of time the user spent exercising."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="min"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="appleMoveTime"/>
+      <display value="Apple move time"/>
+      <definition value="A quantity sample type that measures the amount of time the user has spent performing activities that involve full-body movements during the specified day."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="min"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="appleStandHour"/>
+      <display value="Apple stand hour"/>
+      <definition value="A category sample type that counts the number of hours in the day during which the user has stood and moved for at least one minute per hour."/>
+    </concept>
+    <concept>
+      <code value="appleStandTime"/>
+      <display value="Apple stand time"/>
+      <definition value="A quantity sample type that measures the amount of time the user has spent standing."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="min"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="basalEnergyBurned"/>
+      <display value="Basal energyBurned"/>
+      <definition value="A quantity sample type that measures the resting energy burned by the user."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="kcal"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="cyclingCadence"/>
+      <display value="Cycling cadence"/>
+      <definition value="Captures the user's cycling pedaling cadence. Each record represents a series of measurements."/>
+    </concept>
+    <concept>
+      <code value="cyclingFunctionalThresholdPower"/>
+      <display value="Cycling functional threshold power"/>
+      <definition value="A quantity sample type that measures the highest average power output the user can maintain for an hour."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="W"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="cyclingPower"/>
+      <display value="Cycling power"/>
+      <definition value="A quantity sample type that measures power output by the user while cycling."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="W"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="cyclingSpeed"/>
+      <display value="Cycling speed"/>
+      <definition value="A quantity sample type measuring the user's speed while cycling."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="km/h"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="distance"/>
+      <display value="Distance"/>
+      <definition value="Captures distance travelled by the user since the last reading."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="elevationGained"/>
+      <display value="Elevation gained"/>
+      <definition value="Captures the elevation gained by the user since the last reading."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="totalEnergyBurned"/>
+      <display value="Total energy burned"/>
+      <definition value="Captures the user's steps cadence. Each record represents a series of measurements."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="kcal"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="distanceCycling"/>
+      <display value="Distance cycling"/>
+      <definition value="A quantity sample type that measures the distance the user has moved by cycling."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="distanceDownhillSnowSports"/>
+      <display value="Distance downhill snow sports"/>
+      <definition value="A quantity sample type that measures the distance the user has traveled while skiing or snowboarding."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="distanceSwimming"/>
+      <display value="Distance swimming"/>
+      <definition value="A quantity sample type that measures the distance the user has moved while swimming."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="distanceWalkingRunning"/>
+      <display value="Distance walking running"/>
+      <definition value="A quantity sample type that measures the distance the user has moved by walking or running."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="km"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="distanceWheelchair"/>
+      <display value="Distance wheelchair"/>
+      <definition value="A quantity sample type that measures the distance the user has moved using a wheelchair."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="flightsClimbed"/>
+      <display value="Flights climbed"/>
+      <definition value="A quantity sample type that measures the number flights of stairs that the user has climbed."/>
+    </concept>
+    <concept>
+      <code value="lowCardioFitnessEvent"/>
+      <display value="Low cardio fitness event"/>
+      <definition value="An event that indicates the user's VO2 max values consistently fall below a particular aerobic fitness threshold."/>
+    </concept>
+    <concept>
+      <code value="nikeFuel"/>
+      <display value="NikeFuel"/>
+      <definition value="A quantity sample type that measures the number of NikeFuel points the user has earned."/>
+    </concept>
+    <concept>
+      <code value="physicalEffort"/>
+      <display value="Physical effort"/>
+      <definition value="A quantity sample type that records an estimate of the energy the user using."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="kcal/(kg.h)"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="power"/>
+      <display value="Power"/>
+      <definition value="Captures the power generated by the user, e.g. during rowing with a power meter. Each record represents a series of measurements."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="W"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="pushCount"/>
+      <display value="Push count"/>
+      <definition value="A quantity sample type that measures the number of pushes that the user has performed while using a wheelchair."/>
+    </concept>
+    <concept>
+      <code value="runningGroundContactTime"/>
+      <display value="Running ground contact time"/>
+      <definition value="A quantity sample type that measures the amount of time the runner's foot is in contact with the ground while running."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="s"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="runningPower"/>
+      <display value="Running power"/>
+      <definition value="A quantity sample type that measures the rate of work required for the runner to maintain their speed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="W"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="runningSpeed"/>
+      <display value="Running speed"/>
+      <definition value="A quantity sample type that measures the runner's speed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m/s"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="runningStrideLength"/>
+      <display value="Running stride length"/>
+      <definition value="A quantity sample type that measures the distance covered by a single step while running."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="runningVerticalOscillation"/>
+      <display value="Running vertical oscillation"/>
+      <definition value="A quantity sample type measuring pelvis vertical range of motion during a single running stride."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="stepsCadence"/>
+      <display value="Steps cadence"/>
+      <definition value="Captures the user's steps cadence. Each record represents a series of measurements."/>
+    </concept>
+    <concept>
+      <code value="stepCount"/>
+      <display value="Step count"/>
+      <definition value="A quantity sample type that measures the number of steps the user has taken."/>
+    </concept>
+    <concept>
+      <code value="speed"/>
+      <display value="Speed"/>
+      <definition value="Captures the user's speed, e.g. during running. Each record represents a series of measurements."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m/s"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="swimmingStrokeCount"/>
+      <display value="Swimming stroke count"/>
+      <definition value="A quantity sample type that measures the number of strokes performed while swimming."/>
+    </concept>
+    <concept>
+      <code value="vo2Max"/>
+      <display value="VO2 max"/>
+      <definition value="A quantity sample that measures the maximal oxygen consumption during exercise."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ml/kg/min"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="pace"/>
+      <display value="Pace"/>
+      <definition value="Pace at a specific point in time. Will be 0 if the user stops moving, otherwise the value will be in milliseconds/kilometer."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="min/km"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="moderateActivity"/>
+      <display value="Moderate activity"/>
+      <definition value="Represents moderate (3.0-5.9 MET) activity."/>
+    </concept>
+    <concept>
+      <code value="vigorousActivity"/>
+      <display value="Vigorous activity"/>
+      <definition value="Represents vigorous (6.0- MET) activity."/>
+    </concept>
+    <concept>
+      <code value="moderateToVigorousActivity"/>
+      <display value="Moderate to vigorous activity"/>
+      <definition value="Weekly moderate to vigorous physical activity in minutes."/>
+    </concept>
+    <concept>
+      <code value="met"/>
+      <display value="Met"/>
+    </concept>
+    <concept>
+      <code value="metByStandardRmr"/>
+      <display value="Met by standard RMR"/>
+      <definition value="Metabolic equivalent of task (MET) calculated based on either measured, estimated or reported exercise metabolic rate and the standard resting metabolic rate (RMR)."/>
+    </concept>
+    <concept>
+      <code value="crossCountrySkiingSpeed"/>
+      <display value="Cross country skiing speed"/>
+      <definition value="A quantity sample type measuring the user's speed while cross country skiing."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="km/h"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="distanceCrossCountrySkiing"/>
+      <display value="Distance cross country skiing"/>
+      <definition value="A quantity sample type that measures the distance the user has moved while cross country skiing."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="km"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="paddleSportsSpeed"/>
+      <display value="Paddle sports speed"/>
+      <definition value="A quantity sample type measuring the user's speed during paddle sports."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="km/h"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="distancePaddleSports"/>
+      <display value="Distance paddle sports"/>
+      <definition value="A quantity sample type that measures the distance the user has moved during paddle sports."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="km"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="rowingSpeed"/>
+      <display value="Rowing speed"/>
+      <definition value="A quantity sample type measuring the user's rowing speed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="km/h"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="distanceRowing"/>
+      <display value="Distance rowing"/>
+      <definition value="A quantity sample type measuring the distance the user has rowed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="km"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="distanceSkatingSports"/>
+      <display value="Distance skating sports"/>
+      <definition value="A quantity sample type that measures the distance the user has skated."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="km"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="estimatedWorkoutEffortScore"/>
+      <display value="Estimated workout effort score"/>
+      <definition value="A quantity sample type that represents estimate of exertion score."/>
+    </concept>
+    <concept>
+      <code value="workoutEffortScore"/>
+      <display value="Workout effort score"/>
+      <definition value="A quantity sample type that represents exertion score."/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="AlcoholConsumption"/>
+    <display value="Alcohol consumption"/>
+    <concept>
+      <code value="bloodAlcoholContent"/>
+      <display value="Blood alcohol content"/>
+      <definition value="quantity sample type that measures the user's blood alcohol content."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="numberOfAlcoholicBeverages"/>
+      <display value="Number of alcoholic beverages"/>
+      <definition value="A quantity sample type that measures the number of standard alcoholic drinks that the user has consumed."/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="BodyMeasurements"/>
+    <display value="Body measurements"/>
+    <concept>
+      <code value="appleSleepingWristTemperature"/>
+      <display value="Apple sleeping wrist temperature"/>
+      <definition value="A quantity sample type that records the wrist temperature during sleep."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="Cel"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="bodyFatPercentage"/>
+      <display value="Body fat percentage"/>
+      <definition value="A quantity sample type that measures the user's body fat percentage."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="bodyMass"/>
+      <display value="Body mass"/>
+      <definition value="A quantity sample type that measures the user's weight."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="kg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="bodyMassIndex"/>
+      <display value="Body mass index"/>
+      <definition value="A quantity sample type that measures the user's body mass index."/>
+    </concept>
+    <concept>
+      <code value="height"/>
+      <display value="Height"/>
+      <definition value="A quantity sample type that measures the user's height."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="cm"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="hipCircumference"/>
+      <display value="Hip circumference"/>
+      <definition value="A quantity sample type that measures the user's hip circumference."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="cm"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="leanBodyMass"/>
+      <display value="Lean body mass"/>
+      <definition value="A quantity sample type that measures the user's lean body mass."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="kg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="waistCircumference"/>
+      <display value="Waist circumference"/>
+      <definition value="A quantity sample type that measures the user's waist circumference."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="cm"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="boneMass"/>
+      <display value="Bone mass"/>
+      <definition value="A quantity sample type that measures the user's bone mass"/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="kg"/>
+        </valueCoding>
+      </property>
+    </concept>
+  </concept>
+  <concept>
+    <code value="Diving"/>
+    <display value="Diving"/>
+    <concept>
+      <code value="underwaterDepth"/>
+      <display value="Underwater depth"/>
+      <definition value="A quantity sample that records a person's depth underwater."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="waterTemperature"/>
+      <display value="Water temperature"/>
+      <definition value="A quantity sample that records the water temperature."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="Cel"/>
+        </valueCoding>
+      </property>
+    </concept>
+  </concept>
+  <concept>
+    <code value="Hearing"/>
+    <display value="Hearing"/>
+    <concept>
+      <code value="environmentalAudioExposure"/>
+      <display value="Environmental audio exposure"/>
+      <definition value="A quantity sample type that measures audio exposure to sounds in the environment."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="dB"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="environmentalAudioExposureEvent"/>
+      <display value="Environmental audio exposure event"/>
+      <definition value="A category sample type that records exposure to potentially damaging sounds from the environment."/>
+    </concept>
+    <concept>
+      <code value="environmentalSoundReduction"/>
+      <display value="Environmental sound reduction"/>
+      <definition value="The environmental sound level reduced while user wearing AirPods Pro and using Active Noise Cancellation or Adaptive Transparency mode."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="dB"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="headphoneAudioExposure"/>
+      <display value="Headphone audio exposure"/>
+      <definition value="A quantity sample type that measures audio exposure from headphones."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="dB"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="headphoneAudioExposureEvent"/>
+      <display value="Headphone audio exposure event"/>
+      <definition value="A category sample type that records exposure to potentially damaging sounds from headphones."/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="Heart"/>
+    <display value="Heart"/>
+    <concept>
+      <code value="electrocardiogram"/>
+      <display value="Electrocardiogram"/>
+      <definition value="A type that identifies samples containing electrocardiogram data."/>
+    </concept>
+    <concept>
+      <code value="heartBeatSeries"/>
+      <display value="Heart beat series"/>
+      <definition value="A series sample containing heartbeat data."/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="LabAndTestResults"/>
+    <display value="Lab and test results"/>
+    <concept>
+      <code value="bloodGlucose"/>
+      <display value="Blood glucose"/>
+      <definition value="A quantity sample type that measures the user's blood glucose level."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mmol/L"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="electrodermalActivity"/>
+      <display value="Electrodermal activity"/>
+      <definition value="A quantity sample type that measures electrodermal activity."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="S"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="forcedExpiratoryVolume1"/>
+      <display value="Forced expiratory volume1"/>
+      <definition value="A quantity sample type that measures the amount of air that can be forcibly exhaled from the lungs during the first second of a forced exhalation."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="L"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="forcedVitalCapacity"/>
+      <display value="Forced vital capacity"/>
+      <definition value="A quantity sample type that measures the amount of air that can be forcibly exhaled from the lungs after taking the deepest breath possible."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="L"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="inhalerUsage"/>
+      <display value="Inhaler usage"/>
+      <definition value="A quantity sample type that measures the number of puffs the user takes from their inhaler."/>
+    </concept>
+    <concept>
+      <code value="insulinDelivery"/>
+      <display value="Insulin delivery"/>
+      <definition value="A quantity sample that measures the amount of insulin delivered."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="[IU]"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="numberOfTimesFallen"/>
+      <display value="Number of times fallen"/>
+      <definition value="A quantity sample type that measures the number of times the user fell."/>
+    </concept>
+    <concept>
+      <code value="peakExpiratoryFlowRate"/>
+      <display value="Peak expiratory flow rate"/>
+      <definition value="A quantity sample type that measures the user's maximum flow rate generated during a forceful exhalation."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="L/min"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="peripheralPerfusionIndex"/>
+      <display value="Peripheral perfusion index"/>
+      <definition value="A quantity sample type that measures the user's peripheral perfusion index."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="timeInDaylight"/>
+      <display value="Time in daylight"/>
+      <definition value="A quantity sample type that captures the amount of time the user spent in daylight."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="min"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="inspiratoryTime"/>
+      <display value="Inspiratory time"/>
+      <definition value="The duration of a person's inspiration, either a single measurement, or the result of aggregating several measurements made over time."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="s"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="ventilationCycleTime"/>
+      <display value="Ventilation cycle time"/>
+      <definition value="Represents the duration of a person's complete respiration."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="s"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="minuteVolume"/>
+      <display value="Minute volume"/>
+      <definition value="The volume of gas inhaled or exhaled from a person's lungs per minute."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mL/min"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="breathCarbonMonoxide"/>
+      <display value="Breath carbon monoxide"/>
+      <definition value="The amount of carbon monoxide gas present in a person's exhaled breath."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="[ppm]"/>
+        </valueCoding>
+      </property>
+    </concept>
+  </concept>
+  <concept>
+    <code value="Mindfulness"/>
+    <display value="Mindfulness"/>
+    <concept>
+      <code value="mindfulSession"/>
+      <display value="Mindful session"/>
+      <definition value="A category sample type for recording a mindful session."/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="Sleep"/>
+    <display value="Sleep"/>
+    <concept>
+      <code value="sleepAnalysis"/>
+      <display value="Sleep analysis"/>
+      <definition value="A category sample type for sleep analysis information."/>
+    </concept>
+    <concept>
+      <code value="sleepEpisode"/>
+      <display value="Sleep episode"/>
+      <definition value="Represents one sleep episode, which can be the main sleep event (i.e., a night sleep for most people) or a nap."/>
+    </concept>
+    <concept>
+      <code value="snoreIndex"/>
+      <display value="Snore index"/>
+      <definition value="The number of snore events per hour."/>
+    </concept>
+    <concept>
+      <code value="snoreEvent"/>
+      <display value="Snore event"/>
+      <definition value="A data type that represents the loudness, duration of snoring, and the posture during snoring."/>
+    </concept>
+    <concept>
+      <code value="sleepAHI"/>
+      <display value="Sleep ahi"/>
+      <definition value="The number of apnea and hypopnea events recorded per hour of sleep."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="/h"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="sleepArousalIndex"/>
+      <display value="Sleep arousal index"/>
+      <definition value="The average number of arousals per hour of sleep."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="/h"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="appleSleepingBreathingDisturbances"/>
+      <display value="Apple sleeping breathing disturbances"/>
+      <definition value="A quantity sample type that measures a nightly breathing disturbances."/>
+    </concept>
+    <concept>
+      <code value="sleepApneaEvent"/>
+      <display value="Sleep apnea event"/>
+      <definition value="A category type that represents sleep apnea event."/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="Mobility"/>
+    <display value="Mobility"/>
+    <concept>
+      <code value="appleWalkingSteadiness"/>
+      <display value="Apple walking steadiness"/>
+      <definition value="A quantity sample type that measures the steadiness of the user's gait."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="appleWalkingSteadinessEvent"/>
+      <display value="Apple walking steadiness event"/>
+      <definition value="A category sample type that records an incident where the user showed a reduced score for their gait's steadiness."/>
+    </concept>
+    <concept>
+      <code value="sixMinuteWalkTestDistance"/>
+      <display value="Six minute walk test distance"/>
+      <definition value="A quantity sample type that stores the distance a user can walk during a six-minute walk test."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m/(6.min)"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="walkingSpeed"/>
+      <display value="Walking speed"/>
+      <definition value="A quantity sample type that measures the user's average speed when walking steadily over flat ground."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m/s"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="walkingStepLength"/>
+      <display value="Walking step length"/>
+      <definition value="A quantity sample type that measures the average length of the user's step when walking steadily over flat ground."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="walkingAsymmetryPercentage"/>
+      <display value="Walking asymmetry percentage"/>
+      <definition value="A quantity sample type that measures the percentage of steps in which one foot moves at a different speed than the other when walking on flat ground."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="walkingDoubleSupportPercentage"/>
+      <display value="Walking double support percentage"/>
+      <definition value="A quantity sample type that measures the percentage of time when both of the user's feet touch the ground while walking steadily over flat ground."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="stairAscentSpeed"/>
+      <display value="Stair ascent speed"/>
+      <definition value="A quantity sample type measuring the user's speed while climbing a flight of stairs."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m/s"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="stairDescentSpeed"/>
+      <display value="Stair descent speed"/>
+      <definition value="A quantity sample type measuring the user's speed while descending a flight of stairs."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m/s"/>
+        </valueCoding>
+      </property>
+    </concept>
+  </concept>
+  <concept>
+    <code value="Nutrition"/>
+    <display value="Nutrition"/>
+    <concept>
+      <code value="dietaryBiotin"/>
+      <display value="Biotin"/>
+      <definition value="A quantity sample type that measures the amount of biotin (vitamin B7) consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ug"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryCaffeine"/>
+      <display value="Caffeine"/>
+      <definition value="A quantity sample type that measures the amount of caffeine consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryCalcium"/>
+      <display value="Calcium"/>
+      <definition value="A quantity sample type that measures the amount of calcium consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryCarbohydrates"/>
+      <display value="Carbohydrates"/>
+      <definition value="A quantity sample type that measures the amount of carbohydrates consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="g"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryChloride"/>
+      <display value="Chloride"/>
+      <definition value="A quantity sample type that measures the amount of chloride consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="g"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryCholesterol"/>
+      <display value="Cholesterol"/>
+      <definition value="A quantity sample type that measures the amount of cholesterol consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryChromium"/>
+      <display value="Chromium"/>
+      <definition value="A quantity sample type that measures the amount of chromium consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ug"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryCopper"/>
+      <display value="Copper"/>
+      <definition value="A quantity sample type that measures the amount of copper consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryEnergyConsumed"/>
+      <display value="Energy consumed"/>
+      <definition value="A quantity sample type that measures the amount of energy consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="kcal"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryEnergyFromFat"/>
+      <display value="Energy from fat"/>
+      <definition value="A quantity sample type that measures the amount of energy form fat."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="kcal"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryFatMonounsaturated"/>
+      <display value="Fat monounsaturated"/>
+      <definition value="A quantity sample type that measures the amount of monounsaturated fat consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="g"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryFatPolyunsaturated"/>
+      <display value="Fat polyunsaturated"/>
+      <definition value="A quantity sample type that measures the amount of polyunsaturated fat consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="g"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryFatUnsaturated"/>
+      <display value="Fat unsaturated"/>
+      <definition value="A quantity sample type that measures the amount of unsaturated fat consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="g"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryTransFat"/>
+      <display value="Trans fat"/>
+      <definition value="A quantity sample type that measures the amount of trans fat consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="g"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryFatSaturated"/>
+      <display value="Fat saturated"/>
+      <definition value="A quantity sample type that measures the amount of saturated fat consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="g"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryFatTotal"/>
+      <display value="Fat total"/>
+      <definition value="A quantity sample type that measures the total amount of fat consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="g"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryFiber"/>
+      <display value="Fiber"/>
+      <definition value="A quantity sample type that measures the amount of fiber consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="g"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryFolateOrFolicAcid"/>
+      <display value="Folate or folic acid"/>
+      <definition value="A quantity sample type that measures the amount of folate (folic acid) consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ug"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryFolate"/>
+      <display value="Folate"/>
+      <definition value="A quantity sample type that measures the amount of folate consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ug"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryFolicAcid"/>
+      <display value="Folic acid"/>
+      <definition value="A quantity sample type that measures the amount of folic acid consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ug"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryIodine"/>
+      <display value="Iodine"/>
+      <definition value="A quantity sample type that measures the amount of iodine consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ug"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryIron"/>
+      <display value="Iron"/>
+      <definition value="A quantity sample type that measures the amount of iron consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryMagnesium"/>
+      <display value="Magnesium"/>
+      <definition value="A quantity sample type that measures the amount of magnesium consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryManganese"/>
+      <display value="Manganese"/>
+      <definition value="A quantity sample type that measures the amount of manganese consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryMolybdenum"/>
+      <display value="Molybdenum"/>
+      <definition value="A quantity sample type that measures the amount of molybdenum consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ug"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryNiacin"/>
+      <display value="Niacin"/>
+      <definition value="A quantity sample type that measures the amount of niacin (vitamin B3) consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryPantothenicAcid"/>
+      <display value="Pantothenic acid"/>
+      <definition value="A quantity sample type that measures the amount of pantothenic acid (vitamin B5) consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryPhosphorus"/>
+      <display value="Phosphorus"/>
+      <definition value="A quantity sample type that measures the amount of phosphorus consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryPotassium"/>
+      <display value="Potassium"/>
+      <definition value="A quantity sample type that measures the amount of potassium consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryProtein"/>
+      <display value="Protein"/>
+      <definition value="A quantity sample type that measures the amount of protein consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="g"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryRiboflavin"/>
+      <display value="Riboflavin"/>
+      <definition value="A quantity sample type that measures the amount of riboflavin (vitamin B2) consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietarySelenium"/>
+      <display value="Selenium"/>
+      <definition value="A quantity sample type that measures the amount of selenium consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ug"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietarySodium"/>
+      <display value="Sodium"/>
+      <definition value="A quantity sample type that measures the amount of sodium consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietarySugar"/>
+      <display value="Sugar"/>
+      <definition value="A quantity sample type that measures the amount of sugar consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="g"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryThiamin"/>
+      <display value="Thiamin"/>
+      <definition value="A quantity sample type that measures the amount of thiamin (vitamin B1) consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryVitaminA"/>
+      <display value="Vitamin a"/>
+      <definition value="A quantity sample type that measures the amount of vitamin A consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ug"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryVitaminB12"/>
+      <display value="Dietary vitamin b12"/>
+      <definition value="A quantity sample type that measures the amount of cyanocobalamin (vitamin B12) consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ug"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryVitaminB6"/>
+      <display value="Vitamin b6"/>
+      <definition value="A quantity sample type that measures the amount of pyridoxine (vitamin B6) consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryVitaminC"/>
+      <display value="Vitamin c"/>
+      <definition value="A quantity sample type that measures the amount of vitamin C consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryVitaminD"/>
+      <display value="Vitamin d"/>
+      <definition value="A quantity sample type that measures the amount of vitamin D consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ug"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryVitaminE"/>
+      <display value="Vitamin e"/>
+      <definition value="A quantity sample type that measures the amount of vitamin E consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryVitaminK"/>
+      <display value="Vitamin k"/>
+      <definition value="A quantity sample type that measures the amount of vitamin K consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ug"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryWater"/>
+      <display value="Water"/>
+      <definition value="A quantity sample type that measures the amount of water consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="L"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="dietaryZinc"/>
+      <display value="Zinc"/>
+      <definition value="A quantity sample type that measures the amount of zinc consumed."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </valueCoding>
+      </property>
+    </concept>
+  </concept>
+  <concept>
+    <code value="ReproductiveHealth"/>
+    <display value="Reproductive health"/>
+    <concept>
+      <code value="basalBodyTemperature"/>
+      <display value="Basal body temperature"/>
+      <definition value="A quantity sample type that records the user's basal body temperature."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="Cel"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="cervicalMucusQuality"/>
+      <display value="Cervical mucus quality"/>
+      <definition value="A category sample type that records the quality of the user's cervical mucus."/>
+    </concept>
+    <concept>
+      <code value="contraceptive"/>
+      <display value="Contraceptive"/>
+      <definition value="A category sample type that records the use of contraceptives."/>
+    </concept>
+    <concept>
+      <code value="intermenstrualBleeding"/>
+      <display value="Intermenstrual bleeding"/>
+      <definition value="A category sample type that records spotting outside the normal menstruation period."/>
+    </concept>
+    <concept>
+      <code value="irregularMenstrualCycles"/>
+      <display value="Irregular menstrual cycles"/>
+      <definition value="A category sample that indicates an irregular menstrual cycle."/>
+    </concept>
+    <concept>
+      <code value="infrequentMenstrualCycles"/>
+      <display value="Infrequent menstrual cycles"/>
+      <definition value="A category sample that indicates an infrequent menstrual cycle."/>
+    </concept>
+    <concept>
+      <code value="lactation"/>
+      <display value="Lactation"/>
+      <definition value="A category type that records lactation."/>
+    </concept>
+    <concept>
+      <code value="menstrualFlow"/>
+      <display value="Menstrual flow"/>
+      <definition value="A category sample type that records menstrual cycles."/>
+    </concept>
+    <concept>
+      <code value="menstrualPeriod"/>
+      <display value="Menstrual period"/>
+      <definition value="A category sample type that records menstrual periods."/>
+    </concept>
+    <concept>
+      <code value="ovulationTestResult"/>
+      <display value="Ovulation test result"/>
+      <definition value="A category sample type that records the result of an ovulation home test."/>
+    </concept>
+    <concept>
+      <code value="persistentIntermenstrualBleeding"/>
+      <display value="Persistent intermenstrual bleeding"/>
+      <definition value="A category sample that indicates persistent intermenstrual bleeding."/>
+    </concept>
+    <concept>
+      <code value="pregnancy"/>
+      <display value="Pregnancy"/>
+      <definition value="A category type that records pregnancy."/>
+    </concept>
+    <concept>
+      <code value="pregnancyTestResult"/>
+      <display value="Pregnancy test result"/>
+      <definition value="A category type that represents the results from a home pregnancy test."/>
+    </concept>
+    <concept>
+      <code value="progesteroneTestResult"/>
+      <display value="Progesterone test result"/>
+      <definition value="A category type that represents the results from a home progesterone test."/>
+    </concept>
+    <concept>
+      <code value="prolongedMenstrualPeriods"/>
+      <display value="Prolonged menstrual periods"/>
+      <definition value="A category sample that indicates a prolonged menstrual cycle."/>
+    </concept>
+    <concept>
+      <code value="sexualActivity"/>
+      <display value="Sexual activity"/>
+      <definition value="A category sample type that records sexual activity."/>
+    </concept>
+    <concept>
+      <code value="bleedingAfterPregnancy"/>
+      <display value="Bleeding after pregnancy"/>
+      <definition value="A category type that represents bleeding after pregnancy."/>
+    </concept>
+    <concept>
+      <code value="bleedingDuringPregnancy"/>
+      <display value="Bleeding during pregnancy"/>
+      <definition value="A category type that represents bleeding during pregnancy."/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="SelfCare"/>
+    <display value="Self care"/>
+    <concept>
+      <code value="handwashingEvent"/>
+      <display value="Handwashing event"/>
+      <definition value="A category sample type for handwashing events."/>
+    </concept>
+    <concept>
+      <code value="toothbrushingEvent"/>
+      <display value="Toothbrushing event"/>
+      <definition value="A category sample type for toothbrushing events."/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="Symptom"/>
+    <display value="Symptom"/>
+    <concept>
+      <code value="abdominalCramps"/>
+      <display value="Bdominal cramps"/>
+      <definition value="A category type that records abdominal cramps as a symptom."/>
+    </concept>
+    <concept>
+      <code value="acne"/>
+      <display value="Acne"/>
+      <definition value="A category type that records acne as a symptom."/>
+    </concept>
+    <concept>
+      <code value="appetiteChanges"/>
+      <display value="Appetite changes"/>
+      <definition value="A category type that records changes in appetite as a symptom."/>
+    </concept>
+    <concept>
+      <code value="bladderIncontinence"/>
+      <display value="Bladder incontinence"/>
+      <definition value="A category type that records bladder incontinence as a symptom."/>
+    </concept>
+    <concept>
+      <code value="bloating"/>
+      <display value="Bloating"/>
+      <definition value="A category type that records bloating as a symptom."/>
+    </concept>
+    <concept>
+      <code value="breastPain"/>
+      <display value="Breast pain"/>
+      <definition value="A category type that records breast pain as a symptom."/>
+    </concept>
+    <concept>
+      <code value="chestTightnessOrPain"/>
+      <display value="Chest tightness or pain"/>
+      <definition value="A category type that records chest tightness or pain as a symptom."/>
+    </concept>
+    <concept>
+      <code value="chills"/>
+      <display value="Chills"/>
+      <definition value="A category type that records chills as a symptom."/>
+    </concept>
+    <concept>
+      <code value="constipation"/>
+      <display value="Constipation"/>
+      <definition value="A category type that records constipation as a symptom."/>
+    </concept>
+    <concept>
+      <code value="coughing"/>
+      <display value="Coughing"/>
+      <definition value="A category type that records coughing as a symptom."/>
+    </concept>
+    <concept>
+      <code value="diarrhea"/>
+      <display value="Diarrhea"/>
+      <definition value="A category type that records diarrhea as a symptom."/>
+    </concept>
+    <concept>
+      <code value="dizziness"/>
+      <display value="Dizziness"/>
+      <definition value="A category type that records dizziness as a symptom."/>
+    </concept>
+    <concept>
+      <code value="drySkin"/>
+      <display value="Dry skin"/>
+      <definition value="A category type that records dry skin as a symptom."/>
+    </concept>
+    <concept>
+      <code value="fainting"/>
+      <display value="Fainting"/>
+      <definition value="A category type that records fainting as a symptom."/>
+    </concept>
+    <concept>
+      <code value="fatigue"/>
+      <display value="Fatigue"/>
+      <definition value="A category type that records fatigue as a symptom."/>
+    </concept>
+    <concept>
+      <code value="fever"/>
+      <display value="Fever"/>
+      <definition value="A category type that records fever as a symptom."/>
+    </concept>
+    <concept>
+      <code value="generalizedBodyAche"/>
+      <display value="Generalized body ache"/>
+      <definition value="A category type that records body ache as a symptom."/>
+    </concept>
+    <concept>
+      <code value="hairLoss"/>
+      <display value="Hair loss"/>
+      <definition value="A category type that records hair loss as a symptom."/>
+    </concept>
+    <concept>
+      <code value="headache"/>
+      <display value="Headache"/>
+      <definition value="A category type that records headache as a symptom."/>
+    </concept>
+    <concept>
+      <code value="heartburn"/>
+      <display value="Heartburn"/>
+      <definition value="A category type that records heartburn as a symptom."/>
+    </concept>
+    <concept>
+      <code value="hotFlashes"/>
+      <display value="Hot flashes"/>
+      <definition value="A category type that records hot flashes as a symptom."/>
+    </concept>
+    <concept>
+      <code value="lossOfSmell"/>
+      <display value="Loss of smell"/>
+      <definition value="A category type that records loss of smell as a symptom."/>
+    </concept>
+    <concept>
+      <code value="lossOfTaste"/>
+      <display value="Loss of taste"/>
+      <definition value="A category type that records loss of taste as a symptom."/>
+    </concept>
+    <concept>
+      <code value="lowerBackPain"/>
+      <display value="Lower back pain"/>
+      <definition value="A category type that records lower back pain as a symptom."/>
+    </concept>
+    <concept>
+      <code value="memoryLapse"/>
+      <display value="Memory lapse"/>
+      <definition value="A category type that records memory lapse as a symptom."/>
+    </concept>
+    <concept>
+      <code value="moodChanges"/>
+      <display value="Mood changes"/>
+      <definition value="A category type that records mood changes as a symptom."/>
+    </concept>
+    <concept>
+      <code value="nausea"/>
+      <display value="Nausea"/>
+      <definition value="A category type that records nausea as a symptom."/>
+    </concept>
+    <concept>
+      <code value="nightSweats"/>
+      <display value="Night sweats"/>
+      <definition value="A category type that records night sweats as a symptom."/>
+    </concept>
+    <concept>
+      <code value="pelvicPain"/>
+      <display value="Pelvic pain"/>
+      <definition value="A category type that records pelvic pain as a symptom."/>
+    </concept>
+    <concept>
+      <code value="rapidPoundingOrFlutteringHeartbeat"/>
+      <display value="Rapid pounding or fluttering heartbeat"/>
+      <definition value="A category type that records a rapid,  pounding,  or fluttering heartbeat as a symptom."/>
+    </concept>
+    <concept>
+      <code value="runnyNose"/>
+      <display value="Runny nose"/>
+      <definition value="A category type that records runny nose as a symptom."/>
+    </concept>
+    <concept>
+      <code value="shortnessOfBreath"/>
+      <display value="Shortness of breath"/>
+      <definition value="A category type that records shortness of breath as a symptom."/>
+    </concept>
+    <concept>
+      <code value="sinusCongestion"/>
+      <display value="Sinus congestion"/>
+      <definition value="A category type that records sinus congestion as a symptom."/>
+    </concept>
+    <concept>
+      <code value="skippedHeartbeat"/>
+      <display value="Skipped heartbeat"/>
+      <definition value="A category type that records skipped heartbeat as a symptom."/>
+    </concept>
+    <concept>
+      <code value="sleepChanges"/>
+      <display value="Sleep changes"/>
+      <definition value="A category type that records sleep changes as a symptom."/>
+    </concept>
+    <concept>
+      <code value="soreThroat"/>
+      <display value="Sore throat"/>
+      <definition value="A category type that records sore throat as a symptom."/>
+    </concept>
+    <concept>
+      <code value="vaginalDryness"/>
+      <display value="Vaginal dryness"/>
+      <definition value="A category type that records vaginal dryness as a symptom."/>
+    </concept>
+    <concept>
+      <code value="vomiting"/>
+      <display value="Vomiting"/>
+      <definition value="A category type that records vomiting as a symptom."/>
+    </concept>
+    <concept>
+      <code value="wheezing"/>
+      <display value="Wheezing"/>
+      <definition value="A category type that records wheezing as a symptom."/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="UVExposure"/>
+    <display value="Uv exposure"/>
+    <concept>
+      <code value="uvExposure"/>
+      <display value="Uv exposure"/>
+      <definition value="A quantity sample type that measures the user's exposure to UV radiation."/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="VitalSigns"/>
+    <display value="Vital signs"/>
+    <concept>
+      <code value="atrialFibrillationBurden"/>
+      <display value="Atrial fibrillation burden"/>
+      <definition value="A quantity type that measures an estimate of the percentage of time a person's heart shows signs of atrial fibrillation (AFib) while wearing Apple Watch."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="bloodPressure"/>
+      <display value="Blood pressure"/>
+      <definition value="A correlation sample that combines a systolic sample and a diastolic sample into a single blood pressure reading."/>
+    </concept>
+    <concept>
+      <code value="bloodPressureDiastolic"/>
+      <display value="Blood pressure diastolic"/>
+      <definition value="A quantity sample type that measures the user's diastolic blood pressure."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mm[Hg]"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="bloodPressureSystolic"/>
+      <display value="Blood pressure systolic"/>
+      <definition value="A quantity sample type that measures the user's systolic blood pressure."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mm[Hg]"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="bodyTemperature"/>
+      <display value="Body temperature"/>
+      <definition value="A quantity sample type that measures the user's body temperature."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="Cel"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="heartRate"/>
+      <display value="Heart rate"/>
+      <definition value="A quantity sample type that measures the user's heart rate."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="/min"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="heartRateVariabilitySDNN"/>
+      <display value="Heart rate variability sdnn"/>
+      <definition value="A quantity sample type that measures the standard deviation of heartbeat intervals."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ms"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="heartRateRecoveryOneMinute"/>
+      <display value="Heart rate recovery one minute"/>
+      <definition value="A quantity sample that records the reduction in heart rate from the peak exercise rate to the rate one minute after exercising ended."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="/min"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="highHeartRateEvent"/>
+      <display value="High heart rate event"/>
+      <definition value="A category sample type for high heart rate events."/>
+    </concept>
+    <concept>
+      <code value="irregularHeartRhythmEvent"/>
+      <display value="Irregular heart rhythm event"/>
+      <definition value="A category sample type for irregular heart rhythm events."/>
+    </concept>
+    <concept>
+      <code value="lowHeartRateEvent"/>
+      <display value="Low heart rate event"/>
+      <definition value="A category sample type for low heart rate events."/>
+    </concept>
+    <concept>
+      <code value="oxygenSaturation"/>
+      <display value="Oxygen saturation"/>
+      <definition value="A quantity sample type that measures the user's oxygen saturation."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="respiratoryRate"/>
+      <display value="Respiratory rate"/>
+      <definition value="A quantity sample type that measures the user's respiratory rate."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="/min"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="restingHeartRate"/>
+      <display value="Resting heart rate"/>
+      <definition value="A quantity sample type that measures the user's resting heart rate."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="/min"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="walkingHeartRateAverage"/>
+      <display value="Walking heart rate average"/>
+      <definition value="A quantity sample type that measures the user's heart rate while walking."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="/min"/>
+        </valueCoding>
+      </property>
+    </concept>
+    <concept>
+      <code value="rrInterval"/>
+      <display value="Rr interval"/>
+      <definition value="The time period between successive R waves."/>
+      <property>
+        <code value="unit"/>
+        <valueCoding>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ms"/>
+        </valueCoding>
+      </property>
+    </concept>
+  </concept>
+  <concept>
+    <code value="WorkoutActivity"/>
+    <display value="Workout activity"/>
+    <concept>
+      <code value="americanFootball"/>
+      <display value="American football"/>
+      <definition value="The constant for playing American football."/>
+    </concept>
+    <concept>
+      <code value="archery"/>
+      <display value="Archery"/>
+      <definition value="The constant for shooting archery."/>
+    </concept>
+    <concept>
+      <code value="australianFootball"/>
+      <display value="Australian football"/>
+      <definition value="The constant for playing Australian football."/>
+    </concept>
+    <concept>
+      <code value="badminton"/>
+      <display value="Badminton"/>
+      <definition value="The constant for playing badminton."/>
+    </concept>
+    <concept>
+      <code value="barre"/>
+      <display value="Barre"/>
+      <definition value="The constant for barre workout."/>
+    </concept>
+    <concept>
+      <code value="baseball"/>
+      <display value="Baseball"/>
+      <definition value="The constant for playing baseball."/>
+    </concept>
+    <concept>
+      <code value="basketball"/>
+      <display value="Basketball"/>
+      <definition value="The constant for playing basketball."/>
+    </concept>
+    <concept>
+      <code value="bowling"/>
+      <display value="Bowling"/>
+      <definition value="The constant for bowling."/>
+    </concept>
+    <concept>
+      <code value="boxing"/>
+      <display value="Boxing"/>
+      <definition value="The constant for boxing."/>
+    </concept>
+    <concept>
+      <code value="cardioDance"/>
+      <display value="Cardio dance"/>
+      <definition value="The constant for cardiovascular dance workouts."/>
+    </concept>
+    <concept>
+      <code value="climbing"/>
+      <display value="Climbing"/>
+      <definition value="The constant for climbing."/>
+    </concept>
+    <concept>
+      <code value="cooldown"/>
+      <display value="Cooldown"/>
+      <definition value="The constant for low intensity stretching and mobility exercises following a more vigorous workout."/>
+    </concept>
+    <concept>
+      <code value="coreTraining"/>
+      <display value="Core training"/>
+      <definition value="The constant for core training."/>
+    </concept>
+    <concept>
+      <code value="cricket"/>
+      <display value="Cricket"/>
+      <definition value="The constant for playing cricket."/>
+    </concept>
+    <concept>
+      <code value="crossCountrySkiing"/>
+      <display value="Cross country skiing"/>
+      <definition value="The constant for cross country skiing."/>
+    </concept>
+    <concept>
+      <code value="crossTraining"/>
+      <display value="Cross training"/>
+      <definition value="The constant for exercise that includes any mixture of cardio, strength, and/or flexibility training."/>
+    </concept>
+    <concept>
+      <code value="curling"/>
+      <display value="Curling"/>
+      <definition value="The constant for curling."/>
+    </concept>
+    <concept>
+      <code value="cycling"/>
+      <display value="Cycling"/>
+      <definition value="The constant for cycling."/>
+    </concept>
+    <concept>
+      <code value="dance"/>
+      <display value="Dance"/>
+      <definition value="(Deprecated) The constant for dancing."/>
+    </concept>
+    <concept>
+      <code value="danceInspiredTraining"/>
+      <display value="Dance inspired training"/>
+      <definition value="(Deprecated) The constant for workouts inspired by dance, including Pilates, Barre, and Feldenkrais."/>
+    </concept>
+    <concept>
+      <code value="discSports"/>
+      <display value="Disc sports"/>
+      <definition value="The constant for playing disc sports such as Ultimate and Disc Golf."/>
+    </concept>
+    <concept>
+      <code value="downhillSkiing"/>
+      <display value="Downhill skiing"/>
+      <definition value="The constant for downhill skiing."/>
+    </concept>
+    <concept>
+      <code value="elliptical"/>
+      <display value="Elliptical"/>
+      <definition value="The constant for workouts on an elliptical machine."/>
+    </concept>
+    <concept>
+      <code value="equestrianSports"/>
+      <display value="Equestrian sports"/>
+      <definition value="The constant for activities that involve riding a horse, including polo, horse racing, and horse riding."/>
+    </concept>
+    <concept>
+      <code value="fencing"/>
+      <display value="Fencing"/>
+      <definition value="The constant for fencing."/>
+    </concept>
+    <concept>
+      <code value="fishing"/>
+      <display value="Fishing"/>
+      <definition value="The constant for fishing."/>
+    </concept>
+    <concept>
+      <code value="fitnessGaming"/>
+      <display value="Fitness gaming"/>
+      <definition value="The constant for playing fitness-based video games."/>
+    </concept>
+    <concept>
+      <code value="flexibility"/>
+      <display value="Flexibility"/>
+      <definition value="The constant for a flexibility workout."/>
+    </concept>
+    <concept>
+      <code value="functionalStrengthTraining"/>
+      <display value="Functional strength training"/>
+      <definition value="The constant for strength training, primarily with free weights and body weight."/>
+    </concept>
+    <concept>
+      <code value="golf"/>
+      <display value="Golf"/>
+      <definition value="The constant for playing golf."/>
+    </concept>
+    <concept>
+      <code value="gymnastics"/>
+      <display value="Gymnastics"/>
+      <definition value="Performing gymnastics."/>
+    </concept>
+    <concept>
+      <code value="handball"/>
+      <display value="Handball"/>
+      <definition value="The constant for playing handball."/>
+    </concept>
+    <concept>
+      <code value="handCycling"/>
+      <display value="Hand cycling"/>
+      <definition value="The constant for hand cycling."/>
+    </concept>
+    <concept>
+      <code value="highIntensityIntervalTraining"/>
+      <display value="High intensity interval training"/>
+      <definition value="The constant for high intensity interval training."/>
+    </concept>
+    <concept>
+      <code value="hiking"/>
+      <display value="Hiking"/>
+      <definition value="The constant for hiking."/>
+    </concept>
+    <concept>
+      <code value="hockey"/>
+      <display value="Hockey"/>
+      <definition value="The constant for playing hockey, including ice hockey, field hockey, and related sports."/>
+    </concept>
+    <concept>
+      <code value="hunting"/>
+      <display value="Hunting"/>
+      <definition value="The constant for hunting."/>
+    </concept>
+    <concept>
+      <code value="jumpRope"/>
+      <display value="Jump rope"/>
+      <definition value="The constant for jumping rope."/>
+    </concept>
+    <concept>
+      <code value="kickboxing"/>
+      <display value="Kickboxing"/>
+      <definition value="The constant for kickboxing."/>
+    </concept>
+    <concept>
+      <code value="lacrosse"/>
+      <display value="Lacrosse"/>
+      <definition value="The constant for playing lacrosse."/>
+    </concept>
+    <concept>
+      <code value="martialArts"/>
+      <display value="Martial arts"/>
+      <definition value="The constant for practicing martial arts."/>
+    </concept>
+    <concept>
+      <code value="mindAndBody"/>
+      <display value="Mind and body"/>
+      <definition value="The constant for performing activities like walking meditation, Gyrotonic exercise, and Qigong."/>
+    </concept>
+    <concept>
+      <code value="mixedCardio"/>
+      <display value="Mixed cardio"/>
+      <definition value="The constant for workouts that mix a variety of cardio exercise machines or modalities."/>
+    </concept>
+    <concept>
+      <code value="mixedMetabolicCardioTraining"/>
+      <display value="Mixed metabolic cardio training"/>
+      <definition value="The constant for performing any mix of cardio-focused exercises."/>
+    </concept>
+    <concept>
+      <code value="other"/>
+      <display value="Other"/>
+      <definition value="The constant for a workout that does not match any of the other workout activity types."/>
+    </concept>
+    <concept>
+      <code value="paddleSports"/>
+      <display value="Paddle sports"/>
+      <definition value="The constant for canoeing, kayaking, paddling an outrigger, paddling a stand-up paddle board, and related sports."/>
+    </concept>
+    <concept>
+      <code value="pickleball"/>
+      <display value="Pickleball"/>
+      <definition value="The constant for playing pickleball."/>
+    </concept>
+    <concept>
+      <code value="pilates"/>
+      <display value="Pilates"/>
+      <definition value="The constant for a pilates workout."/>
+    </concept>
+    <concept>
+      <code value="play"/>
+      <display value="Play"/>
+      <definition value="The constant for play-based activities like tag, dodgeball, hopscotch, tetherball, and playing on a jungle gym."/>
+    </concept>
+    <concept>
+      <code value="preparationAndRecovery"/>
+      <display value="Preparation and recovery"/>
+      <definition value="The constant for warm-up and therapeutic activities like foam rolling and stretching."/>
+    </concept>
+    <concept>
+      <code value="racquetball"/>
+      <display value="Racquetball"/>
+      <definition value="The constant for playing racquetball."/>
+    </concept>
+    <concept>
+      <code value="rowing"/>
+      <display value="Rowing"/>
+      <definition value="The constant for rowing."/>
+    </concept>
+    <concept>
+      <code value="rugby"/>
+      <display value="Rugby"/>
+      <definition value="The constant for playing rugby."/>
+    </concept>
+    <concept>
+      <code value="running"/>
+      <display value="Running"/>
+      <definition value="The constant for running and jogging."/>
+    </concept>
+    <concept>
+      <code value="sailing"/>
+      <display value="Sailing"/>
+      <definition value="The constant for sailing."/>
+    </concept>
+    <concept>
+      <code value="skatingSports"/>
+      <display value="Skating sports"/>
+      <definition value="The constant for skating activities, including ice skating, speed skating, inline skating, and skateboarding."/>
+    </concept>
+    <concept>
+      <code value="snowboarding"/>
+      <display value="Snowboarding"/>
+      <definition value="The constant for snowboarding."/>
+    </concept>
+    <concept>
+      <code value="snowSports"/>
+      <display value="Snow sports"/>
+      <definition value="The constant for a variety of snow sports, including sledding, snowmobiling, or building a snowman."/>
+    </concept>
+    <concept>
+      <code value="soccer"/>
+      <display value="Soccer"/>
+      <definition value="The constant for playing soccer."/>
+    </concept>
+    <concept>
+      <code value="socialDance"/>
+      <display value="Social dance"/>
+      <definition value="The constant for dancing with a partner or partners, such as swing, salsa, or folk dances."/>
+    </concept>
+    <concept>
+      <code value="softball"/>
+      <display value="Softball"/>
+      <definition value="The constant for playing softball."/>
+    </concept>
+    <concept>
+      <code value="squash"/>
+      <display value="Squash"/>
+      <definition value="The constant for playing squash."/>
+    </concept>
+    <concept>
+      <code value="stairClimbing"/>
+      <display value="Stair climbing"/>
+      <definition value="The constant for workouts using a stair climbing machine."/>
+    </concept>
+    <concept>
+      <code value="stairs"/>
+      <display value="Stairs"/>
+      <definition value="The constant for running, walking, or other drills using stairs (for example, in a stadium or inside a multilevel building)."/>
+    </concept>
+    <concept>
+      <code value="stepTraining"/>
+      <display value="Step training"/>
+      <definition value="The constant for training using a step bench."/>
+    </concept>
+    <concept>
+      <code value="surfingSports"/>
+      <display value="Surfing sports"/>
+      <definition value="The constant for a variety of surf sports, including surfing, kite surfing, and wind surfing."/>
+    </concept>
+    <concept>
+      <code value="swimBikeRun"/>
+      <display value="Swim bike run"/>
+      <definition value="The constant for multisport activities like triathlons."/>
+    </concept>
+    <concept>
+      <code value="swimming"/>
+      <display value="Swimming"/>
+      <definition value="The constant for swimming."/>
+    </concept>
+    <concept>
+      <code value="tableTennis"/>
+      <display value="Table tennis"/>
+      <definition value="The constant for playing table tennis."/>
+    </concept>
+    <concept>
+      <code value="taiChi"/>
+      <display value="Tai chi"/>
+      <definition value="The constant for tai chi."/>
+    </concept>
+    <concept>
+      <code value="tennis"/>
+      <display value="Tennis"/>
+      <definition value="The constant for playing tennis."/>
+    </concept>
+    <concept>
+      <code value="trackAndField"/>
+      <display value="Track and field"/>
+      <definition value="Participating in track and field events, including shot put, javelin, pole vaulting, and related sports."/>
+    </concept>
+    <concept>
+      <code value="traditionalStrengthTraining"/>
+      <display value="Traditional strength training"/>
+      <definition value="The constant for strength training exercises primarily using machines or free weights."/>
+    </concept>
+    <concept>
+      <code value="transition"/>
+      <display value="Transition"/>
+      <definition value="A constant for the transition time between activities in a multisport workout."/>
+    </concept>
+    <concept>
+      <code value="underwaterDiving"/>
+      <display value="Underwater diving"/>
+      <definition value="The constant for underwater diving."/>
+    </concept>
+    <concept>
+      <code value="volleyball"/>
+      <display value="Volleyball"/>
+      <definition value="The constant for playing volleyball."/>
+    </concept>
+    <concept>
+      <code value="walking"/>
+      <display value="Walking"/>
+      <definition value="The constant for walking."/>
+    </concept>
+    <concept>
+      <code value="waterFitness"/>
+      <display value="Water fitness"/>
+      <definition value="The constant for aerobic exercise performed in shallow water."/>
+    </concept>
+    <concept>
+      <code value="waterPolo"/>
+      <display value="Water polo"/>
+      <definition value="The constant for playing water polo."/>
+    </concept>
+    <concept>
+      <code value="waterSports"/>
+      <display value="Water sports"/>
+      <definition value="The constant for a variety of water sports, including water skiing, wake boarding, and related activities."/>
+    </concept>
+    <concept>
+      <code value="wheelchairRunPace"/>
+      <display value="Wheelchair run pace"/>
+      <definition value="The constant for wheelchair workout at running pace."/>
+    </concept>
+    <concept>
+      <code value="wheelchairWalkPace"/>
+      <display value="Wheelchair walk pace"/>
+      <definition value="The constant for a wheelchair workout at walking pace."/>
+    </concept>
+    <concept>
+      <code value="wrestling"/>
+      <display value="Wrestling"/>
+      <definition value="The constant for wrestling."/>
+    </concept>
+    <concept>
+      <code value="yoga"/>
+      <display value="Yoga"/>
+      <definition value="The constant for practicing yoga."/>
+    </concept>
+    <concept>
+      <code value="backExtension"/>
+      <display value="Back extension"/>
+      <definition value="The constant for back Extension."/>
+    </concept>
+    <concept>
+      <code value="barbellShoulderPress"/>
+      <display value="Barbell shoulder press"/>
+      <definition value="The constant for barbell shoulder press."/>
+    </concept>
+    <concept>
+      <code value="benchPress"/>
+      <display value="Bench press"/>
+      <definition value="The constant for bench press."/>
+    </concept>
+    <concept>
+      <code value="benchSitUp"/>
+      <display value="Bench sit up"/>
+      <definition value="The constant for bench sit up."/>
+    </concept>
+    <concept>
+      <code value="biking"/>
+      <display value="Biking"/>
+      <definition value="The constant for biking."/>
+    </concept>
+    <concept>
+      <code value="bikingStationary"/>
+      <display value="Biking stationary"/>
+      <definition value="The constant for biking stationary."/>
+    </concept>
+    <concept>
+      <code value="bootCamp"/>
+      <display value="Boot camp"/>
+      <definition value="The constant for boot camp."/>
+    </concept>
+    <concept>
+      <code value="burpee"/>
+      <display value="Burpee"/>
+      <definition value="The constant for burpee."/>
+    </concept>
+    <concept>
+      <code value="calisthenics"/>
+      <display value="Calisthenics"/>
+      <definition value="The constant for calisthenics."/>
+    </concept>
+    <concept>
+      <code value="crunch"/>
+      <display value="Crunch"/>
+      <definition value="The constant for crunch."/>
+    </concept>
+    <concept>
+      <code value="deadlift"/>
+      <display value="Deadlift"/>
+      <definition value="The constant for deadlift."/>
+    </concept>
+    <concept>
+      <code value="dumbbellCurlLeftArm"/>
+      <display value="Dumbbell curl left arm"/>
+      <definition value="The constant for dumbbell curl left arm."/>
+    </concept>
+    <concept>
+      <code value="dumbbellCurlRightArm"/>
+      <display value="Dumbbell curl right arm"/>
+      <definition value="The constant for dumbbell curl right arm."/>
+    </concept>
+    <concept>
+      <code value="dumbbellFrontRaise"/>
+      <display value="Dumbbell front raise"/>
+      <definition value="The constant for dumbbell front raise."/>
+    </concept>
+    <concept>
+      <code value="dumbbellLateralRaise"/>
+      <display value="Dumbbell lateral raise"/>
+      <definition value="The constant for dumbbell lateral raise."/>
+    </concept>
+    <concept>
+      <code value="dumbbellTricepsExtensionLeftArm"/>
+      <display value="Dumbbell triceps extension left arm"/>
+      <definition value="The constant for dumbbell triceps extension left arm."/>
+    </concept>
+    <concept>
+      <code value="dumbbellTricepsExtensionRightArm"/>
+      <display value="Dumbbell triceps extension right arm"/>
+      <definition value="The constant for dumbbell triceps extension right arm."/>
+    </concept>
+    <concept>
+      <code value="dumbbellTricepsExtensionTwoArm"/>
+      <display value="Dumbbell triceps extension two arm"/>
+      <definition value="The constant for dumbbell triceps extension two arm."/>
+    </concept>
+    <concept>
+      <code value="exerciseClass"/>
+      <display value="Exercise class"/>
+      <definition value="The constant for exercise class."/>
+    </concept>
+    <concept>
+      <code value="forwardTwist"/>
+      <display value="Forward twist"/>
+      <definition value="The constant for forward twist."/>
+    </concept>
+    <concept>
+      <code value="frisbeeDisc"/>
+      <display value="Frisbee disc"/>
+      <definition value="The constant for frisbee disc."/>
+    </concept>
+    <concept>
+      <code value="guidedBreathing"/>
+      <display value="Guided breathing"/>
+      <definition value="The constant for guided breathing."/>
+    </concept>
+    <concept>
+      <code value="iceHockey"/>
+      <display value="Ice hockey"/>
+      <definition value="The constant for ice hockey."/>
+    </concept>
+    <concept>
+      <code value="iceSkating"/>
+      <display value="Ice skating"/>
+      <definition value="The constant for ice skating."/>
+    </concept>
+    <concept>
+      <code value="jumpingJack"/>
+      <display value="Jumping jack"/>
+      <definition value="The constant for jumping jack."/>
+    </concept>
+    <concept>
+      <code value="latPullDown"/>
+      <display value="Lat pull down"/>
+      <definition value="The constant for lat pull down."/>
+    </concept>
+    <concept>
+      <code value="lunge"/>
+      <display value="Lunge"/>
+      <definition value="The constant for lunge."/>
+    </concept>
+    <concept>
+      <code value="meditation"/>
+      <display value="Meditation"/>
+      <definition value="The constant for meditation."/>
+    </concept>
+    <concept>
+      <code value="paraGliding"/>
+      <display value="Para gliding"/>
+      <definition value="The constant for para gliding."/>
+    </concept>
+    <concept>
+      <code value="plank"/>
+      <display value="Plank"/>
+      <definition value="The constant for plank."/>
+    </concept>
+    <concept>
+      <code value="rockClimbing"/>
+      <display value="Rock climbing"/>
+      <definition value="The constant for rock climbing."/>
+    </concept>
+    <concept>
+      <code value="rollerHockey"/>
+      <display value="Roller hockey"/>
+      <definition value="The constant for roller hockey."/>
+    </concept>
+    <concept>
+      <code value="rowingMachine"/>
+      <display value="Rowing machine"/>
+      <definition value="The constant for rowing machine."/>
+    </concept>
+    <concept>
+      <code value="runningTreadmill"/>
+      <display value="Running treadmill"/>
+      <definition value="The constant for running treadmill."/>
+    </concept>
+    <concept>
+      <code value="scubaDiving"/>
+      <display value="Scuba diving"/>
+      <definition value="The constant for scuba diving."/>
+    </concept>
+    <concept>
+      <code value="skiing"/>
+      <display value="Skiing"/>
+      <definition value="The constant for skiing."/>
+    </concept>
+    <concept>
+      <code value="snowshoeing"/>
+      <display value="Snowshoeing"/>
+      <definition value="The constant for snowshoeing."/>
+    </concept>
+    <concept>
+      <code value="squat"/>
+      <display value="Squat"/>
+      <definition value="The constant for squat."/>
+    </concept>
+    <concept>
+      <code value="strengthTraining"/>
+      <display value="Strength training"/>
+      <definition value="The constant for strength training."/>
+    </concept>
+    <concept>
+      <code value="stretching"/>
+      <display value="Stretching"/>
+      <definition value="The constant for stretching."/>
+    </concept>
+    <concept>
+      <code value="swimmingOpenWater"/>
+      <display value="Swimming open water"/>
+      <definition value="The constant for swimming open water."/>
+    </concept>
+    <concept>
+      <code value="swimmingPool"/>
+      <display value="Swimming pool"/>
+      <definition value="The constant for swimming pool."/>
+    </concept>
+    <concept>
+      <code value="upperTwist"/>
+      <display value="Upper twist"/>
+      <definition value="The constant for upper twist."/>
+    </concept>
+    <concept>
+      <code value="weightlifting"/>
+      <display value="Weightlifting"/>
+      <definition value="The constant for weightlifting."/>
+    </concept>
+    <concept>
+      <code value="wheelchair"/>
+      <display value="Wheelchair"/>
+      <definition value="The constant for wheelchair."/>
+    </concept>
+    <concept>
+      <code value="workout"/>
+      <display value="Workout"/>
+      <definition value="The constant for workout."/>
+    </concept>
+    <concept>
+      <code value="armCurl"/>
+      <display value="Arm curl"/>
+      <definition value="The constant for arm curl exercises targeting the biceps."/>
+    </concept>
+    <concept>
+      <code value="ballSlam"/>
+      <display value="Ball slam"/>
+      <definition value="The constant for full-body workouts using a slam ball."/>
+    </concept>
+    <concept>
+      <code value="doubleArmTricepsExtension"/>
+      <display value="Double arm triceps extension"/>
+      <definition value="The constant for triceps extension exercises using both arms."/>
+    </concept>
+    <concept>
+      <code value="dumbbellRow"/>
+      <display value="Dumbbell row"/>
+      <definition value="The constant for back-strengthening exercises using dumbbells."/>
+    </concept>
+    <concept>
+      <code value="frontRaise"/>
+      <display value="Front raise"/>
+      <definition value="The constant for shoulder workouts lifting weights in front of the body."/>
+    </concept>
+    <concept>
+      <code value="hipThrust"/>
+      <display value="Hip thrust"/>
+      <definition value="The constant for glute-focused exercises involving hip elevation."/>
+    </concept>
+    <concept>
+      <code value="hulaHoop"/>
+      <display value="Hula hoop"/>
+      <definition value="The constant for core and cardio workouts using a hula hoop."/>
+    </concept>
+    <concept>
+      <code value="kettlebellSwing"/>
+      <display value="Kettlebell swing"/>
+      <definition value="The constant for dynamic full-body workouts using a kettlebell."/>
+    </concept>
+    <concept>
+      <code value="lateralRaise"/>
+      <display value="Lateral raise"/>
+      <definition value="The constant for shoulder workouts lifting weights to the sides."/>
+    </concept>
+    <concept>
+      <code value="legCurl"/>
+      <display value="Leg curl"/>
+      <definition value="The constant for hamstring-focused leg curl exercises."/>
+    </concept>
+    <concept>
+      <code value="legExtension"/>
+      <display value="Leg extension"/>
+      <definition value="The constant for quadriceps-focused leg extension exercises."/>
+    </concept>
+    <concept>
+      <code value="legPress"/>
+      <display value="Leg press"/>
+      <definition value="The constant for lower-body strength training using a leg press machine."/>
+    </concept>
+    <concept>
+      <code value="legRaise"/>
+      <display value="Leg raise"/>
+      <definition value="The constant for abdominal and hip flexor exercises involving leg lifts."/>
+    </concept>
+    <concept>
+      <code value="mountainClimber"/>
+      <display value="Mountain climber"/>
+      <definition value="The constant for cardio and core workouts simulating climbing motion."/>
+    </concept>
+    <concept>
+      <code value="otherWorkout"/>
+      <display value="Other workout"/>
+      <definition value="The constant for workouts not categorized under specific types."/>
+    </concept>
+    <concept>
+      <code value="pause"/>
+      <display value="Pause"/>
+      <definition value="The constant for temporary pauses during a workout session."/>
+    </concept>
+    <concept>
+      <code value="pullUp"/>
+      <display value="Pull-up"/>
+      <definition value="The constant for upper-body strength exercises involving pulling up the body."/>
+    </concept>
+    <concept>
+      <code value="punch"/>
+      <display value="Punch"/>
+      <definition value="The constant for boxing-style workouts involving punching motions."/>
+    </concept>
+    <concept>
+      <code value="rest"/>
+      <display value="Rest"/>
+      <definition value="The constant for rest periods between or after workouts."/>
+    </concept>
+    <concept>
+      <code value="shoulderPress"/>
+      <display value="Shoulder press"/>
+      <definition value="The constant for overhead pressing exercises targeting the shoulders."/>
+    </concept>
+    <concept>
+      <code value="singleArmTricepsExtension"/>
+      <display value="Single arm triceps extension"/>
+      <definition value="The constant for triceps extension exercises using one arm."/>
+    </concept>
+    <concept>
+      <code value="sitUp"/>
+      <display value="Sit-up"/>
+      <definition value="The constant for abdominal exercises involving torso lifts."/>
+    </concept>
+    <concept>
+      <code value="stairClimbingMachine"/>
+      <display value="Stair climbing"/>
+      <definition value="The constant for workouts using a stair climbing machine."/>
+    </concept>
+    <concept>
+      <code value="swimmingBackstroke"/>
+      <display value="Swimming backstroke"/>
+      <definition value="The constant for swimming using the backstroke technique."/>
+    </concept>
+    <concept>
+      <code value="swimmingBreaststroke"/>
+      <display value="Swimming breaststroke"/>
+      <definition value="The constant for swimming using the breaststroke technique."/>
+    </concept>
+    <concept>
+      <code value="swimmingButterfly"/>
+      <display value="Swimming butterfly"/>
+      <definition value="The constant for swimming using the butterfly stroke."/>
+    </concept>
+    <concept>
+      <code value="swimmingFreestyle"/>
+      <display value="Swimming freestyle"/>
+      <definition value="The constant for swimming using the freestyle stroke."/>
+    </concept>
+    <concept>
+      <code value="swimmingMixed"/>
+      <display value="Swimming mixed"/>
+      <definition value="The constant for swimming using a combination of strokes."/>
+    </concept>
+    <concept>
+      <code value="swimmingOther"/>
+      <display value="Swimming other"/>
+      <definition value="The constant for swimming using other or unspecified techniques."/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="Audiogram"/>
+    <display value="Audiogram"/>
+    <concept>
+      <code value="hearingSensitivity"/>
+      <display value="Hearing sensitivity"/>
+      <definition value="A pair of frequencies and left/right ear sensitivity data to represent the patient's hearing sensitivity for each frequency."/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="food"/>
+    <display value="Food"/>
+  </concept>
+  <concept>
+    <code value="medicationAdherence"/>
+    <display value="Medication adherence"/>
+    <definition value="The degree to which a patient correctly follows medical advice, particularly in relation to taking prescribed medication."/>
+  </concept>
+  <concept>
+    <code value="Mind"/>
+    <display value="Mind"/>
+    <concept>
+      <code value="stateOfMind"/>
+      <display value="State of Mind"/>
+      <definition value="Momentary emotions and daily moods."/>
+    </concept>
+    <concept>
+      <code value="gad7"/>
+      <display value="GAD-7 assessment"/>
+      <definition value="The Generalized Anxiety Disorder 7-item scale."/>
+    </concept>
+    <concept>
+      <code value="phq9"/>
+      <display value="PHQ-9 assessment"/>
+      <definition value="The nine-item Patient Health Questionnaire."/>
+    </concept>
+  </concept>
+</CodeSystem>

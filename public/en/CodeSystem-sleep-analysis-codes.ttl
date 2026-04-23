@@ -1,0 +1,127 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/phr/CodeSystem/sleep-analysis-codes> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "sleep-analysis-codes"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem sleep-analysis-codes</b></p><a name=\"sleep-analysis-codes\"> </a><a name=\"hcsleep-analysis-codes\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/sleep-analysis-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">inBed<a name=\"sleep-analysis-codes-inBed\"> </a></td><td>In bed</td><td>The user is in bed.</td></tr><tr><td style=\"white-space:nowrap\">asleepUnspecified<a name=\"sleep-analysis-codes-asleepUnspecified\"> </a></td><td>Asleep unspecified</td><td>The user is asleep, but the specific stage isn’t known.</td></tr><tr><td style=\"white-space:nowrap\">awake<a name=\"sleep-analysis-codes-awake\"> </a></td><td>Awake</td><td>The user is awake.</td></tr><tr><td style=\"white-space:nowrap\">asleepREM<a name=\"sleep-analysis-codes-asleepREM\"> </a></td><td>Asleep REM</td><td>The user is in REM sleep.</td></tr><tr><td style=\"white-space:nowrap\">asleepCore<a name=\"sleep-analysis-codes-asleepCore\"> </a></td><td>Asleep core</td><td>The user is in light or intermediate sleep.</td></tr><tr><td style=\"white-space:nowrap\">asleepDeep<a name=\"sleep-analysis-codes-asleepDeep\"> </a></td><td>Asleep deep</td><td>The user is in deep sleep.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "pe"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 1 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/uv/phr/CodeSystem/sleep-analysis-codes"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/uv/phr/CodeSystem/sleep-analysis-codes>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0-ballot2"] ; # 
+  fhir:name [ fhir:v "SleepAnalysis"] ; # 
+  fhir:title [ fhir:v "Sleep Analysis Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-04-23T16:43:45-05:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientempowerment" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes for stages of sleep"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:compositional [ fhir:v false] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "6"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "inBed" ] ;
+     fhir:display [ fhir:v "In bed" ] ;
+     fhir:definition [ fhir:v "The user is in bed." ]
+  ] [
+     fhir:code [ fhir:v "asleepUnspecified" ] ;
+     fhir:display [ fhir:v "Asleep unspecified" ] ;
+     fhir:definition [ fhir:v "The user is asleep, but the specific stage isn’t known." ]
+  ] [
+     fhir:code [ fhir:v "awake" ] ;
+     fhir:display [ fhir:v "Awake" ] ;
+     fhir:definition [ fhir:v "The user is awake." ]
+  ] [
+     fhir:code [ fhir:v "asleepREM" ] ;
+     fhir:display [ fhir:v "Asleep REM" ] ;
+     fhir:definition [ fhir:v "The user is in REM sleep." ]
+  ] [
+     fhir:code [ fhir:v "asleepCore" ] ;
+     fhir:display [ fhir:v "Asleep core" ] ;
+     fhir:definition [ fhir:v "The user is in light or intermediate sleep." ]
+  ] [
+     fhir:code [ fhir:v "asleepDeep" ] ;
+     fhir:display [ fhir:v "Asleep deep" ] ;
+     fhir:definition [ fhir:v "The user is in deep sleep." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

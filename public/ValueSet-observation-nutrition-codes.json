@@ -1,0 +1,192 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "observation-nutrition-codes",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet observation-nutrition-codes</b></p><a name=\"observation-nutrition-codes\"> </a><a name=\"hcobservation-nutrition-codes\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-observation-pghd-codes.html\"><code>http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;1.0.0-ballot2</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryBiotin\">dietaryBiotin</a></td><td style=\"color: #cccccc\">Biotin</td><td>A quantity sample type that measures the amount of biotin (vitamin B7) consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryCaffeine\">dietaryCaffeine</a></td><td style=\"color: #cccccc\">Caffeine</td><td>A quantity sample type that measures the amount of caffeine consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryCalcium\">dietaryCalcium</a></td><td style=\"color: #cccccc\">Calcium</td><td>A quantity sample type that measures the amount of calcium consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryCarbohydrates\">dietaryCarbohydrates</a></td><td style=\"color: #cccccc\">Carbohydrates</td><td>A quantity sample type that measures the amount of carbohydrates consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryChloride\">dietaryChloride</a></td><td style=\"color: #cccccc\">Chloride</td><td>A quantity sample type that measures the amount of chloride consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryCholesterol\">dietaryCholesterol</a></td><td style=\"color: #cccccc\">Cholesterol</td><td>A quantity sample type that measures the amount of cholesterol consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryChromium\">dietaryChromium</a></td><td style=\"color: #cccccc\">Chromium</td><td>A quantity sample type that measures the amount of chromium consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryCopper\">dietaryCopper</a></td><td style=\"color: #cccccc\">Copper</td><td>A quantity sample type that measures the amount of copper consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryEnergyConsumed\">dietaryEnergyConsumed</a></td><td style=\"color: #cccccc\">Energy consumed</td><td>A quantity sample type that measures the amount of energy consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryEnergyFromFat\">dietaryEnergyFromFat</a></td><td style=\"color: #cccccc\">Energy from fat</td><td>A quantity sample type that measures the amount of energy form fat.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryFatMonounsaturated\">dietaryFatMonounsaturated</a></td><td style=\"color: #cccccc\">Fat monounsaturated</td><td>A quantity sample type that measures the amount of monounsaturated fat consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryFatPolyunsaturated\">dietaryFatPolyunsaturated</a></td><td style=\"color: #cccccc\">Fat polyunsaturated</td><td>A quantity sample type that measures the amount of polyunsaturated fat consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryFatUnsaturated\">dietaryFatUnsaturated</a></td><td style=\"color: #cccccc\">Fat unsaturated</td><td>A quantity sample type that measures the amount of unsaturated fat consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryTransFat\">dietaryTransFat</a></td><td style=\"color: #cccccc\">Trans fat</td><td>A quantity sample type that measures the amount of trans fat consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryFatSaturated\">dietaryFatSaturated</a></td><td style=\"color: #cccccc\">Fat saturated</td><td>A quantity sample type that measures the amount of saturated fat consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryFatTotal\">dietaryFatTotal</a></td><td style=\"color: #cccccc\">Fat total</td><td>A quantity sample type that measures the total amount of fat consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryFiber\">dietaryFiber</a></td><td style=\"color: #cccccc\">Fiber</td><td>A quantity sample type that measures the amount of fiber consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryFolateOrFolicAcid\">dietaryFolateOrFolicAcid</a></td><td style=\"color: #cccccc\">Folate or folic acid</td><td>A quantity sample type that measures the amount of folate (folic acid) consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryFolate\">dietaryFolate</a></td><td style=\"color: #cccccc\">Folate</td><td>A quantity sample type that measures the amount of folate consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryFolicAcid\">dietaryFolicAcid</a></td><td style=\"color: #cccccc\">Folic acid</td><td>A quantity sample type that measures the amount of folic acid consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryIodine\">dietaryIodine</a></td><td style=\"color: #cccccc\">Iodine</td><td>A quantity sample type that measures the amount of iodine consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryIron\">dietaryIron</a></td><td style=\"color: #cccccc\">Iron</td><td>A quantity sample type that measures the amount of iron consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryMagnesium\">dietaryMagnesium</a></td><td style=\"color: #cccccc\">Magnesium</td><td>A quantity sample type that measures the amount of magnesium consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryManganese\">dietaryManganese</a></td><td style=\"color: #cccccc\">Manganese</td><td>A quantity sample type that measures the amount of manganese consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryMolybdenum\">dietaryMolybdenum</a></td><td style=\"color: #cccccc\">Molybdenum</td><td>A quantity sample type that measures the amount of molybdenum consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryNiacin\">dietaryNiacin</a></td><td style=\"color: #cccccc\">Niacin</td><td>A quantity sample type that measures the amount of niacin (vitamin B3) consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryPantothenicAcid\">dietaryPantothenicAcid</a></td><td style=\"color: #cccccc\">Pantothenic acid</td><td>A quantity sample type that measures the amount of pantothenic acid (vitamin B5) consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryPhosphorus\">dietaryPhosphorus</a></td><td style=\"color: #cccccc\">Phosphorus</td><td>A quantity sample type that measures the amount of phosphorus consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryPotassium\">dietaryPotassium</a></td><td style=\"color: #cccccc\">Potassium</td><td>A quantity sample type that measures the amount of potassium consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryProtein\">dietaryProtein</a></td><td style=\"color: #cccccc\">Protein</td><td>A quantity sample type that measures the amount of protein consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryRiboflavin\">dietaryRiboflavin</a></td><td style=\"color: #cccccc\">Riboflavin</td><td>A quantity sample type that measures the amount of riboflavin (vitamin B2) consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietarySelenium\">dietarySelenium</a></td><td style=\"color: #cccccc\">Selenium</td><td>A quantity sample type that measures the amount of selenium consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietarySodium\">dietarySodium</a></td><td style=\"color: #cccccc\">Sodium</td><td>A quantity sample type that measures the amount of sodium consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietarySugar\">dietarySugar</a></td><td style=\"color: #cccccc\">Sugar</td><td>A quantity sample type that measures the amount of sugar consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryThiamin\">dietaryThiamin</a></td><td style=\"color: #cccccc\">Thiamin</td><td>A quantity sample type that measures the amount of thiamin (vitamin B1) consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryVitaminA\">dietaryVitaminA</a></td><td style=\"color: #cccccc\">Vitamin a</td><td>A quantity sample type that measures the amount of vitamin A consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryVitaminB12\">dietaryVitaminB12</a></td><td style=\"color: #cccccc\">Dietary vitamin b12</td><td>A quantity sample type that measures the amount of cyanocobalamin (vitamin B12) consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryVitaminB6\">dietaryVitaminB6</a></td><td style=\"color: #cccccc\">Vitamin b6</td><td>A quantity sample type that measures the amount of pyridoxine (vitamin B6) consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryVitaminC\">dietaryVitaminC</a></td><td style=\"color: #cccccc\">Vitamin c</td><td>A quantity sample type that measures the amount of vitamin C consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryVitaminD\">dietaryVitaminD</a></td><td style=\"color: #cccccc\">Vitamin d</td><td>A quantity sample type that measures the amount of vitamin D consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryVitaminE\">dietaryVitaminE</a></td><td style=\"color: #cccccc\">Vitamin e</td><td>A quantity sample type that measures the amount of vitamin E consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryVitaminK\">dietaryVitaminK</a></td><td style=\"color: #cccccc\">Vitamin k</td><td>A quantity sample type that measures the amount of vitamin K consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryWater\">dietaryWater</a></td><td style=\"color: #cccccc\">Water</td><td>A quantity sample type that measures the amount of water consumed.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-dietaryZinc\">dietaryZinc</a></td><td style=\"color: #cccccc\">Zinc</td><td>A quantity sample type that measures the amount of zinc consumed.</td></tr></table></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pe"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  }],
+  "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-nutrition-codes",
+  "version" : "1.0.0-ballot2",
+  "name" : "ObservationNutrition",
+  "title" : "Observation Nutrition Codes",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-04-23T16:43:45-05:00",
+  "publisher" : "HL7 International / Patient Empowerment",
+  "contact" : [{
+    "name" : "HL7 International / Patient Empowerment",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/patientempowerment"
+    }]
+  }],
+  "description" : "Codes representing nutrition-related measures",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes",
+      "concept" : [{
+        "code" : "dietaryBiotin"
+      },
+      {
+        "code" : "dietaryCaffeine"
+      },
+      {
+        "code" : "dietaryCalcium"
+      },
+      {
+        "code" : "dietaryCarbohydrates"
+      },
+      {
+        "code" : "dietaryChloride"
+      },
+      {
+        "code" : "dietaryCholesterol"
+      },
+      {
+        "code" : "dietaryChromium"
+      },
+      {
+        "code" : "dietaryCopper"
+      },
+      {
+        "code" : "dietaryEnergyConsumed"
+      },
+      {
+        "code" : "dietaryEnergyFromFat"
+      },
+      {
+        "code" : "dietaryFatMonounsaturated"
+      },
+      {
+        "code" : "dietaryFatPolyunsaturated"
+      },
+      {
+        "code" : "dietaryFatUnsaturated"
+      },
+      {
+        "code" : "dietaryTransFat"
+      },
+      {
+        "code" : "dietaryFatSaturated"
+      },
+      {
+        "code" : "dietaryFatTotal"
+      },
+      {
+        "code" : "dietaryFiber"
+      },
+      {
+        "code" : "dietaryFolateOrFolicAcid"
+      },
+      {
+        "code" : "dietaryFolate"
+      },
+      {
+        "code" : "dietaryFolicAcid"
+      },
+      {
+        "code" : "dietaryIodine"
+      },
+      {
+        "code" : "dietaryIron"
+      },
+      {
+        "code" : "dietaryMagnesium"
+      },
+      {
+        "code" : "dietaryManganese"
+      },
+      {
+        "code" : "dietaryMolybdenum"
+      },
+      {
+        "code" : "dietaryNiacin"
+      },
+      {
+        "code" : "dietaryPantothenicAcid"
+      },
+      {
+        "code" : "dietaryPhosphorus"
+      },
+      {
+        "code" : "dietaryPotassium"
+      },
+      {
+        "code" : "dietaryProtein"
+      },
+      {
+        "code" : "dietaryRiboflavin"
+      },
+      {
+        "code" : "dietarySelenium"
+      },
+      {
+        "code" : "dietarySodium"
+      },
+      {
+        "code" : "dietarySugar"
+      },
+      {
+        "code" : "dietaryThiamin"
+      },
+      {
+        "code" : "dietaryVitaminA"
+      },
+      {
+        "code" : "dietaryVitaminB12"
+      },
+      {
+        "code" : "dietaryVitaminB6"
+      },
+      {
+        "code" : "dietaryVitaminC"
+      },
+      {
+        "code" : "dietaryVitaminD"
+      },
+      {
+        "code" : "dietaryVitaminE"
+      },
+      {
+        "code" : "dietaryVitaminK"
+      },
+      {
+        "code" : "dietaryWater"
+      },
+      {
+        "code" : "dietaryZinc"
+      }]
+    }]
+  }
+}
