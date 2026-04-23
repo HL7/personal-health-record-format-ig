@@ -28,7 +28,7 @@
   "name" : "PatientHealthRecordsIG",
   "title" : "Personal Health Records",
   "status" : "active",
-  "date" : "2026-04-23T16:43:45-05:00",
+  "date" : "2026-04-23T17:08:04-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {
@@ -3547,21 +3547,6 @@
           ],
           "nameUrl" : "functionality.html",
           "title" : "Functional Model",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-              "valueCode" : "informative"
-            },
-            {
-              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "recordlifecycle.html"
-            }
-          ],
-          "nameUrl" : "recordlifecycle.html",
-          "title" : "Record Lifecycle",
           "generation" : "markdown"
         },
         {

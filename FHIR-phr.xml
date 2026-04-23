@@ -264,7 +264,7 @@
 <page key="personas-index" name="Personas Index"/>
 <page key="physiology" name="Physiology Domains"/>
 <page key="recordkeeping" name="Record Keeping"/>
-<page key="recordlifecycle" name="Record Lifecycle"/>
+<page deprecated="true" key="recordlifecycle" name="Record Lifecycle"/>
 <page key="security" name="Security"/>
 <page key="toc" name="Table of Contents"/>
 <page key="persona-thompson-family" name="Thompson Family"/>

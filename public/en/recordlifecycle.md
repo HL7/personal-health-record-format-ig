@@ -1,6 +1,6 @@
-# Record Lifecycle - Personal Health Records v1.0.0-ballot2
+#  - Personal Health Records v1.0.0-ballot2
 
-## Record Lifecycle
+## 
 
 Record lifecycle management involves overseeing records from their creation to their final disposal. This process ensures that records are handled consistently and securely at every stage. Managing the lifecycle of records includes activities such as creating, updating, accessing, storing, archiving, and deleting records.
 

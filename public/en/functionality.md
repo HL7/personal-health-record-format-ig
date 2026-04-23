@@ -128,7 +128,7 @@ The section and header names for the following table can be found in the [Person
 
 #### Record and Trust Infrastructure
 
-RI. [Record Infrastructure](recordlifecycle.md)
+RI. [Record Infrastructure](recordkeeping.md#record-lifecycle)
 
 TI. [Trust Infrastructure](security.md)
 

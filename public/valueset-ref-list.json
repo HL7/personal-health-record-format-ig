@@ -12,14 +12,14 @@
       "sources" : ["2.16.840.1.113883.3.88.12.80.62"],
       "uses" : {
       },
-      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
       "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
       "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
       "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
       "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile",
-      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
-      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile",
-      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile"
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile"
     },
     {
       "url" : "http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips",
@@ -102,10 +102,10 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-pghd-bodymeasurement.html" : "PGHD Body Measurement Profile",
-      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
       "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
-      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile"
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
+      "StructureDefinition-pghd-bodymeasurement.html" : "PGHD Body Measurement Profile"
     },
     {
       "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-diving-codes",
@@ -222,8 +222,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile",
-      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile"
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile",
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile"
     },
     {
       "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-mindfulness-codes",
@@ -427,9 +427,9 @@
       ],
       "uses" : {
       },
-      "ConceptMap-symptom-snomedct-to-pghd.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd|1.0.0-ballot2]",
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile",
       "ConceptMap-symptom-pghd-to-snomedct.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-pghd-to-snomedct|1.0.0-ballot2]",
-      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile"
+      "ConceptMap-symptom-snomedct-to-pghd.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd|1.0.0-ballot2]"
     },
     {
       "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-symptom-snomedct-codes",
@@ -441,9 +441,9 @@
       "systems" : ["http://snomed.info/sct"],
       "uses" : {
       },
-      "ConceptMap-symptom-snomedct-to-pghd.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd|1.0.0-ballot2]",
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile",
       "ConceptMap-symptom-pghd-to-snomedct.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-pghd-to-snomedct|1.0.0-ballot2]",
-      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile"
+      "ConceptMap-symptom-snomedct-to-pghd.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd|1.0.0-ballot2]"
     },
     {
       "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-uvexposure-codes",
@@ -471,12 +471,12 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-vitalsigns.html" : "PGHD Vital Signs Profile",
       "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
       "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
       "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile",
-      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile",
-      "StructureDefinition-pghd-vitalsigns.html" : "PGHD Vital Signs Profile"
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile"
     },
     {
       "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-workout-codes",

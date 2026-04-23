@@ -50,7 +50,7 @@
   fhir:name [ fhir:v "PatientHealthRecordsIG"] ; # 
   fhir:title [ fhir:v "Personal Health Records"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-04-23T16:43:45-05:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-23T17:08:04-05:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
@@ -5648,34 +5648,6 @@
            fhir:l fhir:functionality.html
          ] ;
          fhir:title [ fhir:v "Functional Model" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [
-             fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
-             fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
-           ] ;
-           fhir:value [
-             a fhir:Code ;
-             fhir:v "informative"
-           ]
-         ] [
-           fhir:url [
-             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
-             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
-           ] ;
-           fhir:value [
-             a fhir:Url ;
-             fhir:v "recordlifecycle.html"^^xsd:anyURI ;
-             fhir:l fhir:recordlifecycle.html
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:Url ;
-           fhir:v "recordlifecycle.html"^^xsd:anyURI ;
-           fhir:l fhir:recordlifecycle.html
-         ] ;
-         fhir:title [ fhir:v "Record Lifecycle" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

@@ -94,6 +94,32 @@ Public key encryption and secret key may be combined in a PGP solution.
 
 A SMART Health Links based solution will distribute the encryption key within a shareable QR which the patient can display to recipients of an SPHR file for scanning. The recipient would decrypt the linked file using the A256GCM algorithm.
 
+### Record Lifecycle
+
+Record lifecycle management involves overseeing health records from creation through final disposition. For personal health records, lifecycle events occur across multiple systems — clinical EHRs, patient apps, devices — and must be tracked to maintain data integrity and provenance.
+
+The [PHR-S Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88) defines a comprehensive set of Record Infrastructure (RI) lifecycle events, including:
+
+* **Originate/Retain** — Creating or receiving a new record entry
+* **Amend/Update** — Modifying an existing record with tracked changes
+* **Attest** — Formally verifying record content
+* **Access/View** — Reading record entries with audit logging
+* **Transmit/Disclose** — Sharing records with other systems or individuals
+* **Archive/Restore** — Long-term storage and retrieval
+* **Merge/Link** — Combining or associating records from multiple sources
+* **Encrypt/Decrypt** — Protecting record confidentiality
+
+In the FHIR context, these lifecycle events map to standard resources:
+
+| | | |
+| :--- | :--- | :--- |
+| Change tracking | [Provenance](https://www.hl7.org/fhir/R4/provenance.html) | Records who changed what and when |
+| Access logging | [AuditEvent](https://www.hl7.org/fhir/R4/auditevent.html) | Logs access, view, and disclosure events |
+| Record versioning | [Bundle](https://www.hl7.org/fhir/R4/bundle.html)history | Tracks resource version history |
+| Attestation | [Signature](https://www.hl7.org/fhir/R4/datatypes.html#Signature) | Cryptographic attestation of content |
+
+For a FHIR-based implementation of record lifecycle events, see the [EHR Record Lifecycle Events IG](https://build.fhir.org/ig/HL7/ehrs-rle-ig/). For the complete functional model specification, see the [PHR-S Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88).
+
 ### Conformance Testing
 
 For conformance testing with this IG, the primary success critieria is that systems MUST have the ability to import/export the `.sphr` filetype. This entails storing FHIR records in a new-line delimited file (including a cover composition resource, a document manifest, and provenance records as needed), compressing the file with DEFLATE algorithm (as needed), and then signing with an X.509 security certificate.

@@ -21,7 +21,7 @@
   <name value="PatientHealthRecordsIG"/>
   <title value="Personal Health Records"/>
   <status value="active"/>
-  <date value="2026-04-23T16:43:45-05:00"/>
+  <date value="2026-04-23T17:08:04-05:00"/>
   <publisher value="HL7 International / Patient Empowerment"/>
   <contact>
     <name value="HL7 International / Patient Empowerment"/>
@@ -2655,17 +2655,6 @@
         </extension>
         <nameUrl value="functionality.html"/>
         <title value="Functional Model"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-          <valueCode value="informative"/>
-        </extension>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="recordlifecycle.html"/>
-        </extension>
-        <nameUrl value="recordlifecycle.html"/>
-        <title value="Record Lifecycle"/>
         <generation value="markdown"/>
       </page>
       <page>

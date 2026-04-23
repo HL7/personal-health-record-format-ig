@@ -268,6 +268,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#fhir-storage" id="markdown-toc-fhir-storage">FHIR Storage</a></li>
   <li><a href="#data-provenance-and-security" id="markdown-toc-data-provenance-and-security">Data provenance and security</a></li>
+  <li><a href="#record-lifecycle" id="markdown-toc-record-lifecycle">Record Lifecycle</a></li>
   <li><a href="#conformance-testing" id="markdown-toc-conformance-testing">Conformance Testing</a></li>
   <li><a href="#references" id="markdown-toc-references">References</a></li>
 </ul>
@@ -359,6 +360,59 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Public key encryption and secret key may be combined in a PGP solution.</p>
 
 <p>A SMART Health Links based solution will distribute the encryption key within a shareable QR which the patient can display to recipients of an SPHR file for scanning. The recipient would decrypt the linked file using the A256GCM algorithm.</p>
+
+<h3 id="record-lifecycle">Record Lifecycle</h3>
+
+<p>Record lifecycle management involves overseeing health records from creation through final disposition. For personal health records, lifecycle events occur across multiple systems — clinical EHRs, patient apps, devices — and must be tracked to maintain data integrity and provenance.</p>
+
+<p>The <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88">PHR-S Functional Model</a> defines a comprehensive set of Record Infrastructure (RI) lifecycle events, including:</p>
+
+<ul>
+  <li><strong>Originate/Retain</strong> — Creating or receiving a new record entry</li>
+  <li><strong>Amend/Update</strong> — Modifying an existing record with tracked changes</li>
+  <li><strong>Attest</strong> — Formally verifying record content</li>
+  <li><strong>Access/View</strong> — Reading record entries with audit logging</li>
+  <li><strong>Transmit/Disclose</strong> — Sharing records with other systems or individuals</li>
+  <li><strong>Archive/Restore</strong> — Long-term storage and retrieval</li>
+  <li><strong>Merge/Link</strong> — Combining or associating records from multiple sources</li>
+  <li><strong>Encrypt/Decrypt</strong> — Protecting record confidentiality</li>
+</ul>
+
+<p>In the FHIR context, these lifecycle events map to standard resources:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lifecycle Concern</th>
+      <th>FHIR Resource</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Change tracking</td>
+      <td><a href="https://www.hl7.org/fhir/R4/provenance.html">Provenance</a></td>
+      <td>Records who changed what and when</td>
+    </tr>
+    <tr>
+      <td>Access logging</td>
+      <td><a href="https://www.hl7.org/fhir/R4/auditevent.html">AuditEvent</a></td>
+      <td>Logs access, view, and disclosure events</td>
+    </tr>
+    <tr>
+      <td>Record versioning</td>
+      <td><a href="https://www.hl7.org/fhir/R4/bundle.html">Bundle</a> history</td>
+      <td>Tracks resource version history</td>
+    </tr>
+    <tr>
+      <td>Attestation</td>
+      <td><a href="https://www.hl7.org/fhir/R4/datatypes.html#Signature">Signature</a></td>
+      <td>Cryptographic attestation of content</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For a FHIR-based implementation of record lifecycle events, see the <a href="https://build.fhir.org/ig/HL7/ehrs-rle-ig/">EHR Record Lifecycle Events IG</a>. For the complete functional model specification, see the <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88">PHR-S Functional Model</a>.</p>
 
 <h3 id="conformance-testing">Conformance Testing</h3>
 
@@ -466,7 +520,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-04-23 16:43:00 -0500">
+  <span title="2026-04-23 17:08:00 -0500">
     2026-04-23
   </span>
 

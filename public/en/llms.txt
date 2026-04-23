@@ -135,7 +135,7 @@
 * [Patient Generated Health Data (PGHD)](pghd.md)
 * [Physiology Domains](physiology.md)
 * [Record Keeping](recordkeeping.md)
-* [Record Lifecycle](recordlifecycle.md)
+* [](recordlifecycle.md)
 * [Security](security.md)
 
 ## Resources
