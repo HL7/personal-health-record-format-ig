@@ -1,6 +1,35 @@
 {
   "codeSystems" : [
     {
+      "url" : "http://hl7.org/fhir/ValueSet/additional-instruction-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTAdditionalDosageInstructions",
+      "title" : "SNOMED CT Additional Dosage Instructions",
+      "description" : "This value set includes all SNOMED CT Additional Dosage Instructions.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.95"],
+      "sources" : ["2.16.840.1.113883.4.642.3.95"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/administration-method-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTAdministrationMethodCodes",
+      "title" : "SNOMED CT Administration Method Codes",
+      "description" : "This value set includes some method codes from SNOMED CT - provided as an exemplar",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.97"],
+      "sources" : ["2.16.840.1.113883.4.642.3.97"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-medicationadministration-insulin.html" : "PGHD MedicationAdministration Insulin Profile",
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
+    },
+    {
       "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
       "version" : "4.0.1",
       "status" : "active",
@@ -12,7 +41,22 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1"],
       "uses" : {
       },
-      "StructureDefinition-PhrPatient.html" : "PhrPatient"
+      "StructureDefinition-pghd-patient.html" : "PGHD Patient Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/approach-site-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTAnatomicalStructureForAdministrationSiteCodes",
+      "title" : "SNOMED CT Anatomical Structure for Administration Site Codes",
+      "description" : "This value set includes Anatomical Structure codes from SNOMED CT - provided as an exemplar.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.346"],
+      "sources" : ["2.16.840.1.113883.4.642.3.346"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-medicationadministration-insulin.html" : "PGHD MedicationAdministration Insulin Profile",
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/body-site",
@@ -26,8 +70,46 @@
       "sources" : ["2.16.840.1.113883.4.642.3.141"],
       "uses" : {
       },
-      "StructureDefinition-PhrMedia.html" : "PhrMedia",
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
+      "StructureDefinition-pghd-activity.html" : "PGHD Activity Profile",
+      "StructureDefinition-pghd-mobility.html" : "PGHD Mobility Profile",
+      "StructureDefinition-pghd-voltage-measurement.html" : "PGHD VoltageMeasurement Profile",
+      "StructureDefinition-pghd-diving.html" : "PGHD Diving Profile",
+      "StructureDefinition-pghd-heartbeat.html" : "PGHD Heartbeat Profile",
+      "StructureDefinition-pghd-snore-event.html" : "PGHD SnoreEvent Profile",
+      "StructureDefinition-pghd-food.html" : "PGHD Food Profile",
+      "StructureDefinition-pghd-sleep-episode.html" : "PGHD Sleep Episode Profile",
+      "StructureDefinition-pghd-bodymeasurement.html" : "PGHD Body Measurement Profile",
+      "StructureDefinition-pghd-electrocardiogram.html" : "PGHD Electrocardiogram Profile",
+      "StructureDefinition-pghd-pregnancy-status.html" : "PGHD Pregnancy Status Profile",
+      "StructureDefinition-pghd-uvexposure.html" : "PGHD UVExposure Profile",
+      "StructureDefinition-pghd-workout.html" : "PGHD Workout Profile",
+      "StructureDefinition-pghd-testresult.html" : "PGHD Test Result Profile",
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile",
+      "StructureDefinition-pghd-mindfulness.html" : "PGHD Mindfulness Profile",
+      "StructureDefinition-pghd-nutrition.html" : "PGHD Nutrition Profile",
+      "StructureDefinition-pghd-selfcare.html" : "PGHD Self Care Profile",
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile",
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
+      "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
+      "StructureDefinition-pghd-sleep.html" : "PGHD Sleep Profile",
+      "StructureDefinition-pghd-alchol-consumption.html" : "PGHD AlcholConsumption Profile",
+      "StructureDefinition-pghd-audiogram.html" : "PGHD Audiogram Profile",
+      "StructureDefinition-pghd-reproductive-health.html" : "PGHD ReproductiveHealth Profile",
+      "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
+      "StructureDefinition-pghd-hearing.html" : "PGHD Hearing Profile",
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile",
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile",
+      "StructureDefinition-pghd-alchol-use.html" : "PGHD AlcholUse Profile",
+      "StructureDefinition-pghd-medication-adherence.html" : "PGHD Medication Adherence Profile",
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile",
+      "StructureDefinition-pghd-snore-index.html" : "PGHD SnoreIndex Profile",
+      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
+      "StructureDefinition-pghd-vitalsigns.html" : "PGHD Vital Signs Profile",
+      "StructureDefinition-pghd-hearing-sensitivity.html" : "PGHD HearingSensitivity Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-blood-glucose.html" : "PGHD BloodGlucose Profile",
+      "StructureDefinition-pghd-cardiac-function.html" : "PGHD Cardiac Function Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
@@ -44,75 +126,88 @@
       "StructureDefinition-PhrBundle.html" : "PhrBundle"
     },
     {
-      "url" : "http://hl7.org/fhir/ValueSet/c80-doc-typecodes",
-      "version" : "4.0.1",
-      "status" : "active",
-      "name" : "DocumentTypeValueSet",
-      "title" : "Document Type Value Set",
-      "description" : "This is the code specifying the precise type of document (e.g. Pulmonary History and  Physical, Discharge Summary, Ultrasound Report, etc.). The Document Type value set includes all LOINC  values listed in HITSP C80 Table 2-144 Document Class Value Set Definition above used for Document Class,  and all LOINC values whose SCALE is DOC in the LOINC database.",
-      "systems" : ["http://loinc.org"],
-      "oids" : ["2.16.840.1.113883.3.88.12.80.47"],
-      "sources" : ["2.16.840.1.113883.3.88.12.80.47"],
-      "uses" : {
-      },
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/c80-facilitycodes",
-      "version" : "4.0.1",
-      "status" : "active",
-      "name" : "FacilityTypeCodeValueSet",
-      "title" : "Facility Type Code Value Set",
-      "description" : "This is the code representing the type of organizational setting where the clinical encounter, service, interaction, or treatment occurred. The value set used for Healthcare Facility Type has been defined by HITSP to be the value set reproduced from HITSP C80 Table 2-147.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : ["2.16.840.1.113883.3.88.12.80.67"],
-      "sources" : ["2.16.840.1.113883.3.88.12.80.67"],
-      "uses" : {
-      },
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/c80-practice-codes",
-      "version" : "4.0.1",
-      "status" : "active",
-      "name" : "PracticeSettingCodeValueSet",
-      "title" : "Practice Setting Code Value Set",
-      "description" : "This is the code representing the clinical specialty of the clinician or provider who interacted with, treated, or provided a service to/for the patient. The value set used for clinical specialty has been limited by HITSP to the value set reproduced from HITSP C80 Table 2-149 Clinical Specialty Value Set Definition.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : ["2.16.840.1.113883.3.88.12.80.72"],
-      "sources" : ["2.16.840.1.113883.3.88.12.80.72"],
-      "uses" : {
-      },
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/composition-attestation-mode",
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-kind",
       "version" : "4.0.1",
       "status" : "draft",
-      "name" : "CompositionAttestationMode",
-      "title" : "CompositionAttestationMode",
-      "description" : "The way in which a person authenticated a composition.",
-      "systems" : ["http://hl7.org/fhir/composition-attestation-mode"],
-      "oids" : ["2.16.840.1.113883.4.642.3.238"],
-      "sources" : ["2.16.840.1.113883.4.642.3.238"],
+      "name" : "CarePlanActivityKind",
+      "title" : "Care Plan Activity Kind",
+      "description" : "Resource types defined as part of FHIR that can be represented as in-line definitions of a care plan activity.",
+      "systems" : ["http://hl7.org/fhir/resource-types"],
+      "oids" : ["2.16.840.1.113883.4.642.3.145"],
+      "sources" : ["2.16.840.1.113883.4.642.3.145"],
       "uses" : {
       },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition"
+      "StructureDefinition-pghd-careplan-selfcare.html" : "PGHD SelfCare Plan Profile"
     },
     {
-      "url" : "http://hl7.org/fhir/ValueSet/composition-status",
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-outcome",
       "version" : "4.0.1",
       "status" : "draft",
-      "name" : "CompositionStatus",
-      "title" : "CompositionStatus",
-      "description" : "The workflow/clinical status of the composition.",
-      "systems" : ["http://hl7.org/fhir/composition-status"],
-      "oids" : ["2.16.840.1.113883.4.642.3.241"],
-      "sources" : ["2.16.840.1.113883.4.642.3.241"],
+      "name" : "CarePlanActivityOutcome",
+      "title" : "Care Plan Activity Outcome",
+      "description" : "Example codes indicating the outcome of a care plan activity. Note that these are in no way complete and might not even be appropriate for some uses.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.149"],
+      "sources" : ["2.16.840.1.113883.4.642.3.149"],
       "uses" : {
       },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition",
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
+      "StructureDefinition-pghd-careplan-selfcare.html" : "PGHD SelfCare Plan Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CarePlanActivityStatus",
+      "title" : "CarePlanActivityStatus",
+      "description" : "Codes that reflect the current state of a care plan activity within its overall life cycle.",
+      "systems" : ["http://hl7.org/fhir/care-plan-activity-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.146"],
+      "sources" : ["2.16.840.1.113883.4.642.3.146"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-careplan-selfcare.html" : "PGHD SelfCare Plan Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CarePlanCategory",
+      "title" : "Care Plan Category",
+      "description" : "Example codes indicating the category a care plan falls within.  Note that these are in no way complete and might not even be appropriate for some uses.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.148"],
+      "sources" : ["2.16.840.1.113883.4.642.3.148"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-careplan-selfcare.html" : "PGHD SelfCare Plan Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-intent",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CarePlanIntent",
+      "title" : "Care Plan Intent",
+      "description" : "Codes indicating the degree of authority/intentionality associated with a care plan.",
+      "systems" : ["http://hl7.org/fhir/request-intent"],
+      "oids" : ["2.16.840.1.113883.4.642.3.150"],
+      "sources" : ["2.16.840.1.113883.4.642.3.150"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-careplan-selfcare.html" : "PGHD SelfCare Plan Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTClinicalFindings",
+      "title" : "SNOMED CT Clinical Findings",
+      "description" : "This value set includes all the \"Clinical finding\" [SNOMED CT](http://snomed.info/sct) codes - concepts where concept is-a 404684003 (Clinical finding (finding)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.232"],
+      "sources" : ["2.16.840.1.113883.4.642.3.232"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-careplan-selfcare.html" : "PGHD SelfCare Plan Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
@@ -126,107 +221,147 @@
       "sources" : ["2.16.840.1.113883.4.642.3.5"],
       "uses" : {
       },
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
+      "StructureDefinition-pghd-activity.html" : "PGHD Activity Profile",
+      "StructureDefinition-pghd-mobility.html" : "PGHD Mobility Profile",
+      "StructureDefinition-pghd-voltage-measurement.html" : "PGHD VoltageMeasurement Profile",
+      "StructureDefinition-pghd-diving.html" : "PGHD Diving Profile",
+      "StructureDefinition-pghd-heartbeat.html" : "PGHD Heartbeat Profile",
+      "StructureDefinition-pghd-snore-event.html" : "PGHD SnoreEvent Profile",
+      "StructureDefinition-pghd-food.html" : "PGHD Food Profile",
+      "StructureDefinition-pghd-sleep-episode.html" : "PGHD Sleep Episode Profile",
+      "StructureDefinition-pghd-bodymeasurement.html" : "PGHD Body Measurement Profile",
+      "StructureDefinition-pghd-electrocardiogram.html" : "PGHD Electrocardiogram Profile",
+      "StructureDefinition-pghd-pregnancy-status.html" : "PGHD Pregnancy Status Profile",
+      "StructureDefinition-pghd-uvexposure.html" : "PGHD UVExposure Profile",
+      "StructureDefinition-pghd-workout.html" : "PGHD Workout Profile",
+      "StructureDefinition-pghd-testresult.html" : "PGHD Test Result Profile",
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile",
+      "StructureDefinition-pghd-mindfulness.html" : "PGHD Mindfulness Profile",
+      "StructureDefinition-pghd-nutrition.html" : "PGHD Nutrition Profile",
+      "StructureDefinition-pghd-selfcare.html" : "PGHD Self Care Profile",
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile",
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
+      "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
+      "StructureDefinition-pghd-sleep.html" : "PGHD Sleep Profile",
+      "StructureDefinition-pghd-alchol-consumption.html" : "PGHD AlcholConsumption Profile",
+      "StructureDefinition-pghd-audiogram.html" : "PGHD Audiogram Profile",
+      "StructureDefinition-pghd-reproductive-health.html" : "PGHD ReproductiveHealth Profile",
+      "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
+      "StructureDefinition-pghd-hearing.html" : "PGHD Hearing Profile",
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile",
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile",
+      "StructureDefinition-pghd-alchol-use.html" : "PGHD AlcholUse Profile",
+      "StructureDefinition-pghd-medication-adherence.html" : "PGHD Medication Adherence Profile",
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile",
+      "StructureDefinition-pghd-snore-index.html" : "PGHD SnoreIndex Profile",
+      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
+      "StructureDefinition-pghd-vitalsigns.html" : "PGHD Vital Signs Profile",
+      "StructureDefinition-pghd-hearing-sensitivity.html" : "PGHD HearingSensitivity Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-blood-glucose.html" : "PGHD BloodGlucose Profile",
+      "StructureDefinition-pghd-cardiac-function.html" : "PGHD Cardiac Function Profile"
     },
     {
-      "url" : "http://hl7.org/fhir/ValueSet/doc-section-codes",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "DocumentSectionCodes",
-      "title" : "Document Section Codes",
-      "description" : "Document section codes (LOINC codes used in CCDA sections).",
-      "systems" : ["http://loinc.org"],
-      "oids" : ["2.16.840.1.113883.4.642.3.237"],
-      "sources" : ["2.16.840.1.113883.4.642.3.237"],
-      "uses" : {
-      },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/doc-typecodes",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "FHIRDocumentTypeCodes",
-      "title" : "FHIR Document Type Codes",
-      "description" : "FHIR Document Codes - all LOINC codes where scale type = 'DOC'.",
-      "systems" : ["http://loinc.org"],
-      "oids" : ["2.16.840.1.113883.4.642.3.240"],
-      "sources" : ["2.16.840.1.113883.4.642.3.240"],
-      "uses" : {
-      },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/document-classcodes",
-      "version" : "4.0.1",
-      "status" : "active",
-      "name" : "DocumentClassValueSet",
-      "title" : "Document Class Value Set",
-      "description" : "This is the code specifying the high-level kind of document (e.g. Prescription, Discharge Summary, Report, etc.). Note: Class code for documents comes from LOINC, and is based upon one of the following:The type of service described by the document. It is described at a very high level in Section 7.3 of the LOINC Manual. The type study performed. It was determined by identifying modalities for study reports. The section of the chart where the document is placed. It was determined from the SETs created for Claims Attachment requests.",
-      "systems" : ["http://loinc.org"],
-      "oids" : ["2.16.840.1.113883.3.88.12.80.46"],
-      "sources" : ["2.16.840.1.113883.3.88.12.80.46"],
-      "uses" : {
-      },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition",
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/document-reference-status",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "DocumentReferenceStatus",
-      "title" : "DocumentReferenceStatus",
-      "description" : "The status of the document reference.",
-      "systems" : ["http://hl7.org/fhir/document-reference-status"],
-      "oids" : ["2.16.840.1.113883.4.642.3.7"],
-      "sources" : ["2.16.840.1.113883.4.642.3.7"],
-      "uses" : {
-      },
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/document-relationship-type",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "DocumentRelationshipType",
-      "title" : "DocumentRelationshipType",
-      "description" : "The type of relationship between documents.",
-      "systems" : ["http://hl7.org/fhir/document-relationship-type"],
-      "oids" : ["2.16.840.1.113883.4.642.3.244"],
-      "sources" : ["2.16.840.1.113883.4.642.3.244"],
-      "uses" : {
-      },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition",
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/event-status",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "EventStatus",
-      "title" : "EventStatus",
-      "description" : "Codes identifying the lifecycle stage of an event.",
-      "systems" : ["http://hl7.org/fhir/event-status"],
-      "oids" : ["2.16.840.1.113883.4.642.3.109"],
-      "sources" : ["2.16.840.1.113883.4.642.3.109"],
-      "uses" : {
-      },
-      "StructureDefinition-PhrMedia.html" : "PhrMedia"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/formatcodes",
+      "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
       "version" : "4.0.1",
       "status" : "active",
-      "name" : "DocumentReferenceFormatCodeSet",
-      "title" : "DocumentReference Format Code Set",
-      "description" : "The value set is defined to be the set of format codes defined by the IHE Technical Framework, and also including additional format codes defined by the    HL7. The value set is listed in HITSP C80 Table 2-153 Format Code Value Set Definition,    with additions published later by IHE as published    at http://wiki.ihe.net/index.php?title=IHE_Format_Codes   and with additions published later by HL7 as published at https://confluence.hl7.org/display/SD/Format+Codes+for+IHE+XDS.   This is the code specifying the technical format of the document. Along with the typeCode,    it should provide sufficient information to allow any potential document consumer to know    if it will be able to process the document. The code shall be sufficiently specific to    ensure processing/display by identifying a document encoding, structure and template. The actual list of codes here is incomplete",
-      "systems" : ["http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"],
-      "oids" : ["1.3.6.1.4.1.19376.1.2.7.1"],
-      "sources" : ["1.3.6.1.4.1.19376.1.2.7.1"],
+      "name" : "DaysOfWeek",
+      "title" : "DaysOfWeek",
+      "description" : "The days of the week.",
+      "systems" : ["http://hl7.org/fhir/days-of-week"],
+      "oids" : ["2.16.840.1.113883.4.642.3.512"],
+      "sources" : ["2.16.840.1.113883.4.642.3.512"],
       "uses" : {
       },
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-nametype",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DeviceNameType",
+      "title" : "DeviceNameType",
+      "description" : "The type of name the device is referred by.",
+      "systems" : ["http://hl7.org/fhir/device-nametype"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1083"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1083"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-device.html" : "PGHD Device Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRDeviceStatus",
+      "title" : "FHIRDeviceStatus",
+      "description" : "The availability status of the device.",
+      "systems" : ["http://hl7.org/fhir/device-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.209"],
+      "sources" : ["2.16.840.1.113883.4.642.3.209"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-device.html" : "PGHD Device Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-status-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRDeviceStatusReason",
+      "title" : "FHIRDeviceStatusReason",
+      "description" : "The availability status reason of the device.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/device-status-reason"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1081"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1081"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-device.html" : "PGHD Device Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DeviceType",
+      "title" : "Device Type",
+      "description" : "Codes used to identify medical devices. Includes concepts from SNOMED CT (http://www.snomed.org/) where concept is-a 49062001 (Device)  and is provided as a suggestive example.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1376"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1376"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-device.html" : "PGHD Device Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/dose-rate-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DoseAndRateType",
+      "title" : "DoseAndRateType",
+      "description" : "The kind of dose or rate specified.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/dose-rate-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.981"],
+      "sources" : ["2.16.840.1.113883.4.642.3.981"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/event-timing",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "EventTiming",
+      "title" : "EventTiming",
+      "description" : "Real world event relating to the schedule.",
+      "systems" : [
+        "http://hl7.org/fhir/event-timing",
+        "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.75"],
+      "sources" : ["2.16.840.1.113883.4.642.3.75"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/http-verb",
@@ -243,6 +378,38 @@
       "StructureDefinition-PhrBundle.html" : "PhrBundle"
     },
     {
+      "url" : "http://hl7.org/fhir/ValueSet/item-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "QuestionnaireItemType",
+      "title" : "QuestionnaireItemType",
+      "description" : "Distinguishes groups from questions and display text and indicates data type for questions.",
+      "systems" : ["http://hl7.org/fhir/item-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.444"],
+      "sources" : ["2.16.840.1.113883.4.642.3.444"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-questionnaire.html" : "PGHD Questionnaire Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/jurisdiction",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "Jurisdiction ValueSet",
+      "title" : "Jurisdiction",
+      "description" : "This value set defines a base set of codes for country, country subdivision and region    for indicating where a resource is intended to be used.   \r\n   \r\n   Note: The codes for countries and country subdivisions are taken from    [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)    while the codes for \"supra-national\" regions are from    [UN Standard country or area codes for statistical use (M49)](http://unstats.un.org/unsd/methods/m49/m49.htm).",
+      "systems" : [
+        "http://unstats.un.org/unsd/methods/m49/m49.htm",
+        "urn:iso:std:iso:3166",
+        "urn:iso:std:iso:3166:-2"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.48"],
+      "sources" : ["2.16.840.1.113883.4.642.3.48"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-questionnaire.html" : "PGHD Questionnaire Profile"
+    },
+    {
       "url" : "http://hl7.org/fhir/ValueSet/languages",
       "version" : "4.0.1",
       "status" : "draft",
@@ -254,15 +421,54 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-NutrientOuttake.html" : "Nutrient Outtake",
-      "StructureDefinition-PhrPatient.html" : "PhrPatient",
-      "StructureDefinition-PhrComposition.html" : "PhrComposition",
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference",
+      "StructureDefinition-pghd-activity.html" : "PGHD Activity Profile",
+      "StructureDefinition-pghd-mobility.html" : "PGHD Mobility Profile",
+      "StructureDefinition-pghd-medicationadministration-insulin.html" : "PGHD MedicationAdministration Insulin Profile",
+      "StructureDefinition-pghd-voltage-measurement.html" : "PGHD VoltageMeasurement Profile",
+      "StructureDefinition-pghd-diving.html" : "PGHD Diving Profile",
+      "StructureDefinition-pghd-heartbeat.html" : "PGHD Heartbeat Profile",
+      "StructureDefinition-pghd-snore-event.html" : "PGHD SnoreEvent Profile",
+      "StructureDefinition-pghd-careplan-selfcare.html" : "PGHD SelfCare Plan Profile",
+      "StructureDefinition-pghd-food.html" : "PGHD Food Profile",
+      "StructureDefinition-pghd-sleep-episode.html" : "PGHD Sleep Episode Profile",
+      "StructureDefinition-pghd-bodymeasurement.html" : "PGHD Body Measurement Profile",
+      "StructureDefinition-pghd-electrocardiogram.html" : "PGHD Electrocardiogram Profile",
+      "StructureDefinition-pghd-pregnancy-status.html" : "PGHD Pregnancy Status Profile",
+      "StructureDefinition-pghd-questionnaire.html" : "PGHD Questionnaire Profile",
+      "StructureDefinition-pghd-uvexposure.html" : "PGHD UVExposure Profile",
+      "StructureDefinition-pghd-workout.html" : "PGHD Workout Profile",
+      "StructureDefinition-pghd-questionnaire-response.html" : "PGHD QuestionnaireResponse Profile",
+      "StructureDefinition-pghd-testresult.html" : "PGHD Test Result Profile",
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile",
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile",
+      "StructureDefinition-pghd-mindfulness.html" : "PGHD Mindfulness Profile",
+      "StructureDefinition-pghd-nutrition.html" : "PGHD Nutrition Profile",
+      "StructureDefinition-pghd-selfcare.html" : "PGHD Self Care Profile",
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile",
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
+      "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
+      "StructureDefinition-pghd-sleep.html" : "PGHD Sleep Profile",
+      "StructureDefinition-pghd-alchol-consumption.html" : "PGHD AlcholConsumption Profile",
+      "StructureDefinition-pghd-audiogram.html" : "PGHD Audiogram Profile",
+      "StructureDefinition-pghd-reproductive-health.html" : "PGHD ReproductiveHealth Profile",
+      "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
+      "StructureDefinition-pghd-hearing.html" : "PGHD Hearing Profile",
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile",
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile",
+      "StructureDefinition-pghd-alchol-use.html" : "PGHD AlcholUse Profile",
+      "StructureDefinition-pghd-medication-adherence.html" : "PGHD Medication Adherence Profile",
+      "StructureDefinition-pghd-patient.html" : "PGHD Patient Profile",
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile",
+      "StructureDefinition-pghd-snore-index.html" : "PGHD SnoreIndex Profile",
+      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
+      "StructureDefinition-pghd-vitalsigns.html" : "PGHD Vital Signs Profile",
+      "StructureDefinition-pghd-hearing-sensitivity.html" : "PGHD HearingSensitivity Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-blood-glucose.html" : "PGHD BloodGlucose Profile",
       "StructureDefinition-PhrBundle.html" : "PhrBundle",
-      "StructureDefinition-PhrMedia.html" : "PhrMedia",
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation",
-      "StructureDefinition-SocialMedia.html" : "SocialMedia",
-      "StructureDefinition-PhrProvenance.html" : "PhrProvenance"
+      "StructureDefinition-pghd-cardiac-function.html" : "PGHD Cardiac Function Profile",
+      "StructureDefinition-pghd-device.html" : "PGHD Device Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -276,49 +482,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.423"],
       "uses" : {
       },
-      "StructureDefinition-PhrPatient.html" : "PhrPatient"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/list-empty-reason",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "ListEmptyReasons",
-      "title" : "List Empty Reasons",
-      "description" : "General reasons for a list to be empty. Reasons are either related to a summary list (i.e. problem or medication list) or to a workflow related list (i.e. consultation list).",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/list-empty-reason"],
-      "oids" : ["2.16.840.1.113883.4.642.3.322"],
-      "sources" : ["2.16.840.1.113883.4.642.3.322"],
-      "uses" : {
-      },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/list-mode",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "ListMode",
-      "title" : "ListMode",
-      "description" : "The processing mode that applies to this list.",
-      "systems" : ["http://hl7.org/fhir/list-mode"],
-      "oids" : ["2.16.840.1.113883.4.642.3.318"],
-      "sources" : ["2.16.840.1.113883.4.642.3.318"],
-      "uses" : {
-      },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/list-order",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "ListOrderCodes",
-      "title" : "List Order Codes",
-      "description" : "Base values for the order of the items in a list resource.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/list-order"],
-      "oids" : ["2.16.840.1.113883.4.642.3.324"],
-      "sources" : ["2.16.840.1.113883.4.642.3.324"],
-      "uses" : {
-      },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition"
+      "StructureDefinition-pghd-patient.html" : "PGHD Patient Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/marital-status",
@@ -335,49 +499,149 @@
       "sources" : ["2.16.840.1.113883.4.642.3.29"],
       "uses" : {
       },
-      "StructureDefinition-PhrPatient.html" : "PhrPatient"
+      "StructureDefinition-pghd-patient.html" : "PGHD Patient Profile"
     },
     {
-      "url" : "http://hl7.org/fhir/ValueSet/media-modality",
+      "url" : "http://hl7.org/fhir/ValueSet/med-admin-perform-function",
       "version" : "4.0.1",
       "status" : "draft",
-      "name" : "MediaModality",
-      "title" : "Media Modality",
-      "description" : "Detailed information about the type of the image - its kind, purpose, or the kind of equipment used to generate it.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/media-modality"],
-      "oids" : ["2.16.840.1.113883.4.642.3.1001"],
-      "sources" : ["2.16.840.1.113883.4.642.3.1001"],
+      "name" : "MedicationAdministration Performer Function Codes",
+      "title" : "Medication administration  performer  function  codes",
+      "description" : "MedicationAdministration Performer Function Codes",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/med-admin-perform-function"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.349"],
+      "sources" : ["2.16.840.1.113883.4.642.3.349"],
       "uses" : {
       },
-      "StructureDefinition-PhrMedia.html" : "PhrMedia"
+      "StructureDefinition-pghd-medicationadministration-insulin.html" : "PGHD MedicationAdministration Insulin Profile"
     },
     {
-      "url" : "http://hl7.org/fhir/ValueSet/media-type",
+      "url" : "http://hl7.org/fhir/ValueSet/medication-admin-category",
       "version" : "4.0.1",
       "status" : "draft",
-      "name" : "MediaType",
-      "title" : "Media Type",
-      "description" : "Codes for high level media categories.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/media-type"],
-      "oids" : ["2.16.840.1.113883.4.642.3.1000"],
-      "sources" : ["2.16.840.1.113883.4.642.3.1000"],
+      "name" : "MedicationAdministration Category Codes",
+      "title" : "Medication administration  category  codes",
+      "description" : "MedicationAdministration Category Codes",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/medication-admin-category"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.347"],
+      "sources" : ["2.16.840.1.113883.4.642.3.347"],
       "uses" : {
       },
-      "StructureDefinition-PhrMedia.html" : "PhrMedia"
+      "StructureDefinition-pghd-medicationadministration-insulin.html" : "PGHD MedicationAdministration Insulin Profile"
     },
     {
-      "url" : "http://hl7.org/fhir/ValueSet/media-view",
+      "url" : "http://hl7.org/fhir/ValueSet/medication-admin-status",
       "version" : "4.0.1",
       "status" : "draft",
-      "name" : "MediaCollectionView/Projection",
-      "title" : "Media Collection View/Projection",
-      "description" : "Codes defined in SNOMED CT that can be used to record Media Recording views.",
+      "name" : "MedicationAdministration Status Codes",
+      "title" : "Medication administration  status  codes",
+      "description" : "MedicationAdministration Status Codes",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/medication-admin-status"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.340"],
+      "sources" : ["2.16.840.1.113883.4.642.3.340"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-medicationadministration-insulin.html" : "PGHD MedicationAdministration Insulin Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-as-needed-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTMedicationAsNeededReasonCodes",
+      "title" : "SNOMED CT Medication As Needed Reason Codes",
+      "description" : "This value set includes all clinical findings from SNOMED CT - provided as an exemplar value set.",
       "systems" : ["http://snomed.info/sct"],
-      "oids" : ["2.16.840.1.113883.4.642.3.337"],
-      "sources" : ["2.16.840.1.113883.4.642.3.337"],
+      "oids" : ["2.16.840.1.113883.4.642.3.96"],
+      "sources" : ["2.16.840.1.113883.4.642.3.96"],
       "uses" : {
       },
-      "StructureDefinition-PhrMedia.html" : "PhrMedia"
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTMedicationCodes",
+      "title" : "SNOMED CT Medication Codes",
+      "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from SNOMED CT - provided as an exemplar value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.375"],
+      "sources" : ["2.16.840.1.113883.4.642.3.375"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-medicationadministration-insulin.html" : "PGHD MedicationAdministration Insulin Profile",
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile",
+      "StructureDefinition-pghd-careplan-selfcare.html" : "PGHD SelfCare Plan Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationdispense-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "MedicationDispense Category Codes",
+      "title" : "Medication dispense  category  codes",
+      "description" : "MedicationDispense Category Codes",
+      "systems" : [
+        "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1314"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1314"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationdispense-performer-function",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "MedicationDispense Performer Function Codes",
+      "title" : "Medication dispense  performer  function  codes",
+      "description" : "MedicationDispense Performer Function Codes",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1318"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1318"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationdispense-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "MedicationDispense Status Codes",
+      "title" : "Medication dispense  status  codes",
+      "description" : "MedicationDispense Status Codes",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/medicationdispense-status"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1312"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1312"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationdispense-status-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "MedicationDispense Status Reason Codes",
+      "title" : "Medication dispense  status  reason  codes",
+      "description" : "MedicationDispense Status Codes",
+      "systems" : [
+        "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1316"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1316"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-category",
@@ -391,7 +655,46 @@
       "sources" : ["2.16.840.1.113883.4.642.3.403"],
       "uses" : {
       },
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
+      "StructureDefinition-pghd-activity.html" : "PGHD Activity Profile",
+      "StructureDefinition-pghd-mobility.html" : "PGHD Mobility Profile",
+      "StructureDefinition-pghd-voltage-measurement.html" : "PGHD VoltageMeasurement Profile",
+      "StructureDefinition-pghd-diving.html" : "PGHD Diving Profile",
+      "StructureDefinition-pghd-heartbeat.html" : "PGHD Heartbeat Profile",
+      "StructureDefinition-pghd-snore-event.html" : "PGHD SnoreEvent Profile",
+      "StructureDefinition-pghd-food.html" : "PGHD Food Profile",
+      "StructureDefinition-pghd-sleep-episode.html" : "PGHD Sleep Episode Profile",
+      "StructureDefinition-pghd-bodymeasurement.html" : "PGHD Body Measurement Profile",
+      "StructureDefinition-pghd-electrocardiogram.html" : "PGHD Electrocardiogram Profile",
+      "StructureDefinition-pghd-pregnancy-status.html" : "PGHD Pregnancy Status Profile",
+      "StructureDefinition-pghd-uvexposure.html" : "PGHD UVExposure Profile",
+      "StructureDefinition-pghd-workout.html" : "PGHD Workout Profile",
+      "StructureDefinition-pghd-testresult.html" : "PGHD Test Result Profile",
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile",
+      "StructureDefinition-pghd-mindfulness.html" : "PGHD Mindfulness Profile",
+      "StructureDefinition-pghd-nutrition.html" : "PGHD Nutrition Profile",
+      "StructureDefinition-pghd-selfcare.html" : "PGHD Self Care Profile",
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile",
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
+      "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
+      "StructureDefinition-pghd-sleep.html" : "PGHD Sleep Profile",
+      "StructureDefinition-pghd-alchol-consumption.html" : "PGHD AlcholConsumption Profile",
+      "StructureDefinition-pghd-audiogram.html" : "PGHD Audiogram Profile",
+      "StructureDefinition-pghd-reproductive-health.html" : "PGHD ReproductiveHealth Profile",
+      "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
+      "StructureDefinition-pghd-hearing.html" : "PGHD Hearing Profile",
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile",
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile",
+      "StructureDefinition-pghd-alchol-use.html" : "PGHD AlcholUse Profile",
+      "StructureDefinition-pghd-medication-adherence.html" : "PGHD Medication Adherence Profile",
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile",
+      "StructureDefinition-pghd-snore-index.html" : "PGHD SnoreIndex Profile",
+      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
+      "StructureDefinition-pghd-vitalsigns.html" : "PGHD Vital Signs Profile",
+      "StructureDefinition-pghd-hearing-sensitivity.html" : "PGHD HearingSensitivity Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-blood-glucose.html" : "PGHD BloodGlucose Profile",
+      "StructureDefinition-pghd-cardiac-function.html" : "PGHD Cardiac Function Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
@@ -405,7 +708,38 @@
       "sources" : ["2.16.840.1.113883.4.642.3.396"],
       "uses" : {
       },
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
+      "StructureDefinition-pghd-activity.html" : "PGHD Activity Profile",
+      "StructureDefinition-pghd-mobility.html" : "PGHD Mobility Profile",
+      "StructureDefinition-pghd-voltage-measurement.html" : "PGHD VoltageMeasurement Profile",
+      "StructureDefinition-pghd-diving.html" : "PGHD Diving Profile",
+      "StructureDefinition-pghd-heartbeat.html" : "PGHD Heartbeat Profile",
+      "StructureDefinition-pghd-snore-event.html" : "PGHD SnoreEvent Profile",
+      "StructureDefinition-pghd-food.html" : "PGHD Food Profile",
+      "StructureDefinition-pghd-sleep-episode.html" : "PGHD Sleep Episode Profile",
+      "StructureDefinition-pghd-bodymeasurement.html" : "PGHD Body Measurement Profile",
+      "StructureDefinition-pghd-electrocardiogram.html" : "PGHD Electrocardiogram Profile",
+      "StructureDefinition-pghd-pregnancy-status.html" : "PGHD Pregnancy Status Profile",
+      "StructureDefinition-pghd-uvexposure.html" : "PGHD UVExposure Profile",
+      "StructureDefinition-pghd-workout.html" : "PGHD Workout Profile",
+      "StructureDefinition-pghd-testresult.html" : "PGHD Test Result Profile",
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile",
+      "StructureDefinition-pghd-mindfulness.html" : "PGHD Mindfulness Profile",
+      "StructureDefinition-pghd-nutrition.html" : "PGHD Nutrition Profile",
+      "StructureDefinition-pghd-selfcare.html" : "PGHD Self Care Profile",
+      "StructureDefinition-pghd-sleep.html" : "PGHD Sleep Profile",
+      "StructureDefinition-pghd-alchol-consumption.html" : "PGHD AlcholConsumption Profile",
+      "StructureDefinition-pghd-audiogram.html" : "PGHD Audiogram Profile",
+      "StructureDefinition-pghd-reproductive-health.html" : "PGHD ReproductiveHealth Profile",
+      "StructureDefinition-pghd-hearing.html" : "PGHD Hearing Profile",
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile",
+      "StructureDefinition-pghd-alchol-use.html" : "PGHD AlcholUse Profile",
+      "StructureDefinition-pghd-medication-adherence.html" : "PGHD Medication Adherence Profile",
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile",
+      "StructureDefinition-pghd-snore-index.html" : "PGHD SnoreIndex Profile",
+      "StructureDefinition-pghd-vitalsigns.html" : "PGHD Vital Signs Profile",
+      "StructureDefinition-pghd-hearing-sensitivity.html" : "PGHD HearingSensitivity Profile",
+      "StructureDefinition-pghd-blood-glucose.html" : "PGHD BloodGlucose Profile",
+      "StructureDefinition-pghd-cardiac-function.html" : "PGHD Cardiac Function Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
@@ -421,7 +755,46 @@
       "sources" : ["2.16.840.1.113883.4.642.3.399"],
       "uses" : {
       },
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
+      "StructureDefinition-pghd-activity.html" : "PGHD Activity Profile",
+      "StructureDefinition-pghd-mobility.html" : "PGHD Mobility Profile",
+      "StructureDefinition-pghd-voltage-measurement.html" : "PGHD VoltageMeasurement Profile",
+      "StructureDefinition-pghd-diving.html" : "PGHD Diving Profile",
+      "StructureDefinition-pghd-heartbeat.html" : "PGHD Heartbeat Profile",
+      "StructureDefinition-pghd-snore-event.html" : "PGHD SnoreEvent Profile",
+      "StructureDefinition-pghd-food.html" : "PGHD Food Profile",
+      "StructureDefinition-pghd-sleep-episode.html" : "PGHD Sleep Episode Profile",
+      "StructureDefinition-pghd-bodymeasurement.html" : "PGHD Body Measurement Profile",
+      "StructureDefinition-pghd-electrocardiogram.html" : "PGHD Electrocardiogram Profile",
+      "StructureDefinition-pghd-pregnancy-status.html" : "PGHD Pregnancy Status Profile",
+      "StructureDefinition-pghd-uvexposure.html" : "PGHD UVExposure Profile",
+      "StructureDefinition-pghd-workout.html" : "PGHD Workout Profile",
+      "StructureDefinition-pghd-testresult.html" : "PGHD Test Result Profile",
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile",
+      "StructureDefinition-pghd-mindfulness.html" : "PGHD Mindfulness Profile",
+      "StructureDefinition-pghd-nutrition.html" : "PGHD Nutrition Profile",
+      "StructureDefinition-pghd-selfcare.html" : "PGHD Self Care Profile",
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile",
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
+      "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
+      "StructureDefinition-pghd-sleep.html" : "PGHD Sleep Profile",
+      "StructureDefinition-pghd-alchol-consumption.html" : "PGHD AlcholConsumption Profile",
+      "StructureDefinition-pghd-audiogram.html" : "PGHD Audiogram Profile",
+      "StructureDefinition-pghd-reproductive-health.html" : "PGHD ReproductiveHealth Profile",
+      "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
+      "StructureDefinition-pghd-hearing.html" : "PGHD Hearing Profile",
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile",
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile",
+      "StructureDefinition-pghd-alchol-use.html" : "PGHD AlcholUse Profile",
+      "StructureDefinition-pghd-medication-adherence.html" : "PGHD Medication Adherence Profile",
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile",
+      "StructureDefinition-pghd-snore-index.html" : "PGHD SnoreIndex Profile",
+      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
+      "StructureDefinition-pghd-vitalsigns.html" : "PGHD Vital Signs Profile",
+      "StructureDefinition-pghd-hearing-sensitivity.html" : "PGHD HearingSensitivity Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-blood-glucose.html" : "PGHD BloodGlucose Profile",
+      "StructureDefinition-pghd-cardiac-function.html" : "PGHD Cardiac Function Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
@@ -435,7 +808,46 @@
       "sources" : ["2.16.840.1.113883.4.642.3.395"],
       "uses" : {
       },
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
+      "StructureDefinition-pghd-activity.html" : "PGHD Activity Profile",
+      "StructureDefinition-pghd-mobility.html" : "PGHD Mobility Profile",
+      "StructureDefinition-pghd-voltage-measurement.html" : "PGHD VoltageMeasurement Profile",
+      "StructureDefinition-pghd-diving.html" : "PGHD Diving Profile",
+      "StructureDefinition-pghd-heartbeat.html" : "PGHD Heartbeat Profile",
+      "StructureDefinition-pghd-snore-event.html" : "PGHD SnoreEvent Profile",
+      "StructureDefinition-pghd-food.html" : "PGHD Food Profile",
+      "StructureDefinition-pghd-sleep-episode.html" : "PGHD Sleep Episode Profile",
+      "StructureDefinition-pghd-bodymeasurement.html" : "PGHD Body Measurement Profile",
+      "StructureDefinition-pghd-electrocardiogram.html" : "PGHD Electrocardiogram Profile",
+      "StructureDefinition-pghd-pregnancy-status.html" : "PGHD Pregnancy Status Profile",
+      "StructureDefinition-pghd-uvexposure.html" : "PGHD UVExposure Profile",
+      "StructureDefinition-pghd-workout.html" : "PGHD Workout Profile",
+      "StructureDefinition-pghd-testresult.html" : "PGHD Test Result Profile",
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile",
+      "StructureDefinition-pghd-mindfulness.html" : "PGHD Mindfulness Profile",
+      "StructureDefinition-pghd-nutrition.html" : "PGHD Nutrition Profile",
+      "StructureDefinition-pghd-selfcare.html" : "PGHD Self Care Profile",
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile",
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
+      "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
+      "StructureDefinition-pghd-sleep.html" : "PGHD Sleep Profile",
+      "StructureDefinition-pghd-alchol-consumption.html" : "PGHD AlcholConsumption Profile",
+      "StructureDefinition-pghd-audiogram.html" : "PGHD Audiogram Profile",
+      "StructureDefinition-pghd-reproductive-health.html" : "PGHD ReproductiveHealth Profile",
+      "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
+      "StructureDefinition-pghd-hearing.html" : "PGHD Hearing Profile",
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile",
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile",
+      "StructureDefinition-pghd-alchol-use.html" : "PGHD AlcholUse Profile",
+      "StructureDefinition-pghd-medication-adherence.html" : "PGHD Medication Adherence Profile",
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile",
+      "StructureDefinition-pghd-snore-index.html" : "PGHD SnoreIndex Profile",
+      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
+      "StructureDefinition-pghd-vitalsigns.html" : "PGHD Vital Signs Profile",
+      "StructureDefinition-pghd-hearing-sensitivity.html" : "PGHD HearingSensitivity Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-blood-glucose.html" : "PGHD BloodGlucose Profile",
+      "StructureDefinition-pghd-cardiac-function.html" : "PGHD Cardiac Function Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-status",
@@ -449,7 +861,67 @@
       "sources" : ["2.16.840.1.113883.4.642.3.400"],
       "uses" : {
       },
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
+      "StructureDefinition-pghd-activity.html" : "PGHD Activity Profile",
+      "StructureDefinition-pghd-mobility.html" : "PGHD Mobility Profile",
+      "StructureDefinition-pghd-voltage-measurement.html" : "PGHD VoltageMeasurement Profile",
+      "StructureDefinition-pghd-diving.html" : "PGHD Diving Profile",
+      "StructureDefinition-pghd-heartbeat.html" : "PGHD Heartbeat Profile",
+      "StructureDefinition-pghd-snore-event.html" : "PGHD SnoreEvent Profile",
+      "StructureDefinition-pghd-food.html" : "PGHD Food Profile",
+      "StructureDefinition-pghd-sleep-episode.html" : "PGHD Sleep Episode Profile",
+      "StructureDefinition-pghd-bodymeasurement.html" : "PGHD Body Measurement Profile",
+      "StructureDefinition-pghd-electrocardiogram.html" : "PGHD Electrocardiogram Profile",
+      "StructureDefinition-pghd-pregnancy-status.html" : "PGHD Pregnancy Status Profile",
+      "StructureDefinition-pghd-uvexposure.html" : "PGHD UVExposure Profile",
+      "StructureDefinition-pghd-workout.html" : "PGHD Workout Profile",
+      "StructureDefinition-pghd-testresult.html" : "PGHD Test Result Profile",
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile",
+      "StructureDefinition-pghd-mindfulness.html" : "PGHD Mindfulness Profile",
+      "StructureDefinition-pghd-nutrition.html" : "PGHD Nutrition Profile",
+      "StructureDefinition-pghd-selfcare.html" : "PGHD Self Care Profile",
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile",
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
+      "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
+      "StructureDefinition-pghd-sleep.html" : "PGHD Sleep Profile",
+      "StructureDefinition-pghd-alchol-consumption.html" : "PGHD AlcholConsumption Profile",
+      "StructureDefinition-pghd-audiogram.html" : "PGHD Audiogram Profile",
+      "StructureDefinition-pghd-reproductive-health.html" : "PGHD ReproductiveHealth Profile",
+      "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
+      "StructureDefinition-pghd-hearing.html" : "PGHD Hearing Profile",
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile",
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile",
+      "StructureDefinition-pghd-alchol-use.html" : "PGHD AlcholUse Profile",
+      "StructureDefinition-pghd-medication-adherence.html" : "PGHD Medication Adherence Profile",
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile",
+      "StructureDefinition-pghd-snore-index.html" : "PGHD SnoreIndex Profile",
+      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
+      "StructureDefinition-pghd-vitalsigns.html" : "PGHD Vital Signs Profile",
+      "StructureDefinition-pghd-hearing-sensitivity.html" : "PGHD HearingSensitivity Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-blood-glucose.html" : "PGHD BloodGlucose Profile",
+      "StructureDefinition-pghd-cardiac-function.html" : "PGHD Cardiac Function Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-vitalsignresult",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "VitalSigns",
+      "title" : "Vital Signs",
+      "description" : "This value set indicates the allowed vital sign result types.   The LOINC code for Vitals Signs panel (85353-1) is a grouping structure for a set of vital signs and includes related links (with type=has-member) to the Observations in this set (e.g. respiratory rate, heart rate, BP).  The Blood pressure panel (85354-9) is used to group the component observations Systolic blood pressure (8480-6) and Diastolic blood pressure (8462-4).",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.3.88.12.80.62"],
+      "sources" : ["2.16.840.1.113883.3.88.12.80.62"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
+      "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
+      "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile",
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
@@ -463,70 +935,166 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1130"],
       "uses" : {
       },
-      "StructureDefinition-PhrPatient.html" : "PhrPatient"
+      "StructureDefinition-pghd-patient.html" : "PGHD Patient Profile"
     },
     {
-      "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-code",
       "version" : "4.0.1",
       "status" : "draft",
-      "name" : "ProcedureReasonCodes",
-      "title" : "Procedure Reason Codes",
-      "description" : "This example value set defines the set of codes that can be used to indicate a reason for a procedure.",
+      "name" : "ProcedureCodes(SNOMEDCT)",
+      "title" : "Procedure Codes (SNOMED CT)",
+      "description" : "Procedure Code: All SNOMED CT procedure codes.",
       "systems" : ["http://snomed.info/sct"],
-      "oids" : ["2.16.840.1.113883.4.642.3.432"],
-      "sources" : ["2.16.840.1.113883.4.642.3.432"],
+      "oids" : ["2.16.840.1.113883.4.642.3.427"],
+      "sources" : ["2.16.840.1.113883.4.642.3.427"],
       "uses" : {
       },
-      "StructureDefinition-PhrMedia.html" : "PhrMedia"
+      "StructureDefinition-pghd-careplan-selfcare.html" : "PGHD SelfCare Plan Profile"
     },
     {
-      "url" : "http://hl7.org/fhir/ValueSet/provenance-activity-type",
+      "url" : "http://hl7.org/fhir/ValueSet/publication-status",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "PublicationStatus",
+      "title" : "PublicationStatus",
+      "description" : "The lifecycle status of an artifact.",
+      "systems" : ["http://hl7.org/fhir/publication-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-questionnaire.html" : "PGHD Questionnaire Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "QuantityComparator",
+      "title" : "QuantityComparator",
+      "description" : "How the Quantity should be understood and represented.",
+      "systems" : ["http://hl7.org/fhir/quantity-comparator"],
+      "oids" : ["2.16.840.1.113883.4.642.3.59"],
+      "sources" : ["2.16.840.1.113883.4.642.3.59"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
+      "StructureDefinition-pghd-heartbeat.html" : "PGHD Heartbeat Profile",
+      "StructureDefinition-pghd-snore-event.html" : "PGHD SnoreEvent Profile",
+      "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
+      "StructureDefinition-pghd-sleep-episode.html" : "PGHD Sleep Episode Profile",
+      "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile",
+      "StructureDefinition-pghd-alchol-use.html" : "PGHD AlcholUse Profile",
+      "StructureDefinition-pghd-medication-adherence.html" : "PGHD Medication Adherence Profile",
+      "StructureDefinition-pghd-snore-index.html" : "PGHD SnoreIndex Profile",
+      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
+      "StructureDefinition-pghd-hearing-sensitivity.html" : "PGHD HearingSensitivity Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-blood-glucose.html" : "PGHD BloodGlucose Profile",
+      "StructureDefinition-pghd-nutrition.html" : "PGHD Nutrition Profile",
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-answers",
       "version" : "4.0.1",
       "status" : "draft",
-      "name" : "ProvenanceActivityType",
-      "title" : "Provenance activity type",
-      "description" : "This value set contains representative Activity Type codes, which includes codes from the HL7 DocumentCompletion, ActStatus, and DataOperations code system, W3C PROV-DM and PROV-N concepts and display names, several HL7 Lifecycle Event codes for which there are agreed upon definitions, and non-duplicated codes from the HL7 Security and Privacy Ontology Operations codes.",
+      "name" : "QuestionnaireAnswerCodes",
+      "title" : "Questionnaire Answer Codes",
+      "description" : "Example list of codes for answers to questions. (Not complete or necessarily appropriate.)",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.446"],
+      "sources" : ["2.16.840.1.113883.4.642.3.446"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-questionnaire.html" : "PGHD Questionnaire Profile",
+      "StructureDefinition-pghd-questionnaire-response.html" : "PGHD QuestionnaireResponse Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-answers-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "QuestionnaireResponseStatus",
+      "title" : "QuestionnaireResponseStatus",
+      "description" : "Lifecycle status of the questionnaire response.",
+      "systems" : ["http://hl7.org/fhir/questionnaire-answers-status"],
+      "oids" : ["required"],
+      "sources" : ["required"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-questionnaire-response.html" : "PGHD QuestionnaireResponse Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-enable-behavior",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EnableWhenBehavior",
+      "title" : "EnableWhenBehavior",
+      "description" : "Controls how multiple enableWhen values are interpreted -  whether all or any must be true.",
+      "systems" : ["http://hl7.org/fhir/questionnaire-enable-behavior"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1007"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1007"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-questionnaire.html" : "PGHD Questionnaire Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-enable-operator",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "QuestionnaireItemOperator",
+      "title" : "QuestionnaireItemOperator",
+      "description" : "The criteria by which a question is enabled.",
+      "systems" : ["http://hl7.org/fhir/questionnaire-enable-operator"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1005"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1005"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-questionnaire.html" : "PGHD Questionnaire Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-questions",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "QuestionnaireQuestionCodes",
+      "title" : "Questionnaire Question Codes",
+      "description" : "Example list of codes for questions and groups of questions. (Not necessarily complete or appropriate.)",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.443"],
+      "sources" : ["2.16.840.1.113883.4.642.3.443"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-questionnaire.html" : "PGHD Questionnaire Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/reason-medication-given-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ReasonMedicationGivenCodes",
+      "title" : "Reason Medication Given Codes",
+      "description" : "This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust terminology code system that consists of or contains concepts to support the medication process.",
       "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion",
-        "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
-        "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-        "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+        "http://terminology.hl7.org/CodeSystem/reason-medication-given"
       ],
-      "oids" : ["2.16.840.1.113883.4.642.3.438"],
-      "sources" : ["2.16.840.1.113883.4.642.3.438"],
+      "oids" : ["2.16.840.1.113883.4.642.3.344"],
+      "sources" : ["2.16.840.1.113883.4.642.3.344"],
       "uses" : {
       },
-      "StructureDefinition-PhrProvenance.html" : "PhrProvenance"
+      "StructureDefinition-pghd-medicationadministration-insulin.html" : "PGHD MedicationAdministration Insulin Profile"
     },
     {
-      "url" : "http://hl7.org/fhir/ValueSet/provenance-agent-type",
+      "url" : "http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes",
       "version" : "4.0.1",
       "status" : "draft",
-      "name" : "ProvenanceParticipantType",
-      "title" : "Provenance participant type",
-      "description" : "The type of participation a provenance participant.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/provenance-participant-type"
-      ],
-      "oids" : ["2.16.840.1.113883.4.642.3.1003"],
-      "sources" : ["2.16.840.1.113883.4.642.3.1003"],
+      "name" : "SNOMEDCTReasonMedicationNotGivenCodes",
+      "title" : "SNOMED CT Reason Medication Not Given Codes",
+      "description" : "This value set includes all medication refused, medication not administered, and non-administration of necessary drug or medicine codes from SNOMED CT - provided as an exemplar value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.342"],
+      "sources" : ["2.16.840.1.113883.4.642.3.342"],
       "uses" : {
       },
-      "StructureDefinition-PhrProvenance.html" : "PhrProvenance"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/provenance-entity-role",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "ProvenanceEntityRole",
-      "title" : "ProvenanceEntityRole",
-      "description" : "How an entity was used in an activity.",
-      "systems" : ["http://hl7.org/fhir/provenance-entity-role"],
-      "oids" : ["2.16.840.1.113883.4.642.3.436"],
-      "sources" : ["2.16.840.1.113883.4.642.3.436"],
-      "uses" : {
-      },
-      "StructureDefinition-PhrProvenance.html" : "PhrProvenance"
+      "StructureDefinition-pghd-medicationadministration-insulin.html" : "PGHD MedicationAdministration Insulin Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
@@ -543,7 +1111,46 @@
       "sources" : ["2.16.840.1.113883.4.642.3.407"],
       "uses" : {
       },
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
+      "StructureDefinition-pghd-activity.html" : "PGHD Activity Profile",
+      "StructureDefinition-pghd-mobility.html" : "PGHD Mobility Profile",
+      "StructureDefinition-pghd-voltage-measurement.html" : "PGHD VoltageMeasurement Profile",
+      "StructureDefinition-pghd-diving.html" : "PGHD Diving Profile",
+      "StructureDefinition-pghd-heartbeat.html" : "PGHD Heartbeat Profile",
+      "StructureDefinition-pghd-snore-event.html" : "PGHD SnoreEvent Profile",
+      "StructureDefinition-pghd-food.html" : "PGHD Food Profile",
+      "StructureDefinition-pghd-sleep-episode.html" : "PGHD Sleep Episode Profile",
+      "StructureDefinition-pghd-bodymeasurement.html" : "PGHD Body Measurement Profile",
+      "StructureDefinition-pghd-electrocardiogram.html" : "PGHD Electrocardiogram Profile",
+      "StructureDefinition-pghd-pregnancy-status.html" : "PGHD Pregnancy Status Profile",
+      "StructureDefinition-pghd-uvexposure.html" : "PGHD UVExposure Profile",
+      "StructureDefinition-pghd-workout.html" : "PGHD Workout Profile",
+      "StructureDefinition-pghd-testresult.html" : "PGHD Test Result Profile",
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile",
+      "StructureDefinition-pghd-mindfulness.html" : "PGHD Mindfulness Profile",
+      "StructureDefinition-pghd-nutrition.html" : "PGHD Nutrition Profile",
+      "StructureDefinition-pghd-selfcare.html" : "PGHD Self Care Profile",
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile",
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
+      "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
+      "StructureDefinition-pghd-sleep.html" : "PGHD Sleep Profile",
+      "StructureDefinition-pghd-alchol-consumption.html" : "PGHD AlcholConsumption Profile",
+      "StructureDefinition-pghd-audiogram.html" : "PGHD Audiogram Profile",
+      "StructureDefinition-pghd-reproductive-health.html" : "PGHD ReproductiveHealth Profile",
+      "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
+      "StructureDefinition-pghd-hearing.html" : "PGHD Hearing Profile",
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile",
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile",
+      "StructureDefinition-pghd-alchol-use.html" : "PGHD AlcholUse Profile",
+      "StructureDefinition-pghd-medication-adherence.html" : "PGHD Medication Adherence Profile",
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile",
+      "StructureDefinition-pghd-snore-index.html" : "PGHD SnoreIndex Profile",
+      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
+      "StructureDefinition-pghd-vitalsigns.html" : "PGHD Vital Signs Profile",
+      "StructureDefinition-pghd-hearing-sensitivity.html" : "PGHD HearingSensitivity Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-blood-glucose.html" : "PGHD BloodGlucose Profile",
+      "StructureDefinition-pghd-cardiac-function.html" : "PGHD Cardiac Function Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
@@ -559,7 +1166,89 @@
       "sources" : ["2.16.840.1.113883.4.642.3.397"],
       "uses" : {
       },
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
+      "StructureDefinition-pghd-activity.html" : "PGHD Activity Profile",
+      "StructureDefinition-pghd-mobility.html" : "PGHD Mobility Profile",
+      "StructureDefinition-pghd-voltage-measurement.html" : "PGHD VoltageMeasurement Profile",
+      "StructureDefinition-pghd-diving.html" : "PGHD Diving Profile",
+      "StructureDefinition-pghd-heartbeat.html" : "PGHD Heartbeat Profile",
+      "StructureDefinition-pghd-snore-event.html" : "PGHD SnoreEvent Profile",
+      "StructureDefinition-pghd-food.html" : "PGHD Food Profile",
+      "StructureDefinition-pghd-sleep-episode.html" : "PGHD Sleep Episode Profile",
+      "StructureDefinition-pghd-bodymeasurement.html" : "PGHD Body Measurement Profile",
+      "StructureDefinition-pghd-electrocardiogram.html" : "PGHD Electrocardiogram Profile",
+      "StructureDefinition-pghd-pregnancy-status.html" : "PGHD Pregnancy Status Profile",
+      "StructureDefinition-pghd-uvexposure.html" : "PGHD UVExposure Profile",
+      "StructureDefinition-pghd-workout.html" : "PGHD Workout Profile",
+      "StructureDefinition-pghd-testresult.html" : "PGHD Test Result Profile",
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile",
+      "StructureDefinition-pghd-mindfulness.html" : "PGHD Mindfulness Profile",
+      "StructureDefinition-pghd-nutrition.html" : "PGHD Nutrition Profile",
+      "StructureDefinition-pghd-selfcare.html" : "PGHD Self Care Profile",
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile",
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
+      "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
+      "StructureDefinition-pghd-sleep.html" : "PGHD Sleep Profile",
+      "StructureDefinition-pghd-alchol-consumption.html" : "PGHD AlcholConsumption Profile",
+      "StructureDefinition-pghd-audiogram.html" : "PGHD Audiogram Profile",
+      "StructureDefinition-pghd-reproductive-health.html" : "PGHD ReproductiveHealth Profile",
+      "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
+      "StructureDefinition-pghd-hearing.html" : "PGHD Hearing Profile",
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile",
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile",
+      "StructureDefinition-pghd-alchol-use.html" : "PGHD AlcholUse Profile",
+      "StructureDefinition-pghd-medication-adherence.html" : "PGHD Medication Adherence Profile",
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile",
+      "StructureDefinition-pghd-snore-index.html" : "PGHD SnoreIndex Profile",
+      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
+      "StructureDefinition-pghd-vitalsigns.html" : "PGHD Vital Signs Profile",
+      "StructureDefinition-pghd-hearing-sensitivity.html" : "PGHD HearingSensitivity Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-blood-glucose.html" : "PGHD BloodGlucose Profile",
+      "StructureDefinition-pghd-cardiac-function.html" : "PGHD Cardiac Function Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestStatus",
+      "title" : "RequestStatus",
+      "description" : "Codes identifying the lifecycle stage of a request.",
+      "systems" : ["http://hl7.org/fhir/request-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.111"],
+      "sources" : ["2.16.840.1.113883.4.642.3.111"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-careplan-selfcare.html" : "PGHD SelfCare Plan Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/resource-types",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ResourceType",
+      "title" : "ResourceType",
+      "description" : "One of the resource types defined as part of this version of FHIR.",
+      "systems" : ["http://hl7.org/fhir/resource-types"],
+      "oids" : ["2.16.840.1.113883.4.642.3.27"],
+      "sources" : ["2.16.840.1.113883.4.642.3.27"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-questionnaire.html" : "PGHD Questionnaire Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/route-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTRouteCodes",
+      "title" : "SNOMED CT Route Codes",
+      "description" : "This value set includes all Route codes from SNOMED CT - provided as an exemplar.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.98"],
+      "sources" : ["2.16.840.1.113883.4.642.3.98"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-medicationadministration-insulin.html" : "PGHD MedicationAdministration Insulin Profile",
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
@@ -576,108 +1265,682 @@
       "StructureDefinition-PhrBundle.html" : "PhrBundle"
     },
     {
-      "url" : "http://hl7.org/fhir/ValueSet/security-labels",
-      "version" : "4.0.1",
-      "status" : "active",
-      "name" : "All Security Labels",
-      "title" : "SecurityLabels",
-      "description" : "A single value set for all security labels defined by FHIR.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw",
-        "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
-        "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-        "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
-      ],
-      "oids" : ["2.16.840.1.113883.4.642.3.47"],
-      "sources" : ["2.16.840.1.113883.4.642.3.47"],
-      "uses" : {
-      },
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/security-role-type",
+      "url" : "http://hl7.org/fhir/ValueSet/timing-abbreviation",
       "version" : "4.0.1",
       "status" : "draft",
-      "name" : "SecurityRoleType",
-      "title" : "SecurityRoleType",
-      "description" : "This example FHIR value set is comprised of example Actor Type codes, which can be used to value FHIR agents, actors, and other role         elements such as those specified in financial transactions. The FHIR Actor value set is based on    DICOM Audit Message, C402;   ASTM Standard, E1762-95 [2013]; selected codes and          derived actor roles from HL7 RoleClass OID 2.16.840.1.113883.5.110;    HL7 Role Code 2.16.840.1.113883.5.111, including AgentRoleType;          HL7 ParticipationType OID: 2.16.840.1.113883.5.90; and    HL7 ParticipationFunction codes OID: 2.16.840.1.113883.5.88.           This value set includes, by reference, role codes from external code systems: NUCC Health Care Provider Taxonomy OID: 2.16.840.1.113883.6.101;          North American Industry Classification System [NAICS]OID: 2.16.840.1.113883.6.85; IndustryClassificationSystem 2.16.840.1.113883.1.11.16039;          and US Census Occupation Code OID: 2.16.840.1.113883.6.243 for relevant recipient or custodian codes not included in this value set.            If no source is indicated in the definition comments, then these are example FHIR codes.          It can be extended with appropriate roles described by SNOMED as well as those described in the HL7 Role Based Access Control Catalog and the          HL7 Healthcare (Security and Privacy) Access Control Catalog.            In Role-Based Access Control (RBAC), permissions are operations on an object that a user wishes to access. Permissions are grouped into roles.          A role characterizes the functions a user is allowed to perform. Roles are assigned to users. If the user's role has the appropriate permissions          to access an object, then that user is granted access to the object. FHIR readily enables RBAC, as FHIR Resources are object types and the CRUDE          events (the FHIR equivalent to permissions in the RBAC scheme) are operations on those objects.          In Attribute-Based Access Control (ABAC), a user requests to perform operations on objects. That user's access request is granted or denied          based on a set of access control policies that are specified in terms of attributes and conditions. FHIR readily enables ABAC, as instances of          a Resource in FHIR (again, Resources are object types) can have attributes associated with them. These attributes include security tags,          environment conditions, and a host of user and object characteristics, which are the same attributes as those used in ABAC. Attributes help          define the access control policies that determine the operations a user may perform on a Resource (in FHIR) or object (in ABAC). For example,          a tag (or attribute) may specify that the identified Resource (object) is not to be further disclosed without explicit consent from the patient.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/extra-security-role-type",
-        "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-        "http://terminology.hl7.org/CodeSystem/v3-RoleClass",
-        "http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction",
-        "http://terminology.hl7.org/CodeSystem/contractsignertypecodes",
-        "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
-        "http://dicom.nema.org/resources/ontology/DCM"
-      ],
-      "oids" : ["2.16.840.1.113883.4.642.3.978"],
-      "sources" : ["2.16.840.1.113883.4.642.3.978"],
+      "name" : "TimingAbbreviation",
+      "title" : "TimingAbbreviation",
+      "description" : "Code for a known / defined timing pattern.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"],
+      "oids" : ["2.16.840.1.113883.4.642.3.78"],
+      "sources" : ["2.16.840.1.113883.4.642.3.78"],
       "uses" : {
       },
-      "StructureDefinition-PhrProvenance.html" : "PhrProvenance"
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ucum-bodylength",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "BodyLengthUnits",
+      "title" : "Body Length Units",
+      "description" : "UCUM units for recording body length measures such as height and head circumference",
+      "systems" : ["http://unitsofmeasure.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.958"],
+      "sources" : ["2.16.840.1.113883.4.642.3.958"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ucum-bodytemp",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "BodyTemperatureUnits",
+      "title" : "Body Temperature Units",
+      "description" : "UCUM units for recording Body Temperature",
+      "systems" : ["http://unitsofmeasure.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.957"],
+      "sources" : ["2.16.840.1.113883.4.642.3.957"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ucum-bodyweight",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "BodyWeightUnits",
+      "title" : "Body Weight Units",
+      "description" : "UCUM units for recording Body Weight",
+      "systems" : ["http://unitsofmeasure.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.956"],
+      "sources" : ["2.16.840.1.113883.4.642.3.956"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ucum-vitals-common",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "VitalSignsUnits",
+      "title" : "Vital Signs Units",
+      "description" : "Common UCUM units for recording Vital Signs",
+      "systems" : ["http://unitsofmeasure.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.955"],
+      "sources" : ["2.16.840.1.113883.4.642.3.955"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
+      "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
+      "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile",
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/udi-entry-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "UDIEntryType",
+      "title" : "UDIEntryType",
+      "description" : "Codes to identify how UDI data was entered.",
+      "systems" : ["http://hl7.org/fhir/udi-entry-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.211"],
+      "sources" : ["2.16.840.1.113883.4.642.3.211"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-device.html" : "PGHD Device Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/units-of-time",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "UnitsOfTime",
+      "title" : "UnitsOfTime",
+      "description" : "A unit of time (units from UCUM).",
+      "systems" : ["http://unitsofmeasure.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.77"],
+      "sources" : ["2.16.840.1.113883.4.642.3.77"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "PregnancyStatusUvIps",
+      "title" : "Pregnancy Status - IPS",
+      "description" : "IPS Pregnancy Status",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-pregnancy-status.html" : "PGHD Pregnancy Status Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/appetite-changes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "AppetiteChangesValueSet",
+      "title" : "Symptom Appetite Changes",
+      "description" : "Codes expressing changes in appetite",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/appetite-changes-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/body-temperature-measurement-location",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "BodyTemperatureMeasurementLocationValueset",
+      "title" : "Body Temperature Measurement Location Codes",
+      "description" : "Code indicating the location where the body temperature was measured",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/body-temperature-measurement-location-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-reproductive-health.html" : "PGHD ReproductiveHealth Profile",
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-activity-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationActivity",
+      "title" : "Observation Activity Codes",
+      "description" : "Codes representing activity-related measurement items",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-activity.html" : "PGHD Activity Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-alchol-consumption-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationAlcholConsumption",
+      "title" : "Observation AlcholConsumption Codes",
+      "description" : "Codes representing items measured for alcohol consumption",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-alchol-use.html" : "PGHD AlcholUse Profile",
+      "StructureDefinition-pghd-alchol-consumption.html" : "PGHD AlcholConsumption Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-body-measurements-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationBodyMeasurementsValueSet",
+      "title" : "Observation BodyMeasurements Codes",
+      "description" : "Codes representing measurement items related to physical measurements",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-bmi.html" : "PGHD BMI Profile",
+      "StructureDefinition-pghd-bodyweight.html" : "PGHD BodyWeight Profile",
+      "StructureDefinition-pghd-bodyheight.html" : "PGHD BodyHeight Profile",
+      "StructureDefinition-pghd-bodymeasurement.html" : "PGHD Body Measurement Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-diving-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationDiving",
+      "title" : "Observation Diving Codes",
+      "description" : "Codes for diving-related measurement items",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-diving.html" : "PGHD Diving Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-ecg-classification-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationEcgClassificationValueSet",
+      "title" : "ECG Classification Codes",
+      "description" : "Codes for classification of ECG waveforms",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/ecg-classification-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-electrocardiogram.html" : "PGHD Electrocardiogram Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-ecg-lead-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationEcgLeadValueSet",
+      "title" : "ECG Lead Codes",
+      "description" : "Codes for ECG induction",
+      "systems" : ["http://hl7.org/fhir/uv/phr/CodeSystem/ecg-lead-codes"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-voltage-measurement.html" : "PGHD VoltageMeasurement Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-ecg-symptoms-status-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationEcgSymptomsStatusValueSet",
+      "title" : "ECG Symptoms Status Codes",
+      "description" : "Code indicating whether or not the user's symptoms are input during ECG waveform acquisition",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/ecg-symptoms-status-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-electrocardiogram.html" : "PGHD Electrocardiogram Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-ecgcodes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationEcgValueSet",
+      "title" : "ECG Lead Codes",
+      "description" : "Codes for ECG and related items",
+      "systems" : ["http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes"]
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-gad7-risk-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationGAD7Risk",
+      "title" : "Observation GAD7 Risk Codes",
+      "description" : "Codes representing GAD-7 Assesment Risk measurement items",
+      "systems" : ["http://hl7.org/fhir/uv/phr/CodeSystem/gad7-risk-codes"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-hearing-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationHearing",
+      "title" : "Observation Hearing Codes",
+      "description" : "Code for a measurement item related to hearing",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-hearing.html" : "PGHD Hearing Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-lab-results-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationLabResultsValueSet",
+      "title" : "Observation LabResults Codes",
+      "description" : "Codes representing measurement items associated with the inspection",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-testresult.html" : "PGHD Test Result Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-mind-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationMind",
+      "title" : "Observation Mind Codes",
+      "description" : "Codes representing mind measurement items",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile",
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-mindfulness-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationMindfulness",
+      "title" : "Observation Mindfulness Codes",
+      "description" : "Codes representing mindfulness-related measures",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-mindfulness.html" : "PGHD Mindfulness Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-mobility-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationMobility",
+      "title" : "Observation Mobility Codes",
+      "description" : "Codes representing mobility-related measurement items",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-mobility.html" : "PGHD Mobility Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-nutrition-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationNutrition",
+      "title" : "Observation Nutrition Codes",
+      "description" : "Codes representing nutrition-related measures",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-nutrition.html" : "PGHD Nutrition Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-phq9-risk-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationPHQ9Risk",
+      "title" : "Observation PHQ9Risk Codes",
+      "description" : "Codes representing PHQ-9 Assesment Risk measurement items",
+      "systems" : ["http://hl7.org/fhir/uv/phr/CodeSystem/phq9-risk-codes"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-reproductive-health-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationReproductiveHealth",
+      "title" : "Observation ReproductiveHealth Codes",
+      "description" : "Codes representing reproductive-health-related measures",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-reproductive-health.html" : "PGHD ReproductiveHealth Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-scored-assessment-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationScoredAssessment",
+      "title" : "Observation Scored Assessment Codes",
+      "description" : "Code for scored assessment",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/scored-assessment-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-scored-assessment-score-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationScoredAssessmentScore",
+      "title" : "Observation State of Mind Codes",
+      "description" : "Codes for state of mind",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-observation-scored-assessment.html" : "PGHD Scored Assessment Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-selfcare-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationSelfCare",
+      "title" : "Observation SelfCare Codes",
+      "description" : "Codes representing selfcare-related measurement items",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-selfcare.html" : "PGHD Self Care Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-sleep-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationSleep",
+      "title" : "Observation Sleep Codes",
+      "description" : "Codes representing sleep-related measurement items",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-sleep.html" : "PGHD Sleep Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-state-of-mind-association-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationStateOfMindAssociation",
+      "title" : "Observation State of Mind Association Codes",
+      "description" : "Codes for state of mind association",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-association-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-state-of-mind-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationStateOfMind",
+      "title" : "Observation State of Mind Codes",
+      "description" : "Codes for state of mind",
+      "systems" : ["http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-codes"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-state-of-mind-kind-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationStateOfMindKind",
+      "title" : "Observation State of Mind Kind Codes",
+      "description" : "Codes for state of mind kind",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-kind-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-state-of-mind-label-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationStateOfMindLabel",
+      "title" : "Observation State of Mind Label Codes",
+      "description" : "Codes for state of mind label",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-label-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-state-of-mind-valence-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationStateOfMindValence",
+      "title" : "Observation State of Mind Valence Codes",
+      "description" : "Codes for state of mind valence",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-valence-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-observation-state-of-mind.html" : "PGHD State of Mind Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-symptom-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationSymptom",
+      "title" : "Observation Symptom Codes",
+      "description" : "Codes representing symptom-related measurement items",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile",
+      "ConceptMap-symptom-pghd-to-snomedct.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-pghd-to-snomedct|1.0.0-ballot2]",
+      "ConceptMap-symptom-snomedct-to-pghd.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd|1.0.0-ballot2]"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-symptom-snomedct-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationSymptomSNOMEDCT",
+      "title" : "Observation Symptom SNOMED CT Codes",
+      "description" : "Codes representing symptom-related measurement items with SNOMED CT",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile",
+      "ConceptMap-symptom-pghd-to-snomedct.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-pghd-to-snomedct|1.0.0-ballot2]",
+      "ConceptMap-symptom-snomedct-to-pghd.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd|1.0.0-ballot2]"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-uvexposure-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationUVExposure",
+      "title" : "Observation UVExposure Codes",
+      "description" : "Codes representing UV Exposure-related measurement items",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-uvexposure.html" : "PGHD UVExposure Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-vital-signs-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationVitalsignsValueSet",
+      "title" : "Observation Vitalsigns Codes",
+      "description" : "Codes representing vitalsigns-related measurement items",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-vitalsigns.html" : "PGHD Vital Signs Profile",
+      "StructureDefinition-pghd-bloodpressure.html" : "PGHD BloodPressure Profile",
+      "StructureDefinition-pghd-heartrate.html" : "PGHD HeartRate Profile",
+      "StructureDefinition-pghd-respiratoryrate.html" : "PGHD RespiratoryRate Profile",
+      "StructureDefinition-pghd-cardiac-function.html" : "PGHD Cardiac Function Profile",
+      "StructureDefinition-pghd-bodytemperature.html" : "PGHD BodyTemperature Profile",
+      "StructureDefinition-pghd-oxygenSaturation.html" : "PGHD OxygenSaturation Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-workout-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationWorkout",
+      "title" : "Observation Workout Codes",
+      "description" : "Codes representing workout-related measurement items",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-workout.html" : "PGHD Workout Profile"
     },
     {
       "url" : "http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-code",
-      "version" : "1.0.0-ballot",
-      "status" : "draft",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
       "name" : "PCDSleepObservationCode",
       "title" : "Patient contributed data: sleep observation code",
       "description" : "This value set includes codes to track patient sleep recorded by device or app",
-      "systems" : ["http://loinc.org", "http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-pcd-sleep-observation.html" : "Patient contributed data: sleep observation"
+      "systems" : ["http://loinc.org", "http://snomed.info/sct"]
     },
     {
       "url" : "http://hl7.org/fhir/uv/phr/ValueSet/pcd-sleep-observation-value",
-      "version" : "1.0.0-ballot",
-      "status" : "draft",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
       "name" : "PCDSleepStageValueCode",
       "title" : "Patient contributed data: sleep stage value",
       "description" : "This value set includes codes to track patient sleep values recorded by device or app",
       "systems" : ["http://snomed.info/sct"]
     },
     {
-      "url" : "http://terminology.hl7.org/ValueSet/v3-ActCode",
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/sleep-analysis",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "SleepAnalysisValueSet",
+      "title" : "Sleep Analysis",
+      "description" : "Codes for stages of sleep",
+      "systems" : ["http://hl7.org/fhir/uv/phr/CodeSystem/sleep-analysis-codes"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-sleep.html" : "PGHD Sleep Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/symptom-presence",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "SymptomPresenceValueSet",
+      "title" : "Symptom Presence",
+      "description" : "Code for presence or absence of symptoms",
+      "systems" : ["http://hl7.org/fhir/uv/phr/CodeSystem/presence-codes"],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/ValueSet/symptom-severity",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "SymptomSeverityValueSet",
+      "title" : "Symptom Severity",
+      "description" : "Code for degree of symptoms",
+      "systems" : [
+        "http://hl7.org/fhir/uv/phr/CodeSystem/symptom-severity-codes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType",
       "version" : "3.0.0",
       "status" : "active",
-      "name" : "ActCode",
-      "title" : "v3 Code System ActCode",
-      "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.  Constraints:\r\nThe kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems.  The coding system will depend on the class of Act, such as LOINC for observations, etc. Conceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure. Act.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+      "name" : "ActPharmacySupplyType",
+      "title" : "ActPharmacySupplyType",
+      "description" : "Identifies types of dispensing events",
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "oids" : ["2.16.840.1.113883.1.11.16208"],
+      "sources" : ["2.16.840.1.113883.1.11.16208"],
       "uses" : {
       },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition",
-      "StructureDefinition-PhrDocumentReference.html" : "PhrDocumentReference"
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
     },
     {
-      "url" : "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification",
-      "version" : "2014-03-26",
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode",
+      "version" : "3.0.0",
       "status" : "active",
-      "name" : "v3.ConfidentialityClassification",
-      "title" : "V3 Value SetConfidentialityClassification",
-      "description" : " Set of codes used to value Act.Confidentiality and Role.Confidentiality attribute in accordance with the definition for concept domain \"Confidentiality\".",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Confidentiality"],
-      "oids" : ["2.16.840.1.113883.1.11.10228"],
-      "sources" : ["2.16.840.1.113883.1.11.10228"],
+      "name" : "ActSubstanceAdminSubstitutionCode",
+      "title" : "ActSubstanceAdminSubstitutionCode",
+      "description" : "***No description***",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
+      ],
+      "oids" : ["2.16.840.1.113883.1.11.16621"],
+      "sources" : ["2.16.840.1.113883.1.11.16621"],
       "uses" : {
       },
-      "StructureDefinition-PhrComposition.html" : "PhrComposition"
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
     },
     {
-      "url" : "http://terminology.hl7.org/ValueSet/v3-PurposeOfUse",
-      "version" : "3.1.0",
+      "url" : "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason",
+      "version" : "3.0.0",
       "status" : "active",
-      "name" : "PurposeOfUse",
-      "title" : "PurposeOfUse",
-      "description" : "Supports communication of purpose of use at a general level.",
+      "name" : "SubstanceAdminSubstitutionReason",
+      "title" : "SubstanceAdminSubstitutionReason",
+      "description" : "***No description***",
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"],
-      "oids" : ["2.16.840.1.113883.1.11.20448"],
-      "sources" : ["2.16.840.1.113883.1.11.20448"],
+      "oids" : ["2.16.840.1.113883.1.11.19377"],
+      "sources" : ["2.16.840.1.113883.1.11.19377"],
       "uses" : {
       },
-      "StructureDefinition-PhrProvenance.html" : "PhrProvenance"
+      "StructureDefinition-pghd-medicationdispense.html" : "PGHD MedicationDispense Profile"
     }
   ]
 }

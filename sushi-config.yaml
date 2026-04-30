@@ -89,23 +89,22 @@ dependencies:
 
 menu:
   Home: index.html
-  Functional Model:
-    Conformance: conformance.html
-    Data Model: datamodel.html
-    Functional Model: functionality.html
-    Record Lifecycle: recordlifecycle.html
-    Security: security.html
+  Specification:
+    Longitudinal Data Model: datamodel.html
+    API Endpoints: api.html
+    File Formats: recordkeeping.html
   Supplemental:
     History: history.html
-    Record Keeping: recordkeeping.html
-    Longitudinal Records: longitudinal.html
-    API Endpoints: api.html
+    Security: security.html
+    Functional Model: functionality.html
     Annotations: annotations.html
-    Algorithms: algorithms.html
+    Merging and Versioning: longitudinal.html
+    Patient Generated Health Data: pghd.html
     Physiology Domains: physiology.html
     Operating Systems: operating-systems.html
-    Patient Generated Health Data: pghd.html
     Logical Models: logical-models.html
+    Conformance: conformance.html
+    Algorithms: algorithms.html
   Patient Personas:
     Index: personas-index.html
     Thompson Familiy: persona-thompson-family.html
@@ -128,8 +127,6 @@ pages:
     title: Data Model    
   functionality.md:
     title: Functional Model
-  recordlifecycle.md:
-    title: Record Lifecycle    
   annotations.md:
     title: Annotations
   security.md:

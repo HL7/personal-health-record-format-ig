@@ -1,0 +1,137 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/phr/ValueSet/observation-reproductive-health-codes> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "observation-reproductive-health-codes"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet observation-reproductive-health-codes</b></p><a name=\"observation-reproductive-health-codes\"> </a><a name=\"hcobservation-reproductive-health-codes\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-observation-pghd-codes.html\"><code>http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?1.0.0-ballot2</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-basalBodyTemperature\">basalBodyTemperature</a></td><td style=\"color: #cccccc\">Basal body temperature</td><td>A quantity sample type that records the user's basal body temperature.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-cervicalMucusQuality\">cervicalMucusQuality</a></td><td style=\"color: #cccccc\">Cervical mucus quality</td><td>A category sample type that records the quality of the user's cervical mucus.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-contraceptive\">contraceptive</a></td><td style=\"color: #cccccc\">Contraceptive</td><td>A category sample type that records the use of contraceptives.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-intermenstrualBleeding\">intermenstrualBleeding</a></td><td style=\"color: #cccccc\">Intermenstrual bleeding</td><td>A category sample type that records spotting outside the normal menstruation period.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-irregularMenstrualCycles\">irregularMenstrualCycles</a></td><td style=\"color: #cccccc\">Irregular menstrual cycles</td><td>A category sample that indicates an irregular menstrual cycle.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-infrequentMenstrualCycles\">infrequentMenstrualCycles</a></td><td style=\"color: #cccccc\">Infrequent menstrual cycles</td><td>A category sample that indicates an infrequent menstrual cycle.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-lactation\">lactation</a></td><td style=\"color: #cccccc\">Lactation</td><td>A category type that records lactation.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-menstrualFlow\">menstrualFlow</a></td><td style=\"color: #cccccc\">Menstrual flow</td><td>A category sample type that records menstrual cycles.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-menstrualPeriod\">menstrualPeriod</a></td><td style=\"color: #cccccc\">Menstrual period</td><td>A category sample type that records menstrual periods.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-ovulationTestResult\">ovulationTestResult</a></td><td style=\"color: #cccccc\">Ovulation test result</td><td>A category sample type that records the result of an ovulation home test.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-persistentIntermenstrualBleeding\">persistentIntermenstrualBleeding</a></td><td style=\"color: #cccccc\">Persistent intermenstrual bleeding</td><td>A category sample that indicates persistent intermenstrual bleeding.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-pregnancyTestResult\">pregnancyTestResult</a></td><td style=\"color: #cccccc\">Pregnancy test result</td><td>A category type that represents the results from a home pregnancy test.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-progesteroneTestResult\">progesteroneTestResult</a></td><td style=\"color: #cccccc\">Progesterone test result</td><td>A category type that represents the results from a home progesterone test.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-prolongedMenstrualPeriods\">prolongedMenstrualPeriods</a></td><td style=\"color: #cccccc\">Prolonged menstrual periods</td><td>A category sample that indicates a prolonged menstrual cycle.</td></tr><tr><td><a href=\"CodeSystem-observation-pghd-codes.html#observation-pghd-codes-sexualActivity\">sexualActivity</a></td><td style=\"color: #cccccc\">Sexual activity</td><td>A category sample type that records sexual activity.</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "pe"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 1 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/uv/phr/ValueSet/observation-reproductive-health-codes"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/uv/phr/ValueSet/observation-reproductive-health-codes>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0-ballot2"] ; # 
+  fhir:name [ fhir:v "ObservationReproductiveHealth"] ; # 
+  fhir:title [ fhir:v "Observation ReproductiveHealth Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-04-23T17:08:04-05:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientempowerment" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes representing reproductive-health-related measures"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "basalBodyTemperature" ]
+       ] [
+         fhir:code [ fhir:v "cervicalMucusQuality" ]
+       ] [
+         fhir:code [ fhir:v "contraceptive" ]
+       ] [
+         fhir:code [ fhir:v "intermenstrualBleeding" ]
+       ] [
+         fhir:code [ fhir:v "irregularMenstrualCycles" ]
+       ] [
+         fhir:code [ fhir:v "infrequentMenstrualCycles" ]
+       ] [
+         fhir:code [ fhir:v "lactation" ]
+       ] [
+         fhir:code [ fhir:v "menstrualFlow" ]
+       ] [
+         fhir:code [ fhir:v "menstrualPeriod" ]
+       ] [
+         fhir:code [ fhir:v "ovulationTestResult" ]
+       ] [
+         fhir:code [ fhir:v "persistentIntermenstrualBleeding" ]
+       ] [
+         fhir:code [ fhir:v "pregnancyTestResult" ]
+       ] [
+         fhir:code [ fhir:v "progesteroneTestResult" ]
+       ] [
+         fhir:code [ fhir:v "prolongedMenstrualPeriods" ]
+       ] [
+         fhir:code [ fhir:v "sexualActivity" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

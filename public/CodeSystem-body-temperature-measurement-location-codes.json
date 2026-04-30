@@ -1,0 +1,129 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "body-temperature-measurement-location-codes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem body-temperature-measurement-location-codes</b></p><a name=\"body-temperature-measurement-location-codes\"> </a><a name=\"hcbody-temperature-measurement-location-codes\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/body-temperature-measurement-location-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"body-temperature-measurement-location-codes-other\"> </a></td><td>Other</td><td>The temperature was taken at a location that is not otherwise in this list.</td></tr><tr><td style=\"white-space:nowrap\">armpit<a name=\"body-temperature-measurement-location-codes-armpit\"> </a></td><td>Armpit</td><td>The temperature was taken in the armpit.</td></tr><tr><td style=\"white-space:nowrap\">body<a name=\"body-temperature-measurement-location-codes-body\"> </a></td><td>Body</td><td>The temperature was taken on the body.</td></tr><tr><td style=\"white-space:nowrap\">ear<a name=\"body-temperature-measurement-location-codes-ear\"> </a></td><td>Ear</td><td>The temperature was taken in the ear.</td></tr><tr><td style=\"white-space:nowrap\">finger<a name=\"body-temperature-measurement-location-codes-finger\"> </a></td><td>Finger</td><td>The temperature was taken at the finger.</td></tr><tr><td style=\"white-space:nowrap\">gastroIntestinal<a name=\"body-temperature-measurement-location-codes-gastroIntestinal\"> </a></td><td>Gastrointestinal</td><td>The temperature was taken inside the gastrointestinal tract.</td></tr><tr><td style=\"white-space:nowrap\">mouth<a name=\"body-temperature-measurement-location-codes-mouth\"> </a></td><td>Mouth</td><td>The temperature was taken in the mouth.</td></tr><tr><td style=\"white-space:nowrap\">rectum<a name=\"body-temperature-measurement-location-codes-rectum\"> </a></td><td>Rectum</td><td>The temperature was taken in the rectum.</td></tr><tr><td style=\"white-space:nowrap\">toe<a name=\"body-temperature-measurement-location-codes-toe\"> </a></td><td>Toe</td><td>The temperature was taken at the toe.</td></tr><tr><td style=\"white-space:nowrap\">earDrum<a name=\"body-temperature-measurement-location-codes-earDrum\"> </a></td><td>Ear drum</td><td>The temperature was taken on the eardrum.</td></tr><tr><td style=\"white-space:nowrap\">temporalArtery<a name=\"body-temperature-measurement-location-codes-temporalArtery\"> </a></td><td>Temporal artery</td><td>The temperature was taken at the temporal artery.</td></tr><tr><td style=\"white-space:nowrap\">forehead<a name=\"body-temperature-measurement-location-codes-forehead\"> </a></td><td>Forehead</td><td>The temperature was taken on the forehead.</td></tr><tr><td style=\"white-space:nowrap\">vagina<a name=\"body-temperature-measurement-location-codes-vagina\"> </a></td><td>Vagina</td><td>The temperature was taken in the vagina.</td></tr><tr><td style=\"white-space:nowrap\">wrist<a name=\"body-temperature-measurement-location-codes-wrist\"> </a></td><td>Wrist</td><td>The temperature was taken on the wrist.</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pe"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  }],
+  "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/body-temperature-measurement-location-codes",
+  "version" : "1.0.0-ballot2",
+  "name" : "BodyTemperatureMeasurementLocation",
+  "title" : "Body Temperature Measurement Location Codes",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-04-23T17:08:04-05:00",
+  "publisher" : "HL7 International / Patient Empowerment",
+  "contact" : [{
+    "name" : "HL7 International / Patient Empowerment",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/patientempowerment"
+    }]
+  }],
+  "description" : "Code indicating the location where the body temperature was measured",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "compositional" : false,
+  "content" : "complete",
+  "count" : 14,
+  "concept" : [{
+    "code" : "other",
+    "display" : "Other",
+    "definition" : "The temperature was taken at a location that is not otherwise in this list."
+  },
+  {
+    "code" : "armpit",
+    "display" : "Armpit",
+    "definition" : "The temperature was taken in the armpit."
+  },
+  {
+    "code" : "body",
+    "display" : "Body",
+    "definition" : "The temperature was taken on the body."
+  },
+  {
+    "code" : "ear",
+    "display" : "Ear",
+    "definition" : "The temperature was taken in the ear."
+  },
+  {
+    "code" : "finger",
+    "display" : "Finger",
+    "definition" : "The temperature was taken at the finger."
+  },
+  {
+    "code" : "gastroIntestinal",
+    "display" : "Gastrointestinal",
+    "definition" : "The temperature was taken inside the gastrointestinal tract."
+  },
+  {
+    "code" : "mouth",
+    "display" : "Mouth",
+    "definition" : "The temperature was taken in the mouth."
+  },
+  {
+    "code" : "rectum",
+    "display" : "Rectum",
+    "definition" : "The temperature was taken in the rectum."
+  },
+  {
+    "code" : "toe",
+    "display" : "Toe",
+    "definition" : "The temperature was taken at the toe."
+  },
+  {
+    "code" : "earDrum",
+    "display" : "Ear drum",
+    "definition" : "The temperature was taken on the eardrum."
+  },
+  {
+    "code" : "temporalArtery",
+    "display" : "Temporal artery",
+    "definition" : "The temperature was taken at the temporal artery."
+  },
+  {
+    "code" : "forehead",
+    "display" : "Forehead",
+    "definition" : "The temperature was taken on the forehead."
+  },
+  {
+    "code" : "vagina",
+    "display" : "Vagina",
+    "definition" : "The temperature was taken in the vagina."
+  },
+  {
+    "code" : "wrist",
+    "display" : "Wrist",
+    "definition" : "The temperature was taken on the wrist."
+  }]
+}

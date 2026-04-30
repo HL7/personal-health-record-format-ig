@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="state-of-mind-association-codes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem state-of-mind-association-codes</b></p><a name="state-of-mind-association-codes"> </a><a name="hcstate-of-mind-association-codes"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-association-codes</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">community<a name="state-of-mind-association-codes-community"> </a></td><td>Community</td></tr><tr><td style="white-space:nowrap">currentEvents<a name="state-of-mind-association-codes-currentEvents"> </a></td><td>Current Events</td></tr><tr><td style="white-space:nowrap">dating<a name="state-of-mind-association-codes-dating"> </a></td><td>Dating</td></tr><tr><td style="white-space:nowrap">education<a name="state-of-mind-association-codes-education"> </a></td><td>Education</td></tr><tr><td style="white-space:nowrap">family<a name="state-of-mind-association-codes-family"> </a></td><td>Family</td></tr><tr><td style="white-space:nowrap">fitness<a name="state-of-mind-association-codes-fitness"> </a></td><td>Fitness</td></tr><tr><td style="white-space:nowrap">friends<a name="state-of-mind-association-codes-friends"> </a></td><td>Friends</td></tr><tr><td style="white-space:nowrap">health<a name="state-of-mind-association-codes-health"> </a></td><td>Health</td></tr><tr><td style="white-space:nowrap">hobbies<a name="state-of-mind-association-codes-hobbies"> </a></td><td>Hobbies</td></tr><tr><td style="white-space:nowrap">identity<a name="state-of-mind-association-codes-identity"> </a></td><td>Identity</td></tr><tr><td style="white-space:nowrap">money<a name="state-of-mind-association-codes-money"> </a></td><td>Money</td></tr><tr><td style="white-space:nowrap">partner<a name="state-of-mind-association-codes-partner"> </a></td><td>Partner</td></tr><tr><td style="white-space:nowrap">selfCare<a name="state-of-mind-association-codes-selfCare"> </a></td><td>Self-Care</td></tr><tr><td style="white-space:nowrap">spirituality<a name="state-of-mind-association-codes-spirituality"> </a></td><td>Spirituality</td></tr><tr><td style="white-space:nowrap">tasks<a name="state-of-mind-association-codes-tasks"> </a></td><td>Tasks</td></tr><tr><td style="white-space:nowrap">travel<a name="state-of-mind-association-codes-travel"> </a></td><td>Travel</td></tr><tr><td style="white-space:nowrap">weather<a name="state-of-mind-association-codes-weather"> </a></td><td>Weather</td></tr><tr><td style="white-space:nowrap">work<a name="state-of-mind-association-codes-work"> </a></td><td>Work</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-association-codes"/>
+  <version value="1.0.0-ballot2"/>
+  <name value="StateOfMindAssociation"/>
+  <title value="State of Mind Association Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-23T17:08:04-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <description value="Codes for state of mind association"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <compositional value="false"/>
+  <content value="complete"/>
+  <count value="18"/>
+  <concept>
+    <code value="community"/>
+    <display value="Community"/>
+  </concept>
+  <concept>
+    <code value="currentEvents"/>
+    <display value="Current Events"/>
+  </concept>
+  <concept>
+    <code value="dating"/>
+    <display value="Dating"/>
+  </concept>
+  <concept>
+    <code value="education"/>
+    <display value="Education"/>
+  </concept>
+  <concept>
+    <code value="family"/>
+    <display value="Family"/>
+  </concept>
+  <concept>
+    <code value="fitness"/>
+    <display value="Fitness"/>
+  </concept>
+  <concept>
+    <code value="friends"/>
+    <display value="Friends"/>
+  </concept>
+  <concept>
+    <code value="health"/>
+    <display value="Health"/>
+  </concept>
+  <concept>
+    <code value="hobbies"/>
+    <display value="Hobbies"/>
+  </concept>
+  <concept>
+    <code value="identity"/>
+    <display value="Identity"/>
+  </concept>
+  <concept>
+    <code value="money"/>
+    <display value="Money"/>
+  </concept>
+  <concept>
+    <code value="partner"/>
+    <display value="Partner"/>
+  </concept>
+  <concept>
+    <code value="selfCare"/>
+    <display value="Self-Care"/>
+  </concept>
+  <concept>
+    <code value="spirituality"/>
+    <display value="Spirituality"/>
+  </concept>
+  <concept>
+    <code value="tasks"/>
+    <display value="Tasks"/>
+  </concept>
+  <concept>
+    <code value="travel"/>
+    <display value="Travel"/>
+  </concept>
+  <concept>
+    <code value="weather"/>
+    <display value="Weather"/>
+  </concept>
+  <concept>
+    <code value="work"/>
+    <display value="Work"/>
+  </concept>
+</CodeSystem>

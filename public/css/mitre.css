@@ -1,0 +1,38 @@
+.table {
+    width: 100%;
+}
+.markdown-toc { 
+    width: 348px !important;  
+}
+#ig-status {
+    color: white;
+    background-color: #23238E;
+    text-align: right;
+    margin-top: 0px !important;
+    padding-right: 10px;
+    padding-top: 15px;
+}
+
+#title {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10000;
+    color: white;
+    font-size: 240%;
+    padding-left: 10px;
+    font-weight: 200;   
+}
+#mitre {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    z-index: 10000;
+    color: white;
+    font-size: 200%;
+    padding-left: 10px;
+}
+:root {
+    --navbar-bg-color: #23238E; /* 2. Header container color */
+    --footer-container-bg-color: #23238E; /* 4. Footer container color */
+}

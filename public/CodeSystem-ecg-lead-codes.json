@@ -1,0 +1,111 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ecg-lead-codes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ecg-lead-codes</b></p><a name=\"ecg-lead-codes\"> </a><a name=\"hcecg-lead-codes\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/ecg-lead-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">appleWatchSimilarToLeadI<a name=\"ecg-lead-codes-appleWatchSimilarToLeadI\"> </a></td></tr><tr><td style=\"white-space:nowrap\">I<a name=\"ecg-lead-codes-I\"> </a></td></tr><tr><td style=\"white-space:nowrap\">II<a name=\"ecg-lead-codes-II\"> </a></td></tr><tr><td style=\"white-space:nowrap\">III<a name=\"ecg-lead-codes-III\"> </a></td></tr><tr><td style=\"white-space:nowrap\">aVR<a name=\"ecg-lead-codes-aVR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">aVL<a name=\"ecg-lead-codes-aVL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">aVF<a name=\"ecg-lead-codes-aVF\"> </a></td></tr><tr><td style=\"white-space:nowrap\">V1<a name=\"ecg-lead-codes-V1\"> </a></td></tr><tr><td style=\"white-space:nowrap\">V2<a name=\"ecg-lead-codes-V2\"> </a></td></tr><tr><td style=\"white-space:nowrap\">V3<a name=\"ecg-lead-codes-V3\"> </a></td></tr><tr><td style=\"white-space:nowrap\">V4<a name=\"ecg-lead-codes-V4\"> </a></td></tr><tr><td style=\"white-space:nowrap\">V5<a name=\"ecg-lead-codes-V5\"> </a></td></tr><tr><td style=\"white-space:nowrap\">V6<a name=\"ecg-lead-codes-V6\"> </a></td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pe"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  }],
+  "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/ecg-lead-codes",
+  "version" : "1.0.0-ballot2",
+  "name" : "EcgLead",
+  "title" : "ECG Lead Codes",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-04-23T17:08:04-05:00",
+  "publisher" : "HL7 International / Patient Empowerment",
+  "contact" : [{
+    "name" : "HL7 International / Patient Empowerment",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/patientempowerment"
+    }]
+  }],
+  "description" : "Codes for ECG induction",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "compositional" : false,
+  "content" : "complete",
+  "count" : 13,
+  "concept" : [{
+    "code" : "appleWatchSimilarToLeadI",
+    "display" : "appleWatchSimilarToLeadI"
+  },
+  {
+    "code" : "I",
+    "display" : "I"
+  },
+  {
+    "code" : "II",
+    "display" : "II"
+  },
+  {
+    "code" : "III",
+    "display" : "III"
+  },
+  {
+    "code" : "aVR",
+    "display" : "aVR"
+  },
+  {
+    "code" : "aVL",
+    "display" : "aVL"
+  },
+  {
+    "code" : "aVF",
+    "display" : "aVF"
+  },
+  {
+    "code" : "V1",
+    "display" : "V1"
+  },
+  {
+    "code" : "V2",
+    "display" : "V2"
+  },
+  {
+    "code" : "V3",
+    "display" : "V3"
+  },
+  {
+    "code" : "V4",
+    "display" : "V4"
+  },
+  {
+    "code" : "V5",
+    "display" : "V5"
+  },
+  {
+    "code" : "V6",
+    "display" : "V6"
+  }]
+}

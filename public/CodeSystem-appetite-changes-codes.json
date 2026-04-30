@@ -1,0 +1,79 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "appetite-changes-codes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem appetite-changes-codes</b></p><a name=\"appetite-changes-codes\"> </a><a name=\"hcappetite-changes-codes\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/appetite-changes-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">increased<a name=\"appetite-changes-codes-increased\"> </a></td><td>Increased</td><td>The user’s appetite increased.</td></tr><tr><td style=\"white-space:nowrap\">decreased<a name=\"appetite-changes-codes-decreased\"> </a></td><td>Decreased</td><td>The user’s appetite decreased.</td></tr><tr><td style=\"white-space:nowrap\">unspecified<a name=\"appetite-changes-codes-unspecified\"> </a></td><td>Unspecified</td><td>An unspecified change in appetite.</td></tr><tr><td style=\"white-space:nowrap\">noChange<a name=\"appetite-changes-codes-noChange\"> </a></td><td>No change</td><td>No change in the user’s appetite.</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pe"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  }],
+  "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/appetite-changes-codes",
+  "version" : "1.0.0-ballot2",
+  "name" : "AppetiteChanges",
+  "title" : "Appetite Changes Codes",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-04-23T17:08:04-05:00",
+  "publisher" : "HL7 International / Patient Empowerment",
+  "contact" : [{
+    "name" : "HL7 International / Patient Empowerment",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/patientempowerment"
+    }]
+  }],
+  "description" : "Codes expressing changes in appetite",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "compositional" : false,
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "increased",
+    "display" : "Increased",
+    "definition" : "The user’s appetite increased."
+  },
+  {
+    "code" : "decreased",
+    "display" : "Decreased",
+    "definition" : "The user’s appetite decreased."
+  },
+  {
+    "code" : "unspecified",
+    "display" : "Unspecified",
+    "definition" : "An unspecified change in appetite."
+  },
+  {
+    "code" : "noChange",
+    "display" : "No change",
+    "definition" : "No change in the user’s appetite."
+  }]
+}

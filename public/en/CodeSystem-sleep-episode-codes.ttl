@@ -1,0 +1,142 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/phr/CodeSystem/sleep-episode-codes> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "sleep-episode-codes"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem sleep-episode-codes</b></p><a name=\"sleep-episode-codes\"> </a><a name=\"hcsleep-episode-codes\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/sleep-episode-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">latencyToSleepOnset<a name=\"sleep-episode-codes-latencyToSleepOnset\"> </a></td><td>Latency to sleep onset</td></tr><tr><td style=\"white-space:nowrap\">latencyToArising<a name=\"sleep-episode-codes-latencyToArising\"> </a></td><td>Latency to arising</td></tr><tr><td style=\"white-space:nowrap\">totalSleepTime<a name=\"sleep-episode-codes-totalSleepTime\"> </a></td><td>Total sleep time</td></tr><tr><td style=\"white-space:nowrap\">coreSleepDuration<a name=\"sleep-episode-codes-coreSleepDuration\"> </a></td><td>Core sleep Duration</td></tr><tr><td style=\"white-space:nowrap\">coreSleepPercentage<a name=\"sleep-episode-codes-coreSleepPercentage\"> </a></td><td>Core sleep Percentage</td></tr><tr><td style=\"white-space:nowrap\">deepSleepDuration<a name=\"sleep-episode-codes-deepSleepDuration\"> </a></td><td>Deep sleep duration</td></tr><tr><td style=\"white-space:nowrap\">deepSleepPercentage<a name=\"sleep-episode-codes-deepSleepPercentage\"> </a></td><td>Deep sleep percentage</td></tr><tr><td style=\"white-space:nowrap\">remSleepDuration<a name=\"sleep-episode-codes-remSleepDuration\"> </a></td><td>Rem sleep duration</td></tr><tr><td style=\"white-space:nowrap\">remSleepPercentage<a name=\"sleep-episode-codes-remSleepPercentage\"> </a></td><td>Rem sleep percentage</td></tr><tr><td style=\"white-space:nowrap\">wakeAfterSleepOnset<a name=\"sleep-episode-codes-wakeAfterSleepOnset\"> </a></td><td>Wake after sleep onset</td></tr><tr><td style=\"white-space:nowrap\">numberOfAwakenings<a name=\"sleep-episode-codes-numberOfAwakenings\"> </a></td><td>Number of awakenings</td></tr><tr><td style=\"white-space:nowrap\">sleepEfficiencyPercentage<a name=\"sleep-episode-codes-sleepEfficiencyPercentage\"> </a></td><td>Sleep efficiency percentage</td></tr><tr><td style=\"white-space:nowrap\">isMainSleep<a name=\"sleep-episode-codes-isMainSleep\"> </a></td><td>Is main sleep</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "pe"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 1 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/uv/phr/CodeSystem/sleep-episode-codes"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/uv/phr/CodeSystem/sleep-episode-codes>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0-ballot2"] ; # 
+  fhir:name [ fhir:v "SleepEpisode"] ; # 
+  fhir:title [ fhir:v "Sleep Episode Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-04-23T17:08:04-05:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientempowerment" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes for sleep episodes"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:compositional [ fhir:v false] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "13"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "latencyToSleepOnset" ] ;
+     fhir:display [ fhir:v "Latency to sleep onset" ]
+  ] [
+     fhir:code [ fhir:v "latencyToArising" ] ;
+     fhir:display [ fhir:v "Latency to arising" ]
+  ] [
+     fhir:code [ fhir:v "totalSleepTime" ] ;
+     fhir:display [ fhir:v "Total sleep time" ]
+  ] [
+     fhir:code [ fhir:v "coreSleepDuration" ] ;
+     fhir:display [ fhir:v "Core sleep Duration" ]
+  ] [
+     fhir:code [ fhir:v "coreSleepPercentage" ] ;
+     fhir:display [ fhir:v "Core sleep Percentage" ]
+  ] [
+     fhir:code [ fhir:v "deepSleepDuration" ] ;
+     fhir:display [ fhir:v "Deep sleep duration" ]
+  ] [
+     fhir:code [ fhir:v "deepSleepPercentage" ] ;
+     fhir:display [ fhir:v "Deep sleep percentage" ]
+  ] [
+     fhir:code [ fhir:v "remSleepDuration" ] ;
+     fhir:display [ fhir:v "Rem sleep duration" ]
+  ] [
+     fhir:code [ fhir:v "remSleepPercentage" ] ;
+     fhir:display [ fhir:v "Rem sleep percentage" ]
+  ] [
+     fhir:code [ fhir:v "wakeAfterSleepOnset" ] ;
+     fhir:display [ fhir:v "Wake after sleep onset" ]
+  ] [
+     fhir:code [ fhir:v "numberOfAwakenings" ] ;
+     fhir:display [ fhir:v "Number of awakenings" ]
+  ] [
+     fhir:code [ fhir:v "sleepEfficiencyPercentage" ] ;
+     fhir:display [ fhir:v "Sleep efficiency percentage" ]
+  ] [
+     fhir:code [ fhir:v "isMainSleep" ] ;
+     fhir:display [ fhir:v "Is main sleep" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

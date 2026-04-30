@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Longitudinal Records - Personal Health Records v1.0.0-ballot2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"22"}
+    h3,h4,h5,h6{--heading-prefix:"22"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Personal Health Records</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot2 - STU 1 ballot
+
+
+
+  <img alt="International flag" src="../assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="datamodel.html">Longitudinal Data Model</a>
+      </li>
+      <li>
+        <a href="api.html">API Endpoints</a>
+      </li>
+      <li>
+        <a href="recordkeeping.html">File Formats</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="history.html">History</a>
+      </li>
+      <li>
+        <a href="security.html">Security</a>
+      </li>
+      <li>
+        <a href="functionality.html">Functional Model</a>
+      </li>
+      <li>
+        <a href="annotations.html">Annotations</a>
+      </li>
+      <li>
+        <a href="longitudinal.html">Merging and Versioning</a>
+      </li>
+      <li>
+        <a href="pghd.html">Patient Generated Health Data</a>
+      </li>
+      <li>
+        <a href="physiology.html">Physiology Domains</a>
+      </li>
+      <li>
+        <a href="operating-systems.html">Operating Systems</a>
+      </li>
+      <li>
+        <a href="logical-models.html">Logical Models</a>
+      </li>
+      <li>
+        <a href="conformance.html">Conformance</a>
+      </li>
+      <li>
+        <a href="algorithms.html">Algorithms</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Personas
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="personas-index.html">Index</a>
+      </li>
+      <li>
+        <a href="persona-thompson-family.html">Thompson Familiy</a>
+      </li>
+      <li>
+        <a href="persona-journey-b.html">Cancer - Adult</a>
+      </li>
+      <li>
+        <a href="persona-william.html">Cancer - Pediatric</a>
+      </li>
+      <li>
+        <a href="persona-journey-e.html">Chronic Illness (Lupus)</a>
+      </li>
+      <li>
+        <a href="persona-journey-d.html">Long COVID</a>
+      </li>
+      <li>
+        <a href="persona-journey-a.html">Patient Relocation</a>
+      </li>
+      <li>
+        <a href="persona-journey-c.html">Sports Outpatient / Cardiac</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Longitudinal Records</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Personal Health Records - Local Development build (v1.0.0-ballot2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.org/fhir/uv/phr/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Longitudinal Records</h2>
+  
+
+
+
+  <table class="colsi" data-fhir="generated">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standards Status">Informative</a>
+        
+      </td>
+  
+  
+      <td id="toggle-change-display" style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#architecture-features" id="markdown-toc-architecture-features">Architecture Features</a>    <ul>
+      <li><a href="#authoritative-repository-management" id="markdown-toc-authoritative-repository-management">Authoritative Repository Management</a></li>
+      <li><a href="#branching-and-merging" id="markdown-toc-branching-and-merging">Branching and Merging</a></li>
+      <li><a href="#versioning-and-change-tracking" id="markdown-toc-versioning-and-change-tracking">Versioning and Change Tracking</a></li>
+      <li><a href="#replication-and-synchronization" id="markdown-toc-replication-and-synchronization">Replication and Synchronization</a></li>
+      <li><a href="#rollback-and-recovery" id="markdown-toc-rollback-and-recovery">Rollback and Recovery</a></li>
+      <li><a href="#offline-operation-and-conflict-resolution" id="markdown-toc-offline-operation-and-conflict-resolution">Offline Operation and Conflict Resolution</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h4 id="record-lifecycle-operations">Record Lifecycle Operations</h4>
+
+<p>When a Personal Health Record (PHR) obtains data from external systems, the initial longitudinal record exchange may be performed using an Electronic Health Information (EHI) export capability, such as the HL7 International EHI Export API / Bulk FHIR export pattern, which provides a patient-scoped mechanism to retrieve a comprehensive snapshot of longitudinal clinical data from an originating EHR. The HL7 International Bulk Data Access specification defines asynchronous export semantics suitable for transferring complete patient records or large clinical histories.</p>
+
+<p>After an initial export has been imported into a PHR, subsequent exchanges should avoid requiring full re-export whenever possible. Instead, incremental updates may be conveyed as atomic changes using mechanisms such as SMART Health Links, Patient Data Receipts, or event-driven notifications. These patterns allow a receiving PHR to determine what has changed since the prior import and apply only the newly available content, preserving provenance and reducing duplication.</p>
+
+<p>Where event synchronization is needed, HL7 International FHIRCast can provide session- or event-based notification that relevant clinical context has changed, allowing a PHR or downstream system to request only newly available resources rather than repeating a full export. In this model, FHIRCast acts as a trigger, while Smart Health Links or similar exchange artifacts provide retrievable payload references.</p>
+
+<p>Taken together, these mechanisms create a lifecycle comparable to distributed source-control workflows:</p>
+
+<p>Clone: initial longitudinal record acquisition through EHI export / bulk patient export
+Pull: retrieval of incremental changes from external systems
+Commit: application of atomic updates into the local longitudinal record
+Merge: reconciliation of overlapping data received from multiple EHR sources</p>
+
+<p>This pattern is especially important when a PHR imports multiple exports over time, including repeated exports from the same EHR and exports from different organizations. The PHR SHOULD preserve source provenance, compare resource identity and version metadata, and reconcile overlapping records using stable identifiers, timestamps, and provenance references so that newer representations supplement rather than overwrite clinically significant prior information.</p>
+
+<p>A practical merge strategy is to treat the imported export as a source branch: resources already present in the PHR may be matched using logical identifiers, version metadata, or Provenance relationships, while newly received resources are appended and conflicting updates are retained with explicit provenance until reconciliation rules are applied.</p>
+
+<p><img src="git-like-operations.png" alt="git-like-operations" width="100%" /></p>
+
+<h4 id="consolidation-of-distributed-records">Consolidation of Distributed Records</h4>
+
+<p>This is a key aspect of the PHR approach, as it allows for both patient-initiated data sharing and provider-initiated data retrieval.</p>
+
+<p><img src="GitFlowForPhrs.png" alt="GitFlowForPhrs" width="100%" /></p>
+
+<p>Key aspects of the above diagram include:</p>
+
+<ul>
+  <li>The EHR system serves as an authoritative source of truth for the patient's health data at that organization or healthcare system. Updates and changes originate from the EHR.</li>
+  <li>Ancillary services like labs and radiology systems have synchronized their records with the EHR, sending new data and receiving updates.</li>
+  <li>The PHR system, which the patient has access to, also synchronizes with the EHR, allowing the patient to view, contribute to, and manage their health information.</li>
+  <li>The patient's own health apps and personal devices can connect to the PHR system, pulling data and sending new health metrics or self-reported information to be incorporated into the patient's comprehensive record.</li>
+  <li>The diagram depicts a branching model, with the EHR acting as the "main" branch, and various "feature" branches representing the different connected systems and devices. Merging changes between these branches, similar to a Git workflow, ensures data integrity and consistency.</li>
+</ul>
+
+<p>This approach offers several benefits: it empowers patients to be active participants in their healthcare, enables real-time data sharing between providers and ancillary services, and creates a comprehensive, longitudinal view of the patient's health history. The use of standardized data formats and versioning principles helps address challenges around data silos, fragmentation, and lack of interoperability that often plague traditional healthcare IT systems.</p>
+
+<h2 id="architecture-features">Architecture Features</h2>
+
+<p>A directed acyclic graph (DAG) interpretation of Personal Health Records supports several architectural features that implementers are encouraged to consider.</p>
+
+<h3 id="authoritative-repository-management">Authoritative Repository Management</h3>
+
+<p>Both EHR and PHR systems may function as legally recognized repositories of patient medical information, depending on jurisdiction and operational context. In provider-operated environments, clinicians and healthcare organizations are responsible for maintaining records that are complete, current, and clinically reliable to the fullest extent possible. These repositories are increasingly accessible to patients through regulatory frameworks such as the 21st Century Cures Act.</p>
+
+<p>A PHR does not replace the originating EHR as the authoritative source for provider-entered data, but may maintain patient-curated longitudinal copies that combine data from multiple authoritative systems.</p>
+
+<h3 id="branching-and-merging">Branching and Merging</h3>
+
+<p>Each connected system (for example laboratories, radiology systems, specialist EHRs, PHRs, or patient applications) maintains its own representation of patient information and may be viewed conceptually as a branch derived from one or more upstream repositories.</p>
+
+<p>When synchronization is required, a system retrieves patient data using standard FHIR interactions such as <code class="language-plaintext highlighter-rouge">GET</code>, search, or export operations. The receiving system then incorporates that information into its own local repository according to internal storage and reconciliation rules.</p>
+
+<p>When updates are returned to another system, resources are submitted using FHIR <code class="language-plaintext highlighter-rouge">POST</code>, <code class="language-plaintext highlighter-rouge">PUT</code>, or <code class="language-plaintext highlighter-rouge">PATCH</code> interactions, depending on whether new resources are created or existing resources are updated. The receiving repository applies its own merge policies, identifier matching rules, and conflict handling to determine whether incoming content creates a new version, updates an existing resource, or coexists as an alternate representation.</p>
+
+<p>For PHR implementations, this merge process is especially important because repeated imports may originate from:</p>
+
+<ul>
+  <li>newer exports from the same EHR</li>
+  <li>exports from additional EHR systems</li>
+  <li>patient-entered observations or documents</li>
+  <li>linked records delivered through SMART Health Links or similar exchange patterns</li>
+</ul>
+
+<p>A practical merge strategy is to compare resource identifiers, business identifiers, timestamps, and provenance relationships before deciding whether resources represent replacement, supplementation, or coexistence.</p>
+
+<h3 id="versioning-and-change-tracking">Versioning and Change Tracking</h3>
+
+<p>FHIR resource versioning provides native support for longitudinal change tracking through <code class="language-plaintext highlighter-rouge">meta.versionId</code>, <code class="language-plaintext highlighter-rouge">meta.lastUpdated</code>, and server-maintained history interactions.</p>
+
+<p>Each accepted update to a resource may create a new server version that can later be retrieved using:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vread</code> to access a specific historical version of a resource</li>
+  <li><code class="language-plaintext highlighter-rouge">history-instance</code> to retrieve the version history for an individual resource</li>
+  <li><code class="language-plaintext highlighter-rouge">history-type</code> to review change activity across a resource type</li>
+</ul>
+
+<p>For example:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GET [base]/Patient/[id]/_history</code> retrieves the sequence of prior versions</li>
+  <li><code class="language-plaintext highlighter-rouge">GET [base]/Patient/[id]/_history/[versionId]</code> retrieves a specific version (<code class="language-plaintext highlighter-rouge">vread</code>)</li>
+</ul>
+
+<p>These capabilities allow implementers to treat resource evolution similarly to a versioned filesystem: each accepted change becomes an addressable historical state rather than replacing prior content without traceability.</p>
+
+<p>Where available, <code class="language-plaintext highlighter-rouge">Provenance</code> resources should accompany updates so that systems can preserve author, timestamp, source system, and reason for change.</p>
+
+<p>In this sense, resource history functions as a version-addressable clinical object store, while provenance functions as the commit metadata associated with each accepted change.</p>
+
+<h3 id="replication-and-synchronization">Replication and Synchronization</h3>
+
+<p>When a new PHR or downstream system connects, it may obtain an initial longitudinal copy of patient data through EHI Export, Bulk FHIR export, or patient-scoped retrieval APIs.</p>
+
+<p>Subsequent synchronization may use incremental retrieval patterns rather than repeating full export operations. Systems may combine:</p>
+
+<ul>
+  <li>bulk export for initial acquisition</li>
+  <li>SMART Health Links for incremental payload exchange</li>
+  <li>Patient Data Receipts for atomic update references</li>
+  <li>FHIRCast event notifications to signal that new data is available</li>
+</ul>
+
+<p>This supports a clone-and-pull lifecycle in which only newly available content is transferred after the initial exchange.</p>
+
+<h3 id="rollback-and-recovery">Rollback and Recovery</h3>
+
+<p>FHIR does not define Git-style rollback commands directly; instead, prior resource versions remain accessible through history interactions when supported by the server.</p>
+
+<p>If an incorrect update is identified, a system may:</p>
+
+<ul>
+  <li>retrieve a prior version using <code class="language-plaintext highlighter-rouge">vread</code></li>
+  <li>resubmit that prior state as a new update</li>
+  <li>preserve the corrective action through a new version entry</li>
+</ul>
+
+<p>This creates an auditable correction chain rather than deleting historical states.</p>
+
+<h3 id="offline-operation-and-conflict-resolution">Offline Operation and Conflict Resolution</h3>
+
+<p>PHRs and other intermittently connected systems may maintain local copies of patient data and synchronize periodically.</p>
+
+<p>Because offline systems may update data independently, reconciliation should consider:</p>
+
+<ul>
+  <li>resource identity</li>
+  <li>version identifiers</li>
+  <li>business identifiers</li>
+  <li>provenance</li>
+  <li>timestamp ordering</li>
+</ul>
+
+<p>Where conflicts cannot be safely resolved automatically, systems should preserve both representations until human or policy-based reconciliation occurs.</p>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
+          Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-04-23 17:08:00 -0500">
+    2026-04-23
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir/uv/phr/history.html">Version History</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

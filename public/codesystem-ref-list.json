@@ -1,8 +1,224 @@
 {
   "codeSystems" : [
     {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/appetite-changes-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "AppetiteChanges",
+      "title" : "Appetite Changes Codes",
+      "description" : "Codes expressing changes in appetite",
+      "uses" : {
+      },
+      "ValueSet-appetite-changes.html" : "Symptom Appetite Changes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/body-temperature-measurement-location-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "BodyTemperatureMeasurementLocation",
+      "title" : "Body Temperature Measurement Location Codes",
+      "description" : "Code indicating the location where the body temperature was measured",
+      "uses" : {
+      },
+      "ValueSet-body-temperature-measurement-location.html" : "Body Temperature Measurement Location Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/ecg-classification-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "EcgClassification",
+      "title" : "ECG Classification Codes",
+      "description" : "Codes for classification of ECG waveforms",
+      "uses" : {
+      },
+      "ValueSet-observation-ecg-classification-codes.html" : "ECG Classification Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "Ecg",
+      "title" : "ECG Classification Codes",
+      "description" : "Codes for ECG and related items",
+      "uses" : {
+      },
+      "ValueSet-observation-ecgcodes.html" : "ECG Lead Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/ecg-lead-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "EcgLead",
+      "title" : "ECG Lead Codes",
+      "description" : "Codes for ECG induction",
+      "uses" : {
+      },
+      "ValueSet-observation-ecg-lead-codes.html" : "ECG Lead Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/ecg-symptoms-status-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "EcgSymptomsStatus",
+      "title" : "ECG Symptoms Status Codes",
+      "description" : "Code indicating whether or not the user's symptoms are input during ECG waveform acquisition",
+      "uses" : {
+      },
+      "ValueSet-observation-ecg-symptoms-status-codes.html" : "ECG Symptoms Status Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/gad7-risk-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "GAD7Risk",
+      "title" : "GAD-7 Assesment Risk Codes",
+      "description" : "Code for GAD-7 Assesment Risk",
+      "uses" : {
+      },
+      "ValueSet-observation-gad7-risk-codes.html" : "Observation GAD7 Risk Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ObservationPGHD",
+      "title" : "Observation PGHD Codes",
+      "description" : "Code defining the type of PGHD data",
+      "uses" : {
+      },
+      "ValueSet-observation-uvexposure-codes.html" : "Observation UVExposure Codes",
+      "ValueSet-observation-body-measurements-codes.html" : "Observation BodyMeasurements Codes",
+      "ValueSet-observation-lab-results-codes.html" : "Observation LabResults Codes",
+      "ValueSet-observation-mindfulness-codes.html" : "Observation Mindfulness Codes",
+      "ConceptMap-symptom-pghd-to-snomedct.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-pghd-to-snomedct|1.0.0-ballot2]",
+      "ValueSet-observation-activity-codes.html" : "Observation Activity Codes",
+      "ValueSet-observation-hearing-codes.html" : "Observation Hearing Codes",
+      "ValueSet-observation-symptom-codes.html" : "Observation Symptom Codes",
+      "ValueSet-observation-nutrition-codes.html" : "Observation Nutrition Codes",
+      "ValueSet-observation-vital-signs-codes.html" : "Observation Vitalsigns Codes",
+      "ValueSet-observation-sleep-codes.html" : "Observation Sleep Codes",
+      "ValueSet-observation-mind-codes.html" : "Observation Mind Codes",
+      "ValueSet-observation-selfcare-codes.html" : "Observation SelfCare Codes",
+      "ValueSet-observation-alchol-consumption-codes.html" : "Observation AlcholConsumption Codes",
+      "ValueSet-observation-mobility-codes.html" : "Observation Mobility Codes",
+      "ValueSet-observation-reproductive-health-codes.html" : "Observation ReproductiveHealth Codes",
+      "ValueSet-observation-workout-codes.html" : "Observation Workout Codes",
+      "ValueSet-observation-diving-codes.html" : "Observation Diving Codes",
+      "ConceptMap-symptom-snomedct-to-pghd.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd|1.0.0-ballot2]"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/phq9-risk-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "PHQ9Risk",
+      "title" : "PHQ-9 Assesment Risk Codes",
+      "description" : "Code for PHQ-9 Assesment Risk",
+      "uses" : {
+      },
+      "ValueSet-observation-phq9-risk-codes.html" : "Observation PHQ9Risk Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/presence-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "SymptomPresence",
+      "title" : "Symptom Presence Codes",
+      "description" : "Code for presence or absence of symptoms",
+      "uses" : {
+      },
+      "ValueSet-symptom-presence.html" : "Symptom Presence"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/scored-assessment-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "ScoredAssessment",
+      "title" : "Scored Assessment Codes",
+      "description" : "Code for scored assessment",
+      "uses" : {
+      },
+      "ValueSet-observation-scored-assessment-codes.html" : "Observation Scored Assessment Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/sleep-analysis-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "SleepAnalysis",
+      "title" : "Sleep Analysis Codes",
+      "description" : "Codes for stages of sleep",
+      "uses" : {
+      },
+      "ValueSet-sleep-analysis.html" : "Sleep Analysis"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-association-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "StateOfMindAssociation",
+      "title" : "State of Mind Association Codes",
+      "description" : "Codes for state of mind association",
+      "uses" : {
+      },
+      "ValueSet-observation-state-of-mind-association-codes.html" : "Observation State of Mind Association Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "StateOfMind",
+      "title" : "State of Mind Codes",
+      "description" : "Code for state of mind",
+      "uses" : {
+      },
+      "ValueSet-observation-state-of-mind-codes.html" : "Observation State of Mind Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-kind-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "StateOfMindKind",
+      "title" : "State of Mind Kind Codes",
+      "description" : "Codes for state of mind kind",
+      "uses" : {
+      },
+      "ValueSet-observation-state-of-mind-kind-codes.html" : "Observation State of Mind Kind Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-label-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "StateOfMindLabel",
+      "title" : "State of Mind Label Codes",
+      "description" : "Codes for state of mind label",
+      "uses" : {
+      },
+      "ValueSet-observation-state-of-mind-label-codes.html" : "Observation State of Mind Label Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-valence-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "StateOfMindValence",
+      "title" : "State of Mind Valence Codes",
+      "description" : "Codes for state of mind valence",
+      "uses" : {
+      },
+      "ValueSet-observation-state-of-mind-valence-codes.html" : "Observation State of Mind Valence Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/symptom-severity-codes",
+      "version" : "1.0.0-ballot2",
+      "status" : "active",
+      "name" : "SymptomSeverity",
+      "title" : "Symptom Severity Codes",
+      "description" : "Code for degree of symptoms",
+      "uses" : {
+      },
+      "ValueSet-symptom-severity.html" : "Symptom Severity"
+    },
+    {
       "url" : "http://loinc.org",
-      "version" : "3.1.0",
+      "version" : "3.0.1",
       "status" : "active",
       "name" : "LOINC",
       "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
@@ -10,7 +226,10 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
-      "ValueSet-pcd-sleep-observation-code.html" : "Patient contributed data: sleep observation code"
+      "ValueSet-pcd-sleep-observation-code.html" : "Patient contributed data: sleep observation code",
+      "http://hl7.org/fhir/R4/valueset-observation-vitalsignresult.html" : "Vital Signs",
+      "http://hl7.org/fhir/uv/ips/STU1.1/ValueSet-pregnancy-status-uv-ips.html" : "Pregnancy Status - IPS",
+      "ValueSet-observation-scored-assessment-score-codes.html" : "Observation State of Mind Codes"
     },
     {
       "url" : "http://snomed.info/sct",
@@ -23,7 +242,10 @@
       "uses" : {
       },
       "ValueSet-pcd-sleep-observation-code.html" : "Patient contributed data: sleep observation code",
-      "ValueSet-pcd-sleep-observation-value.html" : "Patient contributed data: sleep stage value"
+      "ConceptMap-symptom-pghd-to-snomedct.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-pghd-to-snomedct|1.0.0-ballot2]",
+      "ValueSet-observation-symptom-snomedct-codes.html" : "Observation Symptom SNOMED CT Codes",
+      "ValueSet-pcd-sleep-observation-value.html" : "Patient contributed data: sleep stage value",
+      "ConceptMap-symptom-snomedct-to-pghd.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd|1.0.0-ballot2]"
     }
   ]
 }

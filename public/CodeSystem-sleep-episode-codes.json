@@ -1,0 +1,111 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "sleep-episode-codes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem sleep-episode-codes</b></p><a name=\"sleep-episode-codes\"> </a><a name=\"hcsleep-episode-codes\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/sleep-episode-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">latencyToSleepOnset<a name=\"sleep-episode-codes-latencyToSleepOnset\"> </a></td><td>Latency to sleep onset</td></tr><tr><td style=\"white-space:nowrap\">latencyToArising<a name=\"sleep-episode-codes-latencyToArising\"> </a></td><td>Latency to arising</td></tr><tr><td style=\"white-space:nowrap\">totalSleepTime<a name=\"sleep-episode-codes-totalSleepTime\"> </a></td><td>Total sleep time</td></tr><tr><td style=\"white-space:nowrap\">coreSleepDuration<a name=\"sleep-episode-codes-coreSleepDuration\"> </a></td><td>Core sleep Duration</td></tr><tr><td style=\"white-space:nowrap\">coreSleepPercentage<a name=\"sleep-episode-codes-coreSleepPercentage\"> </a></td><td>Core sleep Percentage</td></tr><tr><td style=\"white-space:nowrap\">deepSleepDuration<a name=\"sleep-episode-codes-deepSleepDuration\"> </a></td><td>Deep sleep duration</td></tr><tr><td style=\"white-space:nowrap\">deepSleepPercentage<a name=\"sleep-episode-codes-deepSleepPercentage\"> </a></td><td>Deep sleep percentage</td></tr><tr><td style=\"white-space:nowrap\">remSleepDuration<a name=\"sleep-episode-codes-remSleepDuration\"> </a></td><td>Rem sleep duration</td></tr><tr><td style=\"white-space:nowrap\">remSleepPercentage<a name=\"sleep-episode-codes-remSleepPercentage\"> </a></td><td>Rem sleep percentage</td></tr><tr><td style=\"white-space:nowrap\">wakeAfterSleepOnset<a name=\"sleep-episode-codes-wakeAfterSleepOnset\"> </a></td><td>Wake after sleep onset</td></tr><tr><td style=\"white-space:nowrap\">numberOfAwakenings<a name=\"sleep-episode-codes-numberOfAwakenings\"> </a></td><td>Number of awakenings</td></tr><tr><td style=\"white-space:nowrap\">sleepEfficiencyPercentage<a name=\"sleep-episode-codes-sleepEfficiencyPercentage\"> </a></td><td>Sleep efficiency percentage</td></tr><tr><td style=\"white-space:nowrap\">isMainSleep<a name=\"sleep-episode-codes-isMainSleep\"> </a></td><td>Is main sleep</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pe"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 1,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
+      }]
+    }
+  }],
+  "url" : "http://hl7.org/fhir/uv/phr/CodeSystem/sleep-episode-codes",
+  "version" : "1.0.0-ballot2",
+  "name" : "SleepEpisode",
+  "title" : "Sleep Episode Codes",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-04-23T17:08:04-05:00",
+  "publisher" : "HL7 International / Patient Empowerment",
+  "contact" : [{
+    "name" : "HL7 International / Patient Empowerment",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/patientempowerment"
+    }]
+  }],
+  "description" : "Codes for sleep episodes",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "compositional" : false,
+  "content" : "complete",
+  "count" : 13,
+  "concept" : [{
+    "code" : "latencyToSleepOnset",
+    "display" : "Latency to sleep onset"
+  },
+  {
+    "code" : "latencyToArising",
+    "display" : "Latency to arising"
+  },
+  {
+    "code" : "totalSleepTime",
+    "display" : "Total sleep time"
+  },
+  {
+    "code" : "coreSleepDuration",
+    "display" : "Core sleep Duration"
+  },
+  {
+    "code" : "coreSleepPercentage",
+    "display" : "Core sleep Percentage"
+  },
+  {
+    "code" : "deepSleepDuration",
+    "display" : "Deep sleep duration"
+  },
+  {
+    "code" : "deepSleepPercentage",
+    "display" : "Deep sleep percentage"
+  },
+  {
+    "code" : "remSleepDuration",
+    "display" : "Rem sleep duration"
+  },
+  {
+    "code" : "remSleepPercentage",
+    "display" : "Rem sleep percentage"
+  },
+  {
+    "code" : "wakeAfterSleepOnset",
+    "display" : "Wake after sleep onset"
+  },
+  {
+    "code" : "numberOfAwakenings",
+    "display" : "Number of awakenings"
+  },
+  {
+    "code" : "sleepEfficiencyPercentage",
+    "display" : "Sleep efficiency percentage"
+  },
+  {
+    "code" : "isMainSleep",
+    "display" : "Is main sleep"
+  }]
+}

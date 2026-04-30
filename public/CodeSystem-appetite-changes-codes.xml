@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="appetite-changes-codes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem appetite-changes-codes</b></p><a name="appetite-changes-codes"> </a><a name="hcappetite-changes-codes"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/appetite-changes-codes</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">increased<a name="appetite-changes-codes-increased"> </a></td><td>Increased</td><td>The user’s appetite increased.</td></tr><tr><td style="white-space:nowrap">decreased<a name="appetite-changes-codes-decreased"> </a></td><td>Decreased</td><td>The user’s appetite decreased.</td></tr><tr><td style="white-space:nowrap">unspecified<a name="appetite-changes-codes-unspecified"> </a></td><td>Unspecified</td><td>An unspecified change in appetite.</td></tr><tr><td style="white-space:nowrap">noChange<a name="appetite-changes-codes-noChange"> </a></td><td>No change</td><td>No change in the user’s appetite.</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/CodeSystem/appetite-changes-codes"/>
+  <version value="1.0.0-ballot2"/>
+  <name value="AppetiteChanges"/>
+  <title value="Appetite Changes Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-23T17:08:04-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <description value="Codes expressing changes in appetite"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <compositional value="false"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="increased"/>
+    <display value="Increased"/>
+    <definition value="The user’s appetite increased."/>
+  </concept>
+  <concept>
+    <code value="decreased"/>
+    <display value="Decreased"/>
+    <definition value="The user’s appetite decreased."/>
+  </concept>
+  <concept>
+    <code value="unspecified"/>
+    <display value="Unspecified"/>
+    <definition value="An unspecified change in appetite."/>
+  </concept>
+  <concept>
+    <code value="noChange"/>
+    <display value="No change"/>
+    <definition value="No change in the user’s appetite."/>
+  </concept>
+</CodeSystem>

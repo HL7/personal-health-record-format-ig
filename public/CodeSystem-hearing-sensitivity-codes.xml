@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="hearing-sensitivity-codes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem hearing-sensitivity-codes</b></p><a name="hearing-sensitivity-codes"> </a><a name="hchearing-sensitivity-codes"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/hearing-sensitivity-codes</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">frequency<a name="hearing-sensitivity-codes-frequency"> </a></td><td>Frequency</td><td>The frequency tested in the hearing test.</td></tr><tr><td style="white-space:nowrap">leftEarSensitivity<a name="hearing-sensitivity-codes-leftEarSensitivity"> </a></td><td>Left ear sensitivity</td><td>The sensitivity of the left ear.</td></tr><tr><td style="white-space:nowrap">rightEarSensitivity<a name="hearing-sensitivity-codes-rightEarSensitivity"> </a></td><td>Right ear sensitivity</td><td>The sensitivity of the right ear.</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/CodeSystem/hearing-sensitivity-codes"/>
+  <version value="1.0.0-ballot2"/>
+  <name value="HearingSensitivity"/>
+  <title value="Hearing Sensitivity Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-23T17:08:04-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <description value="Code indicating the type of value of the hearing test result"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <compositional value="false"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="frequency"/>
+    <display value="Frequency"/>
+    <definition value="The frequency tested in the hearing test."/>
+  </concept>
+  <concept>
+    <code value="leftEarSensitivity"/>
+    <display value="Left ear sensitivity"/>
+    <definition value="The sensitivity of the left ear."/>
+  </concept>
+  <concept>
+    <code value="rightEarSensitivity"/>
+    <display value="Right ear sensitivity"/>
+    <definition value="The sensitivity of the right ear."/>
+  </concept>
+</CodeSystem>

@@ -123,7 +123,7 @@ The section and header names for the following table can be found in the [Person
 | S.4.6.6 | Enrollment in Public Health Surveys | [Questionnaire](https://www.hl7.org/fhir/R4B/questionnaire.html) <br/> [QuestionnaireResponse](https://www.hl7.org/fhir/R4B/questionnaireresponse.html)| |
 
 #### Record and Trust Infrastructure
-RI. [Record Infrastructure](recordlifecycle.html)
+RI. [Record Infrastructure](recordkeeping.html#record-lifecycle)
 
 TI. [Trust Infrastructure](security.html)
 

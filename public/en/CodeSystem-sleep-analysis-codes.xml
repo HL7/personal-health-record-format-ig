@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="sleep-analysis-codes"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem sleep-analysis-codes</b></p><a name="sleep-analysis-codes"> </a><a name="hcsleep-analysis-codes"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/uv/phr/CodeSystem/sleep-analysis-codes</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">inBed<a name="sleep-analysis-codes-inBed"> </a></td><td>In bed</td><td>The user is in bed.</td></tr><tr><td style="white-space:nowrap">asleepUnspecified<a name="sleep-analysis-codes-asleepUnspecified"> </a></td><td>Asleep unspecified</td><td>The user is asleep, but the specific stage isn’t known.</td></tr><tr><td style="white-space:nowrap">awake<a name="sleep-analysis-codes-awake"> </a></td><td>Awake</td><td>The user is awake.</td></tr><tr><td style="white-space:nowrap">asleepREM<a name="sleep-analysis-codes-asleepREM"> </a></td><td>Asleep REM</td><td>The user is in REM sleep.</td></tr><tr><td style="white-space:nowrap">asleepCore<a name="sleep-analysis-codes-asleepCore"> </a></td><td>Asleep core</td><td>The user is in light or intermediate sleep.</td></tr><tr><td style="white-space:nowrap">asleepDeep<a name="sleep-analysis-codes-asleepDeep"> </a></td><td>Asleep deep</td><td>The user is in deep sleep.</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/CodeSystem/sleep-analysis-codes"/>
+  <version value="1.0.0-ballot2"/>
+  <name value="SleepAnalysis"/>
+  <title value="Sleep Analysis Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-23T17:08:04-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <description value="Codes for stages of sleep"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <compositional value="false"/>
+  <content value="complete"/>
+  <count value="6"/>
+  <concept>
+    <code value="inBed"/>
+    <display value="In bed"/>
+    <definition value="The user is in bed."/>
+  </concept>
+  <concept>
+    <code value="asleepUnspecified"/>
+    <display value="Asleep unspecified"/>
+    <definition value="The user is asleep, but the specific stage isn’t known."/>
+  </concept>
+  <concept>
+    <code value="awake"/>
+    <display value="Awake"/>
+    <definition value="The user is awake."/>
+  </concept>
+  <concept>
+    <code value="asleepREM"/>
+    <display value="Asleep REM"/>
+    <definition value="The user is in REM sleep."/>
+  </concept>
+  <concept>
+    <code value="asleepCore"/>
+    <display value="Asleep core"/>
+    <definition value="The user is in light or intermediate sleep."/>
+  </concept>
+  <concept>
+    <code value="asleepDeep"/>
+    <display value="Asleep deep"/>
+    <definition value="The user is in deep sleep."/>
+  </concept>
+</CodeSystem>
