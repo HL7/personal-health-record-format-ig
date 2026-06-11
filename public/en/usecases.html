@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Use Cases - Personal Health Records v1.0.0-ballot2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Personal Health Records</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot2 - STU 1 ballot
+
+
+
+  <img alt="International flag" src="../assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="datamodel.html">Longitudinal Data Model</a>
+      </li>
+      <li>
+        <a href="api.html">API Endpoints</a>
+      </li>
+      <li>
+        <a href="recordkeeping.html">File Formats</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="usecases.html">Use Cases</a>
+      </li>
+      <li>
+        <a href="history.html">History</a>
+      </li>
+      <li>
+        <a href="security.html">Security</a>
+      </li>
+      <li>
+        <a href="functionality.html">Functional Model</a>
+      </li>
+      <li>
+        <a href="annotations.html">Annotations</a>
+      </li>
+      <li>
+        <a href="longitudinal.html">Merging and Versioning</a>
+      </li>
+      <li>
+        <a href="pghd.html">Patient Generated Health Data</a>
+      </li>
+      <li>
+        <a href="physiology.html">Physiology Domains</a>
+      </li>
+      <li>
+        <a href="operating-systems.html">Operating Systems</a>
+      </li>
+      <li>
+        <a href="logical-models.html">Logical Models</a>
+      </li>
+      <li>
+        <a href="conformance.html">Conformance</a>
+      </li>
+      <li>
+        <a href="algorithms.html">Algorithms</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Personas
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="personas-index.html">Index</a>
+      </li>
+      <li>
+        <a href="persona-thompson-family.html">Thompson Family</a>
+      </li>
+      <li>
+        <a href="persona-journey-b.html">Cancer - Adult</a>
+      </li>
+      <li>
+        <a href="persona-william.html">Cancer - Pediatric</a>
+      </li>
+      <li>
+        <a href="persona-journey-e.html">Chronic Illness (Lupus)</a>
+      </li>
+      <li>
+        <a href="persona-journey-d.html">Long COVID</a>
+      </li>
+      <li>
+        <a href="persona-journey-a.html">Patient Relocation</a>
+      </li>
+      <li>
+        <a href="persona-journey-c.html">Sports Outpatient / Cardiac</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Use Cases</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Personal Health Records - Local Development build (v1.0.0-ballot2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.org/fhir/uv/phr/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Use Cases</h2>
+  
+
+
+
+  <table class="colsi" data-fhir="generated">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standards Status">Informative</a>
+        
+      </td>
+  
+  
+      <td id="toggle-change-display" style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#longitudinal-health-records" id="markdown-toc-longitudinal-health-records">Longitudinal Health Records</a></li>
+  <li><a href="#longitudinal-studies" id="markdown-toc-longitudinal-studies">Longitudinal Studies</a></li>
+  <li><a href="#snowbirds" id="markdown-toc-snowbirds">Snowbirds</a></li>
+  <li><a href="#symptom-tracking" id="markdown-toc-symptom-tracking">Symptom Tracking</a></li>
+  <li><a href="#long-covid" id="markdown-toc-long-covid">Long COVID</a></li>
+  <li><a href="#multiple-chronic-conditions" id="markdown-toc-multiple-chronic-conditions">Multiple Chronic Conditions</a></li>
+  <li><a href="#lifelog" id="markdown-toc-lifelog">Lifelog</a></li>
+  <li><a href="#healthy-living" id="markdown-toc-healthy-living">Healthy Living</a></li>
+  <li><a href="#differential-diagnoses" id="markdown-toc-differential-diagnoses">Differential Diagnoses</a></li>
+  <li><a href="#alternative-care" id="markdown-toc-alternative-care">Alternative Care</a></li>
+  <li><a href="#bring-your-own-device" id="markdown-toc-bring-your-own-device">Bring Your Own Device</a></li>
+  <li><a href="#foster-care-system" id="markdown-toc-foster-care-system">Foster Care System</a></li>
+  <li><a href="#migrantsimmigrants" id="markdown-toc-migrantsimmigrants">Migrants/Immigrants</a></li>
+  <li><a href="#climate-refugees" id="markdown-toc-climate-refugees">Climate Refugees</a></li>
+</ul>
+
+</div>
+<p>This guide is particularly interested in the problem of collecting and aggregating medical records from multiple healthcare systems and devices into a coherent whole.  In the healthcare industry, these types of compiled records are known as <code class="language-plaintext highlighter-rouge">longitudinal</code> records.  The following use cases illustrate the situations in which a Personal Health Record becomes valuable, along with narrative scenarios describing how a PHR supports each one.</p>
+
+<h3 id="longitudinal-health-records">Longitudinal Health Records</h3>
+
+<p>Assembly of records over a long time span; generally multiple decades (20 years or more), and possibly from different healthcare systems with different practices or standards of care.</p>
+
+<p>John, now 65, has received care from five different healthcare systems since childhood. When diagnosed with a rare condition, his current physician needs to review his complete medical history. Through John's PHR, historical medical documents from paper-based systems are digitized via scanning applications, while digital records from various Electronic Health Record (EHR) systems are imported through standardized FHIR APIs. Legacy data from obsolete systems is extracted, transformed, and loaded into his PHR through integration engines. This comprehensive repository allows his physician to analyze decades of lab results, medication history, and clinical notes in a unified timeline view.</p>
+
+<h3 id="longitudinal-studies">Longitudinal Studies</h3>
+
+<p>Clinical studies that follow up on patient results after 20 or more years. Very important for pediatric studies.</p>
+
+<p>Dr. Martinez is conducting research on childhood asthma treatments administered in the 1990s. Her research platform connects to participants' PHRs through secure research interfaces, allowing automated queries for specific data points while maintaining patient privacy. Participants use mobile study apps that synchronize with their PHRs to complete regular pulmonary function tests via Bluetooth-enabled spirometers. Historical paper records from the original study are digitized and tagged in the PHR with appropriate metadata. The PHR serves as both a data source and consent management tool, allowing participants to control which portions of their medical history are shared with researchers.</p>
+
+<h3 id="snowbirds">Snowbirds</h3>
+
+<p>Many patients have more than one home location, and may spend time in different parts of the country on a seasonal basis. This leads to medical records that are fragmented.</p>
+
+<p>Eleanor spends winters in Florida and summers in Michigan, receiving regular care for her diabetes in both locations. Her PHR serves as the central repository for health data from both healthcare networks, with bi-directional integration through FHIR-based exchange protocols. Her continuous glucose monitor and smart insulin pump upload data directly to her PHR via a smartphone app, regardless of her location. When she experiences an acute complication while in Florida, her temporary physician accesses her complete medication history and recent test results through a provider portal connected to her PHR, ensuring seamless care coordination between seasonal providers.</p>
+
+<h3 id="symptom-tracking">Symptom Tracking</h3>
+
+<p>Symptoms of an illness can evolve as the condition improves or worsens, impacted by such things as climate or diet or circumstances of life.</p>
+
+<p>Michael has been tracking his multiple sclerosis symptoms through a dedicated mobile app that synchronizes with his PHR. The app captures structured data on fatigue levels, mobility challenges, and cognitive symptoms, while also collecting environmental data from weather APIs and activity data from his smartwatch. His PHR correlates these inputs with medication administration times recorded by a smart pill dispenser. During quarterly appointments, his neurologist accesses this comprehensive dataset through an analytics dashboard connected to Michael's PHR, identifying seasonal patterns and stress-related flare-ups that inform personalized treatment adjustments.</p>
+
+<h3 id="long-covid">Long COVID</h3>
+
+<p>An example of an ongoing longitudinal study that has captured national and worldwide attention, as we continued to determine the long-term effects of COVID-19.</p>
+
+<p>Sarah, who contracted COVID in 2020, participates in a multi-institution research registry that tracks her persistent symptoms. Her PHR integrates data from multiple sources: pulmonary function tests from hospital equipment, cardiology assessments from specialized clinics, cognitive evaluations from telemedicine sessions, and daily symptom tracking from her smartphone app. A secure FHIR-based research gateway allows her to share selected PHR data with the national Long COVID Registry while maintaining control over her privacy preferences. Researchers can then aggregate anonymized data across thousands of participants while Sarah's healthcare team maintains access to her individual comprehensive record for treatment decisions.</p>
+
+<h3 id="multiple-chronic-conditions">Multiple Chronic Conditions</h3>
+
+<p>Not all medical conditions are reported to all healthcare providers. Conversely, specialists will report results for one area of medicine, which needs to be incorporated and reconciled with the patient's master record.</p>
+
+<p>Robert manages hypertension, type 2 diabetes, and depression with three different specialists. His PHR serves as the integration hub for data from multiple provider systems. His home blood pressure cuff, glucometer, and medication adherence tracking devices all transmit data wirelessly to his PHR through a home health hub device. The PHR applies reconciliation algorithms to identify medication conflicts and consolidate problem lists from different specialists. When Robert is hospitalized for an acute kidney injury, emergency providers access his comprehensive health summary through a secure provider portal connected to his PHR, receiving alerts about potential medication interactions and viewing recent lab value trends from all specialists.</p>
+
+<h3 id="lifelog">Lifelog</h3>
+
+<p>Digital records of an individual's daily activities collected continuously from wearable devices, smartphones, and smart home sensors, including step counts, sleep duration and quality, heart rate, and other biometric measurements that can be used for predictive and preemptive medicine by establishing baseline health patterns and detecting early warning signs of deterioration.</p>
+
+<p>Priya has worn a smartwatch and used a sleep-tracking ring for the past six years, with step counts, heart rate, heart rate variability, and sleep stages flowing continuously into her PHR through device integration APIs. Her smart scale and home blood pressure cuff contribute weekly measurements, building a multi-year baseline of her normal physiological patterns. When the PHR's analytics detect a sustained elevation in her resting heart rate and a decline in her sleep quality over several weeks, it flags the anomaly for her review. At her next appointment, her physician examines the trend data alongside new lab work and identifies an emerging thyroid condition months earlier than symptoms alone would have prompted a visit, allowing treatment to begin before significant deterioration.</p>
+
+<h3 id="healthy-living">Healthy Living</h3>
+
+<p>Proactive wellness management focused on disease prevention rather than treatment, where individuals without acute conditions use their PHR to optimize lifestyle factors such as nutrition tracking, physical activity goals, sleep hygiene, stress management, and preventive screening schedules to extend healthy life expectancy.</p>
+
+<p>Marcus, 42 and in good health, uses his PHR as the hub for his preventive care strategy. His nutrition tracking app, gym workout logs, and meditation app all synchronize with his PHR, alongside annual physical results and routine lab panels imported from his primary care provider via FHIR APIs. The PHR tracks his preventive screening schedule, reminding him when he is due for a cholesterol panel, dental cleaning, or, as he approaches 45, his first colorectal cancer screening. Because his family history of cardiovascular disease is recorded in the PHR, it surfaces guideline-based recommendations for earlier and more frequent lipid monitoring. At his annual checkup, his physician reviews a year of lifestyle data alongside lab trends, and together they set evidence-based goals for the year ahead.</p>
+
+<h3 id="differential-diagnoses">Differential Diagnoses</h3>
+
+<p>Case presentation for rare diseases can require differential diagnosis, as clinicians generate hypotheses and tests for one condition after another to explain a set of symptoms.</p>
+
+<p>After years of unexplained joint pain and fatigue, Lisa has seen rheumatologists, neurologists, and immunologists across three healthcare systems. Her PHR maintains a comprehensive timeline of symptoms, documented through a combination of provider notes, patient-reported outcomes from mobile questionnaires, and movement data from her fitness tracker. Imaging studies from various facilities are stored in the PHR's integrated imaging repository, accessible through DICOM viewers. Diagnostic algorithms analyze this longitudinal data to highlight patterns and correlations. Lisa's new specialist reviews this unified record through a clinical portal, enabling a comprehensive understanding of all previous workups and tests without unnecessary duplication.</p>
+
+<h3 id="alternative-care">Alternative Care</h3>
+
+<p>Massage, Acupuncture, etc. - Patients may wish to track alternative modalities of healthcare that are not recognized or tracked by a healthcare provider or network.</p>
+
+<p>David receives acupuncture and chiropractic care for chronic back pain alongside conventional medical treatments. His PHR includes specialized modules for documenting complementary therapies that may not be captured in traditional EHRs. His acupuncturist and chiropractor use dedicated provider portals to document treatments directly in his PHR, while David uses a mobile app to track pain levels and functional improvements after each session. This data flows into his consolidated health record, alongside conventional medical treatments. When David's primary physician accesses the PHR during appointments, they can view the complete care regimen and identify potential correlations between alternative therapies and changes in his conventional treatment needs.</p>
+
+<h3 id="bring-your-own-device">Bring Your Own Device</h3>
+
+<p>Patients may wish to utilize consumer medical devices for tracking their own health.</p>
+
+<p>Amara uses a continuous glucose monitor and smart insulin pump to manage her type 1 diabetes. These devices connect to her smartphone via Bluetooth, with data automatically flowing into her PHR through a device integration hub. Dietary information from her nutrition tracking app and physical activity data from her sports watch are also synchronized to her PHR, providing context for glucose fluctuations. The PHR applies analytics to identify patterns and generates visualization dashboards. Amara's endocrinologist accesses this comprehensive dataset through a clinical portal during quarterly appointments, with the PHR highlighting significant trends and anomalies between visits. This integrated approach allows for more precise insulin dosage adjustments based on lifestyle factors.</p>
+
+<h3 id="foster-care-system">Foster Care System</h3>
+
+<p>Custody and care of foster children, especially when it crosses state lines, can be complicated; requiring detailed record keeping to align both medical and court proceedings.</p>
+
+<p>Eight-year-old Jayden has been in three different foster homes across two states in the past two years. A specialized foster care PHR maintains his complete health record, with role-based access controls that adjust as his legal guardianship changes. Mobile immunization apps used at various clinics push vaccination records directly to his PHR, while developmental screening tools on tablets in different healthcare settings contribute structured assessment data. The PHR connects to state immunization registries and health information exchanges through secure APIs, automatically retrieving available records as Jayden moves across jurisdictions. Both his case worker and new pediatrician have appropriate access levels to review his complete health history, with the case worker focusing on required documentation for court proceedings.</p>
+
+<h3 id="migrantsimmigrants">Migrants/Immigrants</h3>
+
+<p>Patients that have immigrated will necessarily have fragmented records that exist in multiple locations or countries.</p>
+
+<p>Mei recently immigrated from China and brought partial paper records translated into English. Her new primary care provider helps establish a PHR that incorporates these documents through OCR-enabled scanning, with machine translation assistance for any remaining untranslated sections. The PHR includes modules for reconciling international vaccination schedules and medication names that may differ from U.S. conventions. As Mei receives care in her new country, data from provider EHRs automatically flows into her PHR through FHIR interfaces. The PHR serves as the bridge between her previous care and her new healthcare relationships, with visualization tools that present her complete health timeline despite the fragmented sources.</p>
+
+<h3 id="climate-refugees">Climate Refugees</h3>
+
+<p>Patients that have been forced to relocate, due to fires, floods, and similar events, will likely have medical records in multiple clinics or hospitals.</p>
+
+<p>The Garcia family evacuated during a major hurricane and relocated permanently to another state. Their daughter's pediatric specialty care for a congenital heart condition must now be transferred to a new healthcare system. The family's emergency evacuation kit included a secure digital card with critical health information that can be imported into their PHRs at their new location. Cloud-based PHR storage ensured their comprehensive records remained accessible despite physical displacement. The daughter's implanted cardiac monitor continues to transmit data to her PHR through cellular networks, maintaining continuity of monitoring despite the relocation. The PHR facilitates secure sharing of her complete surgical history and treatment protocol with the new cardiology team through standardized C-CDA and FHIR documents, ensuring a smooth transition without gaps in specialized care.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
+          Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-06-11 13:06:00 -0600">
+    2026-06-11
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir/uv/phr/history.html">Version History</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,6 +1,6 @@
-The purpose of this implementation guide is to help the reader implement a Patient Health Record (in a programming language of their choice).  The notion of a Patient Health Record (PHR) grows out of the concept of an Electronic Medical Record (EMR).  The major difference being in ownership.  The PHR being owned by the patient; and the EMR being owned by the hospital.
+The purpose of this implementation guide is to help the reader implement a Personal Health Record (in a programming language of their choice).  The notion of a Personal Health Record (PHR) grows out of the concept of an Electronic Medical Record (EMR).  The major difference being in ownership.  The PHR being owned by the patient; and the EMR being owned by the hospital.  Whereas an EMR is the digital chart maintained within a single organization, an Electronic Health Record (EHR) is the broader, interoperable longitudinal record shared across organizations; this guide uses the term EHR generically hereafter.
 
-The following document will offer design guidance and standardized APIs for helping you develop your application; based on the healthcare industry standard of Fast Healthcare Interoperability Resources (FHIR).  The scope of this document does not attempt to prescribe how you, the implementor, ought to go about programming your software.  What it does provide, is guidance on how to successfully exchange data with other PHR and EMR apps.  In effect, it documents widely supported (and government recognized) data standards and file formats for importing/exporting data into your software.
+The following document will offer design guidance and standardized APIs for helping you develop your application; based on the healthcare industry standard of Fast Healthcare Interoperability Resources (FHIR).  The scope of this document does not attempt to prescribe how you, the implementor, ought to go about programming your software.  What it does provide, is guidance on how to successfully exchange data with other PHR and EHR apps.  In effect, it documents widely supported (and government recognized) data standards and file formats for importing/exporting data into your software.
 
 ### Expectations for this Implementation Guide
 
@@ -12,7 +12,7 @@ Nearly two decades ago, the Markle Foundation's Personal Health workgroup conven
 
 ![VennDiagram.png](VennDiagram.png){:width="100%"}    
 
-The core of the Personal Health Record should be medical grade, and able to incorporate any medical record that you receive after a visit to the hospital; and which the patient can then carry from one healthcare provider to the next. As such, a modern Personal Health Record needs to essentially be able to receive captured data from throughout the hospital. Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychiatry. All of it is relevent." to "The purpose of this specification is to provide standard mechanisms for a PHR to interoperate, facilitating sharing of information obtained by the PHR from healthcare encounters, personal documentation and measurement, and other sources.
+The purpose of this specification is to provide standard mechanisms for a PHR to interoperate, facilitating sharing of information obtained by the PHR from healthcare encounters, personal documentation and measurement, and other sources.
 
 The diagram above shows the intersection of the data collected by the patient, compared to the data collected by the hospital EHR or insurance systems.  
 
@@ -25,7 +25,7 @@ The diagram above shows the intersection of the data collected by the patient, c
 | **Australia**    | My Health Record (MyHR)                         | Government-run National PHR         | Partial – Transitioning from CDA to FHIR-based APIs via FHIR Gateway for consumer access.                     |
 |                  | National Digital Health Strategy                | Policy/Strategy                     | Yes – Emphasizes HL7 FHIR alignment; publishes FHIR implementation guides.                                    |
 | **Japan**        | MynaPortal Health Access                        | Government portal & APIs            | Yes – APIs link MynaPortal with private PHRs; using FHIR for new infrastructure.                              |
-|                  | Medical DX/Data Health Plans                    | National Policy                     | Yes – Standardizing EMR data and enabling patient access; includes SMART Health Cards (FHIR).                 |
+|                  | Medical DX/Data Health Plans                    | National Policy                     | Yes – Standardizing EHR data and enabling patient access; includes SMART Health Cards (FHIR).                 |
 |                  | Personal Information Protection Commission      | National Law                        | Not specifically.  Only specifies handling of personal data and patient data ownership.                       |
 |                  | Act on the Protection of Personal Information   | National Law                        | Not specifically.  Only specifies handling of personal data and patient data ownership.                       |
 | **United States**| 21st Century Cures Act & ONC/CMS Rules          | Federal Laws/Regulations            | Yes – Mandates HL7 FHIR APIs (US Core profiles); SMART on FHIR widely implemented.                            |
@@ -41,39 +41,13 @@ The diagram above shows the intersection of the data collected by the patient, c
 
 ### Purpose / Design Philosophy
 
-The core of the Personal Health Record should be medical grade, and able to incorporate any medical record that you receive after a visit to the hospital; and which the patient can then carry from one healthcare provider to the next.  As such, a modern Personal Health Record needs to essentially be able to receive captured data from throughout the hospital.  Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychiatry.  All of it is relevent.  
+The core of the Personal Health Record should be medical grade, and able to incorporate any medical record that you receive after a visit to the hospital; and which the patient can then carry from one healthcare provider to the next.  As such, a modern Personal Health Record needs to essentially be able to receive captured data from throughout the hospital.  Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychiatry.  All of it is relevant.  
 
 ### Use Cases  
 
-This guide is particularly interested in the problem of collecting and aggregating medical records from multiple healthcare systems and devices into a coherent whole.  In the healthcare industry, these types of compiled records are known as `longitudinal` records.  
+This guide is particularly interested in the problem of collecting and aggregating medical records from multiple healthcare systems and devices into a coherent whole.  In the healthcare industry, these types of compiled records are known as `longitudinal` records.  These needs arise in many situations: longitudinal health records and studies, snowbirds, symptom tracking, Long COVID, multiple chronic conditions, lifelogs, healthy living, differential diagnoses, alternative care, bring-your-own-device, the foster care system, migrants/immigrants, and climate refugees.
 
-- *Longitudinal Health Records* - Assembly of records over a long time span; generally multiple decades (20 years or more), and possibly from different healthcare systems with different practices or standards of care.
-
-- *Longitudinal Studies* - Clinical studies that follow up on patient results after 20 or more years. Very important for pediatric studies.
-
-- *Snowbirds* - Many patients have more than one home location, and may spend time in different parts of the country on a seasonal basis. This leads to medical records that are fragmented.
-
-- *Symptom Tracking* - Symptoms of an illness can evolve as the condition improves or worsens, impacted by such things as climate or diet or circumstances of life.
-
-- *Long COVID* - An example of an ongoing longitudinal study that has captured national and worldwide attention, as we continued to determine the long-term effects of COVID-19.
-
-- *Multiple Chronic Conditions* - Not all medical conditions are reported to all healthcare providers. Conversely, specialists will report results for one area of medicine, which needs to be incorporate and reconciled with the patient's master record.
-
-- *Lifelog* - Digital records of an individual's daily activities collected continuously from wearable devices, smartphones, and smart home sensors, including step counts, sleep duration and quality, heart rate, and other biometric measurements that can be used for predictive and preemptive medicine by establishing baseline health patterns and detecting early warning signs of deterioration.
-
-- *Healthy Living* - Proactive wellness management focused on disease prevention rather than treatment, where individuals without acute conditions use their PHR to optimize lifestyle factors such as nutrition tracking, physical activity goals, sleep hygiene, stress management, and preventive screening schedules to extend healthy life expectancy.
-
-- *Differential Diagnoses* - Case presentation for rare diseases can require differential diagnosis, as clinicians generate hypotheses and tests for one condition after another to explain a set of symptoms.
-
-- *Alternative Care* - Massage, Acupuncture, etc. - Patients may wish to track alternative modalities of healthcare that are not recognized or tracked by a healthcare provider or network.
-
-- *Bring Your Own Device* - Patients may wish to utilize consumer medical devices for tracking their own health.
-
-- *Foster Care System* - Custody and care of foster children, especially when it crosses state lines, can be complicated; requiring detailed record keeping to align both medical and court proceedings.
-
-- *Migrants/Immigrant*s - Patients that have immigrated will necessarily have fragmented records that exist in multiple locations or countries.
-
-- *Climate Refugees* - Patients that have been forced to relocate, due to fires, floods, and similar events, will likely have medical records in multiple clinics or hospitals.
+See the [Use Cases](usecases.html) page for detailed scenarios describing how a Personal Health Record supports each of these situations.
 
 ### Acknowledgements  
 
@@ -85,7 +59,7 @@ This guide is particularly interested in the problem of collecting and aggregati
 
 ### References  
 
-- [Patient Health Record - System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88)  
+- [Personal Health Record - System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88)  
 - [Personal Health Records Software for Consumers](https://www.medicalrecords.com/personal-health-records)    
 - [Best Electronic Health Records software of 2022](https://www.techradar.com/best/best-electronic-health-record-ehr-software)  
 - [Who Owns Medical Records: 50 State Comparison](http://www.healthinfolaw.org/comparative-analysis/who-owns-medical-records-50-state-comparison)  

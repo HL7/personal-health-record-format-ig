@@ -1,8 +1,8 @@
 Once an encrypted Personal Health Record is generated, that has been cryptographically signed, patients, clinicians, and others may have an interest in correcting, amending, or annotating the record, without breaking the cryptographic signature.  The SPHR standard offers the Annotation functionality for such cases.
 
-## Patient Use cases
+### Patient Use cases
 
-### Who holds the health record?
+#### Who holds the health record?
 
 Some patient summary distribution systems are focusing on retaining the document so that 
 the patient doesn't keep their own copy, while other systems are focused on getting the 
@@ -13,7 +13,7 @@ If a patient doesn't actually get their health record or patient summary, and in
 It would be good to have a consistent workflow around IPS handling whether the document 
 is held directly by the patient or not.
 
-### Managing the health record
+#### Managing the health record
 
 Patients will need software support for managing their patient summaries. The 
 software will have concerns around:
@@ -22,7 +22,7 @@ software will have concerns around:
 * showing them to the user correctly (how to describe them in a list)
 * Patients might wish to password protect their summary 
 
-### Correcting the health record
+#### Correcting the health record
 
 Furthermore, consultation with patients brings forward a very clear requirement indeed: 
 if we're going to pass the summary on, we need to be able to comment on it, or correct it. 
@@ -31,7 +31,7 @@ clarify or extend because the summary is too brief or too clinical. A patient ma
 hesitate to pass on a patient summary containing incorrect or outdated information. For this reason, the 
 IPS infrastructure needs to make allowance for patient corrections to the summary.
 
-## Provider use cases
+### Provider use cases
 
 On the other hand, not all patient corrections will be correct or appropriate, or even
 well-meaning. It is of critical importance for clinical practice to know whether the 
@@ -49,14 +49,14 @@ One of the key challenges IPS adoption faces is how the transformation requireme
 interoperability imposes with the integrity requirements clinicians identity, while allowing
 patients to manage information that they believe is wrong or unclear in context.
 
-## Intent
+### Intent
 
 This specification describes a wrapper format for an IPS document that treats
 the IPS as a series of versions of the same document, each of which is able to be 
 digitally signed, and a mix of human and algorithmic approaches can ensure integrity
 from beginning to end.
 
-## Specification 
+### Specification 
 
 An PHR annotation is a .zip file that contains the SPHR file, along with a file manifest.json 
 that describes the contents of the package. The package may contain more than one 
@@ -79,7 +79,7 @@ contain unencrypted attachments; these are combined with the encrypted attachmen
 
 The PHR annotation SHALL not contain any files not described in the manifest.
 
-### Encrypted String
+#### Encrypted String
 
 When encrypted, the content is contained as a JWE encrypted string. 
 Encryption is performed using JOSE JWE compact serialization with "alg": "dir" and "enc": "A256GCM", as is done for SHLinks.
@@ -87,7 +87,7 @@ The key for decryption is generated from a patient provided passphrase using the
 
 * *todo*
 
-### Versions
+#### Versions
 
 Each version of the IPS represented in the manifest is a JSON object with the following properties:
 
@@ -118,7 +118,7 @@ digital signature)
 The default version to display is the most recent, though displaying software should display the kind clearly along 
 with the document, and may let users choose other versions.
 
-### Attachments
+#### Attachments
 
 Each attachment represented in the manifest is a JSON object with the following properties:
 
@@ -133,7 +133,7 @@ Each attachment represented in the manifest is a JSON object with the following 
 
 when an IPS encryption wrapper contains an attachment, and the unecryption of it contains an attachment with the same name, the encrpyted attachment takes precedence
 
-## Use with PDFs
+### Use with PDFs
 
 A valid way to send an IPS is as a PDF (signed or not) that contains a file attachment named 'patient-summary.ips.zip'.
 This way, any device that supports PDF (almost all of them) can display the PDF, and the data attachment may be accessed by IPS aware software

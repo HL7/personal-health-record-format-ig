@@ -28,7 +28,7 @@
   "name" : "PatientHealthRecordsIG",
   "title" : "Personal Health Records",
   "status" : "active",
-  "date" : "2026-04-23T17:08:04-05:00",
+  "date" : "2026-06-11T13:06:45-06:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {
@@ -79,7 +79,7 @@
       ],
       "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
       "packageId" : "hl7.fhir.uv.extensions.r4",
-      "version" : "5.2.0"
+      "version" : "5.3.0"
     },
     {
       "id" : "hl7_fhir_uv_ips",
@@ -3487,6 +3487,21 @@
           ],
           "nameUrl" : "index.html",
           "title" : "Getting Started",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode" : "informative"
+            },
+            {
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "usecases.html"
+            }
+          ],
+          "nameUrl" : "usecases.html",
+          "title" : "Use Cases",
           "generation" : "markdown"
         },
         {
