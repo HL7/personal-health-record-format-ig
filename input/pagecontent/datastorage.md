@@ -23,7 +23,7 @@ As such, this implementation guide recommends that implementors treat storage in
 
 #### Meta Data
 
-The `.sphr ` container should contain two meta data files.  One of these files is a Composition record, which acts like the 'cover page' of the bundle.  This record records ownership, versioning, and various other data elements necessary for parsing the record.  The second file is a DocumentManifest file, which acts as a manifest and table of contents of the container.
+The `.sphr ` container should contain two meta data files.  One of these files is a Composition record, which acts like the 'cover page' of the bundle.  This record records ownership, versioning, and various other data elements necessary for parsing the record.  The second file is an International Patient Summary, which acts as a manifest and table of contents of critical documents in the record.
 
 
 #### Compression  
@@ -50,7 +50,7 @@ Should use [NDJSON format](http://ndjson.org/) and save to a password encrypted 
 
 #### Conformance Testing
 
-For conformance testing with this IG, the primary success critieria is the ability to import/export the .sphr filetype. This entails storing FHIR records in a new-line delimited file (including a cover composition resource, a document manifest, and provenance records as needed), compressing the file with DEFLATE algorithm (as needed), and then signing with an X.509 security certificate (i.e. DNS certificate). 
+For conformance testing with this IG, the primary success critieria is the ability to import/export the .sphr filetype. This entails storing FHIR records in a new-line delimited file (including a cover composition resource, an International Patient Summary, and provenance records as needed), compressing the file with DEFLATE algorithm (as needed), and then signing with an X.509 security certificate (i.e. DNS certificate). 
 
 #### Implementation Guidance  
 

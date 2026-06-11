@@ -125,7 +125,7 @@ For a FHIR-based implementation of record lifecycle events, see the [EHR Record 
 
 ### Conformance Testing
 
-For conformance testing with this IG, the primary success critieria is that systems MUST have the ability to import/export the `.sphr` filetype. This entails storing FHIR records in a new-line delimited file (including a cover composition resource, a document manifest, and provenance records as needed), compressing the file with DEFLATE algorithm (as needed), and then signing with an X.509 security certificate. 
+For conformance testing with this IG, the primary success critieria is that systems MUST have the ability to import/export the `.sphr` filetype. This entails storing FHIR records in a new-line delimited file (including a cover composition resource, an International Patient Summary, and provenance records as needed), compressing the file with DEFLATE algorithm (as needed), and then signing with an X.509 security certificate. 
 
 #### Creating a Personal Health Record    
 
@@ -158,7 +158,7 @@ The process flow below is based on encrypting files with PGP/GPG utilities, whic
 - If a directory, scan for media and supporting documents such as PDF.
 - Scan the contents of the directory for a .phr or .ndjson file.
 - Scan the .phr file for the Composition resource.
-- Scan the .phr file for the Document Manifest resource.
+- Scan the .phr file for an International Patient Summary.
 - Scan the .phr file for the primary Patient resource.
 - Scan the .phr file for provenance resources.
 - If found, decode each provenance signature and extract payload contents.
