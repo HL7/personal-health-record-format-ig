@@ -2,17 +2,17 @@
 
 ## Functional Model
 
-A common question that comes up in designing a Personal Health Record is 'what features should it support?'. This question has been discussed in great detail by past workgroup efforts, and we encourage implementors interested in guidance around which functionality to include to refer to [Personal Health Record System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88) with provides 93 pages and nearly 1800+ recommendations of functionalities that PHR vendors in the past have agreed ought to be included in a standard model.
+A common question that comes up in designing a Personal Health Record is 'what features should it support?'. This question has been discussed in great detail by past workgroup efforts, and we encourage implementors interested in guidance around which functionality to include to refer to [Personal Health Record System Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/) with provides 93 pages and nearly 1800+ recommendations of functionalities that PHR vendors in the past have agreed ought to be included in a standard model.
 
-However, for the purposes of this implementation guide, we are going to defer on the question of functionality, and take a more data-centric approach and consider the question in terms of importing/exporting records and data storage buckets. The general idea behind this document is that data will be added or removed from the PHR, either through granular API interfaces or bulk data import/export functions, we don't care which. However, in either case, we will be using standard data schemas for how the data will be transmitted and stored.
+However, for the purposes of this implementation guide, we are going to defer on the question of functionality, and take a more data-centric approach and consider the question in terms of importing/exporting records and data storage buckets. The general idea behind this document is that data will be added or removed from the PHR, either through granular API interfaces or bulk data import/export functions, we don't care which. However, in either case, we will be using standard data schemas for how the data will be transmitted and exchanged.
 
 For instance… rather than specify that the PHR must include medication reconciliation functionality, we recommend that a PHR must be able to consume a Continuity of Care Documents (CCD) received from a hospital in .sphr format, and to do so, the data should be specified with FHIR resources, which may happen to include MedicationStatement and other resources produced by a medication reconciliation module. But whether or not the .sphr health record contains a medication reconcilitation or not is left completely up to the implementor. The only requirement for conformance is that if the data is included in the .sphr file, it use FHIR data schemas.
 
-In effect, this implementation guide does not specify what functionality should be included the PHR, but it does specify medical charting format that the record uses. It's about the folder and record keeping, not the specific contents of the records themselves.
+In effect, this implementation guide does not specify what functionality should be included in the PHR, but it does specify the format used when exchanging or communicating health records. It's about the folder and record keeping, not the specific contents of the records themselves.
 
 ### PHR Functional Model (FHIR-ized)
 
-The section and header names for the following table can be found in the [Personal Health Record System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88). Implementors are encouraged to download the associated PDF which contains detailed descriptions of each item.
+The section and header names for the following table can be found in the [Personal Health Record System Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/). Implementors are encouraged to download the associated PDF which contains detailed descriptions of each item.
 
 #### Personal Health
 
@@ -66,7 +66,7 @@ The section and header names for the following table can be found in the [Person
 | PH.5.2 | Drug Interaction Checking | [Library](https://www.hl7.org/fhir/R4/library.html)[Medication](https://www.hl7.org/fhir/R4/medication.html)[MedicationRequest](https://www.hl7.org/fhir/R4/medicationrequest.html)[MedicationAdministration](https://www.hl7.org/fhir/R4/medicationadministration.html)[CDS Hooks](https://cds-hooks.hl7.org/) |   |   |   |
 | PH.5.3 | Care-Related Decision Support | [CarePlan](https://www.hl7.org/fhir/R4/careplan.html)[RelatedPerson](https://www.hl7.org/fhir/R4/relatedperson.html)[CareTeam](https://www.hl7.org/fhir/R4/careteam.html) |   |   |   |
 | PH.5.4 | Integration with Third Party Clinical Decision Support Services | [CDS Hooks](https://cds-hooks.hl7.org/) |   |   |   |
-| PH.5.5 | PHR Account Holder Configured Alerts, Reminders, and/or Notifications | [Communication](https://www.hl7.org/fhir/R4/communication.html)[Composition](https://www.hl7.org/fhir/R4/compisition.html)[Schedule](https://www.hl7.org/fhir/R4/schedule.html)[Flag](https://www.hl7.org/fhir/R4/flag.html) |   |   |   |
+| PH.5.5 | PHR Account Holder Configured Alerts, Reminders, and/or Notifications | [Communication](https://www.hl7.org/fhir/R4/communication.html)[Composition](https://www.hl7.org/fhir/R4/composition.html)[Schedule](https://www.hl7.org/fhir/R4/schedule.html)[Flag](https://www.hl7.org/fhir/R4/flag.html) |   |   |   |
 | PH.5.6 | Manage Updated Orders, Recommendations, or Alternative Care Plans | [CarePlan](https://www.hl7.org/fhir/R4/careplan.html)[ServiceRequest](https://www.hl7.org/fhir/R4/servicerequest.html) |   |   |   |
 | PH.6 | Manage Encounters with Providers | [Encounter](https://www.hl7.org/fhir/R4/encounter.html)[Practitioner](https://www.hl7.org/fhir/R4/practitioner.html) |   |   |   |
 | PH.6.1 | PHR Account Holder Health Data Derived from Administrative and Financial Sources | [Claim](https://www.hl7.org/fhir/R4/claim.html)[Coverage](https://www.hl7.org/fhir/R4/coverage.html) |   |   |   |
@@ -116,7 +116,7 @@ The section and header names for the following table can be found in the [Person
 | S.4.1.4 | Manage PHR Account Holder Enrollment in Clinical Trials or Research | [ResearchStudy](https://www.hl7.org/fhir/R4/researchstudy.html)[ResearchSubject](https://www.hl7.org/fhir/R4/researchsubject.html) |   |
 | S.4.2 | Registry Notification and Management | [Endpoint](https://www.hl7.org/fhir/R4/endpoint.html)[Subscription](https://www.hl7.org/fhir/R4/subscription.html)[Communication](https://www.hl7.org/fhir/R4/communication.html) |   |
 | S.4.3 | Manage Donor Information | [RelatedPerson](https://www.hl7.org/fhir/R4/relatedperson.html)[BiologicallyDerivedProduct](https://www.hl7.org/fhir/R4/biologicallyderivedproduct.html) |   |
-| S.4.4 | Manage PHR Account Holder Education Material Updates | [Library](https://www.hl7.org/fhir/R4/library.html)[DocumentReferences](https://www.hl7.org/fhir/R4/documentreferences.html) |   |
+| S.4.4 | Manage PHR Account Holder Education Material Updates | [Library](https://www.hl7.org/fhir/R4/library.html)[DocumentReference](https://www.hl7.org/fhir/R4/documentreference.html) |   |
 | S.4.5 | Manage PHR Account Holder Reminder Information Updates | [Schedule](https://www.hl7.org/fhir/R4/schedule.html)[Slot](https://www.hl7.org/fhir/R4/slot.html)[Flag](https://www.hl7.org/fhir/R4/flag.html)[Appointment](https://www.hl7.org/fhir/R4/appointment.html)[Task](https://www.hl7.org/fhir/R4/task.html)[Communication](https://www.hl7.org/fhir/R4/communication.html) |   |
 | S.4.6 | Manage Public Health Information | [Library](https://www.hl7.org/fhir/R4/library.html) |   |
 | S.4.6.1 | Manage Public Health Related Updates | [Library](https://www.hl7.org/fhir/R4/library.html) |   |
@@ -134,5 +134,5 @@ TI. [Trust Infrastructure](security.md)
 
 ### References
 
-[Personal Health Record System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88)
+[Personal Health Record System Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/)
 

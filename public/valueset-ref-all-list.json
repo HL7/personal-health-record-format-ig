@@ -1776,8 +1776,8 @@
       ],
       "uses" : {
       },
-      "ConceptMap-symptom-pghd-to-snomedct.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-pghd-to-snomedct|1.0.0-ballot2]",
       "ConceptMap-symptom-snomedct-to-pghd.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd|1.0.0-ballot2]",
+      "ConceptMap-symptom-pghd-to-snomedct.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-pghd-to-snomedct|1.0.0-ballot2]",
       "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile"
     },
     {
@@ -1790,8 +1790,8 @@
       "systems" : ["http://snomed.info/sct"],
       "uses" : {
       },
-      "ConceptMap-symptom-pghd-to-snomedct.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-pghd-to-snomedct|1.0.0-ballot2]",
       "ConceptMap-symptom-snomedct-to-pghd.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd|1.0.0-ballot2]",
+      "ConceptMap-symptom-pghd-to-snomedct.html" : "ConceptMap[http://hl7.org/fhir/uv/phr/ConceptMap/symptom-pghd-to-snomedct|1.0.0-ballot2]",
       "StructureDefinition-pghd-symptom.html" : "PGHD Symptom Profile"
     },
     {

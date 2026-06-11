@@ -277,17 +277,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>A common question that comes up in designing a Personal Health Record is 'what features should it support?'.  This question has been discussed in great detail by past workgroup efforts, and we encourage implementors interested in guidance around which functionality to include to refer to <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88">Personal Health Record System Functional Model</a> with provides 93 pages and nearly 1800+ recommendations of functionalities that PHR vendors in the past have agreed ought to be included in a standard model.</p>
+<p>A common question that comes up in designing a Personal Health Record is 'what features should it support?'.  This question has been discussed in great detail by past workgroup efforts, and we encourage implementors interested in guidance around which functionality to include to refer to <a href="https://hl7.org/ehrs/uv/phrsfmr2/">Personal Health Record System Functional Model</a> with provides 93 pages and nearly 1800+ recommendations of functionalities that PHR vendors in the past have agreed ought to be included in a standard model.</p>
 
-<p>However, for the purposes of this implementation guide, we are going to defer on the question of functionality, and take a more data-centric approach and consider the question in terms of importing/exporting records and data storage buckets. The general idea behind this document is that data will be added or removed from the PHR, either through granular API interfaces or bulk data import/export functions, we don't care which.  However, in either case, we will be using standard data schemas for how the data will be transmitted and stored.</p>
+<p>However, for the purposes of this implementation guide, we are going to defer on the question of functionality, and take a more data-centric approach and consider the question in terms of importing/exporting records and data storage buckets. The general idea behind this document is that data will be added or removed from the PHR, either through granular API interfaces or bulk data import/export functions, we don't care which.  However, in either case, we will be using standard data schemas for how the data will be transmitted and exchanged.</p>
 
 <p>For instance… rather than specify that the PHR must include medication reconciliation functionality, we recommend that a PHR must be able to consume a Continuity of Care Documents (CCD) received from a hospital in .sphr format, and to do so, the data should be specified with FHIR resources, which may happen to include MedicationStatement and other resources produced by a medication reconciliation module.  But whether or not the .sphr health record contains a medication reconcilitation or not is left completely up to the implementor.  The only requirement for conformance is that if the data is included in the .sphr file, it use FHIR data schemas.</p>
 
-<p>In effect, this implementation guide does not specify what functionality should be included the PHR, but it does specify medical charting format that the record uses.  It's about the folder and record keeping, not the specific contents of the records themselves.</p>
+<p>In effect, this implementation guide does not specify what functionality should be included in the PHR, but it does specify the format used when exchanging or communicating health records.  It's about the folder and record keeping, not the specific contents of the records themselves.</p>
 
 <h3 id="phr-functional-model-fhir-ized">PHR Functional Model (FHIR-ized)</h3>
 
-<p>The section and header names for the following table can be found in the <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88">Personal Health Record System Functional Model</a>.  Implementors are encouraged to download the associated PDF which contains detailed descriptions of each item.</p>
+<p>The section and header names for the following table can be found in the <a href="https://hl7.org/ehrs/uv/phrsfmr2/">Personal Health Record System Functional Model</a>.  Implementors are encouraged to download the associated PDF which contains detailed descriptions of each item.</p>
 
 <h4 id="personal-health">Personal Health</h4>
 
@@ -690,7 +690,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PH.5.5</td>
       <td style="text-align: left">PHR Account Holder Configured Alerts, Reminders, and/or Notifications</td>
-      <td style="text-align: left"><a href="https://www.hl7.org/fhir/R4/communication.html">Communication</a> <br /> <a href="https://www.hl7.org/fhir/R4/compisition.html">Composition</a> <br /> <a href="https://www.hl7.org/fhir/R4/schedule.html">Schedule</a> <br /> <a href="https://www.hl7.org/fhir/R4/flag.html">Flag</a></td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/R4/communication.html">Communication</a> <br /> <a href="https://www.hl7.org/fhir/R4/composition.html">Composition</a> <br /> <a href="https://www.hl7.org/fhir/R4/schedule.html">Schedule</a> <br /> <a href="https://www.hl7.org/fhir/R4/flag.html">Flag</a></td>
       <td style="text-align: left"> </td>
       <td> </td>
       <td> </td>
@@ -997,7 +997,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>S.4.4</td>
       <td style="text-align: left">Manage PHR Account Holder Education Material Updates</td>
-      <td style="text-align: left"><a href="https://www.hl7.org/fhir/R4/library.html">Library</a> <br /> <a href="https://www.hl7.org/fhir/R4/documentreferences.html">DocumentReferences</a></td>
+      <td style="text-align: left"><a href="https://www.hl7.org/fhir/R4/library.html">Library</a> <br /> <a href="https://www.hl7.org/fhir/R4/documentreference.html">DocumentReference</a></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
@@ -1058,7 +1058,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="references">References</h3>
 
-<p><a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88">Personal Health Record System Functional Model</a></p>
+<p><a href="https://hl7.org/ehrs/uv/phrsfmr2/">Personal Health Record System Functional Model</a></p>
 
 
 
@@ -1087,7 +1087,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-11 13:06:00 -0600">
+  <span title="2026-06-11 16:28:00 -0600">
     2026-06-11
   </span>
 

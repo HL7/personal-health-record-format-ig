@@ -63,7 +63,7 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-pregnancy-st
   "title" : "PGHD Pregnancy Status Profile",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T13:06:45-06:00",
+  "date" : "2026-06-11T16:28:41-06:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

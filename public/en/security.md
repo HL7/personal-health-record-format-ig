@@ -83,5 +83,5 @@
 
 ### References
 
-[Personal Health Record System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88)
+[Personal Health Record System Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/)
 

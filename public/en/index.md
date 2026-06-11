@@ -6,19 +6,15 @@ The purpose of this implementation guide is to help the reader implement a Perso
 
 The following document will offer design guidance and standardized APIs for helping you develop your application; based on the healthcare industry standard of Fast Healthcare Interoperability Resources (FHIR). The scope of this document does not attempt to prescribe how you, the implementor, ought to go about programming your software. What it does provide, is guidance on how to successfully exchange data with other PHR and EHR apps. In effect, it documents widely supported (and government recognized) data standards and file formats for importing/exporting data into your software.
 
-### Expectations for this Implementation Guide
-
-Readers are encouraged to think of this implementation guide as a marathon, not a sprint. To further the analogy, the authors of this guide hope to help software implementor plan on whether they are competing in a 26 mile standard marathon, a 50 mile ultramarathon, or an Iron Man triathalon. Similarly, implementing a complete PHR is no simple task, and in many situations may take upwards of a year of time or more to complete. We hope to provide guidance that will help implementors strategically plan their implementations and avoid common stumbling blocks.
-
 ### What is a Personal Health Record?
 
 Nearly two decades ago, the Markle Foundation's Personal Health workgroup convened to discuss the state-of-the-art in managing personal health information. The workgroup defined the PHR as "an electronic application through which individuals can access, manage and share their health information, and that of others for whom they are authorized, in a private, secure, and confidential environment." Their early vision was that PHRs would enable individuals to access and coordinate comprehensive, lifelong health information and exchange necessary parts of it.
 
 ![](VennDiagram.png)
 
-The purpose of this specification is to provide standard mechanisms for a PHR to interoperate, facilitating sharing of information obtained by the PHR from healthcare encounters, personal documentation and measurement, and other sources.
+The diagram above shows the intersection of the data collected by the patient, compared to the data collected by clinical EHRs or insurance systems. The core of the Personal Health Record should be medical grade, and able to incorporate records from any clinical source or setting; and which the patient can then carry from one healthcare provider to the next. This specification establishes standard mechanisms for a PHR to interoperate with other systems (clinical and otherwise), thereby facilitating sharing of information obtained by the PHR from healthcare encounters, personal documentation and measurement, and other sources.
 
-The diagram above shows the intersection of the data collected by the patient, compared to the data collected by the hospital EHR or insurance systems.
+For more details on functionality of a personal health record system, the reader is encouraged to review the [HL7 PHR System Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/).
 
 ### Relevant Law
 
@@ -43,9 +39,15 @@ The diagram above shows the intersection of the data collected by the patient, c
 | **Taiwan** | My Health Bank | National PHR Portal (NHI) | Partial – APIs/SDK provided; transitioning toward FHIR from legacy HL7 standards. |
 | **India** | Ayushman Bharat Digital Mission (ABDM) | National Health IT Framework | Yes – HL7 FHIR adopted as primary exchange standard; personal consent-based PHR model. |
 
-### Purpose / Design Philosophy
+### How to Use This Implementation Guide
 
-The core of the Personal Health Record should be medical grade, and able to incorporate any medical record that you receive after a visit to the hospital; and which the patient can then carry from one healthcare provider to the next. As such, a modern Personal Health Record needs to essentially be able to receive captured data from throughout the hospital. Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychiatry. All of it is relevant.
+This Implementation Guide provides three main areas of guidance:
+
+1. **File Formats**— The`.phr`and`.sphr`file extensions for portable personal health records (see[Record Keeping](recordkeeping.md))
+1. **API Patterns**— Endpoints for importing and exporting health records (see[API Endpoints](api.md))
+1. **Data Model**— Mapping PHR-S Functional Model requirements to FHIR resources (see[Data Model](datamodel.md))
+
+The only portion of this guide required for conformance testing is the ability to import and export `.sphr` files. All other sections are informational and assist implementers in modeling patient health histories using FHIR.
 
 ### Use Cases
 
@@ -63,7 +65,7 @@ See the [Use Cases](usecases.md) page for detailed scenarios describing how a Pe
 
 ### References
 
-* [Personal Health Record - System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88)
+* [Personal Health Record - System Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/)
 * [Personal Health Records Software for Consumers](https://www.medicalrecords.com/personal-health-records)
 * [Best Electronic Health Records software of 2022](https://www.techradar.com/best/best-electronic-health-record-ehr-software)
 * [Who Owns Medical Records: 50 State Comparison](http://www.healthinfolaw.org/comparative-analysis/who-owns-medical-records-50-state-comparison)
