@@ -42,6 +42,44 @@ Files containing patient health information MAY be zipped. The `.sphr` file exte
 
 Supporting media files and raw documents may be added into the `.sphr` directory.  Such files may include DICOM files, 3D models, images, PDFs, and other media.  Each record SHOULD have a corresponding FHIR DocumentReference pointer in the `.phr` file.  
 
+#### Legacy Clinical Documents (C-CDA)
+
+Many patients will arrive with historical clinical documents in Consolidated Clinical Document Architecture (C-CDA) format, such as Continuity of Care Documents (CCDs), discharge summaries, and referral notes.  These often exist as XML files exported from patient portals, or as scanned PDFs of printed documents.  Such documents are first-class artifacts in a longitudinal health record, and SHOULD be preserved in the `.sphr` container rather than discarded after conversion.
+
+The recommended process for incorporating legacy C-CDA documents into a Personal Health Record is:
+
+1. **Establish a provenance trail.**  Store the original C-CDA documents (XML or PDF) in the `.sphr` container, and create a FHIR [DocumentReference](https://www.hl7.org/fhir/R4/documentreference.html) for each one.  The original documents remain the authoritative source artifacts.
+2. **Map the documents into FHIR resources.**  Use the mappings defined in the [C-CDA on FHIR](http://hl7.org/fhir/us/ccda/) implementation guide to translate document metadata and entries into discrete FHIR resources (Condition, MedicationStatement, AllergyIntolerance, etc.).  Discrete FHIR resources are the preferred working representation of the record.
+3. **Optionally generate a narrative summary.**  A [Composition](https://www.hl7.org/fhir/R4/composition.html) resource may be generated to summarize the imported content.  Note that this Composition is *derivative, not authoritative* — the original C-CDA documents and the discrete FHIR resources mapped from them remain the source of truth.
+
+The following example shows a DocumentReference pointing at a legacy CCD stored inside the `.sphr` container:
+
+```json
+{
+  "resourceType": "DocumentReference",
+  "status": "current",
+  "type": {
+    "coding": [{
+      "system": "http://loinc.org",
+      "code": "34133-9",
+      "display": "Summarization of episode note"
+    }]
+  },
+  "subject": { "reference": "Patient/example" },
+  "date": "2014-03-11T00:00:00Z",
+  "description": "Continuity of Care Document from Good Health Hospital, 2014",
+  "content": [{
+    "attachment": {
+      "contentType": "application/xml",
+      "url": "documents/GoodHealthHospital-CCD-2014.xml",
+      "title": "Continuity of Care Document"
+    }
+  }]
+}
+```
+
+This guide intentionally does not reproduce the C-CDA metadata mappings; see [C-CDA on FHIR](http://hl7.org/fhir/us/ccda/) for document-level mappings into FHIR.  For the broader document paradigm — a Bundle of `type = document` whose first entry is a Composition — see [FHIR Documents](https://www.hl7.org/fhir/R4/documents.html).  For summary documents, see the [International Patient Summary](http://hl7.org/fhir/uv/ips/).
+
 #### Bulk Data Exports
 
 Should use [NDJSON format](http://ndjson.org/) and save to a password encrypted zip file.  Please see [Bulk Data Access IG](https://hl7.org/fhir/uv/bulkdata/) more additional design guidance.
