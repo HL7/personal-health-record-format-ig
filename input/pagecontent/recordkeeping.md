@@ -19,7 +19,18 @@ As such, this implementation guide recommends that implementors treat storage in
 
 The `.phr` file extension is introduced in this guide, to a) specify files which contain FHIR resources, and b) to allow 3rd party applications to identify files which contain FHIR resources.  Data exports containing FHIR resources SHOULD be saved with a `.phr` extension, using new-line deliminated JSON (NDJSON) format, similar to the Bulk Data specification. 
 
-This format is a simple, text-based format that is easy to parse and edit.  It is also a good fit for streaming data, as it is easy to append to a file without having to rewrite the entire file.  And perhaps most importantly, it allows multiple .phr files to be easily 'globbed' together.  
+This format is a simple, text-based format that is easy to parse and edit.  It is also a good fit for streaming data, as it is easy to append to a file without having to rewrite the entire file.  And perhaps most importantly, it allows multiple .phr files to be easily 'globbed' together.
+
+##### Minimum Viable PHR Example
+
+A minimum viable .phr file must contain at minimum a Patient resource and a Composition resource. This example shows the smallest possible conformant .phr file in NDJSON format (each resource on its own line):
+
+```json
+{"resourceType":"Patient","id":"minimal-patient","meta":{"lastUpdated":"2025-01-15T10:30:00Z"},"identifier":[{"system":"urn:example:phr","value":"patient-001"}],"name":[{"use":"official","family":"Tanaka","given":["Yuki"]}],"gender":"female","birthDate":"1985-03-15"}
+{"resourceType":"Composition","id":"minimal-composition","meta":{"lastUpdated":"2025-01-15T10:30:00Z"},"status":"final","type":{"coding":[{"system":"http://loinc.org","code":"11503-0","display":"Medical records"}]},"subject":{"reference":"Patient/minimal-patient"},"date":"2025-01-15T10:30:00Z","author":[{"reference":"Patient/minimal-patient","display":"Yuki Tanaka"}],"title":"Personal Health Record for Yuki Tanaka","section":[{"title":"Patient Information","code":{"coding":[{"system":"http://loinc.org","code":"10154-3","display":"Chief complaint"}]},"text":{"status":"generated","div":"<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Personal Health Record created 2025-01-15</p></div>"}}]}
+```
+
+This minimal file can be saved as `yuki-tanaka-2025-01-15.phr` and serves as a starting point for implementers. From this foundation, implementers can progressively add Conditions, MedicationStatements, Observations, and other resources.
 
 #### File Extensions - .sphr
 
