@@ -2,7 +2,7 @@
 
 ## Conformance Recommendations
 
-This implementation guide was developed through meta-analysis of dozens of other guides, journal liturature, and an environment surveys of the PHR market. Implementators may find the following implementation guides of particular interest.
+This implementation guide was developed through meta-analysis of dozens of other guides, journal literature, and environmental surveys of the PHR market. Implementers may find the following implementation guides of particular interest.
 
 These implementation guides may provide information on how to obtain information from EHR and payor systems and bring them into a PHR. Note that it is not an inclusive list. Implementers are encouraged to research adoption on each guide.
 
@@ -26,7 +26,7 @@ In this specification, the key words “MUST”, “MUST NOT”, “REQUIRED”,
 | [SMART on FHIR - App Launch](https://hl7.org/fhir/smart-app-launch/) |   | NOT APPLICABLE | SHOULD |
 | [C-CDA on FHIR](http://hl7.org/fhir/us/ccda/) |   | MAY | MAY |
 | [PACIO - Advanced Directives](https://build.fhir.org/ig/HL7/fhir-pacio-adi/) |   | SHOULD | MAY |
-| [PACIO - Personal Functioning and Engagement](https://build.fhir.org/ig/HL7/fhir-pacio-pfe/)) | Neurology | MAY | MAY |
+| [PACIO - Personal Functioning and Engagement](https://build.fhir.org/ig/HL7/fhir-pacio-pfe/en/) | Neurology | MAY | MAY |
 | [mCode](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/examples.html) | Oncology | SHOULD | MAY |
 | [Gravity - Social Determinates of Health](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/) | Social Work | SHOULD | MAY |
 | [Dental Data Exchange](https://build.fhir.org/ig/HL7/dental-data-exchange/) | Dental | MAY | MAY |
@@ -34,7 +34,7 @@ In this specification, the key words “MUST”, “MUST NOT”, “REQUIRED”,
 | [Radiation Dose Summary](https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/) | Radiology | MAY | MAY |
 | [Breast Radiology Reporting](https://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/) | Radiology | MAY | MAY |
 | [mCODE](http://hl7.org/fhir/us/mcode/) |   | MAY | MAY |
-| [CH Allergy Intolerance](https://build.fhir.org/ig/hl7ch/ch-allergyintolerance/document.html) | Immunology | SHOULD | MAY |
+| [CH AllergyIntolerance](https://fhir.ch/ig/ch-allergyintolerance/) | Immunology | SHOULD | MAY |
 | [Vital Signs](https://build.fhir.org/ig/HL7/cimi-vital-signs/) | Intensive Care | SHOULD | MAY |
 | [UDAP Security](https://build.fhir.org/ig/HL7/fhir-udap-security-ig/) |   | NOT APPLICABLE | SHOULD |
 | [SNOMED Terminology Server](https://build.fhir.org/ig/IHTSDO/snomed-ig/) |   | SHOULD | MAY |

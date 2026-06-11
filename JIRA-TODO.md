@@ -224,33 +224,33 @@
 
 ## Jan 2025 Ballot - Typos / Minor Fixes
 
-- [ ] [FHIR-49073](https://jira.hl7.org/browse/FHIR-49073) - Typos
+- [x] [FHIR-49073](https://jira.hl7.org/browse/FHIR-49073) - Typos
   - **JIRA Status:** Triaged | **Resolution:** Persuasive | **Ballot:** jan-2025
   - **Description:** *Section 1.4 says:* As such, a modern Patient Health Record needs to essentially be able to receive captured data from throughout the hospital. Emergency room, operating room, intensive care unit, laboratory, pharmacy, nursery, psychaitry. All of it is relavent.   Psychiatry and relevant have typos.   *Section 2 says:* espcially considering that   especially has a typo   *Section 2.3.1 says:* The process flows below is based    Plural/singular issue. Seems...
 
-- [ ] [FHIR-49260](https://jira.hl7.org/browse/FHIR-49260) - Typo "if"
+- [x] [FHIR-49260](https://jira.hl7.org/browse/FHIR-49260) - Typo "if"
   - **JIRA Status:** Triaged | **Resolution:** Persuasive | **Ballot:** jan-2025
   - **URL:** http://hl7.org/fhir/uv/phr/2025Jan/annotations.html
   - **Description:** "{_}*If* would be good to have a consistent workflow around IPS handling whether the document is held directly by the patient or{_} {_}not.{_}" *If* should be replaced to *It*
 
-- [ ] [FHIR-49265](https://jira.hl7.org/browse/FHIR-49265) - Typo: espcially
+- [x] [FHIR-49265](https://jira.hl7.org/browse/FHIR-49265) - Typo: espcially
   - **JIRA Status:** Triaged | **Resolution:** Persuasive | **Ballot:** jan-2025
   - **URL:** http://hl7.org/fhir/uv/phr/2025Jan/recordkeeping.html
   - **Description:** Typo: espcially First paragraph
 
-- [ ] [FHIR-49267](https://jira.hl7.org/browse/FHIR-49267) - Link is not working
+- [x] [FHIR-49267](https://jira.hl7.org/browse/FHIR-49267) - Link is not working
   - **JIRA Status:** Triaged | **Resolution:** Persuasive | **Ballot:** jan-2025
   - **URL:** http://hl7.org/fhir/uv/phr/2025Jan/recordkeeping.html
   - **Description:** Link "File extension associations and default apps in Windows 10, how to handle this using commandline" is not working.
 
 ## Jan 2025 Ballot - Naming & Terminology Consistency
 
-- [ ] [FHIR-49222](https://jira.hl7.org/browse/FHIR-49222) - Patient or Personal Health Record?
+- [x] [FHIR-49222](https://jira.hl7.org/browse/FHIR-49222) - Patient or Personal Health Record?
   - **JIRA Status:** Triaged | **Resolution:** Persuasive | **Ballot:** jan-2025
   - **URL:** http://hl7.org/fhir/uv/phr/2025Jan/index.html
   - **Description:** In "{_}The purpose of this implementation guide is to help the reader implement a *Patient Health Record* (in a programming{_} {_}language of their choice).{_}" Is it a Patient Health Record or a Personal Health Record (as the name of the IG)? What is the difference?
 
-- [ ] [FHIR-49261](https://jira.hl7.org/browse/FHIR-49261) - Why EHR and not EMR?
+- [x] [FHIR-49261](https://jira.hl7.org/browse/FHIR-49261) - Why EHR and not EMR?
   - **JIRA Status:** Triaged | **Resolution:** Persuasive | **Ballot:** jan-2025
   - **URL:** http://hl7.org/fhir/uv/phr/2025Jan/index.html
   - **Description:** In the sentence: "{_}What it does provide, is{_} {_}guidance on how to successfully exchange data with other PHR and *EHR* apps.{_}" Why EHR and not EMR? In the first paragraph was used EMR. It should be consistence in the use of these terms. Or at least provide a clear definition of them.
@@ -301,7 +301,7 @@
 
 ## Jan 2025 Ballot - Data Model / Artifacts
 
-- [ ] [FHIR-49270](https://jira.hl7.org/browse/FHIR-49270) - The IG is based on R4. Why the resources links go to R5?
+- [x] [FHIR-49270](https://jira.hl7.org/browse/FHIR-49270) - The IG is based on R4. Why the resources links go to R5?
   - **JIRA Status:** Triaged | **Resolution:** Persuasive | **Ballot:** jan-2025
   - **URL:** http://hl7.org/fhir/uv/phr/2025Jan/functionality.html
   - **Description:** The IG is based on R4. Why the resources links go to R5 - see links in table 5.1.1.
@@ -332,7 +332,7 @@
 
 ## Jan 2025 Ballot - Conformance / References
 
-- [ ] [FHIR-49425](https://jira.hl7.org/browse/FHIR-49425) - Update and review PACIO IG references
+- [x] [FHIR-49425](https://jira.hl7.org/browse/FHIR-49425) - Update and review PACIO IG references
   - **JIRA Status:** Triaged | **Resolution:** Persuasive with Modification | **Ballot:** jan-2025
   - **URL:** https://hl7.org/fhir/uv/phr/2025Jan/conformance.html
   - **Description:** Submitted on behalf of Matt Elrod. Replace "PACIO - Cognitive Status" and "PACIO - Functional Status" with "PACIO - Personal Functioning and Engagement (https://build.fhir.org/ig/HL7/fhir-pacio-pfe/)". PACIO is archiving the Functional and Cognitive Status IGs.

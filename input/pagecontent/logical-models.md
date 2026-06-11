@@ -2,7 +2,7 @@ This implementation guide includes several FHIR Logical Models that represent em
 
 ### What Are Logical Models?
 
-A [FHIR Logical Model](https://www.hl7.org/fhir/structuredefinition.html) is a StructureDefinition that defines a data structure independent of any particular FHIR resource. Unlike profiles (which constrain existing resources), logical models describe the shape of data that may not yet have a natural home in the FHIR resource catalog. They are useful for:
+A [FHIR Logical Model](https://www.hl7.org/fhir/R4/structuredefinition.html) is a StructureDefinition that defines a data structure independent of any particular FHIR resource. Unlike profiles (which constrain existing resources), logical models describe the shape of data that may not yet have a natural home in the FHIR resource catalog. They are useful for:
 
 - Documenting data domains that patients and consumer devices capture, but which do not map cleanly to a single existing FHIR resource
 - Providing a shared vocabulary for discussing these data structures within standards development

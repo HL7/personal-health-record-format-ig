@@ -2,6 +2,7 @@
 <!DOCTYPE HTML>
 
 
+
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
@@ -43,11 +44,13 @@
   </head>
   <body onload="document.body.style.opacity='1'">
 
-	  <script src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"2"}
-    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -126,6 +129,9 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="usecases.html">Use Cases</a>
+      </li>
+      <li>
         <a href="history.html">History</a>
       </li>
       <li>
@@ -169,7 +175,7 @@
         <a href="personas-index.html">Index</a>
       </li>
       <li>
-        <a href="persona-thompson-family.html">Thompson Familiy</a>
+        <a href="persona-thompson-family.html">Thompson Family</a>
       </li>
       <li>
         <a href="persona-journey-b.html">Cancer - Adult</a>
@@ -274,7 +280,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>A complete longitudinal patient health record may feasibly span 100 years or more.  This presents numerous challenges, especially considering that the earliest EMR systems were only first written in the early 1970s.  Statute of limitations specify that healthcare practitioners keep pediatric records until an 18th birthday, but even an 18 year storage requirement by providers falls well short of a 76yr lifespan.  Anybody over 30 years of age is therefore almost guaranteed to have some records on hardcopy paper, compact disk, USB drive, floppy drive, or other storage mediums.</p>
+<p>A complete longitudinal patient health record may feasibly span 100 years or more.  This presents numerous challenges, especially considering that the earliest EHR systems were only first written in the early 1970s.  Statute of limitations specify that healthcare practitioners keep pediatric records until an 18th birthday, but even an 18 year storage requirement by providers falls well short of a 76yr lifespan.  Anybody over 30 years of age is therefore almost guaranteed to have some records on hardcopy paper, compact disk, USB drive, floppy drive, or other storage mediums.</p>
 
 <p>As such, this implementation guide is particularly concerned with this data storage challenge that is unique to patients, and does not immediately assume availability of B2B over-the-wire data interfaces.  This guide differs from guides produced by other working groups, in that it is less concerned with over-the-wire workflows, and more concerned with the notion of a patient asking for a copy of their complete medical history, and how that would work with devices… be they smartphones, consumer medical devices, compact disks (CD), digital video disks (DVD), thumbdrives, and other storage devices for bulk data; and how that would be imported into the another system.</p>
 
@@ -520,8 +526,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-04-23 17:08:00 -0500">
-    2026-04-23
+  <span title="2026-06-11 13:06:00 -0600">
+    2026-06-11
   </span>
 
           <br/>
