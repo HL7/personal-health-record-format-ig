@@ -10,7 +10,7 @@ Recurring challenges with designing PHR apps include figuring out which data to 
 
 The following table provides links to clinical workflow simulations, relevant terminologies, file types, estimated data usage, and diagnostic algorithms used in various medical domains that are typically incorporated into electronic medical records.  
 
-> Note:  the following table was partially generated using Claude LLM. Please review for accuracy.  
+> Note:  the following table provides approximate reference values for implementers. File sizes and frequencies will vary by institution and use case.
 
 
 | Domain | Value Sets | File Types  | Avg. File Size  | Frequency | Diagnostic Algorithm |

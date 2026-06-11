@@ -1,4 +1,4 @@
-Once an encrypted Personal Health Record is generated, that has been cryptographically signed, patients, clinicians, and others may have an interest in correcting, amending, or annotating the record, without breaking the cryptographic signature.  The SPHR standard offers the Annotation functionality for such cases.
+Once an encrypted .phr or .sphr file is generated, that has been cryptographically signed, patients, clinicians, and others may have an interest in correcting, amending, or annotating the record, without breaking the cryptographic signature.  The SPHR standard offers the Annotation functionality for such cases.
 
 ## Patient Use cases
 
