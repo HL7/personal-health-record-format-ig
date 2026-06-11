@@ -1,4 +1,4 @@
-A common question that comes up in designing a Personal Health Record is 'what features should it support?'.  This question has been discussed in great detail by past workgroup efforts, and we encourage implementors interested in guidance around which functionality to include to refer to [Personal Health Record System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88) with provides 93 pages and nearly 1800+ recommendations of functionalities that PHR vendors in the past have agreed ought to be included in a standard model.  
+A common question that comes up in designing a Personal Health Record is 'what features should it support?'.  This question has been discussed in great detail by past workgroup efforts, and we encourage implementors interested in guidance around which functionality to include to refer to [Personal Health Record System Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/) with provides 93 pages and nearly 1800+ recommendations of functionalities that PHR vendors in the past have agreed ought to be included in a standard model.  
 
 However, for the purposes of this implementation guide, we are going to defer on the question of functionality, and take a more data-centric approach and consider the question in terms of importing/exporting records and data storage buckets. The general idea behind this document is that data will be added or removed from the PHR, either through granular API interfaces or bulk data import/export functions, we don't care which.  However, in either case, we will be using standard data schemas for how the data will be transmitted and stored.
 
@@ -8,7 +8,7 @@ In effect, this implementation guide does not specify what functionality should 
 
 ### PHR Functional Model (FHIR-ized)
 
-The section and header names for the following table can be found in the [Personal Health Record System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88).  Implementors are encouraged to download the associated PDF which contains detailed descriptions of each item.
+The section and header names for the following table can be found in the [Personal Health Record System Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/).  Implementors are encouraged to download the associated PDF which contains detailed descriptions of each item.
 
 #### Personal Health
 
@@ -129,4 +129,4 @@ TI. [Trust Infrastructure](security.html)
 
 ### References  
 
-[Personal Health Record System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88)
+[Personal Health Record System Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/)

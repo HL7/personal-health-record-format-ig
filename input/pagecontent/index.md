@@ -59,7 +59,7 @@ See the [Use Cases](usecases.html) page for detailed scenarios describing how a 
 
 ### References  
 
-- [Personal Health Record - System Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88)  
+- [Personal Health Record - System Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/)  
 - [Personal Health Records Software for Consumers](https://www.medicalrecords.com/personal-health-records)    
 - [Best Electronic Health Records software of 2022](https://www.techradar.com/best/best-electronic-health-record-ehr-software)  
 - [Who Owns Medical Records: 50 State Comparison](http://www.healthinfolaw.org/comparative-analysis/who-owns-medical-records-50-state-comparison)  

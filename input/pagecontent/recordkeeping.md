@@ -89,7 +89,7 @@ A SMART Health Links based solution will distribute the encryption key within a 
 
 Record lifecycle management involves overseeing health records from creation through final disposition. For personal health records, lifecycle events occur across multiple systems — clinical EHRs, patient apps, devices — and must be tracked to maintain data integrity and provenance.
 
-The [PHR-S Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88) defines a comprehensive set of Record Infrastructure (RI) lifecycle events, including:
+The [PHR-S Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/) defines a comprehensive set of Record Infrastructure (RI) lifecycle events, including:
 
 - **Originate/Retain** — Creating or receiving a new record entry
 - **Amend/Update** — Modifying an existing record with tracked changes
@@ -109,7 +109,7 @@ In the FHIR context, these lifecycle events map to standard resources:
 | Record versioning | [Bundle](https://www.hl7.org/fhir/R4/bundle.html) history | Tracks resource version history |
 | Attestation | [Signature](https://www.hl7.org/fhir/R4/datatypes.html#Signature) | Cryptographic attestation of content |
 
-For a FHIR-based implementation of record lifecycle events, see the [EHR Record Lifecycle Events IG](https://build.fhir.org/ig/HL7/ehrs-rle-ig/). For the complete functional model specification, see the [PHR-S Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88).
+For a FHIR-based implementation of record lifecycle events, see the [EHR Record Lifecycle Events IG](https://build.fhir.org/ig/HL7/ehrs-rle-ig/). For the complete functional model specification, see the [PHR-S Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/).
 
 
 ### Conformance Testing
