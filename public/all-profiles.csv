@@ -2380,9 +2380,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Same quantity with different units","An alternative representation of the same physical quantity expressed in a different unit from a different unit code system and possibly with a different value.","It is not necessary for information processing entities to check and enforce that the translations are valid translations of the base unit, but they are allowed to do so, and to reject instances where the translations are not valid. 
 NOTE Translations are allowed to contain other representations in UCUM units, but there is generally no point to this as it is possible to convert from one UCUM form to another.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"pghd-blood-glucose","Observation.value[x].extension:alternativeQuantity.id","Observation.value[x].extension.id","","","",0,1,"","","","id {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1
-",""
+"pghd-blood-glucose","Observation.value[x].extension:alternativeQuantity.id","Observation.value[x].extension.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
 "pghd-blood-glucose","Observation.value[x].extension:alternativeQuantity.extension","Observation.value[x].extension.extension","","","",0,0,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -2390,8 +2389,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "pghd-blood-glucose","Observation.value[x].extension:alternativeQuantity.url","Observation.value[x].extension.url","","","",1,1,"","","","uri {[]} {[]}
 ","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
 "pghd-blood-glucose","Observation.value[x].extension:alternativeQuantity.value[x]","Observation.value[x].extension.value[x]","","","",1,1,"","","","Quantity {[]} {[]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R5/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ext-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "pghd-blood-glucose","Observation.value[x].extension:alternativeQuantity.value[x].id","Observation.value[x].extension.value[x].id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""

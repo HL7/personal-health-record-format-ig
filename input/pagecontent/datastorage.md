@@ -1,4 +1,4 @@
-A complete longitudinal patient health record may feasibly span 100 years or more.  This presents numerous challenges, especially considering that the earliest EMR systems were only first written in the early 1970s.  Statue of limitations require that healthcare practitioners keep pediatric records until an 18th birthday, but even an 18 year storage requirement by providers falls well short of a 76yr life expectancy.  Anybody over 30 years of age is therefore almost guaranteed to have some records on hardcopy paper, compact disk, USB drive, floppy drive, or other storage medium.  
+A complete longitudinal patient health record may feasibly span 100 years or more.  This presents numerous challenges, especially considering that the earliest EHR systems were only first written in the early 1970s.  Statue of limitations require that healthcare practitioners keep pediatric records until an 18th birthday, but even an 18 year storage requirement by providers falls well short of a 76yr life expectancy.  Anybody over 30 years of age is therefore almost guaranteed to have some records on hardcopy paper, compact disk, USB drive, floppy drive, or other storage medium.  
 
 As such, this implementation guide concerns itself with this specific data storage challenge that is unique to patients, and does not immediately assume availability of B2B over-the-wire data interfaces.  This guide differs from guides produced by other working groups, in that it is less concerned with over-the-wire workflows, and more concerned with the notion of a patient asking for a copy of their complete medical history, and how that would work with compact disks, digital video disks, thumbdrive, and other storage devices for bulk data; and how that would be imported into the another system.  
 
@@ -10,7 +10,7 @@ A useful way to think of data storage is in terms of slow-motion data transfer. 
 
 As such, this implementation guide recommends that implementors treat storage in much the same way as over-the-wire data transfers.  
 
-- Systems MUST use FHIR data schemas to claim to be compliant with this IG.  
+- Systems MUST use FHIR data schemas when importing or exporting data to claim to be compliant with this IG.
 - Systems SHOULD use the same MIME types when possible.
 - Systems MAY treat directories as Bundle entries or NDJSON lines by default.
 
@@ -23,7 +23,7 @@ As such, this implementation guide recommends that implementors treat storage in
 
 #### Meta Data
 
-The `.sphr ` container should contain two meta data files.  One of these files is a Composition record, which acts like the 'cover page' of the bundle.  This record records ownership, versioning, and various other data elements necessary for parsing the record.  The second file is a DocumentManifest file, which acts as a manifest and table of contents of the container.
+The `.sphr ` container should contain two meta data files.  One of these files is a Composition record, which acts like the 'cover page' of the bundle.  This record records ownership, versioning, and various other data elements necessary for parsing the record.  The second file is an International Patient Summary, which acts as a manifest and table of contents of critical documents in the record.
 
 
 #### Compression  
@@ -36,7 +36,7 @@ Files containing patient health information should be signed with a password, an
 
 If supported on your operating system, a preferred method of encrypting and decrypting files is with PGP/GPG utilities, which support asymmetric cryptography algorithms such as X.509.  
 
-Therefore, when exporting data from the Personal Health Record:
+Therefore, when exporting data to a .phr or .sphr file:
 
 Write the contents of a collection into either a FHIR Bundle with a .json extension, or a NDJSON file with a .ndjson extension.  After writing the contents to the filesystem, compress the data if desired.  Then convert the relevant X509 certificate into GPG format.  Once done, encrypt the file.
 
@@ -50,7 +50,7 @@ Should use [NDJSON format](http://ndjson.org/) and save to a password encrypted 
 
 #### Conformance Testing
 
-For conformance testing with this IG, the primary success critieria is the ability to import/export the .sphr filetype. This entails storing FHIR records in a new-line delimited file (including a cover composition resource, a document manifest, and provenance records as needed), compressing the file with DEFLATE algorithm (as needed), and then signing with an X.509 security certificate (i.e. DNS certificate). 
+For conformance testing with this IG, the primary success critieria is the ability to import/export the .sphr filetype. This entails storing FHIR records in a new-line delimited file (including a cover composition resource, an International Patient Summary, and provenance records as needed), compressing the file with DEFLATE algorithm (as needed), and then signing with an X.509 security certificate (i.e. DNS certificate). 
 
 #### Implementation Guidance  
 

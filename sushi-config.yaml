@@ -94,6 +94,7 @@ menu:
     API Endpoints: api.html
     File Formats: recordkeeping.html
   Supplemental:
+    Use Cases: usecases.html
     History: history.html
     Security: security.html
     Functional Model: functionality.html
@@ -107,7 +108,7 @@ menu:
     Algorithms: algorithms.html
   Patient Personas:
     Index: personas-index.html
-    Thompson Familiy: persona-thompson-family.html
+    Thompson Family: persona-thompson-family.html
     Cancer - Adult: persona-journey-b.html
     Cancer - Pediatric: persona-william.html
     Chronic Illness (Lupus): persona-journey-e.html
@@ -119,6 +120,8 @@ menu:
 pages:
   index.md:
     title: Getting Started
+  usecases.md:
+    title: Use Cases
   recordkeeping.md:
     title: Record Keeping    
   conformance.md:

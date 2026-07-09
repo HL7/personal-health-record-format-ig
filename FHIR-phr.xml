@@ -268,6 +268,7 @@
 <page key="security" name="Security"/>
 <page key="toc" name="Table of Contents"/>
 <page key="persona-thompson-family" name="Thompson Family"/>
+<page key="usecases" name="Use Cases"/>
 <page key="persona-william" name="William Sim"/>
 <page key="persona-journey-d" name="Wilma"/>
 </specification>

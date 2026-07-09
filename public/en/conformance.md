@@ -2,7 +2,7 @@
 
 ## Conformance Recommendations
 
-This implementation guide was developed through meta-analysis of dozens of other guides, journal liturature, and an environment surveys of the PHR market. Implementators may find the following implementation guides of particular interest.
+This implementation guide was developed through meta-analysis of dozens of other guides, journal literature, and environmental surveys of the PHR market. Implementers may find the following implementation guides of particular interest.
 
 These implementation guides may provide information on how to obtain information from EHR and payor systems and bring them into a PHR. Note that it is not an inclusive list. Implementers are encouraged to research adoption on each guide.
 
@@ -13,7 +13,7 @@ In this specification, the key words “MUST”, “MUST NOT”, “REQUIRED”,
 | [Electronic Health Information Export API](https://build.fhir.org/ig/argonautproject/ehi-api/) |   | SHOULD | MUST |
 | [Record Lifecycle](https://build.fhir.org/ig/HL7/ehrs-rle-ig/) | Medical Records | NOT APPLICABLE | MUST |
 | [SMART Health Cards and Links](https://build.fhir.org/ig/HL7/smart-health-cards-and-links/) | Epidemiology | SHOULD | MAY |
-| [PHR-S Functional Model](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=88) |   | SHOULD | MAY |
+| [PHR-S Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/) |   | SHOULD | MAY |
 | [Patient Data Receipt](https://open-health-manager.github.io/patient-data-receipt-ig/) | Medical Records | NOT APPLICABLE | SHOULD |
 | [Argonaut Data Query](http://www.fhir.org/guides/argonaut/r2/) | Internal Medicine | SHOULD | SHOULD |
 | [Argonaut Data Write](https://hackmd.io/@erichaas/rJVqJGmeY/%2FwTGb4Gk6R6O4NVut5yaJig) | Internal Medicine | SHOULD | SHOULD |
@@ -26,7 +26,7 @@ In this specification, the key words “MUST”, “MUST NOT”, “REQUIRED”,
 | [SMART on FHIR - App Launch](https://hl7.org/fhir/smart-app-launch/) |   | NOT APPLICABLE | SHOULD |
 | [C-CDA on FHIR](http://hl7.org/fhir/us/ccda/) |   | MAY | MAY |
 | [PACIO - Advanced Directives](https://build.fhir.org/ig/HL7/fhir-pacio-adi/) |   | SHOULD | MAY |
-| [PACIO - Personal Functioning and Engagement](https://build.fhir.org/ig/HL7/fhir-pacio-pfe/)) | Neurology | MAY | MAY |
+| [PACIO - Personal Functioning and Engagement](https://build.fhir.org/ig/HL7/fhir-pacio-pfe/en/) | Neurology | MAY | MAY |
 | [mCode](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/examples.html) | Oncology | SHOULD | MAY |
 | [Gravity - Social Determinates of Health](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/) | Social Work | SHOULD | MAY |
 | [Dental Data Exchange](https://build.fhir.org/ig/HL7/dental-data-exchange/) | Dental | MAY | MAY |
@@ -34,7 +34,7 @@ In this specification, the key words “MUST”, “MUST NOT”, “REQUIRED”,
 | [Radiation Dose Summary](https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/) | Radiology | MAY | MAY |
 | [Breast Radiology Reporting](https://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/) | Radiology | MAY | MAY |
 | [mCODE](http://hl7.org/fhir/us/mcode/) |   | MAY | MAY |
-| [CH Allergy Intolerance](https://build.fhir.org/ig/hl7ch/ch-allergyintolerance/document.html) | Immunology | SHOULD | MAY |
+| [CH AllergyIntolerance](https://fhir.ch/ig/ch-allergyintolerance/) | Immunology | SHOULD | MAY |
 | [Vital Signs](https://build.fhir.org/ig/HL7/cimi-vital-signs/) | Intensive Care | SHOULD | MAY |
 | [UDAP Security](https://build.fhir.org/ig/HL7/fhir-udap-security-ig/) |   | NOT APPLICABLE | SHOULD |
 | [SNOMED Terminology Server](https://build.fhir.org/ig/IHTSDO/snomed-ig/) |   | SHOULD | MAY |

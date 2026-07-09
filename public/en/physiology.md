@@ -10,12 +10,12 @@ Recurring challenges with designing PHR apps include figuring out which data to 
 
 The following table provides links to clinical workflow simulations, relevant terminologies, file types, estimated data usage, and diagnostic algorithms used in various medical domains that are typically incorporated into electronic medical records.
 
-> Note: the following table was partially generated using Claude LLM. Please review for accuracy.
+> Note: the following table provides approximate reference values for implementers. File sizes and frequencies will vary by institution and use case.
 
 | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Genomics | [Sequence Type](https://www.hl7.org/fhir/R4/valueset-sequence-type.html)[Human Chromosome](https://www.hl7.org/fhir/R4/valueset-chromosome-human.html) | FASTQ, BAM, VCFs | ~1TB | Annual/Lifetime | PharmacogenomicsPersonalized MedicineGenetic Risk Scoring |
-| Radiology | [AcquisitionModality](https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html)[Laterality](https://www.hl7.org/fhir/valueset-bodysite-laterality.html)[SNOMED CT Body Structures](https://www.hl7.org/fhir/valueset-body-site.html) | DICOM, JPG, PNG | ~1GB | Per Study | Surgical PlanningAutosegmentationLesion DetectionRadiation Therapy Planning |
+| Radiology | [AcquisitionModality](https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html)[Laterality](https://www.hl7.org/fhir/R4/valueset-bodysite-laterality.html)[SNOMED CT Body Structures](https://www.hl7.org/fhir/R4/valueset-body-site.html) | DICOM, JPG, PNG | ~1GB | Per Study | Surgical PlanningAutosegmentationLesion DetectionRadiation Therapy Planning |
 | Embryology | [Embryonic Development Stages](https://www.ncbi.nlm.nih.gov/books/NBK10794/) | PDF, SVG | ~100KB | Periodic Checkups | Developmental Anomaly DetectionGenetic Screening |
 | [Dermatology](https://github.com/synthetichealth/synthea/tree/master/src/main/resources/modules/dermatitis) | [SNOMED CT Skin Conditions](https://browser.ihtsdotools.org/) | JPG, PNG, DICOM | ~2MB | As Needed | Skin Lesion ClassificationMelanoma DetectionDermatitis Progression |
 | [Endocrinology](https://github.com/synthetichealth/synthea/blob/master/src/main/resources/modules/hypothyroidism.json) | [Endocrine Disorder Codes](https://www.icd10data.com/ICD10CM/Codes/E00-E89) | PDF, CSV | ~100KB | Quarterly/Annually | Hormone Level AnalysisThyroid Function Evaluation |

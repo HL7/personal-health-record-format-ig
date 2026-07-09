@@ -2,6 +2,7 @@
 <!DOCTYPE HTML>
 
 
+
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
@@ -43,11 +44,13 @@
   </head>
   <body onload="document.body.style.opacity='1'">
 
-	  <script src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21"}
-    h3,h4,h5,h6{--heading-prefix:"21"}</style>
+    <style type="text/css">h2{--heading-prefix:"22"}
+    h3,h4,h5,h6{--heading-prefix:"22"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -126,6 +129,9 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="usecases.html">Use Cases</a>
+      </li>
+      <li>
         <a href="history.html">History</a>
       </li>
       <li>
@@ -169,7 +175,7 @@
         <a href="personas-index.html">Index</a>
       </li>
       <li>
-        <a href="persona-thompson-family.html">Thompson Familiy</a>
+        <a href="persona-thompson-family.html">Thompson Family</a>
       </li>
       <li>
         <a href="persona-journey-b.html">Cancer - Adult</a>
@@ -264,38 +270,329 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#phr-export-and-import-operations" id="markdown-toc-phr-export-and-import-operations">PHR Export and Import Operations</a></li>
+  <li><a href="#smart-health-links-for-phr-sharing" id="markdown-toc-smart-health-links-for-phr-sharing">SMART Health Links for PHR Sharing</a></li>
+  <li><a href="#streaming-phr-data-over-http" id="markdown-toc-streaming-phr-data-over-http">Streaming PHR Data Over HTTP</a></li>
+</ul>
+
 </div>
+<h3 id="phr-export-and-import-operations">PHR Export and Import Operations</h3>
 
-<p>Systems MAY wish to implement standard APIs for generating a <code class="language-plaintext highlighter-rouge">.phr</code> or <code class="language-plaintext highlighter-rouge">.sphr</code> file.  Standard API queries that have been used in other systems are listed below.</p>
+<p>Systems MAY implement standard APIs for generating and importing <code class="language-plaintext highlighter-rouge">.phr</code> or <code class="language-plaintext highlighter-rouge">.sphr</code> files. These operations enable patients to export their complete health records from one system and import them into another, supporting the core PHR use case of patient-controlled data portability.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># export everything from a single-user system as a FHIR Bundle</span>
+<h4 id="export-operations">Export Operations</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">$phr-export</code> operation generates a complete patient health record in various formats. This operation is typically invoked by the patient or their authorized application.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Export as FHIR Bundle (default)</span>
 GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>
 
-<span class="c"># export everything from a single-user system as an NDJSON Bulkd Data file</span>
+<span class="c"># Export as NDJSON Bulk Data file</span>
 GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>ndjson
 
-<span class="c"># export everything from a single-user system as a PHR file</span>
+<span class="c"># Export as PHR file (NDJSON with .phr extension)</span>
 GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>phr
 
-<span class="c"># export everything from a single-user system as a SPHR file with security</span>
+<span class="c"># Export as secure SPHR file (encrypted zip container)</span>
 GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>sphr
-
-<span class="c"># export everything from a specific date to current from a single-user system</span>
-GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?start<span class="o">=</span>2010
-
-<span class="c"># export everything in a specific date range from a single-user system</span>
-GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?start<span class="o">=</span>2010&amp;end<span class="o">=</span>2020-06
-
-<span class="c"># export everything for a specific patient in a multi-user system</span>
-GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?patient<span class="o">=</span>Patient/12345
-
-<span class="c"># post a record to another system to be imported (NDJSON format)</span>
-POST /Bundle/<span class="nv">$import</span>
 </code></pre></div></div>
 
-<p>Systems MUST post the API endpoints they use in the system's CapabilityStatement.</p>
+<p><strong>Date Range Filtering:</strong></p>
+
+<p>Exporters can request specific time periods to reduce payload size or focus on recent data:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Export everything from 2010 to current</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?start<span class="o">=</span>2010
+
+<span class="c"># Export specific date range</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?start<span class="o">=</span>2010&amp;end<span class="o">=</span>2020-06
+
+<span class="c"># Export last year only</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?start<span class="o">=</span>2024-01-01&amp;end<span class="o">=</span>2024-12-31
+</code></pre></div></div>
+
+<p><strong>Multi-Patient Systems:</strong></p>
+
+<p>For systems managing multiple patients (e.g., EHR systems), specify the patient identifier:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Export for specific patient</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?patient<span class="o">=</span>Patient/12345
+
+<span class="c"># Export with date range and format</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?patient<span class="o">=</span>Patient/12345&amp;outputFormat<span class="o">=</span>sphr&amp;start<span class="o">=</span>2020
+</code></pre></div></div>
+
+<h4 id="import-operations">Import Operations</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">$import</code> operation accepts PHR data in NDJSON format and imports it into the receiving system. This operation should handle deduplication, provenance tracking, and conflict resolution.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Import PHR data (NDJSON format)</span>
+POST /Bundle/<span class="nv">$import</span>
+Content-Type: application/x-ndjson
+
+<span class="c"># Import with merge strategy</span>
+POST /Bundle/<span class="nv">$import</span>?strategy<span class="o">=</span>merge
+
+<span class="c"># Import with validation only (no commit)</span>
+POST /Bundle/<span class="nv">$import</span>?mode<span class="o">=</span>validate
+</code></pre></div></div>
+
+<p><strong>Import Considerations:</strong></p>
+
+<ul>
+  <li><strong>Deduplication</strong>: System should detect and handle duplicate resources</li>
+  <li><strong>Provenance</strong>: Imported resources should retain original provenance metadata</li>
+  <li><strong>Validation</strong>: All resources should be validated against FHIR profiles</li>
+  <li><strong>Conflict Resolution</strong>: System should have policies for handling conflicting data</li>
+</ul>
+
+<h4 id="response-formats">Response Formats</h4>
+
+<p>Export operations support multiple response formats:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Format</th>
+      <th>MIME Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bundle</td>
+      <td><code class="language-plaintext highlighter-rouge">application/fhir+json</code></td>
+      <td>Standard FHIR Bundle resource</td>
+    </tr>
+    <tr>
+      <td>NDJSON</td>
+      <td><code class="language-plaintext highlighter-rouge">application/x-ndjson</code></td>
+      <td>Newline-delimited JSON, one resource per line</td>
+    </tr>
+    <tr>
+      <td>PHR</td>
+      <td><code class="language-plaintext highlighter-rouge">application/x-ndjson</code></td>
+      <td>Same as NDJSON with <code class="language-plaintext highlighter-rouge">.phr</code> extension</td>
+    </tr>
+    <tr>
+      <td>SPHR</td>
+      <td><code class="language-plaintext highlighter-rouge">application/zip</code></td>
+      <td>Encrypted zip containing .phr file(s) plus supporting documents</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="capability-statement">Capability Statement</h4>
+
+<p>PHR systems following the PHR FHIR Implementation Guide MUST include the API endpoints they are exposing in the PHR's FHIR server's CapabilityStatement:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CapabilityStatement"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rest"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="nl">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"server"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"operation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phr-export"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/uv/phr/OperationDefinition/phr-export"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"import"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/uv/phr/OperationDefinition/phr-import"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="smart-health-links-for-phr-sharing">SMART Health Links for PHR Sharing</h3>
+
+<p>SMART Health Links (SHLinks) provide a mechanism for patients to share their health records via QR codes or short URLs. A SMART Health Link encodes an API endpoint URL along with a decryption key, enabling secure, convenient data sharing without requiring pre-established technical connectivity.</p>
+
+<h4 id="use-cases">Use Cases</h4>
+
+<ul>
+  <li><strong>Emergency Room Intake</strong>: Patient presents QR code containing medication list and allergies</li>
+  <li><strong>Pharmacy</strong>: Sharing current prescriptions with a new pharmacy</li>
+  <li><strong>Travel</strong>: Carrying vaccination records across borders</li>
+  <li><strong>Specialist Referral</strong>: Sharing relevant history with a new provider</li>
+</ul>
+
+<h4 id="qr-code-example">QR Code Example</h4>
+
+<p>A SMART Health Link QR code encodes a URL in the format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shlink:/eyJ1cmwiOiJodHRwczovL...
+</code></pre></div></div>
+
+<p>When scanned, the QR code provides access to an API endpoint that returns encrypted health data. The decryption key is embedded in the link itself.</p>
+
+<h4 id="technical-structure">Technical Structure</h4>
+
+<p>A SMART Health Link URL payload contains:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.org/api/shl/abc123"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rxTgYlOaKJPFtcEd0qcceN8wEU4p94SqAwIWQe6uX7Q"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"exp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1735689600</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"flag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LP"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient Health Summary"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">url</code></td>
+      <td>API endpoint where encrypted payload can be retrieved</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">key</code></td>
+      <td>Base64url-encoded decryption key (256-bit AES-GCM)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">exp</code></td>
+      <td>Optional expiration time (Unix timestamp)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">flag</code></td>
+      <td><code class="language-plaintext highlighter-rouge">L</code> = long-term, <code class="language-plaintext highlighter-rouge">P</code> = passcode required, <code class="language-plaintext highlighter-rouge">U</code> = single use</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">label</code></td>
+      <td>Human-readable description</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="encryption">Encryption</h4>
+
+<p>SMART Health Links use <strong>A256GCM</strong> (AES-256 in Galois/Counter Mode). The payload retrieved from the URL is a JWE (JSON Web Encryption) that can be decrypted using the embedded key.</p>
+
+<h4 id="integration-with-sphr-files">Integration with .sphr Files</h4>
+
+<p>When sharing via SMART Health Link:</p>
+
+<ol>
+  <li>Upload .sphr file to hosting service</li>
+  <li>Generate unique retrieval URL</li>
+  <li>Encrypt with random 256-bit key</li>
+  <li>Encode URL + key into SHLink</li>
+  <li>Render as QR code</li>
+</ol>
+
+<h4 id="references">References</h4>
+
+<ul>
+  <li><a href="https://docs.smarthealthit.org/smart-health-links/">SMART Health Links Specification</a></li>
+  <li><a href="https://smarthealth.cards/">SMART Health Cards</a></li>
+</ul>
+
+<h3 id="streaming-phr-data-over-http">Streaming PHR Data Over HTTP</h3>
+
+<p>While the .phr format is primarily designed for file-based storage and exchange, systems may also transmit PHR data directly over HTTP connections using streaming techniques.</p>
+
+<h4 id="content-type-headers">Content-Type Headers</h4>
+
+<p>When transmitting .phr content over HTTP, use the following headers:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">Content-Type: application/x-ndjson
+Content-Disposition: attachment; filename="patient-record.phr"
+X-PHR-Version: 1.0
+</span></code></pre></div></div>
+
+<p>For FHIR-aware systems:</p>
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">Content-Type: application/fhir+ndjson
+</span></code></pre></div></div>
+
+<h4 id="streaming-benefits">Streaming Benefits</h4>
+
+<p>NDJSON format is well-suited for streaming because each line is a complete, parseable JSON object. Receivers can process records as they arrive without waiting for the complete transmission, enabling:</p>
+
+<ul>
+  <li><strong>Progressive rendering</strong>: Display data as it arrives</li>
+  <li><strong>Memory efficiency</strong>: Process large records without loading entire payload</li>
+  <li><strong>Resilience</strong>: Partial data available even if connection interrupts</li>
+  <li><strong>Real-time feedback</strong>: Show progress indicators during transfer</li>
+</ul>
+
+<h4 id="streaming-implementation-example">Streaming Implementation Example</h4>
+
+<p><strong>Server (streaming response):</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Node.js example</span>
+<span class="nx">response</span><span class="p">.</span><span class="nf">setHeader</span><span class="p">(</span><span class="dl">'</span><span class="s1">Content-Type</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">application/x-ndjson</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">response</span><span class="p">.</span><span class="nf">setHeader</span><span class="p">(</span><span class="dl">'</span><span class="s1">Transfer-Encoding</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">chunked</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="k">for</span> <span class="k">await </span><span class="p">(</span><span class="kd">const</span> <span class="nx">resource</span> <span class="k">of</span> <span class="nx">patientResources</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">response</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nf">stringify</span><span class="p">(</span><span class="nx">resource</span><span class="p">)</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">response</span><span class="p">.</span><span class="nf">end</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p><strong>Client (streaming consumption):</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Process each line as it arrives</span>
+<span class="kd">const</span> <span class="nx">readline</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">readline</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">rl</span> <span class="o">=</span> <span class="nx">readline</span><span class="p">.</span><span class="nf">createInterface</span><span class="p">({</span> <span class="na">input</span><span class="p">:</span> <span class="nx">response</span> <span class="p">});</span>
+
+<span class="nx">rl</span><span class="p">.</span><span class="nf">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">line</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">line</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">resource</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="nx">line</span><span class="p">);</span>
+  <span class="nf">processResource</span><span class="p">(</span><span class="nx">resource</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h4 id="comparison-with-bulk-data-ig">Comparison with Bulk Data IG</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspect</th>
+      <th>PHR Format</th>
+      <th>Bulk Data IG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File structure</td>
+      <td>Single heterogeneous .ndjson</td>
+      <td>Separate file per resource type</td>
+    </tr>
+    <tr>
+      <td>Typical use</td>
+      <td>Single patient export</td>
+      <td>Multi-patient population export</td>
+    </tr>
+    <tr>
+      <td>Resource ordering</td>
+      <td>Patient-centric, mixed types</td>
+      <td>Grouped by resourceType</td>
+    </tr>
+    <tr>
+      <td>Streaming</td>
+      <td>Well-suited</td>
+      <td>Designed for batch</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The PHR format uses a single file with mixed resource types for patient-centric simplicity, while Bulk Data separates by type (Observation.ndjson, Condition.ndjson, etc.) for scalability with large populations.</p>
+
+<h4 id="error-handling">Error Handling</h4>
+
+<p>For streaming transfers, errors may occur mid-stream. Recommended approach:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"resourceType"</span><span class="p">:</span><span class="s2">"OperationOutcome"</span><span class="p">,</span><span class="nl">"issue"</span><span class="p">:[{</span><span class="nl">"severity"</span><span class="p">:</span><span class="s2">"error"</span><span class="p">,</span><span class="nl">"code"</span><span class="p">:</span><span class="s2">"processing"</span><span class="p">,</span><span class="nl">"diagnostics"</span><span class="p">:</span><span class="s2">"Error at line 847: invalid reference"</span><span class="p">}]}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Include OperationOutcome resources inline to indicate processing errors while allowing the stream to continue for partial data recovery.</p>
 
 
 
@@ -325,8 +622,8 @@ POST /Bundle/<span class="nv">$import</span>
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-04-23 17:08:00 -0500">
-    2026-04-23
+  <span title="2026-06-11 16:28:00 -0600">
+    2026-06-11
   </span>
 
           <br/>

@@ -6,7 +6,7 @@ If you've not seen the Day of Glass videos, take a moment to look through the vi
 
 [Corning Day Made of Glass](https://www.youtube.com/watch?v=6Cf7IL_eZ38)      
 
-With an understanding that there isn't necessarily a 'here' and 'there' as in the traditional server/client EMR model.  Rather, there is 'here', where the patient is with their smart phone.  And the surrounding environment comes to life with the help of digital health assistants and software agents.
+With an understanding that there isn't necessarily a 'here' and 'there' as in the traditional server/client EHR model.  Rather, there is 'here', where the patient is with their smart phone.  And the surrounding environment comes to life with the help of digital health assistants and software agents.
 
 ### Bedside Computing
 ![./Design-DayMadeOfGlass-BedsideComputing.jpg](./Design-DayMadeOfGlass-BedsideComputing.jpg){:width="100%"}
