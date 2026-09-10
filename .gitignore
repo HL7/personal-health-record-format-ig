@@ -1,5 +1,6 @@
 
 **/.DS_Store
+**/._*
 Thumbs.db
 /fsh-generated
 /input-cache
@@ -9,3 +10,4 @@ Thumbs.db
 /template
 .vscode
 .env
+*/full-ig.zip

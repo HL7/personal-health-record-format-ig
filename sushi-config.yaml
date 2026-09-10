@@ -89,25 +89,26 @@ dependencies:
 
 menu:
   Home: index.html
-  Functional Model:
-    Conformance: conformance.html
-    Data Model: datamodel.html
-    Functional Model: functionality.html
-    Record Lifecycle: recordlifecycle.html
-    Security: security.html
-  Supplemental:
-    History: history.html
-    Record Keeping: recordkeeping.html
-    Longitudinal Records: longitudinal.html
+  Specification:
+    Longitudinal Data Model: datamodel.html
     API Endpoints: api.html
+    File Formats: recordkeeping.html
+  Supplemental:
+    Use Cases: usecases.html
+    History: history.html
+    Security: security.html
+    Functional Model: functionality.html
     Annotations: annotations.html
-    Algorithms: algorithms.html
+    Merging and Versioning: longitudinal.html
+    Patient Generated Health Data: pghd.html
     Physiology Domains: physiology.html
     Operating Systems: operating-systems.html
-    Patient-generated health data(PGHD): pghd.html
+    Logical Models: logical-models.html
+    Conformance: conformance.html
+    Algorithms: algorithms.html
   Patient Personas:
     Index: personas-index.html
-    Thompson Familiy: persona-thompson-family.html
+    Thompson Family: persona-thompson-family.html
     Cancer - Adult: persona-journey-b.html
     Cancer - Pediatric: persona-william.html
     Chronic Illness (Lupus): persona-journey-e.html
@@ -119,6 +120,8 @@ menu:
 pages:
   index.md:
     title: Getting Started
+  usecases.md:
+    title: Use Cases
   recordkeeping.md:
     title: Record Keeping    
   conformance.md:
@@ -127,8 +130,6 @@ pages:
     title: Data Model    
   functionality.md:
     title: Functional Model
-  recordlifecycle.md:
-    title: Record Lifecycle    
   annotations.md:
     title: Annotations
   security.md:
@@ -164,7 +165,11 @@ pages:
   longitudinal.md:
     title: Longitudinal Records
   pghd.md:
-    title: Patient-generated health data(PGHD)
+    title: Patient Generated Health Data (PGHD)
+  pghd-code-mapping.md:
+    title: PHR Code Mapping
+  logical-models.md:
+    title: Logical Models
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

@@ -1,36 +1,70 @@
+### PHR Export and Import Operations
 
+Systems MAY implement standard APIs for generating and importing `.phr` or `.sphr` files. These operations enable patients to export their complete health records from one system and import them into another, supporting the core PHR use case of patient-controlled data portability.
 
-Systems MAY wish to implement standard APIs for generating a `.phr` or `.sphr` file.  Standard API queries that have been used in other systems are listed below.
+#### Export Operations
+
+The `$phr-export` operation generates a complete patient health record in various formats. This operation is typically invoked by the patient or their authorized application.
 
 ```bash
-# export everything from a single-user system as a FHIR Bundle
+# Export as FHIR Bundle (default)
 GET /Bundle/$phr-export
 
-# export everything from a single-user system as an NDJSON Bulkd Data file
+# Export as NDJSON Bulk Data file
 GET /Bundle/$phr-export?outputFormat=ndjson
 
-# export everything from a single-user system as a PHR file
+# Export as PHR file (NDJSON with .phr extension)
 GET /Bundle/$phr-export?outputFormat=phr
 
-# export everything from a single-user system as a SPHR file with security
+# Export as secure SPHR file (encrypted zip container)
 GET /Bundle/$phr-export?outputFormat=sphr
-
-# export everything from a specific date to current from a single-user system
-GET /Bundle/$phr-export?start=2010
-
-# export everything in a specific date range from a single-user system
-GET /Bundle/$phr-export?start=2010&end=2020-06
-
-# export everything for a specific patient in a multi-user system
-GET /Bundle/$phr-export?patient=Patient/12345
-
-# post a record to another system to be imported (NDJSON format)
-POST /Bundle/$import
 ```
 
-<<<<<<< HEAD
 Systems MUST post the API endpoints they use in the system's CapabilityStatement.  
-=======
+
+**Date Range Filtering:**
+
+Exporters can request specific time periods to reduce payload size or focus on recent data:
+
+```bash
+# Export everything from 2010 to current
+GET /Bundle/$phr-export?start=2010
+
+# Export specific date range
+GET /Bundle/$phr-export?start=2010&end=2020-06
+
+# Export last year only
+GET /Bundle/$phr-export?start=2024-01-01&end=2024-12-31
+```
+
+**Multi-Patient Systems:**
+
+For systems managing multiple patients (e.g., EHR systems), specify the patient identifier:
+
+```bash
+# Export for specific patient
+GET /Bundle/$phr-export?patient=Patient/12345
+
+# Export with date range and format
+GET /Bundle/$phr-export?patient=Patient/12345&outputFormat=sphr&start=2020
+```
+
+#### Import Operations
+
+The `$import` operation accepts PHR data in NDJSON format and imports it into the receiving system. This operation should handle deduplication, provenance tracking, and conflict resolution.
+
+```bash
+# Import PHR data (NDJSON format)
+POST /Bundle/$import
+Content-Type: application/x-ndjson
+
+# Import with merge strategy
+POST /Bundle/$import?strategy=merge
+
+# Import with validation only (no commit)
+POST /Bundle/$import?mode=validate
+```
+
 **Import Considerations:**
 
 - **Deduplication**: System should detect and handle duplicate resources
@@ -51,7 +85,7 @@ Export operations support multiple response formats:
 
 #### Capability Statement
 
-Systems MUST advertise supported operations in their CapabilityStatement:
+PHR systems following the PHR FHIR Implementation Guide MUST include the API endpoints they are exposing in the PHR's FHIR server's CapabilityStatement:
 
 ```json
 {
