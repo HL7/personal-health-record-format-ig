@@ -270,14 +270,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#using-the-conformance-recommendations" id="markdown-toc-using-the-conformance-recommendations">Using the Conformance Recommendations</a></li>
+  <li><a href="#additional-implementation-guides" id="markdown-toc-additional-implementation-guides">Additional Implementation Guides</a></li>
+</ul>
+
 </div>
-<p>This implementation guide was developed through meta-analysis of dozens of other guides, journal literature, and environmental surveys of the PHR market.  Implementers may find the following implementation guides of particular interest.</p>
+<h3 id="using-the-conformance-recommendations">Using the Conformance Recommendations</h3>
 
-<p>These implementation guides may provide information on how to obtain information from EHR and payor systems and bring them into a PHR.  Note that it is not an inclusive list.  Implementers are encouraged to research adoption on each guide.</p>
+<p>The Personal Health Record (PHR) Implementation Guide is designed to support a range of implementations, from small applications that manage only a limited amount of health information to comprehensive personal health record systems. Implementers are not expected to implement every specification listed in Table 4.1.</p>
 
-<p>In this specification, the key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” are to be interpreted as described in RFC2119.</p>
+<p>For implementers who are new to the FHIR ecosystem, Table 4.1 is intended to serve as an implementation roadmap. Begin with the specifications identified as foundational, and add additional capabilities according to the clinical information and workflows supported by the application.</p>
+
+<p>A minimal PHR implementation begins with the <strong>Electronic Health Information (EHI) Export API</strong> and the <strong>Record Life Cycle</strong>. Together, these establish the basic mechanisms needed to represent, retain, exchange, and manage the life cycle of a personal health record. An implementation may therefore begin with a very small record — potentially containing only a few data elements — without implementing the entire FHIR API surface or every clinical domain described by this guide.</p>
+
+<p>Implementers are <strong>RECOMMENDED</strong> to additionally support the <strong>International Patient Summary (IPS)</strong>. IPS provides a standardized, internationally applicable representation of essential patient health information and provides a useful clinical foundation upon which a more comprehensive PHR can be constructed.</p>
+
+<p>Other specifications in Table 4.1 should be treated as <strong>opt-in capabilities</strong>. Implementers should select them according to the information their application manages and the functions it provides. For example, an application that manages immunization records should implement the applicable immunization guidance, while an application that does not manage immunizations is not expected to implement that capability solely to claim conformance with this guide.</p>
+
+<p>This modular approach is intentional. It follows a pattern familiar from standards such as DICOM, in which implementations support the information objects, services, and capabilities appropriate to their intended use rather than being required to implement the entire standard. A conformant PHR can therefore begin as a minimal viable health record and progressively add standardized capabilities as its scope expands.</p>
+
+<p>This approach also distinguishes the PHR Implementation Guide from comprehensive functional models. Earlier approaches to personal health record standardization, including the PHR-S Functional Model, describe a broad set of functions that a complete PHR system might provide. Feedback from implementers indicated that requiring such a broad functional surface would make conformance impractical for many focused applications. This guide therefore favors <strong>composable conformance</strong>: a small foundational core, accompanied by standardized capabilities that implementations adopt when applicable.</p>
+
+<h3 id="additional-implementation-guides">Additional Implementation Guides</h3>
 
 <table>
   <thead>
@@ -364,7 +380,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><a href="https://www.hl7.org/fhir/us/core/">US CORE</a></td>
       <td> </td>
-      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
       <td style="text-align: left">MAY</td>
     </tr>
     <tr>
@@ -502,6 +518,127 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
+<h4 id="why-these-guides-may-be-of-interest">Why These Guides May Be of Interest</h4>
+
+<ul>
+  <li>
+    <p><strong>Electronic Health Information (EHI) Export API</strong> — useful for patients who want to obtain a complete electronic copy of their health information from a healthcare organization and bring that information into their personal health record.</p>
+  </li>
+  <li>
+    <p><strong>Record Lifecycle</strong> — useful for any PHR that needs to maintain health information over time, including understanding when records were created, updated, replaced, corrected, or otherwise changed.</p>
+  </li>
+  <li>
+    <p><strong>SMART Health Cards and Links</strong> — useful for patients who want to carry or share portable, verifiable health information, such as vaccination or laboratory records, using a QR code, wallet, or link.</p>
+  </li>
+  <li>
+    <p><strong>PHR-S Functional Model</strong> — useful for implementers building a comprehensive personal health record and looking for a broader catalog of functions that patients may expect from a full-featured PHR.</p>
+  </li>
+  <li>
+    <p><strong>Patient Data Receipt</strong> — useful for patients who want health information received from another system to be incorporated into their own longitudinal personal health record.</p>
+  </li>
+  <li>
+    <p><strong>Argonaut Data Query</strong> — useful for patients who want their PHR to retrieve common clinical information such as conditions, medications, allergies, laboratory results, and other records from healthcare providers.</p>
+  </li>
+  <li>
+    <p><strong>Argonaut Data Write</strong> — useful for patients who want their PHR to contribute information back to healthcare systems rather than operating solely as a read-only record.</p>
+  </li>
+  <li>
+    <p><strong>Argonaut Scheduling</strong> — useful for patients who want to find available appointments and manage healthcare scheduling through their PHR.</p>
+  </li>
+  <li>
+    <p><strong>Argonaut Clinical Notes</strong> — useful for patients who want access to clinical notes written by their physicians and other healthcare professionals.</p>
+  </li>
+  <li>
+    <p><strong>Argonaut Questionnaire</strong> — useful for patients who want to complete intake forms, screening instruments, health assessments, or other questionnaires electronically.</p>
+  </li>
+  <li>
+    <p><strong>Patient Request for Corrections</strong> — useful for patients who discover inaccurate, incomplete, or disputed information in their medical record and want to request that the record be corrected or amended.</p>
+  </li>
+  <li>
+    <p><strong>International Patient Summary (IPS)</strong> — useful for international travelers, people receiving care outside their usual healthcare system, and anyone who wants a concise, portable summary of essential health information that can be understood across organizational and national boundaries.</p>
+  </li>
+  <li>
+    <p><strong>US Core</strong> — useful for patients receiving healthcare in the United States who want their PHR to interoperate with the common clinical data elements and APIs supported by U.S. healthcare systems.</p>
+  </li>
+  <li>
+    <p><strong>SMART on FHIR – App Launch</strong> — useful for patients who want to securely connect their PHR with third-party health applications, or use PHR applications in conjunction with healthcare-provider systems.</p>
+  </li>
+  <li>
+    <p><strong>C-CDA on FHIR</strong> — useful for patients who have existing clinical documents, such as Continuity of Care Documents, discharge summaries, or referral documents, and want to incorporate those documents into a FHIR-based PHR.</p>
+  </li>
+  <li>
+    <p><strong>PACIO – Advance Directives</strong> — useful for patients who want their PHR to carry advance directives, healthcare agent information, living wills, and other information describing their preferences for future medical care.</p>
+  </li>
+  <li>
+    <p><strong>PACIO – Personal Functioning and Engagement</strong> — useful for people managing disability, rehabilitation, aging, neurological conditions, or long-term care who want to track functional status and participation in everyday activities.</p>
+  </li>
+  <li>
+    <p><strong>mCODE</strong> — useful for anyone receiving oncology care, cancer survivors, or patients with a history of cancer who want their PHR to represent cancer diagnoses, staging, treatments, laboratory information, and other oncology-specific information.</p>
+  </li>
+  <li>
+    <p><strong>Gravity – Social Determinants of Health</strong> — useful for patients whose health or care is affected by factors such as housing, food access, transportation, financial insecurity, social support, or other social needs.</p>
+  </li>
+  <li>
+    <p><strong>Dental Data Exchange</strong> — useful for patients who want dental and oral-health information to be part of their longitudinal personal health record and exchangeable between dental and medical providers.</p>
+  </li>
+  <li>
+    <p><strong>Genomics Reporting</strong> — useful for patients who have undergone genetic or genomic testing and want to retain and reuse genomic results as part of their longitudinal health record.</p>
+  </li>
+  <li>
+    <p><strong>Radiation Dose Summary</strong> — useful for patients who undergo repeated medical imaging or radiation-producing procedures and want to maintain a longitudinal history of their medical radiation exposure.</p>
+  </li>
+  <li>
+    <p><strong>Breast Radiology Reporting</strong> — useful for patients undergoing mammography, breast ultrasound, MRI, or other breast imaging who want their PHR to represent breast-imaging findings and recommendations in a standardized form.</p>
+  </li>
+  <li>
+    <p><strong>CH AllergyIntolerance</strong> — useful particularly for patients receiving care in Switzerland who need standardized exchange of allergy and intolerance information.</p>
+  </li>
+  <li>
+    <p><strong>Vital Signs</strong> — useful for patients who want to track measurements such as blood pressure, heart rate, respiratory rate, temperature, oxygen saturation, height, or weight over time, including measurements collected at home.</p>
+  </li>
+  <li>
+    <p><strong>UDAP Security</strong> — useful when a PHR needs secure, scalable, trusted connections with healthcare organizations and other systems, particularly where automated registration and cross-organizational trust are required.</p>
+  </li>
+  <li>
+    <p><strong>SNOMED Terminology Server</strong> — useful for PHRs that need to consistently interpret, organize, search, or exchange clinical concepts represented using SNOMED CT.</p>
+  </li>
+  <li>
+    <p><strong>CARIN Digital Insurance Card</strong> — useful for patients who want to carry and share health insurance coverage information electronically, including information ordinarily found on a physical insurance card.</p>
+  </li>
+  <li>
+    <p><strong>Physical Activity</strong> — useful for patients tracking exercise, mobility, fitness, rehabilitation, or activity goals, including information collected by consumer devices and health applications.</p>
+  </li>
+  <li>
+    <p><strong>Mobile Access to Health Documents (MHD)</strong> — useful for patients who need access to clinical documents distributed across healthcare organizations or document-sharing networks, particularly from mobile applications.</p>
+  </li>
+  <li>
+    <p><strong>Patient Reported Outcomes</strong> — useful for patients who want to record how they are feeling or functioning directly, including symptoms, quality of life, treatment effects, and other outcomes that may not be captured by clinical measurements alone.</p>
+  </li>
+  <li>
+    <p><strong>Patient Health Devices</strong> — useful for patients using home or personal medical devices—such as blood-pressure monitors, pulse oximeters, thermometers, scales, or other connected devices—and who want those measurements incorporated into their PHR.</p>
+  </li>
+  <li>
+    <p><strong>Da Vinci – Prior Authorization</strong> — useful for patients whose care requires insurance authorization and for PHR applications intended to help patients understand or follow the authorization process for medications, procedures, equipment, or other covered services.</p>
+  </li>
+  <li>
+    <p><strong>Vital Records – Birth and Fetal Death Reporting</strong> — useful for PHR applications supporting pregnancy, childbirth, newborn records, or family health histories where information associated with birth and vital-record reporting needs to be represented.</p>
+  </li>
+</ul>
+
+<h4 id="recommended-starting-point">Recommended starting point</h4>
+
+<p>For a new implementation:</p>
+
+<ol>
+  <li><strong>Implement the EHI Export API</strong> to establish the foundational exchange mechanism.</li>
+  <li><strong>Implement Record Life Cycle requirements</strong> to establish how records are created, maintained, retained, and exchanged over time.</li>
+  <li><strong>Implement IPS (RECOMMENDED)</strong> to provide a standardized clinical summary.</li>
+  <li><strong>Review the remaining rows in Table 4.1</strong> and select the capabilities applicable to the application's intended use.</li>
+  <li><strong>Document the capabilities supported by the implementation</strong>, so that users and interoperating systems can determine which portions of the PHR ecosystem the application implements.</li>
+</ol>
+
+<p>The result is a progressive implementation model rather than an all-or-nothing conformance requirement. A simple application can implement a small, interoperable PHR; a comprehensive application can use the same foundation while progressively adding additional FHIR-based capabilities.</p>
+
 
 
 
@@ -530,8 +667,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-11 16:28:00 -0600">
-    2026-06-11
+  <span title="2026-09-10 16:32:00 -0500">
+    2026-09-10
   </span>
 
           <br/>

@@ -1,4 +1,6 @@
-# Resource Personal Health Records
+#  - Personal Health Records v1.0.0-ballot2
+
+## : 
 
 
 
@@ -28,7 +30,7 @@
   "name" : "PatientHealthRecordsIG",
   "title" : "Personal Health Records",
   "status" : "active",
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-09-10T16:32:51-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {
@@ -67,7 +69,7 @@
       ],
       "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId" : "hl7.terminology.r4",
-      "version" : "7.1.0"
+      "version" : "7.3.0"
     },
     {
       "id" : "hl7ext",
@@ -146,7 +148,7 @@
         "extension" : [
           {
             "url" : "code",
-            "valueString" : "path-liquid"
+            "valueString" : "path-liquid-template"
           },
           {
             "url" : "value",
@@ -159,7 +161,7 @@
         "extension" : [
           {
             "url" : "code",
-            "valueString" : "path-liquid"
+            "valueString" : "path-liquid-template"
           },
           {
             "url" : "value",
@@ -488,7 +490,7 @@
         "extension" : [
           {
             "url" : "code",
-            "valueCode" : "path-liquid"
+            "valueCode" : "path-liquid-template"
           },
           {
             "url" : "value",
@@ -501,7 +503,7 @@
         "extension" : [
           {
             "url" : "code",
-            "valueCode" : "path-liquid"
+            "valueCode" : "path-liquid-template"
           },
           {
             "url" : "value",
