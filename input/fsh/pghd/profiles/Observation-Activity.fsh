@@ -11,5 +11,6 @@ This profile defines how to represent Activity.
 
 * category[ObservationCategory].coding.code = #activity (exactly)
 * code.coding[PGHDCode] from ObservationActivity
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * value[x] only Quantity
 * value[x] MS
