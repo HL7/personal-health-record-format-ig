@@ -222,25 +222,25 @@ But to make that happen, we must clarify the details of the envelope that will c
 - [DICOM PS3.3 2024b - Information Object Definitions](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_F.2.2.2.html)
 - [DICOM PS3.11 2024b - Media Storage Application Profiles](https://dicom.nema.org/medical/dicom/current/output/chtml/part11/sect_d.3.3.html)
 
-### IPS Harmonization
+### Patient Summaries
 
-As mentioned earlier, the .sphr container MAY include an International Patient Summary (IPS) file that acts as a manifest and table of contents. This section provides detailed guidance on the relationship between PHR and IPS formats.
+As mentioned earlier, the .phr container MAY include an International Patient Summary (IPS) file that acts as a manifest and table of contents. This section provides detailed guidance on the relationship between PHR and IPS formats.
 
-#### IPS vs PHR Comparison
+#### IPS and PHR Compared
 
 | Aspect | IPS | PHR |
 |--------|-----|-----|
 | Purpose | Emergency/unplanned care | Complete health history |
 | Scope | Essential current data | All historical data |
 | Size | Compact (KB) | Comprehensive (MB-GB) |
-| Authorship | Clinical system | Patient + multiple sources |
+| Authorship | Clinical system | Patient + Clinical + Other |
 | Standard | HL7 IPS IG | This IG |
 
-The IPS can be thought of as an "executive summary" extracted from the complete PHR - containing only active, current information needed for immediate care decisions.
+The IPS can be thought of as an "executive summary" extracted from the complete PHR - containing only active, current information needed for immediate care decisions.  The PHR may also contain previous versions of IPS documents obtained while traveling or otherwise.
 
 #### Generating IPS from PHR
 
-To generate an IPS document from PHR data, extract current/active resources:
+To generate (or regenerate) an IPS document from PHR data, use the most recent data ( stuat of current or active), including:
 
 | IPS Section | PHR Source |
 |-------------|------------|
@@ -252,35 +252,17 @@ To generate an IPS document from PHR data, extract current/active resources:
 | Medical Devices | DeviceUseStatement (status=active) |
 | Vital Signs | Observation (category=vital-signs, recent) |
 
+
+
 #### Importing IPS into PHR
 
 When a patient receives an IPS from a healthcare provider:
 
-1. **Parse the IPS Bundle** - Extract Composition and referenced resources
-2. **Add Provenance** - Record source system and date received
-3. **Deduplicate** - Check for existing equivalent records
-4. **Merge** - Integrate new data with existing PHR contents
-5. **Flag conflicts** - Identify discrepancies for patient review
-
-**Provenance example:**
-```json
-{
-  "resourceType": "Provenance",
-  "target": [{"reference": "Bundle/imported-ips"}],
-  "recorded": "2025-01-15T10:00:00Z",
-  "agent": [{
-    "type": {
-      "coding": [{
-        "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
-        "code": "author"
-      }]
-    },
-    "who": {
-      "display": "Hospital EHR System"
-    }
-  }]
-}
-```
+1. **Parse the IPS Bundle** - Extract Composition and other resources.
+2. **Record Provenance** - Record source system and date received, if available.  
+3. **Deduplicate** - Check for existing equivalent records.
+4. **Merge** - Integrate new data with existing PHR contents.
+5. **Flag conflicts** - Identify discrepancies for patient review.
 
 #### Terminology Requirements
 

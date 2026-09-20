@@ -176,14 +176,14 @@ While the .phr format is primarily designed for file-based storage and exchange,
 
 When transmitting .phr content over HTTP, use the following headers:
 
-```http
+```
 Content-Type: application/x-ndjson
 Content-Disposition: attachment; filename="patient-record.phr"
 X-PHR-Version: 1.0
 ```
 
 For FHIR-aware systems:
-```http
+```
 Content-Type: application/fhir+ndjson
 ```
 

@@ -1,0 +1,128 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/phr/Observation/pghd-hearingSensitivity-4> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pghd-hearingSensitivity-4"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing-sensitivity"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-hearing-sensitivity>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pghd-hearingSensitivity-4</b></p><a name=\"pghd-hearingSensitivity-4\"> </a><a name=\"hcpghd-hearingSensitivity-4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-pghd-hearing-sensitivity.html\">PGHD HearingSensitivity Profile</a></p></div><p><b>identifier</b>: <code>urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3</code>/DE430E9B-03F4-4310-ACA1-508787B240CD_4</p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category exam}\">Exam</span></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes hearingSensitivity}\">Hearing sensitivity</span></p><p><b>subject</b>: <a href=\"Patient-1.html\">John Doe Male, DoB: 1990-01-01</a></p><p><b>effective</b>: 2023-12-01 05:33:42+0000 --&gt; 2023-12-01 05:35:22+0000</p><p><b>performer</b>: <a href=\"Patient-1.html\">John Doe Male, DoB: 1990-01-01</a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/uv/phr/CodeSystem/hearing-sensitivity-codes frequency}\">Frequency</span></p><p><b>value</b>: 4000 Hz<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeHz = 'Hz')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/uv/phr/CodeSystem/hearing-sensitivity-codes leftEarSensitivity}\">Left ear sensitivity</span></p><p><b>value</b>: 40 dB<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codedB = 'dB')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/uv/phr/CodeSystem/hearing-sensitivity-codes rightEarSensitivity}\">Right ear sensitivity</span></p><p><b>value</b>: 45 dB<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codedB = 'dB')</span></p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3"^^xsd:anyURI ;
+       fhir:l <urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3>
+     ] ;
+     fhir:value [ fhir:v "DE430E9B-03F4-4310-ACA1-508787B240CD_4" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "exam" ] ;
+       fhir:display [ fhir:v "Exam" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes>
+       ] ;
+       fhir:code [ fhir:v "hearingSensitivity" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/uv/phr/Patient/1> ;
+     fhir:reference [ fhir:v "Patient/1" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2023-12-01T05:33:42Z"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2023-12-01T05:35:22Z"^^xsd:dateTime ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <http://hl7.org/fhir/uv/phr/Patient/1> ;
+     fhir:reference [ fhir:v "Patient/1" ]
+  ] ) ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/uv/phr/CodeSystem/hearing-sensitivity-codes"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/CodeSystem/hearing-sensitivity-codes>
+         ] ;
+         fhir:code [ fhir:v "frequency" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "4000"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "Hz" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "Hz" ]
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/uv/phr/CodeSystem/hearing-sensitivity-codes"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/CodeSystem/hearing-sensitivity-codes>
+         ] ;
+         fhir:code [ fhir:v "leftEarSensitivity" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "40"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "dB" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "dB" ]
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/uv/phr/CodeSystem/hearing-sensitivity-codes"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/CodeSystem/hearing-sensitivity-codes>
+         ] ;
+         fhir:code [ fhir:v "rightEarSensitivity" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "45"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "dB" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "dB" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/uv/phr/Patient/1> a fhir:Uv .
+
+# -------------------------------------------------------------------------------------
+

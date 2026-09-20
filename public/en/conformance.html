@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Conformance Recommendations - Personal Health Records v1.0.0-ballot2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Personal Health Records</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot2 - STU 1 ballot
+
+
+
+  <img alt="International flag" src="../assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="datamodel.html">Longitudinal Data Model</a>
+      </li>
+      <li>
+        <a href="api.html">API Endpoints</a>
+      </li>
+      <li>
+        <a href="recordkeeping.html">File Formats</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="usecases.html">Use Cases</a>
+      </li>
+      <li>
+        <a href="history.html">History</a>
+      </li>
+      <li>
+        <a href="security.html">Security</a>
+      </li>
+      <li>
+        <a href="functionality.html">Functional Model</a>
+      </li>
+      <li>
+        <a href="annotations.html">Annotations</a>
+      </li>
+      <li>
+        <a href="longitudinal.html">Merging and Versioning</a>
+      </li>
+      <li>
+        <a href="pghd.html">Patient Generated Health Data</a>
+      </li>
+      <li>
+        <a href="physiology.html">Physiology Domains</a>
+      </li>
+      <li>
+        <a href="operating-systems.html">Operating Systems</a>
+      </li>
+      <li>
+        <a href="logical-models.html">Logical Models</a>
+      </li>
+      <li>
+        <a href="conformance.html">Conformance</a>
+      </li>
+      <li>
+        <a href="algorithms.html">Algorithms</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Personas
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="personas-index.html">Index</a>
+      </li>
+      <li>
+        <a href="persona-thompson-family.html">Thompson Family</a>
+      </li>
+      <li>
+        <a href="persona-journey-b.html">Cancer - Adult</a>
+      </li>
+      <li>
+        <a href="persona-william.html">Cancer - Pediatric</a>
+      </li>
+      <li>
+        <a href="persona-journey-e.html">Chronic Illness (Lupus)</a>
+      </li>
+      <li>
+        <a href="persona-journey-d.html">Long COVID</a>
+      </li>
+      <li>
+        <a href="persona-journey-a.html">Patient Relocation</a>
+      </li>
+      <li>
+        <a href="persona-journey-c.html">Sports Outpatient / Cardiac</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Conformance Recommendations</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Personal Health Records - Local Development build (v1.0.0-ballot2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.org/fhir/uv/phr/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Conformance Recommendations</h2>
+  
+
+
+
+  <table class="colsi" data-fhir="generated">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standards Status">Informative</a>
+        
+      </td>
+  
+  
+      <td id="toggle-change-display" style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#using-the-conformance-recommendations" id="markdown-toc-using-the-conformance-recommendations">Using the Conformance Recommendations</a></li>
+  <li><a href="#additional-implementation-guides" id="markdown-toc-additional-implementation-guides">Additional Implementation Guides</a></li>
+</ul>
+
+</div>
+<h3 id="using-the-conformance-recommendations">Using the Conformance Recommendations</h3>
+
+<p>The Personal Health Record (PHR) Implementation Guide is designed to support a range of implementations, from small applications that manage only a limited amount of health information to comprehensive personal health record systems. Implementers are not expected to implement every specification listed in Table 4.1.</p>
+
+<p>For implementers who are new to the FHIR ecosystem, Table 4.1 is intended to serve as an implementation roadmap. Begin with the specifications identified as foundational, and add additional capabilities according to the clinical information and workflows supported by the application.</p>
+
+<p>A minimal PHR implementation begins with the <strong>Electronic Health Information (EHI) Export API</strong> and the <strong>Record Life Cycle</strong>. Together, these establish the basic mechanisms needed to represent, retain, exchange, and manage the life cycle of a personal health record. An implementation may therefore begin with a very small record — potentially containing only a few data elements — without implementing the entire FHIR API surface or every clinical domain described by this guide.</p>
+
+<p>Implementers are <strong>RECOMMENDED</strong> to additionally support the <strong>International Patient Summary (IPS)</strong>. IPS provides a standardized, internationally applicable representation of essential patient health information and provides a useful clinical foundation upon which a more comprehensive PHR can be constructed.</p>
+
+<p>Other specifications in Table 4.1 should be treated as <strong>opt-in capabilities</strong>. Implementers should select them according to the information their application manages and the functions it provides. For example, an application that manages immunization records should implement the applicable immunization guidance, while an application that does not manage immunizations is not expected to implement that capability solely to claim conformance with this guide.</p>
+
+<p>This modular approach is intentional. It follows a pattern familiar from standards such as DICOM, in which implementations support the information objects, services, and capabilities appropriate to their intended use rather than being required to implement the entire standard. A conformant PHR can therefore begin as a minimal viable health record and progressively add standardized capabilities as its scope expands.</p>
+
+<p>This approach also distinguishes the PHR Implementation Guide from comprehensive functional models. Earlier approaches to personal health record standardization, including the PHR-S Functional Model, describe a broad set of functions that a complete PHR system might provide. Feedback from implementers indicated that requiring such a broad functional surface would make conformance impractical for many focused applications. This guide therefore favors <strong>composable conformance</strong>: a small foundational core, accompanied by standardized capabilities that implementations adopt when applicable.</p>
+
+<h3 id="additional-implementation-guides">Additional Implementation Guides</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Implementation Guide</th>
+      <th>Specialty</th>
+      <th style="text-align: left">Resources</th>
+      <th style="text-align: left">APIs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/argonautproject/ehi-api/">Electronic Health Information Export API</a></td>
+      <td> </td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MUST</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/ehrs-rle-ig/">Record Lifecycle</a></td>
+      <td>Medical Records</td>
+      <td style="text-align: left">NOT APPLICABLE</td>
+      <td style="text-align: left">MUST</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/smart-health-cards-and-links/">SMART Health Cards and Links</a></td>
+      <td>Epidemiology</td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/ehrs/uv/phrsfmr2/">PHR-S Functional Model</a></td>
+      <td> </td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://open-health-manager.github.io/patient-data-receipt-ig/">Patient Data Receipt</a></td>
+      <td>Medical Records</td>
+      <td style="text-align: left">NOT APPLICABLE</td>
+      <td style="text-align: left">SHOULD</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.fhir.org/guides/argonaut/r2/">Argonaut Data Query</a></td>
+      <td>Internal Medicine</td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">SHOULD</td>
+    </tr>
+    <tr>
+      <td><a href="https://hackmd.io/@erichaas/rJVqJGmeY/%2FwTGb4Gk6R6O4NVut5yaJig">Argonaut Data Write</a></td>
+      <td>Internal Medicine</td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">SHOULD</td>
+    </tr>
+    <tr>
+      <td><a href="http://fhir.org/guides/argonaut/scheduling/">Argonaut Scheduling</a></td>
+      <td>Primary Care</td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="http://fhir.org/guides/argonaut/clinicalnotes/">Argonaut Clinical Notes</a></td>
+      <td>Primary Care</td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="http://fhir.org/guides/argonaut/questionnaire/">Argonaut Questionnaire</a></td>
+      <td> </td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/fhir-patient-correction/">Patient Request for Corrections</a></td>
+      <td> </td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/uv/ips/">International Patient Summary</a></td>
+      <td> </td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.hl7.org/fhir/us/core/">US CORE</a></td>
+      <td> </td>
+      <td style="text-align: left">MAY</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/smart-app-launch/">SMART on FHIR - App Launch</a></td>
+      <td> </td>
+      <td style="text-align: left">NOT APPLICABLE</td>
+      <td style="text-align: left">SHOULD</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/us/ccda/">C-CDA on FHIR</a></td>
+      <td> </td>
+      <td style="text-align: left">MAY</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/fhir-pacio-adi/">PACIO - Advanced Directives</a></td>
+      <td> </td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/fhir-pacio-pfe/en/">PACIO - Personal Functioning and Engagement</a></td>
+      <td>Neurology</td>
+      <td style="text-align: left">MAY</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/examples.html">mCode</a></td>
+      <td>Oncology</td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/">Gravity - Social Determinates of Health</a></td>
+      <td>Social Work</td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/dental-data-exchange/">Dental Data Exchange</a></td>
+      <td>Dental</td>
+      <td style="text-align: left">MAY</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/genomics-reporting/artifacts.html">Genomics Reporting</a></td>
+      <td>Genetics</td>
+      <td style="text-align: left">MAY</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/">Radiation Dose Summary</a></td>
+      <td>Radiology</td>
+      <td style="text-align: left">MAY</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/">Breast Radiology Reporting</a></td>
+      <td>Radiology</td>
+      <td style="text-align: left">MAY</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/us/mcode/">mCODE</a></td>
+      <td> </td>
+      <td style="text-align: left">MAY</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://fhir.ch/ig/ch-allergyintolerance/">CH AllergyIntolerance</a></td>
+      <td>Immunology</td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/cimi-vital-signs/">Vital Signs</a></td>
+      <td>Intensive Care</td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/fhir-udap-security-ig/">UDAP Security</a></td>
+      <td> </td>
+      <td style="text-align: left">NOT APPLICABLE</td>
+      <td style="text-align: left">SHOULD</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/IHTSDO/snomed-ig/">SNOMED Terminology Server</a></td>
+      <td> </td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/carin-digital-insurance-card/">CARIN Digital Insurance Card</a></td>
+      <td> </td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/HL7/physical-activity">Physical Activity</a></td>
+      <td> </td>
+      <td style="text-align: left">SHOULD</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="https://profiles.ihe.net/ITI/MHD/">Mobile Access to Health Documents</a></td>
+      <td> </td>
+      <td style="text-align: left">MAY</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/us/patient-reported-outcomes/2019May/index.html">Patient Reported Outcomes</a></td>
+      <td> </td>
+      <td style="text-align: left">MAY</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/uv/phd/2019May/">Patient Health Devices</a></td>
+      <td> </td>
+      <td style="text-align: left">MAY</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/us/davinci-pas/">Da Vinci - Prior Authorization</a></td>
+      <td> </td>
+      <td style="text-align: left">MAY</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/us/bfdr/artifacts.html">Vital Records -  Birth and Fetal Death Reporting</a></td>
+      <td> </td>
+      <td style="text-align: left">MAY</td>
+      <td style="text-align: left">MAY</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="why-these-guides-may-be-of-interest">Why These Guides May Be of Interest</h4>
+
+<ul>
+  <li>
+    <p><strong>Electronic Health Information (EHI) Export API</strong> — useful for patients who want to obtain a complete electronic copy of their health information from a healthcare organization and bring that information into their personal health record.</p>
+  </li>
+  <li>
+    <p><strong>Record Lifecycle</strong> — useful for any PHR that needs to maintain health information over time, including understanding when records were created, updated, replaced, corrected, or otherwise changed.</p>
+  </li>
+  <li>
+    <p><strong>SMART Health Cards and Links</strong> — useful for patients who want to carry or share portable, verifiable health information, such as vaccination or laboratory records, using a QR code, wallet, or link.</p>
+  </li>
+  <li>
+    <p><strong>PHR-S Functional Model</strong> — useful for implementers building a comprehensive personal health record and looking for a broader catalog of functions that patients may expect from a full-featured PHR.</p>
+  </li>
+  <li>
+    <p><strong>Patient Data Receipt</strong> — useful for patients who want health information received from another system to be incorporated into their own longitudinal personal health record.</p>
+  </li>
+  <li>
+    <p><strong>Argonaut Data Query</strong> — useful for patients who want their PHR to retrieve common clinical information such as conditions, medications, allergies, laboratory results, and other records from healthcare providers.</p>
+  </li>
+  <li>
+    <p><strong>Argonaut Data Write</strong> — useful for patients who want their PHR to contribute information back to healthcare systems rather than operating solely as a read-only record.</p>
+  </li>
+  <li>
+    <p><strong>Argonaut Scheduling</strong> — useful for patients who want to find available appointments and manage healthcare scheduling through their PHR.</p>
+  </li>
+  <li>
+    <p><strong>Argonaut Clinical Notes</strong> — useful for patients who want access to clinical notes written by their physicians and other healthcare professionals.</p>
+  </li>
+  <li>
+    <p><strong>Argonaut Questionnaire</strong> — useful for patients who want to complete intake forms, screening instruments, health assessments, or other questionnaires electronically.</p>
+  </li>
+  <li>
+    <p><strong>Patient Request for Corrections</strong> — useful for patients who discover inaccurate, incomplete, or disputed information in their medical record and want to request that the record be corrected or amended.</p>
+  </li>
+  <li>
+    <p><strong>International Patient Summary (IPS)</strong> — useful for international travelers, people receiving care outside their usual healthcare system, and anyone who wants a concise, portable summary of essential health information that can be understood across organizational and national boundaries.</p>
+  </li>
+  <li>
+    <p><strong>US Core</strong> — useful for patients receiving healthcare in the United States who want their PHR to interoperate with the common clinical data elements and APIs supported by U.S. healthcare systems.</p>
+  </li>
+  <li>
+    <p><strong>SMART on FHIR – App Launch</strong> — useful for patients who want to securely connect their PHR with third-party health applications, or use PHR applications in conjunction with healthcare-provider systems.</p>
+  </li>
+  <li>
+    <p><strong>C-CDA on FHIR</strong> — useful for patients who have existing clinical documents, such as Continuity of Care Documents, discharge summaries, or referral documents, and want to incorporate those documents into a FHIR-based PHR.</p>
+  </li>
+  <li>
+    <p><strong>PACIO – Advance Directives</strong> — useful for patients who want their PHR to carry advance directives, healthcare agent information, living wills, and other information describing their preferences for future medical care.</p>
+  </li>
+  <li>
+    <p><strong>PACIO – Personal Functioning and Engagement</strong> — useful for people managing disability, rehabilitation, aging, neurological conditions, or long-term care who want to track functional status and participation in everyday activities.</p>
+  </li>
+  <li>
+    <p><strong>mCODE</strong> — useful for anyone receiving oncology care, cancer survivors, or patients with a history of cancer who want their PHR to represent cancer diagnoses, staging, treatments, laboratory information, and other oncology-specific information.</p>
+  </li>
+  <li>
+    <p><strong>Gravity – Social Determinants of Health</strong> — useful for patients whose health or care is affected by factors such as housing, food access, transportation, financial insecurity, social support, or other social needs.</p>
+  </li>
+  <li>
+    <p><strong>Dental Data Exchange</strong> — useful for patients who want dental and oral-health information to be part of their longitudinal personal health record and exchangeable between dental and medical providers.</p>
+  </li>
+  <li>
+    <p><strong>Genomics Reporting</strong> — useful for patients who have undergone genetic or genomic testing and want to retain and reuse genomic results as part of their longitudinal health record.</p>
+  </li>
+  <li>
+    <p><strong>Radiation Dose Summary</strong> — useful for patients who undergo repeated medical imaging or radiation-producing procedures and want to maintain a longitudinal history of their medical radiation exposure.</p>
+  </li>
+  <li>
+    <p><strong>Breast Radiology Reporting</strong> — useful for patients undergoing mammography, breast ultrasound, MRI, or other breast imaging who want their PHR to represent breast-imaging findings and recommendations in a standardized form.</p>
+  </li>
+  <li>
+    <p><strong>CH AllergyIntolerance</strong> — useful particularly for patients receiving care in Switzerland who need standardized exchange of allergy and intolerance information.</p>
+  </li>
+  <li>
+    <p><strong>Vital Signs</strong> — useful for patients who want to track measurements such as blood pressure, heart rate, respiratory rate, temperature, oxygen saturation, height, or weight over time, including measurements collected at home.</p>
+  </li>
+  <li>
+    <p><strong>UDAP Security</strong> — useful when a PHR needs secure, scalable, trusted connections with healthcare organizations and other systems, particularly where automated registration and cross-organizational trust are required.</p>
+  </li>
+  <li>
+    <p><strong>SNOMED Terminology Server</strong> — useful for PHRs that need to consistently interpret, organize, search, or exchange clinical concepts represented using SNOMED CT.</p>
+  </li>
+  <li>
+    <p><strong>CARIN Digital Insurance Card</strong> — useful for patients who want to carry and share health insurance coverage information electronically, including information ordinarily found on a physical insurance card.</p>
+  </li>
+  <li>
+    <p><strong>Physical Activity</strong> — useful for patients tracking exercise, mobility, fitness, rehabilitation, or activity goals, including information collected by consumer devices and health applications.</p>
+  </li>
+  <li>
+    <p><strong>Mobile Access to Health Documents (MHD)</strong> — useful for patients who need access to clinical documents distributed across healthcare organizations or document-sharing networks, particularly from mobile applications.</p>
+  </li>
+  <li>
+    <p><strong>Patient Reported Outcomes</strong> — useful for patients who want to record how they are feeling or functioning directly, including symptoms, quality of life, treatment effects, and other outcomes that may not be captured by clinical measurements alone.</p>
+  </li>
+  <li>
+    <p><strong>Patient Health Devices</strong> — useful for patients using home or personal medical devices—such as blood-pressure monitors, pulse oximeters, thermometers, scales, or other connected devices—and who want those measurements incorporated into their PHR.</p>
+  </li>
+  <li>
+    <p><strong>Da Vinci – Prior Authorization</strong> — useful for patients whose care requires insurance authorization and for PHR applications intended to help patients understand or follow the authorization process for medications, procedures, equipment, or other covered services.</p>
+  </li>
+  <li>
+    <p><strong>Vital Records – Birth and Fetal Death Reporting</strong> — useful for PHR applications supporting pregnancy, childbirth, newborn records, or family health histories where information associated with birth and vital-record reporting needs to be represented.</p>
+  </li>
+</ul>
+
+<h4 id="recommended-starting-point">Recommended starting point</h4>
+
+<p>For a new implementation:</p>
+
+<ol>
+  <li><strong>Implement the EHI Export API</strong> to establish the foundational exchange mechanism.</li>
+  <li><strong>Implement Record Life Cycle requirements</strong> to establish how records are created, maintained, retained, and exchanged over time.</li>
+  <li><strong>Implement IPS (RECOMMENDED)</strong> to provide a standardized clinical summary.</li>
+  <li><strong>Review the remaining rows in Table 4.1</strong> and select the capabilities applicable to the application's intended use.</li>
+  <li><strong>Document the capabilities supported by the implementation</strong>, so that users and interoperating systems can determine which portions of the PHR ecosystem the application implements.</li>
+</ol>
+
+<p>The result is a progressive implementation model rather than an all-or-nothing conformance requirement. A simple application can implement a small, interoperable PHR; a comprehensive application can use the same foundation while progressively adding additional FHIR-based capabilities.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
+          Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-09-20 16:07:00 -0500">
+    2026-09-20
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir/uv/phr/history.html">Version History</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

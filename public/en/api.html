@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>API Endpoints - Personal Health Records v1.0.0-ballot2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"22"}
+    h3,h4,h5,h6{--heading-prefix:"22"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Personal Health Records</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ballot2 - STU 1 ballot
+
+
+
+  <img alt="International flag" src="../assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="datamodel.html">Longitudinal Data Model</a>
+      </li>
+      <li>
+        <a href="api.html">API Endpoints</a>
+      </li>
+      <li>
+        <a href="recordkeeping.html">File Formats</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="usecases.html">Use Cases</a>
+      </li>
+      <li>
+        <a href="history.html">History</a>
+      </li>
+      <li>
+        <a href="security.html">Security</a>
+      </li>
+      <li>
+        <a href="functionality.html">Functional Model</a>
+      </li>
+      <li>
+        <a href="annotations.html">Annotations</a>
+      </li>
+      <li>
+        <a href="longitudinal.html">Merging and Versioning</a>
+      </li>
+      <li>
+        <a href="pghd.html">Patient Generated Health Data</a>
+      </li>
+      <li>
+        <a href="physiology.html">Physiology Domains</a>
+      </li>
+      <li>
+        <a href="operating-systems.html">Operating Systems</a>
+      </li>
+      <li>
+        <a href="logical-models.html">Logical Models</a>
+      </li>
+      <li>
+        <a href="conformance.html">Conformance</a>
+      </li>
+      <li>
+        <a href="algorithms.html">Algorithms</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Personas
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="personas-index.html">Index</a>
+      </li>
+      <li>
+        <a href="persona-thompson-family.html">Thompson Family</a>
+      </li>
+      <li>
+        <a href="persona-journey-b.html">Cancer - Adult</a>
+      </li>
+      <li>
+        <a href="persona-william.html">Cancer - Pediatric</a>
+      </li>
+      <li>
+        <a href="persona-journey-e.html">Chronic Illness (Lupus)</a>
+      </li>
+      <li>
+        <a href="persona-journey-d.html">Long COVID</a>
+      </li>
+      <li>
+        <a href="persona-journey-a.html">Patient Relocation</a>
+      </li>
+      <li>
+        <a href="persona-journey-c.html">Sports Outpatient / Cardiac</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>API Endpoints</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Personal Health Records - Local Development build (v1.0.0-ballot2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.org/fhir/uv/phr/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>API Endpoints</h2>
+  
+
+
+
+  <table class="colsi" data-fhir="generated">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standards Status">Informative</a>
+        
+      </td>
+  
+  
+      <td id="toggle-change-display" style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#phr-export-and-import-operations" id="markdown-toc-phr-export-and-import-operations">PHR Export and Import Operations</a></li>
+  <li><a href="#smart-health-links-for-phr-sharing" id="markdown-toc-smart-health-links-for-phr-sharing">SMART Health Links for PHR Sharing</a></li>
+  <li><a href="#streaming-phr-data-over-http" id="markdown-toc-streaming-phr-data-over-http">Streaming PHR Data Over HTTP</a></li>
+  <li><a href="#query-and-filter-parameters" id="markdown-toc-query-and-filter-parameters">Query and Filter Parameters</a></li>
+</ul>
+
+</div>
+<h3 id="phr-export-and-import-operations">PHR Export and Import Operations</h3>
+
+<p>Systems MAY implement standard APIs for generating and importing <code class="language-plaintext highlighter-rouge">.phr</code> or <code class="language-plaintext highlighter-rouge">.sphr</code> files. These operations enable patients to export their complete health records from one system and import them into another, supporting the core PHR use case of patient-controlled data portability.</p>
+
+<h4 id="export-operations">Export Operations</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">$phr-export</code> operation generates a complete patient health record in various formats. This operation is typically invoked by the patient or their authorized application.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Export as FHIR Bundle (default)</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>
+
+<span class="c"># Export as NDJSON Bulk Data file</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>ndjson
+
+<span class="c"># Export as PHR file (NDJSON with .phr extension)</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>phr
+
+<span class="c"># Export as secure SPHR file (encrypted zip container)</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>sphr
+</code></pre></div></div>
+
+<p>Systems MUST post the API endpoints they use in the system's CapabilityStatement.</p>
+
+<p><strong>Date Range Filtering:</strong></p>
+
+<p>Exporters can request specific time periods to reduce payload size or focus on recent data:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Export everything from 2010 to current</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?start<span class="o">=</span>2010
+
+<span class="c"># Export specific date range</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?start<span class="o">=</span>2010&amp;end<span class="o">=</span>2020-06
+
+<span class="c"># Export last year only</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?start<span class="o">=</span>2024-01-01&amp;end<span class="o">=</span>2024-12-31
+</code></pre></div></div>
+
+<p><strong>Multi-Patient Systems:</strong></p>
+
+<p>For systems managing multiple patients (e.g., EHR systems), specify the patient identifier:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Export for specific patient</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?patient<span class="o">=</span>Patient/12345
+
+<span class="c"># Export with date range and format</span>
+GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?patient<span class="o">=</span>Patient/12345&amp;outputFormat<span class="o">=</span>sphr&amp;start<span class="o">=</span>2020
+</code></pre></div></div>
+
+<h4 id="import-operations">Import Operations</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">$import</code> operation accepts PHR data in NDJSON format and imports it into the receiving system. This operation should handle deduplication, provenance tracking, and conflict resolution.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Import PHR data (NDJSON format)</span>
+POST /Bundle/<span class="nv">$import</span>
+Content-Type: application/x-ndjson
+
+<span class="c"># Import with merge strategy</span>
+POST /Bundle/<span class="nv">$import</span>?strategy<span class="o">=</span>merge
+
+<span class="c"># Import with validation only (no commit)</span>
+POST /Bundle/<span class="nv">$import</span>?mode<span class="o">=</span>validate
+</code></pre></div></div>
+
+<p><strong>Import Considerations:</strong></p>
+
+<ul>
+  <li><strong>Deduplication</strong>: System should detect and handle duplicate resources</li>
+  <li><strong>Provenance</strong>: Imported resources should retain original provenance metadata</li>
+  <li><strong>Validation</strong>: All resources should be validated against FHIR profiles</li>
+  <li><strong>Conflict Resolution</strong>: System should have policies for handling conflicting data</li>
+</ul>
+
+<h4 id="response-formats">Response Formats</h4>
+
+<p>Export operations support multiple response formats:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Format</th>
+      <th>MIME Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bundle</td>
+      <td><code class="language-plaintext highlighter-rouge">application/fhir+json</code></td>
+      <td>Standard FHIR Bundle resource</td>
+    </tr>
+    <tr>
+      <td>NDJSON</td>
+      <td><code class="language-plaintext highlighter-rouge">application/x-ndjson</code></td>
+      <td>Newline-delimited JSON, one resource per line</td>
+    </tr>
+    <tr>
+      <td>PHR</td>
+      <td><code class="language-plaintext highlighter-rouge">application/x-ndjson</code></td>
+      <td>Same as NDJSON with <code class="language-plaintext highlighter-rouge">.phr</code> extension</td>
+    </tr>
+    <tr>
+      <td>SPHR</td>
+      <td><code class="language-plaintext highlighter-rouge">application/zip</code></td>
+      <td>Encrypted zip containing .phr file(s) plus supporting documents</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="capability-statement">Capability Statement</h4>
+
+<p>PHR systems following the PHR FHIR Implementation Guide MUST include the API endpoints they are exposing in the PHR's FHIR server's CapabilityStatement:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CapabilityStatement"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rest"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="nl">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"server"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"operation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phr-export"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/uv/phr/OperationDefinition/phr-export"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"import"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/uv/phr/OperationDefinition/phr-import"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="smart-health-links-for-phr-sharing">SMART Health Links for PHR Sharing</h3>
+
+<p>SMART Health Links (SHLinks) provide a mechanism for patients to share their health records via QR codes or short URLs. A SMART Health Link encodes an API endpoint URL along with a decryption key, enabling secure, convenient data sharing without requiring pre-established technical connectivity.</p>
+
+<h4 id="use-cases">Use Cases</h4>
+
+<ul>
+  <li><strong>Emergency Room Intake</strong>: Patient presents QR code containing medication list and allergies</li>
+  <li><strong>Pharmacy</strong>: Sharing current prescriptions with a new pharmacy</li>
+  <li><strong>Travel</strong>: Carrying vaccination records across borders</li>
+  <li><strong>Specialist Referral</strong>: Sharing relevant history with a new provider</li>
+</ul>
+
+<h4 id="qr-code-example">QR Code Example</h4>
+
+<p>A SMART Health Link QR code encodes a URL in the format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shlink:/eyJ1cmwiOiJodHRwczovL...
+</code></pre></div></div>
+
+<p>When scanned, the QR code provides access to an API endpoint that returns encrypted health data. The decryption key is embedded in the link itself.</p>
+
+<h4 id="technical-structure">Technical Structure</h4>
+
+<p>A SMART Health Link URL payload contains:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.org/api/shl/abc123"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rxTgYlOaKJPFtcEd0qcceN8wEU4p94SqAwIWQe6uX7Q"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"exp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1735689600</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"flag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LP"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient Health Summary"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">url</code></td>
+      <td>API endpoint where encrypted payload can be retrieved</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">key</code></td>
+      <td>Base64url-encoded decryption key (256-bit AES-GCM)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">exp</code></td>
+      <td>Optional expiration time (Unix timestamp)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">flag</code></td>
+      <td><code class="language-plaintext highlighter-rouge">L</code> = long-term, <code class="language-plaintext highlighter-rouge">P</code> = passcode required, <code class="language-plaintext highlighter-rouge">U</code> = single use</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">label</code></td>
+      <td>Human-readable description</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="encryption">Encryption</h4>
+
+<p>SMART Health Links use <strong>A256GCM</strong> (AES-256 in Galois/Counter Mode). The payload retrieved from the URL is a JWE (JSON Web Encryption) that can be decrypted using the embedded key.</p>
+
+<h4 id="integration-with-sphr-files">Integration with .sphr Files</h4>
+
+<p>When sharing via SMART Health Link:</p>
+
+<ol>
+  <li>Upload .sphr file to hosting service</li>
+  <li>Generate unique retrieval URL</li>
+  <li>Encrypt with random 256-bit key</li>
+  <li>Encode URL + key into SHLink</li>
+  <li>Render as QR code</li>
+</ol>
+
+<h4 id="references">References</h4>
+
+<ul>
+  <li><a href="https://docs.smarthealthit.org/smart-health-links/">SMART Health Links Specification</a></li>
+  <li><a href="https://smarthealth.cards/">SMART Health Cards</a></li>
+</ul>
+
+<h3 id="streaming-phr-data-over-http">Streaming PHR Data Over HTTP</h3>
+
+<p>While the .phr format is primarily designed for file-based storage and exchange, systems may also transmit PHR data directly over HTTP connections using streaming techniques.</p>
+
+<h4 id="content-type-headers">Content-Type Headers</h4>
+
+<p>When transmitting .phr content over HTTP, use the following headers:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type: application/x-ndjson
+Content-Disposition: attachment; filename="patient-record.phr"
+X-PHR-Version: 1.0
+</code></pre></div></div>
+
+<p>For FHIR-aware systems:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type: application/fhir+ndjson
+</code></pre></div></div>
+
+<h4 id="streaming-benefits">Streaming Benefits</h4>
+
+<p>NDJSON format is well-suited for streaming because each line is a complete, parseable JSON object. Receivers can process records as they arrive without waiting for the complete transmission, enabling:</p>
+
+<ul>
+  <li><strong>Progressive rendering</strong>: Display data as it arrives</li>
+  <li><strong>Memory efficiency</strong>: Process large records without loading entire payload</li>
+  <li><strong>Resilience</strong>: Partial data available even if connection interrupts</li>
+  <li><strong>Real-time feedback</strong>: Show progress indicators during transfer</li>
+</ul>
+
+<h4 id="streaming-implementation-example">Streaming Implementation Example</h4>
+
+<p><strong>Server (streaming response):</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Node.js example</span>
+<span class="nx">response</span><span class="p">.</span><span class="nf">setHeader</span><span class="p">(</span><span class="dl">'</span><span class="s1">Content-Type</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">application/x-ndjson</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">response</span><span class="p">.</span><span class="nf">setHeader</span><span class="p">(</span><span class="dl">'</span><span class="s1">Transfer-Encoding</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">chunked</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="k">for</span> <span class="k">await </span><span class="p">(</span><span class="kd">const</span> <span class="nx">resource</span> <span class="k">of</span> <span class="nx">patientResources</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">response</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nf">stringify</span><span class="p">(</span><span class="nx">resource</span><span class="p">)</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">response</span><span class="p">.</span><span class="nf">end</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p><strong>Client (streaming consumption):</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Process each line as it arrives</span>
+<span class="kd">const</span> <span class="nx">readline</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">readline</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">rl</span> <span class="o">=</span> <span class="nx">readline</span><span class="p">.</span><span class="nf">createInterface</span><span class="p">({</span> <span class="na">input</span><span class="p">:</span> <span class="nx">response</span> <span class="p">});</span>
+
+<span class="nx">rl</span><span class="p">.</span><span class="nf">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">line</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">line</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">resource</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="nx">line</span><span class="p">);</span>
+  <span class="nf">processResource</span><span class="p">(</span><span class="nx">resource</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h4 id="comparison-with-bulk-data-ig">Comparison with Bulk Data IG</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspect</th>
+      <th>PHR Format</th>
+      <th>Bulk Data IG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File structure</td>
+      <td>Single heterogeneous .ndjson</td>
+      <td>Separate file per resource type</td>
+    </tr>
+    <tr>
+      <td>Typical use</td>
+      <td>Single patient export</td>
+      <td>Multi-patient population export</td>
+    </tr>
+    <tr>
+      <td>Resource ordering</td>
+      <td>Patient-centric, mixed types</td>
+      <td>Grouped by resourceType</td>
+    </tr>
+    <tr>
+      <td>Streaming</td>
+      <td>Well-suited</td>
+      <td>Designed for batch</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The PHR format uses a single file with mixed resource types for patient-centric simplicity, while Bulk Data separates by type (Observation.ndjson, Condition.ndjson, etc.) for scalability with large populations.</p>
+
+<h4 id="error-handling">Error Handling</h4>
+
+<p>For streaming transfers, errors may occur mid-stream. Recommended approach:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"resourceType"</span><span class="p">:</span><span class="s2">"OperationOutcome"</span><span class="p">,</span><span class="nl">"issue"</span><span class="p">:[{</span><span class="nl">"severity"</span><span class="p">:</span><span class="s2">"error"</span><span class="p">,</span><span class="nl">"code"</span><span class="p">:</span><span class="s2">"processing"</span><span class="p">,</span><span class="nl">"diagnostics"</span><span class="p">:</span><span class="s2">"Error at line 847: invalid reference"</span><span class="p">}]}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Include OperationOutcome resources inline to indicate processing errors while allowing the stream to continue for partial data recovery.</p>
+
+<h3 id="query-and-filter-parameters">Query and Filter Parameters</h3>
+
+<p>PHR systems should support flexible filtering to allow patients and applications to retrieve specific subsets of data.</p>
+
+<h4 id="standard-fhir-search-parameters">Standard FHIR Search Parameters</h4>
+
+<p>All standard FHIR search parameters apply. Common patterns for PHR queries:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err"># Resources modified since a date
+GET /Observation?_lastUpdated=gt2025-01-01
+
+# Resources within a date range
+GET /Observation?date=ge2024-01-01&amp;date=le2024-12-31
+
+# Specific resource types
+GET /Condition?patient=Patient/123
+
+# By category
+GET /Observation?category=vital-signs
+GET /Observation?category=laboratory
+GET /Observation?category=activity
+</span></code></pre></div></div>
+
+<h4 id="phr-specific-filters">PHR-Specific Filters</h4>
+
+<h5 id="by-data-source">By Data Source</h5>
+
+<p>Filter by originating system:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET /Observation?_source=urn:ehr:hospital-xyz
+GET /Observation?_source=urn:device:fitbit
+GET /Observation?_source=urn:phr:patient-entered
+</span></code></pre></div></div>
+
+<h5 id="by-clinical-relevance">By Clinical Relevance</h5>
+
+<p>Filter for active/current data (suitable for IPS generation):</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET /Condition?clinical-status=active
+GET /MedicationStatement?status=active
+GET /AllergyIntolerance?clinical-status=active
+</span></code></pre></div></div>
+
+<h5 id="by-verification-status">By Verification Status</h5>
+
+<p>Distinguish verified vs unverified data:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET /Condition?verification-status=confirmed
+GET /Observation?_tag=clinician-verified
+</span></code></pre></div></div>
+
+<h4 id="bulk-export-filters">Bulk Export Filters</h4>
+
+<p>When using the $phr-export operation:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err"># Export only specific resource types
+GET /Patient/123/$phr-export?_type=Condition,MedicationStatement,AllergyIntolerance
+
+# Export data from a specific time period
+GET /Patient/123/$phr-export?_since=2024-01-01&amp;_until=2024-12-31
+
+# Export only clinical data (exclude device/activity data)
+GET /Patient/123/$phr-export?_profile=clinical
+
+# Export only for sharing (IPS-compatible subset)
+GET /Patient/123/$phr-export?_profile=ips-compatible
+</span></code></pre></div></div>
+
+<h4 id="patient-sharing-preferences">Patient Sharing Preferences</h4>
+
+<p>PHRs may implement patient-controlled sharing filters using Consent resources:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Consent"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sharing-preferences"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scope"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/consentscope"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"patient-privacy"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"provision"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deny"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"provision"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"permit"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"class"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Condition"</span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MedicationStatement"</span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AllergyIntolerance"</span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="response-pagination">Response Pagination</h4>
+
+<p>For large result sets:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET /Observation?_count=100&amp;_offset=0
+</span></code></pre></div></div>
+
+<p>Response includes pagination links:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"searchset"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1250</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="nl">"relation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"self"</span><span class="p">,</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"...?_count=100&amp;_offset=0"</span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="nl">"relation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next"</span><span class="p">,</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"...?_count=100&amp;_offset=100"</span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="selective-field-retrieval">Selective Field Retrieval</h4>
+
+<p>Request only specific elements to reduce payload size:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET /Observation?_elements=code,valueQuantity,effectiveDateTime
+</span></code></pre></div></div>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
+          Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-09-20 16:07:00 -0500">
+    2026-09-20
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir/uv/phr/history.html">Version History</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
