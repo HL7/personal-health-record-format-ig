@@ -28,30 +28,33 @@ Description: "PHR Document Type CodeSystem"
 
 // Open mHealth
 
-* #https://w3id.org/openmhealth/schemas/omh/body-weight-2.0.json "OMH体重記録" "Open mHealth Body weight"
-* #https://w3id.org/openmhealth/schemas/omh/blood-pressure-4.0.json "OMH血圧記録" "Open mHealth Blood pressure"
+* #https://w3id.org/openmhealth/schemas/omh/body-weight-2.0.json "OMH体重記録" "Open mHealth Body weight v2.0"
+* #https://w3id.org/openmhealth/schemas/omh/body-weight-3.0.json "OMH体重記録" "Open mHealth Body weight v3.0"
+* #https://w3id.org/openmhealth/schemas/omh/blood-pressure-4.0.json "OMH血圧記録" "Open mHealth Blood pressure v4.0"
 
 //スキーマ名はドメインから合成
 * #https://sagroups.ieee.org/1752/pam-subgroup#ieee-physical-activity-1.0 "IEEE歩数記録" "TODO:このスキーマ名の妥当性確認"
 
 //スキーマ名はv3.0はドメインから合成、v4.0はschema-idから
-* #https://openmhealth.org#body-temperature-3.0 "OMH体温記録" "Open mHealth Body tempature v3.0"
-* #https://w3id.org/openmhealth/schemas/omh/body-temperature-4.0.json "OMH体温記録" "Open mHealth Body tempature v4.0"
+* #https://openmhealth.org#body-temperature-3.0 "OMH体温記録" "Open mHealth Body temperature v3.0"
+* #https://w3id.org/openmhealth/schemas/omh/body-temperature-4.0.json "OMH体温記録" "Open mHealth Body temperature v4.0"
 
 
-//スキーマ名はドメインから合成
+//スキーマ名は旧バージョン(v2.0)はドメインから合成、新バージョンはschema-idから
 * #https://openmhealth.org#oxygen-saturation-2.0 "OMH酸素飽和度記録" "Open mHealth Oxygen saturation v2.0"
+* #https://w3id.org/openmhealth/schemas/omh/oxygen-saturation-3.0.json "OMH酸素飽和度記録" "Open mHealth Oxygen saturation v3.0"
 * #https://openmhealth.org#heart-rate-2.0 "OMH脈拍数" "Open mHealth Heart Rate v2.0"
-* #https://w3id.org/openmhealth/schemas/omh/blood-glucose-4.0 "OMH血糖値" "Open mHealth Blood Glucose v4.0"
+* #https://w3id.org/openmhealth/schemas/omh/heart-rate-3.0.json "OMH脈拍数" "Open mHealth Heart Rate v3.0"
+* #https://w3id.org/openmhealth/schemas/omh/blood-glucose-4.0.json "OMH血糖値" "Open mHealth Blood Glucose v4.0"
 
 // マイナポータル・電子カルテ共有ネットワーク
 
 //健診結果報告FHIR記述仕様 https://jpfhir.jp/fhir/eCheckup/igv1/ValueSet-mergedCheckup-valueSet-reportCategory.html
 
 
-* #urn:oid:1.2.392.200119.6.1001#10|unknown "特定健診情報" "マイナポータル医療保険情報取得API 特定健診情報"
-* #urn:oid:1.2.392.200119.6.1001#10|3 "特定健診情報" "マイナポータル医療保険情報取得API 特定健診情報"
-* #urn:oid:1.2.392.200119.6.1001#10|4 "特定健診情報" "マイナポータル医療保険情報取得API 特定健診情報"
+* #urn:oid:1.2.392.200119.6.1001#10|unknown "特定健診情報 バージョン不明" "マイナポータル医療保険情報取得API 特定健診情報"
+* #urn:oid:1.2.392.200119.6.1001#10|3 "特定健診情報 第三期" "マイナポータル医療保険情報取得API 特定健診情報"
+* #urn:oid:1.2.392.200119.6.1001#10|4 "特定健診情報 第四期" "マイナポータル医療保険情報取得API 特定健診情報"
 * #urn:oid:1.2.392.200119.6.1001#41 "事業者健診" "マイナポータル医療保険情報取得API 事業者健診"
 * #urn:oid:1.2.392.200119.6.1001#42 "自治体検診" "マイナポータル医療保険情報取得API 自治体検診"
 * #urn:oid:1.2.392.200119.6.1001#43 "乳幼児健診" "マイナポータル医療保険情報取得API 乳幼児健診"
