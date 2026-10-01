@@ -224,23 +224,13 @@ But to make that happen, we must clarify the details of the envelope that will c
 
 ### Patient Summaries
 
-As mentioned earlier, the .phr container MAY include an International Patient Summary (IPS) file that acts as a manifest and table of contents. This section provides detailed guidance on the relationship between PHR and IPS formats.
+Every Personal Health Record needs a patient summary — a compact, current-state view of the record that a clinician can absorb in minutes. Rather than defining a new summary format, this guide adopts the [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/) as the patient summary for PHRs: it already exists, is internationally balloted, and is widely implemented. As mentioned earlier, the .phr container MAY include an IPS document that acts as a manifest and table of contents; the IPS Composition is the recommended entry point for readers of a `.sphr` file.
 
-#### IPS and PHR Compared
-
-| Aspect | IPS | PHR |
-|--------|-----|-----|
-| Purpose | Emergency/unplanned care | Complete health history |
-| Scope | Essential current data | All historical data |
-| Size | Compact (KB) | Comprehensive (MB-GB) |
-| Authorship | Clinical system | Patient + Clinical + Other |
-| Standard | HL7 IPS IG | This IG |
-
-The IPS can be thought of as an "executive summary" extracted from the complete PHR - containing only active, current information needed for immediate care decisions.  The PHR may also contain previous versions of IPS documents obtained while traveling or otherwise.
+The IPS is the "executive summary" layer of the complete PHR — the active, current information needed for immediate care decisions — while the PHR preserves the full longitudinal history beneath it. The PHR may also contain previous versions of IPS documents obtained while traveling or otherwise.
 
 #### Generating IPS from PHR
 
-To generate (or regenerate) an IPS document from PHR data, use the most recent data ( stuat of current or active), including:
+To generate (or regenerate) an IPS document from PHR data, use the most recent data (status of current or active), including:
 
 | IPS Section | PHR Source |
 |-------------|------------|
