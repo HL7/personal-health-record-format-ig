@@ -47,11 +47,18 @@ Readers should be aware that the legal landscape above changes faster than ballo
 
 ### How to Use This Implementation Guide
 
-This Implementation Guide provides three main areas of guidance:
+This Implementation Guide provides four main areas of guidance:
 
 1. **File Formats** — The `.phr` and `.sphr` file extensions for portable personal health records (see [Record Keeping](recordkeeping.html))
 2. **API Patterns** — Endpoints for importing and exporting health records (see [API Endpoints](api.html))
 3. **Data Model** — Mapping PHR-S Functional Model requirements to FHIR resources (see [Data Model](datamodel.html))
+4. **PGHD Code Mapping** — A canonical vocabulary and ConceptMap crosswalk for patient-generated health data from consumer devices and apps (see [Patient Generated Health Data](pghd.html))
+
+### Patient-Generated Health Data
+
+Consumer devices and health apps (Apple HealthKit, Android Health Connect, fitness trackers, sleep monitors) each emit observations in their own vendor vocabularies.  A core contribution of this guide is a **canonical set of PHR-IG codes** for these observations, together with a [ConceptMap-based crosswalk](pghd-code-mapping.html) that maps more than 400 device and app codes to LOINC and SNOMED CT.  Source-system codes map into PHR-IG codes on import; PHR-IG codes map out to standard terminologies for clinical exchange and IPS generation.  This is what allows step counts from two different phones, or sleep stages from two different wearables, to be reconciled into one longitudinal record.
+
+See [Patient Generated Health Data](pghd.html) for the profiles and vocabulary, and the [PHR Code Mapping](pghd-code-mapping.html) table for per-code mapping status.
 
 The only portion of this guide required for conformance testing is the ability to import and export `.sphr` files. All other sections are informational and assist implementers in modeling patient health histories using FHIR.
 

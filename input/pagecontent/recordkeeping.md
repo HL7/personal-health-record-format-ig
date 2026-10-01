@@ -89,6 +89,20 @@ The following example shows a DocumentReference pointing at a legacy CCD stored 
 
 This guide intentionally does not reproduce the C-CDA metadata mappings; see [C-CDA on FHIR](http://hl7.org/fhir/us/ccda/) for document-level mappings into FHIR.  For the broader document paradigm — a Bundle of `type = document` whose first entry is a Composition — see [FHIR Documents](https://www.hl7.org/fhir/R4/documents.html).  For summary documents, see the [International Patient Summary](http://hl7.org/fhir/uv/ips/).
 
+#### Claims and Coverage Data (Blue Button 2.0 / CARIN BB)
+
+Claims data rounds out the financial picture of a PHR, and frequently documents encounters that never produced a clinical record the patient can access.  Two FHIR-based sources cover most of the US payer landscape:
+
+- **[CMS Blue Button 2.0](https://bluebutton.cms.gov/)** — Medicare claims as FHIR `ExplanationOfBenefit`, `Coverage`, and `Patient` resources.
+- **[CARIN Blue Button (C4BB)](http://hl7.org/fhir/us/carin-bb/)** — the payer-agnostic equivalent implemented by commercial insurers under the CMS Patient Access API rule.
+
+When importing claims data into a PHR:
+
+1. Retain the `ExplanationOfBenefit` resources as received — they are the payer's record, and like clinical records they should be preserved as written.
+2. Tag each imported resource with a [Provenance](https://www.hl7.org/fhir/R4/provenance.html) resource naming the payer as source, so that merge and filtering logic can distinguish payer-sourced from provider-sourced and patient-sourced data (see [Merging and Versioning](./longitudinal.html)).
+3. Expect the payer's `Patient` resource to differ from clinical ones — member IDs rather than MRNs; see the patient-linking guidance on the Merging page.
+4. Claims MAY be used to *backfill* the clinical record (e.g., inferring an encounter or procedure from a billing code), but inferred resources MUST be marked as derived in their Provenance, not presented as clinical source records.
+
 #### Bulk Data Exports
 
 Should use [NDJSON format](http://ndjson.org/).  Please see [Bulk Data Access IG](https://hl7.org/fhir/uv/bulkdata/) for additional design guidance.

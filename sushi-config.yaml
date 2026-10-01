@@ -93,6 +93,9 @@ menu:
     Longitudinal Data Model: datamodel.html
     API Endpoints: api.html
     File Formats: recordkeeping.html
+  Patient Generated Health Data:
+    Overview: pghd.html
+    Code Mapping: pghd-code-mapping.html
   Supplemental:
     Use Cases: usecases.html
     History: history.html
@@ -100,7 +103,6 @@ menu:
     Functional Model: functionality.html
     Annotations: annotations.html
     Merging and Versioning: longitudinal.html
-    Patient Generated Health Data: pghd.html
     Physiology Domains: physiology.html
     Operating Systems: operating-systems.html
     Logical Models: logical-models.html
