@@ -165,7 +165,7 @@ pages:
   api.md:
     title: API Endpoints
   longitudinal.md:
-    title: Longitudinal Records
+    title: Merging and Versioning
   pghd.md:
     title: Patient Generated Health Data (PGHD)
   pghd-code-mapping.md:
