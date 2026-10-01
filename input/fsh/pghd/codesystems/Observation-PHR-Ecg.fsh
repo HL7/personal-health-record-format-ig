@@ -1,6 +1,6 @@
 CodeSystem: Ecg
 Id: ecg-codes
-Title: "ECG Classification Codes"
+Title: "ECG Codes"
 Description: """
 Codes for ECG and related items
 """
