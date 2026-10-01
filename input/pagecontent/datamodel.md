@@ -4,6 +4,12 @@ Loosely speaking, this data model encompasses all data relevant to a patient's h
 
 When implementing a PHR that conforms to this IG, the following FHIR resources represent the surface area of what most EHRs, PHRs, and consumer medical devices will export. While it is not the minimal amount of data necessary (many systems will begin implementation with a single resource type), it represents the minimum implementation needed to reasonably parse an arbitrary EHR or PHR record that one might receive from an external system. Note that the FHIR specification itself contains some 120+ resources, many of which include clinical workflow, administrative, and public health functionality. By contrast, the following model of ~36 resources is scoped to what a patient may receive via patient portals, consumer medical devices, health information exchanges, and the like.
 
+### A Note on Demographics
+
+This guide concerns itself with record keeping — library science — meaning the faithful preservation and exchange of health records as they were written.  It does **not** provide guidance on how sex and gender should be modeled.  The demographic rows in the table below (sex assigned at birth, race, ethnicity, gender identity, sexual orientation) document element patterns that appear in records a PHR may receive from external systems and jurisdictions; a record keeper preserves such records as received, and may be legally obligated to do so (see [Jurisdictional Variation](index.html#jurisdictional-variation-and-change-over-time)).
+
+Systems generating **new** data for the PHR should consult their regional jurisdiction's current guidance on the collection and representation of sex, race, and ethnicity, and should be aware that these requirements differ across jurisdictions and change over time.
+
 ### Model
 
 | FHIR resource | Elements | Standard  | Category  | Argonaut R4    |
