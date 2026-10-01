@@ -16,7 +16,7 @@ GET /Bundle/$phr-export?outputFormat=ndjson
 # Export as PHR file (NDJSON with .phr extension)
 GET /Bundle/$phr-export?outputFormat=phr
 
-# Export as secure SPHR file (encrypted zip container)
+# Export as SPHR file (zip container with supporting documents)
 GET /Bundle/$phr-export?outputFormat=sphr
 ```
 
@@ -81,7 +81,7 @@ Export operations support multiple response formats:
 | Bundle | `application/fhir+json` | Standard FHIR Bundle resource |
 | NDJSON | `application/x-ndjson` | Newline-delimited JSON, one resource per line |
 | PHR | `application/x-ndjson` | Same as NDJSON with `.phr` extension |
-| SPHR | `application/zip` | Encrypted zip containing .phr file(s) plus supporting documents |
+| SPHR | `application/zip` | Zip archive containing .phr file(s) plus supporting documents |
 
 #### Capability Statement
 
