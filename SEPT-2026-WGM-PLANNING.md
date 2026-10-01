@@ -12,6 +12,25 @@
 > **Companion files:** `JIRA.md` (ticket status tracker), `JIRA-TODO.md` (legacy todo list)
 > **JIRA filter:** [open PHR tickets](https://jira.hl7.org/browse/FHIR-49074?jql=project%20%3D%20FHIR%20AND%20issuetype%20in%20%28%22Change%20Request%22%2C%20Comment%2C%20Question%2C%20%22Technical%20Correction%22%29%20AND%20status%20in%20%28%22Resolved%20-%20change%20required%22%2C%20Triaged%2C%20%22Waiting%20for%20Input%22%2C%20Submitted%29%20AND%20%22Work%20Group%22%20%3D%20pe%20AND%20Specification%20%3D%20%22Personal%20Health%20Record%20%28FHIR%29%20%5BFHIR-phr%5D%22)
 
+## Sprint Status — 2026-10-01
+
+The low-hanging fruit is **implemented on branch `post-wgm-sprint`** (SUSHI clean, one
+commit per block vote; ticket text in `JIRA-ITEMS-TO-CREATE.md`):
+
+| Commit | Items implemented |
+|--------|-------------------|
+| BV-1 | 1.1 (IPS-as-summary) |
+| BV-2 | 2.1 (.sphr crypto removal + security.md rewrite) |
+| BV-3 | 3.1, 3.2, 3.3 (keep-name+map decision taken; OperationDefinitions created), 3.4, 3.5, 3.6, 3.7 |
+| BV-4 | 4.1 (SocialMedia → guidance), 4.4 (experimental notices) |
+| BV-5 | 5.1 (jurisdiction notices), 5.2 (military/veteran use case) |
+| BV-6 | 6.1 (PGHD homepage + menu), 6.3 (Blue Button claims) |
+| BV-7 | 7.1 (Merging retitle), 7.2 (patient linking) |
+
+Still pending: 1.2 (PHR-S↔IPS mapping table), 4.2/4.3 (gated on handoffs), 6.2 (needs
+interpretation confirmed), external tasks. Next: push branch, verify CI build, log tickets
+per `JIRA-ITEMS-TO-CREATE.md`, request block votes.
+
 ## Connectathon Results (context for ticket descriptions)
 
 Sept 2026 Connectathon: transferred data between **six systems** — Life Library, FlexPa,
