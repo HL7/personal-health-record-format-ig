@@ -21,6 +21,8 @@
 | BV-5 | Jurisdictional guidance / US realm | 2 new | framework for FHIR-50738 |
 | BV-6 | PGHD visibility & claims data | 2 new | — |
 | BV-7 | Merging & patient identity | 2 new | FHIR-50739 |
+| BV-8 | Exchange object & minimum metadata | 4 new | complements BV-3; sharpens conformance model |
+| BV-9 | IG narrative & architecture | 2 new | — |
 
 ---
 
@@ -263,6 +265,131 @@
   > (refer/replaced-by), the Person resource for cross-source identity, $match for
   > probabilistic matching, and preserving source Patient resources with Provenance instead
   > of destructive merges.
+
+---
+
+## BV-8 — Exchange Object & Minimum Metadata
+
+> Source: post-WGM email threads, Sept 22–23 2026 (Hisashi Osanai, with Rachel Richesson,
+> Virginia Lorenzi, Abbie Watson, Sarah; cc Hirotaka Furuya, Yusuke Sarukura).
+> **Status: NOT yet implemented on `post-wgm-sprint`** — these tickets capture a design
+> discussion that needs WG input before implementation. Central question: *"What is the
+> minimum metadata required to make PHR exchange interoperable, and what must an
+> implementer support to claim conformance?"*
+
+### Ticket 8.1 `FHIR-_____`
+- **Summary:** Define the PHR Exchange Object: separate the Exchange API, serialization/
+  packaging, and exchange metadata into explicit layers
+- **Type:** Change Request | **Pages:** api.html, recordkeeping.html, conformance.html
+- **Description:**
+  > The IG defines Import/Export APIs and serialization/packaging mechanisms (NDJSON,
+  > `.phr`/`.sphr`) but never names *what is being exchanged*. APIs and serialization
+  > formats alone do not guarantee that a receiving system can reconstruct and understand
+  > the same longitudinal record. Add an explicit three-layer exchange model:
+  > (1) the **Exchange API** ($phr-export/$phr-import), (2) the **serialization and
+  > packaging format** (NDJSON, `.phr`, `.sphr`), and (3) the **exchange metadata**
+  > required to understand the exchanged content. Name the unit of exchange (the "PHR
+  > Exchange Object") and describe how the three layers compose, so each layer can evolve
+  > and be conformance-tested independently.
+
+### Ticket 8.2 `FHIR-_____`
+- **Summary:** Define the minimum metadata set required for interoperable PHR exchange
+- **Type:** Change Request | **Pages:** recordkeeping.html (Meta Data section), conformance.html
+- **Description:**
+  > A PHR may contain many content types (IPS content, PGHD, PDFs, images,
+  > patient-authored information). For a receiving system to reconstruct the same
+  > longitudinal record, it must understand at minimum: what the content represents,
+  > which individual it belongs to, when it was created/collected, where it originated,
+  > which specification or profile applies, and minimal relationships between content
+  > items. Rather than defining a complete PHR information model (content types will keep
+  > evolving), define the **minimum metadata set** and map each element to its FHIR
+  > carrier. Proposed starting point:
+  >
+  > | Metadata element | FHIR carrier |
+  > |---|---|
+  > | Patient/subject | `Patient` resource; `Composition.subject`; `Bundle` subject refs |
+  > | Content type | resource type; `DocumentReference.type`/`category` (LOINC); `Composition.section.code` |
+  > | Source/origin | `meta.source`; `Provenance.agent`/`entity`; `DocumentReference.custodian` |
+  > | Created/collected date | resource date elements; `Provenance.recorded`; `meta.lastUpdated` |
+  > | Applicable specification/profile | `meta.profile`; FHIR version in package manifest |
+  > | Relationships between items | `Composition.section.entry`; `DocumentReference.relatesTo`; `Provenance.target`; `List` |
+  >
+  > Mark each element REQUIRED or RECOMMENDED for exchange, and specify receiver behavior
+  > when metadata is absent (quarantine-not-reject, consistent with ticket 3.7).
+
+### Ticket 8.3 `FHIR-_____`
+- **Summary:** Separate conformance requirements from implementation approaches; add a
+  "Claiming Conformance" section
+- **Type:** Change Request | **Pages:** conformance.html, api.html
+- **Description:**
+  > The IG does not currently communicate which elements are mandatory conformance
+  > requirements and which are implementation approaches used to realize them. The PGHD
+  > portion is relatively clear (profiles and content definitions are specified), but for
+  > the broader PHR exchange use case an implementer cannot determine what must be
+  > supported to claim conformance. Add a "Claiming Conformance" section that
+  > (1) enumerates the mandatory capabilities — likely the Import/Export APIs, the
+  > exchange format, and the minimum metadata set from ticket 8.2; (2) explicitly labels
+  > content-organization mechanisms (Composition cover page, IPS table of contents) as
+  > either required metadata carriers or optional implementation approaches — a WG
+  > decision this ticket forces; and (3) states the conformance claim in testable
+  > MUST/SHOULD/MAY language, extending the normative API language from ticket 3.1 and
+  > the Optional Companion Specifications table from ticket 3.6.
+
+### Ticket 8.4 `FHIR-_____`
+- **Summary:** Specify a version-stable manifest mechanism for `.sphr` packages
+  (DocumentManifest is removed in current FHIR versions)
+- **Type:** Change Request | **Pages:** recordkeeping.html (Meta Data section)
+- **Description:**
+  > The Meta Data section says an `.sphr` container MAY contain a Composition "cover
+  > page" and an IPS acting as "manifest and table of contents." DocumentManifest — the
+  > traditional manifest resource — is removed in current FHIR versions, and leaning on
+  > Composition re-opens long-running CDA/CCD/IPS document-structure debates. Specify a
+  > manifest mechanism that is stable across the FHIR versions a PHR accumulates
+  > (R4/R4B/R5): candidates include Composition + List, or a lightweight package-level
+  > manifest file. Decide required-vs-optional status per ticket 8.3. Solicit Structured
+  > Documents WG input (Lisa Nelson suggested as a reviewer) before a block vote.
+
+---
+
+## BV-9 — IG Narrative & Architecture
+
+> Source: "Thoughts on a Clearer Narrative for the PHR-IG" email, Sept 22 2026 (Hisashi
+> Osanai). **Status: NOT yet implemented** — narrative reorganization, low technical risk
+> but touches the home page; draft before block vote.
+
+### Ticket 9.1 `FHIR-_____`
+- **Summary:** Reorganize the IG introduction around a challenges → capabilities → components
+  narrative
+- **Type:** Change Request | **Pages:** index.html (possibly a new architecture.html)
+- **Description:**
+  > New implementers cannot easily answer: "What is the primary purpose of this IG, and
+  > how do all of these components relate to one another?" The individual pieces
+  > (longitudinal records, `.phr`/`.sphr` packaging, import/export workflows, PGHD
+  > profiles/terminology/mappings, reuse of existing standards) are well-motivated, but
+  > the connecting narrative is implicit. Restructure the introduction as:
+  > (1) **What is a PHR** — a longitudinal health record under the control of an
+  > individual; not simply a FHIR resource nor a file format; (2) **Challenges** —
+  > semantic interoperability, record preservation, portability, traceability;
+  > (3) **Required capabilities** — health information representation, semantic
+  > interoperability, preservation, exchange and portability; (4) **How the IG addresses
+  > each capability** — mapping every major artifact to the capability it serves. Include
+  > one paragraph on the record-stewardship lens: the IG sits at the intersection of
+  > health informatics and the disciplines concerned with preservation, organization, and
+  > portability of records over time (consistent with the library-science position in
+  > ticket 5.1) — a conceptual lens, not a central theme.
+
+### Ticket 9.2 `FHIR-_____`
+- **Summary:** Add a "reuse vs. new standardization" capability table
+- **Type:** Change Request | **Pages:** index.html or conformance.html
+- **Description:**
+  > To help implementers and contributors see where this IG reuses mature standards and
+  > where it introduces new work, add a table organized by capability: representation of
+  > clinical content → reuses IPS and established FHIR IGs; PGHD representation → new
+  > PGHD profiles, terminology artifacts, and ConceptMaps (insufficient existing
+  > standards); preservation and exchange → `.phr`/`.sphr` packaging and import/export
+  > workflows defined by this IG. This makes explicit which areas still require new
+  > standardization work and why PGHD-specific artifacts and packaging mechanisms are
+  > necessary, complementing the Optional Companion Specifications table (ticket 3.6).
 
 ---
 

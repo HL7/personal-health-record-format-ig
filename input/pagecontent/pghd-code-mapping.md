@@ -42,6 +42,7 @@ Source-system codes
 Codes from source systems are normalized to PHR-IG codes. The PHR-IG code is the canonical code used by implementations. FHIR ConceptMap resources provide mappings from PHR-IG codes to external terminologies such as LOINC and SNOMED CT; they are not intended to provide reverse mappings to individual source-system codes.
 
 ## 4. PHR Code Mapping Table
+
 |Code system|Code value|HealthKit (iOS26)|Health Connect (Android16)|LOINC|SNOMED CT|IPS Free Set status|Mapping target|Mapping status|
 |---|---|---|---|---|---|---|---|---|
 |Observation PGHD Codes|activeEnergyBurned|activeEnergyBurned|ActiveCaloriesBurnedRecord|93819-1|||LOINC|Mapped|
