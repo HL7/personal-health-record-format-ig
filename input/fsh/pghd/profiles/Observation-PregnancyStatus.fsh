@@ -11,6 +11,7 @@ This profile defines how to represent Pregnancy status.
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
 * code.coding[PGHDCode].code = #pregnancy (exactly)
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * code.coding[LOINCCode].code = #82810-3 (exactly)
 * value[x] only CodeableConcept
 * valueCodeableConcept from $ValueSetpregnancyStatusIPS

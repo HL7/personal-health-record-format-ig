@@ -11,4 +11,5 @@ This profile defines how to represent TestResult.
 
 * category[ObservationCategory].coding.code = #exam (exactly)
 * code.coding[PGHDCode] from ObservationLabResultsValueSet (required)
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * value[x] only Quantity

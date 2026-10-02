@@ -11,6 +11,7 @@ This profile defines how to represent Heartbeat.
 
 * category[ObservationCategory].coding.code = #exam (exactly)
 * code.coding[PGHDCode].code = #heartBeatSeries (exactly)
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * component ^slicing.discriminator[0].path = "code.coding.code"
 * component ^slicing.discriminator[0].type = #value
 * component ^slicing.ordered = false

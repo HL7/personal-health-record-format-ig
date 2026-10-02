@@ -11,6 +11,7 @@ This profile defines how to represent Food.
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
 * code.coding[PGHDCode].code = #food (exactly)
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * hasMember only Reference(PGHDNutrition)
 * value[x] only string
 * value[x] MS

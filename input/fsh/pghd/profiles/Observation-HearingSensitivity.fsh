@@ -11,6 +11,7 @@ This profile defines how to represent HearingSensitivity.
 
 * category[ObservationCategory].coding.code = #exam (exactly)
 * code.coding[PGHDCode].code = #hearingSensitivity (exactly)
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * component ^slicing.discriminator[0].type = #value
 * component ^slicing.discriminator[=].path = "code.coding.system"
 * component ^slicing.discriminator[+].type = #value
