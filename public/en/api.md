@@ -25,6 +25,8 @@ GET /Bundle/$phr-export?outputFormat=sphr
 
 ```
 
+Systems MUST post the API endpoints they use in the system's CapabilityStatement.
+
 **Date Range Filtering:**
 
 Exporters can request specific time periods to reduce payload size or focus on recent data:
@@ -259,4 +261,147 @@ For streaming transfers, errors may occur mid-stream. Recommended approach:
 ```
 
 Include OperationOutcome resources inline to indicate processing errors while allowing the stream to continue for partial data recovery.
+
+### Query and Filter Parameters
+
+PHR systems should support flexible filtering to allow patients and applications to retrieve specific subsets of data.
+
+#### Standard FHIR Search Parameters
+
+All standard FHIR search parameters apply. Common patterns for PHR queries:
+
+```
+# Resources modified since a date
+GET /Observation?_lastUpdated=gt2025-01-01
+
+# Resources within a date range
+GET /Observation?date=ge2024-01-01&date=le2024-12-31
+
+# Specific resource types
+GET /Condition?patient=Patient/123
+
+# By category
+GET /Observation?category=vital-signs
+GET /Observation?category=laboratory
+GET /Observation?category=activity
+
+```
+
+#### PHR-Specific Filters
+
+##### By Data Source
+
+Filter by originating system:
+
+```
+GET /Observation?_source=urn:ehr:hospital-xyz
+GET /Observation?_source=urn:device:fitbit
+GET /Observation?_source=urn:phr:patient-entered
+
+```
+
+##### By Clinical Relevance
+
+Filter for active/current data (suitable for IPS generation):
+
+```
+GET /Condition?clinical-status=active
+GET /MedicationStatement?status=active
+GET /AllergyIntolerance?clinical-status=active
+
+```
+
+##### By Verification Status
+
+Distinguish verified vs unverified data:
+
+```
+GET /Condition?verification-status=confirmed
+GET /Observation?_tag=clinician-verified
+
+```
+
+#### Bulk Export Filters
+
+When using the $phr-export operation:
+
+```
+# Export only specific resource types
+GET /Patient/123/$phr-export?_type=Condition,MedicationStatement,AllergyIntolerance
+
+# Export data from a specific time period
+GET /Patient/123/$phr-export?_since=2024-01-01&_until=2024-12-31
+
+# Export only clinical data (exclude device/activity data)
+GET /Patient/123/$phr-export?_profile=clinical
+
+# Export only for sharing (IPS-compatible subset)
+GET /Patient/123/$phr-export?_profile=ips-compatible
+
+```
+
+#### Patient Sharing Preferences
+
+PHRs may implement patient-controlled sharing filters using Consent resources:
+
+```
+{
+  "resourceType": "Consent",
+  "id": "sharing-preferences",
+  "status": "active",
+  "scope": {
+    "coding": [{
+      "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+      "code": "patient-privacy"
+    }]
+  },
+  "provision": {
+    "type": "deny",
+    "provision": [
+      {
+        "type": "permit",
+        "class": [
+          {"code": "Condition"},
+          {"code": "MedicationStatement"},
+          {"code": "AllergyIntolerance"}
+        ]
+      }
+    ]
+  }
+}
+
+```
+
+#### Response Pagination
+
+For large result sets:
+
+```
+GET /Observation?_count=100&_offset=0
+
+```
+
+Response includes pagination links:
+
+```
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 1250,
+  "link": [
+    {"relation": "self", "url": "...?_count=100&_offset=0"},
+    {"relation": "next", "url": "...?_count=100&_offset=100"}
+  ]
+}
+
+```
+
+#### Selective Field Retrieval
+
+Request only specific elements to reduce payload size:
+
+```
+GET /Observation?_elements=code,valueQuantity,effectiveDateTime
+
+```
 

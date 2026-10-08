@@ -64,7 +64,7 @@ Codes representing mind measurement items
   "title" : "Observation Mind Codes",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T16:32:51-05:00",
+  "date" : "2026-09-20T16:07:18-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

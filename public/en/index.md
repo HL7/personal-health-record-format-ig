@@ -62,6 +62,28 @@ See the [Use Cases](usecases.md) page for detailed scenarios describing how a Pe
 * Salim K Semy, MITRE
 * Dave Carlson, Clinical Cloud Solutions
 * Savannah Mueller, EMI Advisors
+* Japanese PHR Council (日本PHR協会)
+* Japan Association for Medical Informatics (JAMI - 日本医療情報学会)
+* University of Ehime School of Medicine
+* Kyoto University Graduate School of Medicine
+* PHR Business Association
+
+#### International Standards Alignment
+
+This guide aligns with and acknowledges work from:
+
+* HL7 International Patient Summary (IPS) Task Force
+* HL7 Vulcan Accelerator (Real World Data & Adverse Events)
+* HL7 Physical Activity Implementation Guide contributors
+* Open mHealth schema developers
+* CDISC standards community
+* SMART Health IT community (SMART Health Links, SMART Health Cards)
+
+#### Academic & Research Institutions
+
+* Stanford Biodesign Digital Health Group (HealthKit on FHIR)
+* European Institute for Innovation through Health Data (i~HD)
+* National Academy of Medicine (Implementing High Quality Primary Care)
 
 ### References
 

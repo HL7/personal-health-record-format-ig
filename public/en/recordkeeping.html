@@ -277,6 +277,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#record-lifecycle" id="markdown-toc-record-lifecycle">Record Lifecycle</a></li>
   <li><a href="#conformance-testing" id="markdown-toc-conformance-testing">Conformance Testing</a></li>
   <li><a href="#references" id="markdown-toc-references">References</a></li>
+  <li><a href="#patient-summaries" id="markdown-toc-patient-summaries">Patient Summaries</a></li>
 </ul>
 
 </div>
@@ -537,6 +538,148 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part11/sect_d.3.3.html">DICOM PS3.11 2024b - Media Storage Application Profiles</a></li>
 </ul>
 
+<h3 id="patient-summaries">Patient Summaries</h3>
+
+<p>As mentioned earlier, the .phr container MAY include an International Patient Summary (IPS) file that acts as a manifest and table of contents. This section provides detailed guidance on the relationship between PHR and IPS formats.</p>
+
+<h4 id="ips-and-phr-compared">IPS and PHR Compared</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspect</th>
+      <th>IPS</th>
+      <th>PHR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Purpose</td>
+      <td>Emergency/unplanned care</td>
+      <td>Complete health history</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Essential current data</td>
+      <td>All historical data</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>Compact (KB)</td>
+      <td>Comprehensive (MB-GB)</td>
+    </tr>
+    <tr>
+      <td>Authorship</td>
+      <td>Clinical system</td>
+      <td>Patient + Clinical + Other</td>
+    </tr>
+    <tr>
+      <td>Standard</td>
+      <td>HL7 IPS IG</td>
+      <td>This IG</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The IPS can be thought of as an "executive summary" extracted from the complete PHR - containing only active, current information needed for immediate care decisions.  The PHR may also contain previous versions of IPS documents obtained while traveling or otherwise.</p>
+
+<h4 id="generating-ips-from-phr">Generating IPS from PHR</h4>
+
+<p>To generate (or regenerate) an IPS document from PHR data, use the most recent data ( stuat of current or active), including:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>IPS Section</th>
+      <th>PHR Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Medication Summary</td>
+      <td>MedicationStatement (status=active)</td>
+    </tr>
+    <tr>
+      <td>Allergies and Intolerances</td>
+      <td>AllergyIntolerance (clinicalStatus=active)</td>
+    </tr>
+    <tr>
+      <td>Problem List</td>
+      <td>Condition (clinicalStatus=active)</td>
+    </tr>
+    <tr>
+      <td>Immunizations</td>
+      <td>Immunization (status=completed, recent)</td>
+    </tr>
+    <tr>
+      <td>History of Procedures</td>
+      <td>Procedure (recent, significant)</td>
+    </tr>
+    <tr>
+      <td>Medical Devices</td>
+      <td>DeviceUseStatement (status=active)</td>
+    </tr>
+    <tr>
+      <td>Vital Signs</td>
+      <td>Observation (category=vital-signs, recent)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="importing-ips-into-phr">Importing IPS into PHR</h4>
+
+<p>When a patient receives an IPS from a healthcare provider:</p>
+
+<ol>
+  <li><strong>Parse the IPS Bundle</strong> - Extract Composition and other resources.</li>
+  <li><strong>Record Provenance</strong> - Record source system and date received, if available.</li>
+  <li><strong>Deduplicate</strong> - Check for existing equivalent records.</li>
+  <li><strong>Merge</strong> - Integrate new data with existing PHR contents.</li>
+  <li><strong>Flag conflicts</strong> - Identify discrepancies for patient review.</li>
+</ol>
+
+<h4 id="terminology-requirements">Terminology Requirements</h4>
+
+<p>IPS requires internationally recognized code systems:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data Type</th>
+      <th>Required Code System</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Conditions</td>
+      <td>SNOMED CT (IPS subset)</td>
+    </tr>
+    <tr>
+      <td>Medications</td>
+      <td>SNOMED CT, ATC, or national drug codes</td>
+    </tr>
+    <tr>
+      <td>Allergies</td>
+      <td>SNOMED CT</td>
+    </tr>
+    <tr>
+      <td>Lab results</td>
+      <td>LOINC</td>
+    </tr>
+    <tr>
+      <td>Units</td>
+      <td>UCUM</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="references-1">References</h4>
+
+<ul>
+  <li><a href="http://hl7.org/fhir/uv/ips/">International Patient Summary IG</a></li>
+  <li><a href="https://www.snomed.org/snomed-ct/use-snomed-ct/international-patient-summary">IPS Terminology</a></li>
+</ul>
+
 <h4 id="configuring-operating-systems-to-recognize-phr-and-sphr-filetypes">Configuring Operating Systems to Recognize .phr and .sphr Filetypes</h4>
 
 <ul>
@@ -575,8 +718,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-10 16:32:00 -0500">
-    2026-09-10
+  <span title="2026-09-20 16:07:00 -0500">
+    2026-09-20
   </span>
 
           <br/>

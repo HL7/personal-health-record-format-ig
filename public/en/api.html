@@ -275,6 +275,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#phr-export-and-import-operations" id="markdown-toc-phr-export-and-import-operations">PHR Export and Import Operations</a></li>
   <li><a href="#smart-health-links-for-phr-sharing" id="markdown-toc-smart-health-links-for-phr-sharing">SMART Health Links for PHR Sharing</a></li>
   <li><a href="#streaming-phr-data-over-http" id="markdown-toc-streaming-phr-data-over-http">Streaming PHR Data Over HTTP</a></li>
+  <li><a href="#query-and-filter-parameters" id="markdown-toc-query-and-filter-parameters">Query and Filter Parameters</a></li>
 </ul>
 
 </div>
@@ -298,6 +299,8 @@ GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?outputFo
 <span class="c"># Export as secure SPHR file (encrypted zip container)</span>
 GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>sphr
 </code></pre></div></div>
+
+<p>Systems MUST post the API endpoints they use in the system's CapabilityStatement.</p>
 
 <p><strong>Date Range Filtering:</strong></p>
 
@@ -503,14 +506,14 @@ POST /Bundle/<span class="nv">$import</span>?mode<span class="o">=</span>validat
 
 <p>When transmitting .phr content over HTTP, use the following headers:</p>
 
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">Content-Type: application/x-ndjson
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type: application/x-ndjson
 Content-Disposition: attachment; filename="patient-record.phr"
 X-PHR-Version: 1.0
-</span></code></pre></div></div>
+</code></pre></div></div>
 
 <p>For FHIR-aware systems:</p>
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">Content-Type: application/fhir+ndjson
-</span></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type: application/fhir+ndjson
+</code></pre></div></div>
 
 <h4 id="streaming-benefits">Streaming Benefits</h4>
 
@@ -594,6 +597,131 @@ X-PHR-Version: 1.0
 
 <p>Include OperationOutcome resources inline to indicate processing errors while allowing the stream to continue for partial data recovery.</p>
 
+<h3 id="query-and-filter-parameters">Query and Filter Parameters</h3>
+
+<p>PHR systems should support flexible filtering to allow patients and applications to retrieve specific subsets of data.</p>
+
+<h4 id="standard-fhir-search-parameters">Standard FHIR Search Parameters</h4>
+
+<p>All standard FHIR search parameters apply. Common patterns for PHR queries:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err"># Resources modified since a date
+GET /Observation?_lastUpdated=gt2025-01-01
+
+# Resources within a date range
+GET /Observation?date=ge2024-01-01&amp;date=le2024-12-31
+
+# Specific resource types
+GET /Condition?patient=Patient/123
+
+# By category
+GET /Observation?category=vital-signs
+GET /Observation?category=laboratory
+GET /Observation?category=activity
+</span></code></pre></div></div>
+
+<h4 id="phr-specific-filters">PHR-Specific Filters</h4>
+
+<h5 id="by-data-source">By Data Source</h5>
+
+<p>Filter by originating system:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET /Observation?_source=urn:ehr:hospital-xyz
+GET /Observation?_source=urn:device:fitbit
+GET /Observation?_source=urn:phr:patient-entered
+</span></code></pre></div></div>
+
+<h5 id="by-clinical-relevance">By Clinical Relevance</h5>
+
+<p>Filter for active/current data (suitable for IPS generation):</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET /Condition?clinical-status=active
+GET /MedicationStatement?status=active
+GET /AllergyIntolerance?clinical-status=active
+</span></code></pre></div></div>
+
+<h5 id="by-verification-status">By Verification Status</h5>
+
+<p>Distinguish verified vs unverified data:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET /Condition?verification-status=confirmed
+GET /Observation?_tag=clinician-verified
+</span></code></pre></div></div>
+
+<h4 id="bulk-export-filters">Bulk Export Filters</h4>
+
+<p>When using the $phr-export operation:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err"># Export only specific resource types
+GET /Patient/123/$phr-export?_type=Condition,MedicationStatement,AllergyIntolerance
+
+# Export data from a specific time period
+GET /Patient/123/$phr-export?_since=2024-01-01&amp;_until=2024-12-31
+
+# Export only clinical data (exclude device/activity data)
+GET /Patient/123/$phr-export?_profile=clinical
+
+# Export only for sharing (IPS-compatible subset)
+GET /Patient/123/$phr-export?_profile=ips-compatible
+</span></code></pre></div></div>
+
+<h4 id="patient-sharing-preferences">Patient Sharing Preferences</h4>
+
+<p>PHRs may implement patient-controlled sharing filters using Consent resources:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Consent"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sharing-preferences"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scope"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/consentscope"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"patient-privacy"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"provision"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deny"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"provision"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"permit"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"class"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Condition"</span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MedicationStatement"</span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AllergyIntolerance"</span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="response-pagination">Response Pagination</h4>
+
+<p>For large result sets:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET /Observation?_count=100&amp;_offset=0
+</span></code></pre></div></div>
+
+<p>Response includes pagination links:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"searchset"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1250</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="nl">"relation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"self"</span><span class="p">,</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"...?_count=100&amp;_offset=0"</span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="nl">"relation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next"</span><span class="p">,</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"...?_count=100&amp;_offset=100"</span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="selective-field-retrieval">Selective Field Retrieval</h4>
+
+<p>Request only specific elements to reduce payload size:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET /Observation?_elements=code,valueQuantity,effectiveDateTime
+</span></code></pre></div></div>
+
 
 
 
@@ -622,8 +750,8 @@ X-PHR-Version: 1.0
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-10 16:32:00 -0500">
-    2026-09-10
+  <span title="2026-09-20 16:07:00 -0500">
+    2026-09-20
   </span>
 
           <br/>

@@ -270,4210 +270,662 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#phr-ig-pghd-code-mapping" id="markdown-toc-phr-ig-pghd-code-mapping">PHR-IG (PGHD) Code Mapping</a>    <ul>
+      <li><a href="#1-purpose" id="markdown-toc-1-purpose">1. Purpose</a></li>
+      <li><a href="#2-implementation-principles" id="markdown-toc-2-implementation-principles">2. Implementation Principles</a></li>
+      <li><a href="#3-conceptmap-model" id="markdown-toc-3-conceptmap-model">3. ConceptMap Model</a></li>
+      <li><a href="#4-phr-code-mapping-table" id="markdown-toc-4-phr-code-mapping-table">4. PHR Code Mapping Table</a>        <ul>
+          <li><a href="#mapping-status" id="markdown-toc-mapping-status">Mapping status</a></li>
+          <li><a href="#open-items" id="markdown-toc-open-items">Open items</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
 </div>
-<h2 id="description">Description</h2>
-<p>This table provides a comprehensive mapping of Personal Health Record (PHR) data items across multiple coding systems and platforms.
-It includes mappings between HealthKit (iOS), Health Connect (Android), LOINC codes, and SNOMED CT codes for items included in the International Patient Summary (IPS).
-This facilitates interoperability and data integration across different health data ecosystems.</p>
+<h1 id="phr-ig-pghd-code-mapping">PHR-IG (PGHD) Code Mapping</h1>
 
-<hr />
+<h2 id="1-purpose">1. Purpose</h2>
 
-<h2 id="phr-code-mapping-table">PHR Code Mapping Table</h2>
+<p>This document describes how PHR-IG (PGHD) codes are used by implementations and how they relate to external terminology standards, platforms, and the International Patient Summary (IPS).</p>
+
+<p>PHR-IG (PGHD) codes are the canonical codes used to record, exchange, and process PGHD data. Where an appropriate target code is available, ConceptMap information may be used to map the PHR-IG code to an external terminology such as LOINC or SNOMED CT.</p>
+
+<p>The mapping supports interoperability but does not replace the original PHR-IG code. Implementations should retain the PHR-IG code for stable processing, traceability, backward compatibility, and interpretation of historical data.</p>
+
+<h2 id="2-implementation-principles">2. Implementation Principles</h2>
+
+<ol>
+  <li>
+    <p><strong>Use the PHR-IG code as the canonical implementation code.</strong><br />
+Applications use the PHR-IG code for internal processing and PGHD exchange.</p>
+  </li>
+  <li>
+    <p><strong>Use ConceptMap information when external terminology is required.</strong><br />
+Where a corresponding external standard code is available, implementations may translate or additionally include the mapped code according to the use case.</p>
+  </li>
+  <li>
+    <p><strong>Retain the original PHR-IG code after translation.</strong><br />
+The source PHR-IG code remains available together with any mapped external code.</p>
+  </li>
+  <li>
+    <p><strong>Do not block implementation while a mapping is pending.</strong><br />
+A PHR-IG code remains usable when an external terminology mapping is under submission, under review, or not yet determined.</p>
+  </li>
+  <li>
+    <p><strong>Maintain codes required for historical-data processing.</strong><br />
+A code remains part of the PHR-IG code system when it is needed to interpret or process existing data, regardless of the lifecycle of the original source-platform data type.</p>
+  </li>
+</ol>
+
+<h2 id="3-conceptmap-model">3. ConceptMap Model</h2>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Source-system codes
+        |
+        +-- mapped to --&gt; PHR-IG (PGHD) Code
+                              |
+                              +-- FHIR ConceptMap --&gt; LOINC
+                              |
+                              +-- FHIR ConceptMap --&gt; SNOMED CT
+                              |
+                              +-- No external mapping --&gt; Managed in PHR-IG
+</code></pre></div></div>
+
+<p>Codes from source systems are normalized to PHR-IG codes. The PHR-IG code is the canonical code used by implementations. FHIR ConceptMap resources provide mappings from PHR-IG codes to external terminologies such as LOINC and SNOMED CT; they are not intended to provide reverse mappings to individual source-system codes.</p>
+
+<h2 id="4-phr-code-mapping-table">4. PHR Code Mapping Table</h2>
+<p>|Code system|Code value|HealthKit (iOS26)|Health Connect (Android16)|LOINC|SNOMED CT|IPS Free Set status|Mapping target|Mapping status|
+|—|—|—|—|—|—|—|—|—|
+|Observation PGHD Codes|activeEnergyBurned|activeEnergyBurned|ActiveCaloriesBurnedRecord|93819-1|||LOINC|Mapped|
+|Observation PGHD Codes|basalEnergyBurned|basalEnergyBurned|BasalMetabolicRateRecord||||LOINC|In Progress|
+|Observation PGHD Codes|cyclingPedalingCadence||CyclingPedalingCadenceRecord||||LOINC|In Progress|
+|Observation PGHD Codes|distance||DistanceRecord|103208-5|||LOINC|Mapped|
+|Observation PGHD Codes|elevationGained||ElevationGainedRecord||||LOINC|In Progress|
+|Observation PGHD Codes|flightsClimbed|flightsClimbed|FloorsClimbedRecord||||LOINC|In Progress|
+|Observation PGHD Codes|totalEnergyBurned||TotalCaloriesBurnedRecord|41981-2|||LOINC|In Progress|
+|Observation PGHD Codes|appleExerciseTime|appleExerciseTime||-|-||LOINC|In Progress|
+|Observation PGHD Codes|appleMoveTime|appleMoveTime||-|-||LOINC|In Progress|
+|Observation PGHD Codes|appleStandHour|appleStandHour||-|-||LOINC|In Progress|
+|Observation PGHD Codes|appleStandTime|appleStandTime||-|-||LOINC|In Progress|
+|Observation PGHD Codes|distanceCycling|distanceCycling||93818-3|||LOINC|Mapped|
+|Observation PGHD Codes|distanceDownhillSnowSports|distanceDownhillSnowSports|||||LOINC|In Progress|
+|Observation PGHD Codes|distanceSwimming|distanceSwimming||93816-7|||LOINC|Mapped|
+|Observation PGHD Codes|distanceWalkingRunning|distanceWalkingRunning|||||LOINC|In Progress|
+|Observation PGHD Codes|distanceWheelchair|distanceWheelchair|||||LOINC|In Progress|
+|Observation PGHD Codes|lowCardioFitnessEvent|lowCardioFitnessEvent|||||LOINC|In Progress|
+|Observation PGHD Codes|nikeFuel|nikeFuel||-|-||PHR-IG (PGHD)|Mapped|
+|Observation PGHD Codes|physicalEffort||||||LOINC|In Progress|
+|Observation PGHD Codes|power||PowerRecord||||LOINC|In Progress|
+|Observation PGHD Codes|pushCount|pushCount|WheelchairPushesRecord||||LOINC|TBD|
+|Observation PGHD Codes|runningGroundContactTime|runningGroundContactTime|||||LOINC|In Progress|
+|Observation PGHD Codes|runningPower|runningPower|||||LOINC|In Progress|
+|Observation PGHD Codes|runningSpeed|runningSpeed|||||LOINC|In Progress|
+|Observation PGHD Codes|runningStrideLength|runningStrideLength|||||LOINC|In Progress|
+|Observation PGHD Codes|runningVerticalOscillation|runningVerticalOscillation|||||LOINC|In Progress|
+|Observation PGHD Codes|stepsCadence||StepsCadenceRecord||||LOINC|In Progress|
+|Observation PGHD Codes|stepCount|stepCount|StepsRecord|55423-8|||LOINC|Mapped|
+|Observation PGHD Codes|speed||SpeedRecord||||LOINC|In Progress|
+|Observation PGHD Codes|swimmingStrokeCount|swimmingStrokeCount|SwimmingStrokesRecord||||LOINC|In Progress|
+|Observation PGHD Codes|vo2Max|vo2Max|Vo2MaxRecord||||LOINC|In Progress|
+|Observation PGHD Codes|pace||||||LOINC|In Progress|
+|Observation PGHD Codes|moderateActivity||||||LOINC|In Progress|
+|Observation PGHD Codes|vigorousActivity||||||LOINC|In Progress|
+|Observation PGHD Codes|moderateToVigorousActivity||||||LOINC|In Progress|
+|Observation PGHD Codes|met||||||LOINC|In Progress|
+|Observation PGHD Codes|metByStandardRmr||||||LOINC|In Progress|
+|Observation PGHD Codes|crossCountrySkiingSpeed||||||LOINC|In Progress|
+|Observation PGHD Codes|distanceCrossCountrySkiing||||||LOINC|In Progress|
+|Observation PGHD Codes|paddleSportsSpeed||||||LOINC|In Progress|
+|Observation PGHD Codes|distancePaddleSports||||||LOINC|In Progress|
+|Observation PGHD Codes|rowingSpeed||||||LOINC|In Progress|
+|Observation PGHD Codes|distanceRowing||||||LOINC|In Progress|
+|Observation PGHD Codes|distanceSkatingSports||||||LOINC|In Progress|
+|Observation PGHD Codes|estimatedWorkoutEffortScore||||||LOINC|In Progress|
+|Observation PGHD Codes|workoutEffortScore||||||LOINC|In Progress|
+|Observation PGHD Codes|bloodAlcoholContent|bloodAlcoholContent|||||LOINC|In Progress|
+|Observation PGHD Codes|numberOfAlcoholicBeverages|numberOfAlcoholicBeverages|||||LOINC|In Progress|
+|Observation PGHD Codes|appleSleepingWristTemperature|appleSleepingWristTemperature||-|-||LOINC|In Progress|
+|Observation PGHD Codes|bodyFatPercentage|bodyFatPercentage|BodyFatRecord|41982-0|||LOINC|Mapped|
+|Observation PGHD Codes|bodyMass|bodyMass|WeightRecord|29463-7|||LOINC|Mapped|
+|Observation PGHD Codes|bodyMassIndex|bodyMassIndex||39156-5|||LOINC|Mapped|
+|Observation PGHD Codes|height|height|HeightRecord|8302-2|||LOINC|In Progress|
+|Observation PGHD Codes|hipCircumference||HipCircumferenceRecord||||LOINC|In Progress|
+|Observation PGHD Codes|leanBodyMass|leanBodyMass|LeanBodyMassRecord|91557-9|||LOINC|Mapped|
+|Observation PGHD Codes|waistCircumference|waistCircumference|WaistCircumferenceRecord||||LOINC|In Progress|
+|Observation PGHD Codes|boneMass||BoneMassRecord||||LOINC|In Progress|
+|Observation PGHD Codes|underwaterDepth|underwaterDepth|||||LOINC|In Progress|
+|Observation PGHD Codes|waterTemperature|waterTemperature|||||LOINC|In Progress|
+|Observation PGHD Codes|environmentalAudioExposure|environmentalAudioExposure|||||LOINC|In Progress|
+|Observation PGHD Codes|environmentalAudioExposureEvent|environmentalAudioExposureEvent|||||LOINC|In Progress|
+|Observation PGHD Codes|headphoneAudioExposure|headphoneAudioExposure|||||LOINC|In Progress|
+|Observation PGHD Codes|headphoneAudioExposureEvent|headphoneAudioExposureEvent|||||LOINC|In Progress|
+|Observation PGHD Codes|electrocardiogram|HKElectrocardiogramType||||||TBD|
+|Observation PGHD Codes|heartBeatSeries|HKDataTypeIdentifierHeartbeatSeries||||||TBD|
+|Observation PGHD Codes|bloodGlucose|bloodGlucose|BloodGlucoseRecord|2339-0|||LOINC|In Progress|
+|Observation PGHD Codes|electrodermalActivity|electrodermalActivity||||||TBD|
+|Observation PGHD Codes|forcedExpiratoryVolume1|forcedExpiratoryVolume1||20150-9|||LOINC|Mapped|
+|Observation PGHD Codes|forcedVitalCapacity|forcedVitalCapacity||19870-5|||LOINC|Mapped|
+|Observation PGHD Codes|inhalerUsage|inhalerUsage||||||TBD|
+|Observation PGHD Codes|insulinDelivery|insulinDelivery||||||TBD|
+|Observation PGHD Codes|numberOfTimesFallen|numberOfTimesFallen||||||TBD|
+|Observation PGHD Codes|peakExpiratoryFlowRate|peakExpiratoryFlowRate||33452-4|||LOINC|Mapped|
+|Observation PGHD Codes|peripheralPerfusionIndex|peripheralPerfusionIndex|||||LOINC|In Progress|
+|Observation PGHD Codes|timeInDaylight|||||||TBD|
+|Observation PGHD Codes|inspiratoryTime|||||||TBD|
+|Observation PGHD Codes|ventilationCycleTime|||||||TBD|
+|Observation PGHD Codes|minuteVolume|||||||TBD|
+|Observation PGHD Codes|breathCarbonMonoxide|||||||TBD|
+|Observation PGHD Codes|mindfulSession|mindfulSession|MindfulnessSessionRecord||||LOINC|In Progress|
+|Observation PGHD Codes|sleepAnalysis|sleepAnalysis|SleepSessionRecord||||LOINC|In Progress|
+|Observation PGHD Codes|sleepEpisode|||||||TBD|
+|Observation PGHD Codes|snoreIndex|||||||TBD|
+|Observation PGHD Codes|snoreEvent|||||||TBD|
+|Observation PGHD Codes|sleepAHI|||||||TBD|
+|Observation PGHD Codes|sleepArousalIndex|||||||TBD|
+|Observation PGHD Codes|appleSleepingBreathingDisturbances|||-|-||LOINC|In Progress|
+|Observation PGHD Codes|sleepApneaEvent||||||LOINC|In Progress|
+|Observation PGHD Codes|appleWalkingSteadiness|appleWalkingSteadiness||-|-||LOINC|In Progress|
+|Observation PGHD Codes|appleWalkingSteadinessEvent|appleWalkingSteadinessEvent||-|-||LOINC|In Progress|
+|Observation PGHD Codes|sixMinuteWalkTestDistance|sixMinuteWalkTestDistance||64098-7|||LOINC|Mapped|
+|Observation PGHD Codes|walkingSpeed|walkingSpeed|||||LOINC|In Progress|
+|Observation PGHD Codes|walkingStepLength|walkingStepLength|||||LOINC|In Progress|
+|Observation PGHD Codes|walkingAsymmetryPercentage|walkingAsymmetryPercentage|||||LOINC|In Progress|
+|Observation PGHD Codes|walkingDoubleSupportPercentage|walkingDoubleSupportPercentage|||||LOINC|In Progress|
+|Observation PGHD Codes|stairAscentSpeed|stairAscentSpeed|||||LOINC|In Progress|
+|Observation PGHD Codes|stairDescentSpeed|stairDescentSpeed|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryBiotin|dietaryBiotin|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryCaffeine|dietaryCaffeine|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryCalcium|dietaryCalcium||9045-6|||LOINC|In Progress|
+|Observation PGHD Codes|dietaryCarbohydrates|dietaryCarbohydrates||9059-7|||LOINC|In Progress|
+|Observation PGHD Codes|dietaryChloride|dietaryChloride|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryCholesterol|dietaryCholesterol|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryChromium|dietaryChromium|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryCopper|dietaryCopper|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryEnergyConsumed|dietaryEnergyConsumed||9052-2|||LOINC|In Progress|
+|Observation PGHD Codes|dietaryEnergyFromFat|||||||TBD|
+|Observation PGHD Codes|dietaryFatMonounsaturated|dietaryFatMonounsaturated|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryFatPolyunsaturated|dietaryFatPolyunsaturated|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryFatUnsaturated|||||||TBD|
+|Observation PGHD Codes|dietaryTransFat|||||||TBD|
+|Observation PGHD Codes|dietaryFatSaturated|dietaryFatSaturated|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryFatTotal|dietaryFatTotal||9066-2|||LOINC|In Progress|
+|Observation PGHD Codes|dietaryFiber|dietaryFiber||||||TBD|
+|Observation PGHD Codes|dietaryFolateOrFolicAcid|||||||TBD|
+|Observation PGHD Codes|dietaryFolate|dietaryFolate|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryFolicAcid|||||||TBD|
+|Observation PGHD Codes|dietaryIodine|dietaryIodine||||||TBD|
+|Observation PGHD Codes|dietaryIron|dietaryIron|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryMagnesium|dietaryMagnesium|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryManganese|dietaryManganese|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryMolybdenum|dietaryMolybdenum|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryNiacin|dietaryNiacin|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryPantothenicAcid|dietaryPantothenicAcid|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryPhosphorus|dietaryPhosphorus|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryPotassium|dietaryPotassium|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryProtein|dietaryProtein||9079-5|||LOINC|In Progress|
+|Observation PGHD Codes|dietaryRiboflavin|dietaryRiboflavin|||||LOINC|In Progress|
+|Observation PGHD Codes|dietarySelenium|dietarySelenium|||||LOINC|In Progress|
+|Observation PGHD Codes|dietarySodium|dietarySodium||9086-0|||LOINC|In Progress|
+|Observation PGHD Codes|dietarySugar|dietarySugar|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryThiamin|dietaryThiamin|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryVitaminA|dietaryVitaminA|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryVitaminB12|dietaryVitaminB12|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryVitaminB6|dietaryVitaminB6|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryVitaminC|dietaryVitaminC|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryVitaminD|dietaryVitaminD|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryVitaminE|dietaryVitaminE|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryVitaminK|dietaryVitaminK|||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryWater|dietaryWater|HydrationRecord||||LOINC|In Progress|
+|Observation PGHD Codes|dietaryZinc|dietaryZinc|||||LOINC|In Progress|
+|Observation PGHD Codes|basalBodyTemperature|basalBodyTemperature|BasalBodyTemperatureRecord||||LOINC|In Progress|
+|Observation PGHD Codes|cervicalMucusQuality|cervicalMucusQuality|CervicalMucusRecord||||LOINC|In Progress|
+|Observation PGHD Codes|contraceptive|contraceptive||||||TBD|
+|Observation PGHD Codes|intermenstrualBleeding|intermenstrualBleeding|||||LOINC|In Progress|
+|Observation PGHD Codes|irregularMenstrualCycles|irregularMenstrualCycles||||||TBD|
+|Observation PGHD Codes|infrequentMenstrualCycles|infrequentMenstrualCycles||||||TBD|
+|Observation PGHD Codes|lactation|lactation||||||TBD|
+|Observation PGHD Codes|menstrualFlow|menstrualFlow|MenstruationFlowRecord||||LOINC|In Progress|
+|Observation PGHD Codes|menstrualPeriod|||||||TBD|
+|Observation PGHD Codes|ovulationTestResult|ovulationTestResult|OvulationTestRecord||||LOINC|In Progress|
+|Observation PGHD Codes|persistentIntermenstrualBleeding|persistentIntermenstrualBleeding||||||TBD|
+|Observation PGHD Codes|pregnancy|pregnancy||||||TBD|
+|Observation PGHD Codes|pregnancyTestResult|pregnancyTestResult||||||TBD|
+|Observation PGHD Codes|progesteroneTestResult|progesteroneTestResult|||||LOINC|In Progress|
+|Observation PGHD Codes|prolongedMenstrualPeriods|prolongedMenstrualPeriods||||||TBD|
+|Observation PGHD Codes|sexualActivity|sexualActivity|SexualActivityRecord||||LOINC|In Progress|
+|Observation PGHD Codes|bleedingAfterPregnancy|||||||TBD|
+|Observation PGHD Codes|bleedingDuringPregnancy|||||||TBD|
+|Observation PGHD Codes|handwashingEvent|handwashingEvent|||||LOINC|In Progress|
+|Observation PGHD Codes|toothbrushingEvent|toothbrushingEvent|||||LOINC|In Progress|
+|Observation PGHD Codes|abdominalCramps|abdominalCramps||-|51197009(<em>)|Pending|SNOMED CT|Mapped|
+|Observation PGHD Codes|acne|acne||-|403364000(</em>)|Pending|SNOMED CT|Mapped|
+|Observation PGHD Codes|appetiteChanges|appetiteChanges||-|249473004(<em>)|Pending|SNOMED CT|Mapped|
+|Observation PGHD Codes|bladderIncontinence|bladderIncontinence||-|165232002|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|bloating|bloating||-|116289008|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|breastPain|breastPain||-|53430007|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|chestTightnessOrPain|chestTightnessOrPain||-|23924001|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|chills|chills||-|43724002|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|constipation|constipation||-|14760008|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|coughing|coughing||-|49727002|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|diarrhea|diarrhea||-|62315008|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|dizziness|dizziness||-|404640003|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|drySkin|drySkin||-|106076001|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|fainting|fainting||-|271594007|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|fatigue|fatigue||-|84229001|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|fever|fever||-|386661006|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|generalizedBodyAche|generalizedBodyAche||-|22253000|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|hairLoss|hairLoss||-|278040002(</em>)|Pending|SNOMED CT|Mapped|
+|Observation PGHD Codes|headache|headache||-|25064002|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|heartburn|heartburn||-|16331000|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|hotFlashes|hotFlashes||-|198436008|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|lossOfSmell|lossOfSmell||-|44169009|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|lossOfTaste|lossOfTaste||-|36955009(<em>)|Pending|SNOMED CT|Mapped|
+|Observation PGHD Codes|lowerBackPain|lowerBackPain||-|279039007|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|memoryLapse|memoryLapse||-|225038006(</em>)|Pending|SNOMED CT|Mapped|
+|Observation PGHD Codes|moodChanges|moodChanges||-|106131003|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|nausea|nausea||-|422587007|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|nightSweats|nightSweats||-|42984000|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|pelvicPain|pelvicPain||-|30473006|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|rapidPoundingOrFlutteringHeartbeat|rapidPoundingOrFlutteringHeartbeat||-|80313002|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|runnyNose|runnyNose||-|64531003|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|shortnessOfBreath|shortnessOfBreath||-|267036007|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|sinusCongestion|sinusCongestion||-|68235000|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|skippedHeartbeat|skippedHeartbeat||-|80313002|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|sleepChanges|sleepChanges||-|247950007(*)|Pending|SNOMED CT|Mapped|
+|Observation PGHD Codes|soreThroat|soreThroat||-|267102003|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|vaginalDryness|vaginalDryness||-|31908003|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|vomiting|vomiting||-|300359004|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|wheezing|wheezing||-|56018004|Included|SNOMED CT|Mapped|
+|Observation PGHD Codes|uvExposure|uvExposure|||||LOINC|In Progress|
+|Observation PGHD Codes|exerciseEvent||ExerciseEventRecord|||||TBD|
+|Observation PGHD Codes|exerciseLap||ExerciseLapRecord|||||TBD|
+|Observation PGHD Codes|exerciseRepetitions||ExerciseRepetitionsRecord|||||TBD|
+|Observation PGHD Codes|workoutActivity||ExerciseSessionRecord|||||TBD|
+|Observation PGHD Codes|atrialFibrillationBurden|atrialFibrillationBurden||||||TBD|
+|Observation PGHD Codes|bloodPressure|bloodPressure|BloodPressureRecord|85354-9|||LOINC|Mapped|
+|Observation PGHD Codes|bloodPressureDiastolic|bloodPressureDiastolic||8462-4|||LOINC|Mapped|
+|Observation PGHD Codes|bloodPressureSystolic|bloodPressureSystolic||8480-6|||LOINC|Mapped|
+|Observation PGHD Codes|bodyTemperature|bodyTemperature|BodyTemperatureRecord|8310-5|||LOINC|Mapped|
+|Observation PGHD Codes|heartRate|heartRate|HeartRateRecord|8867-4|||LOINC|Mapped|
+|Observation PGHD Codes|heartRateVariabilitySDNN|heartRateVariabilitySDNN||80404-7|||LOINC|Mapped|
+|Observation PGHD Codes|heartRateRecoveryOneMinute|heartRateRecoveryOneMinute||||||TBD|
+|Observation PGHD Codes|highHeartRateEvent|highHeartRateEvent||||||TBD|
+|Observation PGHD Codes|irregularHeartRhythmEvent|irregularHeartRhythmEvent||||||TBD|
+|Observation PGHD Codes|lowHeartRateEvent|lowHeartRateEvent||||||TBD|
+|Observation PGHD Codes|oxygenSaturation|oxygenSaturation|OxygenSaturationRecord|59408-5|||LOINC|Mapped|
+|Observation PGHD Codes|respiratoryRate|respiratoryRate|RespiratoryRateRecord|9279-1|||LOINC|Mapped|
+|Observation PGHD Codes|restingHeartRate|restingHeartRate|RestingHeartRateRecord|40443-4|||LOINC|Mapped|
+|Observation PGHD Codes|walkingHeartRateAverage|walkingHeartRateAverage|||||LOINC|In Progress|
+|Observation PGHD Codes|rrInterval|||||||TBD|
+|Observation PGHD Codes|americanFootball|americanFootball|FOOTBALL_AMERICAN|||||TBD|
+|Observation PGHD Codes|archery|archery||||||TBD|
+|Observation PGHD Codes|australianFootball|australianFootball|FOOTBALL_AUSTRALIAN|||||TBD|
+|Observation PGHD Codes|badminton|badminton|BADMINTON|||||TBD|
+|Observation PGHD Codes|barre|barre||||||TBD|
+|Observation PGHD Codes|baseball|baseball|BASEBALL|||||TBD|
+|Observation PGHD Codes|basketball|basketball|BASKETBALL|||||TBD|
+|Observation PGHD Codes|bowling|bowling||||||TBD|
+|Observation PGHD Codes|boxing|boxing|BOXING|||||TBD|
+|Observation PGHD Codes|cardioDance|cardioDance||||||TBD|
+|Observation PGHD Codes|climbing|climbing||||||TBD|
+|Observation PGHD Codes|cooldown|cooldown||||||TBD|
+|Observation PGHD Codes|coreTraining|coreTraining||||||TBD|
+|Observation PGHD Codes|cricket|cricket|CRICKET|||||TBD|
+|Observation PGHD Codes|crossCountrySkiing|crossCountrySkiing||||||TBD|
+|Observation PGHD Codes|crossTraining|crossTraining||||||TBD|
+|Observation PGHD Codes|curling|curling||||||TBD|
+|Observation PGHD Codes|cycling|cycling||||||TBD|
+|Observation PGHD Codes|dance|dance|DANCING|||||TBD|
+|Observation PGHD Codes|danceInspiredTraining|danceInspiredTraining||||||TBD|
+|Observation PGHD Codes|discSports|discSports||||||TBD|
+|Observation PGHD Codes|downhillSkiing|downhillSkiing||||||TBD|
+|Observation PGHD Codes|elliptical|elliptical|ELLIPTICAL|||||TBD|
+|Observation PGHD Codes|equestrianSports|equestrianSports||||||TBD|
+|Observation PGHD Codes|fencing|fencing|FENCING|||||TBD|
+|Observation PGHD Codes|fishing|fishing||||||TBD|
+|Observation PGHD Codes|fitnessGaming|fitnessGaming||||||TBD|
+|Observation PGHD Codes|flexibility|flexibility||||||TBD|
+|Observation PGHD Codes|functionalStrengthTraining|functionalStrengthTraining||||||TBD|
+|Observation PGHD Codes|golf|golf|GOLF|||||TBD|
+|Observation PGHD Codes|gymnastics|gymnastics|GYMNASTICS|||||TBD|
+|Observation PGHD Codes|handball|handball|HANDBALL|||||TBD|
+|Observation PGHD Codes|handCycling|handCycling||||||TBD|
+|Observation PGHD Codes|highIntensityIntervalTraining|highIntensityIntervalTraining|HIGH_INTENSITY_INTERVAL_TRAINING|||||TBD|
+|Observation PGHD Codes|hiking|hiking|HIKING|||||TBD|
+|Observation PGHD Codes|hockey|hockey||||||TBD|
+|Observation PGHD Codes|hunting|hunting||||||TBD|
+|Observation PGHD Codes|jumpRope|jumpRope|JUMP_ROPE|||||TBD|
+|Observation PGHD Codes|kickboxing|kickboxing||||||TBD|
+|Observation PGHD Codes|lacrosse|lacrosse||||||TBD|
+|Observation PGHD Codes|martialArts|martialArts|MARTIAL_ARTS|||||TBD|
+|Observation PGHD Codes|mindAndBody|mindAndBody||||||TBD|
+|Observation PGHD Codes|mixedCardio|mixedCardio||||||TBD|
+|Observation PGHD Codes|mixedMetabolicCardioTraining|mixedMetabolicCardioTraining||||||TBD|
+|Observation PGHD Codes|other|other||||||TBD|
+|Observation PGHD Codes|paddleSports|paddleSports|PADDLING|||||TBD|
+|Observation PGHD Codes|pickleball|pickleball||||||TBD|
+|Observation PGHD Codes|pilates|pilates|PILATES|||||TBD|
+|Observation PGHD Codes|play|play||||||TBD|
+|Observation PGHD Codes|preparationAndRecovery|preparationAndRecovery||||||TBD|
+|Observation PGHD Codes|racquetball|racquetball|RACQUETBALL|||||TBD|
+|Observation PGHD Codes|rowing|rowing|ROWING|||||TBD|
+|Observation PGHD Codes|rugby|rugby|RUGBY|||||TBD|
+|Observation PGHD Codes|running|running|RUNNING|||||TBD|
+|Observation PGHD Codes|sailing|sailing|SAILING|||||TBD|
+|Observation PGHD Codes|skatingSports|skatingSports|SKATING|||||TBD|
+|Observation PGHD Codes|snowboarding|snowboarding|SNOWBOARDING|||||TBD|
+|Observation PGHD Codes|snowSports|snowSports||||||TBD|
+|Observation PGHD Codes|soccer|soccer|SOCCER|||||TBD|
+|Observation PGHD Codes|socialDance|socialDance||||||TBD|
+|Observation PGHD Codes|softball|softball|SOFTBALL|||||TBD|
+|Observation PGHD Codes|squash|squash|SQUASH|||||TBD|
+|Observation PGHD Codes|stairClimbing|stairClimbing|STAIR_CLIMBING|||||TBD|
+|Observation PGHD Codes|stairs|stairs||||||TBD|
+|Observation PGHD Codes|stepTraining|stepTraining||||||TBD|
+|Observation PGHD Codes|surfingSports|surfingSports|SURFING|||||TBD|
+|Observation PGHD Codes|swimBikeRun|swimBikeRun||||||TBD|
+|Observation PGHD Codes|swimming|swimming||||||TBD|
+|Observation PGHD Codes|tableTennis|tableTennis|TABLE_TENNIS|||||TBD|
+|Observation PGHD Codes|taiChi|taiChi||||||TBD|
+|Observation PGHD Codes|tennis|tennis|TENNIS|||||TBD|
+|Observation PGHD Codes|trackAndField|trackAndField||||||TBD|
+|Observation PGHD Codes|traditionalStrengthTraining|traditionalStrengthTraining||||||TBD|
+|Observation PGHD Codes|transition|transition||||||TBD|
+|Observation PGHD Codes|underwaterDiving|underwaterDiving||||||TBD|
+|Observation PGHD Codes|volleyball|volleyball|VOLLEYBALL|||||TBD|
+|Observation PGHD Codes|walking|walking|WALKING|||||TBD|
+|Observation PGHD Codes|waterFitness|waterFitness||||||TBD|
+|Observation PGHD Codes|waterPolo|waterPolo|WATER_POLO|||||TBD|
+|Observation PGHD Codes|waterSports|waterSports||||||TBD|
+|Observation PGHD Codes|wheelchairRunPace|wheelchairRunPace||||||TBD|
+|Observation PGHD Codes|wheelchairWalkPace|wheelchairWalkPace||||||TBD|
+|Observation PGHD Codes|wrestling|wrestling||||||TBD|
+|Observation PGHD Codes|yoga|yoga|YOGA|||||TBD|
+|Observation PGHD Codes|armCurl||ARM_CURL|||||TBD|
+|Observation PGHD Codes|backExtension||BACK_EXTENSION|||||TBD|
+|Observation PGHD Codes|ballSlam||BALL_SLAM|||||TBD|
+|Observation PGHD Codes|barbellShoulderPress||BARBELL_SHOULDER_PRESS|||||TBD|
+|Observation PGHD Codes|benchPress||BENCH_PRESS|||||TBD|
+|Observation PGHD Codes|benchSitUp||BENCH_SIT_UP|||||TBD|
+|Observation PGHD Codes|biking||BIKING|||||TBD|
+|Observation PGHD Codes|bikingStationary||BIKING_STATIONARY|||||TBD|
+|Observation PGHD Codes|bootCamp||BOOT_CAMP|||||TBD|
+|Observation PGHD Codes|burpee||BURPEE|||||TBD|
+|Observation PGHD Codes|calisthenics||CALISTHENICS|||||TBD|
+|Observation PGHD Codes|crunch||CRUNCH|||||TBD|
+|Observation PGHD Codes|deadlift||DEADLIFT|||||TBD|
+|Observation PGHD Codes|doubleArmTricepsExtension||DOUBLE_ARM_TRICEPS_EXTENSION|||||TBD|
+|Observation PGHD Codes|dumbbellCurlLeftArm||DUMBBELL_CURL_LEFT_ARM|||||TBD|
+|Observation PGHD Codes|dumbbellCurlRightArm||DUMBBELL_CURL_RIGHT_ARM|||||TBD|
+|Observation PGHD Codes|dumbbellFrontRaise||DUMBBELL_FRONT_RAISE|||||TBD|
+|Observation PGHD Codes|dumbbellLateralRaise||DUMBBELL_LATERAL_RAISE|||||TBD|
+|Observation PGHD Codes|dumbbellRow||DUMBBELL_ROW|||||TBD|
+|Observation PGHD Codes|dumbbellTricepsExtensionLeftArm||DUMBBELL_TRICEPS_EXTENSION_LEFT_ARM|||||TBD|
+|Observation PGHD Codes|dumbbellTricepsExtensionRightArm||DUMBBELL_TRICEPS_EXTENSION_RIGHT_ARM|||||TBD|
+|Observation PGHD Codes|dumbbellTricepsExtensionTwoArm||DUMBBELL_TRICEPS_EXTENSION_TWO_ARM|||||TBD|
+|Observation PGHD Codes|exerciseClass||EXERCISE_CLASS|||||TBD|
+|Observation PGHD Codes|forwardTwist||FORWARD_TWIST|||||TBD|
+|Observation PGHD Codes|frontRaise||FRONT_RAISE|||||TBD|
+|Observation PGHD Codes|hipThrust||HIP_THRUST|||||TBD|
+|Observation PGHD Codes|hulaHoop||HULA_HOOP|||||TBD|
+|Observation PGHD Codes|frisbeeDisc||FRISBEE_DISC|||||TBD|
+|Observation PGHD Codes|guidedBreathing||GUIDED_BREATHING|||||TBD|
+|Observation PGHD Codes|iceHockey||ICE_HOCKEY|||||TBD|
+|Observation PGHD Codes|iceSkating||ICE_SKATING|||||TBD|
+|Observation PGHD Codes|jumpingJack||JUMPING_JACK|||||TBD|
+|Observation PGHD Codes|kettlebellSwing||KETTLEBELL_SWING|||||TBD|
+|Observation PGHD Codes|lateralRaise||LATERAL_RAISE|||||TBD|
+|Observation PGHD Codes|latPullDown||LAT_PULL_DOWN|||||TBD|
+|Observation PGHD Codes|legCurl||LEG_CURL|||||TBD|
+|Observation PGHD Codes|legExtension||LEG_EXTENSION|||||TBD|
+|Observation PGHD Codes|legPress||LEG_PRESS|||||TBD|
+|Observation PGHD Codes|legRaise||LEG_RAISE|||||TBD|
+|Observation PGHD Codes|lunge||LUNGE|||||TBD|
+|Observation PGHD Codes|mountainClimber||MOUNTAIN_CLIMBER|||||TBD|
+|Observation PGHD Codes|otherWorkout||OTHER_WORKOUT|||||TBD|
+|Observation PGHD Codes|pause||PAUSE|||||TBD|
+|Observation PGHD Codes|meditation||MEDITATION|||||TBD|
+|Observation PGHD Codes|paraGliding||PARAGLIDING|||||TBD|
+|Observation PGHD Codes|plank||PLANK|||||TBD|
+|Observation PGHD Codes|pullUp||PULL_UP|||||TBD|
+|Observation PGHD Codes|punch||PUNCH|||||TBD|
+|Observation PGHD Codes|rest||REST|||||TBD|
+|Observation PGHD Codes|rockClimbing||ROCK_CLIMBING|||||TBD|
+|Observation PGHD Codes|rollerHockey||ROLLER_HOCKEY|||||TBD|
+|Observation PGHD Codes|rowingMachine||ROWING_MACHINE|||||TBD|
+|Observation PGHD Codes|runningTreadmill||RUNNING_TREADMILL|||||TBD|
+|Observation PGHD Codes|shoulderPress||SHOULDER_PRESS|||||TBD|
+|Observation PGHD Codes|singleArmTricepsExtension||SINGLE_ARM_TRICEPS_EXTENSION|||||TBD|
+|Observation PGHD Codes|sitUp||SIT_UP|||||TBD|
+|Observation PGHD Codes|scubaDiving||SCUBA_DIVING|||||TBD|
+|Observation PGHD Codes|skiing||SKIING|||||TBD|
+|Observation PGHD Codes|snowshoeing||SNOWSHOEING|||||TBD|
+|Observation PGHD Codes|squat||SQUAT|||||TBD|
+|Observation PGHD Codes|stairClimbingMachine||STAIR_CLIMBING_MACHINE|||||TBD|
+|Observation PGHD Codes|strengthTraining||STRENGTH_TRAINING|||||TBD|
+|Observation PGHD Codes|stretching||STRETCHING|||||TBD|
+|Observation PGHD Codes|swimmingBackstroke||SWIMMING_BACKSTROKE|||||TBD|
+|Observation PGHD Codes|swimmingBreaststroke||SWIMMING_BREASTSTROKE|||||TBD|
+|Observation PGHD Codes|swimmingButterfly||SWIMMING_BUTTERFLY|||||TBD|
+|Observation PGHD Codes|swimmingFreestyle||SWIMMING_FREESTYLE|||||TBD|
+|Observation PGHD Codes|swimmingMixed||SWIMMING_MIXED|||||TBD|
+|Observation PGHD Codes|swimmingOpenWater||SWIMMING_OPEN_WATER|||||TBD|
+|Observation PGHD Codes|swimmingOther||SWIMMING_OTHER|||||TBD|
+|Observation PGHD Codes|swimmingPool||SWIMMING_POOL|||||TBD|
+|Observation PGHD Codes|upperTwist||UPPER_TWIST|||||TBD|
+|Observation PGHD Codes|weightlifting||WEIGHTLIFTING|||||TBD|
+|Observation PGHD Codes|wheelchair||WHEELCHAIR|||||TBD|
+|Observation PGHD Codes|workout||WORKOUT|||||TBD|
+|Observation PGHD Codes|hearingSensitivity|||||||TBD|
+|Observation PGHD Codes|food|food||||||TBD|
+|Observation PGHD Codes|medicationAdherence|||||||TBD|
+|Observation PGHD Codes|stateOfMind||||||LOINC|In Progress|
+|Observation PGHD Codes|gad7|||||||TBD|
+|Observation PGHD Codes|phq9|||||||TBD|
+|Appetite Changes Codes|increased|increased||||||TBD|
+|Appetite Changes Codes|decreased|decreased||||||TBD|
+|Appetite Changes Codes|unspecified|unspecified||||||TBD|
+|Appetite Changes Codes|noChange|noChange||||||TBD|
+|Body Posture Codes|sitting||BODY_POSITION_SITTING_DOWN|||||TBD|
+|Body Posture Codes|standing||BODY_POSITION_STANDING_UP|||||TBD|
+|Body Posture Codes|lyingDown||BODY_POSITION_LYING_DOWN|||||TBD|
+|Body Posture Codes|supine|||||||TBD|
+|Body Posture Codes|prone|||||||TBD|
+|Body Posture Codes|recumbent|||||||TBD|
+|Body Posture Codes|semiRecumbent||BODY_POSITION_RECLINING|||||TBD|
+|Body Temperature Measurement Location Codes|other|other||||||TBD|
+|Body Temperature Measurement Location Codes|armpit|armpit|MEASUREMENT_LOCATION_ARMPIT|||||TBD|
+|Body Temperature Measurement Location Codes|body|body||||||TBD|
+|Body Temperature Measurement Location Codes|ear|ear|MEASUREMENT_LOCATION_EAR|||||TBD|
+|Body Temperature Measurement Location Codes|finger|finger|MEASUREMENT_LOCATION_FINGER|||||TBD|
+|Body Temperature Measurement Location Codes|gastroIntestinal|gastroIntestinal||||||TBD|
+|Body Temperature Measurement Location Codes|mouth|mouth|MEASUREMENT_LOCATION_MOUTH|||||TBD|
+|Body Temperature Measurement Location Codes|rectum|rectum|MEASUREMENT_LOCATION_RECTUM|||||TBD|
+|Body Temperature Measurement Location Codes|toe|toe|MEASUREMENT_LOCATION_TOE|||||TBD|
+|Body Temperature Measurement Location Codes|earDrum|earDrum||||||TBD|
+|Body Temperature Measurement Location Codes|temporalArtery|temporalArtery|MEASUREMENT_LOCATION_TEMPORAL_ARTERY|||||TBD|
+|Body Temperature Measurement Location Codes|forehead|forehead|MEASUREMENT_LOCATION_FOREHEAD|||||TBD|
+|Body Temperature Measurement Location Codes|vagina||MEASUREMENT_LOCATION_VAGINA|||||TBD|
+|Body Temperature Measurement Location Codes|wrist||MEASUREMENT_LOCATION_WRIST|||||TBD|
+|ECG Classification Codes|sinusRhythm|sinusRhythm||||||TBD|
+|ECG Classification Codes|atrialFibrillation|atrialFibrillation||||||TBD|
+|ECG Classification Codes|inconclusiveHighHeartRate|inconclusiveHighHeartRate||||||TBD|
+|ECG Classification Codes|inconclusiveLowHeartRate|inconclusiveLowHeartRate||||||TBD|
+|ECG Classification Codes|inconclusivePoorReading|inconclusivePoorReading||||||TBD|
+|ECG Classification Codes|inconclusiveOther|inconclusiveOther||||||TBD|
+|ECG Classification Codes|unrecognized|unrecognized||||||TBD|
+|ECG Classification Codes|notSet|notSet||||||TBD|
+|ECG Lead Codes|appleWatchSimilarToLeadI|appleWatchSimilarToLeadI||-|-||PHR-IG (PGHD)|Mapped|
+|ECG Lead Codes|I|||||||TBD|
+|ECG Lead Codes|II|||||||TBD|
+|ECG Lead Codes|III|||||||TBD|
+|ECG Lead Codes|aVR|||||||TBD|
+|ECG Lead Codes|aVL|||||||TBD|
+|ECG Lead Codes|aVF|||||||TBD|
+|ECG Lead Codes|V1|||||||TBD|
+|ECG Lead Codes|V2|||||||TBD|
+|ECG Lead Codes|V3|||||||TBD|
+|ECG Lead Codes|V4|||||||TBD|
+|ECG Lead Codes|V5|||||||TBD|
+|ECG Lead Codes|V6|||||||TBD|
+|ECG Symptoms Status Codes|none|none||||||TBD|
+|ECG Symptoms Status Codes|present|present||||||TBD|
+|ECG Symptoms Status Codes|notSet|notSet||||||TBD|
+|GAD-7 Assessment Risk Codes|noneToMinimal|noneToMinimal||||||TBD|
+|GAD-7 Assessment Risk Codes|mild|mild||||||TBD|
+|GAD-7 Assessment Risk Codes|moderate|moderate||||||TBD|
+|GAD-7 Assessment Risk Codes|severe|severe||||||TBD|
+|PHQ-9 Assessment Risk Codes|noneToMinimal|noneToMinimal||||||TBD|
+|PHQ-9 Assessment Risk Codes|mild|mild||||||TBD|
+|PHQ-9 Assessment Risk Codes|moderate|moderate||||||TBD|
+|PHQ-9 Assessment Risk Codes|moderatelySevere|moderatelySevere||||||TBD|
+|PHQ-9 Assessment Risk Codes|severe|severe||||||TBD|
+|Sleep Analysis Codes|inBed|inBed||||||TBD|
+|Sleep Analysis Codes|asleepUnspecified|||||||TBD|
+|Sleep Analysis Codes|awake|awake|STAGE_TYPE_AWAKE|||||TBD|
+|Sleep Analysis Codes|asleepREM|asleepREM|STAGE_TYPE_SLEEPING_REM|||||TBD|
+|Sleep Analysis Codes|asleepCore|asleepCore|STAGE_TYPE_SLEEPING_LIGHT|||||TBD|
+|Sleep Analysis Codes|asleepDeep|asleepDeep|STAGE_TYPE_SLEEPING_DEEP|||||TBD|
+|State of Mind Association Codes|community|community||||||TBD|
+|State of Mind Association Codes|currentEvents|currentEvents||||||TBD|
+|State of Mind Association Codes|dating|dating||||||TBD|
+|State of Mind Association Codes|education|education||||||TBD|
+|State of Mind Association Codes|family|family||||||TBD|
+|State of Mind Association Codes|fitness|fitness||||||TBD|
+|State of Mind Association Codes|friends|friends||||||TBD|
+|State of Mind Association Codes|health|health||||||TBD|
+|State of Mind Association Codes|hobbies|hobbies||||||TBD|
+|State of Mind Association Codes|identity|identity||||||TBD|
+|State of Mind Association Codes|money|money||||||TBD|
+|State of Mind Association Codes|partner|partner||||||TBD|
+|State of Mind Association Codes|selfCare|selfCare||||||TBD|
+|State of Mind Association Codes|spirituality|spirituality||||||TBD|
+|State of Mind Association Codes|tasks|tasks||||||TBD|
+|State of Mind Association Codes|travel|travel||||||TBD|
+|State of Mind Association Codes|weather|weather||||||TBD|
+|State of Mind Association Codes|work|work||||||TBD|
+|State of Mind Kind Codes|dailyMood|dailyMood||||||TBD|
+|State of Mind Kind Codes|momentaryEmotion|momentaryEmotion||||||TBD|
+|State of Mind Label Codes|amazed|amazed||||||TBD|
+|State of Mind Label Codes|amused|amused||||||TBD|
+|State of Mind Label Codes|angry|angry||||||TBD|
+|State of Mind Label Codes|annoyed|annoyed||||||TBD|
+|State of Mind Label Codes|anxious|anxious||||||TBD|
+|State of Mind Label Codes|ashamed|ashamed||||||TBD|
+|State of Mind Label Codes|brave|brave||||||TBD|
+|State of Mind Label Codes|calm|calm||||||TBD|
+|State of Mind Label Codes|confident|confident||||||TBD|
+|State of Mind Label Codes|content|content||||||TBD|
+|State of Mind Label Codes|disappointed|disappointed||||||TBD|
+|State of Mind Label Codes|discouraged|discouraged||||||TBD|
+|State of Mind Label Codes|disgusted|disgusted||||||TBD|
+|State of Mind Label Codes|drained|drained||||||TBD|
+|State of Mind Label Codes|embarrassed|embarrassed||||||TBD|
+|State of Mind Label Codes|excited|excited||||||TBD|
+|State of Mind Label Codes|frustrated|frustrated||||||TBD|
+|State of Mind Label Codes|grateful|grateful||||||TBD|
+|State of Mind Label Codes|guilty|guilty||||||TBD|
+|State of Mind Label Codes|happy|happy||||||TBD|
+|State of Mind Label Codes|hopeful|hopeful||||||TBD|
+|State of Mind Label Codes|hopeless|hopeless||||||TBD|
+|State of Mind Label Codes|indifferent|indifferent||||||TBD|
+|State of Mind Label Codes|irritated|irritated||||||TBD|
+|State of Mind Label Codes|jealous|jealous||||||TBD|
+|State of Mind Label Codes|joyful|joyful||||||TBD|
+|State of Mind Label Codes|lonely|lonely||||||TBD|
+|State of Mind Label Codes|overwhelmed|overwhelmed||||||TBD|
+|State of Mind Label Codes|passionate|passionate||||||TBD|
+|State of Mind Label Codes|peaceful|peaceful||||||TBD|
+|State of Mind Label Codes|proud|proud||||||TBD|
+|State of Mind Label Codes|relieved|relieved||||||TBD|
+|State of Mind Label Codes|sad|sad||||||TBD|
+|State of Mind Label Codes|satisfied|satisfied||||||TBD|
+|State of Mind Label Codes|scared|scared||||||TBD|
+|State of Mind Label Codes|stressed|stressed||||||TBD|
+|State of Mind Label Codes|surprised|surprised||||||TBD|
+|State of Mind Label Codes|worried|worried||||||TBD|
+|State of Mind Valence Codes|veryUnpleasant|veryUnpleasant||||||TBD|
+|State of Mind Valence Codes|unpleasant|unpleasant||||||TBD|
+|State of Mind Valence Codes|slightlyUnpleasant|slightlyUnpleasant||||||TBD|
+|State of Mind Valence Codes|neutral|neutral||||||TBD|
+|State of Mind Valence Codes|slightlyPleasant|slightlyPleasant||||||TBD|
+|State of Mind Valence Codes|pleasant|pleasant||||||TBD|
+|State of Mind Valence Codes|veryPleasant|veryPleasant||||||TBD|
+|Symptom Presence Codes|present|present||||||TBD|
+|Symptom Presence Codes|notPresent|notPresent||||||TBD|
+|Symptom Severity Codes|severe|severe||||||TBD|
+|Symptom Severity Codes|mild|mild||||||TBD|
+|Symptom Severity Codes|moderate|moderate||||||TBD|
+|Symptom Severity Codes|unspecified|unspecified||||||TBD|
+|Symptom Severity Codes|notPresent|notPresent||||||TBD|</p>
+
+<h3 id="mapping-status">Mapping status</h3>
+
+<ul>
+  <li><strong>Mapped</strong>: The mapping treatment is confirmed.</li>
+  <li><strong>In Progress</strong>: The mapping is under submission or review.</li>
+  <li><strong>TBD</strong>: The mapping has not yet been confirmed.</li>
+</ul>
+
+<h3 id="open-items">Open items</h3>
+
+<p>The following codes are tracked here so that the mapping work can be managed using this document alone. Codes marked as <code class="language-plaintext highlighter-rouge">Not yet listed</code> are present in the LOINC submission workbook but have not yet been added to the main PHR Code Mapping Table.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Code system</th>
       <th>Code value</th>
-      <th>HealthKit (iOS26)</th>
-      <th>Health Connect (Android16)</th>
-      <th>LOINC</th>
-      <th>SNOMED CT</th>
+      <th>Source-system code</th>
+      <th>Table status</th>
+      <th>Mapping target</th>
+      <th>Mapping status</th>
+      <th>Submission status</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Observation PGHD Codes</td>
-      <td>activeEnergyBurned</td>
-      <td>activeEnergyBurned</td>
-      <td>ActiveCaloriesBurnedRecord</td>
-      <td> </td>
-      <td> </td>
+      <td>cyclingFunctionalThresholdPower</td>
+      <td>HKQuantityTypeIdentifierCyclingFunctionalThresholdPower</td>
+      <td>Not yet listed</td>
+      <td>LOINC</td>
+      <td>In Progress</td>
+      <td>Submitted</td>
+      <td>Keep as an open item; do not add to the main table at this stage.</td>
     </tr>
     <tr>
-      <td>Observation PGHD Codes</td>
-      <td>basalEnergyBurned</td>
-      <td>basalEnergyBurned</td>
-      <td>BasalMetabolicRateRecord</td>
-      <td> </td>
-      <td> </td>
+      <td>environmentalSoundReduction</td>
+      <td>HKQuantityTypeIdentifierEnvironmentalSoundReduction</td>
+      <td>Not yet listed</td>
+      <td>LOINC</td>
+      <td>In Progress</td>
+      <td>Submitted</td>
+      <td>Keep as an open item; do not add to the main table at this stage.</td>
     </tr>
     <tr>
-      <td>Observation PGHD Codes</td>
-      <td>cyclingPedalingCadence</td>
-      <td> </td>
-      <td>CyclingPedalingCadenceRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>distance</td>
-      <td> </td>
-      <td>DistanceRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>elevationGained</td>
-      <td> </td>
-      <td>ElevationGainedRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>flightsClimbed</td>
-      <td>flightsClimbed</td>
-      <td>FloorsClimbedRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>totalEnergyBurned</td>
-      <td> </td>
-      <td>TotalCaloriesBurnedRecord</td>
-      <td>41981-2</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>appleExerciseTime</td>
-      <td>appleExerciseTime</td>
-      <td> </td>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>appleMoveTime</td>
-      <td>appleMoveTime</td>
-      <td> </td>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>appleStandHour</td>
-      <td>appleStandHour</td>
-      <td> </td>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>appleStandTime</td>
-      <td>appleStandTime</td>
-      <td> </td>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>distanceCycling</td>
-      <td>distanceCycling</td>
-      <td> </td>
-      <td>93818-3</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>distanceDownhillSnowSports</td>
-      <td>distanceDownhillSnowSports</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>distanceSwimming</td>
-      <td>distanceSwimming</td>
-      <td> </td>
-      <td>93816-7</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>distanceWalkingRunning</td>
-      <td>distanceWalkingRunning</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>distanceWheelchair</td>
-      <td>distanceWheelchair</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>lowCardioFitnessEvent</td>
-      <td>lowCardioFitnessEvent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>nikeFuel</td>
-      <td>nikeFuel</td>
-      <td> </td>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>physicalEffort</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>power</td>
-      <td> </td>
-      <td>PowerRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
       <td>pushCount</td>
-      <td>pushCount</td>
-      <td>WheelchairPushesRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>runningGroundContactTime</td>
-      <td>runningGroundContactTime</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>runningPower</td>
-      <td>runningPower</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>runningSpeed</td>
-      <td>runningSpeed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>runningStrideLength</td>
-      <td>runningStrideLength</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>runningVerticalOscillation</td>
-      <td>runningVerticalOscillation</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>stepsCadence</td>
-      <td> </td>
-      <td>StepsCadenceRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>stepCount</td>
-      <td>stepCount</td>
-      <td>StepsRecord</td>
-      <td>55423-8</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>speed</td>
-      <td> </td>
-      <td>SpeedRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>swimmingStrokeCount</td>
-      <td>swimmingStrokeCount</td>
-      <td>SwimmingStrokesRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>vo2Max</td>
-      <td>vo2Max</td>
-      <td>Vo2MaxRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>pace</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>moderateActivity</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>vigorousActivity</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>moderateToVigorousActivity</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>met</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>metByStandardRmr</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>crossCountrySkiingSpeed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>distanceCrossCountrySkiing</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>paddleSportsSpeed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>distancePaddleSports</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>rowingSpeed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>distanceRowing</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>distanceSkatingSports</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>estimatedWorkoutEffortScore</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>workoutEffortScore</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bloodAlcoholContent</td>
-      <td>bloodAlcoholContent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>numberOfAlcoholicBeverages</td>
-      <td>numberOfAlcoholicBeverages</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>appleSleepingWristTemperature</td>
-      <td>appleSleepingWristTemperature</td>
-      <td> </td>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bodyFatPercentage</td>
-      <td>bodyFatPercentage</td>
-      <td>BodyFatRecord</td>
-      <td>41982-0</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bodyMass</td>
-      <td>bodyMass</td>
-      <td>WeightRecord</td>
-      <td>29463-7</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bodyMassIndex</td>
-      <td>bodyMassIndex</td>
-      <td> </td>
-      <td>39156-5</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>height</td>
-      <td>height</td>
-      <td>HeightRecord</td>
-      <td>8302-2</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>hipCircumference</td>
-      <td> </td>
-      <td>HipCircumferenceRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>leanBodyMass</td>
-      <td>leanBodyMass</td>
-      <td>LeanBodyMassRecord</td>
-      <td>91557-9</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>waistCircumference</td>
-      <td>waistCircumference</td>
-      <td>WaistCircumferenceRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>boneMass</td>
-      <td> </td>
-      <td>BoneMassRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>underwaterDepth</td>
-      <td>underwaterDepth</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>waterTemperature</td>
-      <td>waterTemperature</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>environmentalAudioExposure</td>
-      <td>environmentalAudioExposure</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>environmentalAudioExposureEvent</td>
-      <td>environmentalAudioExposureEvent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>headphoneAudioExposure</td>
-      <td>headphoneAudioExposure</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>headphoneAudioExposureEvent</td>
-      <td>headphoneAudioExposureEvent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>electrocardiogram</td>
-      <td>HKElectrocardiogramType</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>heartBeatSeries</td>
-      <td>HKDataTypeIdentifierHeartbeatSeries</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bloodGlucose</td>
-      <td>bloodGlucose</td>
-      <td>BloodGlucoseRecord</td>
-      <td>2339-0</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>electrodermalActivity</td>
-      <td>electrodermalActivity</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>forcedExpiratoryVolume1</td>
-      <td>forcedExpiratoryVolume1</td>
-      <td> </td>
-      <td>20150-9</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>forcedVitalCapacity</td>
-      <td>forcedVitalCapacity</td>
-      <td> </td>
-      <td>19870-5</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>inhalerUsage</td>
-      <td>inhalerUsage</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>insulinDelivery</td>
-      <td>insulinDelivery</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>numberOfTimesFallen</td>
-      <td>numberOfTimesFallen</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>peakExpiratoryFlowRate</td>
-      <td>peakExpiratoryFlowRate</td>
-      <td> </td>
-      <td>33452-4</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>peripheralPerfusionIndex</td>
-      <td>peripheralPerfusionIndex</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>timeInDaylight</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>inspiratoryTime</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>ventilationCycleTime</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>minuteVolume</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>breathCarbonMonoxide</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>mindfulSession</td>
-      <td>mindfulSession</td>
-      <td>MindfulnessSessionRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>sleepAnalysis</td>
-      <td>sleepAnalysis</td>
-      <td>SleepSessionRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>sleepEpisode</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>snoreIndex</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>snoreEvent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>sleepAHI</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>sleepArousalIndex</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>appleSleepingBreathingDisturbances</td>
-      <td> </td>
-      <td> </td>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>sleepApneaEvent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>appleWalkingSteadiness</td>
-      <td>appleWalkingSteadiness</td>
-      <td> </td>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>appleWalkingSteadinessEvent</td>
-      <td>appleWalkingSteadinessEvent</td>
-      <td> </td>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>sixMinuteWalkTestDistance</td>
-      <td>sixMinuteWalkTestDistance</td>
-      <td> </td>
-      <td>64098-7</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>walkingSpeed</td>
-      <td>walkingSpeed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>walkingStepLength</td>
-      <td>walkingStepLength</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>walkingAsymmetryPercentage</td>
-      <td>walkingAsymmetryPercentage</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>walkingDoubleSupportPercentage</td>
-      <td>walkingDoubleSupportPercentage</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>stairAscentSpeed</td>
-      <td>stairAscentSpeed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>stairDescentSpeed</td>
-      <td>stairDescentSpeed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryBiotin</td>
-      <td>dietaryBiotin</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryCaffeine</td>
-      <td>dietaryCaffeine</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryCalcium</td>
-      <td>dietaryCalcium</td>
-      <td> </td>
-      <td>9045-6</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryCarbohydrates</td>
-      <td>dietaryCarbohydrates</td>
-      <td> </td>
-      <td>9059-7</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryChloride</td>
-      <td>dietaryChloride</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryCholesterol</td>
-      <td>dietaryCholesterol</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryChromium</td>
-      <td>dietaryChromium</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryCopper</td>
-      <td>dietaryCopper</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryEnergyConsumed</td>
-      <td>dietaryEnergyConsumed</td>
-      <td> </td>
-      <td>9052-2</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryEnergyFromFat</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryFatMonounsaturated</td>
-      <td>dietaryFatMonounsaturated</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryFatPolyunsaturated</td>
-      <td>dietaryFatPolyunsaturated</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryFatUnsaturated</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryTransFat</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryFatSaturated</td>
-      <td>dietaryFatSaturated</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryFatTotal</td>
-      <td>dietaryFatTotal</td>
-      <td> </td>
-      <td>9066-2</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryFiber</td>
-      <td>dietaryFiber</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryFolateOrFolicAcid</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryFolate</td>
-      <td>dietaryFolate</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryFolicAcid</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryIodine</td>
-      <td>dietaryIodine</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryIron</td>
-      <td>dietaryIron</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryMagnesium</td>
-      <td>dietaryMagnesium</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryManganese</td>
-      <td>dietaryManganese</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryMolybdenum</td>
-      <td>dietaryMolybdenum</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryNiacin</td>
-      <td>dietaryNiacin</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryPantothenicAcid</td>
-      <td>dietaryPantothenicAcid</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryPhosphorus</td>
-      <td>dietaryPhosphorus</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryPotassium</td>
-      <td>dietaryPotassium</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryProtein</td>
-      <td>dietaryProtein</td>
-      <td> </td>
-      <td>9079-5</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryRiboflavin</td>
-      <td>dietaryRiboflavin</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietarySelenium</td>
-      <td>dietarySelenium</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietarySodium</td>
-      <td>dietarySodium</td>
-      <td> </td>
-      <td>9086-0</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietarySugar</td>
-      <td>dietarySugar</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryThiamin</td>
-      <td>dietaryThiamin</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryVitaminA</td>
-      <td>dietaryVitaminA</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryVitaminB12</td>
-      <td>dietaryVitaminB12</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryVitaminB6</td>
-      <td>dietaryVitaminB6</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryVitaminC</td>
-      <td>dietaryVitaminC</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryVitaminD</td>
-      <td>dietaryVitaminD</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryVitaminE</td>
-      <td>dietaryVitaminE</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryVitaminK</td>
-      <td>dietaryVitaminK</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryWater</td>
-      <td>dietaryWater</td>
-      <td>HydrationRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dietaryZinc</td>
-      <td>dietaryZinc</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>basalBodyTemperature</td>
-      <td>basalBodyTemperature</td>
-      <td>BasalBodyTemperatureRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>cervicalMucusQuality</td>
-      <td>cervicalMucusQuality</td>
-      <td>CervicalMucusRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>contraceptive</td>
-      <td>contraceptive</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>intermenstrualBleeding</td>
-      <td>intermenstrualBleeding</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>irregularMenstrualCycles</td>
-      <td>irregularMenstrualCycles</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>infrequentMenstrualCycles</td>
-      <td>infrequentMenstrualCycles</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>lactation</td>
-      <td>lactation</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>menstrualFlow</td>
-      <td>menstrualFlow</td>
-      <td>MenstruationFlowRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>menstrualPeriod</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>ovulationTestResult</td>
-      <td>ovulationTestResult</td>
-      <td>OvulationTestRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>persistentIntermenstrualBleeding</td>
-      <td>persistentIntermenstrualBleeding</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>pregnancy</td>
-      <td>pregnancy</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>pregnancyTestResult</td>
-      <td>pregnancyTestResult</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>progesteroneTestResult</td>
-      <td>progesteroneTestResult</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>prolongedMenstrualPeriods</td>
-      <td>prolongedMenstrualPeriods</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>sexualActivity</td>
-      <td>sexualActivity</td>
-      <td>SexualActivityRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bleedingAfterPregnancy</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bleedingDuringPregnancy</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>handwashingEvent</td>
-      <td>handwashingEvent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>toothbrushingEvent</td>
-      <td>toothbrushingEvent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>abdominalCramps</td>
-      <td>abdominalCramps</td>
-      <td> </td>
-      <td>-</td>
-      <td>51197009(*)</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>acne</td>
-      <td>acne</td>
-      <td> </td>
-      <td>-</td>
-      <td>403364000(*)</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>appetiteChanges</td>
-      <td>appetiteChanges</td>
-      <td> </td>
-      <td>-</td>
-      <td>249473004(*)</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bladderIncontinence</td>
-      <td>bladderIncontinence</td>
-      <td> </td>
-      <td>-</td>
-      <td>165232002</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bloating</td>
-      <td>bloating</td>
-      <td> </td>
-      <td>-</td>
-      <td>116289008</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>breastPain</td>
-      <td>breastPain</td>
-      <td> </td>
-      <td>-</td>
-      <td>53430007</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>chestTightnessOrPain</td>
-      <td>chestTightnessOrPain</td>
-      <td> </td>
-      <td>-</td>
-      <td>23924001</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>chills</td>
-      <td>chills</td>
-      <td> </td>
-      <td>-</td>
-      <td>43724002</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>constipation</td>
-      <td>constipation</td>
-      <td> </td>
-      <td>-</td>
-      <td>14760008</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>coughing</td>
-      <td>coughing</td>
-      <td> </td>
-      <td>-</td>
-      <td>49727002</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>diarrhea</td>
-      <td>diarrhea</td>
-      <td> </td>
-      <td>-</td>
-      <td>62315008</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dizziness</td>
-      <td>dizziness</td>
-      <td> </td>
-      <td>-</td>
-      <td>404640003</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>drySkin</td>
-      <td>drySkin</td>
-      <td> </td>
-      <td>-</td>
-      <td>106076001</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>fainting</td>
-      <td>fainting</td>
-      <td> </td>
-      <td>-</td>
-      <td>271594007</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>fatigue</td>
-      <td>fatigue</td>
-      <td> </td>
-      <td>-</td>
-      <td>84229001</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>fever</td>
-      <td>fever</td>
-      <td> </td>
-      <td>-</td>
-      <td>386661006</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>generalizedBodyAche</td>
-      <td>generalizedBodyAche</td>
-      <td> </td>
-      <td>-</td>
-      <td>22253000</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>hairLoss</td>
-      <td>hairLoss</td>
-      <td> </td>
-      <td>-</td>
-      <td>278040002(*)</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>headache</td>
-      <td>headache</td>
-      <td> </td>
-      <td>-</td>
-      <td>25064002</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>heartburn</td>
-      <td>heartburn</td>
-      <td> </td>
-      <td>-</td>
-      <td>16331000</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>hotFlashes</td>
-      <td>hotFlashes</td>
-      <td> </td>
-      <td>-</td>
-      <td>198436008</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>lossOfSmell</td>
-      <td>lossOfSmell</td>
-      <td> </td>
-      <td>-</td>
-      <td>44169009</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>lossOfTaste</td>
-      <td>lossOfTaste</td>
-      <td> </td>
-      <td>-</td>
-      <td>36955009(*)</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>lowerBackPain</td>
-      <td>lowerBackPain</td>
-      <td> </td>
-      <td>-</td>
-      <td>279039007</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>memoryLapse</td>
-      <td>memoryLapse</td>
-      <td> </td>
-      <td>-</td>
-      <td>225038006(*)</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>moodChanges</td>
-      <td>moodChanges</td>
-      <td> </td>
-      <td>-</td>
-      <td>106131003</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>nausea</td>
-      <td>nausea</td>
-      <td> </td>
-      <td>-</td>
-      <td>422587007</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>nightSweats</td>
-      <td>nightSweats</td>
-      <td> </td>
-      <td>-</td>
-      <td>42984000</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>pelvicPain</td>
-      <td>pelvicPain</td>
-      <td> </td>
-      <td>-</td>
-      <td>30473006</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>rapidPoundingOrFlutteringHeartbeat</td>
-      <td>rapidPoundingOrFlutteringHeartbeat</td>
-      <td> </td>
-      <td>-</td>
-      <td>80313002</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>runnyNose</td>
-      <td>runnyNose</td>
-      <td> </td>
-      <td>-</td>
-      <td>64531003</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>shortnessOfBreath</td>
-      <td>shortnessOfBreath</td>
-      <td> </td>
-      <td>-</td>
-      <td>267036007</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>sinusCongestion</td>
-      <td>sinusCongestion</td>
-      <td> </td>
-      <td>-</td>
-      <td>68235000</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>skippedHeartbeat</td>
-      <td>skippedHeartbeat</td>
-      <td> </td>
-      <td>-</td>
-      <td>80313002</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>sleepChanges</td>
-      <td>sleepChanges</td>
-      <td> </td>
-      <td>-</td>
-      <td>247950007(*)</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>soreThroat</td>
-      <td>soreThroat</td>
-      <td> </td>
-      <td>-</td>
-      <td>267102003</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>vaginalDryness</td>
-      <td>vaginalDryness</td>
-      <td> </td>
-      <td>-</td>
-      <td>31908003</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>vomiting</td>
-      <td>vomiting</td>
-      <td> </td>
-      <td>-</td>
-      <td>300359004</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>wheezing</td>
-      <td>wheezing</td>
-      <td> </td>
-      <td>-</td>
-      <td>56018004</td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>uvExposure</td>
-      <td>uvExposure</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>exerciseEvent</td>
-      <td> </td>
-      <td>ExerciseEventRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>exerciseLap</td>
-      <td> </td>
-      <td>ExerciseLapRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>exerciiseRepetitions</td>
-      <td> </td>
-      <td>ExerciseRepetitionsRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>workoutActivity</td>
-      <td> </td>
-      <td>ExerciseSessionRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>atrialFibrillationBurden</td>
-      <td>atrialFibrillationBurden</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bloodPressure</td>
-      <td>bloodPressure</td>
-      <td>BloodPressureRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bloodPressureDiastolic</td>
-      <td>bloodPressureDiastolic</td>
-      <td> </td>
-      <td>8462-4</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bloodPressureSystolic</td>
-      <td>bloodPressureSystolic</td>
-      <td> </td>
-      <td>8480-6</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bodyTemperature</td>
-      <td>bodyTemperature</td>
-      <td>BodyTemperatureRecord</td>
-      <td>8310-5</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>heartRate</td>
-      <td>heartRate</td>
-      <td>HeartRateRecord</td>
-      <td>8867-4</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>heartRateVariabilitySDNN</td>
-      <td>heartRateVariabilitySDNN</td>
-      <td> </td>
-      <td>80404-7</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>heartRateRecoveryOneMinute</td>
-      <td>heartRateRecoveryOneMinute</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>highHeartRateEvent</td>
-      <td>highHeartRateEvent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>irregularHeartRhythmEvent</td>
-      <td>irregularHeartRhythmEvent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>lowHeartRateEvent</td>
-      <td>lowHeartRateEvent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>oxygenSaturation</td>
-      <td>oxygenSaturation</td>
-      <td>OxygenSaturationRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>respiratoryRate</td>
-      <td>respiratoryRate</td>
-      <td>RespiratoryRateRecord</td>
-      <td>9279-1</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>restingHeartRate</td>
-      <td>restingHeartRate</td>
-      <td>RestingHeartRateRecord</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>walkingHeartRateAverage</td>
-      <td>walkingHeartRateAverage</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>rrInterval</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>americanFootball</td>
-      <td>americanFootball</td>
-      <td>FOOTBALL_AMERICAN</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>archery</td>
-      <td>archery</td>
-      <td>FOOTBALL_AUSTRALIAN</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>australianFootball</td>
-      <td>australianFootball</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>badminton</td>
-      <td>badminton</td>
-      <td>BADMINTON</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>barre</td>
-      <td>barre</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>baseball</td>
-      <td>baseball</td>
-      <td>BASEBALL</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>basketball</td>
-      <td>basketball</td>
-      <td>BASKETBALL</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bowling</td>
-      <td>bowling</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>boxing</td>
-      <td>boxing</td>
-      <td>BOXING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>cardioDance</td>
-      <td>cardioDance</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>climbing</td>
-      <td>climbing</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>cooldown</td>
-      <td>cooldown</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>coreTraining</td>
-      <td>coreTraining</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>cricket</td>
-      <td>cricket</td>
-      <td>CRICKET</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>crossCountrySkiing</td>
-      <td>crossCountrySkiing</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>crossTraining</td>
-      <td>crossTraining</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>curling</td>
-      <td>curling</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>cycling</td>
-      <td>cycling</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dance</td>
-      <td>dance</td>
-      <td>DANCING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>danceInspiredTraining</td>
-      <td>danceInspiredTraining</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>discSports</td>
-      <td>discSports</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>downhillSkiing</td>
-      <td>downhillSkiing</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>elliptical</td>
-      <td>elliptical</td>
-      <td>ELLIPTICAL</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>equestrianSports</td>
-      <td>equestrianSports</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>fencing</td>
-      <td>fencing</td>
-      <td>FENCING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>fishing</td>
-      <td>fishing</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>fitnessGaming</td>
-      <td>fitnessGaming</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>flexibility</td>
-      <td>flexibility</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>functionalStrengthTraining</td>
-      <td>functionalStrengthTraining</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>golf</td>
-      <td>golf</td>
-      <td>GOLF</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>gymnastics</td>
-      <td>gymnastics</td>
-      <td>GYMNASTICS</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>handball</td>
-      <td>handball</td>
-      <td>HANDBALL</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>handCycling</td>
-      <td>handCycling</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>highIntensityIntervalTraining</td>
-      <td>highIntensityIntervalTraining</td>
-      <td>HIGH_INTENSITY_INTERVAL_TRAINING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>hiking</td>
-      <td>hiking</td>
-      <td>HIKING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>hockey</td>
-      <td>hockey</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>hunting</td>
-      <td>hunting</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>jumpRope</td>
-      <td>jumpRope</td>
-      <td>JUMP_ROPE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>kickboxing</td>
-      <td>kickboxing</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>lacrosse</td>
-      <td>lacrosse</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>martialArts</td>
-      <td>martialArts</td>
-      <td>MARTIAL_ARTS</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>mindAndBody</td>
-      <td>mindAndBody</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>mixedCardio</td>
-      <td>mixedCardio</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>mixedMetabolicCardioTraining</td>
-      <td>mixedMetabolicCardioTraining</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>other</td>
-      <td>other</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>paddleSports</td>
-      <td>paddleSports</td>
-      <td>PADDLING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>pickleball</td>
-      <td>pickleball</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>pilates</td>
-      <td>pilates</td>
-      <td>PILATES</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>play</td>
-      <td>play</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>preparationAndRecovery</td>
-      <td>preparationAndRecovery</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>racquetball</td>
-      <td>racquetball</td>
-      <td>RACQUETBALL</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>rowing</td>
-      <td>rowing</td>
-      <td>ROWING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>rugby</td>
-      <td>rugby</td>
-      <td>RUGBY</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>running</td>
-      <td>running</td>
-      <td>RUNNING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>sailing</td>
-      <td>sailing</td>
-      <td>SAILING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>skatingSports</td>
-      <td>skatingSports</td>
-      <td>SKATING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>snowboarding</td>
-      <td>snowboarding</td>
-      <td>SNOWBOARDING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>snowSports</td>
-      <td>snowSports</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>soccer</td>
-      <td>soccer</td>
-      <td>SOCCER</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>socialDance</td>
-      <td>socialDance</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>softball</td>
-      <td>softball</td>
-      <td>SOFTBALL</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>squash</td>
-      <td>squash</td>
-      <td>SQUASH</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>stairClimbing</td>
-      <td>stairClimbing</td>
-      <td>STAIR_CLIMBING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>stairs</td>
-      <td>stairs</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>stepTraining</td>
-      <td>stepTraining</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>surfingSports</td>
-      <td>surfingSports</td>
-      <td>SURFING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>swimBikeRun</td>
-      <td>swimBikeRun</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>swimming</td>
-      <td>swimming</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>tableTennis</td>
-      <td>tableTennis</td>
-      <td>TABLE_TENNIS</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>taiChi</td>
-      <td>taiChi</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>tennis</td>
-      <td>tennis</td>
-      <td>TENNIS</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>trackAndField</td>
-      <td>trackAndField</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>traditionalStrengthTraining</td>
-      <td>traditionalStrengthTraining</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>transition</td>
-      <td>transition</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>underwaterDiving</td>
-      <td>underwaterDiving</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>volleyball</td>
-      <td>volleyball</td>
-      <td>VOLLEYBALL</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>walking</td>
-      <td>walking</td>
-      <td>WALKING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>waterFitness</td>
-      <td>waterFitness</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>waterPolo</td>
-      <td>waterPolo</td>
-      <td>WATER_POLO</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>waterSports</td>
-      <td>waterSports</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>wheelchairRunPace</td>
-      <td>wheelchairRunPace</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>wheelchairWalkPace</td>
-      <td>wheelchairWalkPace</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>wrestling</td>
-      <td>wrestling</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>yoga</td>
-      <td>yoga</td>
-      <td>YOGA</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>armCurl</td>
-      <td> </td>
-      <td>ARM_CURL</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>backExtension</td>
-      <td> </td>
-      <td>BACK_EXTENSION</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>ballSlam</td>
-      <td> </td>
-      <td>BALL_SLAM</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>barbellShoulderPress</td>
-      <td> </td>
-      <td>BARBELL_SHOULDER_PRESS</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>benchPress</td>
-      <td> </td>
-      <td>BENCH_PRESS</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>benchSitUp</td>
-      <td> </td>
-      <td>BENCH_SIT_UP</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>biking</td>
-      <td> </td>
-      <td>BIKING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bikingStationary</td>
-      <td> </td>
-      <td>BIKING_STATIONARY</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>bootCamp</td>
-      <td> </td>
-      <td>BOOT_CAMP</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>burpee</td>
-      <td> </td>
-      <td>BURPEE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>calisthenics</td>
-      <td> </td>
-      <td>CALISTHENICS</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>crunch</td>
-      <td> </td>
-      <td>CRUNCH</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>deadlift</td>
-      <td> </td>
-      <td>DEADLIFT</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>doubleArmTricepsExtension</td>
-      <td> </td>
-      <td>DOUBLE_ARM_TRICEPS_EXTENSION</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dumbbellCurlLeftArm</td>
-      <td> </td>
-      <td>DUMBBELL_CURL_LEFT_ARM</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dumbbellCurlRightArm</td>
-      <td> </td>
-      <td>DUMBBELL_CURL_RIGHT_ARM</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dumbbellFrontRaise</td>
-      <td> </td>
-      <td>DUMBBELL_FRONT_RAISE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dumbbellLateralRaise</td>
-      <td> </td>
-      <td>DUMBBELL_LATERAL_RAISE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dumbbellRow</td>
-      <td> </td>
-      <td>DUMBBELL_ROW</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dumbbellTricepsExtensionLeftArm</td>
-      <td> </td>
-      <td>DUMBBELL_TRICEPS_EXTENSION_LEFT_ARM</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dumbbellTricepsExtensionRightArm</td>
-      <td> </td>
-      <td>DUMBBELL_TRICEPS_EXTENSION_RIGHT_ARM</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>dumbbellTricepsExtensionTwoArm</td>
-      <td> </td>
-      <td>DUMBBELL_TRICEPS_EXTENSION_TWO_ARM</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>exerciseClass</td>
-      <td> </td>
-      <td>EXERCISE_CLASS</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>forwardTwist</td>
-      <td> </td>
-      <td>FORWARD_TWIST</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>frontRaise</td>
-      <td> </td>
-      <td>FRONT_RAISE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>hipThrust</td>
-      <td> </td>
-      <td>HIP_THRUST</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>hulaHoop</td>
-      <td> </td>
-      <td>HULA_HOOP</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>frisbeeDisc</td>
-      <td> </td>
-      <td>FRISBEE_DISC</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>guidedBreathing</td>
-      <td> </td>
-      <td>GUIDED_BREATHING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>iceHockey</td>
-      <td> </td>
-      <td>ICE_HOCKEY</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>iceSkating</td>
-      <td> </td>
-      <td>ICE_SKATING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>jumpingJack</td>
-      <td> </td>
-      <td>JUMPING_JACK</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>kettlebellSwing</td>
-      <td> </td>
-      <td>KETTLEBELL_SWING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>lateralRaise</td>
-      <td> </td>
-      <td>LATERAL_RAISE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>latPullDown</td>
-      <td> </td>
-      <td>LAT_PULL_DOWN</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>legCurl</td>
-      <td> </td>
-      <td>LEG_CURL</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>legExtension</td>
-      <td> </td>
-      <td>LEG_EXTENSION</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>legPress</td>
-      <td> </td>
-      <td>LEG_PRESS</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>legRaise</td>
-      <td> </td>
-      <td>LEG_RAISE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>lunge</td>
-      <td> </td>
-      <td>LUNGE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>mountainClimber</td>
-      <td> </td>
-      <td>MOUNTAIN_CLIMBER</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>otherWorkout</td>
-      <td> </td>
-      <td>OTHER_WORKOUT</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>pause</td>
-      <td> </td>
-      <td>PAUSE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>meditation</td>
-      <td> </td>
-      <td>MEDITATION</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>paraGliding</td>
-      <td> </td>
-      <td>PARAGLIDING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>plank</td>
-      <td> </td>
-      <td>PLANK</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>pullUp</td>
-      <td> </td>
-      <td>PULL_UP</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>punch</td>
-      <td> </td>
-      <td>PUNCH</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>rest</td>
-      <td> </td>
-      <td>REST</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>rockClimbing</td>
-      <td> </td>
-      <td>ROCK_CLIMBING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>rollerHockey</td>
-      <td> </td>
-      <td>ROLLER_HOCKEY</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>rowingMachine</td>
-      <td> </td>
-      <td>ROWING_MACHINE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>runningTreadmill</td>
-      <td> </td>
-      <td>RUNNING_TREADMILL</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>shoulderPress</td>
-      <td> </td>
-      <td>SHOULDER_PRESS</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>singleArmTricepsExtension</td>
-      <td> </td>
-      <td>SINGLE_ARM_TRICEPS_EXTENSION</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>sitUp</td>
-      <td> </td>
-      <td>SIT_UP</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>scubaDiving</td>
-      <td> </td>
-      <td>SCUBA_DIVING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>skiing</td>
-      <td> </td>
-      <td>SKIING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>snowshoeing</td>
-      <td> </td>
-      <td>SNOWSHOEING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>squat</td>
-      <td> </td>
-      <td>SQUAT</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>stairClimbingMachine</td>
-      <td> </td>
-      <td>STAIR_CLIMBING_MACHINE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>strengthTraining</td>
-      <td> </td>
-      <td>STRENGTH_TRAINING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>stretching</td>
-      <td> </td>
-      <td>STRETCHING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>swimmingBackstroke</td>
-      <td> </td>
-      <td>SWIMMING_BACKSTROKE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>swimmingBreaststroke</td>
-      <td> </td>
-      <td>SWIMMING_BREASTSTROKE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>swimmingButterfly</td>
-      <td> </td>
-      <td>SWIMMING_BUTTERFLY</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>swimmingFreestyle</td>
-      <td> </td>
-      <td>SWIMMING_FREESTYLE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>swimmingMixed</td>
-      <td> </td>
-      <td>SWIMMING_MIXED</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>swimmingOpenWater</td>
-      <td> </td>
-      <td>SWIMMING_OPEN_WATER</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>swimmingOther</td>
-      <td> </td>
-      <td>SWIMMING_OTHER</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>swimmingPool</td>
-      <td> </td>
-      <td>SWIMMING_POOL</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>upperTwist</td>
-      <td> </td>
-      <td>UPPER_TWIST</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>weightlifting</td>
-      <td> </td>
-      <td>WEIGHTLIFTING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>wheelchair</td>
-      <td> </td>
-      <td>WHEELCHAIR</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>workout</td>
-      <td> </td>
-      <td>WORKOUT</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>hearingSensitivity</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>food</td>
-      <td>food</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>medicationAdherence</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>stateOfMind</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>gad7</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Observation PGHD Codes</td>
-      <td>phq9</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Appetite Changes Codes</td>
-      <td>increased</td>
-      <td>increased</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Appetite Changes Codes</td>
-      <td>decreased</td>
-      <td>decreased</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Appetite Changes Codes</td>
-      <td>unspecified</td>
-      <td>unspecified</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Appetite Changes Codes</td>
-      <td>noChange</td>
-      <td>noChange</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Posture Codes</td>
-      <td>sitting</td>
-      <td> </td>
-      <td>BODY_POSITION_SITTING_DOWN</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Posture Codes</td>
-      <td>standing</td>
-      <td> </td>
-      <td>BODY_POSITION_STANDING_UP</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Posture Codes</td>
-      <td>lyingDown</td>
-      <td> </td>
-      <td>BODY_POSITION_LYING_DOWN</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Posture Codes</td>
-      <td>supine</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Posture Codes</td>
-      <td>prone</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Posture Codes</td>
-      <td>recumbent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Posture Codes</td>
-      <td>semiRecumbent</td>
-      <td> </td>
-      <td>BODY_POSITION_RECLINING</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Temperature Measurement Location Codes</td>
-      <td>other</td>
-      <td>other</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Temperature Measurement Location Codes</td>
-      <td>armpit</td>
-      <td>armpit</td>
-      <td>MEASUREMENT_LOCATION_ARMPIT</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Temperature Measurement Location Codes</td>
-      <td>body</td>
-      <td>body</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Temperature Measurement Location Codes</td>
-      <td>ear</td>
-      <td>ear</td>
-      <td>MEASUREMENT_LOCATION_EAR</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Temperature Measurement Location Codes</td>
-      <td>finger</td>
-      <td>finger</td>
-      <td>MEASUREMENT_LOCATION_FINGER</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Temperature Measurement Location Codes</td>
-      <td>gastroIntestinal</td>
-      <td>gastroIntestinal</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Temperature Measurement Location Codes</td>
-      <td>mouth</td>
-      <td>mouth</td>
-      <td>MEASUREMENT_LOCATION_MOUTH</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Temperature Measurement Location Codes</td>
-      <td>rectum</td>
-      <td>rectum</td>
-      <td>MEASUREMENT_LOCATION_RECTUM</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Temperature Measurement Location Codes</td>
-      <td>toe</td>
-      <td>toe</td>
-      <td>MEASUREMENT_LOCATION_TOE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Temperature Measurement Location Codes</td>
-      <td>earDrum</td>
-      <td>earDrum</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Temperature Measurement Location Codes</td>
-      <td>temporalArtery</td>
-      <td>temporalArtery</td>
-      <td>MEASUREMENT_LOCATION_TEMPORAL_ARTERY</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Temperature Measurement Location Codes</td>
-      <td>forehead</td>
-      <td>forehead</td>
-      <td>MEASUREMENT_LOCATION_FOREHEAD</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Temperature Measurement Location Codes</td>
-      <td>vagina</td>
-      <td> </td>
-      <td>MEASUREMENT_LOCATION_VAGINA</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Body Temperature Measurement Location Codes</td>
-      <td>wrist</td>
-      <td> </td>
-      <td>MEASUREMENT_LOCATION_WRIST</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Classification Codes</td>
-      <td>sinusRhythm</td>
-      <td>sinusRhythm</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Classification Codes</td>
-      <td>atrialFibrillation</td>
-      <td>atrialFibrillation</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Classification Codes</td>
-      <td>inconclusiveHighHeartRate</td>
-      <td>inconclusiveHighHeartRate</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Classification Codes</td>
-      <td>inconclusiveLowHeartRate</td>
-      <td>inconclusiveLowHeartRate</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Classification Codes</td>
-      <td>inconclusivePoorReading</td>
-      <td>inconclusivePoorReading</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Classification Codes</td>
-      <td>inconclusiveOther</td>
-      <td>inconclusiveOther</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Classification Codes</td>
-      <td>unrecognized</td>
-      <td>unrecognized</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Classification Codes</td>
-      <td>notSet</td>
-      <td>notSet</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Lead Codes</td>
-      <td>appleWatchSimilarToLeadI</td>
-      <td>appleWatchSimilarToLeadI</td>
-      <td> </td>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>ECG Lead Codes</td>
-      <td>I</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Lead Codes</td>
-      <td>II</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Lead Codes</td>
-      <td>III</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Lead Codes</td>
-      <td>aVR</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Lead Codes</td>
-      <td>aVL</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Lead Codes</td>
-      <td>aVF</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Lead Codes</td>
-      <td>V1</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Lead Codes</td>
-      <td>V2</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Lead Codes</td>
-      <td>V3</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Lead Codes</td>
-      <td>V4</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Lead Codes</td>
-      <td>V5</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Lead Codes</td>
-      <td>V6</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Symptoms Status Codes</td>
-      <td>none</td>
-      <td>none</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Symptoms Status Codes</td>
-      <td>present</td>
-      <td>present</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>ECG Symptoms Status Codes</td>
-      <td>notSet</td>
-      <td>notSet</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>GAD-7 Assesment Risk Codes</td>
-      <td>noneToMinimal</td>
-      <td>noneToMinimal</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>GAD-7 Assesment Risk Codes</td>
-      <td>mild</td>
-      <td>mild</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>GAD-7 Assesment Risk Codes</td>
-      <td>moderate</td>
-      <td>moderate</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>GAD-7 Assesment Risk Codes</td>
-      <td>severe</td>
-      <td>severe</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>PHQ-9 Assesment Risk Codes</td>
-      <td>noneToMinimal</td>
-      <td>noneToMinimal</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>PHQ-9 Assesment Risk Codes</td>
-      <td>mild</td>
-      <td>mild</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>PHQ-9 Assesment Risk Codes</td>
-      <td>moderate</td>
-      <td>moderate</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>PHQ-9 Assesment Risk Codes</td>
-      <td>moderatelySevere</td>
-      <td>moderatelySevere</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>PHQ-9 Assesment Risk Codes</td>
-      <td>severe</td>
-      <td>severe</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Sleep Analysis Codes</td>
-      <td>inBed</td>
-      <td>inBed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Sleep Analysis Codes</td>
-      <td>asleepUnspecified</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Sleep Analysis Codes</td>
-      <td>awake</td>
-      <td>awake</td>
-      <td>STAGE_TYPE_AWAKE</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Sleep Analysis Codes</td>
-      <td>asleepREM</td>
-      <td>asleepREM</td>
-      <td>STAGE_TYPE_SLEEPING_REM</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Sleep Analysis Codes</td>
-      <td>asleepCore</td>
-      <td>asleepCore</td>
-      <td>STAGE_TYPE_SLEEPING_LIGHT</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Sleep Analysis Codes</td>
-      <td>asleepDeep</td>
-      <td>asleepDeep</td>
-      <td>STAGE_TYPE_SLEEPING_DEEP</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>community</td>
-      <td>community</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>currentEvents</td>
-      <td>currentEvents</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>dating</td>
-      <td>dating</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>education</td>
-      <td>education</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>family</td>
-      <td>family</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>fitness</td>
-      <td>fitness</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>friends</td>
-      <td>friends</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>health</td>
-      <td>health</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>hobbies</td>
-      <td>hobbies</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>identity</td>
-      <td>identity</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>money</td>
-      <td>money</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>partner</td>
-      <td>partner</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>selfCare</td>
-      <td>selfCare</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>spirituality</td>
-      <td>spirituality</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>tasks</td>
-      <td>tasks</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>travel</td>
-      <td>travel</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>weather</td>
-      <td>weather</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Association Codes</td>
-      <td>work</td>
-      <td>work</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Kind Codes</td>
-      <td>dailyMood</td>
-      <td>dailyMood</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Kind Codes</td>
-      <td>momentaryEmotion</td>
-      <td>momentaryEmotion</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>amazed</td>
-      <td>amazed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>amused</td>
-      <td>amused</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>angry</td>
-      <td>angry</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>annoyed</td>
-      <td>annoyed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>anxious</td>
-      <td>anxious</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>ashamed</td>
-      <td>ashamed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>brave</td>
-      <td>brave</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>calm</td>
-      <td>calm</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>confident</td>
-      <td>confident</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>content</td>
-      <td>content</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>disappointed</td>
-      <td>disappointed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>discouraged</td>
-      <td>discouraged</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>disgusted</td>
-      <td>disgusted</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>drained</td>
-      <td>drained</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>embarrassed</td>
-      <td>embarrassed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>excited</td>
-      <td>excited</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>frustrated</td>
-      <td>frustrated</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>grateful</td>
-      <td>grateful</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>guilty</td>
-      <td>guilty</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>happy</td>
-      <td>happy</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>hopeful</td>
-      <td>hopeful</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>hopeless</td>
-      <td>hopeless</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>indifferent</td>
-      <td>indifferent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>irritated</td>
-      <td>irritated</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>jealous</td>
-      <td>jealous</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>joyful</td>
-      <td>joyful</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>lonely</td>
-      <td>lonely</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>overwhelmed</td>
-      <td>overwhelmed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>passionate</td>
-      <td>passionate</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>peaceful</td>
-      <td>peaceful</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>proud</td>
-      <td>proud</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>relieved</td>
-      <td>relieved</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>sad</td>
-      <td>sad</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>satisfied</td>
-      <td>satisfied</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>scared</td>
-      <td>scared</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>stressed</td>
-      <td>stressed</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>surprised</td>
-      <td>surprised</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Label Codes</td>
-      <td>worried</td>
-      <td>worried</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Valence Codes</td>
-      <td>veryUnpleasant</td>
-      <td>veryUnpleasant</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Valence Codes</td>
-      <td>unpleasant</td>
-      <td>unpleasant</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Valence Codes</td>
-      <td>slightlyUnpleasant</td>
-      <td>slightlyUnpleasant</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Valence Codes</td>
-      <td>neutral</td>
-      <td>neutral</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Valence Codes</td>
-      <td>slightlyPleasant</td>
-      <td>slightlyPleasant</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Valence Codes</td>
-      <td>pleasant</td>
-      <td>pleasant</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>State of Mind Valence Codes</td>
-      <td>veryPleasant</td>
-      <td>veryPleasant</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Symptom Presence Codes</td>
-      <td>present</td>
-      <td>present</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Symptom Presence Codes</td>
-      <td>notPresent</td>
-      <td>notPresent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Symptom Severity Codes</td>
-      <td>severe</td>
-      <td>severe</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Symptom Severity Codes</td>
-      <td>mild</td>
-      <td>mild</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Symptom Severity Codes</td>
-      <td>moderate</td>
-      <td>moderate</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Symptom Severity Codes</td>
-      <td>unspecified</td>
-      <td>unspecified</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Symptom Severity Codes</td>
-      <td>notPresent</td>
-      <td>notPresent</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td>HKQuantityTypeIdentifierPushCount / WheelchairPushesRecord</td>
+      <td>Listed</td>
+      <td>LOINC</td>
+      <td>TBD</td>
+      <td>Not submitted</td>
+      <td>Keep as an open item; determine the handling policy before deciding whether to submit to LOINC.</td>
+    </tr>
+    <tr>
+      <td>IPS Free Set status review</td>
+      <td>2025 SNOMED CT IPS refset package</td>
+      <td>Not applicable</td>
+      <td>SNOMED CT IPS Free Set</td>
+      <td>TBD</td>
+      <td>Not applicable</td>
+      <td>The current status reflects the 2025 IPS Free Set review. Review the seven codes currently marked <code class="language-plaintext highlighter-rouge">Pending</code> against the latest available IPS Free Set and update <code class="language-plaintext highlighter-rouge">IPS Free Set status</code> as needed.</td>
     </tr>
   </tbody>
 </table>
 
-<p>Codes marked with "(*)" are not currently officially recognized as part of the International Patient Summary (IPS). Please use these codes with caution. We are in the process of applying for their inclusion in the IPS.</p>
 
 
 
@@ -4502,8 +954,8 @@ This facilitates interoperability and data integration across different health d
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-10 16:32:00 -0500">
-    2026-09-10
+  <span title="2026-09-20 16:07:00 -0500">
+    2026-09-20
   </span>
 
           <br/>

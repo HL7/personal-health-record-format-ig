@@ -219,11 +219,67 @@ Similarly, SPHR seeks a mechanism whereby a patient's health record can be sent 
 But to make that happen, we must clarify the details of the envelope that will contain such data.  
 
 - [Opening a DICOMDIR File](https://filext.com/file-extension/DICOMDIR)  
-- [DICOM PS3.3 2024b - Information Object Definitions](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_F.2.2.2.html)  
-- [DICOM PS3.11 2024b - Media Storage Application Profiles](https://dicom.nema.org/medical/dicom/current/output/chtml/part11/sect_d.3.3.html)  
+- [DICOM PS3.3 2024b - Information Object Definitions](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_F.2.2.2.html)
+- [DICOM PS3.11 2024b - Media Storage Application Profiles](https://dicom.nema.org/medical/dicom/current/output/chtml/part11/sect_d.3.3.html)
+
+### Patient Summaries
+
+As mentioned earlier, the .phr container MAY include an International Patient Summary (IPS) file that acts as a manifest and table of contents. This section provides detailed guidance on the relationship between PHR and IPS formats.
+
+#### IPS and PHR Compared
+
+| Aspect | IPS | PHR |
+|--------|-----|-----|
+| Purpose | Emergency/unplanned care | Complete health history |
+| Scope | Essential current data | All historical data |
+| Size | Compact (KB) | Comprehensive (MB-GB) |
+| Authorship | Clinical system | Patient + Clinical + Other |
+| Standard | HL7 IPS IG | This IG |
+
+The IPS can be thought of as an "executive summary" extracted from the complete PHR - containing only active, current information needed for immediate care decisions.  The PHR may also contain previous versions of IPS documents obtained while traveling or otherwise.
+
+#### Generating IPS from PHR
+
+To generate (or regenerate) an IPS document from PHR data, use the most recent data ( stuat of current or active), including:
+
+| IPS Section | PHR Source |
+|-------------|------------|
+| Medication Summary | MedicationStatement (status=active) |
+| Allergies and Intolerances | AllergyIntolerance (clinicalStatus=active) |
+| Problem List | Condition (clinicalStatus=active) |
+| Immunizations | Immunization (status=completed, recent) |
+| History of Procedures | Procedure (recent, significant) |
+| Medical Devices | DeviceUseStatement (status=active) |
+| Vital Signs | Observation (category=vital-signs, recent) |
 
 
 
+#### Importing IPS into PHR
+
+When a patient receives an IPS from a healthcare provider:
+
+1. **Parse the IPS Bundle** - Extract Composition and other resources.
+2. **Record Provenance** - Record source system and date received, if available.  
+3. **Deduplicate** - Check for existing equivalent records.
+4. **Merge** - Integrate new data with existing PHR contents.
+5. **Flag conflicts** - Identify discrepancies for patient review.
+
+#### Terminology Requirements
+
+IPS requires internationally recognized code systems:
+
+| Data Type | Required Code System |
+|-----------|---------------------|
+| Conditions | SNOMED CT (IPS subset) |
+| Medications | SNOMED CT, ATC, or national drug codes |
+| Allergies | SNOMED CT |
+| Lab results | LOINC |
+| Units | UCUM |
+
+#### References
+
+- [International Patient Summary IG](http://hl7.org/fhir/uv/ips/)
+- [IPS Terminology](https://www.snomed.org/snomed-ct/use-snomed-ct/international-patient-summary)
 
 #### Configuring Operating Systems to Recognize .phr and .sphr Filetypes
 

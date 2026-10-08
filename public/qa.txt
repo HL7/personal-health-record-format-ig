@@ -1,10 +1,10 @@
 PatientHealthRecordsIG : Validation Results
 =========================================
 
-err = 52, warn = 230, info = 78
+err = 43, warn = 230, info = 70
 IG Publisher Version: 2.0.29 Out of date - current version is 2.3.4
-Generated Thu Sep 10 16:42:37 CDT 2026. FHIR version 4.0.1 for hl7.fhir.uv.phr#1.0.0-ballot2 (canonical = http://hl7.org/fhir/uv/phr)
- Build Errors : 5 / 4 / 5
+Generated Sun Sep 20 16:11:00 CDT 2026. FHIR version 4.0.1 for hl7.fhir.uv.phr#1.0.0-ballot2 (canonical = http://hl7.org/fhir/uv/phr)
+ Build Errors : 5 / 4 / 6
  /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Bundle-pdr-message : 0 / 6 / 5
  /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-appetite-changes-codes : 0 / 0 / 2
  /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/CodeSystem-body-posture-codes : 0 / 1 / 2
@@ -36,15 +36,15 @@ Generated Thu Sep 10 16:42:37 CDT 2026. FHIR version 4.0.1 for hl7.fhir.uv.phr#1
  /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-ScoredAssessmentPHQ9Example : 1 / 0 / 4
  /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-StateOfMind2Example : 1 / 0 / 4
  /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-StateOfMindExample : 1 / 0 / 4
- /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned : 1 / 0 / 4
- /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned-underwater-diving : 1 / 1 / 4
- /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned-walking : 1 / 1 / 4
- /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-appleExerciseTime : 1 / 0 / 4
- /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-appleMoveTime : 1 / 0 / 4
- /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-appleStandHour : 1 / 0 / 4
- /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-basalEnergyBurned : 1 / 0 / 4
- /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-cyclingCadence : 1 / 0 / 4
- /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-distanceWalkingRunning-walking : 1 / 1 / 4
+ /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned : 0 / 0 / 3
+ /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned-underwater-diving : 0 / 1 / 3
+ /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned-walking : 0 / 1 / 3
+ /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-appleExerciseTime : 0 / 0 / 3
+ /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-appleMoveTime : 0 / 0 / 3
+ /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-appleStandHour : 0 / 0 / 3
+ /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-basalEnergyBurned : 0 / 0 / 3
+ /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-cyclingCadence : 0 / 0 / 3
+ /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-activity-distanceWalkingRunning-walking : 0 / 1 / 3
  /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-alchol-consumption-blood-alcohol-content : 1 / 0 / 4
  /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-alchol-use-number-of-alcoholic-beverages : 1 / 0 / 4
  /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/fsh-generated/resources/Observation-pghd-audiogram : 1 / 1 / 2
@@ -213,6 +213,7 @@ INFORMATION: en/conformance.html: The html source contains the word 'SHOULD' but
 INFORMATION: en/longitudinal.html: The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause
 WARNING: /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/output/en/operating-systems.html: Illegal HTML: illegal html element: PATH_TO_APP ( with the path to your dummy application, eg:)
 INFORMATION: en/pghd-code-mapping.html: The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause
+INFORMATION: en/pghd.html: The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause
 INFORMATION: en/recordkeeping.html: The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause
 == fsh-generated/resources/Bundle-pdr-message.json ==
 WARNING: Bundle/pdr-message: Bundle.entry[1].resource/*Patient/71a8b156-760b-df6b-859e-eefc7932a526*/.identifier[0].system: No definition could be found for URL value 'https://github.com/synthetichealth/synthea'
@@ -430,35 +431,17 @@ INFORMATION: Observation/StateOfMind2Example: Observation.code: Observation.code
 ERROR: Observation/StateOfMindExample: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-observation-state-of-mind|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
 INFORMATION: Observation/StateOfMindExample: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-observation-state-of-mind|1.0.0-ballot2)
 == fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned.json ==
-ERROR: Observation/pghd-activity-activeEnergyBurned: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
-INFORMATION: Observation/pghd-activity-activeEnergyBurned: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
 == fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned-underwater-diving.json ==
 WARNING: Observation/pghd-activity-activeEnergyBurned-underwater-diving: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
-ERROR: Observation/pghd-activity-activeEnergyBurned-underwater-diving: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
-INFORMATION: Observation/pghd-activity-activeEnergyBurned-underwater-diving: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
 == fsh-generated/resources/Observation-pghd-activity-activeEnergyBurned-walking.json ==
 WARNING: Observation/pghd-activity-activeEnergyBurned-walking: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
-ERROR: Observation/pghd-activity-activeEnergyBurned-walking: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
-INFORMATION: Observation/pghd-activity-activeEnergyBurned-walking: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
 == fsh-generated/resources/Observation-pghd-activity-appleExerciseTime.json ==
-ERROR: Observation/pghd-activity-appleExerciseTime: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
-INFORMATION: Observation/pghd-activity-appleExerciseTime: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
 == fsh-generated/resources/Observation-pghd-activity-appleMoveTime.json ==
-ERROR: Observation/pghd-activity-appleMoveTime: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
-INFORMATION: Observation/pghd-activity-appleMoveTime: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
 == fsh-generated/resources/Observation-pghd-activity-appleStandHour.json ==
-ERROR: Observation/pghd-activity-appleStandHour: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
-INFORMATION: Observation/pghd-activity-appleStandHour: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
 == fsh-generated/resources/Observation-pghd-activity-basalEnergyBurned.json ==
-ERROR: Observation/pghd-activity-basalEnergyBurned: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
-INFORMATION: Observation/pghd-activity-basalEnergyBurned: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
 == fsh-generated/resources/Observation-pghd-activity-cyclingCadence.json ==
-ERROR: Observation/pghd-activity-cyclingCadence: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
-INFORMATION: Observation/pghd-activity-cyclingCadence: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
 == fsh-generated/resources/Observation-pghd-activity-distanceWalkingRunning-walking.json ==
 WARNING: Observation/pghd-activity-distanceWalkingRunning-walking: Observation.identifier[0].system: No definition could be found for URL value 'urn:uuid:2a0d59fe-e99f-d216-5865-670442becaa3'
-ERROR: Observation/pghd-activity-distanceWalkingRunning-walking: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
-INFORMATION: Observation/pghd-activity-distanceWalkingRunning-walking: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-activity|1.0.0-ballot2)
 == fsh-generated/resources/Observation-pghd-alchol-consumption-blood-alcohol-content.json ==
 ERROR: Observation/pghd-alchol-consumption-blood-alcohol-content: Observation.code.coding[0]: Slicing cannot be evaluated: Could not match discriminator (system) for slice Observation.code.coding:PGHDCode in profile http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-alchol-consumption|1.0.0-ballot2 - the discriminator [system] does not have fixed value, binding or existence assertions
 INFORMATION: Observation/pghd-alchol-consumption-blood-alcohol-content: Observation.code: Observation.code.coding:PGHDCode: Found 0 matches, but unable to check minimum required (Observation.code.coding) due to lack of slicing validation (from http://hl7.org/fhir/uv/phr/StructureDefinition/pghd-alchol-consumption|1.0.0-ballot2)
