@@ -26,10 +26,10 @@
   <url value="http://hl7.org/fhir/uv/phr/ValueSet/observation-scored-assessment-score-codes"/>
   <version value="1.0.0-ballot2"/>
   <name value="ObservationScoredAssessmentScore"/>
-  <title value="Observation State of Mind Codes"/>
+  <title value="Scored Assessment Score Value Set"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-20T16:07:18-05:00"/>
+  <date value="2026-10-08T19:53:09-05:00"/>
   <publisher value="HL7 International / Patient Empowerment"/>
   <contact>
     <name value="HL7 International / Patient Empowerment"/>
@@ -38,7 +38,7 @@
       <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
     </telecom>
   </contact>
-  <description value="Codes for state of mind"/>
+  <description value="Codes for scored assessment scores (e.g. GAD-7, PHQ-9)"/>
   <jurisdiction>
     <coding>
       <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>

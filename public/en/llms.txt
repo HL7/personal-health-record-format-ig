@@ -25,7 +25,7 @@
 * [Patient Generated Health Data (PGHD)](pghd.md)
 * [Personas Index](personas-index.md)
 * [API Endpoints](api.md)
-* [Longitudinal Records](longitudinal.md)
+* [Merging and Versioning](longitudinal.md)
 * [Functional Model](functionality.md)
 * [PHR Code Mapping](pghd-code-mapping.md)
 * [Data Model](datamodel.md)
@@ -38,7 +38,7 @@
 * [Body Posture Codes](CodeSystem-body-posture-codes.md)
 * [Body Temperature Measurement Location Codes](CodeSystem-body-temperature-measurement-location-codes.md)
 * [ECG Classification Codes](CodeSystem-ecg-classification-codes.md)
-* [ECG Classification Codes](CodeSystem-ecg-codes.md)
+* [ECG Codes](CodeSystem-ecg-codes.md)
 * [ECG Lead Codes](CodeSystem-ecg-lead-codes.md)
 * [ECG Symptoms Status Codes](CodeSystem-ecg-symptoms-status-codes.md)
 * [GAD-7 Assesment Risk Codes](CodeSystem-gad7-risk-codes.md)
@@ -60,15 +60,15 @@
 ### ValueSets
 
 * [Symptom Appetite Changes](ValueSet-appetite-changes.md)
-* [Body Temperature Measurement Location Codes](ValueSet-body-temperature-measurement-location.md)
+* [Body Temperature Measurement Location Value Set](ValueSet-body-temperature-measurement-location.md)
 * [Observation Activity Codes](ValueSet-observation-activity-codes.md)
 * [Observation AlcholConsumption Codes](ValueSet-observation-alchol-consumption-codes.md)
 * [Observation BodyMeasurements Codes](ValueSet-observation-body-measurements-codes.md)
 * [Observation Diving Codes](ValueSet-observation-diving-codes.md)
-* [ECG Classification Codes](ValueSet-observation-ecg-classification-codes.md)
-* [ECG Lead Codes](ValueSet-observation-ecg-lead-codes.md)
-* [ECG Symptoms Status Codes](ValueSet-observation-ecg-symptoms-status-codes.md)
-* [ECG Lead Codes](ValueSet-observation-ecgcodes.md)
+* [ECG Classification Value Set](ValueSet-observation-ecg-classification-codes.md)
+* [ECG Lead Value Set](ValueSet-observation-ecg-lead-codes.md)
+* [ECG Symptoms Status Value Set](ValueSet-observation-ecg-symptoms-status-codes.md)
+* [ECG Value Set](ValueSet-observation-ecgcodes.md)
 * [Observation GAD7 Risk Codes](ValueSet-observation-gad7-risk-codes.md)
 * [Observation Hearing Codes](ValueSet-observation-hearing-codes.md)
 * [Observation LabResults Codes](ValueSet-observation-lab-results-codes.md)
@@ -79,7 +79,7 @@
 * [Observation PHQ9Risk Codes](ValueSet-observation-phq9-risk-codes.md)
 * [Observation ReproductiveHealth Codes](ValueSet-observation-reproductive-health-codes.md)
 * [Observation Scored Assessment Codes](ValueSet-observation-scored-assessment-codes.md)
-* [Observation State of Mind Codes](ValueSet-observation-scored-assessment-score-codes.md)
+* [Scored Assessment Score Value Set](ValueSet-observation-scored-assessment-score-codes.md)
 * [Observation SelfCare Codes](ValueSet-observation-selfcare-codes.md)
 * [Observation Sleep Codes](ValueSet-observation-sleep-codes.md)
 * [Observation State of Mind Association Codes](ValueSet-observation-state-of-mind-association-codes.md)
@@ -102,7 +102,6 @@
 
 * [Environmental Observation](StructureDefinition-Environmental.md)
 * [Financial Receipt](StructureDefinition-FinancialReceipt.md)
-* [Social Media Post](StructureDefinition-SocialMedia.md)
 
 ### Resource Profiles
 
@@ -157,12 +156,17 @@
 
 ### ConceptMaps
 
-* [symptom-pghd-to-snomedct](ConceptMap-symptom-pghd-to-snomedct.md)
-* [symptom-snomedct-to-pghd](ConceptMap-symptom-snomedct-to-pghd.md)
+* [Symptom Codes, PGHD to SNOMED CT](ConceptMap-symptom-pghd-to-snomedct.md)
+* [Symptom Codes, SNOMED CT to PGHD](ConceptMap-symptom-snomedct-to-pghd.md)
 
 ### ImplementationGuides
 
 * [Personal Health Records](ImplementationGuide-hl7.fhir.uv.phr.md)
+
+### OperationDefinitions
+
+* [PHR Export Operation](OperationDefinition-phr-export.md)
+* [PHR Import Operation](OperationDefinition-phr-import.md)
 
 ### Questionnaires
 

@@ -2,9 +2,6 @@
 
 ## Questionnaire: PHQ-9 assesment 
 
- 
-PHQ-9 Scored Assessment 
-
 *  [Tree view](#tabs-tree) 
 *  [Sample Rendering](#tabs-sample) 
 *  [Form Logic](#tabs-logic) 

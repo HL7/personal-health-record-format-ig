@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="phr-import"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: OperationDefinition phr-import</b></p><a name="phr-import"> </a><a name="hcphr-import"> </a><p>URL: [base]/Bundle/$import</p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>strategy</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td/><td><div><p>Import strategy: merge (reconcile with existing records, default) or append (import without reconciliation).</p>
+</div></td></tr><tr><td>IN</td><td>mode</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td/><td><div><p>Processing mode: commit (default) or validate (validation-only dry run, nothing persisted).</p>
+</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/resource.html">Resource</a></td><td/><td><div><p>An import manifest: an OperationOutcome (or Parameters resource for asynchronous imports) reporting resource counts, rejected resources, and unresolved references.</p>
+</div></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/OperationDefinition/phr-import"/>
+  <version value="1.0.0-ballot2"/>
+  <name value="PHRImport"/>
+  <title value="PHR Import Operation"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <experimental value="true"/>
+  <date value="2026-10-08T19:53:09-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <description value="Accepts PHR data in NDJSON or Bundle form and imports it into the receiving system. The request body carries the payload directly (Content-Type: application/x-ndjson or application/fhir+json). Importers are expected to deduplicate, retain provenance, validate, and resolve forward references; servers SHOULD support the FHIR asynchronous request pattern (202 Accepted + Content-Location polling) for large payloads and MAY apply back pressure with 429/Retry-After. See the API Endpoints page for conformance requirements and sequencing guidance."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <code value="import"/>
+  <resource value="Bundle"/>
+  <system value="false"/>
+  <type value="true"/>
+  <instance value="false"/>
+  <parameter>
+    <name value="strategy"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Import strategy: merge (reconcile with existing records, default) or append (import without reconciliation)."/>
+    <type value="code"/>
+  </parameter>
+  <parameter>
+    <name value="mode"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Processing mode: commit (default) or validate (validation-only dry run, nothing persisted)."/>
+    <type value="code"/>
+  </parameter>
+  <parameter>
+    <name value="return"/>
+    <use value="out"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="An import manifest: an OperationOutcome (or Parameters resource for asynchronous imports) reporting resource counts, rejected resources, and unresolved references."/>
+    <type value="Resource"/>
+  </parameter>
+</OperationDefinition>

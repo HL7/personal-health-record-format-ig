@@ -2,9 +2,6 @@
 
 ## CodeSystem: Observation PGHD Codes 
 
- 
-Code defining the type of PGHD data 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [ObservationActivity](ValueSet-observation-activity-codes.md)
@@ -73,7 +70,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "Observation PGHD Codes",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-20T16:07:18-05:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

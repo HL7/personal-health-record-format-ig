@@ -2,9 +2,6 @@
 
 ## Resource Profile: PGHD Sleep Episode Profile 
 
- 
-This profile defines how to represent Sleep episode. 
-
 **Usages:**
 
 * Examples for this Profile: [Observation/pghd-sleep-episode-1](Observation-pghd-sleep-episode-1.md), [Observation/pghd-sleep-episode-2](Observation-pghd-sleep-episode-2.md), [Observation/pghd-sleep-episode-core-sleep-1](Observation-pghd-sleep-episode-core-sleep-1.md), [Observation/pghd-sleep-episode-core-sleep-2](Observation-pghd-sleep-episode-core-sleep-2.md)...Show 4 more,[Observation/pghd-sleep-episode-deep-sleep-1](Observation-pghd-sleep-episode-deep-sleep-1.md),[Observation/pghd-sleep-episode-deep-sleep-2](Observation-pghd-sleep-episode-deep-sleep-2.md),[Observation/pghd-sleep-episode-latency-to-sleep-onset-1](Observation-pghd-sleep-episode-latency-to-sleep-onset-1.md)and[Observation/pghd-sleep-episode-latency-to-sleep-onset-2](Observation-pghd-sleep-episode-latency-to-sleep-onset-2.md)
@@ -63,7 +60,7 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-sleep-episod
   "title" : "PGHD Sleep Episode Profile",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-20T16:07:18-05:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

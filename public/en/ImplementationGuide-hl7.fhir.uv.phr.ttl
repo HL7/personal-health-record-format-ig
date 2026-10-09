@@ -50,7 +50,7 @@
   fhir:name [ fhir:v "PatientHealthRecordsIG"] ; # 
   fhir:title [ fhir:v "Personal Health Records"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-09-20T16:07:18-05:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-08T19:53:09-05:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
@@ -90,7 +90,7 @@
        fhir:l <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "7.3.0" ]
+     fhir:version [ fhir:v "7.4.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -1427,27 +1427,6 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://hl7.org/fhir/uv/phr/ValueSet/body-temperature-measurement-location> ;
-         fhir:reference [ fhir:v "ValueSet/body-temperature-measurement-location" ]
-       ] ;
-       fhir:name [ fhir:v "Body Temperature Measurement Location Codes" ] ;
-       fhir:description [ fhir:v "Code indicating the location where the body temperature was measured" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
            fhir:v "CodeSystem"
          ]
        ] ) ;
@@ -1469,76 +1448,15 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "ConceptMap"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://hl7.org/fhir/uv/phr/ConceptMap/symptom-pghd-to-snomedct> ;
-         fhir:reference [ fhir:v "ConceptMap/symptom-pghd-to-snomedct" ]
-       ] ;
-       fhir:name [ fhir:v "ConceptMapSymptomPGHD2SNOMEDCT" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "ConceptMap"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd> ;
-         fhir:reference [ fhir:v "ConceptMap/symptom-snomedct-to-pghd" ]
-       ] ;
-       fhir:name [ fhir:v "ConceptMapSymptomSNOMEDCT2PGHD" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
            fhir:v "ValueSet"
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://hl7.org/fhir/uv/phr/ValueSet/observation-ecg-classification-codes> ;
-         fhir:reference [ fhir:v "ValueSet/observation-ecg-classification-codes" ]
+         fhir:l <http://hl7.org/fhir/uv/phr/ValueSet/body-temperature-measurement-location> ;
+         fhir:reference [ fhir:v "ValueSet/body-temperature-measurement-location" ]
        ] ;
-       fhir:name [ fhir:v "ECG Classification Codes" ] ;
-       fhir:description [ fhir:v "Codes for classification of ECG waveforms" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "CodeSystem"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes> ;
-         fhir:reference [ fhir:v "CodeSystem/ecg-codes" ]
-       ] ;
-       fhir:name [ fhir:v "ECG Classification Codes" ] ;
-       fhir:description [ fhir:v "Codes for ECG and related items" ] ;
+       fhir:name [ fhir:v "Body Temperature Measurement Location Value Set" ] ;
+       fhir:description [ fhir:v "Code indicating the location where the body temperature was measured" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -1576,11 +1494,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://hl7.org/fhir/uv/phr/ValueSet/observation-ecgcodes> ;
-         fhir:reference [ fhir:v "ValueSet/observation-ecgcodes" ]
+         fhir:l <http://hl7.org/fhir/uv/phr/ValueSet/observation-ecg-classification-codes> ;
+         fhir:reference [ fhir:v "ValueSet/observation-ecg-classification-codes" ]
        ] ;
-       fhir:name [ fhir:v "ECG Lead Codes" ] ;
-       fhir:description [ fhir:v "Codes for ECG and related items" ] ;
+       fhir:name [ fhir:v "ECG Classification Value Set" ] ;
+       fhir:description [ fhir:v "Codes for classification of ECG waveforms" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -1593,15 +1511,15 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "ValueSet"
+           fhir:v "CodeSystem"
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://hl7.org/fhir/uv/phr/ValueSet/observation-ecg-lead-codes> ;
-         fhir:reference [ fhir:v "ValueSet/observation-ecg-lead-codes" ]
+         fhir:l <http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes> ;
+         fhir:reference [ fhir:v "CodeSystem/ecg-codes" ]
        ] ;
-       fhir:name [ fhir:v "ECG Lead Codes" ] ;
-       fhir:description [ fhir:v "Codes for ECG induction" ] ;
+       fhir:name [ fhir:v "ECG Codes" ] ;
+       fhir:description [ fhir:v "Codes for ECG and related items" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -1639,11 +1557,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://hl7.org/fhir/uv/phr/ValueSet/observation-ecg-symptoms-status-codes> ;
-         fhir:reference [ fhir:v "ValueSet/observation-ecg-symptoms-status-codes" ]
+         fhir:l <http://hl7.org/fhir/uv/phr/ValueSet/observation-ecg-lead-codes> ;
+         fhir:reference [ fhir:v "ValueSet/observation-ecg-lead-codes" ]
        ] ;
-       fhir:name [ fhir:v "ECG Symptoms Status Codes" ] ;
-       fhir:description [ fhir:v "Code indicating whether or not the user's symptoms are input during ECG waveform acquisition" ] ;
+       fhir:name [ fhir:v "ECG Lead Value Set" ] ;
+       fhir:description [ fhir:v "Codes for ECG induction" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -1665,6 +1583,48 @@
        ] ;
        fhir:name [ fhir:v "ECG Symptoms Status Codes" ] ;
        fhir:description [ fhir:v "Code indicating whether or not the user's symptoms are input during ECG waveform acquisition" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.org/fhir/uv/phr/ValueSet/observation-ecg-symptoms-status-codes> ;
+         fhir:reference [ fhir:v "ValueSet/observation-ecg-symptoms-status-codes" ]
+       ] ;
+       fhir:name [ fhir:v "ECG Symptoms Status Value Set" ] ;
+       fhir:description [ fhir:v "Code indicating whether or not the user's symptoms are input during ECG waveform acquisition" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.org/fhir/uv/phr/ValueSet/observation-ecgcodes> ;
+         fhir:reference [ fhir:v "ValueSet/observation-ecgcodes" ]
+       ] ;
+       fhir:name [ fhir:v "ECG Value Set" ] ;
+       fhir:description [ fhir:v "Codes for ECG and related items" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -2148,27 +2108,6 @@
        ] ;
        fhir:name [ fhir:v "Observation State of Mind Association Codes" ] ;
        fhir:description [ fhir:v "Codes for state of mind association" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://hl7.org/fhir/uv/phr/ValueSet/observation-scored-assessment-score-codes> ;
-         fhir:reference [ fhir:v "ValueSet/observation-scored-assessment-score-codes" ]
-       ] ;
-       fhir:name [ fhir:v "Observation State of Mind Codes" ] ;
-       fhir:description [ fhir:v "Codes for state of mind" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -4957,6 +4896,48 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "OperationDefinition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.org/fhir/uv/phr/OperationDefinition/phr-export> ;
+         fhir:reference [ fhir:v "OperationDefinition/phr-export" ]
+       ] ;
+       fhir:name [ fhir:v "PHR Export Operation" ] ;
+       fhir:description [ fhir:v "Generates a complete patient health record in Bundle, NDJSON, .phr, or .sphr format." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "OperationDefinition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.org/fhir/uv/phr/OperationDefinition/phr-import> ;
+         fhir:reference [ fhir:v "OperationDefinition/phr-import" ]
+       ] ;
+       fhir:name [ fhir:v "PHR Import Operation" ] ;
+       fhir:description [ fhir:v "Imports PHR data (NDJSON or Bundle) into the receiving system with deduplication, provenance tracking, and conflict resolution." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -5031,6 +5012,27 @@
        ] ;
        fhir:name [ fhir:v "Scored Assessment Codes" ] ;
        fhir:description [ fhir:v "Code for scored assessment" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.org/fhir/uv/phr/ValueSet/observation-scored-assessment-score-codes> ;
+         fhir:reference [ fhir:v "ValueSet/observation-scored-assessment-score-codes" ]
+       ] ;
+       fhir:name [ fhir:v "Scored Assessment Score Value Set" ] ;
+       fhir:description [ fhir:v "Codes for scored assessment scores (e.g. GAD-7, PHQ-9)" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -5213,27 +5215,6 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://hl7.org/fhir/uv/phr/StructureDefinition/SocialMedia> ;
-         fhir:reference [ fhir:v "StructureDefinition/SocialMedia" ]
-       ] ;
-       fhir:name [ fhir:v "Social Media Post" ] ;
-       fhir:description [ fhir:v "A logical model representing a social media post from platforms such as Facebook, Instagram, Twitter/X, Tumblr, etc. Captures the post content, media attachments, and metadata. Relevant for patient-reported outcomes, behavioral health context, and longitudinal health narratives." ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
            fhir:v "CodeSystem"
          ]
        ] ) ;
@@ -5392,6 +5373,48 @@
        ] ;
        fhir:name [ fhir:v "Symptom Appetite Changes" ] ;
        fhir:description [ fhir:v "Codes expressing changes in appetite" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.org/fhir/uv/phr/ConceptMap/symptom-pghd-to-snomedct> ;
+         fhir:reference [ fhir:v "ConceptMap/symptom-pghd-to-snomedct" ]
+       ] ;
+       fhir:name [ fhir:v "Symptom Codes, PGHD to SNOMED CT" ] ;
+       fhir:description [ fhir:v "Maps PHR-IG patient-generated health data (PGHD) symptom codes to SNOMED CT." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd> ;
+         fhir:reference [ fhir:v "ConceptMap/symptom-snomedct-to-pghd" ]
+       ] ;
+       fhir:name [ fhir:v "Symptom Codes, SNOMED CT to PGHD" ] ;
+       fhir:description [ fhir:v "Maps SNOMED CT symptom codes to PHR-IG patient-generated health data (PGHD) symptom codes." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -6151,7 +6174,7 @@
            fhir:v "longitudinal.html"^^xsd:anyURI ;
            fhir:l fhir:longitudinal.html
          ] ;
-         fhir:title [ fhir:v "Longitudinal Records" ] ;
+         fhir:title [ fhir:v "Merging and Versioning" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
@@ -6294,29 +6317,25 @@
 
 <http://hl7.org/fhir/uv/phr/CodeSystem/body-posture-codes> a fhir:Uv .
 
-<http://hl7.org/fhir/uv/phr/ValueSet/body-temperature-measurement-location> a fhir:Uv .
-
 <http://hl7.org/fhir/uv/phr/CodeSystem/body-temperature-measurement-location-codes> a fhir:Uv .
 
-<http://hl7.org/fhir/uv/phr/ConceptMap/symptom-pghd-to-snomedct> a fhir:Uv .
+<http://hl7.org/fhir/uv/phr/ValueSet/body-temperature-measurement-location> a fhir:Uv .
 
-<http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd> a fhir:Uv .
+<http://hl7.org/fhir/uv/phr/CodeSystem/ecg-classification-codes> a fhir:Uv .
 
 <http://hl7.org/fhir/uv/phr/ValueSet/observation-ecg-classification-codes> a fhir:Uv .
 
 <http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes> a fhir:Uv .
 
-<http://hl7.org/fhir/uv/phr/CodeSystem/ecg-classification-codes> a fhir:Uv .
-
-<http://hl7.org/fhir/uv/phr/ValueSet/observation-ecgcodes> a fhir:Uv .
+<http://hl7.org/fhir/uv/phr/CodeSystem/ecg-lead-codes> a fhir:Uv .
 
 <http://hl7.org/fhir/uv/phr/ValueSet/observation-ecg-lead-codes> a fhir:Uv .
 
-<http://hl7.org/fhir/uv/phr/CodeSystem/ecg-lead-codes> a fhir:Uv .
+<http://hl7.org/fhir/uv/phr/CodeSystem/ecg-symptoms-status-codes> a fhir:Uv .
 
 <http://hl7.org/fhir/uv/phr/ValueSet/observation-ecg-symptoms-status-codes> a fhir:Uv .
 
-<http://hl7.org/fhir/uv/phr/CodeSystem/ecg-symptoms-status-codes> a fhir:Uv .
+<http://hl7.org/fhir/uv/phr/ValueSet/observation-ecgcodes> a fhir:Uv .
 
 <http://hl7.org/fhir/uv/phr/StructureDefinition/Environmental> a fhir:Uv .
 
@@ -6363,8 +6382,6 @@
 <http://hl7.org/fhir/uv/phr/ValueSet/observation-sleep-codes> a fhir:Uv .
 
 <http://hl7.org/fhir/uv/phr/ValueSet/observation-state-of-mind-association-codes> a fhir:Uv .
-
-<http://hl7.org/fhir/uv/phr/ValueSet/observation-scored-assessment-score-codes> a fhir:Uv .
 
 <http://hl7.org/fhir/uv/phr/ValueSet/observation-state-of-mind-codes> a fhir:Uv .
 
@@ -6624,6 +6641,10 @@
 
 <http://hl7.org/fhir/uv/phr/CodeSystem/phq9-risk-codes> a fhir:Uv .
 
+<http://hl7.org/fhir/uv/phr/OperationDefinition/phr-export> a fhir:Uv .
+
+<http://hl7.org/fhir/uv/phr/OperationDefinition/phr-import> a fhir:Uv .
+
 <http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle> a fhir:Uv .
 
 <http://hl7.org/fhir/uv/phr/QuestionnaireResponse/gad7> a fhir:Uv .
@@ -6631,6 +6652,8 @@
 <http://hl7.org/fhir/uv/phr/QuestionnaireResponse/phq9> a fhir:Uv .
 
 <http://hl7.org/fhir/uv/phr/CodeSystem/scored-assessment-codes> a fhir:Uv .
+
+<http://hl7.org/fhir/uv/phr/ValueSet/observation-scored-assessment-score-codes> a fhir:Uv .
 
 <http://hl7.org/fhir/uv/phr/Observation/ScoredAssessmentGAD7Example> a fhir:Uv .
 
@@ -6648,8 +6671,6 @@
 
 <http://hl7.org/fhir/uv/phr/CodeSystem/snore-event-item-codes> a fhir:Uv .
 
-<http://hl7.org/fhir/uv/phr/StructureDefinition/SocialMedia> a fhir:Uv .
-
 <http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-association-codes> a fhir:Uv .
 
 <http://hl7.org/fhir/uv/phr/CodeSystem/state-of-mind-codes> a fhir:Uv .
@@ -6665,6 +6686,10 @@
 <http://hl7.org/fhir/uv/phr/Observation/StateOfMindExample> a fhir:Uv .
 
 <http://hl7.org/fhir/uv/phr/ValueSet/appetite-changes> a fhir:Uv .
+
+<http://hl7.org/fhir/uv/phr/ConceptMap/symptom-pghd-to-snomedct> a fhir:Uv .
+
+<http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd> a fhir:Uv .
 
 <http://hl7.org/fhir/uv/phr/ValueSet/symptom-presence> a fhir:Uv .
 

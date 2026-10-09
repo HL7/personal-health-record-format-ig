@@ -1,0 +1,105 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/phr/OperationDefinition/phr-import> a fhir:OperationDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "phr-import"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition phr-import</b></p><a name=\"phr-import\"> </a><a name=\"hcphr-import\"> </a><p>URL: [base]/Bundle/$import</p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>strategy</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td/><td><div><p>Import strategy: merge (reconcile with existing records, default) or append (import without reconciliation).</p>\n</div></td></tr><tr><td>IN</td><td>mode</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td/><td><div><p>Processing mode: commit (default) or validate (validation-only dry run, nothing persisted).</p>\n</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/resource.html\">Resource</a></td><td/><td><div><p>An import manifest: an OperationOutcome (or Parameters resource for asynchronous imports) reporting resource counts, rejected resources, and unresolved references.</p>\n</div></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "pe"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/uv/phr/OperationDefinition/phr-import"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/uv/phr/OperationDefinition/phr-import>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0-ballot2"] ; # 
+  fhir:name [ fhir:v "PHRImport"] ; # 
+  fhir:title [ fhir:v "PHR Import Operation"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "operation"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2026-10-08T19:53:09-05:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientempowerment" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Accepts PHR data in NDJSON or Bundle form and imports it into the receiving system. The request body carries the payload directly (Content-Type: application/x-ndjson or application/fhir+json). Importers are expected to deduplicate, retain provenance, validate, and resolve forward references; servers SHOULD support the FHIR asynchronous request pattern (202 Accepted + Content-Location polling) for large payloads and MAY apply back pressure with 429/Retry-After. See the API Endpoints page for conformance requirements and sequencing guidance."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:code [ fhir:v "import"] ; # 
+  fhir:resource ( [ fhir:v "Bundle"] ) ; # 
+  fhir:system [ fhir:v false] ; # 
+  fhir:type [ fhir:v true] ; # 
+  fhir:instance [ fhir:v false] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "strategy" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Import strategy: merge (reconcile with existing records, default) or append (import without reconciliation)." ] ;
+     fhir:type [ fhir:v "code" ]
+  ] [
+     fhir:name [ fhir:v "mode" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Processing mode: commit (default) or validate (validation-only dry run, nothing persisted)." ] ;
+     fhir:type [ fhir:v "code" ]
+  ] [
+     fhir:name [ fhir:v "return" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "An import manifest: an OperationOutcome (or Parameters resource for asynchronous imports) reporting resource counts, rejected resources, and unresolved references." ] ;
+     fhir:type [ fhir:v "Resource" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+  	<!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7.css" rel="stylesheet"/>
     <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
 
@@ -124,6 +124,19 @@
     </ul>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Generated Health Data
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="pghd.html">Overview</a>
+      </li>
+      <li>
+        <a href="pghd-code-mapping.html">Code Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
       <b class="caret"></b>
     </a>
@@ -145,9 +158,6 @@
       </li>
       <li>
         <a href="longitudinal.html">Merging and Versioning</a>
-      </li>
-      <li>
-        <a href="pghd.html">Patient Generated Health Data</a>
       </li>
       <li>
         <a href="physiology.html">Physiology Domains</a>
@@ -372,7 +382,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister &lt;PATH_TO_APP&gt;
 </code></pre></div></div>
 
-<p>replacing <PATH_TO_APP> with the path to your dummy application, eg:</PATH_TO_APP></p>
+<p>replacing <code class="language-plaintext highlighter-rouge">&lt;PATH_TO_APP&gt;</code> with the path to your dummy application, eg:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister ~/Desktop/SampleFhirApp.app 
 </code></pre></div></div>
@@ -519,8 +529,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-20 16:07:00 -0500">
-    2026-09-20
+  <span title="2026-10-08 19:53:00 -0500">
+    2026-10-08
   </span>
 
           <br/>

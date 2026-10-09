@@ -24,6 +24,7 @@ This approach also distinguishes the PHR Implementation Guide from comprehensive
 | :--- | :--- | :--- | :--- |
 | [Electronic Health Information Export API](https://build.fhir.org/ig/argonautproject/ehi-api/) |   | SHOULD | MUST |
 | [Record Lifecycle](https://build.fhir.org/ig/HL7/ehrs-rle-ig/) | Medical Records | NOT APPLICABLE | MUST |
+| [Bulk Data Access](https://hl7.org/fhir/uv/bulkdata/) | Medical Records | NOT APPLICABLE | MAY |
 | [SMART Health Cards and Links](https://build.fhir.org/ig/HL7/smart-health-cards-and-links/) | Epidemiology | SHOULD | MAY |
 | [PHR-S Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/) |   | SHOULD | MAY |
 | [Patient Data Receipt](https://open-health-manager.github.io/patient-data-receipt-ig/) | Medical Records | NOT APPLICABLE | SHOULD |
@@ -57,6 +58,20 @@ This approach also distinguishes the PHR Implementation Guide from comprehensive
 | [Patient Health Devices](http://hl7.org/fhir/uv/phd/2019May/) |   | MAY | MAY |
 | [Da Vinci - Prior Authorization](http://hl7.org/fhir/us/davinci-pas/) |   | MAY | MAY |
 | [Vital Records - Birth and Fetal Death Reporting](http://hl7.org/fhir/us/bfdr/artifacts.html) |   | MAY | MAY |
+
+#### Export and Transport Options (All Optional)
+
+Several adjacent specifications provide mechanisms for moving a complete record between systems. **None of them are required** for conformance with this guide — a system that implements any one of them satisfies the data-liberation goal. Pick based on context:
+
+| | |
+| :--- | :--- |
+| [EHI Export API](https://build.fhir.org/ig/argonautproject/ehi-api/) | Pulling a regulatory "complete EHI" export from a certified EHR |
+| [Bulk Data Access](https://hl7.org/fhir/uv/bulkdata/) | Backend, population-scale export (per-resource-type NDJSON) |
+| [`Patient/$everything`](https://www.hl7.org/fhir/R5/operation-patient-everything.html) | Online, interactive retrieval of one patient compartment from a FHIR server |
+| [SMART Health Links](https://docs.smarthealthit.org/smart-health-links/) | Patient-mediated sharing via QR code or short URL |
+| [IHE Mobile Access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD/) | Document-oriented exchange with document-sharing networks |
+
+See [Relationship to Other Export Operations](./api.md#relationship-to-other-export-operations) on the API page for how these relate to this guide's `$phr-export` operation.
 
 #### Why These Guides May Be of Interest
 
@@ -106,4 +121,16 @@ For a new implementation:
 1. **Document the capabilities supported by the implementation**, so that users and interoperating systems can determine which portions of the PHR ecosystem the application implements.
 
 The result is a progressive implementation model rather than an all-or-nothing conformance requirement. A simple application can implement a small, interoperable PHR; a comprehensive application can use the same foundation while progressively adding additional FHIR-based capabilities.
+
+### Validation
+
+A Personal Health Record is inherently **multi-schema**: a record accumulated over decades will contain resources produced under different FHIR versions (R4, R4B, R5), different releases of profile IGs (US Core 3 through 8, IPS 1.x), and source systems that predate any of them. Validation guidance for this guide therefore differs from a typical single-version IG:
+
+**Validate on export.** Producers are responsible for emitting valid resources. Systems SHOULD validate exported content against the profiles declared in each resource's `meta.profile` before writing the file, so that downstream importers inherit clean data.
+
+**Validate on import — but select the schema per resource.** Importers MUST NOT assume every inbound resource conforms to the importer's current FHIR version and profile set. Validators SHOULD select the schema and profiles to validate against per resource, using `meta.profile` and any declared `fhirVersion` context, falling back to base-specification validation when no profile is declared. `POST /Bundle/$import?mode=validate` provides a validation-only dry run (see the [API Endpoints](./api.md) page).
+
+**Quarantine, don't reject.** A 2009 Observation that fails validation against a 2026 profile is still part of the patient's history. When a historical resource fails validation, importers SHOULD quarantine it — import it, tag it (e.g., with an OperationOutcome in the import manifest and a tag on the resource), and exclude it from computation until reviewed — rather than rejecting the import. Rejecting historical records because terminology or profiles have moved on destroys exactly the longitudinal continuity a PHR exists to preserve.
+
+**Tooling.** The [FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator) supports explicit version and profile selection per run; validation services can be composed per-resource using the strategy above.
 

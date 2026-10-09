@@ -1,9 +1,6 @@
-# Body Temperature Measurement Location Codes - Personal Health Records v1.0.0-ballot2
+# Body Temperature Measurement Location Value Set - Personal Health Records v1.0.0-ballot2
 
-## ValueSet: Body Temperature Measurement Location Codes 
-
- 
-Code indicating the location where the body temperature was measured 
+## ValueSet: Body Temperature Measurement Location Value Set 
 
  **References** 
 
@@ -61,10 +58,10 @@ Code indicating the location where the body temperature was measured
   "url" : "http://hl7.org/fhir/uv/phr/ValueSet/body-temperature-measurement-location",
   "version" : "1.0.0-ballot2",
   "name" : "BodyTemperatureMeasurementLocationValueset",
-  "title" : "Body Temperature Measurement Location Codes",
+  "title" : "Body Temperature Measurement Location Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-20T16:07:18-05:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

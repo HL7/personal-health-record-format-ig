@@ -2,9 +2,6 @@
 
 ## ValueSet: Observation Scored Assessment Codes 
 
- 
-Code for scored assessment 
-
  **References** 
 
 * [PGHD Scored Assessment Profile](StructureDefinition-pghd-observation-scored-assessment.md)
@@ -63,7 +60,7 @@ Code for scored assessment
   "title" : "Observation Scored Assessment Codes",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-20T16:07:18-05:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

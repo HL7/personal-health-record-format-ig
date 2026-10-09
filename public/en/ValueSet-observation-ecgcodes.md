@@ -1,9 +1,6 @@
-# ECG Lead Codes - Personal Health Records v1.0.0-ballot2
+# ECG Value Set - Personal Health Records v1.0.0-ballot2
 
-## ValueSet: ECG Lead Codes 
-
- 
-Codes for ECG and related items 
+## ValueSet: ECG Value Set 
 
  **References** 
 
@@ -60,10 +57,10 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-ecgcodes",
   "version" : "1.0.0-ballot2",
   "name" : "ObservationEcgValueSet",
-  "title" : "ECG Lead Codes",
+  "title" : "ECG Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-20T16:07:18-05:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

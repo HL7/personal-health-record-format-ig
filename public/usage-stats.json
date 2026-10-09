@@ -154,6 +154,7 @@
       "ImplementationGuide",
       "ImplementationGuide.definition.page",
       "ImplementationGuide.definition.page.page",
+      "OperationDefinition",
       "SearchParameter",
       "StructureDefinition",
       "ValueSet"
@@ -162,6 +163,7 @@
       "CodeSystem",
       "ConceptMap",
       "ImplementationGuide",
+      "OperationDefinition",
       "Questionnaire",
       "SearchParameter",
       "StructureDefinition",

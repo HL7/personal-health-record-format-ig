@@ -21,7 +21,7 @@
   <name value="PatientHealthRecordsIG"/>
   <title value="Personal Health Records"/>
   <status value="active"/>
-  <date value="2026-09-20T16:07:18-05:00"/>
+  <date value="2026-10-08T19:53:09-05:00"/>
   <publisher value="HL7 International / Patient Empowerment"/>
   <contact>
     <name value="HL7 International / Patient Empowerment"/>
@@ -47,7 +47,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.3.0"/>
+    <version value="7.4.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -506,17 +506,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/body-temperature-measurement-location"/>
-      </reference>
-      <name value="Body Temperature Measurement Location Codes"/>
-      <description value="Code indicating the location where the body temperature was measured"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -528,44 +517,13 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/symptom-pghd-to-snomedct"/>
-      </reference>
-      <name value="ConceptMapSymptomPGHD2SNOMEDCT"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/symptom-snomedct-to-pghd"/>
-      </reference>
-      <name value="ConceptMapSymptomSNOMEDCT2PGHD"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/observation-ecg-classification-codes"/>
+        <reference value="ValueSet/body-temperature-measurement-location"/>
       </reference>
-      <name value="ECG Classification Codes"/>
-      <description value="Codes for classification of ECG waveforms"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/ecg-codes"/>
-      </reference>
-      <name value="ECG Classification Codes"/>
-      <description value="Codes for ECG and related items"/>
+      <name value="Body Temperature Measurement Location Value Set"/>
+      <description value="Code indicating the location where the body temperature was measured"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -584,21 +542,21 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/observation-ecgcodes"/>
+        <reference value="ValueSet/observation-ecg-classification-codes"/>
       </reference>
-      <name value="ECG Lead Codes"/>
-      <description value="Codes for ECG and related items"/>
+      <name value="ECG Classification Value Set"/>
+      <description value="Codes for classification of ECG waveforms"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
+        <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="ValueSet/observation-ecg-lead-codes"/>
+        <reference value="CodeSystem/ecg-codes"/>
       </reference>
-      <name value="ECG Lead Codes"/>
-      <description value="Codes for ECG induction"/>
+      <name value="ECG Codes"/>
+      <description value="Codes for ECG and related items"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -617,10 +575,10 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/observation-ecg-symptoms-status-codes"/>
+        <reference value="ValueSet/observation-ecg-lead-codes"/>
       </reference>
-      <name value="ECG Symptoms Status Codes"/>
-      <description value="Code indicating whether or not the user's symptoms are input during ECG waveform acquisition"/>
+      <name value="ECG Lead Value Set"/>
+      <description value="Codes for ECG induction"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -632,6 +590,28 @@
       </reference>
       <name value="ECG Symptoms Status Codes"/>
       <description value="Code indicating whether or not the user's symptoms are input during ECG waveform acquisition"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-ecg-symptoms-status-codes"/>
+      </reference>
+      <name value="ECG Symptoms Status Value Set"/>
+      <description value="Code indicating whether or not the user's symptoms are input during ECG waveform acquisition"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-ecgcodes"/>
+      </reference>
+      <name value="ECG Value Set"/>
+      <description value="Codes for ECG and related items"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -885,17 +865,6 @@
       </reference>
       <name value="Observation State of Mind Association Codes"/>
       <description value="Codes for state of mind association"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/observation-scored-assessment-score-codes"/>
-      </reference>
-      <name value="Observation State of Mind Codes"/>
-      <description value="Codes for state of mind"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2319,6 +2288,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/phr-export"/>
+      </reference>
+      <name value="PHR Export Operation"/>
+      <description value="Generates a complete patient health record in Bundle, NDJSON, .phr, or .sphr format."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/phr-import"/>
+      </reference>
+      <name value="PHR Import Operation"/>
+      <description value="Imports PHR data (NDJSON or Bundle) into the receiving system with deduplication, provenance tracking, and conflict resolution."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -2359,6 +2350,17 @@
       </reference>
       <name value="Scored Assessment Codes"/>
       <description value="Code for scored assessment"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/observation-scored-assessment-score-codes"/>
+      </reference>
+      <name value="Scored Assessment Score Value Set"/>
+      <description value="Codes for scored assessment scores (e.g. GAD-7, PHQ-9)"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2451,17 +2453,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/SocialMedia"/>
-      </reference>
-      <name value="Social Media Post"/>
-      <description value="A logical model representing a social media post from platforms such as Facebook, Instagram, Twitter/X, Tumblr, etc. Captures the post content, media attachments, and metadata. Relevant for patient-reported outcomes, behavioral health context, and longitudinal health narratives."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -2546,6 +2537,28 @@
       </reference>
       <name value="Symptom Appetite Changes"/>
       <description value="Codes expressing changes in appetite"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/symptom-pghd-to-snomedct"/>
+      </reference>
+      <name value="Symptom Codes, PGHD to SNOMED CT"/>
+      <description value="Maps PHR-IG patient-generated health data (PGHD) symptom codes to SNOMED CT."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/symptom-snomedct-to-pghd"/>
+      </reference>
+      <name value="Symptom Codes, SNOMED CT to PGHD"/>
+      <description value="Maps SNOMED CT symptom codes to PHR-IG patient-generated health data (PGHD) symptom codes."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2852,7 +2865,7 @@
           <valueUrl value="longitudinal.html"/>
         </extension>
         <nameUrl value="longitudinal.html"/>
-        <title value="Longitudinal Records"/>
+        <title value="Merging and Versioning"/>
         <generation value="markdown"/>
       </page>
       <page>

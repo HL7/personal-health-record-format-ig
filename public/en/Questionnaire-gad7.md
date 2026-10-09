@@ -2,9 +2,6 @@
 
 ## Questionnaire: GAD-7 assesment 
 
- 
-GAD-7 Scored Assessment 
-
 *  [Tree view](#tabs-tree) 
 *  [Sample Rendering](#tabs-sample) 
 *  [Form Logic](#tabs-logic) 

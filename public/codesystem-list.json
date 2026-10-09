@@ -37,7 +37,7 @@
       "version" : "1.0.0-ballot2",
       "status" : "active",
       "name" : "Ecg",
-      "title" : "ECG Classification Codes",
+      "title" : "ECG Codes",
       "description" : "Codes for ECG and related items"
     },
     {

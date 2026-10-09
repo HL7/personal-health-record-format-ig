@@ -114,7 +114,7 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
             <ul>
 
               <li>
-                <a href="http://terminology.hl7.org/7.3.0/CodeSystem-data-absent-reason.html">DataAbsentReason</a>
+                <a href="http://terminology.hl7.org/7.4.0/CodeSystem-data-absent-reason.html">DataAbsentReason</a>
 :                 <a href="Questionnaire-gad7.html">GAD7</a>
 ,                 <a href="Observation-StateOfMind2Example.html">Observation/StateOfMind2Example</a>
 ,                 <a href="Observation-pghd-blood-glucose-3.html">Observation/pghd-blood-glucose-3</a>
@@ -123,7 +123,7 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
               </li>
 
               <li>
-                <a href="http://terminology.hl7.org/7.3.0/CodeSystem-observation-category.html">Observation Category Codes</a>
+                <a href="http://terminology.hl7.org/7.4.0/CodeSystem-observation-category.html">Observation Category Codes</a>
 :                 <a href="Observation-ScoredAssessmentGAD7Example.html">Observation/ScoredAssessmentGAD7Example</a>
 ,                 <a href="Observation-ScoredAssessmentPHQ9Example.html">Observation/ScoredAssessmentPHQ9Example</a>
                 <span onClick="document.getElementById('ips_5').innerHTML = document.getElementById('ips2_5').innerHTML" id="ips_5">
@@ -133,27 +133,27 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
               </li>
 
               <li>
-                <a href="http://terminology.hl7.org/7.3.0/CodeSystem-referencerange-meaning.html">Observation Reference Range Meaning Codes</a>
+                <a href="http://terminology.hl7.org/7.4.0/CodeSystem-referencerange-meaning.html">Observation Reference Range Meaning Codes</a>
 :                 <a href="Observation-pghd-blood-glucose-2.html">Observation/pghd-blood-glucose-2</a>
               </li>
 
               <li>
-                <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v2-0203.html">identifierType</a>
+                <a href="http://terminology.hl7.org/7.4.0/CodeSystem-v2-0203.html">identifierType</a>
 :                 <a href="Bundle-pdr-message.html">Bundle/pdr-message</a>
               </li>
 
               <li>
-                <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html">ActCode</a>
+                <a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-ActCode.html">ActCode</a>
 :                 <a href="Bundle-pdr-message.html">Bundle/pdr-message</a>
               </li>
 
               <li>
-                <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-MaritalStatus.html">MaritalStatus</a>
+                <a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-MaritalStatus.html">MaritalStatus</a>
 :                 <a href="Bundle-pdr-message.html">Bundle/pdr-message</a>
               </li>
 
               <li>
-                <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>
+                <a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>
 :                 <a href="Observation-pghd-blood-glucose-2.html">Observation/pghd-blood-glucose-2</a>
               </li>
 
@@ -200,7 +200,7 @@ Using RxNorm codes of type SAB=RXNORM as this specification describes does not r
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on FHIR 4.0.1.
           Generated 
   
-    2026-09-20
+    2026-10-08
    
 
           
@@ -220,7 +220,7 @@ Using RxNorm codes of type SAB=RXNORM as this specification describes does not r
 
           Personal Health Records   &reg;&copy; HL7 |
              
-                CC0
+                Creative Commons 0
          (        <a href="searchform.html">src</a>
 )
       </li>
@@ -1799,6 +1799,28 @@ Both Bundle.link and Bundle.entry.link are defined to support providing addition
       </tr>
       <tr>
         <td>
+          <a href="en/conformance.html">web</a>
+        </td>
+        <td>
+          <a href="https://docs.smarthealthit.org/smart-health-links/">docs.smarthealthit.org</a>
+        </td>
+        <td>
+          <a href="https://docs.smarthealthit.org/smart-health-links/">SMART Health Links</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/conformance.html">web</a>
+        </td>
+        <td>
+          <a href="https://profiles.ihe.net/ITI/MHD/">profiles.ihe.net</a>
+        </td>
+        <td>
+          <a href="https://profiles.ihe.net/ITI/MHD/">IHE Mobile Access to Health Documents (MHD)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
           <a href="en/datamodel.html">web</a>
         </td>
         <td>
@@ -2755,8 +2777,8 @@ Files containing patient health information MAY be zipped. The           <code c
         </td>
         <td>
 Should use           <a href="http://ndjson.org/">NDJSON format</a>
- and save to a password encrypted zip file.  Please see           <a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Access IG</a>
- more additional design guidance.
+.  Please see           <a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Access IG</a>
+ for additional design guidance.
         </td>
       </tr>
       <tr>
@@ -2764,21 +2786,16 @@ Should use           <a href="http://ndjson.org/">NDJSON format</a>
           <a href="en/recordkeeping.html">web</a>
         </td>
         <td>
-          <a href="https://www.pengdows.com/2020/06/27/convert-a-x-509-pki-certificate-to-gpg/">www.pengdows.com</a>
+          <a href="https://docs.smarthealthit.org/smart-health-links/">docs.smarthealthit.org</a>
         </td>
         <td>
-          <a href="https://www.pengdows.com/2020/06/27/convert-a-x-509-pki-certificate-to-gpg/">Convert a X.509 (PKI) certificate to GPG</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="en/recordkeeping.html">web</a>
-        </td>
-        <td>
-          <a href="https://www.npmjs.com/package/gpg">www.npmjs.com</a>
-        </td>
-        <td>
-          <a href="https://www.npmjs.com/package/gpg">GPG Encryption/Decryption in Node.js</a>
+This guide does not define file-level encryption or signing for           <code class="language-plaintext highlighter-rouge">.phr</code>
+ and           <code class="language-plaintext highlighter-rouge">.sphr</code>
+ files.  These files are plain NDJSON and zip archives respectively, and are           <strong>not self-protecting</strong>
+ — protection comes from the environment, not the file.  Records at rest SHOULD be protected with operating-system or volume-level encryption; records in transit are protected by TLS or by           <a href="https://docs.smarthealthit.org/smart-health-links/">SMART Health Links</a>
+ (which encrypt their payload and carry the key in the link itself).  Authorship and integrity questions are handled with           <a href="https://www.hl7.org/fhir/R4/provenance.html">Provenance</a>
+ resources inside the record rather than signatures around it.  See the           <a href="./security.html">Security</a>
+ page for complete guidance.
         </td>
       </tr>
       <tr>
@@ -2867,6 +2884,78 @@ Should use           <a href="http://ndjson.org/">NDJSON format</a>
         </td>
         <td>
           <a href="https://www.ninjaone.com/blog/how-to-change-file-associations/">How to Change File Associations in Windows 10</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/security.html">web</a>
+        </td>
+        <td>
+          <a href="https://support.apple.com/guide/mac-help/protect-data-on-your-mac-with-filevault-mh11785/mac">support.apple.com</a>
+        </td>
+        <td>
+          <a href="https://support.apple.com/guide/mac-help/protect-data-on-your-mac-with-filevault-mh11785/mac">FileVault</a>
+ full-disk encryption
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/security.html">web</a>
+        </td>
+        <td>
+          <a href="https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/">learn.microsoft.com</a>
+        </td>
+        <td>
+          <a href="https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/">BitLocker</a>
+ drive encryption
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/security.html">web</a>
+        </td>
+        <td>
+          <a href="https://gitlab.com/cryptsetup/cryptsetup">gitlab.com</a>
+        </td>
+        <td>
+          <a href="https://gitlab.com/cryptsetup/cryptsetup">LUKS/dm-crypt</a>
+ volume encryption
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/security.html">web</a>
+        </td>
+        <td>
+          <a href="https://support.apple.com/guide/security/data-protection-overview-secf6276da8a/web">support.apple.com</a>
+        </td>
+        <td>
+File-based           <a href="https://support.apple.com/guide/security/data-protection-overview-secf6276da8a/web">Data Protection</a>
+ (enabled by default)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/security.html">web</a>
+        </td>
+        <td>
+          <a href="https://source.android.com/docs/security/features/encryption/file-based">source.android.com</a>
+        </td>
+        <td>
+          <a href="https://source.android.com/docs/security/features/encryption/file-based">File-based encryption</a>
+ (enabled by default)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/security.html">web</a>
+        </td>
+        <td>
+          <a href="https://docs.smarthealthit.org/smart-health-links/">docs.smarthealthit.org</a>
+        </td>
+        <td>
+          <a href="https://docs.smarthealthit.org/smart-health-links/">SMART Health Links</a>
+ carry their own encryption: the shared payload is encrypted (A256GCM) and the decryption key travels inside the link/QR code. SHL is the RECOMMENDED mechanism for patient-mediated sharing of records with third parties.
         </td>
       </tr>
     </table>

@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+  	<!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7.css" rel="stylesheet"/>
     <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
 
@@ -124,6 +124,19 @@
     </ul>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Generated Health Data
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="pghd.html">Overview</a>
+      </li>
+      <li>
+        <a href="pghd-code-mapping.html">Code Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
       <b class="caret"></b>
     </a>
@@ -145,9 +158,6 @@
       </li>
       <li>
         <a href="longitudinal.html">Merging and Versioning</a>
-      </li>
-      <li>
-        <a href="pghd.html">Patient Generated Health Data</a>
       </li>
       <li>
         <a href="physiology.html">Physiology Domains</a>
@@ -274,6 +284,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#using-the-conformance-recommendations" id="markdown-toc-using-the-conformance-recommendations">Using the Conformance Recommendations</a></li>
   <li><a href="#additional-implementation-guides" id="markdown-toc-additional-implementation-guides">Additional Implementation Guides</a></li>
+  <li><a href="#validation" id="markdown-toc-validation">Validation</a></li>
 </ul>
 
 </div>
@@ -316,6 +327,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Medical Records</td>
       <td style="text-align: left">NOT APPLICABLE</td>
       <td style="text-align: left">MUST</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Access</a></td>
+      <td>Medical Records</td>
+      <td style="text-align: left">NOT APPLICABLE</td>
+      <td style="text-align: left">MAY</td>
     </tr>
     <tr>
       <td><a href="https://build.fhir.org/ig/HL7/smart-health-cards-and-links/">SMART Health Cards and Links</a></td>
@@ -518,6 +535,43 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
+<h4 id="export-and-transport-options-all-optional">Export and Transport Options (All Optional)</h4>
+
+<p>Several adjacent specifications provide mechanisms for moving a complete record between systems.  <strong>None of them are required</strong> for conformance with this guide — a system that implements any one of them satisfies the data-liberation goal.  Pick based on context:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Specification</th>
+      <th>Use when</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/argonautproject/ehi-api/">EHI Export API</a></td>
+      <td>Pulling a regulatory "complete EHI" export from a certified EHR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Access</a></td>
+      <td>Backend, population-scale export (per-resource-type NDJSON)</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.hl7.org/fhir/R5/operation-patient-everything.html"><code class="language-plaintext highlighter-rouge">Patient/$everything</code></a></td>
+      <td>Online, interactive retrieval of one patient compartment from a FHIR server</td>
+    </tr>
+    <tr>
+      <td><a href="https://docs.smarthealthit.org/smart-health-links/">SMART Health Links</a></td>
+      <td>Patient-mediated sharing via QR code or short URL</td>
+    </tr>
+    <tr>
+      <td><a href="https://profiles.ihe.net/ITI/MHD/">IHE Mobile Access to Health Documents (MHD)</a></td>
+      <td>Document-oriented exchange with document-sharing networks</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>See <a href="./api.html#relationship-to-other-export-operations">Relationship to Other Export Operations</a> on the API page for how these relate to this guide's <code class="language-plaintext highlighter-rouge">$phr-export</code> operation.</p>
+
 <h4 id="why-these-guides-may-be-of-interest">Why These Guides May Be of Interest</h4>
 
 <ul>
@@ -639,6 +693,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The result is a progressive implementation model rather than an all-or-nothing conformance requirement. A simple application can implement a small, interoperable PHR; a comprehensive application can use the same foundation while progressively adding additional FHIR-based capabilities.</p>
 
+<h3 id="validation">Validation</h3>
+
+<p>A Personal Health Record is inherently <strong>multi-schema</strong>: a record accumulated over decades will contain resources produced under different FHIR versions (R4, R4B, R5), different releases of profile IGs (US Core 3 through 8, IPS 1.x), and source systems that predate any of them.  Validation guidance for this guide therefore differs from a typical single-version IG:</p>
+
+<p><strong>Validate on export.</strong>  Producers are responsible for emitting valid resources.  Systems SHOULD validate exported content against the profiles declared in each resource's <code class="language-plaintext highlighter-rouge">meta.profile</code> before writing the file, so that downstream importers inherit clean data.</p>
+
+<p><strong>Validate on import — but select the schema per resource.</strong>  Importers MUST NOT assume every inbound resource conforms to the importer's current FHIR version and profile set.  Validators SHOULD select the schema and profiles to validate against per resource, using <code class="language-plaintext highlighter-rouge">meta.profile</code> and any declared <code class="language-plaintext highlighter-rouge">fhirVersion</code> context, falling back to base-specification validation when no profile is declared.  <code class="language-plaintext highlighter-rouge">POST /Bundle/$import?mode=validate</code> provides a validation-only dry run (see the <a href="./api.html">API Endpoints</a> page).</p>
+
+<p><strong>Quarantine, don't reject.</strong>  A 2009 Observation that fails validation against a 2026 profile is still part of the patient's history.  When a historical resource fails validation, importers SHOULD quarantine it — import it, tag it (e.g., with an OperationOutcome in the import manifest and a tag on the resource), and exclude it from computation until reviewed — rather than rejecting the import.  Rejecting historical records because terminology or profiles have moved on destroys exactly the longitudinal continuity a PHR exists to preserve.</p>
+
+<p><strong>Tooling.</strong>  The <a href="https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator">FHIR Validator</a> supports explicit version and profile selection per run; validation services can be composed per-resource using the strategy above.</p>
+
 
 
 
@@ -667,8 +733,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-20 16:07:00 -0500">
-    2026-09-20
+  <span title="2026-10-08 19:53:00 -0500">
+    2026-10-08
   </span>
 
           <br/>

@@ -92,7 +92,7 @@ Run this command in the Terminal:
 
 ```
 
-replacing with the path to your dummy application, eg:
+replacing `<PATH_TO_APP>` with the path to your dummy application, eg:
 
 ```
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister ~/Desktop/SampleFhirApp.app 

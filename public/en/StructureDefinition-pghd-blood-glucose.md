@@ -2,9 +2,6 @@
 
 ## Resource Profile: PGHD BloodGlucose Profile 
 
- 
-This profile defines how to represent blood glucose. 
-
 **Usages:**
 
 * Examples for this Profile: [Observation/pghd-blood-glucose-1](Observation-pghd-blood-glucose-1.md), [Observation/pghd-blood-glucose-2](Observation-pghd-blood-glucose-2.md) and [Observation/pghd-blood-glucose-3](Observation-pghd-blood-glucose-3.md)
@@ -63,7 +60,7 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-blood-glucos
   "title" : "PGHD BloodGlucose Profile",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-20T16:07:18-05:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

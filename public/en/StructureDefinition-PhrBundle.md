@@ -2,9 +2,6 @@
 
 ## Resource Profile: PhrBundle 
 
- 
-Standard PHR profile of the Bundle resource. 
-
 **Usages:**
 
 * This Profile is not used by any profiles in this Implementation Guide
@@ -61,7 +58,7 @@ Other representations of profile: [CSV](../StructureDefinition-PhrBundle.csv), [
   "version" : "1.0.0-ballot2",
   "name" : "PhrBundle",
   "status" : "active",
-  "date" : "2026-09-20T16:07:18-05:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

@@ -2,9 +2,6 @@
 
 ## ValueSet: Observation State of Mind Valence Codes 
 
- 
-Codes for state of mind valence 
-
  **References** 
 
 * [PGHD State of Mind Profile](StructureDefinition-pghd-observation-state-of-mind.md)
@@ -63,7 +60,7 @@ Codes for state of mind valence
   "title" : "Observation State of Mind Valence Codes",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-20T16:07:18-05:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

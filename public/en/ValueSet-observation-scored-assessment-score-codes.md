@@ -1,9 +1,6 @@
-# Observation State of Mind Codes - Personal Health Records v1.0.0-ballot2
+# Scored Assessment Score Value Set - Personal Health Records v1.0.0-ballot2
 
-## ValueSet: Observation State of Mind Codes 
-
- 
-Codes for state of mind 
+## ValueSet: Scored Assessment Score Value Set 
 
  **References** 
 
@@ -60,10 +57,10 @@ Codes for state of mind
   "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-scored-assessment-score-codes",
   "version" : "1.0.0-ballot2",
   "name" : "ObservationScoredAssessmentScore",
-  "title" : "Observation State of Mind Codes",
+  "title" : "Scored Assessment Score Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-20T16:07:18-05:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {
@@ -76,7 +73,7 @@ Codes for state of mind
       ]
     }
   ],
-  "description" : "Codes for state of mind",
+  "description" : "Codes for scored assessment scores (e.g. GAD-7, PHQ-9)",
   "jurisdiction" : [
     {
       "coding" : [

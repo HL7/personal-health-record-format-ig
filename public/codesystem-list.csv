@@ -3,7 +3,7 @@ http://hl7.org/fhir/uv/phr/CodeSystem/appetite-changes-codes,1.0.0-ballot2,activ
 http://hl7.org/fhir/uv/phr/CodeSystem/body-posture-codes,1.0.0-ballot2,active,,BodyPosture,Body Posture Codes,"Code for posture",
 http://hl7.org/fhir/uv/phr/CodeSystem/body-temperature-measurement-location-codes,1.0.0-ballot2,active,,BodyTemperatureMeasurementLocation,Body Temperature Measurement Location Codes,"Code indicating the location where the body temperature was measured",
 http://hl7.org/fhir/uv/phr/CodeSystem/ecg-classification-codes,1.0.0-ballot2,active,,EcgClassification,ECG Classification Codes,"Codes for classification of ECG waveforms",
-http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes,1.0.0-ballot2,active,,Ecg,ECG Classification Codes,"Codes for ECG and related items",
+http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes,1.0.0-ballot2,active,,Ecg,ECG Codes,"Codes for ECG and related items",
 http://hl7.org/fhir/uv/phr/CodeSystem/ecg-lead-codes,1.0.0-ballot2,active,,EcgLead,ECG Lead Codes,"Codes for ECG induction",
 http://hl7.org/fhir/uv/phr/CodeSystem/ecg-symptoms-status-codes,1.0.0-ballot2,active,,EcgSymptomsStatus,ECG Symptoms Status Codes,"Code indicating whether or not the user's symptoms are input during ECG waveform acquisition",
 http://hl7.org/fhir/uv/phr/CodeSystem/gad7-risk-codes,1.0.0-ballot2,active,,GAD7Risk,GAD-7 Assesment Risk Codes,"Code for GAD-7 Assesment Risk",

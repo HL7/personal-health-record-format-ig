@@ -2,9 +2,6 @@
 
 ## Resource Profile: PGHD State of Mind Profile 
 
- 
-This profile defines the implementation of the State of Mind. 
-
 **Usages:**
 
 * Examples for this Profile: [Observation/StateOfMind2Example](Observation-StateOfMind2Example.md) and [Observation/StateOfMindExample](Observation-StateOfMindExample.md)
@@ -63,7 +60,7 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-observation-
   "title" : "PGHD State of Mind Profile",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-20T16:07:18-05:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {
@@ -208,6 +205,8 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-observation-
       {
         "id" : "Observation.code.coding:PGHDCode.system",
         "path" : "Observation.code.coding.system",
+        "min" : 1,
+        "fixedUri" : "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes",
         "mustSupport" : true
       },
       {

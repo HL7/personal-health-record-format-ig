@@ -2,9 +2,6 @@
 
 ## Resource Profile: PGHD Patient Profile 
 
- 
-This profile defines patient information. 
-
 **Usages:**
 
 * Refer to this Profile: [PGHD Activity Profile](StructureDefinition-pghd-activity.md), [PGHD AlcholConsumption Profile](StructureDefinition-pghd-alchol-consumption.md), [PGHD Audiogram Profile](StructureDefinition-pghd-audiogram.md), [PGHD BloodGlucose Profile](StructureDefinition-pghd-blood-glucose.md)...Show 38 more,[PGHD BloodPressure Profile](StructureDefinition-pghd-bloodpressure.md),[PGHD BMI Profile](StructureDefinition-pghd-bmi.md),[PGHD BodyHeight Profile](StructureDefinition-pghd-bodyheight.md),[PGHD Body Measurement Profile](StructureDefinition-pghd-bodymeasurement.md),[PGHD BodyTemperature Profile](StructureDefinition-pghd-bodytemperature.md),[PGHD BodyWeight Profile](StructureDefinition-pghd-bodyweight.md),[PGHD SelfCare Plan Profile](StructureDefinition-pghd-careplan-selfcare.md),[PGHD Diving Profile](StructureDefinition-pghd-diving.md),[PGHD Electrocardiogram Profile](StructureDefinition-pghd-electrocardiogram.md),[PGHD Food Profile](StructureDefinition-pghd-food.md),[PGHD HearingSensitivity Profile](StructureDefinition-pghd-hearing-sensitivity.md),[PGHD Hearing Profile](StructureDefinition-pghd-hearing.md),[PGHD Heartbeat Profile](StructureDefinition-pghd-heartbeat.md),[PGHD HeartRate Profile](StructureDefinition-pghd-heartrate.md),[PGHD Medication Adherence Profile](StructureDefinition-pghd-medication-adherence.md),[PGHD MedicationAdministration Insulin Profile](StructureDefinition-pghd-medicationadministration-insulin.md),[PGHD MedicationDispense Profile](StructureDefinition-pghd-medicationdispense.md),[PGHD Mindfulness Profile](StructureDefinition-pghd-mindfulness.md),[PGHD Mobility Profile](StructureDefinition-pghd-mobility.md),[PGHD Nutrition Profile](StructureDefinition-pghd-nutrition.md),[PGHD Scored Assessment Profile](StructureDefinition-pghd-observation-scored-assessment.md),[PGHD State of Mind Profile](StructureDefinition-pghd-observation-state-of-mind.md),[PGHD OxygenSaturation Profile](StructureDefinition-pghd-oxygenSaturation.md),[PGHD Pregnancy Status Profile](StructureDefinition-pghd-pregnancy-status.md),[PGHD QuestionnaireResponse Profile](StructureDefinition-pghd-questionnaire-response.md),[PGHD ReproductiveHealth Profile](StructureDefinition-pghd-reproductive-health.md),[PGHD RespiratoryRate Profile](StructureDefinition-pghd-respiratoryrate.md),[PGHD Self Care Profile](StructureDefinition-pghd-selfcare.md),[PGHD Sleep Episode Profile](StructureDefinition-pghd-sleep-episode.md),[PGHD Sleep Profile](StructureDefinition-pghd-sleep.md),[PGHD SnoreEvent Profile](StructureDefinition-pghd-snore-event.md),[PGHD SnoreIndex Profile](StructureDefinition-pghd-snore-index.md),[PGHD Symptom Profile](StructureDefinition-pghd-symptom.md),[PGHD Test Result Profile](StructureDefinition-pghd-testresult.md),[PGHD UVExposure Profile](StructureDefinition-pghd-uvexposure.md),[PGHD Vital Signs Profile](StructureDefinition-pghd-vitalsigns.md),[PGHD VoltageMeasurement Profile](StructureDefinition-pghd-voltage-measurement.md)and[PGHD Workout Profile](StructureDefinition-pghd-workout.md)
@@ -64,7 +61,7 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-patient.csv)
   "title" : "PGHD Patient Profile",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-20T16:07:18-05:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

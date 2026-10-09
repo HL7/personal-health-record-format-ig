@@ -2,9 +2,6 @@
 
 ## Resource Profile: PGHD MedicationDispense Profile 
 
- 
-This profile defines the dispensing on the part of a pharmacy. 
-
 **Usages:**
 
 * This Profile is not used by any profiles in this Implementation Guide
@@ -63,7 +60,7 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-medicationdi
   "title" : "PGHD MedicationDispense Profile",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-20T16:07:18-05:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

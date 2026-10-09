@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="phr-export"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: OperationDefinition phr-export</b></p><a name="phr-export"> </a><a name="hcphr-export"> </a><p>URL: [base]/Bundle/$phr-export</p><p>URL: [base]/Bundle/[id]/$phr-export</p><p>URL: [base]/Patient/$phr-export</p><p>URL: [base]/Patient/[id]/$phr-export</p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>outputFormat</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td/><td><div><p>Requested output format: bundle (default), ndjson, phr, or sphr. Servers implementing PHR export MUST support this parameter.</p>
+</div></td></tr><tr><td>IN</td><td>patient</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></td><td/><td><div><p>The patient whose record is being exported. Required when the operation is invoked at type level on a multi-patient system.</p>
+</div></td></tr><tr><td>IN</td><td>start</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#date">date</a></td><td/><td><div><p>Earliest clinically-effective date to include (date or partial date).</p>
+</div></td></tr><tr><td>IN</td><td>end</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#date">date</a></td><td/><td><div><p>Latest clinically-effective date to include (date or partial date).</p>
+</div></td></tr><tr><td>IN</td><td>_since</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#instant">instant</a></td><td/><td><div><p>Only include resources updated after this instant. Same meaning as in Patient/$everything.</p>
+</div></td></tr><tr><td>IN</td><td>_type</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td/><td><div><p>Comma-separated list of resource types to include. Same meaning as in Patient/$everything.</p>
+</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/resource.html">Resource</a></td><td/><td><div><p>The exported record: a Bundle when outputFormat is bundle, otherwise a Binary wrapping the NDJSON (.phr) or zip (.sphr) content.</p>
+</div></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pe"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/phr/OperationDefinition/phr-export"/>
+  <version value="1.0.0-ballot2"/>
+  <name value="PHRExport"/>
+  <title value="PHR Export Operation"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <experimental value="true"/>
+  <date value="2026-10-08T19:53:09-05:00"/>
+  <publisher value="HL7 International / Patient Empowerment"/>
+  <contact>
+    <name value="HL7 International / Patient Empowerment"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientempowerment"/>
+    </telecom>
+  </contact>
+  <description value="Generates a complete patient health record. The default output is a FHIR Bundle; the outputFormat parameter selects NDJSON, .phr, or .sphr packaging. Parameters are aligned with the R5 Patient/$everything operation (_since, _type), so a server MAY implement this operation as a façade over $everything plus serialization. See the API Endpoints page for conformance requirements and worked examples."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <code value="phr-export"/>
+  <resource value="Bundle"/>
+  <resource value="Patient"/>
+  <system value="false"/>
+  <type value="true"/>
+  <instance value="true"/>
+  <parameter>
+    <name value="outputFormat"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Requested output format: bundle (default), ndjson, phr, or sphr. Servers implementing PHR export MUST support this parameter."/>
+    <type value="code"/>
+  </parameter>
+  <parameter>
+    <name value="patient"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="The patient whose record is being exported. Required when the operation is invoked at type level on a multi-patient system."/>
+    <type value="Reference"/>
+  </parameter>
+  <parameter>
+    <name value="start"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Earliest clinically-effective date to include (date or partial date)."/>
+    <type value="date"/>
+  </parameter>
+  <parameter>
+    <name value="end"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Latest clinically-effective date to include (date or partial date)."/>
+    <type value="date"/>
+  </parameter>
+  <parameter>
+    <name value="_since"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Only include resources updated after this instant. Same meaning as in Patient/$everything."/>
+    <type value="instant"/>
+  </parameter>
+  <parameter>
+    <name value="_type"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Comma-separated list of resource types to include. Same meaning as in Patient/$everything."/>
+    <type value="string"/>
+  </parameter>
+  <parameter>
+    <name value="return"/>
+    <use value="out"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The exported record: a Bundle when outputFormat is bundle, otherwise a Binary wrapping the NDJSON (.phr) or zip (.sphr) content."/>
+    <type value="Resource"/>
+  </parameter>
+</OperationDefinition>

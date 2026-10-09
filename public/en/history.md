@@ -20,6 +20,8 @@ FHIR and related web-based interoperability approaches have since been widely ad
 
 This changed legal and technical environment has created opportunities for a new ecosystem of applications, products, and services that incorporate patient health records. By 2022, more than two-thirds of U.S. hospitals reported using HL7 FHIR APIs to enable patient access to health information, illustrating the growing availability of standards-based interfaces through which patient-directed applications can obtain clinical data.[12](#fn:12)
 
+#### References
+
 1. World Health Organization.**International Statistical Classification of Diseases and Related Health Problems, Tenth Revision (ICD-10), Volume 2: Instruction Manual**, section 6.1, "Early history." https://iris.who.int/bitstream/handle/10665/42980/9241546530_eng.pdf [↩](#fnref:1)
 1. Library of Congress. "Of Note: Registering the Dewey Decimal System at the Library of Congress."**Unfolding History**. https://blogs.loc.gov/manuscripts/2026/04/of-note-registering-the-dewey-decimal-system-at-the-library-of-congress/ [↩](#fnref:2)
 1. The National Museum of Computing. "Colossus." https://www.tnmoc.org/colossus [↩](#fnref:3)
