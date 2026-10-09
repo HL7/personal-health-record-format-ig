@@ -84,7 +84,7 @@ POST /Bundle/$import?mode=validate
 
 A complete PHR import can run to gigabytes, and a synchronous `POST $import` risks client timeouts while giving the server no flow control.  Servers SHOULD support the standard [FHIR Asynchronous Request Pattern](https://www.hl7.org/fhir/R4/async.html) for imports:
 
-```http
+```bash
 POST /Bundle/$import
 Prefer: respond-async
 Content-Type: application/x-ndjson
@@ -164,7 +164,7 @@ Formal definitions for these operations are published as [phr-export](./Operatio
 | `Patient/$everything` | [FHIR core (R4/R5)](https://www.hl7.org/fhir/R5/operation-patient-everything.html) | Single patient compartment | searchset Bundle | Online, interactive retrieval from a FHIR server |
 | `$export` (Bulk Data) | [Bulk Data Access IG](https://hl7.org/fhir/uv/bulkdata/) | Group or population | Per-resource-type NDJSON files | Backend, population-scale export |
 
-To keep these interoperable, `$phr-export` parameters are aligned with R5 `Patient/$everything`: `_since` and `_type` carry the same meaning in both operations, and a server MAY implement `$phr-export` as a façade over `$everything` plus serialization.  A system that already supports EHI Export or Bulk Data satisfies the *data liberation* goal of this guide; `$phr-export` adds the PHR-specific packaging (single heterogeneous file, cover Composition, IPS table of contents).
+To keep these interoperable, `$phr-export` parameters are aligned with R5 `Patient/$everything`: `_since` and `_type` carry the same meaning in both operations, and a server MAY implement `$phr-export` as a façade over `$everything` plus serialization.  Likewise, a server that already implements EHI Export MAY expose `$phr-export` as an alias of `$ehi-export`, accepting the same requests and returning the exported record in one of the formats above — implementers should treat the two operation names as interchangeable in that configuration.  A system that already supports EHI Export or Bulk Data satisfies the *data liberation* goal of this guide; `$phr-export` adds the PHR-specific packaging (single heterogeneous file, cover Composition, IPS table of contents).
 
 ### SMART Health Links for PHR Sharing
 
@@ -313,7 +313,7 @@ PHR systems should support flexible filtering to allow patients and applications
 
 All standard FHIR search parameters apply. Common patterns for PHR queries:
 
-```http
+```bash
 # Resources modified since a date
 GET /Observation?_lastUpdated=gt2025-01-01
 
@@ -335,7 +335,7 @@ GET /Observation?category=activity
 
 Filter by originating system:
 
-```http
+```bash
 GET /Observation?_source=urn:ehr:hospital-xyz
 GET /Observation?_source=urn:device:fitbit
 GET /Observation?_source=urn:phr:patient-entered
@@ -345,7 +345,7 @@ GET /Observation?_source=urn:phr:patient-entered
 
 Filter for active/current data (suitable for IPS generation):
 
-```http
+```bash
 GET /Condition?clinical-status=active
 GET /MedicationStatement?status=active
 GET /AllergyIntolerance?clinical-status=active
@@ -355,7 +355,7 @@ GET /AllergyIntolerance?clinical-status=active
 
 Distinguish verified vs unverified data:
 
-```http
+```bash
 GET /Condition?verification-status=confirmed
 GET /Observation?_tag=clinician-verified
 ```
@@ -364,7 +364,7 @@ GET /Observation?_tag=clinician-verified
 
 When using the $phr-export operation:
 
-```http
+```bash
 # Export only specific resource types
 GET /Patient/123/$phr-export?_type=Condition,MedicationStatement,AllergyIntolerance
 
@@ -413,7 +413,7 @@ PHRs may implement patient-controlled sharing filters using Consent resources:
 
 For large result sets:
 
-```http
+```bash
 GET /Observation?_count=100&_offset=0
 ```
 
@@ -435,6 +435,6 @@ Response includes pagination links:
 
 Request only specific elements to reduce payload size:
 
-```http
+```bash
 GET /Observation?_elements=code,valueQuantity,effectiveDateTime
 ```  

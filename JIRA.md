@@ -1,3 +1,42 @@
+## Post-WGM Sprint (Sept 2026) — Block Votes on PR #124
+
+Implemented on branch `post-wgm-sprint` (PR [#124](https://github.com/HL7/personal-health-record-format-ig/pull/124), targeting `development`). Ticket text source: `JIRA-ITEMS-TO-CREATE.md`.
+
+**BV-1 — Patient Summary realignment (IPS)**
+- [FHIR-59576](https://jira.hl7.org/browse/FHIR-59576) - IPS as the PHR patient summary (resolves FHIR-53517 direction)
+
+**BV-2 — File format security simplification**
+- [FHIR-59577](https://jira.hl7.org/browse/FHIR-59577) - Remove .sphr encryption; drive-level guidance (resolves FHIR-50750, FHIR-49072, FHIR-50763)
+
+**BV-3 — API conformance & operations**
+- [FHIR-59578](https://jira.hl7.org/browse/FHIR-59578) - Normative MUST/SHOULD API language (applies FHIR-50761)
+- [FHIR-59579](https://jira.hl7.org/browse/FHIR-59579) - NDJSON line discipline
+- [FHIR-59300](https://jira.hl7.org/browse/FHIR-59300) - OperationDefinitions + relationship to $ehi-export / $everything / Bulk Data (pre-existing ticket)
+- [FHIR-59303](https://jira.hl7.org/browse/FHIR-59303) - Asynchronous $import with back pressure (pre-existing ticket)
+- [FHIR-59580](https://jira.hl7.org/browse/FHIR-59580) - Operation sequencing and forward references
+- [FHIR-59581](https://jira.hl7.org/browse/FHIR-59581) - Optional Companion Specifications table
+- [FHIR-59582](https://jira.hl7.org/browse/FHIR-59582) - Validation best practices, multi-schema
+
+**BV-4 — Logical models disposition**
+- [FHIR-59583](https://jira.hl7.org/browse/FHIR-59583) - Replace SocialMedia model with core-resource guidance
+- [FHIR-59584](https://jira.hl7.org/browse/FHIR-59584) - Mark logical models experimental (responds to FHIR-50765, FHIR-49258)
+
+**BV-5 — Jurisdictional guidance / US realm**
+- [FHIR-59585](https://jira.hl7.org/browse/FHIR-59585) - Jurisdictional / records-preservation notices (framework for FHIR-50738)
+- [FHIR-59586](https://jira.hl7.org/browse/FHIR-59586) - Military / veteran use case
+
+**BV-6 — PGHD visibility & claims data**
+- [FHIR-59301](https://jira.hl7.org/browse/FHIR-59301) - PGHD code mapping on homepage and menu (pre-existing ticket)
+- [FHIR-59587](https://jira.hl7.org/browse/FHIR-59587) - Blue Button 2.0 / CARIN BB claims import
+
+**BV-7 — Merging & patient identity**
+- [FHIR-59588](https://jira.hl7.org/browse/FHIR-59588) - Retitle Longitudinal page to Merging and Versioning (resolves FHIR-50739 objection)
+- [FHIR-59589](https://jira.hl7.org/browse/FHIR-59589) - Patient identity linking guidance
+
+**BV-8 / BV-9 — not yet filed** (exchange object & minimum metadata; IG narrative) — design discussion needs WG input before implementation; see `JIRA-ITEMS-TO-CREATE.md`.
+
+---
+
 ## Vulcan Drop-In
 - [FHIR-53515](https://jira.hl7.org/browse/FHIR-53515) - Document how to log adverse events (Vulcan)
 - [FHIR-53516](https://jira.hl7.org/browse/FHIR-53516) - Real World Data (RWD) harmonization (Vulcan)
