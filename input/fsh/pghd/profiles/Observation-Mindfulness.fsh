@@ -11,3 +11,4 @@ This profile defines how to represent Mindfulness.
 
 * category[ObservationCategory].coding.code = #activity (exactly)
 * code.coding[PGHDCode] from ObservationMindfulness (required)
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)

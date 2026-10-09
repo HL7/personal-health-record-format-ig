@@ -2,9 +2,6 @@
 
 ## CodeSystem: ECG Symptoms Status Codes 
 
- 
-Code indicating whether or not the user's symptoms are input during ECG waveform acquisition 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [ObservationEcgSymptomsStatusValueSet](ValueSet-observation-ecg-symptoms-status-codes.md)
@@ -57,7 +54,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "ECG Symptoms Status Codes",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

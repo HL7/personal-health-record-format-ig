@@ -2,9 +2,6 @@
 
 ## ValueSet: Observation Mind Codes 
 
- 
-Codes representing mind measurement items 
-
  **References** 
 
 * [PGHD Scored Assessment Profile](StructureDefinition-pghd-observation-scored-assessment.md)
@@ -64,7 +61,7 @@ Codes representing mind measurement items
   "title" : "Observation Mind Codes",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

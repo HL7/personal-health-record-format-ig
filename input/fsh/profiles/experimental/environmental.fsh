@@ -3,6 +3,7 @@ Id: Environmental
 Title: "Environmental Observation"
 Description: "A logical model representing environmental conditions relevant to patient health, such as air quality, temperature, noise, and UV exposure. These factors may be collected by consumer weather stations, smartphone sensors, or wearable devices."
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-wg].valueCode = #pe
+* ^experimental = true
 * subject 1..1 Reference(Patient) "The patient whose environment is being observed"
 * effectiveDateTime 0..1 dateTime "When the observation was made"
 * effectivePeriod 0..1 Period "Time period over which the observation applies"

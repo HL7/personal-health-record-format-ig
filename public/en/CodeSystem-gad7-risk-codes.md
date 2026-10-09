@@ -2,9 +2,6 @@
 
 ## CodeSystem: GAD-7 Assesment Risk Codes 
 
- 
-Code for GAD-7 Assesment Risk 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [ObservationGAD7Risk](ValueSet-observation-gad7-risk-codes.md)
@@ -57,7 +54,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "GAD-7 Assesment Risk Codes",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

@@ -2,9 +2,6 @@
 
 ## ValueSet: Observation Nutrition Codes 
 
- 
-Codes representing nutrition-related measures 
-
  **References** 
 
 * [PGHD Nutrition Profile](StructureDefinition-pghd-nutrition.md)
@@ -63,7 +60,7 @@ Codes representing nutrition-related measures
   "title" : "Observation Nutrition Codes",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

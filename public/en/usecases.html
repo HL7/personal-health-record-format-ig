@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+  	<!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7.css" rel="stylesheet"/>
     <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
 
@@ -124,6 +124,19 @@
     </ul>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Generated Health Data
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="pghd.html">Overview</a>
+      </li>
+      <li>
+        <a href="pghd-code-mapping.html">Code Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
       <b class="caret"></b>
     </a>
@@ -145,9 +158,6 @@
       </li>
       <li>
         <a href="longitudinal.html">Merging and Versioning</a>
-      </li>
-      <li>
-        <a href="pghd.html">Patient Generated Health Data</a>
       </li>
       <li>
         <a href="physiology.html">Physiology Domains</a>
@@ -275,17 +285,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#longitudinal-health-records" id="markdown-toc-longitudinal-health-records">Longitudinal Health Records</a></li>
   <li><a href="#longitudinal-studies" id="markdown-toc-longitudinal-studies">Longitudinal Studies</a></li>
   <li><a href="#snowbirds" id="markdown-toc-snowbirds">Snowbirds</a></li>
+  <li><a href="#military-service-members-and-veterans" id="markdown-toc-military-service-members-and-veterans">Military Service Members and Veterans</a></li>
   <li><a href="#symptom-tracking" id="markdown-toc-symptom-tracking">Symptom Tracking</a></li>
   <li><a href="#long-covid" id="markdown-toc-long-covid">Long COVID</a></li>
   <li><a href="#multiple-chronic-conditions" id="markdown-toc-multiple-chronic-conditions">Multiple Chronic Conditions</a></li>
   <li><a href="#lifelog" id="markdown-toc-lifelog">Lifelog</a></li>
   <li><a href="#healthy-living" id="markdown-toc-healthy-living">Healthy Living</a></li>
   <li><a href="#differential-diagnoses" id="markdown-toc-differential-diagnoses">Differential Diagnoses</a></li>
-  <li><a href="#alternative-care" id="markdown-toc-alternative-care">Alternative Care</a></li>
-  <li><a href="#bring-your-own-device" id="markdown-toc-bring-your-own-device">Bring Your Own Device</a></li>
   <li><a href="#foster-care-system" id="markdown-toc-foster-care-system">Foster Care System</a></li>
   <li><a href="#migrantsimmigrants" id="markdown-toc-migrantsimmigrants">Migrants/Immigrants</a></li>
   <li><a href="#climate-refugees" id="markdown-toc-climate-refugees">Climate Refugees</a></li>
+  <li><a href="#bring-your-own-device" id="markdown-toc-bring-your-own-device">Bring Your Own Device</a></li>
+  <li><a href="#alternative-care" id="markdown-toc-alternative-care">Alternative Care</a></li>
 </ul>
 
 </div>
@@ -295,85 +306,119 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Assembly of records over a long time span; generally multiple decades (20 years or more), and possibly from different healthcare systems with different practices or standards of care.</p>
 
-<p>John, now 65, has received care from five different healthcare systems since childhood. When diagnosed with a rare condition, his current physician needs to review his complete medical history. Through John's PHR, historical medical documents from paper-based systems are digitized via scanning applications, while digital records from various Electronic Health Record (EHR) systems are imported through standardized FHIR APIs. Legacy data from obsolete systems is extracted, transformed, and loaded into his PHR through integration engines. This comprehensive repository allows his physician to analyze decades of lab results, medication history, and clinical notes in a unified timeline view.</p>
+<blockquote>
+  <p>John, now 65, has received care from five different healthcare systems since childhood. When diagnosed with a rare condition, his current physician needs to review his complete medical history. Through John's PHR, historical medical documents from paper-based systems are digitized via scanning applications, while digital records from various Electronic Health Record (EHR) systems are imported through standardized FHIR APIs. Legacy data from obsolete systems is extracted, transformed, and loaded into his PHR through integration engines. This comprehensive repository allows his physician to analyze decades of lab results, medication history, and clinical notes in a unified timeline view.</p>
+</blockquote>
 
 <h3 id="longitudinal-studies">Longitudinal Studies</h3>
 
 <p>Clinical studies that follow up on patient results after 20 or more years. Very important for pediatric studies.</p>
 
-<p>Dr. Martinez is conducting research on childhood asthma treatments administered in the 1990s. Her research platform connects to participants' PHRs through secure research interfaces, allowing automated queries for specific data points while maintaining patient privacy. Participants use mobile study apps that synchronize with their PHRs to complete regular pulmonary function tests via Bluetooth-enabled spirometers. Historical paper records from the original study are digitized and tagged in the PHR with appropriate metadata. The PHR serves as both a data source and consent management tool, allowing participants to control which portions of their medical history are shared with researchers.</p>
+<blockquote>
+  <p>Dr. Martinez is conducting research on childhood asthma treatments administered in the 1990s. Her research platform connects to participants' PHRs through secure research interfaces, allowing automated queries for specific data points while maintaining patient privacy. Participants use mobile study apps that synchronize with their PHRs to complete regular pulmonary function tests via Bluetooth-enabled spirometers. Historical paper records from the original study are digitized and tagged in the PHR with appropriate metadata. The PHR serves as both a data source and consent management tool, allowing participants to control which portions of their medical history are shared with researchers.</p>
+</blockquote>
 
 <h3 id="snowbirds">Snowbirds</h3>
 
 <p>Many patients have more than one home location, and may spend time in different parts of the country on a seasonal basis. This leads to medical records that are fragmented.</p>
 
-<p>Eleanor spends winters in Florida and summers in Michigan, receiving regular care for her diabetes in both locations. Her PHR serves as the central repository for health data from both healthcare networks, with bi-directional integration through FHIR-based exchange protocols. Her continuous glucose monitor and smart insulin pump upload data directly to her PHR via a smartphone app, regardless of her location. When she experiences an acute complication while in Florida, her temporary physician accesses her complete medication history and recent test results through a provider portal connected to her PHR, ensuring seamless care coordination between seasonal providers.</p>
+<blockquote>
+  <p>Eleanor spends winters in Florida and summers in Michigan, receiving regular care for her diabetes in both locations. Her PHR serves as the central repository for health data from both healthcare networks, with bi-directional integration through FHIR-based exchange protocols. Her continuous glucose monitor and smart insulin pump upload data directly to her PHR via a smartphone app, regardless of her location. When she experiences an acute complication while in Florida, her temporary physician accesses her complete medication history and recent test results through a provider portal connected to her PHR, ensuring seamless care coordination between seasonal providers.</p>
+</blockquote>
+
+<h3 id="military-service-members-and-veterans">Military Service Members and Veterans</h3>
+
+<p>Service members move between military treatment facilities, deployed field care, veterans' health systems, and civilian network providers over a career — and their lifelong benefits often depend on the completeness of those records.</p>
+
+<p>? Staff Sergeant Rivera enlisted at 19 and separated from service 14 years later. Her health history spans garrison care in military treatment facilities, two overseas deployments where encounters were documented on disconnected systems with intermittent connectivity, urgent care received in civilian hospitals near duty stations, and post-service care split between a veterans' health system and a civilian primary care provider. Her PHR aggregates these sources into a single longitudinal record: deployment-era records captured offline were merged after synchronization, with provenance preserved for each source system. When she files a disability claim years later, the claim turns on documentation of an injury treated in theater — present in her PHR with its original record text, timestamps, and provenance intact, even though the originating field system was long since decommissioned.</p>
 
 <h3 id="symptom-tracking">Symptom Tracking</h3>
 
 <p>Symptoms of an illness can evolve as the condition improves or worsens, impacted by such things as climate or diet or circumstances of life.</p>
 
-<p>Michael has been tracking his multiple sclerosis symptoms through a dedicated mobile app that synchronizes with his PHR. The app captures structured data on fatigue levels, mobility challenges, and cognitive symptoms, while also collecting environmental data from weather APIs and activity data from his smartwatch. His PHR correlates these inputs with medication administration times recorded by a smart pill dispenser. During quarterly appointments, his neurologist accesses this comprehensive dataset through an analytics dashboard connected to Michael's PHR, identifying seasonal patterns and stress-related flare-ups that inform personalized treatment adjustments.</p>
+<blockquote>
+  <p>Michael has been tracking his multiple sclerosis symptoms through a dedicated mobile app that synchronizes with his PHR. The app captures structured data on fatigue levels, mobility challenges, and cognitive symptoms, while also collecting environmental data from weather APIs and activity data from his smartwatch. His PHR correlates these inputs with medication administration times recorded by a smart pill dispenser. During quarterly appointments, his neurologist accesses this comprehensive dataset through an analytics dashboard connected to Michael's PHR, identifying seasonal patterns and stress-related flare-ups that inform personalized treatment adjustments.</p>
+</blockquote>
 
 <h3 id="long-covid">Long COVID</h3>
 
 <p>An example of an ongoing longitudinal study that has captured national and worldwide attention, as we continued to determine the long-term effects of COVID-19.</p>
 
-<p>Sarah, who contracted COVID in 2020, participates in a multi-institution research registry that tracks her persistent symptoms. Her PHR integrates data from multiple sources: pulmonary function tests from hospital equipment, cardiology assessments from specialized clinics, cognitive evaluations from telemedicine sessions, and daily symptom tracking from her smartphone app. A secure FHIR-based research gateway allows her to share selected PHR data with the national Long COVID Registry while maintaining control over her privacy preferences. Researchers can then aggregate anonymized data across thousands of participants while Sarah's healthcare team maintains access to her individual comprehensive record for treatment decisions.</p>
+<blockquote>
+  <p>Sarah, who contracted COVID in 2020, participates in a multi-institution research registry that tracks her persistent symptoms. Her PHR integrates data from multiple sources: pulmonary function tests from hospital equipment, cardiology assessments from specialized clinics, cognitive evaluations from telemedicine sessions, and daily symptom tracking from her smartphone app. A secure FHIR-based research gateway allows her to share selected PHR data with the national Long COVID Registry while maintaining control over her privacy preferences. Researchers can then aggregate anonymized data across thousands of participants while Sarah's healthcare team maintains access to her individual comprehensive record for treatment decisions.</p>
+</blockquote>
 
 <h3 id="multiple-chronic-conditions">Multiple Chronic Conditions</h3>
 
 <p>Not all medical conditions are reported to all healthcare providers. Conversely, specialists will report results for one area of medicine, which needs to be incorporated and reconciled with the patient's master record.</p>
 
-<p>Robert manages hypertension, type 2 diabetes, and depression with three different specialists. His PHR serves as the integration hub for data from multiple provider systems. His home blood pressure cuff, glucometer, and medication adherence tracking devices all transmit data wirelessly to his PHR through a home health hub device. The PHR applies reconciliation algorithms to identify medication conflicts and consolidate problem lists from different specialists. When Robert is hospitalized for an acute kidney injury, emergency providers access his comprehensive health summary through a secure provider portal connected to his PHR, receiving alerts about potential medication interactions and viewing recent lab value trends from all specialists.</p>
+<blockquote>
+  <p>Robert manages hypertension, type 2 diabetes, and depression with three different specialists. His PHR serves as the integration hub for data from multiple provider systems. His home blood pressure cuff, glucometer, and medication adherence tracking devices all transmit data wirelessly to his PHR through a home health hub device. The PHR applies reconciliation algorithms to identify medication conflicts and consolidate problem lists from different specialists. When Robert is hospitalized for an acute kidney injury, emergency providers access his comprehensive health summary through a secure provider portal connected to his PHR, receiving alerts about potential medication interactions and viewing recent lab value trends from all specialists.</p>
+</blockquote>
 
 <h3 id="lifelog">Lifelog</h3>
 
 <p>Digital records of an individual's daily activities collected continuously from wearable devices, smartphones, and smart home sensors, including step counts, sleep duration and quality, heart rate, and other biometric measurements that can be used for predictive and preemptive medicine by establishing baseline health patterns and detecting early warning signs of deterioration.</p>
 
-<p>Priya has worn a smartwatch and used a sleep-tracking ring for the past six years, with step counts, heart rate, heart rate variability, and sleep stages flowing continuously into her PHR through device integration APIs. Her smart scale and home blood pressure cuff contribute weekly measurements, building a multi-year baseline of her normal physiological patterns. When the PHR's analytics detect a sustained elevation in her resting heart rate and a decline in her sleep quality over several weeks, it flags the anomaly for her review. At her next appointment, her physician examines the trend data alongside new lab work and identifies an emerging thyroid condition months earlier than symptoms alone would have prompted a visit, allowing treatment to begin before significant deterioration.</p>
+<blockquote>
+  <p>Priya has worn a smartwatch and used a sleep-tracking ring for the past six years, with step counts, heart rate, heart rate variability, and sleep stages flowing continuously into her PHR through device integration APIs. Her smart scale and home blood pressure cuff contribute weekly measurements, building a multi-year baseline of her normal physiological patterns. When the PHR's analytics detect a sustained elevation in her resting heart rate and a decline in her sleep quality over several weeks, it flags the anomaly for her review. At her next appointment, her physician examines the trend data alongside new lab work and identifies an emerging thyroid condition months earlier than symptoms alone would have prompted a visit, allowing treatment to begin before significant deterioration.</p>
+</blockquote>
 
 <h3 id="healthy-living">Healthy Living</h3>
 
 <p>Proactive wellness management focused on disease prevention rather than treatment, where individuals without acute conditions use their PHR to optimize lifestyle factors such as nutrition tracking, physical activity goals, sleep hygiene, stress management, and preventive screening schedules to extend healthy life expectancy.</p>
 
-<p>Marcus, 42 and in good health, uses his PHR as the hub for his preventive care strategy. His nutrition tracking app, gym workout logs, and meditation app all synchronize with his PHR, alongside annual physical results and routine lab panels imported from his primary care provider via FHIR APIs. The PHR tracks his preventive screening schedule, reminding him when he is due for a cholesterol panel, dental cleaning, or, as he approaches 45, his first colorectal cancer screening. Because his family history of cardiovascular disease is recorded in the PHR, it surfaces guideline-based recommendations for earlier and more frequent lipid monitoring. At his annual checkup, his physician reviews a year of lifestyle data alongside lab trends, and together they set evidence-based goals for the year ahead.</p>
+<blockquote>
+  <p>Marcus, 42 and in good health, uses his PHR as the hub for his preventive care strategy. His nutrition tracking app, gym workout logs, and meditation app all synchronize with his PHR, alongside annual physical results and routine lab panels imported from his primary care provider via FHIR APIs. The PHR tracks his preventive screening schedule, reminding him when he is due for a cholesterol panel, dental cleaning, or, as he approaches 45, his first colorectal cancer screening. Because his family history of cardiovascular disease is recorded in the PHR, it surfaces guideline-based recommendations for earlier and more frequent lipid monitoring. At his annual checkup, his physician reviews a year of lifestyle data alongside lab trends, and together they set evidence-based goals for the year ahead.</p>
+</blockquote>
 
 <h3 id="differential-diagnoses">Differential Diagnoses</h3>
 
 <p>Case presentation for rare diseases can require differential diagnosis, as clinicians generate hypotheses and tests for one condition after another to explain a set of symptoms.</p>
 
-<p>After years of unexplained joint pain and fatigue, Lisa has seen rheumatologists, neurologists, and immunologists across three healthcare systems. Her PHR maintains a comprehensive timeline of symptoms, documented through a combination of provider notes, patient-reported outcomes from mobile questionnaires, and movement data from her fitness tracker. Imaging studies from various facilities are stored in the PHR's integrated imaging repository, accessible through DICOM viewers. Diagnostic algorithms analyze this longitudinal data to highlight patterns and correlations. Lisa's new specialist reviews this unified record through a clinical portal, enabling a comprehensive understanding of all previous workups and tests without unnecessary duplication.</p>
-
-<h3 id="alternative-care">Alternative Care</h3>
-
-<p>Massage, Acupuncture, etc. - Patients may wish to track alternative modalities of healthcare that are not recognized or tracked by a healthcare provider or network.</p>
-
-<p>David receives acupuncture and chiropractic care for chronic back pain alongside conventional medical treatments. His PHR includes specialized modules for documenting complementary therapies that may not be captured in traditional EHRs. His acupuncturist and chiropractor use dedicated provider portals to document treatments directly in his PHR, while David uses a mobile app to track pain levels and functional improvements after each session. This data flows into his consolidated health record, alongside conventional medical treatments. When David's primary physician accesses the PHR during appointments, they can view the complete care regimen and identify potential correlations between alternative therapies and changes in his conventional treatment needs.</p>
-
-<h3 id="bring-your-own-device">Bring Your Own Device</h3>
-
-<p>Patients may wish to utilize consumer medical devices for tracking their own health.</p>
-
-<p>Amara uses a continuous glucose monitor and smart insulin pump to manage her type 1 diabetes. These devices connect to her smartphone via Bluetooth, with data automatically flowing into her PHR through a device integration hub. Dietary information from her nutrition tracking app and physical activity data from her sports watch are also synchronized to her PHR, providing context for glucose fluctuations. The PHR applies analytics to identify patterns and generates visualization dashboards. Amara's endocrinologist accesses this comprehensive dataset through a clinical portal during quarterly appointments, with the PHR highlighting significant trends and anomalies between visits. This integrated approach allows for more precise insulin dosage adjustments based on lifestyle factors.</p>
+<blockquote>
+  <p>After years of unexplained joint pain and fatigue, Lisa has seen rheumatologists, neurologists, and immunologists across three healthcare systems. Her PHR maintains a comprehensive timeline of symptoms, documented through a combination of provider notes, patient-reported outcomes from mobile questionnaires, and movement data from her fitness tracker. Imaging studies from various facilities are stored in the PHR's integrated imaging repository, accessible through DICOM viewers. Diagnostic algorithms analyze this longitudinal data to highlight patterns and correlations. Lisa's new specialist reviews this unified record through a clinical portal, enabling a comprehensive understanding of all previous workups and tests without unnecessary duplication.</p>
+</blockquote>
 
 <h3 id="foster-care-system">Foster Care System</h3>
 
 <p>Custody and care of foster children, especially when it crosses state lines, can be complicated; requiring detailed record keeping to align both medical and court proceedings.</p>
 
-<p>Eight-year-old Jayden has been in three different foster homes across two states in the past two years. A specialized foster care PHR maintains his complete health record, with role-based access controls that adjust as his legal guardianship changes. Mobile immunization apps used at various clinics push vaccination records directly to his PHR, while developmental screening tools on tablets in different healthcare settings contribute structured assessment data. The PHR connects to state immunization registries and health information exchanges through secure APIs, automatically retrieving available records as Jayden moves across jurisdictions. Both his case worker and new pediatrician have appropriate access levels to review his complete health history, with the case worker focusing on required documentation for court proceedings.</p>
+<blockquote>
+  <p>Eight-year-old Jayden has been in three different foster homes across two states in the past two years. A specialized foster care PHR maintains his complete health record, with role-based access controls that adjust as his legal guardianship changes. Mobile immunization apps used at various clinics push vaccination records directly to his PHR, while developmental screening tools on tablets in different healthcare settings contribute structured assessment data. The PHR connects to state immunization registries and health information exchanges through secure APIs, automatically retrieving available records as Jayden moves across jurisdictions. Both his case worker and new pediatrician have appropriate access levels to review his complete health history, with the case worker focusing on required documentation for court proceedings.</p>
+</blockquote>
 
 <h3 id="migrantsimmigrants">Migrants/Immigrants</h3>
 
 <p>Patients that have immigrated will necessarily have fragmented records that exist in multiple locations or countries.</p>
 
-<p>Mei recently immigrated from China and brought partial paper records translated into English. Her new primary care provider helps establish a PHR that incorporates these documents through OCR-enabled scanning, with machine translation assistance for any remaining untranslated sections. The PHR includes modules for reconciling international vaccination schedules and medication names that may differ from U.S. conventions. As Mei receives care in her new country, data from provider EHRs automatically flows into her PHR through FHIR interfaces. The PHR serves as the bridge between her previous care and her new healthcare relationships, with visualization tools that present her complete health timeline despite the fragmented sources.</p>
+<blockquote>
+  <p>Mei recently immigrated from China and brought partial paper records translated into English. Her new primary care provider helps establish a PHR that incorporates these documents through OCR-enabled scanning, with machine translation assistance for any remaining untranslated sections. The PHR includes modules for reconciling international vaccination schedules and medication names that may differ from U.S. conventions. As Mei receives care in her new country, data from provider EHRs automatically flows into her PHR through FHIR interfaces. The PHR serves as the bridge between her previous care and her new healthcare relationships, with visualization tools that present her complete health timeline despite the fragmented sources.</p>
+</blockquote>
 
 <h3 id="climate-refugees">Climate Refugees</h3>
 
 <p>Patients that have been forced to relocate, due to fires, floods, and similar events, will likely have medical records in multiple clinics or hospitals.</p>
 
-<p>The Garcia family evacuated during a major hurricane and relocated permanently to another state. Their daughter's pediatric specialty care for a congenital heart condition must now be transferred to a new healthcare system. The family's emergency evacuation kit included a secure digital card with critical health information that can be imported into their PHRs at their new location. Cloud-based PHR storage ensured their comprehensive records remained accessible despite physical displacement. The daughter's implanted cardiac monitor continues to transmit data to her PHR through cellular networks, maintaining continuity of monitoring despite the relocation. The PHR facilitates secure sharing of her complete surgical history and treatment protocol with the new cardiology team through standardized C-CDA and FHIR documents, ensuring a smooth transition without gaps in specialized care.</p>
+<blockquote>
+  <p>The Garcia family evacuated during a major hurricane and relocated permanently to another state. Their daughter's pediatric specialty care for a congenital heart condition must now be transferred to a new healthcare system. The family's emergency evacuation kit included a secure digital card with critical health information that can be imported into their PHRs at their new location. Cloud-based PHR storage ensured their comprehensive records remained accessible despite physical displacement. The daughter's implanted cardiac monitor continues to transmit data to her PHR through cellular networks, maintaining continuity of monitoring despite the relocation. The PHR facilitates secure sharing of her complete surgical history and treatment protocol with the new cardiology team through standardized C-CDA and FHIR documents, ensuring a smooth transition without gaps in specialized care.</p>
+</blockquote>
+
+<h3 id="bring-your-own-device">Bring Your Own Device</h3>
+
+<p>Patients may wish to utilize consumer medical devices for tracking their own health.</p>
+
+<blockquote>
+  <p>Amara uses a continuous glucose monitor and smart insulin pump to manage her type 1 diabetes. These devices connect to her smartphone via Bluetooth, with data automatically flowing into her PHR through a device integration hub. Dietary information from her nutrition tracking app and physical activity data from her sports watch are also synchronized to her PHR, providing context for glucose fluctuations. The PHR applies analytics to identify patterns and generates visualization dashboards. Amara's endocrinologist accesses this comprehensive dataset through a clinical portal during quarterly appointments, with the PHR highlighting significant trends and anomalies between visits. This integrated approach allows for more precise insulin dosage adjustments based on lifestyle factors.</p>
+</blockquote>
+
+<h3 id="alternative-care">Alternative Care</h3>
+
+<p>Massage, Acupuncture, etc. - Patients may wish to track alternative modalities of healthcare that are not recognized or tracked by a healthcare provider or network.</p>
+
+<blockquote>
+  <p>David receives acupuncture and chiropractic care for chronic back pain alongside conventional medical treatments. His PHR includes specialized modules for documenting complementary therapies that may not be captured in traditional EHRs. His acupuncturist and chiropractor use dedicated provider portals to document treatments directly in his PHR, while David uses a mobile app to track pain levels and functional improvements after each session. This data flows into his consolidated health record, alongside conventional medical treatments. When David's primary physician accesses the PHR during appointments, they can view the complete care regimen and identify potential correlations between alternative therapies and changes in his conventional treatment needs.</p>
+</blockquote>
 
 
 
@@ -403,8 +448,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-11 16:28:00 -0600">
-    2026-06-11
+  <span title="2026-10-08 19:53:00 -0500">
+    2026-10-08
   </span>
 
           <br/>

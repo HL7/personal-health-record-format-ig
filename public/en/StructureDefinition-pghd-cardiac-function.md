@@ -2,9 +2,6 @@
 
 ## Resource Profile: PGHD Cardiac Function Profile 
 
- 
-This profile defines how to represent Cardiac Function. 
-
 **Usages:**
 
 * Examples for this Profile: [Observation/pghd-cardiac-function-lowHeart-rate-event](Observation-pghd-cardiac-function-lowHeart-rate-event.md)
@@ -62,7 +59,7 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-cardiac-func
   "name" : "PGHDCardiacFunction",
   "title" : "PGHD Cardiac Function Profile",
   "status" : "active",
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {
@@ -131,17 +128,6 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-cardiac-func
         "id" : "Observation",
         "path" : "Observation",
         "short" : "PGHD Cardiac Function Profile"
-      },
-      {
-        "id" : "Observation.code.coding:PGHDCode",
-        "path" : "Observation.code.coding",
-        "sliceName" : "PGHDCode"
-      },
-      {
-        "id" : "Observation.code.coding:PGHDCode.system",
-        "path" : "Observation.code.coding.system",
-        "min" : 1,
-        "fixedUri" : "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"
       }
     ]
   }

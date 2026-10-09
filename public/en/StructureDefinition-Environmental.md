@@ -1,9 +1,6 @@
 # Environmental Observation - Personal Health Records v1.0.0-ballot2
 
-## Logical Model: Environmental Observation 
-
- 
-A logical model representing environmental conditions relevant to patient health, such as air quality, temperature, noise, and UV exposure. These factors may be collected by consumer weather stations, smartphone sensors, or wearable devices. 
+## Logical Model: Environmental Observation ( Experimental ) 
 
 **Usages:**
 
@@ -33,20 +30,8 @@ Other representations of profile: [CSV](../StructureDefinition-Environmental.csv
       "valueCode" : "pe"
     },
     {
-      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-      "valueInteger" : 1,
-      "_valueInteger" : {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-            "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
-          }
-        ]
-      }
-    },
-    {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-      "valueCode" : "trial-use",
+      "valueCode" : "informative",
       "_valueCode" : {
         "extension" : [
           {
@@ -62,7 +47,8 @@ Other representations of profile: [CSV](../StructureDefinition-Environmental.csv
   "name" : "Environmental",
   "title" : "Environmental Observation",
   "status" : "active",
-  "date" : "2026-06-11T16:28:41-06:00",
+  "experimental" : true,
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

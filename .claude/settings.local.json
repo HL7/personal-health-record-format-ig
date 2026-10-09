@@ -2,7 +2,24 @@
   "permissions": {
     "allow": [
       "Bash(curl:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(npx sushi *)",
+      "Bash(git add *)",
+      "Bash(git commit --quiet -m 'BV-8: QA cleanup — duplicate titles, ConceptMap metadata, VS experimental flags *)",
+      "Bash(git commit --amend --quiet -m 'QA cleanup \\(technical corrections\\): titles, ConceptMap metadata, VS flags *)",
+      "Bash(./_genonce.sh)",
+      "Bash(echo \"exit=$?\")",
+      "Read(//tmp/**)",
+      "Bash(java -Dfile.encoding=UTF-8 -jar input-cache/publisher.jar -ig .)",
+      "Bash(grep -nE '^#{1,3} |FHIR-[0-9]+' /Volumes/MobileDev/ImplementationGuides/personal-health-record-format-ig/JIRA-ITEMS-TO-CREATE.md)",
+      "Bash(env)",
+      "Read(//Volumes/Home/Users/abigailwatson/**)",
+      "Read(//Volumes/Home/Users/abigailwatson/.claude/**)",
+      "Bash(gh pr *)",
+      "Bash(git stash *)",
+      "Bash(git checkout *)",
+      "Bash(git pull *)",
+      "Bash(git commit -m 'Post-WGM ticket-prep updates: JIRA doc revisions, api/usecases/history page edits *)"
     ]
   }
 }

@@ -11,6 +11,7 @@ This profile defines the implementation of the State of Mind.
 
 * category[ObservationCategory].coding.code = #survey (exactly)
 * code.coding[PGHDCode] from ObservationMind
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * code.coding[PGHDCode].code = #stateOfMind (exactly)
 
 * component ^slicing.discriminator[0].type = #value

@@ -2,9 +2,6 @@
 
 ## Resource Profile: PGHD Medication Adherence Profile 
 
- 
-This profile defines how to represent medication adherence. 
-
 **Usages:**
 
 * Examples for this Profile: [Observation/pghd-medication-adherence](Observation-pghd-medication-adherence.md)
@@ -63,7 +60,7 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-medication-a
   "title" : "PGHD Medication Adherence Profile",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

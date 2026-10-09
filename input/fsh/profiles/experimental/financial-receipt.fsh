@@ -3,6 +3,7 @@ Id: FinancialReceipt
 Title: "Financial Receipt"
 Description: "A logical model for over-the-counter (OTC) health-related purchase receipts. Captures expenses for items such as pharmacy purchases, medical supplies, copays, and wellness products that may not generate a formal insurance Claim resource."
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-wg].valueCode = #pe
+* ^experimental = true
 * subject 1..1 Reference(Patient) "The patient or person that purchased the item"
 * date 1..1 dateTime "The date of the transaction"
 * vendor 0..1 string "Vendor or merchant name"

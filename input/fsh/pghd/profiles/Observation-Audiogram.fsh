@@ -11,6 +11,7 @@ This profile defines how to represent Audiogram.
 
 * category[ObservationCategory].coding.code = #exam (exactly)
 * code.coding[PGHDCode].code = #Audiogram (exactly)
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * code.coding[LOINCCode].code = #89015-2 (exactly)
 * hasMember only Reference(PGHDHearingSensitivity)
 * hasMember MS

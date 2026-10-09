@@ -11,3 +11,4 @@ This profile defines how to represent SelfCare.
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
 * code.coding[PGHDCode] from ObservationSelfCare
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)

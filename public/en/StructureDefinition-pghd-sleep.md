@@ -2,9 +2,6 @@
 
 ## Resource Profile: PGHD Sleep Profile 
 
- 
-This profile defines how to represent Sleep. 
-
 **Usages:**
 
 * Refer to this Profile: [PGHD Workout Profile](StructureDefinition-pghd-workout.md)
@@ -64,7 +61,7 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-sleep.csv), 
   "title" : "PGHD Sleep Profile",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {
@@ -209,6 +206,8 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-sleep.csv), 
       {
         "id" : "Observation.code.coding:PGHDCode.system",
         "path" : "Observation.code.coding.system",
+        "min" : 1,
+        "fixedUri" : "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes",
         "mustSupport" : true
       },
       {

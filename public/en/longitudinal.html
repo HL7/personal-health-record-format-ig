@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Longitudinal Records - Personal Health Records v1.0.0-ballot2</title>
+    <title>Merging and Versioning - Personal Health Records v1.0.0-ballot2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+  	<!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7.css" rel="stylesheet"/>
     <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
 
@@ -124,6 +124,19 @@
     </ul>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Generated Health Data
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="pghd.html">Overview</a>
+      </li>
+      <li>
+        <a href="pghd-code-mapping.html">Code Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
       <b class="caret"></b>
     </a>
@@ -145,9 +158,6 @@
       </li>
       <li>
         <a href="longitudinal.html">Merging and Versioning</a>
-      </li>
-      <li>
-        <a href="pghd.html">Patient Generated Health Data</a>
       </li>
       <li>
         <a href="physiology.html">Physiology Domains</a>
@@ -215,7 +225,7 @@
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Longitudinal Records</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Merging and Versioning</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -236,7 +246,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Personal Health Records - Local Development build (v1.0.0-ballot2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.org/fhir/uv/phr/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Longitudinal Records</h2>
+  <h2>Merging and Versioning</h2>
   
 
 
@@ -275,6 +285,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#architecture-features" id="markdown-toc-architecture-features">Architecture Features</a>    <ul>
       <li><a href="#authoritative-repository-management" id="markdown-toc-authoritative-repository-management">Authoritative Repository Management</a></li>
       <li><a href="#branching-and-merging" id="markdown-toc-branching-and-merging">Branching and Merging</a></li>
+      <li><a href="#patient-identity-and-linking" id="markdown-toc-patient-identity-and-linking">Patient Identity and Linking</a></li>
       <li><a href="#versioning-and-change-tracking" id="markdown-toc-versioning-and-change-tracking">Versioning and Change Tracking</a></li>
       <li><a href="#replication-and-synchronization" id="markdown-toc-replication-and-synchronization">Replication and Synchronization</a></li>
       <li><a href="#rollback-and-recovery" id="markdown-toc-rollback-and-recovery">Rollback and Recovery</a></li>
@@ -284,7 +295,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<h4 id="record-lifecycle-operations">Record Lifecycle Operations</h4>
+<p>A longitudinal Personal Health Record is assembled, not received: it grows by merging exports, incremental updates, and patient-generated data from many sources over many years.  This page describes the merging, versioning, deduplication, and conflict-resolution patterns that make that assembly reliable.  (Record <em>lifecycle</em> management — originate, amend, attest, archive — is the province of the <a href="https://hl7.org/ehrs/uv/phrsfmr2/">PHR-S Functional Model</a> and the <a href="https://build.fhir.org/ig/HL7/ehrs-rle-ig/">EHR Record Lifecycle Events IG</a>, and is intentionally not restated here.)</p>
+
+<h4 id="acquiring-and-updating-records">Acquiring and Updating Records</h4>
 
 <p>When a Personal Health Record (PHR) obtains data from external systems, the initial longitudinal record exchange may be performed using an Electronic Health Information (EHI) export capability, such as the HL7 International EHI Export API / Bulk FHIR export pattern, which provides a patient-scoped mechanism to retrieve a comprehensive snapshot of longitudinal clinical data from an originating EHR. The HL7 International Bulk Data Access specification defines asynchronous export semantics suitable for transferring complete patient records or large clinical histories.</p>
 
@@ -292,7 +305,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Where event synchronization is needed, HL7 International FHIRCast can provide session- or event-based notification that relevant clinical context has changed, allowing a PHR or downstream system to request only newly available resources rather than repeating a full export. In this model, FHIRCast acts as a trigger, while Smart Health Links or similar exchange artifacts provide retrievable payload references.</p>
 
-<p>Taken together, these mechanisms create a lifecycle comparable to distributed source-control workflows:</p>
+<p>Taken together, these mechanisms create a workflow comparable to distributed source control:</p>
 
 <p>Clone: initial longitudinal record acquisition through EHI export / bulk patient export
 Pull: retrieval of incremental changes from external systems
@@ -352,6 +365,24 @@ Merge: reconciliation of overlapping data received from multiple EHR sources</p>
 
 <p>A practical merge strategy is to compare resource identifiers, business identifiers, timestamps, and provenance relationships before deciding whether resources represent replacement, supplementation, or coexistence.</p>
 
+<h3 id="patient-identity-and-linking">Patient Identity and Linking</h3>
+
+<p>Every source system emits its own <code class="language-plaintext highlighter-rouge">Patient</code> resource.  An aggregation across one payer network, two provider portals, and a phone's health platform will contain at least four Patient resources with four different identifier systems (member IDs, MRNs, account IDs) — all describing the same person.  This was the central practical problem in multi-source aggregation testing at the September 2026 Connectathon.  The merge patterns above assume this problem is solved; this section describes how to solve it.</p>
+
+<p><strong>Keep every source Patient resource.</strong>  Do not destructively merge Patient resources into one "golden record."  Each source Patient carries the identifiers that downstream resources in that export reference (<code class="language-plaintext highlighter-rouge">Observation.subject</code>, <code class="language-plaintext highlighter-rouge">ExplanationOfBenefit.patient</code>, …), and discarding it breaks referential integrity and destroys evidence.  Instead, preserve each as received, with a <a href="https://www.hl7.org/fhir/R4/provenance.html">Provenance</a> resource naming its source.</p>
+
+<p><strong>Link them explicitly.</strong>  Designate one Patient resource as primary for the PHR (typically the patient-created one), and connect the source records to it:</p>
+
+<ul>
+  <li><a href="https://www.hl7.org/fhir/R4/patient.html#links"><code class="language-plaintext highlighter-rouge">Patient.link</code></a> with <code class="language-plaintext highlighter-rouge">type = replaced-by</code> on each source Patient, pointing at the primary — meaning "for ongoing use, see that record."</li>
+  <li><code class="language-plaintext highlighter-rouge">Patient.link</code> with <code class="language-plaintext highlighter-rouge">type = refer</code> or <code class="language-plaintext highlighter-rouge">seealso</code> when the source record remains independently maintained (e.g., a payer's member record that continues to receive updates).</li>
+  <li>A <a href="https://www.hl7.org/fhir/R4/person.html">Person</a> resource MAY additionally link Patient records across systems when the PHR participates in a broader identity federation, but within a single PHR, <code class="language-plaintext highlighter-rouge">Patient.link</code> is usually sufficient.</li>
+</ul>
+
+<p><strong>Match carefully.</strong>  When ingesting a new source, candidate matching uses business identifiers first (exact identifier-system matches), then demographics (name, birth date, administrative sex, address).  Servers implementing matching SHOULD expose it via the standard <a href="https://www.hl7.org/fhir/R4/patient-operation-match.html"><code class="language-plaintext highlighter-rouge">Patient/$match</code></a> operation and SHOULD treat probabilistic matches below certainty as <em>pending</em> — imported, preserved, but not linked — until confirmed by the patient.  In a PHR the patient themselves is the ultimate matching authority: patient confirmation is both the most reliable signal available and a signal clinical MPIs rarely have.</p>
+
+<p><strong>Rewrite references at query time, not storage time.</strong>  When presenting a unified view (e.g., "all my observations"), resolve each resource's subject through the link graph to the primary Patient, leaving stored resources untouched.  Exports MAY include the full link graph so downstream systems can re-derive the unified view.</p>
+
 <h3 id="versioning-and-change-tracking">Versioning and Change Tracking</h3>
 
 <p>FHIR resource versioning provides native support for longitudinal change tracking through <code class="language-plaintext highlighter-rouge">meta.versionId</code>, <code class="language-plaintext highlighter-rouge">meta.lastUpdated</code>, and server-maintained history interactions.</p>
@@ -390,7 +421,7 @@ Merge: reconciliation of overlapping data received from multiple EHR sources</p>
   <li>FHIRCast event notifications to signal that new data is available</li>
 </ul>
 
-<p>This supports a clone-and-pull lifecycle in which only newly available content is transferred after the initial exchange.</p>
+<p>This supports a clone-and-pull workflow in which only newly available content is transferred after the initial exchange.</p>
 
 <h3 id="rollback-and-recovery">Rollback and Recovery</h3>
 
@@ -449,8 +480,8 @@ Merge: reconciliation of overlapping data received from multiple EHR sources</p>
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-11 16:28:00 -0600">
-    2026-06-11
+  <span title="2026-10-08 19:53:00 -0500">
+    2026-10-08
   </span>
 
           <br/>

@@ -11,6 +11,7 @@ This profile defines how to represent Sleep.
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
 * code.coding[PGHDCode] from ObservationSleep (required)
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
 * valueCodeableConcept.coding ^slicing.discriminator[=].path = "system"

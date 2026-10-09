@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+  	<!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7.css" rel="stylesheet"/>
     <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
 
@@ -124,6 +124,19 @@
     </ul>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Generated Health Data
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="pghd.html">Overview</a>
+      </li>
+      <li>
+        <a href="pghd-code-mapping.html">Code Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
       <b class="caret"></b>
     </a>
@@ -145,9 +158,6 @@
       </li>
       <li>
         <a href="longitudinal.html">Merging and Versioning</a>
-      </li>
-      <li>
-        <a href="pghd.html">Patient Generated Health Data</a>
       </li>
       <li>
         <a href="physiology.html">Physiology Domains</a>
@@ -270,474 +280,87 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
-</div>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#files-are-not-self-protecting" id="markdown-toc-files-are-not-self-protecting">Files Are Not Self-Protecting</a></li>
+  <li><a href="#protecting-data-at-rest" id="markdown-toc-protecting-data-at-rest">Protecting Data at Rest</a></li>
+  <li><a href="#protecting-data-in-transit" id="markdown-toc-protecting-data-in-transit">Protecting Data in Transit</a></li>
+  <li><a href="#integrity-and-provenance" id="markdown-toc-integrity-and-provenance">Integrity and Provenance</a></li>
+  <li><a href="#functional-model-reference" id="markdown-toc-functional-model-reference">Functional Model Reference</a></li>
+</ul>
 
-<blockquote>
-  <p>Work in progress.  Content to be determined.</p>
-</blockquote>
+</div>
+<p>Personal Health Records spend most of their life <em>at rest</em> — on a phone, a laptop, a thumbdrive, or a CD in a shoebox — punctuated by occasional transfers between systems. The security model of this guide follows that reality: protect data at rest with the encryption facilities of the operating system and storage volume, and protect data in transit with the transport layer. This guide does <strong>not</strong> define its own file-level encryption or signing scheme.</p>
+
+<h3 id="files-are-not-self-protecting">Files Are Not Self-Protecting</h3>
+
+<p><code class="language-plaintext highlighter-rouge">.phr</code> files are plain text (NDJSON), and <code class="language-plaintext highlighter-rouge">.sphr</code> files are ordinary zip archives. <strong>Neither format is self-protecting, and systems MUST NOT treat possession of a <code class="language-plaintext highlighter-rouge">.phr</code> or <code class="language-plaintext highlighter-rouge">.sphr</code> file as evidence of authorization.</strong> Anyone who can read the file can read the record. Protection comes from the environment the file lives in, not from the file itself.</p>
+
+<p>Earlier drafts of this guide specified passphrase- and public-key-based encryption of <code class="language-plaintext highlighter-rouge">.sphr</code> files. That approach was removed: bespoke file-level cryptography creates key-management burdens (key distribution, recovery, revocation) that consumer PHR applications have not implemented in practice, and it gives patients a false sense that an exported file is "safe" to leave anywhere. Connectathon testing across six systems (Sept 2026) exercised none of the file-level cryptography; all systems relied on transport and volume security.</p>
+
+<h3 id="protecting-data-at-rest">Protecting Data at Rest</h3>
+
+<p>Systems that store PHR data — and patients who keep exported files — SHOULD rely on volume-level or file-system-level encryption provided by the platform:</p>
 
 <table>
   <thead>
     <tr>
-      <th>Section</th>
-      <th style="text-align: left">Header Name</th>
-      <th> </th>
-      <th> </th>
+      <th>Platform</th>
+      <th>Mechanism</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>TI.1</td>
-      <td style="text-align: left">Security</td>
-      <td> </td>
-      <td> </td>
+      <td>macOS</td>
+      <td><a href="https://support.apple.com/guide/mac-help/protect-data-on-your-mac-with-filevault-mh11785/mac">FileVault</a> full-disk encryption</td>
     </tr>
     <tr>
-      <td>TI.1.1</td>
-      <td style="text-align: left">Entity Authentication</td>
-      <td> </td>
-      <td> </td>
+      <td>Windows</td>
+      <td><a href="https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/">BitLocker</a> drive encryption</td>
     </tr>
     <tr>
-      <td>TI.1.2</td>
-      <td style="text-align: left">Entity Authorization</td>
-      <td> </td>
-      <td> </td>
+      <td>Linux</td>
+      <td><a href="https://gitlab.com/cryptsetup/cryptsetup">LUKS/dm-crypt</a> volume encryption</td>
     </tr>
     <tr>
-      <td>TI.1.3</td>
-      <td style="text-align: left">Entity Access Control</td>
-      <td> </td>
-      <td> </td>
+      <td>iOS</td>
+      <td>File-based <a href="https://support.apple.com/guide/security/data-protection-overview-secf6276da8a/web">Data Protection</a> (enabled by default)</td>
     </tr>
     <tr>
-      <td>TI.1.3.1</td>
-      <td style="text-align: left">Emergency Access Control</td>
-      <td> </td>
-      <td> </td>
+      <td>Android</td>
+      <td><a href="https://source.android.com/docs/security/features/encryption/file-based">File-based encryption</a> (enabled by default)</td>
     </tr>
     <tr>
-      <td>TI.1.4</td>
-      <td style="text-align: left">Patient Access Management</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.1.5</td>
-      <td style="text-align: left">Non-Repudiation</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.1.6</td>
-      <td style="text-align: left">Secure Data Exchange</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.1.7</td>
-      <td style="text-align: left">Secure Data Routing</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.1.8</td>
-      <td style="text-align: left">Patient Privacy and Confidentiality</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.1.8.1</td>
-      <td style="text-align: left">Redact Patient Identifying Information</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.1.8.2</td>
-      <td style="text-align: left">Protect Individual Patient Identity</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.1.9</td>
-      <td style="text-align: left">System Operation Measurements</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.1.10</td>
-      <td style="text-align: left">Service Availability</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.1.11</td>
-      <td style="text-align: left">Trusted Information Exchange Environment</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2</td>
-      <td style="text-align: left">Audit</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1</td>
-      <td style="text-align: left">Audit Triggers</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.1</td>
-      <td style="text-align: left">Record Entry Audit Triggers</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.2</td>
-      <td style="text-align: left">Security Audit Triggers</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.2.1</td>
-      <td style="text-align: left">Security Event Security Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.2.2</td>
-      <td style="text-align: left">User Authentication to the System (Start user session) Security Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.2.3</td>
-      <td style="text-align: left">User Authentication (System Prompt for Password Change) Security Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.2.4</td>
-      <td style="text-align: left">User Request to Change Password Security Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.2.5</td>
-      <td style="text-align: left">User Log Out (End user session) Security Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.2.6</td>
-      <td style="text-align: left">User Access (Successful) Security Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.2.7</td>
-      <td style="text-align: left">User Attempts to Access Data (Unsuccessful – Access Denied) Security Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.2.8</td>
-      <td style="text-align: left">Extraordinary User Access (Break the Glass) Security Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.2.9</td>
-      <td style="text-align: left">User Permissions (Authorization) Security Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3</td>
-      <td style="text-align: left">System Audit Triggers</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.1</td>
-      <td style="text-align: left">System Event System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.2</td>
-      <td style="text-align: left">System Started System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.3</td>
-      <td style="text-align: left">Back Up Started System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.4</td>
-      <td style="text-align: left">Back Up Completed System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.5</td>
-      <td style="text-align: left">Back Up Recovery Started System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.6</td>
-      <td style="text-align: left">Back Up Recovery Completed System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.7</td>
-      <td style="text-align: left">Batch Job Started System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.8</td>
-      <td style="text-align: left">Batch Job Completed System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.9</td>
-      <td style="text-align: left">Maintenance Started System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.10</td>
-      <td style="text-align: left">Maintenance Completed System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.11</td>
-      <td style="text-align: left">Resource Usage System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.12</td>
-      <td style="text-align: left">System Maintenance Events -Local Access System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.13</td>
-      <td style="text-align: left">System Maintenance Events - Remote Access System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.14</td>
-      <td style="text-align: left">System Maintenance - PHR or Clinical Software System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.15</td>
-      <td style="text-align: left">System Maintenance - Codes, Vocabulary, Knowledge, Rules System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.3.16</td>
-      <td style="text-align: left">Data Corruption System Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.4</td>
-      <td style="text-align: left">Clinical Audit Triggers</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.4.1</td>
-      <td style="text-align: left">Clinical Alerts Clinical Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.4.2</td>
-      <td style="text-align: left">Acknowledgements of Clinically Significant Report Changes Clinical Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.1.4.3</td>
-      <td style="text-align: left">Disable Decision Support Alerts Clinical Audit Trigger</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.2</td>
-      <td style="text-align: left">Audit Log Management</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.2.1</td>
-      <td style="text-align: left">Audit Log Indelibility</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.2.3</td>
-      <td style="text-align: left">Audit Notification and Review</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.3</td>
-      <td style="text-align: left">Registry and Directory Services</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.4</td>
-      <td style="text-align: left">Standard Terminology and Terminology Services</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.4.1</td>
-      <td style="text-align: left">Standard Terminology and Terminology Models</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.4.2</td>
-      <td style="text-align: left">Maintenance and Versioning of Standard Terminologies</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.4.3</td>
-      <td style="text-align: left">Terminology Mapping</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.5</td>
-      <td style="text-align: left">Standards-Based Interoperability</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.5.1</td>
-      <td style="text-align: left">Application, Structured-Message, and Structured-Document Interchange Standards</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.5.1.1</td>
-      <td style="text-align: left">Application Interchange Standards</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.5.1.2</td>
-      <td style="text-align: left">Structured-Document Interchange Standards</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.5.1.3</td>
-      <td style="text-align: left">Structured-Message Interchange Standards</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.5.2</td>
-      <td style="text-align: left">Interchange Standards Versioning and Maintenance</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.5.3</td>
-      <td style="text-align: left">Standards-Based Application Integration</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.5.4</td>
-      <td style="text-align: left">Interchange Agreements</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.5.5</td>
-      <td style="text-align: left">System Integration</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.6</td>
-      <td style="text-align: left">Business Rules Management</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.7</td>
-      <td style="text-align: left">Workflow Management</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.8</td>
-      <td style="text-align: left">Database Backup and Recovery</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.9</td>
-      <td style="text-align: left">System Management Operations and Performance</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.10</td>
-      <td style="text-align: left">Standard or Preferred Clinical Models and Clinical Model Services</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.10.1</td>
-      <td style="text-align: left">Standard or Preferred Clinical Models</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.10.2</td>
-      <td style="text-align: left">Maintenance and Versioning of Standard or Preferred Clinical Models</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>TI.10.3</td>
-      <td style="text-align: left">Clinical Model Mapping</td>
-      <td> </td>
-      <td> </td>
+      <td>Removable media (USB, external drives)</td>
+      <td>Hardware-encrypted drives, or an encrypted volume (BitLocker To Go, FileVault-formatted volume, VeraCrypt)</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="references">References</h3>
+<p>Guidance for implementers and for patient-facing documentation:</p>
 
-<p><a href="https://hl7.org/ehrs/uv/phrsfmr2/">Personal Health Record System Functional Model</a></p>
+<ul>
+  <li>PHR applications SHOULD store their data within the platform's encrypted storage areas (e.g., app-private storage on mobile platforms), and SHOULD NOT export unencrypted copies to shared locations without informing the user.</li>
+  <li>When exporting <code class="language-plaintext highlighter-rouge">.phr</code>/<code class="language-plaintext highlighter-rouge">.sphr</code> files to removable media for physical exchange, the media itself SHOULD be encrypted, or the file SHOULD be placed in an encrypted container.</li>
+  <li>Burned optical media (CD/DVD) generally cannot be volume-encrypted after the fact; records distributed this way SHOULD be treated as unprotected and handled accordingly (physical custody, prompt import, destruction when no longer needed).</li>
+</ul>
+
+<h3 id="protecting-data-in-transit">Protecting Data in Transit</h3>
+
+<ul>
+  <li>System-to-system transfers (APIs described on the <a href="./api.html">API Endpoints</a> page) MUST use TLS (HTTPS).</li>
+  <li><a href="https://docs.smarthealthit.org/smart-health-links/">SMART Health Links</a> carry their own encryption: the shared payload is encrypted (A256GCM) and the decryption key travels inside the link/QR code. SHL is the RECOMMENDED mechanism for patient-mediated sharing of records with third parties.</li>
+  <li>Physical media exchange is a transfer too — see the removable-media guidance above.</li>
+</ul>
+
+<h3 id="integrity-and-provenance">Integrity and Provenance</h3>
+
+<p>Data integrity and authorship questions are handled with FHIR's standard mechanisms rather than file-level signatures: <a href="https://www.hl7.org/fhir/R4/provenance.html">Provenance</a> resources record who created and transformed each record, and <a href="https://www.hl7.org/fhir/R4/auditevent.html">AuditEvent</a> records access. See the <a href="./longitudinal.html">Merging and Versioning</a> page for how provenance supports reconciliation across sources.</p>
+
+<h3 id="functional-model-reference">Functional Model Reference</h3>
+
+<p>The <a href="https://hl7.org/ehrs/uv/phrsfmr2/">PHR-S Functional Model</a> defines the complete catalog of security, audit, and infrastructure conformance criteria for PHR <em>systems</em> (sections TI.1 Security and TI.2 Audit, including authentication, authorization, access control, non-repudiation, and audit triggers). PHR system implementers SHOULD consult the functional model directly; this guide does not restate those system-level requirements, since this guide's scope is the record format and its exchange rather than the system that hosts it.</p>
+
 
 
 
@@ -766,8 +389,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-11 16:28:00 -0600">
-    2026-06-11
+  <span title="2026-10-08 19:53:00 -0500">
+    2026-10-08
   </span>
 
           <br/>

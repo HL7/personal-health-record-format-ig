@@ -1,9 +1,6 @@
 # Financial Receipt - Personal Health Records v1.0.0-ballot2
 
-## Logical Model: Financial Receipt 
-
- 
-A logical model for over-the-counter (OTC) health-related purchase receipts. Captures expenses for items such as pharmacy purchases, medical supplies, copays, and wellness products that may not generate a formal insurance Claim resource. 
+## Logical Model: Financial Receipt ( Experimental ) 
 
 **Usages:**
 
@@ -33,20 +30,8 @@ Other representations of profile: [CSV](../StructureDefinition-FinancialReceipt.
       "valueCode" : "pe"
     },
     {
-      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-      "valueInteger" : 1,
-      "_valueInteger" : {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-            "valueCanonical" : "http://hl7.org/fhir/uv/phr/ImplementationGuide/hl7.fhir.uv.phr"
-          }
-        ]
-      }
-    },
-    {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-      "valueCode" : "trial-use",
+      "valueCode" : "informative",
       "_valueCode" : {
         "extension" : [
           {
@@ -62,7 +47,8 @@ Other representations of profile: [CSV](../StructureDefinition-FinancialReceipt.
   "name" : "FinancialReceipt",
   "title" : "Financial Receipt",
   "status" : "active",
-  "date" : "2026-06-11T16:28:41-06:00",
+  "experimental" : true,
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

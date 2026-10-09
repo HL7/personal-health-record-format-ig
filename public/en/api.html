@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+  	<!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7.css" rel="stylesheet"/>
     <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
 
@@ -124,6 +124,19 @@
     </ul>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Generated Health Data
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="pghd.html">Overview</a>
+      </li>
+      <li>
+        <a href="pghd-code-mapping.html">Code Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
       <b class="caret"></b>
     </a>
@@ -145,9 +158,6 @@
       </li>
       <li>
         <a href="longitudinal.html">Merging and Versioning</a>
-      </li>
-      <li>
-        <a href="pghd.html">Patient Generated Health Data</a>
       </li>
       <li>
         <a href="physiology.html">Physiology Domains</a>
@@ -273,14 +283,28 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#phr-export-and-import-operations" id="markdown-toc-phr-export-and-import-operations">PHR Export and Import Operations</a></li>
+  <li><a href="#relationship-to-other-export-operations" id="markdown-toc-relationship-to-other-export-operations">Relationship to Other Export Operations</a></li>
   <li><a href="#smart-health-links-for-phr-sharing" id="markdown-toc-smart-health-links-for-phr-sharing">SMART Health Links for PHR Sharing</a></li>
   <li><a href="#streaming-phr-data-over-http" id="markdown-toc-streaming-phr-data-over-http">Streaming PHR Data Over HTTP</a></li>
+  <li><a href="#query-and-filter-parameters" id="markdown-toc-query-and-filter-parameters">Query and Filter Parameters</a></li>
 </ul>
 
 </div>
 <h3 id="phr-export-and-import-operations">PHR Export and Import Operations</h3>
 
 <p>Systems MAY implement standard APIs for generating and importing <code class="language-plaintext highlighter-rouge">.phr</code> or <code class="language-plaintext highlighter-rouge">.sphr</code> files. These operations enable patients to export their complete health records from one system and import them into another, supporting the core PHR use case of patient-controlled data portability.</p>
+
+<h4 id="api-conformance">API Conformance</h4>
+
+<p>Systems that implement the export and import APIs described on this page are subject to the following conformance requirements, which reflect what interoperated successfully across six systems at the September 2026 Connectathon (Life Library, FlexPa, Chronicle Workstation, Android HealthConnect, Apple HealthKit, Epic Sandbox):</p>
+
+<ul>
+  <li>Servers implementing PHR export <strong>MUST</strong> support the <code class="language-plaintext highlighter-rouge">outputFormat</code> parameter.</li>
+  <li>Servers <strong>MUST</strong> support FHIR Bundle output (<code class="language-plaintext highlighter-rouge">application/fhir+json</code>) for small exports.</li>
+  <li>Servers <strong>SHOULD</strong> support NDJSON output for large exports.  As a rule of thumb, beyond a few thousand resources or roughly 50 MB of serialized content, NDJSON SHOULD be used rather than a single Bundle.</li>
+  <li>Clients importing PHR data <strong>MUST</strong> accept both FHIR Bundle and NDJSON payloads.</li>
+  <li>PHR systems following this implementation guide <strong>MUST</strong> include the API endpoints they expose in their FHIR server's CapabilityStatement (see <a href="#capability-statement">Capability Statement</a> below).</li>
+</ul>
 
 <h4 id="export-operations">Export Operations</h4>
 
@@ -295,7 +319,7 @@ GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?outputFo
 <span class="c"># Export as PHR file (NDJSON with .phr extension)</span>
 GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>phr
 
-<span class="c"># Export as secure SPHR file (encrypted zip container)</span>
+<span class="c"># Export as SPHR file (zip container with supporting documents)</span>
 GET /Bundle/<span class="nv">$phr</span><span class="nt">-export</span>?outputFormat<span class="o">=</span>sphr
 </code></pre></div></div>
 
@@ -344,9 +368,38 @@ POST /Bundle/<span class="nv">$import</span>?mode<span class="o">=</span>validat
 <ul>
   <li><strong>Deduplication</strong>: System should detect and handle duplicate resources</li>
   <li><strong>Provenance</strong>: Imported resources should retain original provenance metadata</li>
-  <li><strong>Validation</strong>: All resources should be validated against FHIR profiles</li>
+  <li><strong>Validation</strong>: All resources should be validated against FHIR profiles (see the <a href="./conformance.html">Conformance</a> page for multi-schema validation guidance)</li>
   <li><strong>Conflict Resolution</strong>: System should have policies for handling conflicting data</li>
 </ul>
+
+<h5 id="asynchronous-import-and-back-pressure">Asynchronous Import and Back Pressure</h5>
+
+<p>A complete PHR import can run to gigabytes, and a synchronous <code class="language-plaintext highlighter-rouge">POST $import</code> risks client timeouts while giving the server no flow control.  Servers SHOULD support the standard <a href="https://www.hl7.org/fhir/R4/async.html">FHIR Asynchronous Request Pattern</a> for imports:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST /Bundle/<span class="nv">$import</span>
+Prefer: respond-async
+Content-Type: application/x-ndjson
+
+HTTP/1.1 202 Accepted
+Content-Location: https://example.org/jobs/import/789
+</code></pre></div></div>
+
+<p>The client polls the <code class="language-plaintext highlighter-rouge">Content-Location</code> URL; the server responds <code class="language-plaintext highlighter-rouge">202 Accepted</code> with an <code class="language-plaintext highlighter-rouge">X-Progress</code> header while processing, and <code class="language-plaintext highlighter-rouge">200 OK</code> with an import manifest (resource counts, OperationOutcomes for rejected resources) when complete.</p>
+
+<p>For back pressure, servers MAY respond <code class="language-plaintext highlighter-rouge">429 Too Many Requests</code> with a <code class="language-plaintext highlighter-rouge">Retry-After</code> header when ingestion is saturated, and clients MUST honor it.  Synchronous import remains appropriate for small Bundles.  This pattern is aligned with the Bulk Data import/<code class="language-plaintext highlighter-rouge">$submit</code> work; as that specification matures, this guide expects to reference it directly rather than define a competing mechanism.</p>
+
+<h5 id="operation-sequencing-and-dependent-operations">Operation Sequencing and Dependent Operations</h5>
+
+<p>Export, validation, and import are frequently chained.  The recommended pipeline is <strong>export → validate → import → reconcile</strong>: validate the payload (e.g., <code class="language-plaintext highlighter-rouge">POST /Bundle/$import?mode=validate</code>) before committing it, then reconcile duplicates and conflicts after commit (see <a href="./longitudinal.html">Merging and Versioning</a>).</p>
+
+<p>NDJSON provides no ordering guarantee, so importers MUST tolerate forward references — an Observation may appear on an earlier line than the Encounter it references.  Two workable strategies:</p>
+
+<ol>
+  <li><strong>Two-pass import</strong>: first pass indexes every resource <code class="language-plaintext highlighter-rouge">id</code>; second pass commits with references resolved.</li>
+  <li><strong>Deferred resolution</strong>: commit resources as they stream in, holding unresolved references in a pending queue until the target arrives, and reporting any still-unresolved references in the import manifest.</li>
+</ol>
+
+<p>Importers MUST resolve internal references within the payload (including <code class="language-plaintext highlighter-rouge">urn:uuid:</code> placeholders in Bundles) rather than rejecting resources for referencing content later in the stream.</p>
 
 <h4 id="response-formats">Response Formats</h4>
 
@@ -379,10 +432,21 @@ POST /Bundle/<span class="nv">$import</span>?mode<span class="o">=</span>validat
     <tr>
       <td>SPHR</td>
       <td><code class="language-plaintext highlighter-rouge">application/zip</code></td>
-      <td>Encrypted zip containing .phr file(s) plus supporting documents</td>
+      <td>Zip archive containing .phr file(s) plus supporting documents</td>
     </tr>
   </tbody>
 </table>
+
+<h5 id="ndjson-line-discipline">NDJSON Line Discipline</h5>
+
+<p>At the September 2026 Connectathon, systems disagreed about whether exported NDJSON may be pretty-printed or word-wrapped.  To remove the ambiguity, this guide adopts the same line discipline as the <a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Access IG</a>:</p>
+
+<ul>
+  <li>Producers <strong>MUST</strong> serialize each resource as a single line of minified JSON, terminated by a newline (<code class="language-plaintext highlighter-rouge">\n</code>).</li>
+  <li>Producers <strong>MUST NOT</strong> pretty-print, word-wrap, or otherwise introduce line breaks within a serialized resource.</li>
+  <li>Consumers <strong>SHOULD</strong> tolerate a trailing newline at end of file and SHOULD skip empty lines.</li>
+  <li>Consumers <strong>MUST NOT</strong> assume any particular resource ordering within the file (see Operation Sequencing above).</li>
+</ul>
 
 <h4 id="capability-statement">Capability Statement</h4>
 
@@ -405,6 +469,56 @@ POST /Bundle/<span class="nv">$import</span>?mode<span class="o">=</span>validat
   </span><span class="p">}]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
+
+<p>Formal definitions for these operations are published as <a href="./OperationDefinition-phr-export.html">phr-export</a> and <a href="./OperationDefinition-phr-import.html">phr-import</a>.</p>
+
+<h3 id="relationship-to-other-export-operations">Relationship to Other Export Operations</h3>
+
+<p><code class="language-plaintext highlighter-rouge">$phr-export</code> is not the only way to get a complete record out of a system, and at the September 2026 Connectathon the <a href="https://build.fhir.org/ig/argonautproject/ehi-api/">EHI Export API</a> was exercised successfully across systems.  This guide deliberately keeps the <code class="language-plaintext highlighter-rouge">$phr-export</code> name — renaming it <code class="language-plaintext highlighter-rouge">$ehi-export</code> would collide with the existing EHI Export semantics — and instead documents how the operations relate:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operation</th>
+      <th>Defined by</th>
+      <th>Scope</th>
+      <th>Payload shape</th>
+      <th>Use when</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$phr-export</code></td>
+      <td>This IG</td>
+      <td>Single patient</td>
+      <td>Heterogeneous NDJSON / Bundle / <code class="language-plaintext highlighter-rouge">.sphr</code></td>
+      <td>Patient-mediated export into a personal record</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$ehi-export</code></td>
+      <td><a href="https://build.fhir.org/ig/argonautproject/ehi-api/">Argonaut EHI Export API</a></td>
+      <td>Single patient or population</td>
+      <td>Vendor-defined EHI document set</td>
+      <td>Regulatory "complete EHI" export from a certified EHR</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Patient/$everything</code></td>
+      <td><a href="https://www.hl7.org/fhir/R5/operation-patient-everything.html">FHIR core (R4/R5)</a></td>
+      <td>Single patient compartment</td>
+      <td>searchset Bundle</td>
+      <td>Online, interactive retrieval from a FHIR server</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$export</code> (Bulk Data)</td>
+      <td><a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Access IG</a></td>
+      <td>Group or population</td>
+      <td>Per-resource-type NDJSON files</td>
+      <td>Backend, population-scale export</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To keep these interoperable, <code class="language-plaintext highlighter-rouge">$phr-export</code> parameters are aligned with R5 <code class="language-plaintext highlighter-rouge">Patient/$everything</code>: <code class="language-plaintext highlighter-rouge">_since</code> and <code class="language-plaintext highlighter-rouge">_type</code> carry the same meaning in both operations, and a server MAY implement <code class="language-plaintext highlighter-rouge">$phr-export</code> as a façade over <code class="language-plaintext highlighter-rouge">$everything</code> plus serialization.  Likewise, a server that already implements EHI Export MAY expose <code class="language-plaintext highlighter-rouge">$phr-export</code> as an alias of <code class="language-plaintext highlighter-rouge">$ehi-export</code>, accepting the same requests and returning the exported record in one of the formats above — implementers should treat the two operation names as interchangeable in that configuration.  A system that already supports EHI Export or Bulk Data satisfies the <em>data liberation</em> goal of this guide; <code class="language-plaintext highlighter-rouge">$phr-export</code> adds the PHR-specific packaging (single heterogeneous file, cover Composition, IPS table of contents).</p>
 
 <h3 id="smart-health-links-for-phr-sharing">SMART Health Links for PHR Sharing</h3>
 
@@ -503,14 +617,14 @@ POST /Bundle/<span class="nv">$import</span>?mode<span class="o">=</span>validat
 
 <p>When transmitting .phr content over HTTP, use the following headers:</p>
 
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">Content-Type: application/x-ndjson
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type: application/x-ndjson
 Content-Disposition: attachment; filename="patient-record.phr"
 X-PHR-Version: 1.0
-</span></code></pre></div></div>
+</code></pre></div></div>
 
 <p>For FHIR-aware systems:</p>
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">Content-Type: application/fhir+ndjson
-</span></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type: application/fhir+ndjson
+</code></pre></div></div>
 
 <h4 id="streaming-benefits">Streaming Benefits</h4>
 
@@ -594,6 +708,131 @@ X-PHR-Version: 1.0
 
 <p>Include OperationOutcome resources inline to indicate processing errors while allowing the stream to continue for partial data recovery.</p>
 
+<h3 id="query-and-filter-parameters">Query and Filter Parameters</h3>
+
+<p>PHR systems should support flexible filtering to allow patients and applications to retrieve specific subsets of data.</p>
+
+<h4 id="standard-fhir-search-parameters">Standard FHIR Search Parameters</h4>
+
+<p>All standard FHIR search parameters apply. Common patterns for PHR queries:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Resources modified since a date</span>
+GET /Observation?_lastUpdated<span class="o">=</span>gt2025-01-01
+
+<span class="c"># Resources within a date range</span>
+GET /Observation?date<span class="o">=</span>ge2024-01-01&amp;date<span class="o">=</span>le2024-12-31
+
+<span class="c"># Specific resource types</span>
+GET /Condition?patient<span class="o">=</span>Patient/123
+
+<span class="c"># By category</span>
+GET /Observation?category<span class="o">=</span>vital-signs
+GET /Observation?category<span class="o">=</span>laboratory
+GET /Observation?category<span class="o">=</span>activity
+</code></pre></div></div>
+
+<h4 id="phr-specific-filters">PHR-Specific Filters</h4>
+
+<h5 id="by-data-source">By Data Source</h5>
+
+<p>Filter by originating system:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Observation?_source<span class="o">=</span>urn:ehr:hospital-xyz
+GET /Observation?_source<span class="o">=</span>urn:device:fitbit
+GET /Observation?_source<span class="o">=</span>urn:phr:patient-entered
+</code></pre></div></div>
+
+<h5 id="by-clinical-relevance">By Clinical Relevance</h5>
+
+<p>Filter for active/current data (suitable for IPS generation):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Condition?clinical-status<span class="o">=</span>active
+GET /MedicationStatement?status<span class="o">=</span>active
+GET /AllergyIntolerance?clinical-status<span class="o">=</span>active
+</code></pre></div></div>
+
+<h5 id="by-verification-status">By Verification Status</h5>
+
+<p>Distinguish verified vs unverified data:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Condition?verification-status<span class="o">=</span>confirmed
+GET /Observation?_tag<span class="o">=</span>clinician-verified
+</code></pre></div></div>
+
+<h4 id="bulk-export-filters">Bulk Export Filters</h4>
+
+<p>When using the $phr-export operation:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Export only specific resource types</span>
+GET /Patient/123/<span class="nv">$phr</span><span class="nt">-export</span>?_type<span class="o">=</span>Condition,MedicationStatement,AllergyIntolerance
+
+<span class="c"># Export data from a specific time period</span>
+GET /Patient/123/<span class="nv">$phr</span><span class="nt">-export</span>?_since<span class="o">=</span>2024-01-01&amp;_until<span class="o">=</span>2024-12-31
+
+<span class="c"># Export only clinical data (exclude device/activity data)</span>
+GET /Patient/123/<span class="nv">$phr</span><span class="nt">-export</span>?_profile<span class="o">=</span>clinical
+
+<span class="c"># Export only for sharing (IPS-compatible subset)</span>
+GET /Patient/123/<span class="nv">$phr</span><span class="nt">-export</span>?_profile<span class="o">=</span>ips-compatible
+</code></pre></div></div>
+
+<h4 id="patient-sharing-preferences">Patient Sharing Preferences</h4>
+
+<p>PHRs may implement patient-controlled sharing filters using Consent resources:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Consent"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sharing-preferences"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scope"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/consentscope"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"patient-privacy"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"provision"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deny"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"provision"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"permit"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"class"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Condition"</span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MedicationStatement"</span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AllergyIntolerance"</span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="response-pagination">Response Pagination</h4>
+
+<p>For large result sets:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Observation?_count<span class="o">=</span>100&amp;_offset<span class="o">=</span>0
+</code></pre></div></div>
+
+<p>Response includes pagination links:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"searchset"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1250</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="nl">"relation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"self"</span><span class="p">,</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"...?_count=100&amp;_offset=0"</span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="nl">"relation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next"</span><span class="p">,</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"...?_count=100&amp;_offset=100"</span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="selective-field-retrieval">Selective Field Retrieval</h4>
+
+<p>Request only specific elements to reduce payload size:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Observation?_elements<span class="o">=</span>code,valueQuantity,effectiveDateTime
+</code></pre></div></div>
+
 
 
 
@@ -622,8 +861,8 @@ X-PHR-Version: 1.0
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-11 16:28:00 -0600">
-    2026-06-11
+  <span title="2026-10-08 19:53:00 -0500">
+    2026-10-08
   </span>
 
           <br/>

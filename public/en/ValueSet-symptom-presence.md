@@ -2,9 +2,6 @@
 
 ## ValueSet: Symptom Presence 
 
- 
-Code for presence or absence of symptoms 
-
  **References** 
 
 * [PGHD Symptom Profile](StructureDefinition-pghd-symptom.md)
@@ -63,7 +60,7 @@ Code for presence or absence of symptoms
   "title" : "Symptom Presence",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

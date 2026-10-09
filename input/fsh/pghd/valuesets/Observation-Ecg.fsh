@@ -1,6 +1,6 @@
 ValueSet: ObservationEcgValueSet
 Id: observation-ecgcodes
-Title: "ECG Lead Codes"
+Title: "ECG Value Set"
 Description: """
 Codes for ECG and related items
 """

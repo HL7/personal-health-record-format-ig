@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+  	<!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7.css" rel="stylesheet"/>
     <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
 
@@ -124,6 +124,19 @@
     </ul>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Generated Health Data
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="pghd.html">Overview</a>
+      </li>
+      <li>
+        <a href="pghd-code-mapping.html">Code Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
       <b class="caret"></b>
     </a>
@@ -145,9 +158,6 @@
       </li>
       <li>
         <a href="longitudinal.html">Merging and Versioning</a>
-      </li>
-      <li>
-        <a href="pghd.html">Patient Generated Health Data</a>
       </li>
       <li>
         <a href="physiology.html">Physiology Domains</a>
@@ -275,9 +285,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#what-are-logical-models" id="markdown-toc-what-are-logical-models">What Are Logical Models?</a></li>
   <li><a href="#how-do-these-models-connect-to-the-ig" id="markdown-toc-how-do-these-models-connect-to-the-ig">How Do These Models Connect to the IG?</a></li>
   <li><a href="#models" id="markdown-toc-models">Models</a></li>
+  <li><a href="#social-media-data" id="markdown-toc-social-media-data">Social Media Data</a></li>
 </ul>
 
 </div>
+<blockquote>
+  <p><strong>These Logical Models are experimental.</strong>  They are published to gather implementer feedback, are <strong>not required for conformance</strong> with this guide, and are expected to be removed from this guide or migrated into other specifications in future versions (for example, financial receipt modeling is being contributed to the Da Vinci Price Transparency work, and environmental sensor modeling is under discussion with the Devices work group).  Do not build load-bearing integrations against them.</p>
+</blockquote>
+
 <p>This implementation guide includes several FHIR Logical Models that represent emerging patient-generated data domains not yet covered by standard FHIR resources. These models are published as StructureDefinitions with <code class="language-plaintext highlighter-rouge">kind = logical</code>, and are intended to inform future profiling work and facilitate discussion within the HL7 community.</p>
 
 <h3 id="what-are-logical-models">What Are Logical Models?</h3>
@@ -306,9 +321,82 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Captures over-the-counter (OTC) health-related purchase receipts for expenses such as pharmacy items, medical supplies, copays, and wellness products. These transactions typically do not generate a formal insurance Claim resource, but are relevant for tracking out-of-pocket healthcare spending, HSA/FSA accounting, and understanding patient self-care patterns.</p>
 
-<h4 id="social-media-usage"><a href="./StructureDefinition-SocialMedia.html">Social Media Usage</a></h4>
+<h3 id="social-media-data">Social Media Data</h3>
 
-<p>Captures social media and digital device usage patterns relevant to patient mental health and wellness. Includes screen time, active versus passive engagement, interaction counts, notification frequency, and self-reported sentiment. Particularly relevant for behavioral health, digital wellness programs, and adolescent health monitoring.</p>
+<p>Earlier drafts of this guide defined a <code class="language-plaintext highlighter-rouge">SocialMedia</code> logical model for social media posts.  That model has been removed: social media content — which round-tripped successfully between systems at the September 2026 Connectathon — is representable with existing FHIR resources, and net-new data structures belong in the core specification rather than this guide.  Use the following mappings:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Social media concept</th>
+      <th>FHIR representation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>The post itself (text, images, video)</td>
+      <td><a href="https://www.hl7.org/fhir/R4/documentreference.html">DocumentReference</a> with the content as an attachment; <a href="https://www.hl7.org/fhir/R4/media.html">Media</a> for standalone images/video/audio</td>
+    </tr>
+    <tr>
+      <td>The act of posting or messaging</td>
+      <td><a href="https://www.hl7.org/fhir/R4/communication.html">Communication</a> (sender, recipients, payload, sent time)</td>
+    </tr>
+    <tr>
+      <td>Other people appearing in or party to the post</td>
+      <td><a href="https://www.hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td>
+    </tr>
+    <tr>
+      <td>Clinician interpretation of social-media-derived signals (e.g., mood, behavior patterns)</td>
+      <td><a href="https://www.hl7.org/fhir/R4/clinicalimpression.html">ClinicalImpression</a> referencing the source DocumentReferences</td>
+    </tr>
+    <tr>
+      <td>A curated collection of posts (e.g., a health journey timeline)</td>
+      <td><a href="https://www.hl7.org/fhir/R4/composition.html">Composition</a> with a section per theme or period</td>
+    </tr>
+    <tr>
+      <td>Where the content came from and when it was captured</td>
+      <td><a href="https://www.hl7.org/fhir/R4/provenance.html">Provenance</a> naming the platform as the source</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The example below represents an Instagram post with an attached photo, as captured into a PHR:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DocumentReference"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"current"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Social media post"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"category"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"patient-generated"</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/example"</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-07-04T18:22:00Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Instagram post: first 5k walk since surgery"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"attachment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"contentType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/markdown"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rmlyc3QgNWsgd2FsayBzaW5jZSBzdXJnZXJ5ISDwn46J"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Post text"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"attachment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"contentType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image/jpeg"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"media/2026-07-04-finish-line.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Finish line photo"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"related"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.instagram.com/p/example123/"</span><span class="w"> </span><span class="p">}]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>A corresponding Provenance resource records the platform (<code class="language-plaintext highlighter-rouge">agent.who.display = "Instagram"</code>) and capture date, so that merge and filtering logic can distinguish social-media-sourced content from clinical content (see <a href="./longitudinal.html">Merging and Versioning</a>).</p>
 
 
 
@@ -338,8 +426,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-11 16:28:00 -0600">
-    2026-06-11
+  <span title="2026-10-08 19:53:00 -0500">
+    2026-10-08
   </span>
 
           <br/>

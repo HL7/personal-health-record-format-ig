@@ -1,4 +1,6 @@
-# Resource Personal Health Records
+#  - Personal Health Records v1.0.0-ballot2
+
+## : 
 
 
 
@@ -28,7 +30,7 @@
   "name" : "PatientHealthRecordsIG",
   "title" : "Personal Health Records",
   "status" : "active",
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {
@@ -67,7 +69,7 @@
       ],
       "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId" : "hl7.terminology.r4",
-      "version" : "7.1.0"
+      "version" : "7.4.0"
     },
     {
       "id" : "hl7ext",
@@ -146,7 +148,7 @@
         "extension" : [
           {
             "url" : "code",
-            "valueString" : "path-liquid"
+            "valueString" : "path-liquid-template"
           },
           {
             "url" : "value",
@@ -159,7 +161,7 @@
         "extension" : [
           {
             "url" : "code",
-            "valueString" : "path-liquid"
+            "valueString" : "path-liquid-template"
           },
           {
             "url" : "value",
@@ -488,7 +490,7 @@
         "extension" : [
           {
             "url" : "code",
-            "valueCode" : "path-liquid"
+            "valueCode" : "path-liquid-template"
           },
           {
             "url" : "value",
@@ -501,7 +503,7 @@
         "extension" : [
           {
             "url" : "code",
-            "valueCode" : "path-liquid"
+            "valueCode" : "path-liquid-template"
           },
           {
             "url" : "value",
@@ -804,20 +806,6 @@
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/body-temperature-measurement-location"
-        },
-        "name" : "Body Temperature Measurement Location Codes",
-        "description" : "Code indicating the location where the body temperature was measured",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "CodeSystem"
           }
         ],
@@ -832,54 +820,14 @@
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ConceptMap"
-          }
-        ],
-        "reference" : {
-          "reference" : "ConceptMap/symptom-pghd-to-snomedct"
-        },
-        "name" : "ConceptMapSymptomPGHD2SNOMEDCT",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ConceptMap"
-          }
-        ],
-        "reference" : {
-          "reference" : "ConceptMap/symptom-snomedct-to-pghd"
-        },
-        "name" : "ConceptMapSymptomSNOMEDCT2PGHD",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "ValueSet"
           }
         ],
         "reference" : {
-          "reference" : "ValueSet/observation-ecg-classification-codes"
+          "reference" : "ValueSet/body-temperature-measurement-location"
         },
-        "name" : "ECG Classification Codes",
-        "description" : "Codes for classification of ECG waveforms",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "CodeSystem"
-          }
-        ],
-        "reference" : {
-          "reference" : "CodeSystem/ecg-codes"
-        },
-        "name" : "ECG Classification Codes",
-        "description" : "Codes for ECG and related items",
+        "name" : "Body Temperature Measurement Location Value Set",
+        "description" : "Code indicating the location where the body temperature was measured",
         "exampleBoolean" : false
       },
       {
@@ -904,24 +852,24 @@
           }
         ],
         "reference" : {
-          "reference" : "ValueSet/observation-ecgcodes"
+          "reference" : "ValueSet/observation-ecg-classification-codes"
         },
-        "name" : "ECG Lead Codes",
-        "description" : "Codes for ECG and related items",
+        "name" : "ECG Classification Value Set",
+        "description" : "Codes for classification of ECG waveforms",
         "exampleBoolean" : false
       },
       {
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
+            "valueString" : "CodeSystem"
           }
         ],
         "reference" : {
-          "reference" : "ValueSet/observation-ecg-lead-codes"
+          "reference" : "CodeSystem/ecg-codes"
         },
-        "name" : "ECG Lead Codes",
-        "description" : "Codes for ECG induction",
+        "name" : "ECG Codes",
+        "description" : "Codes for ECG and related items",
         "exampleBoolean" : false
       },
       {
@@ -946,10 +894,10 @@
           }
         ],
         "reference" : {
-          "reference" : "ValueSet/observation-ecg-symptoms-status-codes"
+          "reference" : "ValueSet/observation-ecg-lead-codes"
         },
-        "name" : "ECG Symptoms Status Codes",
-        "description" : "Code indicating whether or not the user's symptoms are input during ECG waveform acquisition",
+        "name" : "ECG Lead Value Set",
+        "description" : "Codes for ECG induction",
         "exampleBoolean" : false
       },
       {
@@ -964,6 +912,34 @@
         },
         "name" : "ECG Symptoms Status Codes",
         "description" : "Code indicating whether or not the user's symptoms are input during ECG waveform acquisition",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "ValueSet"
+          }
+        ],
+        "reference" : {
+          "reference" : "ValueSet/observation-ecg-symptoms-status-codes"
+        },
+        "name" : "ECG Symptoms Status Value Set",
+        "description" : "Code indicating whether or not the user's symptoms are input during ECG waveform acquisition",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "ValueSet"
+          }
+        ],
+        "reference" : {
+          "reference" : "ValueSet/observation-ecgcodes"
+        },
+        "name" : "ECG Value Set",
+        "description" : "Codes for ECG and related items",
         "exampleBoolean" : false
       },
       {
@@ -1286,20 +1262,6 @@
         },
         "name" : "Observation State of Mind Association Codes",
         "description" : "Codes for state of mind association",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/observation-scored-assessment-score-codes"
-        },
-        "name" : "Observation State of Mind Codes",
-        "description" : "Codes for state of mind",
         "exampleBoolean" : false
       },
       {
@@ -3112,6 +3074,34 @@
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "OperationDefinition"
+          }
+        ],
+        "reference" : {
+          "reference" : "OperationDefinition/phr-export"
+        },
+        "name" : "PHR Export Operation",
+        "description" : "Generates a complete patient health record in Bundle, NDJSON, .phr, or .sphr format.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "OperationDefinition"
+          }
+        ],
+        "reference" : {
+          "reference" : "OperationDefinition/phr-import"
+        },
+        "name" : "PHR Import Operation",
+        "description" : "Imports PHR data (NDJSON or Bundle) into the receiving system with deduplication, provenance tracking, and conflict resolution.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "StructureDefinition:resource"
           }
         ],
@@ -3162,6 +3152,20 @@
         },
         "name" : "Scored Assessment Codes",
         "description" : "Code for scored assessment",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "ValueSet"
+          }
+        ],
+        "reference" : {
+          "reference" : "ValueSet/observation-scored-assessment-score-codes"
+        },
+        "name" : "Scored Assessment Score Value Set",
+        "description" : "Codes for scored assessment scores (e.g. GAD-7, PHQ-9)",
         "exampleBoolean" : false
       },
       {
@@ -3280,20 +3284,6 @@
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "StructureDefinition:logical"
-          }
-        ],
-        "reference" : {
-          "reference" : "StructureDefinition/SocialMedia"
-        },
-        "name" : "Social Media Post",
-        "description" : "A logical model representing a social media post from platforms such as Facebook, Instagram, Twitter/X, Tumblr, etc. Captures the post content, media attachments, and metadata. Relevant for patient-reported outcomes, behavioral health context, and longitudinal health narratives.",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "CodeSystem"
           }
         ],
@@ -3400,6 +3390,34 @@
         },
         "name" : "Symptom Appetite Changes",
         "description" : "Codes expressing changes in appetite",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "ConceptMap"
+          }
+        ],
+        "reference" : {
+          "reference" : "ConceptMap/symptom-pghd-to-snomedct"
+        },
+        "name" : "Symptom Codes, PGHD to SNOMED CT",
+        "description" : "Maps PHR-IG patient-generated health data (PGHD) symptom codes to SNOMED CT.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "ConceptMap"
+          }
+        ],
+        "reference" : {
+          "reference" : "ConceptMap/symptom-snomedct-to-pghd"
+        },
+        "name" : "Symptom Codes, SNOMED CT to PGHD",
+        "description" : "Maps SNOMED CT symptom codes to PHR-IG patient-generated health data (PGHD) symptom codes.",
         "exampleBoolean" : false
       },
       {
@@ -3816,7 +3834,7 @@
             }
           ],
           "nameUrl" : "longitudinal.html",
-          "title" : "Longitudinal Records",
+          "title" : "Merging and Versioning",
           "generation" : "markdown"
         },
         {

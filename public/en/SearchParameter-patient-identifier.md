@@ -2,9 +2,6 @@
 
 ## SearchParameter: Search by identifier in patient with multipleOr 
 
- 
-This SearchParameter enables query of patient by`identifier`with`mutlipleOr`enabled. 
-
 
 
 ## Resource Content
@@ -48,7 +45,7 @@ This SearchParameter enables query of patient by`identifier`with`mutlipleOr`enab
   "name" : "PatientIdentifierSearchParameter",
   "derivedFrom" : "http://hl7.org/fhir/SearchParameter/Resource-id",
   "status" : "active",
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

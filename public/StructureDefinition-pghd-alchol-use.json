@@ -34,7 +34,7 @@
   "name" : "PGHDAlcholUse",
   "title" : "PGHD AlcholUse Profile",
   "status" : "active",
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [{
     "name" : "HL7 International / Patient Empowerment",
@@ -1512,7 +1512,7 @@
       "definition" : "The identification of the code system that defines the meaning of the symbol in the code.",
       "comment" : "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.",
       "requirements" : "Need to be unambiguous about the source of the definition of the symbol.",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "base" : {
         "path" : "Coding.system",
@@ -1522,6 +1522,7 @@
       "type" : [{
         "code" : "uri"
       }],
+      "fixedUri" : "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes",
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",

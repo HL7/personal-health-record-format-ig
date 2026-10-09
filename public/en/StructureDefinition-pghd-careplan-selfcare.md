@@ -2,9 +2,6 @@
 
 ## Resource Profile: PGHD SelfCare Plan Profile 
 
- 
-This profile defines the SelfCare Plan. 
-
 **Usages:**
 
 * Refer to this Profile: [PGHD QuestionnaireResponse Profile](StructureDefinition-pghd-questionnaire-response.md)
@@ -63,7 +60,7 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-careplan-sel
   "title" : "PGHD SelfCare Plan Profile",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

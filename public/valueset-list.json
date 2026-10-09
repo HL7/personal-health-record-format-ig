@@ -16,7 +16,7 @@
       "version" : "1.0.0-ballot2",
       "status" : "active",
       "name" : "BodyTemperatureMeasurementLocationValueset",
-      "title" : "Body Temperature Measurement Location Codes",
+      "title" : "Body Temperature Measurement Location Value Set",
       "description" : "Code indicating the location where the body temperature was measured",
       "systems" : [
         "http://hl7.org/fhir/uv/phr/CodeSystem/body-temperature-measurement-location-codes"
@@ -71,7 +71,7 @@
       "version" : "1.0.0-ballot2",
       "status" : "active",
       "name" : "ObservationEcgClassificationValueSet",
-      "title" : "ECG Classification Codes",
+      "title" : "ECG Classification Value Set",
       "description" : "Codes for classification of ECG waveforms",
       "systems" : [
         "http://hl7.org/fhir/uv/phr/CodeSystem/ecg-classification-codes"
@@ -82,7 +82,7 @@
       "version" : "1.0.0-ballot2",
       "status" : "active",
       "name" : "ObservationEcgLeadValueSet",
-      "title" : "ECG Lead Codes",
+      "title" : "ECG Lead Value Set",
       "description" : "Codes for ECG induction",
       "systems" : ["http://hl7.org/fhir/uv/phr/CodeSystem/ecg-lead-codes"]
     },
@@ -91,7 +91,7 @@
       "version" : "1.0.0-ballot2",
       "status" : "active",
       "name" : "ObservationEcgSymptomsStatusValueSet",
-      "title" : "ECG Symptoms Status Codes",
+      "title" : "ECG Symptoms Status Value Set",
       "description" : "Code indicating whether or not the user's symptoms are input during ECG waveform acquisition",
       "systems" : [
         "http://hl7.org/fhir/uv/phr/CodeSystem/ecg-symptoms-status-codes"
@@ -102,7 +102,7 @@
       "version" : "1.0.0-ballot2",
       "status" : "active",
       "name" : "ObservationEcgValueSet",
-      "title" : "ECG Lead Codes",
+      "title" : "ECG Value Set",
       "description" : "Codes for ECG and related items",
       "systems" : ["http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes"]
     },
@@ -217,8 +217,8 @@
       "version" : "1.0.0-ballot2",
       "status" : "active",
       "name" : "ObservationScoredAssessmentScore",
-      "title" : "Observation State of Mind Codes",
-      "description" : "Codes for state of mind",
+      "title" : "Scored Assessment Score Value Set",
+      "description" : "Codes for scored assessment scores (e.g. GAD-7, PHQ-9)",
       "systems" : ["http://loinc.org"]
     },
     {

@@ -2,9 +2,6 @@
 
 ## Resource Profile: PGHD OxygenSaturation Profile 
 
- 
-This profile defines how to represent oxygen saturation measurements. 
-
 **Usages:**
 
 * Examples for this Profile: [Observation/pghd-oxygenSaturation](Observation-pghd-oxygenSaturation.md)
@@ -63,7 +60,7 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-oxygenSatura
   "title" : "PGHD OxygenSaturation Profile",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

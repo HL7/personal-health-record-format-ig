@@ -2,9 +2,6 @@
 
 ## ValueSet: Observation ReproductiveHealth Codes 
 
- 
-Codes representing reproductive-health-related measures 
-
  **References** 
 
 * [PGHD ReproductiveHealth Profile](StructureDefinition-pghd-reproductive-health.md)
@@ -63,7 +60,7 @@ Codes representing reproductive-health-related measures
   "title" : "Observation ReproductiveHealth Codes",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

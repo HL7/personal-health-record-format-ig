@@ -2,9 +2,6 @@
 
 ## Resource Profile: PGHD QuestionnaireResponse Profile 
 
- 
-This profile defines the QuestionnaireResponse. 
-
 **Usages:**
 
 * Examples for this Profile: [QuestionnaireResponse/gad7](QuestionnaireResponse-gad7.md) and [QuestionnaireResponse/phq9](QuestionnaireResponse-phq9.md)
@@ -63,7 +60,7 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-questionnair
   "title" : "PGHD QuestionnaireResponse Profile",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

@@ -2,9 +2,6 @@
 
 ## Resource Profile: PGHD AlcholUse Profile 
 
- 
-This profile defines how to represent Alchol use. 
-
 **Usages:**
 
 * Examples for this Profile: [Observation/pghd-alchol-use-number-of-alcoholic-beverages](Observation-pghd-alchol-use-number-of-alcoholic-beverages.md)
@@ -62,7 +59,7 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-alchol-use.c
   "name" : "PGHDAlcholUse",
   "title" : "PGHD AlcholUse Profile",
   "status" : "active",
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

@@ -2,9 +2,6 @@
 
 ## Resource Profile: PGHD MedicationAdministration Insulin Profile 
 
- 
-This profile defines the administered insulin doses of a patient. 
-
 **Usages:**
 
 * Examples for this Profile: [MedicationAdministration/pghd-medicationadministration-insulin-1](MedicationAdministration-pghd-medicationadministration-insulin-1.md)
@@ -63,7 +60,7 @@ Other representations of profile: [CSV](../StructureDefinition-pghd-medicationad
   "title" : "PGHD MedicationAdministration Insulin Profile",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

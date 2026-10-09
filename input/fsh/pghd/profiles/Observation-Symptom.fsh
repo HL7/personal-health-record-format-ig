@@ -11,6 +11,7 @@ This profile defines how to represent Symptom.
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
 * code.coding[PGHDCodes] from ObservationSymptom
+* code.coding[PGHDCodes].system = $CodeSystemObservationPGHDCodes (exactly)
 * code.coding[SNOMEDCT] from ObservationSymptomSNOMEDCT
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #value

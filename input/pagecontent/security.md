@@ -1,85 +1,40 @@
+Personal Health Records spend most of their life *at rest* — on a phone, a laptop, a thumbdrive, or a CD in a shoebox — punctuated by occasional transfers between systems. The security model of this guide follows that reality: protect data at rest with the encryption facilities of the operating system and storage volume, and protect data in transit with the transport layer. This guide does **not** define its own file-level encryption or signing scheme.
 
-> Work in progress.  Content to be determined.
+### Files Are Not Self-Protecting
 
-| Section |  Header Name | 
-| ---------- | :-------------------- |
-| TI.1 | Security | | |
-| TI.1.1 | Entity Authentication | | |
-| TI.1.2 | Entity Authorization | | |
-| TI.1.3 | Entity Access Control | | |
-| TI.1.3.1 | Emergency Access Control | | |
-| TI.1.4 | Patient Access Management | | |
-| TI.1.5 | Non-Repudiation | | |
-| TI.1.6 | Secure Data Exchange | | |
-| TI.1.7 | Secure Data Routing | | |
-| TI.1.8 | Patient Privacy and Confidentiality | | |
-| TI.1.8.1 | Redact Patient Identifying Information | | |
-| TI.1.8.2 | Protect Individual Patient Identity | | |
-| TI.1.9 | System Operation Measurements | | |
-| TI.1.10 | Service Availability | | |
-| TI.1.11 | Trusted Information Exchange Environment | | |
-| TI.2 | Audit | | |
-| TI.2.1 | Audit Triggers | | |
-| TI.2.1.1 | Record Entry Audit Triggers | | |
-| TI.2.1.2 | Security Audit Triggers | | |
-| TI.2.1.2.1 | Security Event Security Audit Trigger | | |
-| TI.2.1.2.2 | User Authentication to the System (Start user session) Security Audit Trigger | | |
-| TI.2.1.2.3 | User Authentication (System Prompt for Password Change) Security Audit Trigger | | |
-| TI.2.1.2.4 | User Request to Change Password Security Audit Trigger | | |
-| TI.2.1.2.5 | User Log Out (End user session) Security Audit Trigger | | |
-| TI.2.1.2.6 | User Access (Successful) Security Audit Trigger | | |
-| TI.2.1.2.7 | User Attempts to Access Data (Unsuccessful -- Access Denied) Security Audit Trigger | | |
-| TI.2.1.2.8 | Extraordinary User Access (Break the Glass) Security Audit Trigger | | |
-| TI.2.1.2.9 | User Permissions (Authorization) Security Audit Trigger | | |
-| TI.2.1.3 | System Audit Triggers | | |
-| TI.2.1.3.1 | System Event System Audit Trigger | | |
-| TI.2.1.3.2 | System Started System Audit Trigger | | |
-| TI.2.1.3.3 | Back Up Started System Audit Trigger | | |
-| TI.2.1.3.4 | Back Up Completed System Audit Trigger | | |
-| TI.2.1.3.5 | Back Up Recovery Started System Audit Trigger | | |
-| TI.2.1.3.6 | Back Up Recovery Completed System Audit Trigger | | |
-| TI.2.1.3.7 | Batch Job Started System Audit Trigger | | |
-| TI.2.1.3.8 | Batch Job Completed System Audit Trigger | | |
-| TI.2.1.3.9 | Maintenance Started System Audit Trigger | | |
-| TI.2.1.3.10 | Maintenance Completed System Audit Trigger | | |
-| TI.2.1.3.11 | Resource Usage System Audit Trigger | | |
-| TI.2.1.3.12 | System Maintenance Events -Local Access System Audit Trigger | | |
-| TI.2.1.3.13 | System Maintenance Events - Remote Access System Audit Trigger | | |
-| TI.2.1.3.14 | System Maintenance - PHR or Clinical Software System Audit Trigger | | |
-| TI.2.1.3.15 | System Maintenance - Codes, Vocabulary, Knowledge, Rules System Audit Trigger | | |
-| TI.2.1.3.16 | Data Corruption System Audit Trigger | | |
-| TI.2.1.4 | Clinical Audit Triggers | | |
-| TI.2.1.4.1 | Clinical Alerts Clinical Audit Trigger | | |
-| TI.2.1.4.2 | Acknowledgements of Clinically Significant Report Changes Clinical Audit Trigger | | |
-| TI.2.1.4.3 | Disable Decision Support Alerts Clinical Audit Trigger | | |
-| TI.2.2 | Audit Log Management | | |
-| TI.2.2.1 | Audit Log Indelibility | | |
-| TI.2.3 | Audit Notification and Review | | |
-| TI.3 | Registry and Directory Services | | |
-| TI.4 | Standard Terminology and Terminology Services | | |
-| TI.4.1 | Standard Terminology and Terminology Models | | |
-| TI.4.2 | Maintenance and Versioning of Standard Terminologies | | |
-| TI.4.3 | Terminology Mapping | | |
-| TI.5 | Standards-Based Interoperability | | |
-| TI.5.1 | Application, Structured-Message, and Structured-Document Interchange Standards | | |
-| TI.5.1.1 | Application Interchange Standards | | |
-| TI.5.1.2 | Structured-Document Interchange Standards | | |
-| TI.5.1.3 | Structured-Message Interchange Standards | | |
-| TI.5.2 | Interchange Standards Versioning and Maintenance | | |
-| TI.5.3 | Standards-Based Application Integration  | | |
-| TI.5.4 | Interchange Agreements | | |
-| TI.5.5 | System Integration | | |
-| TI.6 | Business Rules Management | | |
-| TI.7 | Workflow Management | | |
-| TI.8 | Database Backup and Recovery | | |
-| TI.9 | System Management Operations and Performance | | |
-| TI.10 | Standard or Preferred Clinical Models and Clinical Model Services | | |
-| TI.10.1 | Standard or Preferred Clinical Models | | |
-| TI.10.2 | Maintenance and Versioning of Standard or Preferred Clinical Models | | |
-| TI.10.3 | Clinical Model Mapping | | |
+`.phr` files are plain text (NDJSON), and `.sphr` files are ordinary zip archives. **Neither format is self-protecting, and systems MUST NOT treat possession of a `.phr` or `.sphr` file as evidence of authorization.** Anyone who can read the file can read the record. Protection comes from the environment the file lives in, not from the file itself.
 
+Earlier drafts of this guide specified passphrase- and public-key-based encryption of `.sphr` files. That approach was removed: bespoke file-level cryptography creates key-management burdens (key distribution, recovery, revocation) that consumer PHR applications have not implemented in practice, and it gives patients a false sense that an exported file is "safe" to leave anywhere. Connectathon testing across six systems (Sept 2026) exercised none of the file-level cryptography; all systems relied on transport and volume security.
 
+### Protecting Data at Rest
 
-### References  
+Systems that store PHR data — and patients who keep exported files — SHOULD rely on volume-level or file-system-level encryption provided by the platform:
 
-[Personal Health Record System Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/)
+| Platform | Mechanism |
+|----------|-----------|
+| macOS | [FileVault](https://support.apple.com/guide/mac-help/protect-data-on-your-mac-with-filevault-mh11785/mac) full-disk encryption |
+| Windows | [BitLocker](https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/) drive encryption |
+| Linux | [LUKS/dm-crypt](https://gitlab.com/cryptsetup/cryptsetup) volume encryption |
+| iOS | File-based [Data Protection](https://support.apple.com/guide/security/data-protection-overview-secf6276da8a/web) (enabled by default) |
+| Android | [File-based encryption](https://source.android.com/docs/security/features/encryption/file-based) (enabled by default) |
+| Removable media (USB, external drives) | Hardware-encrypted drives, or an encrypted volume (BitLocker To Go, FileVault-formatted volume, VeraCrypt) |
+
+Guidance for implementers and for patient-facing documentation:
+
+- PHR applications SHOULD store their data within the platform's encrypted storage areas (e.g., app-private storage on mobile platforms), and SHOULD NOT export unencrypted copies to shared locations without informing the user.
+- When exporting `.phr`/`.sphr` files to removable media for physical exchange, the media itself SHOULD be encrypted, or the file SHOULD be placed in an encrypted container.
+- Burned optical media (CD/DVD) generally cannot be volume-encrypted after the fact; records distributed this way SHOULD be treated as unprotected and handled accordingly (physical custody, prompt import, destruction when no longer needed).
+
+### Protecting Data in Transit
+
+- System-to-system transfers (APIs described on the [API Endpoints](./api.html) page) MUST use TLS (HTTPS).
+- [SMART Health Links](https://docs.smarthealthit.org/smart-health-links/) carry their own encryption: the shared payload is encrypted (A256GCM) and the decryption key travels inside the link/QR code. SHL is the RECOMMENDED mechanism for patient-mediated sharing of records with third parties.
+- Physical media exchange is a transfer too — see the removable-media guidance above.
+
+### Integrity and Provenance
+
+Data integrity and authorship questions are handled with FHIR's standard mechanisms rather than file-level signatures: [Provenance](https://www.hl7.org/fhir/R4/provenance.html) resources record who created and transformed each record, and [AuditEvent](https://www.hl7.org/fhir/R4/auditevent.html) records access. See the [Merging and Versioning](./longitudinal.html) page for how provenance supports reconciliation across sources.
+
+### Functional Model Reference
+
+The [PHR-S Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/) defines the complete catalog of security, audit, and infrastructure conformance criteria for PHR *systems* (sections TI.1 Security and TI.2 Audit, including authentication, authorization, access control, non-repudiation, and audit triggers). PHR system implementers SHOULD consult the functional model directly; this guide does not restate those system-level requirements, since this guide's scope is the record format and its exchange rather than the system that hosts it.

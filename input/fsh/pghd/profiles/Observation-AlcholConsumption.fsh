@@ -11,5 +11,6 @@ This profile defines how to represent AlcholConsumption.
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
 * code.coding[PGHDCode] from ObservationAlcholConsumption
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * value[x] only Quantity
 * value[x] MS

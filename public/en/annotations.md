@@ -2,7 +2,7 @@
 
 ## Annotations
 
-Once an encrypted .phr or .sphr file is generated, that has been cryptographically signed, patients, clinicians, and others may have an interest in correcting, amending, or annotating the record, without breaking the cryptographic signature. The SPHR standard offers the Annotation functionality for such cases.
+Once a .phr or .sphr file has been exported and shared, patients, clinicians, and others may have an interest in correcting, amending, or annotating the record without altering the original file as it was received — the original remains the authoritative source artifact. The SPHR standard offers the Annotation functionality for such cases.
 
 ### Patient Use cases
 

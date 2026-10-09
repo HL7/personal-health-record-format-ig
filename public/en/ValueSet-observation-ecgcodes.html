@@ -7,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ECG Lead Codes - Personal Health Records v1.0.0-ballot2</title>
+    <title>ECG Value Set - Personal Health Records v1.0.0-ballot2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -21,9 +21,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+  	<!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7.css" rel="stylesheet"/>
     <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
 
@@ -50,8 +50,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"27.58"}
-    h3,h4,h5,h6{--heading-prefix:"27.58"}</style>
+    <style type="text/css">h2{--heading-prefix:"27.61"}
+    h3,h4,h5,h6{--heading-prefix:"27.61"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -125,6 +125,19 @@
     </ul>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Generated Health Data
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="pghd.html">Overview</a>
+      </li>
+      <li>
+        <a href="pghd-code-mapping.html">Code Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
       <b class="caret"></b>
     </a>
@@ -146,9 +159,6 @@
       </li>
       <li>
         <a href="longitudinal.html">Merging and Versioning</a>
-      </li>
-      <li>
-        <a href="pghd.html">Patient Generated Health Data</a>
       </li>
       <li>
         <a href="physiology.html">Physiology Domains</a>
@@ -216,7 +226,7 @@
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ECG Lead Codes</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ECG Value Set</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -275,7 +285,7 @@
 </ul>
 
   <a name="root"> </a>
-  <h2 id="root">ValueSet: ECG Lead Codes
+  <h2 id="root">ValueSet: ECG Value Set
 
   </h2>
   <table class="colstu" data-fhir="generated">
@@ -329,10 +339,10 @@
 
   </table>
 
-<p>
+<div data-fhir="generated">
 <p>Codes for ECG and related items</p>
 
-</p>
+</div>
 
 
   <p>
@@ -358,7 +368,7 @@
   <a name="expansion"> </a>
   <h3 id="expansion">Expansion</h3>
 
-  <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"/><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on <a href="CodeSystem-ecg-codes.html">codesystem ECG Classification Codes v1.0.0-ballot2 (CodeSystem)</a><span class="copy-text-inline"><button data-clipboard-text="http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes|1.0.0-ballot2" title="Click to Copy URL" class="btn-copy"> </button></span></p><p>This value set contains 2 concepts</p><table class="codes" data-fhir="generated"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name="x-http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes-classification"> </a><code>http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes</code></td><td style="white-space:nowrap">  <a href="CodeSystem-ecg-codes.html#ecg-codes-classification">classification</a></td><td>Classification</td><td>Classifications returned by Apple Watch’s ECG algorithm.</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes&quot;, &quot;version&quot;: &quot;1.0.0-ballot2&quot;, &quot;code&quot;: &quot;classification&quot;, &quot;display&quot;: &quot;Classification&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes&quot;&gt;&lt;version value=&quot;1.0.0-ballot2&quot;&gt;&lt;code value=&quot;classification&quot;&gt;&lt;display value=&quot;Classification&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes-symptomsStatus"> </a><code>http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes</code></td><td style="white-space:nowrap">  <a href="CodeSystem-ecg-codes.html#ecg-codes-symptomsStatus">symptomsStatus</a></td><td>Symptoms status</td><td>A value that indicates whether the user entered a symptom when they recorded the ECG.</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes&quot;, &quot;version&quot;: &quot;1.0.0-ballot2&quot;, &quot;code&quot;: &quot;symptomsStatus&quot;, &quot;display&quot;: &quot;Symptoms status&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes&quot;&gt;&lt;version value=&quot;1.0.0-ballot2&quot;&gt;&lt;code value=&quot;symptomsStatus&quot;&gt;&lt;display value=&quot;Symptoms status&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr></table></div>
+  <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"/><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on <a href="CodeSystem-ecg-codes.html">codesystem ECG Codes v1.0.0-ballot2 (CodeSystem)</a><span class="copy-text-inline"><button data-clipboard-text="http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes|1.0.0-ballot2" title="Click to Copy URL" class="btn-copy"> </button></span></p><p>This value set contains 2 concepts</p><table class="codes" data-fhir="generated"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name="x-http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes-classification"> </a><code>http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes</code></td><td style="white-space:nowrap">  <a href="CodeSystem-ecg-codes.html#ecg-codes-classification">classification</a></td><td>Classification</td><td>Classifications returned by Apple Watch’s ECG algorithm.</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes&quot;, &quot;version&quot;: &quot;1.0.0-ballot2&quot;, &quot;code&quot;: &quot;classification&quot;, &quot;display&quot;: &quot;Classification&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes&quot;&gt;&lt;version value=&quot;1.0.0-ballot2&quot;&gt;&lt;code value=&quot;classification&quot;&gt;&lt;display value=&quot;Classification&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes-symptomsStatus"> </a><code>http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes</code></td><td style="white-space:nowrap">  <a href="CodeSystem-ecg-codes.html#ecg-codes-symptomsStatus">symptomsStatus</a></td><td>Symptoms status</td><td>A value that indicates whether the user entered a symptom when they recorded the ECG.</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes&quot;, &quot;version&quot;: &quot;1.0.0-ballot2&quot;, &quot;code&quot;: &quot;symptomsStatus&quot;, &quot;display&quot;: &quot;Symptoms status&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/uv/phr/CodeSystem/ecg-codes&quot;&gt;&lt;version value=&quot;1.0.0-ballot2&quot;&gt;&lt;code value=&quot;symptomsStatus&quot;&gt;&lt;display value=&quot;Symptoms status&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr></table></div>
 
   <hr/>
   <p>
@@ -399,8 +409,8 @@
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-11 16:28:00 -0600">
-    2026-06-11
+  <span title="2026-10-08 19:53:00 -0500">
+    2026-10-08
   </span>
 
           <br/>

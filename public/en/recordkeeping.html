@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+  	<!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7.css" rel="stylesheet"/>
     <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
 
@@ -124,6 +124,19 @@
     </ul>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Generated Health Data
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="pghd.html">Overview</a>
+      </li>
+      <li>
+        <a href="pghd-code-mapping.html">Code Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
       <b class="caret"></b>
     </a>
@@ -145,9 +158,6 @@
       </li>
       <li>
         <a href="longitudinal.html">Merging and Versioning</a>
-      </li>
-      <li>
-        <a href="pghd.html">Patient Generated Health Data</a>
       </li>
       <li>
         <a href="physiology.html">Physiology Domains</a>
@@ -273,10 +283,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#fhir-storage" id="markdown-toc-fhir-storage">FHIR Storage</a></li>
-  <li><a href="#data-provenance-and-security" id="markdown-toc-data-provenance-and-security">Data provenance and security</a></li>
+  <li><a href="#data-protection" id="markdown-toc-data-protection">Data Protection</a></li>
   <li><a href="#record-lifecycle" id="markdown-toc-record-lifecycle">Record Lifecycle</a></li>
   <li><a href="#conformance-testing" id="markdown-toc-conformance-testing">Conformance Testing</a></li>
-  <li><a href="#references" id="markdown-toc-references">References</a></li>
+  <li><a href="#patient-summaries" id="markdown-toc-patient-summaries">Patient Summaries</a></li>
 </ul>
 
 </div>
@@ -319,8 +329,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>The <code class="language-plaintext highlighter-rouge">.sphr</code> file extension is introduced for when there are additional supporting materials, which cannot be fully expressed in FHIR format.  The <code class="language-plaintext highlighter-rouge">.sphr</code> is a zip folder, which contains one or more FHIR resources, as well as additional supporting materials.</p>
 
 <p>The <code class="language-plaintext highlighter-rouge">.sphr</code> file extension is intended to be used for data exports that are saved to a CD, DVD, thumbdrive, etc.  Each <code class="language-plaintext highlighter-rouge">.sphr</code> folder should contain at least one <code class="language-plaintext highlighter-rouge">.phr</code> file within it, as well as additional supporting materials such as images, documents, and other media.</p>
-
-<p>Per the <code class="language-plaintext highlighter-rouge">.zip</code> specification, the <code class="language-plaintext highlighter-rouge">.sphr</code> folder may be cryptographically signed.</p>
 
 <h4 id="meta-data">Meta Data</h4>
 
@@ -373,48 +381,35 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>This guide intentionally does not reproduce the C-CDA metadata mappings; see <a href="http://hl7.org/fhir/us/ccda/">C-CDA on FHIR</a> for document-level mappings into FHIR.  For the broader document paradigm — a Bundle of <code class="language-plaintext highlighter-rouge">type = document</code> whose first entry is a Composition — see <a href="https://www.hl7.org/fhir/R4/documents.html">FHIR Documents</a>.  For summary documents, see the <a href="http://hl7.org/fhir/uv/ips/">International Patient Summary</a>.</p>
 
+<h4 id="claims-and-coverage-data-blue-button-20--carin-bb">Claims and Coverage Data (Blue Button 2.0 / CARIN BB)</h4>
+
+<p>Claims data rounds out the financial picture of a PHR, and frequently documents encounters that never produced a clinical record the patient can access.  Two FHIR-based sources cover most of the US payer landscape:</p>
+
+<ul>
+  <li><strong><a href="https://bluebutton.cms.gov/">CMS Blue Button 2.0</a></strong> — Medicare claims as FHIR <code class="language-plaintext highlighter-rouge">ExplanationOfBenefit</code>, <code class="language-plaintext highlighter-rouge">Coverage</code>, and <code class="language-plaintext highlighter-rouge">Patient</code> resources.</li>
+  <li><strong><a href="http://hl7.org/fhir/us/carin-bb/">CARIN Blue Button (C4BB)</a></strong> — the payer-agnostic equivalent implemented by commercial insurers under the CMS Patient Access API rule.</li>
+</ul>
+
+<p>When importing claims data into a PHR:</p>
+
+<ol>
+  <li>Retain the <code class="language-plaintext highlighter-rouge">ExplanationOfBenefit</code> resources as received — they are the payer's record, and like clinical records they should be preserved as written.</li>
+  <li>Tag each imported resource with a <a href="https://www.hl7.org/fhir/R4/provenance.html">Provenance</a> resource naming the payer as source, so that merge and filtering logic can distinguish payer-sourced from provider-sourced and patient-sourced data (see <a href="./longitudinal.html">Merging and Versioning</a>).</li>
+  <li>Expect the payer's <code class="language-plaintext highlighter-rouge">Patient</code> resource to differ from clinical ones — member IDs rather than MRNs; see the patient-linking guidance on the Merging page.</li>
+  <li>Claims MAY be used to <em>backfill</em> the clinical record (e.g., inferring an encounter or procedure from a billing code), but inferred resources MUST be marked as derived in their Provenance, not presented as clinical source records.</li>
+</ol>
+
 <h4 id="bulk-data-exports">Bulk Data Exports</h4>
 
-<p>Should use <a href="http://ndjson.org/">NDJSON format</a> and save to a password encrypted zip file.  Please see <a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Access IG</a> more additional design guidance.</p>
+<p>Should use <a href="http://ndjson.org/">NDJSON format</a>.  Please see <a href="https://hl7.org/fhir/uv/bulkdata/">Bulk Data Access IG</a> for additional design guidance.</p>
 
 <p>The primary difference between the Bulk Data Access format and the <code class="language-plaintext highlighter-rouge">.phr</code> file, is that Bulk Data exports data according to resource type.  That is, all Observations get written to an <code class="language-plaintext highlighter-rouge">Observation.ndjson</code> file; all Condititions get written to a <code class="language-plaintext highlighter-rouge">Conditions.ndjson</code> file, all MedicationStatements to a <code class="language-plaintext highlighter-rouge">MedicationStatement.ndjson</code> file, and so forth.</p>
 
 <p>Meanwhile, the <code class="language-plaintext highlighter-rouge">.phr</code> file is a single hetergenous <code class="language-plaintext highlighter-rouge">.ndjson</code> file that contains all of the data for a patient.  It is a <code class="language-plaintext highlighter-rouge">.ndjson</code> file with mixed resource types.  This is done to simplify the process of importing and exporting data.  It is also done to simplify the process of querying data.  It is easier to query a single file than it is to query multiple files.  However, it does introduce import/export parsing requirements, that are not present in the Bulk Data Access format.</p>
 
-<h3 id="data-provenance-and-security">Data provenance and security</h3>
+<h3 id="data-protection">Data Protection</h3>
 
-<p>Here we describe the asymmetric cryptography algorithms to support both signing and encryption of PHR files.</p>
-
-<h4 id="signing">Signing</h4>
-<p>Signing allows the source system of the PHR file to attest to the contents of that file and the recipient to verify authenticity and identity of the data source. If the full file is used as the message digest of a digital signature, it can allow the recipient to also verify data integrity and provides mechanism for non-repudiation.</p>
-
-<h5 id="attestation">Attestation</h5>
-<p>The source system MAY provide a FHIR Signature on the PhrBundle resource or individual PhrProvenance resources. The signature SHALL be a detached signature on the canonical form of the resource in compliance with the <a href="http://hl7.org/fhir/R4/datatypes.html#Signature">FHIR Signature</a> guidance.</p>
-
-<h5 id="data-integrity">Data integrity</h5>
-<p>The source system MAY sign a hash of the full and optionally compressed or encrypted PHR file and provide a JWS as a separate file to the recipient to allow the recipient to both identify the source of data and verify data integrity. The source system should use the SHA-256 hash algorithm to create a message digest of the SPHR file for signing. As with FHIR Signatures, the JWS should be a detached signature without a payload.</p>
-
-<p>The recipient MAY verify the integrity of the SPHR file by verifying the signature of the provided JWS against the SHA-256 hash of the SPHR file. Note that there may be significant performance limitations in creating the hash based on size of the file.</p>
-
-<h5 id="trust-and-key-distribution">Trust and key distribution</h5>
-<p>While a verifiable signature may provide some context as to the identity of the data source, it does not ensure that that data source is a reliable actor. The recipient who wishes to verify a digital signature MAY also verify that the signer is a trusted entity as defined by participation in a mutual trust network. The recipient SHOULD assure that any trust network in which they choose to participate enforces policies and provides adequate governance to prevent unreliable data sources from entering the network.</p>
-
-<p>Retrieving the source system's public keys may depend on the key formats and distribution methods inherent to the trust networks in which a recipient chooses to participate.</p>
-
-<p>In an X.509 based PKI, the recipient MAY receive the source system's public key from a trusted certificate authority. If the certificate is distributed out of band, the recipient MAY verify that the root of the chain of trust is a trusted certificate authority and that the certificate is not revoked.</p>
-
-<h4 id="encryption">Encryption</h4>
-<p>Files containing patient health information should be encrypted to protect the data in case of unauthorized interception.</p>
-
-<h5 id="public-key-encryption">Public key encryption</h5>
-<p>If the PHR file is being generated for a known intended recipient, then the file MAY be encrypted using the discoverable public key of that recipient. Key distribution for the recipients public key would follow the same guidance as in "Trust and key distribution". Encryption SHOULD use the ES256 algorithm. The intended recipient would use their equivalent private key and the same algorithm to decrypt the file.</p>
-
-<h5 id="passphrase-based-encryption">Passphrase-based encryption</h5>
-<p>If the intended recipient is not known at time of file generation, the source system SHOULD use a unique secret key or passphrase to encrypt the file. This passphrase can be shared out of band by the patient with any recipient of their choosing.</p>
-
-<p>Public key encryption and secret key may be combined in a PGP solution.</p>
-
-<p>A SMART Health Links based solution will distribute the encryption key within a shareable QR which the patient can display to recipients of an SPHR file for scanning. The recipient would decrypt the linked file using the A256GCM algorithm.</p>
+<p>This guide does not define file-level encryption or signing for <code class="language-plaintext highlighter-rouge">.phr</code> and <code class="language-plaintext highlighter-rouge">.sphr</code> files.  These files are plain NDJSON and zip archives respectively, and are <strong>not self-protecting</strong> — protection comes from the environment, not the file.  Records at rest SHOULD be protected with operating-system or volume-level encryption; records in transit are protected by TLS or by <a href="https://docs.smarthealthit.org/smart-health-links/">SMART Health Links</a> (which encrypt their payload and carry the key in the link itself).  Authorship and integrity questions are handled with <a href="https://www.hl7.org/fhir/R4/provenance.html">Provenance</a> resources inside the record rather than signatures around it.  See the <a href="./security.html">Security</a> page for complete guidance.</p>
 
 <h3 id="record-lifecycle">Record Lifecycle</h3>
 
@@ -471,11 +466,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="conformance-testing">Conformance Testing</h3>
 
-<p>For conformance testing with this IG, the primary success critieria is that systems MUST have the ability to import/export the <code class="language-plaintext highlighter-rouge">.sphr</code> filetype. This entails storing FHIR records in a new-line delimited file (including a cover composition resource, an International Patient Summary, and provenance records as needed), compressing the file with DEFLATE algorithm (as needed), and then signing with an X.509 security certificate.</p>
+<p>For conformance testing with this IG, the primary success critieria is that systems MUST have the ability to import/export the <code class="language-plaintext highlighter-rouge">.sphr</code> filetype. This entails storing FHIR records in a new-line delimited file (including a cover composition resource, an International Patient Summary, and provenance records as needed), and compressing the file with the DEFLATE algorithm (as needed).</p>
 
 <h4 id="creating-a-personal-health-record">Creating a Personal Health Record</h4>
-
-<p>The process flow below is based on encrypting files with PGP/GPG utilities, which support asymmetric cryptography algorithms and X.509 certificates.</p>
 
 <ul>
   <li>Gather the data you want to include.</li>
@@ -486,14 +479,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>If over 16MB, use Bulk Data format and save as nd-json.</li>
   <li>Add international patient summary (if needed).</li>
   <li>Add problem oriented health record components (if needed).</li>
-  <li>Add provenance resources and optionally sign them with a FHIR Signature.</li>
+  <li>Add provenance resources.</li>
   <li>Add media and supporting documents.</li>
-  <li>Optionally add a FHIR Signature to a PhrBundle instance.</li>
   <li>Rename the .ndjson file with .phr extension.</li>
   <li>Compress the file (or directory) with zip and DEFLATE algorithms.</li>
-  <li>Encrypt the file with a passphrase or the public key in the intended recipient's X.509 certificate.</li>
   <li>Rename the .phr file with .sphr extension.</li>
-  <li>Optionally hash the file and produce a JWS signature using your discoverable X.509 certificate.</li>
+  <li>Store or transmit the file in a protected environment (see <a href="./security.html">Security</a>).</li>
 </ul>
 
 <h4 id="importing-a-personal-health-record">Importing a Personal Health Record</h4>
@@ -501,26 +492,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li>Configure operating sytem to open the .sphr with the application of your choice.</li>
   <li>If .sphr not registered, rename to .zip</li>
-  <li>Optionally validate the associated JWS signature using the source system's X.509 certificate.</li>
   <li>Decompress the file (or directory) with zip and DEFLATE algorithms.</li>
-  <li>Decrypt using a provided passphrase or the private key associated with your discoverable X.509 certificate.</li>
   <li>If a directory, scan for media and supporting documents such as PDF.</li>
   <li>Scan the contents of the directory for a .phr or .ndjson file.</li>
   <li>Scan the .phr file for the Composition resource.</li>
   <li>Scan the .phr file for an International Patient Summary.</li>
   <li>Scan the .phr file for the primary Patient resource.</li>
   <li>Scan the .phr file for provenance resources.</li>
-  <li>If found, decode each provenance signature and extract payload contents.</li>
   <li>Scan for an international patient summary, and supporting resources.</li>
   <li>Scan for a problems list, and supporting resources.</li>
   <li>Scan the remaining resources, and operate on them as if a PUT or POST message.</li>
-</ul>
-
-<h3 id="references">References</h3>
-
-<ul>
-  <li><a href="https://www.pengdows.com/2020/06/27/convert-a-x-509-pki-certificate-to-gpg/">Convert a X.509 (PKI) certificate to GPG</a></li>
-  <li><a href="https://www.npmjs.com/package/gpg">GPG Encryption/Decryption in Node.js</a></li>
 </ul>
 
 <h4 id="directory-structure">Directory Structure</h4>
@@ -535,6 +516,109 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="https://filext.com/file-extension/DICOMDIR">Opening a DICOMDIR File</a></li>
   <li><a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_F.2.2.2.html">DICOM PS3.3 2024b - Information Object Definitions</a></li>
   <li><a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part11/sect_d.3.3.html">DICOM PS3.11 2024b - Media Storage Application Profiles</a></li>
+</ul>
+
+<h3 id="patient-summaries">Patient Summaries</h3>
+
+<p>Every Personal Health Record needs a patient summary — a compact, current-state view of the record that a clinician can absorb in minutes. Rather than defining a new summary format, this guide adopts the <a href="http://hl7.org/fhir/uv/ips/">International Patient Summary (IPS)</a> as the patient summary for PHRs: it already exists, is internationally balloted, and is widely implemented. As mentioned earlier, the .phr container MAY include an IPS document that acts as a manifest and table of contents; the IPS Composition is the recommended entry point for readers of a <code class="language-plaintext highlighter-rouge">.sphr</code> file.</p>
+
+<p>The IPS is the "executive summary" layer of the complete PHR — the active, current information needed for immediate care decisions — while the PHR preserves the full longitudinal history beneath it. The PHR may also contain previous versions of IPS documents obtained while traveling or otherwise.</p>
+
+<h4 id="generating-ips-from-phr">Generating IPS from PHR</h4>
+
+<p>To generate (or regenerate) an IPS document from PHR data, use the most recent data (status of current or active), including:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>IPS Section</th>
+      <th>PHR Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Medication Summary</td>
+      <td>MedicationStatement (status=active)</td>
+    </tr>
+    <tr>
+      <td>Allergies and Intolerances</td>
+      <td>AllergyIntolerance (clinicalStatus=active)</td>
+    </tr>
+    <tr>
+      <td>Problem List</td>
+      <td>Condition (clinicalStatus=active)</td>
+    </tr>
+    <tr>
+      <td>Immunizations</td>
+      <td>Immunization (status=completed, recent)</td>
+    </tr>
+    <tr>
+      <td>History of Procedures</td>
+      <td>Procedure (recent, significant)</td>
+    </tr>
+    <tr>
+      <td>Medical Devices</td>
+      <td>DeviceUseStatement (status=active)</td>
+    </tr>
+    <tr>
+      <td>Vital Signs</td>
+      <td>Observation (category=vital-signs, recent)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="importing-ips-into-phr">Importing IPS into PHR</h4>
+
+<p>When a patient receives an IPS from a healthcare provider:</p>
+
+<ol>
+  <li><strong>Parse the IPS Bundle</strong> - Extract Composition and other resources.</li>
+  <li><strong>Record Provenance</strong> - Record source system and date received, if available.</li>
+  <li><strong>Deduplicate</strong> - Check for existing equivalent records.</li>
+  <li><strong>Merge</strong> - Integrate new data with existing PHR contents.</li>
+  <li><strong>Flag conflicts</strong> - Identify discrepancies for patient review.</li>
+</ol>
+
+<h4 id="terminology-requirements">Terminology Requirements</h4>
+
+<p>IPS requires internationally recognized code systems:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data Type</th>
+      <th>Required Code System</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Conditions</td>
+      <td>SNOMED CT (IPS subset)</td>
+    </tr>
+    <tr>
+      <td>Medications</td>
+      <td>SNOMED CT, ATC, or national drug codes</td>
+    </tr>
+    <tr>
+      <td>Allergies</td>
+      <td>SNOMED CT</td>
+    </tr>
+    <tr>
+      <td>Lab results</td>
+      <td>LOINC</td>
+    </tr>
+    <tr>
+      <td>Units</td>
+      <td>UCUM</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="references">References</h4>
+
+<ul>
+  <li><a href="http://hl7.org/fhir/uv/ips/">International Patient Summary IG</a></li>
+  <li><a href="https://www.snomed.org/snomed-ct/use-snomed-ct/international-patient-summary">IPS Terminology</a></li>
 </ul>
 
 <h4 id="configuring-operating-systems-to-recognize-phr-and-sphr-filetypes">Configuring Operating Systems to Recognize .phr and .sphr Filetypes</h4>
@@ -575,8 +659,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-11 16:28:00 -0600">
-    2026-06-11
+  <span title="2026-10-08 19:53:00 -0500">
+    2026-10-08
   </span>
 
           <br/>

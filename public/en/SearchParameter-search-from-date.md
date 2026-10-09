@@ -2,9 +2,6 @@
 
 ## SearchParameter: Search From Date 
 
- 
-Return records from this date 
-
 
 
 ## Resource Content
@@ -47,7 +44,7 @@ Return records from this date
   "version" : "1.0.0-ballot2",
   "name" : "SearchFromDateSearchParameter",
   "status" : "active",
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

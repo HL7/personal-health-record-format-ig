@@ -11,6 +11,7 @@ This profile defines how to represent Nutrition.
 
 * category[ObservationCategory].coding.code = #social-history	 (exactly)
 * code.coding[PGHDCode] from ObservationNutrition
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * value[x] only Quantity
 * valueQuantity.system = $CodeSystemUCUM
 * value[x] MS

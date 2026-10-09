@@ -1,6 +1,6 @@
-# ConceptMapSymptomSNOMEDCT2PGHD - Personal Health Records v1.0.0-ballot2
+# Symptom Codes, SNOMED CT to PGHD - Personal Health Records v1.0.0-ballot2
 
-## ConceptMap: ConceptMapSymptomSNOMEDCT2PGHD 
+## ConceptMap: Symptom Codes, SNOMED CT to PGHD 
 
 
 
@@ -42,9 +42,10 @@
   ],
   "url" : "http://hl7.org/fhir/uv/phr/ConceptMap/symptom-snomedct-to-pghd",
   "version" : "1.0.0-ballot2",
+  "title" : "Symptom Codes, SNOMED CT to PGHD",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {
@@ -57,6 +58,7 @@
       ]
     }
   ],
+  "description" : "Maps SNOMED CT symptom codes to PHR-IG patient-generated health data (PGHD) symptom codes.",
   "jurisdiction" : [
     {
       "coding" : [

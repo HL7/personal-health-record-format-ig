@@ -2,9 +2,6 @@
 
 ## ValueSet: Patient contributed data: sleep stage value 
 
- 
-This value set includes codes to track patient sleep values recorded by device or app 
-
  **References** 
 
 This value set is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
@@ -62,7 +59,8 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "PCDSleepStageValueCode",
   "title" : "Patient contributed data: sleep stage value",
   "status" : "active",
-  "date" : "2026-06-11T16:28:41-06:00",
+  "experimental" : false,
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

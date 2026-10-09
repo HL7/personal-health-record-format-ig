@@ -71,7 +71,7 @@
   fhir:name [ fhir:v "PGHDAlcholUse"] ; # 
   fhir:title [ fhir:v "PGHD AlcholUse Profile"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-06-11T16:28:41-06:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-08T19:53:09-05:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Empowerment"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Empowerment" ] ;
@@ -1842,7 +1842,7 @@
        fhir:definition [ fhir:v "The identification of the code system that defines the meaning of the symbol in the code." ] ;
        fhir:comment [ fhir:v "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." ] ;
        fhir:requirements [ fhir:v "Need to be unambiguous about the source of the definition of the symbol." ] ;
-       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
          fhir:path [ fhir:v "Coding.system" ] ;
@@ -1855,6 +1855,11 @@
            fhir:l fhir:uri
          ]
        ] ) ;
+       fhir:fixed [
+         a fhir:Uri ;
+         fhir:v "http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/uv/phr/CodeSystem/observation-pghd-codes>
+       ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
          fhir:severity [ fhir:v "error" ] ;

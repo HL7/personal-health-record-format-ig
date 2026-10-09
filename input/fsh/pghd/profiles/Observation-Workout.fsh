@@ -11,6 +11,7 @@ This profile defines how to represent Workout.
 
 * category[ObservationCategory].coding.code = #activity (exactly)
 * code.coding[PGHDCode] from ObservationWorkout
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * hasMember only Reference(
     PGHDActivity or
     PGHDAlcholConsumption or

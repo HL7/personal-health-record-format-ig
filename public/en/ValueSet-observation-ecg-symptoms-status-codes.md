@@ -1,9 +1,6 @@
-# ECG Symptoms Status Codes - Personal Health Records v1.0.0-ballot2
+# ECG Symptoms Status Value Set - Personal Health Records v1.0.0-ballot2
 
-## ValueSet: ECG Symptoms Status Codes 
-
- 
-Code indicating whether or not the user's symptoms are input during ECG waveform acquisition 
+## ValueSet: ECG Symptoms Status Value Set 
 
  **References** 
 
@@ -60,10 +57,10 @@ Code indicating whether or not the user's symptoms are input during ECG waveform
   "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-ecg-symptoms-status-codes",
   "version" : "1.0.0-ballot2",
   "name" : "ObservationEcgSymptomsStatusValueSet",
-  "title" : "ECG Symptoms Status Codes",
+  "title" : "ECG Symptoms Status Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [
     {

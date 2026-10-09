@@ -173,6 +173,20 @@
     "name" : "PatientHealthRecordsIG"
   },
   {
+    "id" : "phr-export",
+    "type" : "OperationDefinition",
+    "url" : "http://hl7.org/fhir/uv/phr/OperationDefinition/phr-export",
+    "version" : "1.0.0-ballot2",
+    "name" : "PHRExport"
+  },
+  {
+    "id" : "phr-import",
+    "type" : "OperationDefinition",
+    "url" : "http://hl7.org/fhir/uv/phr/OperationDefinition/phr-import",
+    "version" : "1.0.0-ballot2",
+    "name" : "PHRImport"
+  },
+  {
     "id" : "gad7",
     "type" : "Questionnaire",
     "url" : "http://hl7.org/fhir/uv/phr/Questionnaire/gad7",
@@ -220,13 +234,6 @@
     "url" : "http://hl7.org/fhir/uv/phr/StructureDefinition/PhrBundle",
     "version" : "1.0.0-ballot2",
     "name" : "PhrBundle"
-  },
-  {
-    "id" : "SocialMedia",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.org/fhir/uv/phr/StructureDefinition/SocialMedia",
-    "version" : "1.0.0-ballot2",
-    "name" : "SocialMedia"
   },
   {
     "id" : "pghd-activity",

@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+  	<!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7.css" rel="stylesheet"/>
     <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
 
@@ -124,6 +124,19 @@
     </ul>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Patient Generated Health Data
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="pghd.html">Overview</a>
+      </li>
+      <li>
+        <a href="pghd-code-mapping.html">Code Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Supplemental
       <b class="caret"></b>
     </a>
@@ -145,9 +158,6 @@
       </li>
       <li>
         <a href="longitudinal.html">Merging and Versioning</a>
-      </li>
-      <li>
-        <a href="pghd.html">Patient Generated Health Data</a>
       </li>
       <li>
         <a href="physiology.html">Physiology Domains</a>
@@ -276,20 +286,64 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><img src="./PhrHistory.jpg" alt="./PhrHistory.jpg" width="20%" /></p>
 
-<p>Medical records have been around since as long as there have been practicing physicians.  Modern medical record systems began in 1665, however, with the Bills of Mortality of London, England, which eventually became the International Classification of Diseases, and defined a standard Code System for recording diseases.  Later, advances in library science led to the adoption of record keeping conventions, such as the Dewey Decimal System and the Card Catalog patent.</p>
+<p>Medical records have been around for as long as there have been practicing physicians. An important precursor to modern standardized health records appeared in the seventeenth century with the <em>Bills of Mortality</em> of London, England. John Graunt's 1662 analysis of these records is generally regarded as the beginning of the statistical study of disease and mortality, and this tradition of classifying causes of death ultimately contributed to the development of the International Classification of Diseases (ICD).<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> Later, advances in library and information science introduced increasingly systematic approaches to organizing and retrieving information, including Melvil Dewey's Decimal Classification, first published in 1876.<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
 
-<p>In 1945, the Enigma Project invented the first digital computer, to which library science information management principles were soon added.  By 1970, digital computers became accessible enough that hospitals could use them to track patient visits for accounting purposes, which led to the Massachusetts General Hospital Utility Multi-Programming System (MUMPS/VAX), which is commonly regarded as the first electronic medical record system.</p>
+<p>The development of electronic digital computers accelerated dramatically during the Second World War. The British Colossus computers, developed at Bletchley Park and operational beginning in 1944, were among the earliest programmable electronic digital computers.<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> ENIAC, completed in the United States in 1945, became the first general-purpose electronic digital computer.<sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> These developments laid the technological foundation for the later application of computers to information management.</p>
 
-<p>Soon after, the personal computing revolution saw the general population become able to purchase a home computer, and with it a flury of patients using these PCs to manage their personal health using spreadsheets and small self-written offline medical record management utilities.</p>
+<p>By the 1960s, hospitals and academic medical centers were beginning to explore computerized management of clinical and administrative information. At Massachusetts General Hospital, G. Octo Barnett founded the Laboratory of Computer Science in 1964, where MUMPS (Massachusetts General Hospital Utility Multi-Programming System) was developed as a programming language and database environment for medical information systems.<sup id="fnref:5"><a href="#fn:5" class="footnote" rel="footnote" role="doc-noteref">5</a></sup> MUMPS subsequently became the technological foundation for numerous clinical information systems and electronic health record systems.<sup id="fnref:5:1"><a href="#fn:5" class="footnote" rel="footnote" role="doc-noteref">5</a></sup></p>
 
-<p>Many of these utilities were eventually abandoned; but others found themselves in a process of consolidation and gravitating towards what would eventually become the major electronic medical record vendors (i.e. Meditech, Epic, Cerner (now Oracle), Allscripts (now Veradigm/Altera) etc).</p>
+<p>Soon after, the personal computing revolution made computers available to individuals and small organizations. During the 1980s, inexpensive desktop and portable microcomputers increasingly became capable of storing and managing medical information outside traditional mainframe and minicomputer environments.<sup id="fnref:6"><a href="#fn:6" class="footnote" rel="footnote" role="doc-noteref">6</a></sup> Patients and technically inclined individuals likewise began experimenting with spreadsheets, databases, and small applications to organize personal information.</p>
 
-<p>Eventually these systems had need to exchange information with each other, and an era of point-to-point communication was begun using HL7 v2.  After nearly 3 decades of this approach, the need to renegotiate interfaces between every business partner eventually led to the development of reusable data endpoints, as described by Fast Healthcare Interoperability Resources (FHIR).</p>
+<p>Meanwhile, clinical computing systems were proliferating within hospitals, creating an increasing need for systems from different vendors to exchange information. Health Level Seven (HL7) was founded in 1987 with the explicit goal of simplifying interfaces between healthcare computer applications from different and often competing vendors.<sup id="fnref:7"><a href="#fn:7" class="footnote" rel="footnote" role="doc-noteref">7</a></sup> HL7 Version 2 subsequently became one of the most widely deployed standards for exchanging clinical and administrative information between healthcare systems.<sup id="fnref:8"><a href="#fn:8" class="footnote" rel="footnote" role="doc-noteref">8</a></sup></p>
 
-<p>This web-standards based protocol has been widely adopted by clinicians and industry technology vendors.   And in the mid 2010s, laws in the United States and elsewhere began being passed requiring the use of interoperability standards; with one notable example being the U.S. 21st Century Cures Act, which formalized patient rights to access their own data using standardized interoperability protocols.</p>
+<p>Over time, experience implementing interfaces between heterogeneous systems demonstrated the value of more reusable and consistently defined interoperability interfaces. HL7 Fast Healthcare Interoperability Resources (FHIR) combined concepts developed in earlier HL7 standards with contemporary web technologies to simplify the development of interoperable healthcare applications.<sup id="fnref:9"><a href="#fn:9" class="footnote" rel="footnote" role="doc-noteref">9</a></sup></p>
 
-<p>This changed legal environment has created an opportunity for a new ecosystem of applications, products, and services that incorporate patient health records; with early adopter organizations such as MyLinks, MaxMD, Symptomatic, and 1Up Health advocating on behalf of patients and their rights under the 21st Century Cures law.</p>
+<p>FHIR and related web-based interoperability approaches have since been widely adopted by healthcare organizations, technology vendors, and governments. In the United States, the 21st Century Cures Act and its implementing regulations significantly strengthened requirements for electronic health information access and interoperability. The ONC Cures Act Final Rule established standardized application programming interface (API) requirements intended to allow patients to securely access their electronic health information using applications of their choice.<sup id="fnref:10"><a href="#fn:10" class="footnote" rel="footnote" role="doc-noteref">10</a></sup> The standardized API certification criterion specifically adopted HL7 FHIR Release 4 and related implementation specifications for patient access.<sup id="fnref:11"><a href="#fn:11" class="footnote" rel="footnote" role="doc-noteref">11</a></sup></p>
 
+<p>This changed legal and technical environment has created opportunities for a new ecosystem of applications, products, and services that incorporate patient health records. By 2022, more than two-thirds of U.S. hospitals reported using HL7 FHIR APIs to enable patient access to health information, illustrating the growing availability of standards-based interfaces through which patient-directed applications can obtain clinical data.<sup id="fnref:12"><a href="#fn:12" class="footnote" rel="footnote" role="doc-noteref">12</a></sup></p>
+
+<h4 id="references">References</h4>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>World Health Organization. <em>International Statistical Classification of Diseases and Related Health Problems, Tenth Revision (ICD-10), Volume 2: Instruction Manual</em>, section 6.1, "Early history." https://iris.who.int/bitstream/handle/10665/42980/9241546530_eng.pdf <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Library of Congress. "Of Note: Registering the Dewey Decimal System at the Library of Congress." <em>Unfolding History</em>. https://blogs.loc.gov/manuscripts/2026/04/of-note-registering-the-dewey-decimal-system-at-the-library-of-congress/ <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>The National Museum of Computing. "Colossus." https://www.tnmoc.org/colossus <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>Stanford Encyclopedia of Philosophy. "The Modern History of Computing." https://plato.stanford.edu/entries/computing-history/ <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>Massachusetts General Hospital Laboratory of Computer Science. "Our History." https://www.mgh-lcs.org/about/history <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:5:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:6">
+      <p>Ash SR, Ulrich DK. Portable and desktop microcomputers for patient care charting. <em>Journal of Medical Systems</em>. 1986;10(4):361–373. https://pubmed.ncbi.nlm.nih.gov/3783064/ <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7">
+      <p>Health Level Seven International. <em>HL7 Version 2.9, Chapter 1: Introduction</em>. https://hl7.eu/HL7v2x/v29/std29/ch01.html <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8">
+      <p>U.S. Department of Health and Human Services, Office of the Assistant Secretary for Planning and Evaluation. "Inventory of Health Care Information Standards." https://aspe.hhs.gov/reports/inventory-health-care-information-standards <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:9">
+      <p>Health Level Seven International. "HL7 Backgrounder Brief." https://media.hl7.org/hl7-backgrounder-brief/ <a href="#fnref:9" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:10">
+      <p>Office of the National Coordinator for Health Information Technology. "ONC's Cures Act Final Rule." https://healthit.gov/regulations/cures-act-final-rule/ <a href="#fnref:10" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:11">
+      <p>Office of the National Coordinator for Health Information Technology. "Cures Act Final Rule: Standards-based Application Programming Interface (API) Certification Criterion." https://www.healthit.gov/sites/default/files/page2/2020-03/APICertificationCriterion.pdf <a href="#fnref:11" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:12">
+      <p>Office of the National Coordinator for Health Information Technology. "Hospital Use of APIs to Enable Data Sharing Between EHRs and Apps." <em>Data Brief No. 68</em>, September 2023. https://healthit.gov/data/data-briefs/hospital-use-apis-enable-data-sharing-between-ehrs-and-apps/ <a href="#fnref:12" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
 
 
@@ -318,8 +372,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientempowerment">HL7 International / Patient Empowerment</a>.  
           Package hl7.fhir.uv.phr#1.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-11 16:28:00 -0600">
-    2026-06-11
+  <span title="2026-10-08 19:53:00 -0500">
+    2026-10-08
   </span>
 
           <br/>

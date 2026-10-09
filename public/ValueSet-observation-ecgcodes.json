@@ -32,10 +32,10 @@
   "url" : "http://hl7.org/fhir/uv/phr/ValueSet/observation-ecgcodes",
   "version" : "1.0.0-ballot2",
   "name" : "ObservationEcgValueSet",
-  "title" : "ECG Lead Codes",
+  "title" : "ECG Value Set",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-11T16:28:41-06:00",
+  "date" : "2026-10-08T19:53:09-05:00",
   "publisher" : "HL7 International / Patient Empowerment",
   "contact" : [{
     "name" : "HL7 International / Patient Empowerment",
