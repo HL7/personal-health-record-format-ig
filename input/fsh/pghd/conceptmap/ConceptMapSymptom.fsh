@@ -2,6 +2,8 @@ Instance: ConceptMapSymptomPGHD2SNOMEDCT
 InstanceOf: ConceptMap
 Usage: #definition
 * id = "symptom-pghd-to-snomedct"
+* title = "Symptom Codes, PGHD to SNOMED CT"
+* description = "Maps PHR-IG patient-generated health data (PGHD) symptom codes to SNOMED CT."
 * status = #active
 * experimental = false
 * sourceUri = "http://hl7.org/fhir/uv/phr/ValueSet/observation-symptom-codes"
@@ -130,6 +132,8 @@ Instance: ConceptMapSymptomSNOMEDCT2PGHD
 InstanceOf: ConceptMap
 Usage: #definition
 * id = "symptom-snomedct-to-pghd"
+* title = "Symptom Codes, SNOMED CT to PGHD"
+* description = "Maps SNOMED CT symptom codes to PHR-IG patient-generated health data (PGHD) symptom codes."
 * status = #active
 * experimental = false
 * sourceUri = "http://hl7.org/fhir/uv/phr/ValueSet/observation-symptom-snomedct-codes"

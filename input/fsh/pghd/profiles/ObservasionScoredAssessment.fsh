@@ -11,6 +11,7 @@ This profile defines the implementation of the Scored Assessment.
 
 * category[ObservationCategory].coding.code = #survey (exactly)
 * code.coding[PGHDCode] from ObservationMind
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 
 * component ^slicing.discriminator[0].type = #value
 * component ^slicing.discriminator[=].path = "code.coding.system"

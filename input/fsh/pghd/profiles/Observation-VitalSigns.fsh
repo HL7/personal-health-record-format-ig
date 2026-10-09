@@ -11,4 +11,5 @@ This profile defines how to represent vital signs measurements.
 
 * category[ObservationCategory].coding.code = #vital-signs (exactly)
 * code.coding[PGHDCode] from ObservationVitalsignsValueSet (required)
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * value[x] MS

@@ -37,21 +37,35 @@ For more details on functionality of a personal health record system, the reader
 | **Taiwan**       | My Health Bank                                  | National PHR Portal (NHI)           | Partial – APIs/SDK provided; transitioning toward FHIR from legacy HL7 standards.                             |
 | **India**        | Ayushman Bharat Digital Mission (ABDM)         | National Health IT Framework        | Yes – HL7 FHIR adopted as primary exchange standard; personal consent-based PHR model.                        |
 
+#### Jurisdictional Variation and Change Over Time
+
+Readers should be aware that the legal landscape above changes faster than ballot cycles.  In particular:
+
+- **Sub-legislative instruments move quickly.**  Executive orders, agency rules, and ministerial directives can change data requirements — including which demographic elements may be collected or displayed — between publications of this guide.  Implementers SHOULD check current requirements in their jurisdiction rather than relying on this guide as a statement of current law.
+- **Record keepers may be legally obligated to preserve historic records as written.**  Statutes of limitations, medical records retention laws, and litigation holds can require that records be maintained in the form in which they were created, even when current rules would prohibit creating such a record today.  Faithful preservation of the record as received is a core function of a PHR (see the note on demographics on the [Data Model](datamodel.html) page).
+- **Longitudinal records cross jurisdictions.**  A PHR routinely integrates records from external jurisdictions — other countries, states, or health systems — that model demographics, identifiers, and terminology differently.  Importers should expect and preserve this variation rather than normalizing it away.
 
 ### How to Use This Implementation Guide
 
-This Implementation Guide provides three main areas of guidance:
+This Implementation Guide provides four main areas of guidance:
 
 1. **File Formats** — The `.phr` and `.sphr` file extensions for portable personal health records (see [Record Keeping](recordkeeping.html))
 2. **API Patterns** — Endpoints for importing and exporting health records (see [API Endpoints](api.html))
 3. **Data Model** — Mapping PHR-S Functional Model requirements to FHIR resources (see [Data Model](datamodel.html))
+4. **PGHD Code Mapping** — A canonical vocabulary and ConceptMap crosswalk for patient-generated health data from consumer devices and apps (see [Patient Generated Health Data](pghd.html))
+
+### Patient-Generated Health Data
+
+Consumer devices and health apps (Apple HealthKit, Android Health Connect, fitness trackers, sleep monitors) each emit observations in their own vendor vocabularies.  A core contribution of this guide is a **canonical set of PHR-IG codes** for these observations, together with a [ConceptMap-based crosswalk](pghd-code-mapping.html) that maps more than 400 device and app codes to LOINC and SNOMED CT.  Source-system codes map into PHR-IG codes on import; PHR-IG codes map out to standard terminologies for clinical exchange and IPS generation.  This is what allows step counts from two different phones, or sleep stages from two different wearables, to be reconciled into one longitudinal record.
+
+See [Patient Generated Health Data](pghd.html) for the profiles and vocabulary, and the [PHR Code Mapping](pghd-code-mapping.html) table for per-code mapping status.
 
 The only portion of this guide required for conformance testing is the ability to import and export `.sphr` files. All other sections are informational and assist implementers in modeling patient health histories using FHIR.
 
 
 ### Use Cases  
 
-This guide is particularly interested in the problem of collecting and aggregating medical records from multiple healthcare systems and devices into a coherent whole.  In the healthcare industry, these types of compiled records are known as `longitudinal` records.  These needs arise in many situations: longitudinal health records and studies, snowbirds, symptom tracking, Long COVID, multiple chronic conditions, lifelogs, healthy living, differential diagnoses, alternative care, bring-your-own-device, the foster care system, migrants/immigrants, and climate refugees.
+This guide is particularly interested in the problem of collecting and aggregating medical records from multiple healthcare systems and devices into a coherent whole.  In the healthcare industry, these types of compiled records are known as `longitudinal` records.  These needs arise in many situations: longitudinal health records and studies, snowbirds, symptom tracking, Long COVID, multiple chronic conditions, lifelogs, healthy living, differential diagnoses, alternative care, bring-your-own-device, the foster care system, migrants/immigrants, climate refugees, and military service members and veterans.
 
 See the [Use Cases](usecases.html) page for detailed scenarios describing how a Personal Health Record supports each of these situations.
 

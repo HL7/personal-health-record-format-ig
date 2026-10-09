@@ -1,6 +1,6 @@
 ValueSet: ObservationEcgClassificationValueSet
 Id: observation-ecg-classification-codes
-Title: "ECG Classification Codes"
+Title: "ECG Classification Value Set"
 Description: """
 Codes for classification of ECG waveforms
 """

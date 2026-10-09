@@ -1,8 +1,8 @@
 ValueSet: ObservationScoredAssessmentScore
 Id: observation-scored-assessment-score-codes
-Title: "Observation State of Mind Codes"
+Title: "Scored Assessment Score Value Set"
 Description: """
-Codes for state of mind
+Codes for scored assessment scores (e.g. GAD-7, PHQ-9)
 """
 * insert ValueSetRules
 

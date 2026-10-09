@@ -11,4 +11,5 @@ This profile defines how to represent UVExposure.
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
 * code.coding[PGHDCode] from ObservationUVExposure
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * value[x] only Quantity

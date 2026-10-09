@@ -32,25 +32,15 @@ Files containing patient health information MAY be zipped, with either a `.fhir.
 
 #### Security  
 
-Files containing patient health information should be signed with a password, and compressed with a utility such as Zip or gzip if preferred.  
-
-If supported on your operating system, a preferred method of encrypting and decrypting files is with PGP/GPG utilities, which support asymmetric cryptography algorithms such as X.509.  
-
-Therefore, when exporting data to a .phr or .sphr file:
-
-Write the contents of a collection into either a FHIR Bundle with a .json extension, or a NDJSON file with a .ndjson extension.  After writing the contents to the filesystem, compress the data if desired.  Then convert the relevant X509 certificate into GPG format.  Once done, encrypt the file.
-
-Using GPG-Zip to password protect a NDJSON file using an X509 certificate is the level of security people should be striving for when developing SPHR enabled apps.  
-
-
+`.phr` and `.sphr` files are not self-protecting; this guide does not define file-level encryption or signing.  Data at rest SHOULD be protected with operating-system or volume-level encryption (FileVault, BitLocker, LUKS, mobile file-based encryption), and data in transit with TLS or SMART Health Links.  See the [Security](./security.html) page for complete guidance.
 
 #### Bulk Data Exports
 
-Should use [NDJSON format](http://ndjson.org/) and save to a password encrypted zip file.  Please see [Bulk Data Access IG](https://hl7.org/fhir/uv/bulkdata/) more additional design guidance.
+Should use [NDJSON format](http://ndjson.org/).  Please see [Bulk Data Access IG](https://hl7.org/fhir/uv/bulkdata/) for additional design guidance.
 
 #### Conformance Testing
 
-For conformance testing with this IG, the primary success critieria is the ability to import/export the .sphr filetype. This entails storing FHIR records in a new-line delimited file (including a cover composition resource, an International Patient Summary, and provenance records as needed), compressing the file with DEFLATE algorithm (as needed), and then signing with an X.509 security certificate (i.e. DNS certificate). 
+For conformance testing with this IG, the primary success critieria is the ability to import/export the .sphr filetype. This entails storing FHIR records in a new-line delimited file (including a cover composition resource, an International Patient Summary, and provenance records as needed), and compressing the file with the DEFLATE algorithm (as needed). 
 
 #### Implementation Guidance  
 
@@ -58,8 +48,7 @@ For conformance testing with this IG, the primary success critieria is the abili
 
 #### References  
 
-[Convert a X.509 (PKI) certificate to GPG](https://www.pengdows.com/2020/06/27/convert-a-x-509-pki-certificate-to-gpg/)
-[GPG Encryption/Decryption in Node.js](https://www.npmjs.com/package/gpg)
+[Bulk Data Access IG](https://hl7.org/fhir/uv/bulkdata/)
 
 
 

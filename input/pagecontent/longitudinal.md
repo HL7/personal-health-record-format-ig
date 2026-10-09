@@ -1,4 +1,6 @@
-#### Record Lifecycle Operations
+A longitudinal Personal Health Record is assembled, not received: it grows by merging exports, incremental updates, and patient-generated data from many sources over many years.  This page describes the merging, versioning, deduplication, and conflict-resolution patterns that make that assembly reliable.  (Record *lifecycle* management — originate, amend, attest, archive — is the province of the [PHR-S Functional Model](https://hl7.org/ehrs/uv/phrsfmr2/) and the [EHR Record Lifecycle Events IG](https://build.fhir.org/ig/HL7/ehrs-rle-ig/), and is intentionally not restated here.)
+
+#### Acquiring and Updating Records
 
 When a Personal Health Record (PHR) obtains data from external systems, the initial longitudinal record exchange may be performed using an Electronic Health Information (EHI) export capability, such as the HL7 International EHI Export API / Bulk FHIR export pattern, which provides a patient-scoped mechanism to retrieve a comprehensive snapshot of longitudinal clinical data from an originating EHR. The HL7 International Bulk Data Access specification defines asynchronous export semantics suitable for transferring complete patient records or large clinical histories.
 
@@ -6,7 +8,7 @@ After an initial export has been imported into a PHR, subsequent exchanges shoul
 
 Where event synchronization is needed, HL7 International FHIRCast can provide session- or event-based notification that relevant clinical context has changed, allowing a PHR or downstream system to request only newly available resources rather than repeating a full export. In this model, FHIRCast acts as a trigger, while Smart Health Links or similar exchange artifacts provide retrievable payload references.
 
-Taken together, these mechanisms create a lifecycle comparable to distributed source-control workflows:
+Taken together, these mechanisms create a workflow comparable to distributed source control:
 
 Clone: initial longitudinal record acquisition through EHI export / bulk patient export
 Pull: retrieval of incremental changes from external systems
@@ -63,6 +65,22 @@ For PHR implementations, this merge process is especially important because repe
 
 A practical merge strategy is to compare resource identifiers, business identifiers, timestamps, and provenance relationships before deciding whether resources represent replacement, supplementation, or coexistence.
 
+### Patient Identity and Linking
+
+Every source system emits its own `Patient` resource.  An aggregation across one payer network, two provider portals, and a phone's health platform will contain at least four Patient resources with four different identifier systems (member IDs, MRNs, account IDs) — all describing the same person.  This was the central practical problem in multi-source aggregation testing at the September 2026 Connectathon.  The merge patterns above assume this problem is solved; this section describes how to solve it.
+
+**Keep every source Patient resource.**  Do not destructively merge Patient resources into one "golden record."  Each source Patient carries the identifiers that downstream resources in that export reference (`Observation.subject`, `ExplanationOfBenefit.patient`, …), and discarding it breaks referential integrity and destroys evidence.  Instead, preserve each as received, with a [Provenance](https://www.hl7.org/fhir/R4/provenance.html) resource naming its source.
+
+**Link them explicitly.**  Designate one Patient resource as primary for the PHR (typically the patient-created one), and connect the source records to it:
+
+- [`Patient.link`](https://www.hl7.org/fhir/R4/patient.html#links) with `type = replaced-by` on each source Patient, pointing at the primary — meaning "for ongoing use, see that record."
+- `Patient.link` with `type = refer` or `seealso` when the source record remains independently maintained (e.g., a payer's member record that continues to receive updates).
+- A [Person](https://www.hl7.org/fhir/R4/person.html) resource MAY additionally link Patient records across systems when the PHR participates in a broader identity federation, but within a single PHR, `Patient.link` is usually sufficient.
+
+**Match carefully.**  When ingesting a new source, candidate matching uses business identifiers first (exact identifier-system matches), then demographics (name, birth date, administrative sex, address).  Servers implementing matching SHOULD expose it via the standard [`Patient/$match`](https://www.hl7.org/fhir/R4/patient-operation-match.html) operation and SHOULD treat probabilistic matches below certainty as *pending* — imported, preserved, but not linked — until confirmed by the patient.  In a PHR the patient themselves is the ultimate matching authority: patient confirmation is both the most reliable signal available and a signal clinical MPIs rarely have.
+
+**Rewrite references at query time, not storage time.**  When presenting a unified view (e.g., "all my observations"), resolve each resource's subject through the link graph to the primary Patient, leaving stored resources untouched.  Exports MAY include the full link graph so downstream systems can re-derive the unified view.
+
 ### Versioning and Change Tracking
 
 FHIR resource versioning provides native support for longitudinal change tracking through `meta.versionId`, `meta.lastUpdated`, and server-maintained history interactions.
@@ -95,7 +113,7 @@ Subsequent synchronization may use incremental retrieval patterns rather than re
 - Patient Data Receipts for atomic update references  
 - FHIRCast event notifications to signal that new data is available  
 
-This supports a clone-and-pull lifecycle in which only newly available content is transferred after the initial exchange.
+This supports a clone-and-pull workflow in which only newly available content is transferred after the initial exchange.
 
 ### Rollback and Recovery
 

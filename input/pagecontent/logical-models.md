@@ -1,3 +1,5 @@
+> **These Logical Models are experimental.**  They are published to gather implementer feedback, are **not required for conformance** with this guide, and are expected to be removed from this guide or migrated into other specifications in future versions (for example, financial receipt modeling is being contributed to the Da Vinci Price Transparency work, and environmental sensor modeling is under discussion with the Devices work group).  Do not build load-bearing integrations against them.
+
 This implementation guide includes several FHIR Logical Models that represent emerging patient-generated data domains not yet covered by standard FHIR resources. These models are published as StructureDefinitions with `kind = logical`, and are intended to inform future profiling work and facilitate discussion within the HL7 community.
 
 ### What Are Logical Models?
@@ -27,7 +29,55 @@ Captures over-the-counter (OTC) health-related purchase receipts for expenses su
 
 
 
-#### [Social Media Usage](./StructureDefinition-SocialMedia.html)
+### Social Media Data
 
-Captures social media and digital device usage patterns relevant to patient mental health and wellness. Includes screen time, active versus passive engagement, interaction counts, notification frequency, and self-reported sentiment. Particularly relevant for behavioral health, digital wellness programs, and adolescent health monitoring.
+Earlier drafts of this guide defined a `SocialMedia` logical model for social media posts.  That model has been removed: social media content — which round-tripped successfully between systems at the September 2026 Connectathon — is representable with existing FHIR resources, and net-new data structures belong in the core specification rather than this guide.  Use the following mappings:
+
+| Social media concept | FHIR representation |
+|----------------------|---------------------|
+| The post itself (text, images, video) | [DocumentReference](https://www.hl7.org/fhir/R4/documentreference.html) with the content as an attachment; [Media](https://www.hl7.org/fhir/R4/media.html) for standalone images/video/audio |
+| The act of posting or messaging | [Communication](https://www.hl7.org/fhir/R4/communication.html) (sender, recipients, payload, sent time) |
+| Other people appearing in or party to the post | [RelatedPerson](https://www.hl7.org/fhir/R4/relatedperson.html) |
+| Clinician interpretation of social-media-derived signals (e.g., mood, behavior patterns) | [ClinicalImpression](https://www.hl7.org/fhir/R4/clinicalimpression.html) referencing the source DocumentReferences |
+| A curated collection of posts (e.g., a health journey timeline) | [Composition](https://www.hl7.org/fhir/R4/composition.html) with a section per theme or period |
+| Where the content came from and when it was captured | [Provenance](https://www.hl7.org/fhir/R4/provenance.html) naming the platform as the source |
+
+The example below represents an Instagram post with an attached photo, as captured into a PHR:
+
+```json
+{
+  "resourceType": "DocumentReference",
+  "status": "current",
+  "type": {
+    "text": "Social media post"
+  },
+  "category": [{
+    "text": "patient-generated"
+  }],
+  "subject": { "reference": "Patient/example" },
+  "date": "2026-07-04T18:22:00Z",
+  "description": "Instagram post: first 5k walk since surgery",
+  "content": [
+    {
+      "attachment": {
+        "contentType": "text/markdown",
+        "data": "Rmlyc3QgNWsgd2FsayBzaW5jZSBzdXJnZXJ5ISDwn46J",
+        "title": "Post text"
+      }
+    },
+    {
+      "attachment": {
+        "contentType": "image/jpeg",
+        "url": "media/2026-07-04-finish-line.jpg",
+        "title": "Finish line photo"
+      }
+    }
+  ],
+  "context": {
+    "related": [{ "display": "https://www.instagram.com/p/example123/" }]
+  }
+}
+```
+
+A corresponding Provenance resource records the platform (`agent.who.display = "Instagram"`) and capture date, so that merge and filtering logic can distinguish social-media-sourced content from clinical content (see [Merging and Versioning](./longitudinal.html)).
 

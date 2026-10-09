@@ -11,5 +11,6 @@ This profile defines how to represent body measurements.
 
 * category[ObservationCategory].coding.code = #exam (exactly)
 * code.coding[PGHDCode] from ObservationBodyMeasurementsValueSet (required)
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * value[x] only Quantity
 * value[x] MS

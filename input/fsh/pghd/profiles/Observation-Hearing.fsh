@@ -11,5 +11,6 @@ This profile defines how to represent Hearing.
 
 * category[ObservationCategory].coding.code = #social-history (exactly)
 * code.coding[PGHDCode] from ObservationHearing
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * value[x] only Quantity
 * value[x] MS

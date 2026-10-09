@@ -11,6 +11,7 @@ This profile defines how to represent Electrocardiogram.
 
 * category[ObservationCategory].coding.code = #exam (exactly)
 * code.coding[PGHDCode].code = #electrocardiogram (exactly)
+* code.coding[PGHDCode].system = $CodeSystemObservationPGHDCodes (exactly)
 * hasMember only Reference(PGHDVoltageMeasurement)
 * component ^slicing.discriminator[0].path = "code.coding.code"
 * component ^slicing.discriminator[0].type = #value
